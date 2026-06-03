@@ -1,0 +1,38 @@
+{
+    "chemical json": 1,
+    "name": "hydroxyl",
+    "formula": "X1Q1",
+    "atoms": {
+        "elements": {
+            "type": [
+                "Q",
+                "H",
+                "X"
+            ],
+            "number": [
+                0.0,
+                1,
+                0.0
+            ]
+        },
+        "coords": {
+            "3d": [
+                0.0,
+                0.0,
+                0.0,
+                0.9,
+                -0.8,
+                -0.4,
+                0.55,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "properties": {
+        "smiles": "[Q]O",
+        "code": "OHc",
+        "xsmiles": "[*]O",
+        "xsmiles_label": "|$Q;$|"
+    }
+}

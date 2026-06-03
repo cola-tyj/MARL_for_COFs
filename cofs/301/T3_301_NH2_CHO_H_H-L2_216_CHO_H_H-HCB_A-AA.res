@@ -1,0 +1,1 @@
+/home/liuhaoyu/code/rnd_1/cofs/CHO/T3_301_NH2_CHO_H_H-L2_216_CHO_H_H-HCB_A-AA.res    15.48635 14.89140  15.48635

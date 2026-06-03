@@ -1,0 +1,3 @@
+@ /home/liuhaoyu/code/rnd_1/cofs/303/T3_303_NH2_CH3_H_H-L2_212_CHO_H_H-HCB_A-AA.vol Unitcell_volume: 6015.58   Density: 0.357614   AV_A^3: 3622.46 AV_Volume_fraction: 0.60218 AV_cm^3/g: 1.68388 NAV_A^3: 0.120312 NAV_Volume_fraction: 2e-05 NAV_cm^3/g: 5.59262e-05
+Number_of_channels: 1 Channel_volume_A^3: 3622.46  
+Number_of_pockets: 13 Pocket_volume_A^3: 0  0  0  0  0  0  0  0  0.120312  0  0  0  0  

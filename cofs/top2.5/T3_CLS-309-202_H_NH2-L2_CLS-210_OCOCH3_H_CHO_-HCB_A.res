@@ -1,0 +1,1 @@
+/home/liuhaoyu/code/rnd_1/cofs/cif/T3_CLS-309-202_H_NH2-L2_CLS-210_OCOCH3_H_CHO_-HCB_A.res    27.29884 26.73416  27.29884
