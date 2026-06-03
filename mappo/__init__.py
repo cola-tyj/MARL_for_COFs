@@ -1,5 +1,5 @@
 import sys
 import os
-PATH = "/home/liuhaoyu/code/rnd_1/pycofbuilder"
+PATH = "/home/tianyajun/MARL_for_COFs/pycofbuilder"
 sys.path.append(PATH)
 
