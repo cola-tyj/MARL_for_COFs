@@ -23,7 +23,7 @@ from tqdm import tqdm
 
 # NOTE:部署修改
 # from moftransformer import __root_dir__
-__root_dir__ = "/home/liuhaoyu/code/rnd_1/cof_predictor/pmtransformer/moft"
+__root_dir__ = "/home/tianyajun/MARL_for_COFs/cof_predictor/pmtransformer/moft"
 
 GRIDAY_PATH = os.path.join(__root_dir__, "libs/GRIDAY/scripts/grid_gen")
 FF_PATH = os.path.join(__root_dir__, "libs/GRIDAY/FF")

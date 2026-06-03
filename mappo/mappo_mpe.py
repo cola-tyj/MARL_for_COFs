@@ -303,7 +303,7 @@ class MAPPO_MPE:
 
     def save_model(self, env_name, number, seed, total_steps):
         # 删除之前保存的模型参数
-        directory_path = "/home/liuhaoyu/code/rnd_1/mappo/model"
+        directory_path = "/home/tianyajun/MARL_for_COFs/mappo/model"
         for filename in os.listdir(directory_path):
             # 检查文件扩展名是否为.pth
             if filename.startswith("MAPPO"):
@@ -312,16 +312,16 @@ class MAPPO_MPE:
                 # 删除文件
                 os.remove(file_path)
         # 保存当前模型参数
-        torch.save(self.actor.state_dict(), "/home/liuhaoyu/code/rnd_1/mappo/model/MAPPO_actor_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps))
-        torch.save(self.critic.state_dict(), "/home/liuhaoyu/code/rnd_1/mappo/model/MAPPO_critic_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps))
-        torch.save(self.ac_optimizer.state_dict(), "/home/liuhaoyu/code/rnd_1/mappo/model/MAPPO_optimizer_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps))
+        torch.save(self.actor.state_dict(), "/home/tianyajun/MARL_for_COFs/mappo/model/MAPPO_actor_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps))
+        torch.save(self.critic.state_dict(), "/home/tianyajun/MARL_for_COFs/mappo/model/MAPPO_critic_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps))
+        torch.save(self.ac_optimizer.state_dict(), "/home/tianyajun/MARL_for_COFs/mappo/model/MAPPO_optimizer_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps))
         for name, param in self.actor.named_parameters():
             print(name, param.data.sum())
 
     def load_model(self, env_name, number, seed, total_steps):
-        self.actor.load_state_dict(torch.load("/home/liuhaoyu/code/rnd_1/mappo/model/MAPPO_actor_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps)))
-        self.critic.load_state_dict(torch.load("/home/liuhaoyu/code/rnd_1/mappo/model/MAPPO_critic_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps)))
-        self.ac_optimizer.load_state_dict(torch.load("/home/liuhaoyu/code/rnd_1/mappo/model/MAPPO_optimizer_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps)))
+        self.actor.load_state_dict(torch.load("/home/tianyajun/MARL_for_COFs/mappo/model/MAPPO_actor_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps)))
+        self.critic.load_state_dict(torch.load("/home/tianyajun/MARL_for_COFs/mappo/model/MAPPO_critic_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps)))
+        self.ac_optimizer.load_state_dict(torch.load("/home/tianyajun/MARL_for_COFs/mappo/model/MAPPO_optimizer_env_{}_number_{}_seed_{}_step_{}.pth".format(env_name, number, seed, total_steps)))
         print("Model loaded successfully.")
         for name, param in self.actor.named_parameters():
             print(name, param.data.sum())

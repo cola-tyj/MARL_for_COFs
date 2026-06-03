@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 
 def randcof():
     # 定义源文件和目标文件的路径
-    source_file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/cof.csv'
-    target_file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/rand2.5.csv'
+    source_file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/cof.csv'
+    target_file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/rand2.5.csv'
 
     # 读取源文件
     with open(source_file_path, 'r') as source_file:
@@ -30,12 +30,12 @@ def randcof():
 def Pore_diameters(cof): # zeo++计算孔径
     # 定义命令和参数
     command1 = [
-        "/home/liuhaoyu/zeo++-0.3/network",
+        "/home/tianyajun/zeo++-0.3/network",
         "-ha",
         "-res"
     ]
     command2 = [
-        "/home/liuhaoyu/zeo++-0.3/network",
+        "/home/tianyajun/zeo++-0.3/network",
         "-ha",
         "-psd",
         "1.2",
@@ -43,7 +43,7 @@ def Pore_diameters(cof): # zeo++计算孔径
         "50000"
     ]
     command3 = [
-        "/home/liuhaoyu/zeo++-0.3/network",
+        "/home/tianyajun/zeo++-0.3/network",
         "-ha",
         "-sa",
         "1.2",
@@ -51,7 +51,7 @@ def Pore_diameters(cof): # zeo++计算孔径
         "2000"
     ]
     command4 = [
-        "/home/liuhaoyu/zeo++-0.3/network",
+        "/home/tianyajun/zeo++-0.3/network",
         "-ha",
         "-vol",
         "1.2",
@@ -65,9 +65,9 @@ def processSingle(cifName:str) -> None:
     计算一个cif的气体吸附属性
     """
 
-    cifPath = f"/home/liuhaoyu/code/rnd_1/cofs/301/{cifName}.cif"
+    cifPath = f"/home/tianyajun/MARL_for_COFs/cofs/301/{cifName}.cif"
     # 指定base文件夹
-    baseDir = "/home/liuhaoyu/code/rnd_1/cofs/gas_adsorption"
+    baseDir = "/home/tianyajun/MARL_for_COFs/cofs/gas_adsorption"
 
     # 构造输入文件
     targetDir = f"{baseDir}/{cifName}"
@@ -81,9 +81,9 @@ def processSingle(cifName:str) -> None:
     # 1.cif
     os.system(f"cp \'{cifPath}\' \'{targetDir}\'")
     # 2.run
-    os.system(f"cp \'/home/liuhaoyu/RASPA2/examples/test/1/run\' \'{targetDir}\'")
+    os.system(f"cp \'/home/tianyajun/RASPA2/examples/test/1/run\' \'{targetDir}\'")
     # 3.simulation.input
-    os.system(f"cp \'/home/liuhaoyu/RASPA2/examples/test/1/simulation.input\' \'{targetDir}\'")
+    os.system(f"cp \'/home/tianyajun/RASPA2/examples/test/1/simulation.input\' \'{targetDir}\'")
     vf = getVoidFraction(cifName) # 计算孔隙率
     fillSimulation(f"{targetDir}/simulation.input", cifName, vf) # 将孔隙率填到simulation.input对应位置
 
@@ -140,19 +140,19 @@ def getVoidFraction(cifName:str, shuxing='Fraction'):
 
     if shuxing == 'Fraction':
         match = 'Fraction of sample points in node spheres:'
-        filepath = f'/home/liuhaoyu/code/rnd_1/cofs/301/{cifName}.psd_histo'    
+        filepath = f'/home/tianyajun/MARL_for_COFs/cofs/301/{cifName}.psd_histo'    
     elif shuxing == 'Volume':
         match = 'AV_cm\^3/g:'
-        filepath = f'/home/liuhaoyu/code/rnd_1/cofs/301/{cifName}.vol'
+        filepath = f'/home/tianyajun/MARL_for_COFs/cofs/301/{cifName}.vol'
     elif shuxing == 'Surface':
         match = 'ASA_m\^2/g:'
-        filepath = f'/home/liuhaoyu/code/rnd_1/cofs/301/{cifName}.sa'
+        filepath = f'/home/tianyajun/MARL_for_COFs/cofs/301/{cifName}.sa'
     elif shuxing == 'Diameter':
         match = '.res'
-        filepath = f'/home/liuhaoyu/code/rnd_1/cofs/301/{cifName}.res'
+        filepath = f'/home/tianyajun/MARL_for_COFs/cofs/301/{cifName}.res'
     elif shuxing == 'O2':
         match = cifName+','
-        filepath = '/home/liuhaoyu/code/rnd_1/cofs/301/absolute_N2.csv'
+        filepath = '/home/tianyajun/MARL_for_COFs/cofs/301/absolute_N2.csv'
     
     # 读取文件内容
     with open(filepath, 'r') as file:
@@ -179,7 +179,7 @@ def delete_all_files_and_directories(directory):
 
 def plot_and_save_scatter():
     # 读取CSV文件
-    file_path = '/home/liuhaoyu/code/rnd_1/cifs/shuxing_N2.csv'
+    file_path = '/home/tianyajun/MARL_for_COFs/cifs/shuxing_N2.csv'
     data = pd.read_csv(file_path)
 
     # 绘制散点图
@@ -189,10 +189,10 @@ def plot_and_save_scatter():
     plt.xlabel('Fraction')  # 设置x轴标签
     plt.ylabel('O2 absolute')  # 设置y轴标签
     plt.grid(True)  # 显示网格
-    plt.savefig('/home/liuhaoyu/code/rnd_1/imgs/scatter_plot.png')
+    plt.savefig('/home/tianyajun/MARL_for_COFs/imgs/scatter_plot.png')
 
 def main1(): # 批处理算孔径
-    cof_dir = '/home/liuhaoyu/code/rnd_1/cofs/301'
+    cof_dir = '/home/tianyajun/MARL_for_COFs/cofs/301'
     cofs = []
     for file in os.listdir(cof_dir):
         # 检查文件扩展名是否为'.cif'
@@ -206,8 +206,8 @@ def main1(): # 批处理算孔径
 
 def main2(): # 把孔径拼到氧气吸附值后面
     # cat *.res > final_results_table.txt
-    csv_file_path = '/home/liuhaoyu/code/rnd_1/cofs/301/301.csv'
-    txt_file_path = '/home/liuhaoyu/code/rnd_1/cofs/301/final_results_table.txt'
+    csv_file_path = '/home/tianyajun/MARL_for_COFs/cofs/301/301.csv'
+    txt_file_path = '/home/tianyajun/MARL_for_COFs/cofs/301/final_results_table.txt'
 
     # 读取txt文件
     with open(txt_file_path, 'r') as txt_file:
@@ -230,7 +230,7 @@ def main2(): # 把孔径拼到氧气吸附值后面
         csv_file.writelines(updated_lines)
 
 def main3(): # raspa算氧气吸附
-    directory = '/home/liuhaoyu/code/rnd_1/cofs/301/'
+    directory = '/home/tianyajun/MARL_for_COFs/cofs/301/'
     # 初始化一个空列表来存储文件名
     cif_filenames = []
     
@@ -242,7 +242,7 @@ def main3(): # raspa算氧气吸附
             cif_filenames.append(filename[:-4])  # 移除最后四个字符（.cif）
     
     # 指定CSV文件名
-    csv_filename = '/home/liuhaoyu/code/rnd_1/cofs/301/absolute_N2.csv'
+    csv_filename = '/home/tianyajun/MARL_for_COFs/cofs/301/absolute_N2.csv'
     
     # 使用'w'模式打开CSV文件，准备写入
     with open(csv_filename, 'w', newline='') as csvfile:
@@ -259,13 +259,13 @@ def main3(): # raspa算氧气吸附
             #result = [0,1]
             # 写入CSV文件
             writer.writerow([cifname] + result)
-            delete_all_files_and_directories('/home/liuhaoyu/code/rnd_1/cofs/gas_adsorption')
+            delete_all_files_and_directories('/home/tianyajun/MARL_for_COFs/cofs/gas_adsorption')
 
 def main4(): # 读取各种属性
     Fraction = 'Fraction'
     Surface = 'Surface'
     Volume = 'Volume'
-    directory = '/home/liuhaoyu/code/rnd_1/cofs/301/'
+    directory = '/home/tianyajun/MARL_for_COFs/cofs/301/'
     # 初始化一个空列表来存储文件名
     cif_filenames = []
     
@@ -277,7 +277,7 @@ def main4(): # 读取各种属性
             cif_filenames.append(filename[:-4])  # 移除最后四个字符（.cif）
     
     # 指定CSV文件名
-    csv_filename = '/home/liuhaoyu/code/rnd_1/cofs/301/shuxing_N2.csv'
+    csv_filename = '/home/tianyajun/MARL_for_COFs/cofs/301/shuxing_N2.csv'
     
     # 使用'w'模式打开CSV文件，准备写入
     with open(csv_filename, 'w', newline='') as csvfile:

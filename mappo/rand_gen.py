@@ -10,7 +10,7 @@ from cof_predictor.main import doPredict
 from pycofbuilder.cjson import ChemJSON
 from pycofbuilder.framework import Framework
 
-cof_dir = '/home/liuhaoyu/code/rnd_1/cofs/KGD'
+cof_dir = '/home/tianyajun/MARL_for_COFs/cofs/KGD'
 conector = ['CH2CN', 'CHO', 'Cl', 'COOH', 'NH2', 'NHOH', 'OHc']
 func_groups = ['Br', 'CH3', 'CHO', 'CHS', 'Cl', 'CN', 'COOH', 'EPO', 'F','H','I', 'NH2', 'NO', 'NO2', 'OCOCH3', 'OH', 'OMe', 'SH', 'SO2H']
 L2 = ['201','202','203','204','205','206','207','208','209','210','211','212','213','214','215','216','217']
@@ -19,8 +19,8 @@ S4 = ['PTCA', 'PORP']
 H6 = ['BENZ6', 'HECO'] 
 MM = ['L2','T3','S4','H6'] 
 cofs = []
-inputPath = '/home/liuhaoyu/code/mappo_2/sql/input'
-midPath = '/home/liuhaoyu/code/rnd_1/sql/mid'
+inputPath = '/home/tianyajun/MARL_for_COFs/sql/input'
+midPath = '/home/tianyajun/MARL_for_COFs/sql/mid'
 
 topology = {('T3', 'L2'): 'HCB_A',
             #('T3', 'T3'): 'HCB',
@@ -38,7 +38,7 @@ reaction = [('NH2','CHO'),('CHO','NH2'),
 
 def fff(x):
     new_BB = ChemJSON()
-    new_BB.from_cjson('/home/liuhaoyu/code/rnd_1/data/all', x+'.cjson')
+    new_BB.from_cjson('/home/tianyajun/MARL_for_COFs/data/all', x+'.cjson')
     input_string = new_BB.properties['xsmiles_label']
     matches = re.findall(r'R(\d+)', input_string)
     if matches:
@@ -72,7 +72,7 @@ def randchoice(a):
         return random.choice(H6)
 
 def predictor():
-    cof_dir = '/home/liuhaoyu/code/rnd_1/cofs'
+    cof_dir = '/home/tianyajun/MARL_for_COFs/cofs'
     top_path = os.path.join(cof_dir, 'topology.json')
     topology_dict = {}
     # 遍历指定目录下的所有文件
@@ -130,7 +130,7 @@ def main():
             cofs.append(cof)
 
     # 指定要写入的CSV文件名
-    filename = "/home/liuhaoyu/code/rnd_1/cofs.csv"
+    filename = "/home/tianyajun/MARL_for_COFs/cofs.csv"
 
     # 使用 'write' 模式打开文件
     with open(filename, 'w', newline='') as csvfile:

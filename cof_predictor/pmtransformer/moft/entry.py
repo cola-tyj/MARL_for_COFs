@@ -6,7 +6,7 @@
 
 import sys
 # NOTE:部署修改
-sys.path.append('/home/liuhaoyu/code/rnd_1/cof_predictor/pmtransformer/moft')
+sys.path.append('/home/tianyajun/MARL_for_COFs/cof_predictor/pmtransformer/moft')
 
 import json
 import os
@@ -62,7 +62,7 @@ class PMTOperation:
         指定数据集和参数输出预测结果
         """
         # NOTE:部署修改
-        load_path = "/home/liuhaoyu/code/rnd_1/cof_predictor/pmtransformer/params/pmtransformer.ckpt"
+        load_path = "/home/tianyajun/MARL_for_COFs/cof_predictor/pmtransformer/params/pmtransformer.ckpt"
         root_dataset = f"{self.resultDir}/{self.dataset}/dataset"
 
         # 构造图嵌入结果保存目录

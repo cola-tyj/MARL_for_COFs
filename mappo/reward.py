@@ -40,7 +40,7 @@ class RND:
     def __init__(self,in_dim,out_dim,n_hid):
         self.in_dim = in_dim
         self.target = NN(in_dim,out_dim,n_hid)
-        self.target.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/mappo/model/decoder.pth'))
+        self.target.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/mappo/model/decoder.pth'))
         self.model = NN(in_dim,out_dim,n_hid)
         self.optimizer = torch.optim.Adam(self.model.parameters(),lr=0.0001)
         
@@ -105,7 +105,7 @@ def final_reward(SymmetricType,new_info,info,episode_num):
             xsmiles, xsmiles_label, composition, _labels = smiles_to_xsmiles(smiles)
             new_BB = ChemJSON()
             print(info[i])
-            new_BB.from_xyz('/home/liuhaoyu/code/rnd_1/xyzs', str(i)+'.xyz')
+            new_BB.from_xyz('/home/tianyajun/MARL_for_COFs/xyzs', str(i)+'.xyz')
             new_BB.name = str(i)
             new_BB.properties = {
                 "smiles": smiles,
@@ -113,7 +113,7 @@ def final_reward(SymmetricType,new_info,info,episode_num):
                 "xsmiles": xsmiles,
                 "xsmiles_label": xsmiles_label,
             }
-            new_BB.write_cjson('/home/liuhaoyu/code/rnd_1/pycofbuilder/data/core/'+SymmetricType[i], 'agent'+str(i)+'.cjson')
+            new_BB.write_cjson('/home/tianyajun/MARL_for_COFs/pycofbuilder/data/core/'+SymmetricType[i], 'agent'+str(i)+'.cjson')
             rewards.append(0.0)
 
     # 生成cof
@@ -124,7 +124,7 @@ def final_reward(SymmetricType,new_info,info,episode_num):
     return rewards
 
 def make_cof(SymmetricType,new_info,info,mols,episode_num):
-    cof_dir = '/home/liuhaoyu/code/rnd_1/cofs'
+    cof_dir = '/home/tianyajun/MARL_for_COFs/cofs'
     # 创建一个topology字典
     topology = {('T3', 'L2'): 'HCB_A',
                 #('T3', 'T3'): 'HCB',
@@ -141,7 +141,7 @@ def make_cof(SymmetricType,new_info,info,mols,episode_num):
                 ('Cl','Cl')]
     print(new_info)
     #cof = Framework('T3_test_CHO-L2_BENZ_NH2_OH-HCB_A-AA')
-    #cof.save(fmt='cif', supercell = [1, 1, 2], save_dir = '/home/liuhaoyu/code/rnd_1/cofs')
+    #cof.save(fmt='cif', supercell = [1, 1, 2], save_dir = '/home/tianyajun/MARL_for_COFs/cofs')
     for i in range(len(new_info)):
         for j in range(len(new_info)):
             if i == j or mols[i].GetNumAtoms() == 0 or mols[j].GetNumAtoms() == 0:
@@ -174,8 +174,8 @@ def make_cof(SymmetricType,new_info,info,mols,episode_num):
                     pass
 
 def move_cof(SymmetricType,new_info,info,episode_num,i,j,top):
-    cof_dir = '/home/liuhaoyu/code/rnd_1/cofs'
-    cif_dir = '/home/liuhaoyu/code/rnd_1/cifs'
+    cof_dir = '/home/tianyajun/MARL_for_COFs/cofs'
+    cif_dir = '/home/tianyajun/MARL_for_COFs/cifs'
     top_path = os.path.join(cof_dir, 'topology.json')
     
     # 保存的cof的cif文件名
@@ -194,7 +194,7 @@ def move_cof(SymmetricType,new_info,info,episode_num,i,j,top):
     original_file_name = x  # 原始文件名
     new_file_name = SymmetricType[i]+'_'+info[i]+'-'+SymmetricType[j]+'_'+info[j]+'-'+top+'.cif'
 
-    with open('/home/liuhaoyu/code/rnd_1/number.csv', mode='a', newline='') as file:
+    with open('/home/tianyajun/MARL_for_COFs/number.csv', mode='a', newline='') as file:
         writer = csv.writer(file)
         # 写入一行数据
         writer.writerow([episode_num, i, j, new_file_name.replace(".cif", "")])
@@ -206,7 +206,7 @@ def move_cof(SymmetricType,new_info,info,episode_num,i,j,top):
     shutil.move(source_file, destination_file)
 
 def predictor():
-    cof_dir = '/home/liuhaoyu/code/rnd_1/cofs'
+    cof_dir = '/home/tianyajun/MARL_for_COFs/cofs'
     top_path = os.path.join(cof_dir, 'topology.json')
     topology_dict = {}
     # 遍历指定目录下的所有文件
@@ -233,7 +233,7 @@ def predictor():
     print(resultFilePath)
     return resultFilePath
 
-def rm_dir(directory_path = '/home/liuhaoyu/code/rnd_1/cofs'):
+def rm_dir(directory_path = '/home/tianyajun/MARL_for_COFs/cofs'):
     if os.path.exists(directory_path):
         # 使用shutil.rmtree递归删除目录及其内容
         shutil.rmtree(directory_path)
@@ -243,7 +243,7 @@ def rm_dir(directory_path = '/home/liuhaoyu/code/rnd_1/cofs'):
         print(f"目录 {directory_path} 不存在。")
 
 def average_pred(FilePath):
-    outputFilePath = '/home/liuhaoyu/code/rnd_1/ave_result.csv'
+    outputFilePath = '/home/tianyajun/MARL_for_COFs/ave_result.csv'
     x = pd.read_csv(FilePath)
     # 计算'pred'列的平均值
     average_pred = x['pred'].mean()
@@ -259,7 +259,7 @@ def average_pred(FilePath):
     df_output.to_csv(outputFilePath, index=False)
 
 def max_pred(FilePath):
-    outputFilePath = '/home/liuhaoyu/code/rnd_1/max_result.csv'
+    outputFilePath = '/home/tianyajun/MARL_for_COFs/max_result.csv'
     x = pd.read_csv(FilePath)
     # 计算'pred'列的最大值
     max_pred = x['pred'].max()

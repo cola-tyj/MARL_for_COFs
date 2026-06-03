@@ -72,16 +72,16 @@ class Runner_MAPPO_MPE:
                 try:
                     max_pred(resultFilePath)  # 记录这一轮pre的最大值
                     average_pred(resultFilePath)  # 记录这一轮pre的平均值
-                    rm_dir('/home/liuhaoyu/code/rnd_1/cofs')
+                    rm_dir('/home/tianyajun/MARL_for_COFs/cofs')
                     # Save the rewards and models
                 except:
-                    rm_dir('/home/liuhaoyu/code/rnd_1/cofs')
+                    rm_dir('/home/tianyajun/MARL_for_COFs/cofs')
                 self.save_returns()
                 print('------Training------')
                 self.rnd.update(self.replay_buffer)  # Update RND reward Net
                 self.agent_n.train(self.replay_buffer, self.total_steps)  # Training
                 self.replay_buffer.reset_buffer()
-                #np.save('/home/liuhaoyu/code/rnd_1/mappo/data_train/MAPPO_env_{}_number_{}_seed_{}.npy'.format(self.env_name, self.number, self.seed), np.array(self.evaluate_rewards))
+                #np.save('/home/tianyajun/MARL_for_COFs/mappo/data_train/MAPPO_env_{}_number_{}_seed_{}.npy'.format(self.env_name, self.number, self.seed), np.array(self.evaluate_rewards))
                 self.agent_n.save_model(self.env_name, self.number, self.seed, self.total_steps)
         
                 if self.total_steps>128000:
@@ -100,7 +100,7 @@ class Runner_MAPPO_MPE:
         self.evaluate_rewards.append(evaluate_reward)
         print("total_steps:{} \t evaluate_reward:{}".format(self.total_steps, evaluate_reward))
         self.writer.add_scalar('evaluate_step_rewards_{}'.format(self.env_name), evaluate_reward, global_step=self.total_steps)
-        rm_dir('/home/liuhaoyu/code/rnd_1/cofs')  # 把evaluate生成的cof删掉
+        rm_dir('/home/tianyajun/MARL_for_COFs/cofs')  # 把evaluate生成的cof删掉
         # Save the rewards and models
         #np.save('./data_train/MAPPO_env_{}_number_{}_seed_{}.npy'.format(self.env_name, self.number, self.seed), np.array(self.evaluate_rewards))
         #self.agent_n.save_model(self.env_name, self.number, self.seed, self.total_steps)
@@ -151,7 +151,7 @@ class Runner_MAPPO_MPE:
         return episode_reward, episode_step + 1
 
     def predictor_reward(self,resultFilePath):
-        result = '/home/liuhaoyu/code/rnd_1/result.csv'
+        result = '/home/tianyajun/MARL_for_COFs/result.csv'
         # 初始化两个空列表来存储'cifName'和'pred'列的数据
         cifName_list = []
         pred_list = []
@@ -170,7 +170,7 @@ class Runner_MAPPO_MPE:
                 cifName_list.append(row[cifName_index])
                 pred_list.append(row[pred_index])
 
-        with open('/home/liuhaoyu/code/rnd_1/number.csv', newline='', encoding='utf-8') as csvfile:
+        with open('/home/tianyajun/MARL_for_COFs/number.csv', newline='', encoding='utf-8') as csvfile:
             # 创建CSV阅读器
             data_reader = csv.reader(csvfile)        
             for row in data_reader:
@@ -192,10 +192,10 @@ class Runner_MAPPO_MPE:
             writer.writerows(rows_to_append)
             print("数据已追加到目标result.csv文件。")
 
-        os.remove('/home/liuhaoyu/code/rnd_1/number.csv')
+        os.remove('/home/tianyajun/MARL_for_COFs/number.csv')
 
     def save_returns(self):
-        file_path = '/home/liuhaoyu/code/rnd_1/returns.csv'
+        file_path = '/home/tianyajun/MARL_for_COFs/returns.csv'
         returns = []
         for i in range(self.args.N):
             agent_i_rewards = self.replay_buffer.buffer['r_n'][:, :, i]
@@ -211,7 +211,7 @@ class Runner_MAPPO_MPE:
                 writer.writerow(x)
                 
     def save_intrinsic_rewards(self,reward):
-        file_path = '/home/liuhaoyu/code/rnd_1/intrinsic.csv'
+        file_path = '/home/tianyajun/MARL_for_COFs/intrinsic.csv'
         with open(file_path, 'a', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(reward)

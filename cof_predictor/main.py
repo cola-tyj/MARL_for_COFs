@@ -6,7 +6,7 @@
 
 # NOTE:部署修改
 import sys
-sys.path.append("/home/liuhaoyu/code/rnd_1/cof_predictor")
+sys.path.append("/home/tianyajun/MARL_for_COFs/cof_predictor")
 
 import re
 import os 
@@ -142,7 +142,7 @@ def predictO2AdsorptionByModel(dl: DataLoader, savePath: str, ts: str) -> str:
     model = Model.FinetuneModel(inputDim=dim, hidDim=hidDim, layerNum=finetuneLayerNum, pretrainModel=pretrainModel).cuda().half()
     # 加载微调数据
     # NOTE:部署修改
-    paramPath = "/home/liuhaoyu/code/rnd_1/cof_predictor/predictor/params/finetune_dim_768_layerNum_6_lr_0.001_totalEpoch_7200_batchSize_1_weight_[5, 100, 10]_epoch_4822.pkl"
+    paramPath = "/home/tianyajun/MARL_for_COFs/cof_predictor/predictor/params/finetune_dim_768_layerNum_6_lr_0.001_totalEpoch_7200_batchSize_1_weight_[5, 100, 10]_epoch_4822.pkl"
     param = torch.load(paramPath)
     model.load_state_dict(param["model"])
     model.eval()
@@ -185,7 +185,7 @@ def predictBandgapByModel(dl: DataLoader, savePath: str, ts: str) -> str:
     model = Model.FinetuneModel(inputDim=dim, hidDim=hidDim, layerNum=finetuneLayerNum, pretrainModel=pretrainModel).cuda().half()
     # 加载微调数据
     # NOTE:部署修改
-    paramPath = "/home/liuhaoyu/code/rnd_1/cof_predictor/predictor/params/bandgap_finetune_dim_768_layerNum_6_lr_0.001_totalEpoch_7200_batchSize_1_weight_[5, 100, 10]_finetuneLayerNum3_epoch_5507.pkl"
+    paramPath = "/home/tianyajun/MARL_for_COFs/cof_predictor/predictor/params/bandgap_finetune_dim_768_layerNum_6_lr_0.001_totalEpoch_7200_batchSize_1_weight_[5, 100, 10]_finetuneLayerNum3_epoch_5507.pkl"
     param = torch.load(paramPath)
     model.load_state_dict(param["model"])
     model.eval()
@@ -228,7 +228,7 @@ def predictN2AdsorptionByModel(dl: DataLoader, savePath: str, ts: str) -> str:
     model = Model.N2FinetuneModel(inputDim=dim, hidDim=hidDim, layerNum=finetuneLayerNum, pretrainModel=pretrainModel).cuda().half()
     # 加载微调数据
     # NOTE:部署修改
-    paramPath = "/home/liuhaoyu/code/rnd_1/cof_predictor/predictor/params/n2_finetune_dim_768_layerNum_6_lr_0.001_totalEpoch_7200_batchSize_1_weight_[5, 100, 10]_epoch_4300.pkl"
+    paramPath = "/home/tianyajun/MARL_for_COFs/cof_predictor/predictor/params/n2_finetune_dim_768_layerNum_6_lr_0.001_totalEpoch_7200_batchSize_1_weight_[5, 100, 10]_epoch_4300.pkl"
     param = torch.load(paramPath)
     model.load_state_dict(param["model"])
     model.eval()
@@ -264,5 +264,5 @@ if __name__ == '__main__':
 
     # resultFilePath = doPredict(args.cifPath, logPath=args.logPath, ts=args.ts)
     # print(resultFilePath)
-    resultFilePath = doPredict(cifPath="/home/liuhaoyu/code/rnd_1/cofs/cif", logPath="/home/liuhaoyu/code/rnd_1/logs", ts="0716")
+    resultFilePath = doPredict(cifPath="/home/tianyajun/MARL_for_COFs/cofs/cif", logPath="/home/tianyajun/MARL_for_COFs/logs", ts="0716")
     print(resultFilePath)

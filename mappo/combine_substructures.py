@@ -11,7 +11,7 @@ def mol_with_atom_index(mol):
 
 def _add_R_group(mol, R, n):
     #R = 'H'
-    path = '/home/liuhaoyu/code/rnd_1/data/all/'
+    path = '/home/tianyajun/MARL_for_COFs/data/all/'
     file_name = R + '.cjson'
     #xsmiles = "[*]Br"
     xsmiles = get_xmiles(path, file_name)
@@ -36,7 +36,7 @@ def _add_R_group(mol, R, n):
     return mol
     
 def add_R_groups(str):
-    path = '/home/liuhaoyu/code/rnd_1/data/all/'
+    path = '/home/tianyajun/MARL_for_COFs/data/all/'
     file_name = str
     xsmiles = get_xmiles(path, file_name)
     labels = get_labels(path, file_name)

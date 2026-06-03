@@ -41,7 +41,7 @@ def f3():  # smiles -> cjson
 
     new_BB = ChemJSON()
 
-    new_BB.from_xyz('/home/liuhaoyu/code/rnd_1/xyzs', 'test.xyz')
+    new_BB.from_xyz('/home/tianyajun/MARL_for_COFs/xyzs', 'test.xyz')
 
     new_BB.name = 'BENZ6'
 
@@ -52,11 +52,11 @@ def f3():  # smiles -> cjson
         "xsmiles_label": xsmiles_label,
     }
 
-    new_BB.write_cjson('/home/liuhaoyu/code/rnd_1/pycofbuilder/data/core/H6', '666.cjson')
+    new_BB.write_cjson('/home/tianyajun/MARL_for_COFs/pycofbuilder/data/core/H6', '666.cjson')
 
 def f4():  # 生成cif
     cof = Framework('H6_666_Cl-L2_217_Cl-HXL_A-AA')
-    cof.save(fmt='cif', supercell = [1, 1, 1], save_dir = '/home/liuhaoyu/code/rnd_1/imgs')
+    cof.save(fmt='cif', supercell = [1, 1, 1], save_dir = '/home/tianyajun/MARL_for_COFs/imgs')
 
 # f3()
 # f4()

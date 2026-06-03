@@ -23,7 +23,7 @@ class PredictDataset(Dataset):
         # 拓扑类型
         self.topologyDict = json.load(open(f"{parentPath}/topology.json", mode="r"))
         # NOTE:部署修改
-        self.topology2IndexDict = json.load(open("/home/liuhaoyu/code/rnd_1/cof_predictor/predictor/code/dataset/topology2D.json", mode="r"))
+        self.topology2IndexDict = json.load(open("/home/tianyajun/MARL_for_COFs/cof_predictor/predictor/code/dataset/topology2D.json", mode="r"))
         
     def __len__(self) -> int:
         return len(self.cifNameList)

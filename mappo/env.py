@@ -16,7 +16,7 @@ class CustomEnvironment(gym.Env):
         super(CustomEnvironment, self).__init__()
         self.n = 6  # The number of agents
         # 设置文件夹路径
-        folder_path = '/home/liuhaoyu/code/rnd_1/data'
+        folder_path = '/home/tianyajun/MARL_for_COFs/data'
         # 创建词汇表，设置mask
         self.vocab, self.linker_mask, self.core_mask, self.conector_mask, self.func_mask = self.get_data(folder_path)
         # 定义动作空间和状态空间
@@ -28,8 +28,8 @@ class CustomEnvironment(gym.Env):
         self.Transformer_model = TransformerEncoder(dim=self.observation_space)
         
         # 加载 Embedding_Layer 参数
-        self.Embedding_Layer.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/mappo/model/embedding_parameters.pth'))
-        self.Transformer_model.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/mappo/model/transformer_encoder.pth'))
+        self.Embedding_Layer.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/mappo/model/embedding_parameters.pth'))
+        self.Transformer_model.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/mappo/model/transformer_encoder.pth'))
         # 初始化环境的一些参数
         self.max_step = args.episode_limit
         self.now_step = [0 for i in range(self.n)]
@@ -121,7 +121,7 @@ class CustomEnvironment(gym.Env):
     def max_R(self,x):
         try:
             new_BB = ChemJSON()
-            new_BB.from_cjson('/home/liuhaoyu/code/rnd_1/data/all', x+'.cjson')
+            new_BB.from_cjson('/home/tianyajun/MARL_for_COFs/data/all', x+'.cjson')
             # 输入字符串
             input_string = new_BB.properties['xsmiles_label']
             # 使用正则表达式找到所有的R后面的数字

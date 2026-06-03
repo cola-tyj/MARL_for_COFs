@@ -34,7 +34,7 @@ def get_mol(input):
         return Chem.Mol()  # 一个空的分子对象
 
 def make_cof(SymmetricType,new_info,info,cofname):
-    cof_dir = '/home/liuhaoyu/code/rnd_1/cofs'
+    cof_dir = '/home/tianyajun/MARL_for_COFs/cofs'
 
     # 得到mol格式
     mols = []
@@ -79,7 +79,7 @@ def make_cof(SymmetricType,new_info,info,cofname):
         print('不能生成COF')
 
 def move_cof(cofname):
-    cof_dir = '/home/liuhaoyu/code/rnd_1/cofs'
+    cof_dir = '/home/tianyajun/MARL_for_COFs/cofs'
     
     # 保存的cof的cif文件名
     for file in os.listdir(cof_dir):
@@ -105,7 +105,7 @@ def move_cof(cofname):
 
 def main():
     max_count=500
-    file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/rand2.5.csv'
+    file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/rand2.5.csv'
     inputs = []
     count = 0
     with open(file_path, newline='') as csvfile:

@@ -14,9 +14,9 @@ from train import Decoder
 
 def get_data(file_path,max_count=100):
     Embedding = Embedding_Layer(dim=128,pad=32)
-    Embedding.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/embedding_parameters.pth'))
+    Embedding.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/embedding_parameters.pth'))
     Transformer_model = TransformerEncoder(dim=128)
-    Transformer_model.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/transformer_encoder.pth'))
+    Transformer_model.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/transformer_encoder.pth'))
     pad = 32
     vocab = {'PAD': 0, 'CLS': 1, 'F': 2, 'CN': 3, 'SO2H': 4, '307': 5, 'NH2': 6, 'NO2': 7, 'Cl': 8, 'HECO': 9, 'BENZ6': 10, 
              'OCOCH3': 11, 'OH': 12, '309': 13, 'CHO': 14, 'CH3': 15, 'PTCA': 16, 'L2':17, '205': 18, '308': 19, '210': 20, 
@@ -81,11 +81,11 @@ def get_data(file_path,max_count=100):
 
 def get_data_rand(file_path,max_count=100):
     Embedding = Embedding_Layer(dim=128,pad=32)
-    Embedding.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/embedding_parameters.pth'))
+    Embedding.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/embedding_parameters.pth'))
     Transformer_model = TransformerEncoder(dim=128)
-    Transformer_model.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/transformer_encoder.pth'))
+    Transformer_model.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/transformer_encoder.pth'))
     decoder = Decoder(128, 32)
-    decoder.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/mappo/model/decoder.pth'))
+    decoder.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/mappo/model/decoder.pth'))
 
     pad = 32
     vocab = {'PAD': 0, 'CLS': 1, 'F': 2, 'CN': 3, 'SO2H': 4, '307': 5, 'NH2': 6, 'NO2': 7, 'Cl': 8, 'HECO': 9, 'BENZ6': 10, 
@@ -160,11 +160,11 @@ def get_data_rand(file_path,max_count=100):
 
 def get_data_rnd(max_count=100):
     Embedding = Embedding_Layer(dim=128,pad=32)
-    Embedding.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/parameters_embedding.pth'))
+    Embedding.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/parameters_embedding.pth'))
     Transformer_model = TransformerEncoder(dim=128)
-    Transformer_model.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/parameters_transformer.pth'))
+    Transformer_model.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/parameters_transformer.pth'))
     decoder = Decoder(128, 32)
-    decoder.load_state_dict(torch.load('/home/liuhaoyu/code/rnd_1/mappo/model/decoder.pth'))
+    decoder.load_state_dict(torch.load('/home/tianyajun/MARL_for_COFs/mappo/model/decoder.pth'))
 
     pad = 32
     vocab = {'PAD': 0, 'CLS': 1, 'F': 2, 'CN': 3, 'SO2H': 4, '307': 5, 'NH2': 6, 'NO2': 7, 'Cl': 8, 'HECO': 9, 'BENZ6': 10, 
@@ -183,9 +183,9 @@ def get_data_rnd(max_count=100):
     count = 0
     sizes = []
     inputs = []
-    file_path_rand = '/home/liuhaoyu/code/rnd_1/mappo/data_train/cofs.csv'
-    file_path_rnd = '/home/liuhaoyu/code/rnd_1/mappo/data_train/rnd.csv'
-    file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/no_rnd.csv'
+    file_path_rand = '/home/tianyajun/MARL_for_COFs/mappo/data_train/cofs.csv'
+    file_path_rnd = '/home/tianyajun/MARL_for_COFs/mappo/data_train/rnd.csv'
+    file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/no_rnd.csv'
 
     # 打开文件
     with open(file_path_rand, newline='') as csvfile:
@@ -336,7 +336,7 @@ def tsne_plot1(fps_np, sizes, labels):
     plt.savefig('tsne_trend.png', bbox_inches='tight')
 
 def main1():
-    file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/no.csv'
+    file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/no.csv'
     fps_np, sizes = get_data(file_path,max_count=10000)
     
     # 定义批次标签
@@ -347,11 +347,11 @@ def main1():
 
 def main():
     count=5000
-    file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/cof.csv'
+    file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/cof.csv'
     a, b = get_data_rand(file_path,max_count=25000)
-    file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/no.csv'
+    file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/no.csv'
     c, d = get_data(file_path,max_count=count)
-    file_path = '/home/liuhaoyu/code/rnd_1/mappo/data_train/top5.csv'
+    file_path = '/home/tianyajun/MARL_for_COFs/mappo/data_train/top5.csv'
     fps_np, sizes = get_data(file_path,max_count=count)
 
     #fps_np = np.concatenate((a, c, fps_np), axis=0)

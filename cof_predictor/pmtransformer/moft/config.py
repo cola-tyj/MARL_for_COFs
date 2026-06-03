@@ -4,7 +4,7 @@ import os
 from sacred import Experiment
 # from moftransformer import __root_dir__
 # NOTE:部署修改
-__root_dir__ = "/home/liuhaoyu/code/rnd_1/cof_predictor/pmtransformer/moft"
+__root_dir__ = "/home/tianyajun/MARL_for_COFs/cof_predictor/pmtransformer/moft"
 # from moftransformer.utils.validation import _set_load_path, _loss_names
 from moftutils.validation import _set_load_path, _loss_names
 

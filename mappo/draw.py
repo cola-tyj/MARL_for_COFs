@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-'''folder_path = '/home/liuhaoyu/code/rnd_1/data'
+'''folder_path = '/home/tianyajun/MARL_for_COFs/data'
 # 获取文件夹中的所有文件
 conector = [f.split('.')[0] for f in os.listdir(os.path.join(folder_path, 'conector')) if f.endswith('.cjson')]
 func_groups = [f.split('.')[0] for f in os.listdir(os.path.join(folder_path, 'func_groups')) if f.endswith('.cjson')]
@@ -39,7 +39,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # CSV文件路径
-csv_file_path = '/home/liuhaoyu/code/rnd_1/result.csv'
+csv_file_path = '/home/tianyajun/MARL_for_COFs/result.csv'
 
 # 读取CSV文件
 with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
@@ -75,10 +75,10 @@ plt.show()'''
 import matplotlib.pyplot as plt
 
 # 指定.csv文件的路径
-csvFilePath = '/home/liuhaoyu/code/rnd_1/ave_result.csv'
+csvFilePath = '/home/tianyajun/MARL_for_COFs/ave_result.csv'
 
 # 指定保存图表的文件路径
-saveFilePath = '/home/liuhaoyu/code/rnd_1/average_pred_plot.png'
+saveFilePath = '/home/tianyajun/MARL_for_COFs/average_pred_plot.png'
 
 # 读取CSV文件
 df = pd.read_csv(csvFilePath)
@@ -107,9 +107,9 @@ else:
 
 def f1():  # Returns by Episode
     # 指定.csv文件的路径
-    csvFilePath = '/home/liuhaoyu/code/rnd_1/returns.csv'
+    csvFilePath = '/home/tianyajun/MARL_for_COFs/returns.csv'
     # 指定保存图表的文件路径
-    saveFilePath = '/home/liuhaoyu/code/rnd_1/average_pred_plot.png'
+    saveFilePath = '/home/tianyajun/MARL_for_COFs/average_pred_plot.png'
     # 读取CSV文件
     df = pd.read_csv(csvFilePath)
     # 检查'Episode_Reward_Sum'列是否存在
@@ -128,7 +128,7 @@ def f1():  # Returns by Episode
 
 def f2():  # Returns by Epoch
     # CSV文件路径
-    csv_file_path = '/home/liuhaoyu/code/rnd_1/returns.csv'
+    csv_file_path = '/home/tianyajun/MARL_for_COFs/returns.csv'
 
     data = pd.read_csv(csv_file_path)
     data['average1'] = data.mean(axis=1)
@@ -153,7 +153,7 @@ def f2():  # Returns by Epoch
 
 def f3():  # 平滑处理f2的曲线，滑动窗口大小为9
     # CSV文件路径
-    csv_file_path = '/home/liuhaoyu/code/rnd_1/returns.csv'
+    csv_file_path = '/home/tianyajun/MARL_for_COFs/returns.csv'
 
     # 读取CSV文件
     with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
@@ -195,9 +195,9 @@ def f3():  # 平滑处理f2的曲线，滑动窗口大小为9
 
 def f4():  # Intrinsic_rewards by Episode
     # 指定.csv文件的路径
-    csvFilePath = '/home/liuhaoyu/code/rnd_1/intrinsic.csv'
+    csvFilePath = '/home/tianyajun/MARL_for_COFs/intrinsic.csv'
     # 指定保存图表的文件路径
-    saveFilePath = '/home/liuhaoyu/code/rnd_1/Intrinsic_rewards_plot.png'
+    saveFilePath = '/home/tianyajun/MARL_for_COFs/Intrinsic_rewards_plot.png'
     # 读取CSV文件
     df = pd.read_csv(csvFilePath)
     if 'Intrinsic_rewards' in df.columns:
@@ -215,9 +215,9 @@ def f4():  # Intrinsic_rewards by Episode
 
 def f5():  # Max_pred by Epoch
     # 指定.csv文件的路径
-    csvFilePath = '/home/liuhaoyu/code/rnd_1/max_result.csv'
+    csvFilePath = '/home/tianyajun/MARL_for_COFs/max_result.csv'
     # 指定保存图表的文件路径
-    saveFilePath = '/home/liuhaoyu/code/rnd_1/Max_pred_plot.png'
+    saveFilePath = '/home/tianyajun/MARL_for_COFs/Max_pred_plot.png'
     # 读取CSV文件
     df = pd.read_csv(csvFilePath)
     if 'Maximum of pred' in df.columns:
@@ -235,7 +235,7 @@ def f5():  # Max_pred by Epoch
 
 def f6():  # Agent ave_returns by Episode
     # 指定CSV文件的路径
-    csv_file_path = '/home/liuhaoyu/code/rnd_1/returns.csv'
+    csv_file_path = '/home/tianyajun/MARL_for_COFs/returns.csv'
 
     # 读取CSV文件
     df = pd.read_csv(csv_file_path)
