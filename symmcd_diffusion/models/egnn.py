@@ -192,20 +192,22 @@ class EGNNLayer(nn.Module):
 
         # ---- Coordinate update (float32 for precision) ----
         coord_weight = self.coord_mlp(m_ij).float()  # (E, 1)
+        # Compute node degree (number of incoming edges per atom)
         degree = torch.zeros(x_f32.size(0), 1, device=x.device, dtype=torch.float32)
         degree = degree.index_add(0, row, torch.ones_like(coord_weight))
         degree = degree.clamp(min=1)
+        # Accumulate coordinate updates, then normalize by degree
         coord_update = torch.zeros_like(x_f32)
-        coord_update = coord_update.index_add(
-            0, row, coord_diff * coord_weight
-        ) / degree[row]
+        coord_update = coord_update.index_add(0, row, coord_diff * coord_weight)
+        coord_update = coord_update / degree  # (N, 3) / (N, 1) → (N, 3)
         x_new = x_f32 + coord_update
 
         # ---- Aggregate messages to nodes ----
         m_i = torch.zeros(
             h.size(0), self.hidden_dim, device=h.device, dtype=work_dtype
         )
-        m_i = m_i.index_add(0, row, m_ij) / degree[row].to(work_dtype)
+        m_i = m_i.index_add(0, row, m_ij)
+        m_i = m_i / degree.to(work_dtype)  # (N, H) / (N, 1) → (N, H)
 
         # ---- Node feature update ----
         h_new = self.node_mlp(torch.cat([h, m_i], dim=-1))
