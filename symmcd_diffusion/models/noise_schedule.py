@@ -93,6 +93,11 @@ class PredefinedNoiseSchedule(nn.Module):
             "sqrt_recip_alphas_cumprod": self.sqrt_recip_alphas_cumprod[t],
             "sqrt_recipm1_alphas_cumprod": self.sqrt_recipm1_alphas_cumprod[t],
             "posterior_variance": self.posterior_variance[t],
+            # DDPM posterior mean coefficients
+            "alphas": self.alphas[t],                       # α_t
+            "betas": self.betas[t],                         # β_t
+            "alphas_cumprod": self.alphas_cumprod[t],       # ᾱ_t
+            "alphas_cumprod_prev": self.alphas_cumprod_prev[t],  # ᾱ_{t-1}
         }
 
 
@@ -312,6 +317,11 @@ class MixedNoiseScheduler(nn.Module):
         """
         Single reverse step for continuous diffusion (DDPM).
 
+        Uses the correct DDPM posterior mean (Ho et al. 2020, Algorithm 2):
+        x0_pred = (xt - √(1-ᾱ_t) * ε) / √(ᾱ_t)
+        μ_t = √(ᾱ_{t-1})·β_t/(1-ᾱ_t) · x0_pred + √(α_t)·(1-ᾱ_{t-1})/(1-ᾱ_t) · xt
+        x_{t-1} = μ_t + σ_t · z   (for t > 0, else μ_t)
+
         Args:
             xt: (N, 3) noised coordinates at time t
             predicted_noise: (N, 3) predicted noise from denoiser
@@ -326,7 +336,7 @@ class MixedNoiseScheduler(nn.Module):
         sqrt_recipm1_ac = params["sqrt_recipm1_alphas_cumprod"]
         posterior_var = params["posterior_variance"]
 
-        # Expand dimensions
+        # Expand dimensions to (N, 1) for correct broadcasting
         if sqrt_recip_ac.dim() == 1 and xt.dim() == 2:
             sqrt_recip_ac = sqrt_recip_ac.unsqueeze(1)
             sqrt_recipm1_ac = sqrt_recipm1_ac.unsqueeze(1)
@@ -335,8 +345,25 @@ class MixedNoiseScheduler(nn.Module):
         # Predict x0 from xt and predicted noise
         x0_pred = sqrt_recip_ac * xt - sqrt_recipm1_ac * predicted_noise
 
-        # Compute mean for posterior q(x_{t-1} | xt, x0_pred)
-        posterior_mean = x0_pred
+        # ---- Correct DDPM posterior mean (Ho et al. 2020, Eq. 7 / Algorithm 2) ----
+        # μ_t(x_t, x0) = √(ᾱ_{t-1})·β_t/(1-ᾱ_t) · x0 + √α_t·(1-ᾱ_{t-1})/(1-ᾱ_t) · x_t
+        alphas = params["alphas"]                          # α_t
+        betas = params["betas"]                            # β_t
+        ac = params["alphas_cumprod"]                      # ᾱ_t
+        ac_prev = params["alphas_cumprod_prev"]            # ᾱ_{t-1}
+
+        if alphas.dim() == 1 and xt.dim() == 2:
+            alphas = alphas.unsqueeze(1)
+            betas = betas.unsqueeze(1)
+            ac = ac.unsqueeze(1)
+            ac_prev = ac_prev.unsqueeze(1)
+
+        # Coefficient for x0_pred
+        coef_x0 = (ac_prev.sqrt() * betas) / (1.0 - ac)
+        # Coefficient for xt
+        coef_xt = (alphas.sqrt() * (1.0 - ac_prev)) / (1.0 - ac)
+
+        posterior_mean = coef_x0 * x0_pred + coef_xt * xt
 
         # Add noise for t > 0
         if t.min() > 0:
@@ -373,12 +400,13 @@ class MixedNoiseScheduler(nn.Module):
             num_classes = self.bond_transition.num_classes
 
         if t.min() > 0:
-            # Compute posterior: p(a_{t-1} | a_t, a_0)
-            # This requires the transition matrices
-            # Simplified: use the denoised probabilities directly with temperature
+            # Simplified x0-prediction reverse step: sample from predicted a0
+            # with low temperature (common D3PM approximation)
             tau = 0.1
-            posterior = a0_probs
-            a_prev = F.gumbel_softmax(posterior.log(), tau=tau, hard=True)
+            # Add epsilon to avoid log(0) from float32 underflow
+            a_prev = F.gumbel_softmax(
+                (a0_probs + 1e-8).log(), tau=tau, hard=True
+            )
         else:
             # At t=0, just argmax the denoised prediction
             a_prev = F.one_hot(
