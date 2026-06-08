@@ -9,6 +9,7 @@ We use the PyTorch Geometric QM9 dataset and convert to our format.
 """
 
 import os
+import sys
 from typing import Optional, Tuple
 
 import numpy as np
@@ -29,16 +30,22 @@ BOND_TYPES = ["none", "single", "double", "triple", "aromatic"]
 BOND_TYPE_TO_IDX = {b: i for i, b in enumerate(BOND_TYPES)}
 NUM_BOND_TYPES = len(BOND_TYPES)
 
+# Radii for bond inference
+_COVALENT_RADII = {1: 0.31, 6: 0.76, 7: 0.71, 8: 0.66, 9: 0.57}
 
-class QM9Dataset:
+
+class QM9Dataset(torch.utils.data.Dataset):
     """
-    Wrapper around PyG's QM9 dataset with pre-processing for diffusion.
+    PyTorch Dataset wrapping PyG's QM9 for lazy-loading diffusion training.
 
     Converts raw QM9 data to the format expected by our diffusion model:
     - x: one-hot atom types
     - positions: 3D coordinates
     - edge_index: fully-connected graph edges
     - edge_attr: bond types (inferred from distances)
+
+    Inherits from torch.utils.data.Dataset so DataLoader iterates lazily
+    instead of materializing all ~107K samples into memory at once.
     """
 
     def __init__(
@@ -59,11 +66,13 @@ class QM9Dataset:
             max_molecules: limit dataset size (for debugging)
             remove_h: if True, remove hydrogen atoms
         """
+        super().__init__()
         self.root = root
         self.split = split
         self.remove_h = remove_h
 
         # Load QM9
+        print(f"  Loading QM9 from {root}...", flush=True)
         dataset = PyGQM9(root=root)
 
         # Create train/val/test split
@@ -83,6 +92,13 @@ class QM9Dataset:
             self.indices = self.indices[:max_molecules]
 
         self.dataset = dataset
+        print(f"  {split} split: {len(self.indices)} molecules", flush=True)
+
+        # Pre-cache atom types and positions as tensors to avoid repeated conversions
+        print(f"  Pre-caching atom type tensors...", flush=True)
+        self._z_cache = [self.dataset[idx].z for idx in self.indices]
+        self._pos_cache = [self.dataset[idx].pos for idx in self.indices]
+        print(f"  Pre-cache complete ({len(self._z_cache)} entries)", flush=True)
 
         # Compute marginals
         self.atom_marginals = self._compute_atom_marginals()
@@ -92,11 +108,8 @@ class QM9Dataset:
 
     def __getitem__(self, idx: int) -> Data:
         """Get a single molecule in diffusion-compatible format."""
-        data = self.dataset[self.indices[idx]]
-
-        # Convert to our format
-        z = data.z  # atomic numbers
-        pos = data.pos  # 3D coordinates
+        z = self._z_cache[idx]
+        pos = self._pos_cache[idx]
 
         # Filter hydrogens if requested
         if self.remove_h:
@@ -104,17 +117,15 @@ class QM9Dataset:
             z = z[keep]
             pos = pos[keep]
 
-        # One-hot atom types
-        x = torch.zeros(len(z), QM9_NUM_ATOM_TYPES)
+        n = len(z)
+
+        # One-hot atom types (vectorized)
+        x = torch.zeros(n, QM9_NUM_ATOM_TYPES)
         for i, atomic_num in enumerate(z.tolist()):
-            if atomic_num in QM9_ATOM_TO_IDX:
-                x[i, QM9_ATOM_TO_IDX[atomic_num]] = 1.0
-            else:
-                # Unknown atom type, map to carbon as fallback
-                x[i, QM9_ATOM_TO_IDX[6]] = 1.0
+            at_idx = QM9_ATOM_TO_IDX.get(atomic_num, QM9_ATOM_TO_IDX[6])
+            x[i, at_idx] = 1.0
 
         # Build fully-connected edges
-        n = len(z)
         if n > 1:
             row = torch.arange(n).unsqueeze(1).expand(-1, n).reshape(-1)
             col = torch.arange(n).unsqueeze(0).expand(n, -1).reshape(-1)
@@ -148,31 +159,29 @@ class QM9Dataset:
         row, col = edge_index[0], edge_index[1]
         dist = (pos[row] - pos[col]).norm(dim=-1)
 
-        # Covalent radii (simplified, in Angstroms)
-        radii = {1: 0.31, 6: 0.76, 7: 0.71, 8: 0.66, 9: 0.57}
-
         bond_attr = torch.zeros(edge_index.size(1), NUM_BOND_TYPES)
 
-        for e in range(edge_index.size(1)):
-            d = dist[e].item()
-            zi = z[row[e]].item()
-            zj = z[col[e]].item()
+        # Vectorized bond type assignment
+        r_i = torch.tensor([_COVALENT_RADII.get(int(zi), 0.7) for zi in z[row].tolist()])
+        r_j = torch.tensor([_COVALENT_RADII.get(int(zj), 0.7) for zj in z[col].tolist()])
+        r_sum = r_i + r_j
 
-            r_sum = radii.get(zi, 0.7) + radii.get(zj, 0.7)
+        # triple: d < 0.7 * r_sum
+        triple_mask = dist < r_sum * 0.7
+        # double: 0.7*r_sum <= d < 0.9*r_sum
+        double_mask = (~triple_mask) & (dist < r_sum * 0.9)
+        # single: 0.9*r_sum <= d < 1.2*r_sum
+        single_mask = (~triple_mask) & (~double_mask) & (dist < r_sum * 1.2)
+        # aromatic: 1.2*r_sum <= d < 1.5*r_sum
+        aromatic_mask = (~triple_mask) & (~double_mask) & (~single_mask) & (dist < r_sum * 1.5)
+        # none: d >= 1.5*r_sum
+        none_mask = ~(triple_mask | double_mask | single_mask | aromatic_mask)
 
-            # Simple heuristic
-            if d < r_sum * 0.7:
-                bond_type = "triple"
-            elif d < r_sum * 0.9:
-                bond_type = "double"
-            elif d < r_sum * 1.2:
-                bond_type = "single"
-            elif d < r_sum * 1.5:
-                bond_type = "aromatic"
-            else:
-                bond_type = "none"
-
-            bond_attr[e, BOND_TYPE_TO_IDX[bond_type]] = 1.0
+        bond_attr[triple_mask, BOND_TYPE_TO_IDX["triple"]] = 1.0
+        bond_attr[double_mask, BOND_TYPE_TO_IDX["double"]] = 1.0
+        bond_attr[single_mask, BOND_TYPE_TO_IDX["single"]] = 1.0
+        bond_attr[aromatic_mask, BOND_TYPE_TO_IDX["aromatic"]] = 1.0
+        bond_attr[none_mask, BOND_TYPE_TO_IDX["none"]] = 1.0
 
         return bond_attr
 
@@ -194,32 +203,30 @@ class QM9Dataset:
         self,
         batch_size: int = 64,
         shuffle: bool = True,
-        num_workers: int = 4,
+        num_workers: int = 0,
     ) -> DataLoader:
-        """Create a DataLoader for this dataset split."""
+        """
+        Create a DataLoader for this dataset split.
 
-        class _QM9Iterable(torch.utils.data.IterableDataset):
-            def __init__(self, parent):
-                self.parent = parent
+        Uses lazy iteration via torch.utils.data.Dataset — samples are processed
+        on-the-fly by DataLoader workers rather than materialized upfront.
 
-            def __iter__(self):
-                for i in range(len(self.parent)):
-                    yield self.parent[i]
-
-        dataset = _QM9Iterable(self)
-        # Actually use a regular list-based approach for simplicity
-        samples = [self[i] for i in range(len(self))]
-
+        IMPORTANT: num_workers defaults to 0 because PyG Data objects use
+        non-trivial pickling that can cause hangs with multiprocessing.
+        For better performance, use InMemoryDataset or pre-process to disk.
+        """
         return DataLoader(
-            samples,
+            self,
             batch_size=batch_size,
             shuffle=shuffle,
             num_workers=num_workers,
-            collate_fn=self._collate_fn,
+            collate_fn=_collate_fn,
+            # Pin memory speeds up CPU→GPU transfer when using CUDA
+            pin_memory=True,
         )
 
-    @staticmethod
-    def _collate_fn(batch):
-        """Custom collate function for variable-size molecular graphs."""
-        from torch_geometric.data import Batch
-        return Batch.from_data_list(batch)
+
+def _collate_fn(batch):
+    """Custom collate function for variable-size molecular graphs."""
+    from torch_geometric.data import Batch
+    return Batch.from_data_list(batch)

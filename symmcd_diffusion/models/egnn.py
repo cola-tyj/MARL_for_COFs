@@ -335,11 +335,20 @@ class EGNNEmbedding(nn.Module):
         """
         h = self.atom_embed(atom_types.float())
         t_emb = self.time_proj(self.time_embed(t))
-        # Expand time embedding to all nodes
-        h = h + t_emb.unsqueeze(0).expand(h.size(0), -1)
+
+        # Add time embedding to node features
+        # If t is per-atom (N,), t_emb shape matches h directly
+        if t_emb.size(0) == h.size(0):
+            h = h + t_emb
+        else:
+            # Per-molecule t: expand to all nodes
+            h = h + t_emb.unsqueeze(0).expand(h.size(0), -1)
 
         if self.condition_proj is not None and condition is not None:
             cond_emb = self.condition_proj(condition)
-            h = h + cond_emb.unsqueeze(0).expand(h.size(0), -1)
+            if cond_emb.size(0) == h.size(0):
+                h = h + cond_emb
+            else:
+                h = h + cond_emb.unsqueeze(0).expand(h.size(0), -1)
 
         return h

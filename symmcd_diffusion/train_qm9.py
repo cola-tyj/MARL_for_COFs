@@ -182,6 +182,7 @@ def train(args):
     print(f"Train samples: {len(train_dataset)}, Val samples: {len(val_dataset)}")
 
     # Initialize models
+    print("Initializing models...", flush=True)
     denoiser = Denoiser(
         num_atom_types=QM9_NUM_ATOM_TYPES,
         num_bond_types=NUM_BOND_TYPES,
@@ -233,6 +234,7 @@ def train(args):
     scaler = GradScaler(enabled=config.use_amp)
 
     # Training loop
+    print("Starting training loop...", flush=True)
     best_val_loss = float("inf")
     global_step = 0
 

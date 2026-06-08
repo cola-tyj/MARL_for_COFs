@@ -216,9 +216,13 @@ class MixedNoiseScheduler(nn.Module):
         """
         Apply discrete (categorical) forward diffusion.
 
+        NOTE: This method requires len(a0) == len(t), i.e. one timestep per
+        atom/edge. For batched training where t is per-molecule, use
+        forward_discrete_batched() instead.
+
         Args:
             a0: (N, num_classes) one-hot encoding of clean categories
-            t: (batch,) timestep indices
+            t: (N,) timestep indices (one per atom/edge)
             marginals: (num_classes,) empirical marginal distribution
             transition_type: "atom" or "bond"
 
@@ -231,12 +235,70 @@ class MixedNoiseScheduler(nn.Module):
         else:
             Q_bar = self.bond_transition.get_transition_matrix(t, marginals)
 
-        # at = a0 @ Q_bar_t  (but Q_bar is batch x K x K)
-        # Expand for batched matrix multiply
+        # Q_bar: (N, K, K) when t is per-atom
         a0_prob = a0.float()
         at = torch.bmm(
             a0_prob.unsqueeze(1),  # (N, 1, K)
-            Q_bar,                   # (batch, K, K) — needs to match N
+            Q_bar,                   # (N, K, K)
+        ).squeeze(1)
+
+        # Sample from categorical
+        at_sampled = F.gumbel_softmax(at.log(), tau=1.0, hard=True)
+
+        return at_sampled, a0_prob
+
+    def forward_discrete_batched(
+        self,
+        a0: Tensor,
+        t: Tensor,
+        batch: Tensor,
+        marginals: Tensor,
+        transition_type: str = "atom",
+        edge_index: Optional[Tensor] = None,
+    ) -> Tuple[Tensor, Tensor]:
+        """
+        Apply discrete forward diffusion with per-molecule timesteps.
+
+        Handles the case where t has shape (batch_size,) but a0 has shape
+        (total_atoms, K) or (total_edges, K).
+
+        Args:
+            a0: (N, num_classes) one-hot encoding of clean categories
+            t: (batch_size,) timestep indices (one per molecule)
+            batch: (N,) molecule assignment for each atom/edge
+            marginals: (num_classes,) empirical marginal distribution
+            transition_type: "atom" or "bond"
+            edge_index: (2, E) required for bond type diffusion to determine
+                       which molecule each edge belongs to
+
+        Returns:
+            at: (N, num_classes) noised category probabilities
+            a0_onehot: (N, num_classes) original one-hot (for loss computation)
+        """
+        if transition_type == "atom":
+            transition = self.atom_transition
+        else:
+            transition = self.bond_transition
+
+        # Determine which molecule each item belongs to
+        if edge_index is not None:
+            # Bond type: use source atom's molecule
+            mol_idx = batch[edge_index[0]]
+        else:
+            # Atom type: direct batch assignment
+            mol_idx = batch
+
+        # Get per-molecule Q_bar: (batch_size, K, K)
+        Q_bar = transition.get_transition_matrix(t, marginals)
+
+        # Expand to per-item: Q_bar[mol_idx] → (N, K, K)
+        Q_bar_expanded = Q_bar[mol_idx]
+
+        # at = a0 @ Q_bar_expanded
+        a0_prob = a0.float()
+        at = torch.bmm(
+            a0_prob.unsqueeze(1),     # (N, 1, K)
+            Q_bar_expanded,            # (N, K, K)
         ).squeeze(1)
 
         # Sample from categorical

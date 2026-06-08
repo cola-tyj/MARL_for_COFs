@@ -110,6 +110,23 @@ class DiffusionProcess(nn.Module):
             schedule=noise_schedule,
         )
 
+    def _expand_to_atoms(self, t_per_mol: Tensor, batch: Tensor) -> Tensor:
+        """Expand per-molecule timestep to per-atom indexing.
+
+        Args:
+            t_per_mol: (batch_size,) timestep per molecule
+            batch: (N,) batch assignment for each atom
+
+        Returns:
+            t_per_atom: (N,) timestep for each atom
+        """
+        return t_per_mol[batch]
+
+    def _expand_to_edges(self, t_per_mol: Tensor, batch: Tensor, edge_index: Tensor) -> Tensor:
+        """Expand per-molecule timestep to per-edge indexing using source atom's batch."""
+        row = edge_index[0]
+        return t_per_mol[batch[row]]
+
     def training_step(
         self,
         data: Data,
@@ -132,34 +149,47 @@ class DiffusionProcess(nn.Module):
             loss: total loss
             loss_dict: individual loss components for logging
         """
-        batch_size = data.batch.max().item() + 1 if hasattr(data, 'batch') and data.batch is not None else 1
         device = data.x.device
 
-        # Sample random timesteps
+        # Get per-molecule timesteps
+        if hasattr(data, 'batch') and data.batch is not None:
+            batch_size = int(data.batch.max().item()) + 1
+            batch = data.batch
+        else:
+            batch_size = 1
+            batch = torch.zeros(data.x.size(0), dtype=torch.long, device=device)
+
+        # Sample random timesteps (one per molecule)
         t = torch.randint(0, self.timesteps, (batch_size,), device=device)
 
-        # ---- Forward diffusion ----
-        # Continuous: coordinates
-        xt, noise = self.scheduler.forward_continuous(data.positions, t)
+        # Expand to per-atom for continuous noise
+        t_atom = self._expand_to_atoms(t, batch)
 
-        # Discrete: atom types
-        at, a0 = self.scheduler.forward_discrete(
-            data.x, t, atom_marginals, "atom"
+        # ---- Forward diffusion ----
+        # Continuous: coordinates (per-atom timestep)
+        xt, noise = self.scheduler.forward_continuous(data.positions, t_atom)
+
+        # Discrete: atom types (need per-molecule transition; forward_discrete
+        # handles this by iterating molecules)
+        at, a0 = self.scheduler.forward_discrete_batched(
+            data.x, t, batch, atom_marginals, "atom"
         )
 
         # Discrete: bond types (if present)
         if data.edge_attr is not None:
-            et, e0 = self.scheduler.forward_discrete(
-                data.edge_attr, t, bond_marginals, "bond"
+            et, e0 = self.scheduler.forward_discrete_batched(
+                data.edge_attr, t, batch, bond_marginals, "bond",
+                edge_index=data.edge_index,
             )
         else:
             et, e0 = None, None
 
         # ---- Denoiser prediction ----
+        # Pass per-atom timestep so time embedding broadcasts correctly
         pred = denoiser(
             atom_types=at,
             positions=xt,
-            t=t,
+            t=t_atom,
             edge_index=data.edge_index,
             edge_attr=et,
             condition=condition,
