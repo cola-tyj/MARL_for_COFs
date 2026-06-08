@@ -178,11 +178,12 @@ class EGNNLayer(nn.Module):
 
         # ---- Edge messages ----
         # Build edge input with consistent dtype
-        edge_feats = [h[row], h[col], dist_sq.to(work_dtype)]
+        edge_feats = [h[row].to(work_dtype), h[col].to(work_dtype),
+                      dist_sq.to(work_dtype)]
         if edge_attr is not None:
             edge_feats.append(edge_attr.to(work_dtype))
         edge_input = torch.cat(edge_feats, dim=-1)
-        m_ij = self.edge_mlp(edge_input)  # (E, hidden_dim) in work_dtype
+        m_ij = self.edge_mlp(edge_input).to(work_dtype)  # enforce dtype
 
         # Attention over edges (optional)
         if self.attention:
@@ -191,14 +192,16 @@ class EGNNLayer(nn.Module):
             m_ij = m_ij * attn_weights
 
         # ---- Coordinate update (float32 for precision) ----
-        coord_weight = self.coord_mlp(m_ij).float()  # (E, 1)
+        coord_weight = self.coord_mlp(m_ij).float()  # (E, 1), force float32
         # Compute node degree (number of incoming edges per atom)
         degree = torch.zeros(x_f32.size(0), 1, device=x.device, dtype=torch.float32)
-        degree = degree.index_add(0, row, torch.ones_like(coord_weight))
+        degree = degree.index_add(0, row, torch.ones_like(coord_weight, dtype=torch.float32))
         degree = degree.clamp(min=1)
         # Accumulate coordinate updates, then normalize by degree
-        coord_update = torch.zeros_like(x_f32)
-        coord_update = coord_update.index_add(0, row, coord_diff * coord_weight)
+        coord_update = torch.zeros_like(x_f32, dtype=torch.float32)
+        coord_update = coord_update.index_add(
+            0, row, (coord_diff * coord_weight).to(torch.float32)
+        )
         coord_update = coord_update / degree  # (N, 3) / (N, 1) → (N, 3)
         x_new = x_f32 + coord_update
 
@@ -206,7 +209,7 @@ class EGNNLayer(nn.Module):
         m_i = torch.zeros(
             h.size(0), self.hidden_dim, device=h.device, dtype=work_dtype
         )
-        m_i = m_i.index_add(0, row, m_ij)
+        m_i = m_i.index_add(0, row, m_ij.to(work_dtype))
         m_i = m_i / degree.to(work_dtype)  # (N, H) / (N, 1) → (N, H)
 
         # ---- Node feature update ----
@@ -225,10 +228,10 @@ class EGNNLayer(nn.Module):
         # Layer normalization
         h_new = self.node_norm(h_new)
 
-        # Apply node mask
+        # Apply node mask (ensure dtype matches)
         if node_mask is not None:
-            h_new = h_new * node_mask.unsqueeze(-1)
-            x_new = x_new * node_mask.unsqueeze(-1)
+            h_new = h_new * node_mask.unsqueeze(-1).to(work_dtype)
+            x_new = x_new * node_mask.unsqueeze(-1).to(torch.float32)
 
         return h_new, x_new
 
