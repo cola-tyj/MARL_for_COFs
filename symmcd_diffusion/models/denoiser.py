@@ -135,8 +135,8 @@ class Denoiser(nn.Module):
                 h, positions, edge_index, edge_attr, None, node_mask
             )
 
-        # Predict coordinate noise
-        coord_noise = self.coord_head(h)
+        # Predict coordinate noise (keep float32 for coordinate precision)
+        coord_noise = self.coord_head(h).float()
 
         # Predict clean atom types
         atom_logits = self.atom_head(h)
@@ -150,6 +150,6 @@ class Denoiser(nn.Module):
             "coord_noise": coord_noise,
             "atom_logits": atom_logits,
             "bond_logits": bond_logits,
-            "h": h,           # final node features (for auxiliary losses)
-            "positions": positions_out,  # final positions (for debugging)
+            "h": h,
+            "positions": positions_out,
         }

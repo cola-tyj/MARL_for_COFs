@@ -162,19 +162,27 @@ class EGNNLayer(nn.Module):
         Returns:
             h_new: (N, hidden_dim) updated node features
             x_new: (N, 3) updated coordinates
+
+        Note: This layer is AMP-safe. Under autocast, node feature computations
+        run in float16 while coordinate updates stay in float32 for precision.
         """
-        # Get source and target node indices
         row, col = edge_index[0], edge_index[1]
 
-        # Compute pairwise distances
-        coord_diff = x[row] - x[col]  # (E, 3)
+        # Working dtype: node features may be float16 under AMP
+        work_dtype = h.dtype
+
+        # ---- Pairwise distances (coordinates stay float32) ----
+        x_f32 = x.float()
+        coord_diff = x_f32[row] - x_f32[col]  # (E, 3)
         dist_sq = (coord_diff ** 2).sum(dim=-1, keepdim=True)  # (E, 1)
 
-        # Build edge messages
-        edge_input = torch.cat([h[row], h[col], dist_sq], dim=-1)
+        # ---- Edge messages ----
+        # Build edge input with consistent dtype
+        edge_feats = [h[row], h[col], dist_sq.to(work_dtype)]
         if edge_attr is not None:
-            edge_input = torch.cat([edge_input, edge_attr], dim=-1)
-        m_ij = self.edge_mlp(edge_input)  # (E, hidden_dim)
+            edge_feats.append(edge_attr.to(work_dtype))
+        edge_input = torch.cat(edge_feats, dim=-1)
+        m_ij = self.edge_mlp(edge_input)  # (E, hidden_dim) in work_dtype
 
         # Attention over edges (optional)
         if self.attention:
@@ -182,33 +190,34 @@ class EGNNLayer(nn.Module):
             attn_weights = F.softmax(attn_scores, dim=0).mean(dim=-1, keepdim=True)
             m_ij = m_ij * attn_weights
 
-        # Coordinate update
-        coord_weight = self.coord_mlp(m_ij)  # (E, 1)
-        # Normalize by degree for stability
-        degree = torch.zeros(x.size(0), 1, device=x.device)
+        # ---- Coordinate update (float32 for precision) ----
+        coord_weight = self.coord_mlp(m_ij).float()  # (E, 1)
+        degree = torch.zeros(x_f32.size(0), 1, device=x.device, dtype=torch.float32)
         degree = degree.index_add(0, row, torch.ones_like(coord_weight))
         degree = degree.clamp(min=1)
-        coord_update = torch.zeros_like(x)
+        coord_update = torch.zeros_like(x_f32)
         coord_update = coord_update.index_add(
             0, row, coord_diff * coord_weight
         ) / degree[row]
-        x_new = x + coord_update
+        x_new = x_f32 + coord_update
 
-        # Aggregate messages to nodes
-        m_i = torch.zeros(h.size(0), self.hidden_dim, device=h.device)
-        m_i = m_i.index_add(0, row, m_ij) / degree[row]
+        # ---- Aggregate messages to nodes ----
+        m_i = torch.zeros(
+            h.size(0), self.hidden_dim, device=h.device, dtype=work_dtype
+        )
+        m_i = m_i.index_add(0, row, m_ij) / degree[row].to(work_dtype)
 
-        # Node feature update
+        # ---- Node feature update ----
         h_new = self.node_mlp(torch.cat([h, m_i], dim=-1))
         h_new = h + h_new  # Residual connection
 
         # FiLM conditioning
         if self.use_film and condition is not None:
-            # Expand condition to match node dimensions
             if condition.dim() == 1 or condition.size(0) != h.size(0):
                 cond_expanded = condition.unsqueeze(0).expand(h.size(0), -1)
             else:
                 cond_expanded = condition
+            cond_expanded = cond_expanded.to(work_dtype)
             h_new = self.film(h_new, cond_expanded)
 
         # Layer normalization
@@ -337,18 +346,18 @@ class EGNNEmbedding(nn.Module):
         t_emb = self.time_proj(self.time_embed(t))
 
         # Add time embedding to node features
-        # If t is per-atom (N,), t_emb shape matches h directly
+        # t_emb may be (N,) per-atom (training) or (1,) per-molecule (inference)
         if t_emb.size(0) == h.size(0):
             h = h + t_emb
         else:
-            # Per-molecule t: expand to all nodes
-            h = h + t_emb.unsqueeze(0).expand(h.size(0), -1)
+            # Single-molecule batch: expand from (1, H) to (N, H)
+            h = h + t_emb.expand(h.size(0), -1)
 
         if self.condition_proj is not None and condition is not None:
             cond_emb = self.condition_proj(condition)
             if cond_emb.size(0) == h.size(0):
                 h = h + cond_emb
             else:
-                h = h + cond_emb.unsqueeze(0).expand(h.size(0), -1)
+                h = h + cond_emb.expand(h.size(0), -1)
 
         return h
