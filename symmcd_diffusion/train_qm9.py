@@ -188,6 +188,7 @@ def train(args):
         num_bond_types=NUM_BOND_TYPES,
         hidden_dim=config.hidden_dim,
         num_layers=config.num_layers,
+        edge_feat_dim=NUM_BOND_TYPES,
         attention=True,
         dropout=0.1,
     ).to(device)
