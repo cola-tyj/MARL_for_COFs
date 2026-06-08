@@ -198,8 +198,8 @@ def train(args):
         timesteps=config.diffusion_steps,
         noise_schedule=config.noise_schedule,
         coord_loss_weight=config.coord_loss_weight,
-        atom_loss_weight=config.atom_loss_weight,
-        bond_loss_weight=config.bond_loss_weight,
+        atom_loss_weight=config.atom_type_loss_weight,
+        bond_loss_weight=config.bond_type_loss_weight,
     ).to(device)
 
     # Print model size
