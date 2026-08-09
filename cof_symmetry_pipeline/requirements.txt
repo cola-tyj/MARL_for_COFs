@@ -1,0 +1,12 @@
+# COF Symmetry Pipeline — Dependencies
+# Install: pip install -r requirements.txt
+
+rdkit>=2023.03
+pymatgen>=2023.0
+ase>=3.22
+mace-torch>=0.3
+tblite
+torch>=2.0
+pandas>=1.5
+numpy>=1.24
+tqdm>=4.65

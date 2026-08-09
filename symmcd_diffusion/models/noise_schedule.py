@@ -1,0 +1,534 @@
+"""
+Noise schedules for the diffusion process.
+
+Supports:
+- Continuous diffusion (Gaussian noise) for 3D coordinates
+- Discrete diffusion (categorical noise) for atom types and bond types
+"""
+
+import math
+from typing import Optional, Tuple
+
+import numpy as np
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch import Tensor
+
+
+class PredefinedNoiseSchedule(nn.Module):
+    """
+    Predefined noise schedule for diffusion models.
+
+    For continuous variables (coordinates): cosine schedule (Nichol & Dhariwal, 2021)
+    For discrete variables (atom types, bonds): uniform transition matrix
+    """
+
+    def __init__(
+        self,
+        timesteps: int = 1000,
+        schedule: str = "cosine",
+        precision: float = 1e-5,
+    ):
+        super().__init__()
+        self.timesteps = timesteps
+        self.schedule = schedule
+
+        if schedule == "cosine":
+            # Cosine schedule as in iDDPM
+            betas = self._cosine_beta_schedule(timesteps)
+        elif schedule == "linear":
+            betas = torch.linspace(1e-4, 0.02, timesteps)
+        else:
+            raise ValueError(f"Unknown schedule: {schedule}")
+
+        alphas = 1.0 - betas
+        alphas_cumprod = torch.cumprod(alphas, dim=0)
+        alphas_cumprod_prev = F.pad(alphas_cumprod[:-1], (1, 0), value=1.0)
+
+        # Register as buffers (not parameters, but part of module state)
+        self.register_buffer("betas", betas)
+        self.register_buffer("alphas", alphas)
+        self.register_buffer("alphas_cumprod", alphas_cumprod)
+        self.register_buffer("alphas_cumprod_prev", alphas_cumprod_prev)
+
+        # For continuous diffusion
+        self.register_buffer(
+            "sqrt_alphas_cumprod", torch.sqrt(alphas_cumprod)
+        )
+        self.register_buffer(
+            "sqrt_one_minus_alphas_cumprod",
+            torch.sqrt(1.0 - alphas_cumprod),
+        )
+        self.register_buffer(
+            "sqrt_recip_alphas_cumprod",
+            torch.sqrt(1.0 / alphas_cumprod),
+        )
+        self.register_buffer(
+            "sqrt_recipm1_alphas_cumprod",
+            torch.sqrt(1.0 / alphas_cumprod - 1),
+        )
+
+        # Posterior variance
+        self.register_buffer(
+            "posterior_variance",
+            betas * (1.0 - alphas_cumprod_prev) / (1.0 - alphas_cumprod),
+        )
+
+    @staticmethod
+    def _cosine_beta_schedule(timesteps: int, s: float = 0.008) -> Tensor:
+        """Cosine beta schedule from iDDPM."""
+        steps = timesteps + 1
+        t = torch.linspace(0, timesteps, steps)
+        alphas_cumprod = torch.cos((t / timesteps + s) / (1 + s) * math.pi * 0.5) ** 2
+        alphas_cumprod = alphas_cumprod / alphas_cumprod[0]
+        betas = 1 - alphas_cumprod[1:] / alphas_cumprod[:-1]
+        return torch.clamp(betas, max=0.999)
+
+    def get_continuous_noise_params(self, t: Tensor) -> dict:
+        """Get noise parameters for continuous (Gaussian) diffusion at timestep t."""
+        return {
+            "sqrt_alphas_cumprod": self.sqrt_alphas_cumprod[t],
+            "sqrt_one_minus_alphas_cumprod": self.sqrt_one_minus_alphas_cumprod[t],
+            "sqrt_recip_alphas_cumprod": self.sqrt_recip_alphas_cumprod[t],
+            "sqrt_recipm1_alphas_cumprod": self.sqrt_recipm1_alphas_cumprod[t],
+            "posterior_variance": self.posterior_variance[t],
+            # DDPM posterior mean coefficients
+            "alphas": self.alphas[t],                       # α_t
+            "betas": self.betas[t],                         # β_t
+            "alphas_cumprod": self.alphas_cumprod[t],       # ᾱ_t
+            "alphas_cumprod_prev": self.alphas_cumprod_prev[t],  # ᾱ_{t-1}
+        }
+
+
+class DiscreteTransitionMatrix(nn.Module):
+    """
+    Transition matrix for discrete diffusion (atom types, bond types).
+
+    Q_t = alpha_t * I + (1 - alpha_t) * 1 * p^T
+
+    where p is either the empirical marginal distribution (use_uniform_prior=False)
+    or a uniform distribution 1/K (use_uniform_prior=True).
+
+    With uniform prior, the stationary distribution is uniform — enabling
+    de novo generation from pure noise. With marginal prior, the model
+    can only refine (atom types collapse to majority class at t=T).
+
+    Reference: Vignac et al. (2023), DiGress
+    """
+
+    def __init__(
+        self,
+        num_classes: int,
+        timesteps: int = 1000,
+        schedule: str = "cosine",
+        use_uniform_prior: bool = False,
+    ):
+        super().__init__()
+        self.num_classes = num_classes
+        self.timesteps = timesteps
+        self.use_uniform_prior = use_uniform_prior
+
+        # Pre-compute uniform prior
+        self.register_buffer(
+            "uniform_prior",
+            torch.ones(num_classes) / num_classes,
+        )
+
+        # Schedule for the mixing parameter
+        if schedule == "cosine":
+            self.register_buffer(
+                "alpha_bar",
+                torch.cos(
+                    torch.linspace(0, timesteps - 1, timesteps) / timesteps * math.pi * 0.5
+                ) ** 2,
+            )
+        else:
+            self.register_buffer(
+                "alpha_bar",
+                1.0 - torch.linspace(0, timesteps - 1, timesteps) / timesteps * 0.999,
+            )
+
+    def _get_prior(self, marginals: Tensor) -> Tensor:
+        """Return uniform prior if enabled, else empirical marginals."""
+        if self.use_uniform_prior:
+            return self.uniform_prior.to(marginals.device)
+        return marginals
+
+    def get_transition_matrix(self, t: Tensor, marginals: Tensor) -> Tensor:
+        """
+        Compute the cumulative transition matrix Q_bar_t.
+
+        Args:
+            t: (batch,) timestep indices
+            marginals: (num_classes,) empirical marginal distribution
+                      (ignored if use_uniform_prior=True)
+
+        Returns:
+            Q_bar: (batch, num_classes, num_classes) transition matrices
+        """
+        alpha_t = self.alpha_bar[t]  # (batch,)
+        prior = self._get_prior(marginals)
+
+        # Q_bar_t = alpha_t * I + (1 - alpha_t) * 1 * p^T
+        I = torch.eye(self.num_classes, device=t.device).unsqueeze(0)
+        ones = torch.ones(self.num_classes, 1, device=t.device)
+
+        Q_bar = alpha_t.view(-1, 1, 1) * I + \
+                (1 - alpha_t).view(-1, 1, 1) * \
+                (ones @ prior.unsqueeze(0))
+
+        return Q_bar
+
+    def get_single_step_matrix(self, t: Tensor, marginals: Tensor) -> Tensor:
+        """
+        Compute the single-step transition matrix Q_t.
+
+        Q_t = α_t * I + (1 - α_t) * 1 * m^T
+        where α_t = ᾱ_t / ᾱ_{t-1} (with ᾱ_{-1} = 1 by convention).
+
+        Args:
+            t: (batch,) timestep indices
+            marginals: (num_classes,) empirical marginal distribution
+
+        Returns:
+            Q: (batch, num_classes, num_classes) single-step transition matrices
+        """
+        # Pad alpha_bar with 1.0 at front: ᾱ_{-1} = 1
+        alpha_bar_padded = F.pad(self.alpha_bar, (1, 0), value=1.0)
+        # self.alpha_bar[t] = ᾱ_t,  alpha_bar_padded[t] = ᾱ_{t-1}
+        alpha_t = self.alpha_bar[t] / alpha_bar_padded[t]  # (batch,)
+
+        I = torch.eye(self.num_classes, device=t.device).unsqueeze(0)
+        ones = torch.ones(self.num_classes, 1, device=t.device)
+
+        Q = alpha_t.view(-1, 1, 1) * I + \
+            (1 - alpha_t).view(-1, 1, 1) * (ones @ marginals.unsqueeze(0))
+
+        return Q
+
+    def get_prev_cumulative_matrix(self, t: Tensor, marginals: Tensor) -> Tensor:
+        """
+        Compute the cumulative transition matrix Q_bar_{t-1}.
+
+        For t=0, Q_bar_{-1} = I (no noise before step 0).
+        For t>0, uses ᾱ_{t-1} from alpha_bar[t-1].
+
+        Args:
+            t: (batch,) timestep indices
+            marginals: (num_classes,) empirical marginal distribution
+
+        Returns:
+            Q_bar_prev: (batch, num_classes, num_classes) transition matrices
+        """
+        I = torch.eye(self.num_classes, device=t.device).unsqueeze(0)
+        ones = torch.ones(self.num_classes, 1, device=t.device)
+
+        # ᾱ_{t-1}: pad with 1 at front so alpha_bar_padded[t] = ᾱ_{t-1}
+        alpha_bar_padded = F.pad(self.alpha_bar, (1, 0), value=1.0)
+        alpha_prev = alpha_bar_padded[t]  # (batch,)
+
+        Q_bar_prev = alpha_prev.view(-1, 1, 1) * I + \
+                     (1 - alpha_prev).view(-1, 1, 1) * (ones @ marginals.unsqueeze(0))
+
+        return Q_bar_prev
+
+
+class MixedNoiseScheduler(nn.Module):
+    """
+    Combined noise scheduler for mixed continuous-discrete diffusion.
+
+    Handles:
+    - Continuous noise for 3D coordinates (Gaussian)
+    - Discrete noise for atom types (categorical)
+    - Discrete noise for bond types (categorical)
+    """
+
+    def __init__(
+        self,
+        timesteps: int = 1000,
+        num_atom_types: int = 5,
+        num_bond_types: int = 5,
+        schedule: str = "cosine",
+        use_uniform_prior: bool = False,
+    ):
+        super().__init__()
+        self.timesteps = timesteps
+
+        # Continuous schedule for coordinates
+        self.continuous_schedule = PredefinedNoiseSchedule(timesteps, schedule)
+
+        # Discrete schedules for atom and bond types
+        self.atom_transition = DiscreteTransitionMatrix(
+            num_atom_types, timesteps, schedule, use_uniform_prior=use_uniform_prior)
+        self.bond_transition = DiscreteTransitionMatrix(
+            num_bond_types, timesteps, schedule, use_uniform_prior=use_uniform_prior)
+
+    def forward_continuous(
+        self, x0: Tensor, t: Tensor, noise: Optional[Tensor] = None
+    ) -> Tuple[Tensor, Tensor]:
+        """
+        Apply continuous (Gaussian) forward diffusion to coordinates.
+
+        Args:
+            x0: (N, 3) clean coordinates
+            t: (batch,) timestep indices
+
+        Returns:
+            xt: (N, 3) noised coordinates
+            noise: (N, 3) the noise added
+        """
+        params = self.continuous_schedule.get_continuous_noise_params(t)
+        sqrt_ac = params["sqrt_alphas_cumprod"]
+        sqrt_1m_ac = params["sqrt_one_minus_alphas_cumprod"]
+
+        # Expand to N nodes
+        if sqrt_ac.dim() == 1 and x0.dim() == 2:
+            sqrt_ac = sqrt_ac.unsqueeze(1)
+            sqrt_1m_ac = sqrt_1m_ac.unsqueeze(1)
+
+        if noise is None:
+            noise = torch.randn_like(x0)
+        xt = sqrt_ac * x0 + sqrt_1m_ac * noise
+        return xt, noise
+
+    def forward_discrete(
+        self, a0: Tensor, t: Tensor, marginals: Tensor, transition_type: str = "atom"
+    ) -> Tuple[Tensor, Tensor]:
+        """
+        Apply discrete (categorical) forward diffusion.
+
+        NOTE: This method requires len(a0) == len(t), i.e. one timestep per
+        atom/edge. For batched training where t is per-molecule, use
+        forward_discrete_batched() instead.
+
+        Args:
+            a0: (N, num_classes) one-hot encoding of clean categories
+            t: (N,) timestep indices (one per atom/edge)
+            marginals: (num_classes,) empirical marginal distribution
+            transition_type: "atom" or "bond"
+
+        Returns:
+            at: (N, num_classes) noised category probabilities
+            a0_onehot: (N, num_classes) original one-hot (for loss computation)
+        """
+        if transition_type == "atom":
+            Q_bar = self.atom_transition.get_transition_matrix(t, marginals)
+        else:
+            Q_bar = self.bond_transition.get_transition_matrix(t, marginals)
+
+        # Q_bar: (N, K, K) when t is per-atom
+        a0_prob = a0.float()
+        at = torch.bmm(
+            a0_prob.unsqueeze(1),  # (N, 1, K)
+            Q_bar,                   # (N, K, K)
+        ).squeeze(1)
+
+        # Sample from categorical (add epsilon for float32 safety)
+        eps_log = torch.finfo(at.dtype).tiny
+        at_sampled = F.gumbel_softmax((at + eps_log).log(), tau=1.0, hard=True)
+
+        return at_sampled, a0_prob
+
+    def forward_discrete_batched(
+        self,
+        a0: Tensor,
+        t: Tensor,
+        batch: Tensor,
+        marginals: Tensor,
+        transition_type: str = "atom",
+        edge_index: Optional[Tensor] = None,
+    ) -> Tuple[Tensor, Tensor]:
+        """
+        Apply discrete forward diffusion with per-molecule timesteps.
+
+        Handles the case where t has shape (batch_size,) but a0 has shape
+        (total_atoms, K) or (total_edges, K).
+
+        Args:
+            a0: (N, num_classes) one-hot encoding of clean categories
+            t: (batch_size,) timestep indices (one per molecule)
+            batch: (N,) molecule assignment for each atom/edge
+            marginals: (num_classes,) empirical marginal distribution
+            transition_type: "atom" or "bond"
+            edge_index: (2, E) required for bond type diffusion to determine
+                       which molecule each edge belongs to
+
+        Returns:
+            at: (N, num_classes) noised category probabilities
+            a0_onehot: (N, num_classes) original one-hot (for loss computation)
+        """
+        if transition_type == "atom":
+            transition = self.atom_transition
+        else:
+            transition = self.bond_transition
+
+        # Determine which molecule each item belongs to
+        if edge_index is not None:
+            # Bond type: use source atom's molecule
+            mol_idx = batch[edge_index[0]]
+        else:
+            # Atom type: direct batch assignment
+            mol_idx = batch
+
+        # Get per-molecule Q_bar: (batch_size, K, K)
+        Q_bar = transition.get_transition_matrix(t, marginals)
+
+        # Expand to per-item: Q_bar[mol_idx] → (N, K, K)
+        Q_bar_expanded = Q_bar[mol_idx]
+
+        # at = a0 @ Q_bar_expanded
+        a0_prob = a0.float()
+        at = torch.bmm(
+            a0_prob.unsqueeze(1),     # (N, 1, K)
+            Q_bar_expanded,            # (N, K, K)
+        ).squeeze(1)
+
+        # Sample from categorical (add epsilon for float32 safety)
+        eps_log = torch.finfo(at.dtype).tiny
+        at_sampled = F.gumbel_softmax((at + eps_log).log(), tau=1.0, hard=True)
+
+        return at_sampled, a0_prob
+
+    def reverse_continuous(
+        self, xt: Tensor, predicted_noise: Tensor, t: Tensor
+    ) -> Tensor:
+        """
+        Single reverse step for continuous diffusion (DDPM).
+
+        Uses the correct DDPM posterior mean (Ho et al. 2020, Algorithm 2):
+        x0_pred = (xt - √(1-ᾱ_t) * ε) / √(ᾱ_t)
+        μ_t = √(ᾱ_{t-1})·β_t/(1-ᾱ_t) · x0_pred + √(α_t)·(1-ᾱ_{t-1})/(1-ᾱ_t) · xt
+        x_{t-1} = μ_t + σ_t · z   (for t > 0, else μ_t)
+
+        Args:
+            xt: (N, 3) noised coordinates at time t
+            predicted_noise: (N, 3) predicted noise from denoiser
+            t: (batch,) current timestep
+
+        Returns:
+            x_{t-1}: (N, 3) denoised coordinates
+        """
+        params = self.continuous_schedule.get_continuous_noise_params(t)
+
+        sqrt_recip_ac = params["sqrt_recip_alphas_cumprod"]
+        sqrt_recipm1_ac = params["sqrt_recipm1_alphas_cumprod"]
+        posterior_var = params["posterior_variance"]
+
+        # Expand dimensions to (N, 1) for correct broadcasting
+        if sqrt_recip_ac.dim() == 1 and xt.dim() == 2:
+            sqrt_recip_ac = sqrt_recip_ac.unsqueeze(1)
+            sqrt_recipm1_ac = sqrt_recipm1_ac.unsqueeze(1)
+            posterior_var = posterior_var.unsqueeze(1)
+
+        # Predict x0 from xt and predicted noise
+        x0_pred = sqrt_recip_ac * xt - sqrt_recipm1_ac * predicted_noise
+
+        # ---- Correct DDPM posterior mean (Ho et al. 2020, Eq. 7 / Algorithm 2) ----
+        # μ_t(x_t, x0) = √(ᾱ_{t-1})·β_t/(1-ᾱ_t) · x0 + √α_t·(1-ᾱ_{t-1})/(1-ᾱ_t) · x_t
+        alphas = params["alphas"]                          # α_t
+        betas = params["betas"]                            # β_t
+        ac = params["alphas_cumprod"]                      # ᾱ_t
+        ac_prev = params["alphas_cumprod_prev"]            # ᾱ_{t-1}
+
+        if alphas.dim() == 1 and xt.dim() == 2:
+            alphas = alphas.unsqueeze(1)
+            betas = betas.unsqueeze(1)
+            ac = ac.unsqueeze(1)
+            ac_prev = ac_prev.unsqueeze(1)
+
+        # Coefficient for x0_pred
+        coef_x0 = (ac_prev.sqrt() * betas) / (1.0 - ac)
+        # Coefficient for xt
+        coef_xt = (alphas.sqrt() * (1.0 - ac_prev)) / (1.0 - ac)
+
+        posterior_mean = coef_x0 * x0_pred + coef_xt * xt
+
+        # Add noise for t > 0
+        if t.min() > 0:
+            noise = torch.randn_like(xt)
+            posterior_mean = posterior_mean + torch.sqrt(posterior_var) * noise
+
+        return posterior_mean
+
+    def reverse_discrete(
+        self, at: Tensor, denoised_logits: Tensor, t: Tensor,
+        marginals: Tensor, transition_type: str = "atom"
+    ) -> Tensor:
+        """
+        Single reverse step for discrete diffusion (D3PM posterior).
+
+        Computes the analytic posterior:
+            p(a_{t-1} | a_t, a_0) ∝ (a_t @ Q_t^T) ⊙ (a_0_pred @ Q_bar_{t-1})
+
+        where Q_t is the single-step transition at time t and Q_bar_{t-1}
+        is the cumulative transition up to t-1.
+
+        Reference: Austin et al. (2021) "D3PM", Vignac et al. (2023) "DiGress"
+
+        Args:
+            at: (N, num_classes) current categorical (one-hot)
+            denoised_logits: (N, num_classes) predicted denoised logits
+            t: (batch,) current timestep
+            marginals: (num_classes,) empirical marginal distribution
+            transition_type: "atom" or "bond"
+
+        Returns:
+            a_{t-1}: (N, num_classes) one-hot for previous timestep
+        """
+        if transition_type == "atom":
+            transition = self.atom_transition
+        else:
+            transition = self.bond_transition
+
+        num_classes = transition.num_classes
+
+        if t.min() > 0:
+            # ---- Analytic D3PM posterior ----
+            # Get transition matrices: Q_t (single step) and Q_bar_{t-1} (cumulative)
+            Q_t = transition.get_single_step_matrix(t, marginals)          # (batch, K, K)
+            Q_bar_tm1 = transition.get_prev_cumulative_matrix(t, marginals) # (batch, K, K)
+
+            # Expand to match atom/edge count if needed
+            N = at.size(0)
+            if Q_t.size(0) == 1 and N > 1:
+                Q_t = Q_t.expand(N, -1, -1)
+                Q_bar_tm1 = Q_bar_tm1.expand(N, -1, -1)
+
+            # Predicted clean probabilities
+            a0_probs = F.softmax(denoised_logits, dim=-1)  # (N, K)
+
+            # Term 1: a_t @ Q_t^T  →  contribution from current state via reverse transition
+            # Use explicit bmm to avoid PyTorch matmul broadcasting issues.
+            # at:(N,K), Q_t:(N,K,K) → bmm(at.unsqueeze(1), Q_t^T).squeeze(1) → (N,K)
+            at_contrib = torch.bmm(
+                at.unsqueeze(1), Q_t.transpose(-2, -1)
+            ).squeeze(1)  # (N, K)
+
+            # Term 2: a0_pred @ Q_bar_{t-1}  →  contribution from predicted clean state
+            a0_contrib = torch.bmm(
+                a0_probs.unsqueeze(1), Q_bar_tm1
+            ).squeeze(1)  # (N, K)
+
+            # Posterior in log-space for numerical stability
+            # Force float32 — under AMP float16 log(0+eps) can still produce NaN
+            # when the value and eps are both below float16 resolution.
+            eps = torch.finfo(torch.float32).tiny
+            at_c = at_contrib.float()
+            a0_c = a0_contrib.float()
+            log_posterior = (at_c + eps).log() + (a0_c + eps).log()
+            posterior = F.softmax(log_posterior, dim=-1)
+
+            # Sample with low temperature (ensure 2D output)
+            tau = 0.1
+            a_prev = F.gumbel_softmax((posterior + eps).log(), tau=tau, hard=True)
+            if a_prev.dim() == 3:
+                a_prev = a_prev.squeeze(1)
+        else:
+            # At t=0, argmax the denoised prediction
+            a_prev = F.one_hot(
+                denoised_logits.argmax(dim=-1),
+                num_classes=num_classes,
+            ).float()
+
+        return a_prev

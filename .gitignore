@@ -1,0 +1,73 @@
+# Large model parameter files (too large for GitHub)
+cof_predictor/pmtransformer/params/
+cof_predictor/predictor/params/
+*.ckpt
+*.pkl
+*.pt
+*.pth
+*.xyz
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Runtime outputs
+logs/
+runs/
+out/
+symmcd_diffusion/generated/
+symmcd_diffusion/checkpoints/
+symmcd_diffusion/released_weights/
+symmcd_diffusion/marl_interface/checkpoints/
+mappo/model/
+
+# IDE
+.claude/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (sensitive or large)
+*.db
+*.sqlite
+data/
+
+# COF pipeline - large output files (keep source code only)
+cof_symmetry_pipeline/output/*.csv
+cof_symmetry_pipeline/output/*.json
+cof_symmetry_pipeline/output/*.log
+cof_symmetry_pipeline/output/*.png
+cof_symmetry_pipeline/output/*.jpg
+cof_symmetry_pipeline/output/*.smi
+cof_symmetry_pipeline/output/xyz/
+cof_symmetry_pipeline/output/mining/
+cof_symmetry_pipeline/output/hierarchical/
+cof_symmetry_pipeline/output/hierarchical_supplement/
+cof_symmetry_pipeline/output/pycofbuilder/
+cof_symmetry_pipeline/jtvae/processed/
+cof_symmetry_pipeline/jtvae/output/
+cof_symmetry_pipeline/__pycache__/
+cof_symmetry_pipeline/visualization/*.png
+cof_symmetry_pipeline/visualization/*.jpg
+cof_symmetry_pipeline/*.pyc
+
+# Environment variables
+.env
+.env.local

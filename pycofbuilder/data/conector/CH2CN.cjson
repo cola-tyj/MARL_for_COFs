@@ -1,0 +1,43 @@
+{
+    "chemical json": 1,
+    "name": "nitrile",
+    "formula": "N1X1C1Q1",
+    "atoms": {
+        "elements": {
+            "type": [
+                "Q",
+                "C",
+                "N",
+                "X"
+            ],
+            "number": [
+                0.0,
+                6,
+                7,
+                0.0
+            ]
+        },
+        "coords": {
+            "3d": [
+                0.0,
+                0.0,
+                0.0,
+                1.72000000,
+                1.32939769,
+                0.0,
+                2.29330000,
+                2.31919469,
+                0.0,
+                1.05000000,
+                -0.17264905,
+                0.0
+            ]
+        }
+    },
+    "properties": {
+        "smiles": "[Q]CC#N",
+        "code": "CHCN",
+        "xsmiles": "[*]CC#N",
+        "xsmiles_label": "|$Q;;;$|"
+    }
+}

@@ -1,0 +1,530 @@
+# === pyCOFBuilder connectors: 7 new ===
+
+    "PB_CCH3O": {
+        "smiles": "*C(=*)C",
+        "description": "[pycofbuilder] acetaldehyde",
+        "functional_group": "cch3o",
+    },
+
+    "PB_CHCN": {
+        "smiles": "*CC#N",
+        "description": "[pycofbuilder] nitrile",
+        "functional_group": "chcn",
+    },
+
+    "PB_NHNH2": {
+        "smiles": "*CNN",
+        "description": "[pycofbuilder] methylhydrazine",
+        "functional_group": "nhnh2",
+    },
+
+    "PB_COCHCHOH": {
+        "smiles": "*C(=O)CCO",
+        "description": "[pycofbuilder] betacetoenol",
+        "functional_group": "cochchoh",
+    },
+
+    "PB_CONHNH2": {
+        "smiles": "*C(=O)NN",
+        "description": "[pycofbuilder] acetohydrazide",
+        "functional_group": "conhnh2",
+    },
+
+    "PB_COOH": {
+        "smiles": "*C([O])=O",
+        "description": "[pycofbuilder] carboxylic acid",
+        "functional_group": "cooh",
+    },
+
+    "PB_NHOH": {
+        "smiles": "*NO",
+        "description": "[pycofbuilder] hidroxylamine",
+        "functional_group": "nhoh",
+    },
+
+# === pyCOFBuilder cores: 56 new ===
+
+    "pb_3BPD_L2": {
+        "smiles": "*c1ccc(-c2ccc(*)nc2)cn1",
+        "description": "[pycofbuilder] 3,3'-bipyridine (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_3IDT_L2": {
+        "smiles": "*C1=CC2C(=CC3C=C4C(=Cc5sc(*)cc54)C=C32)S1",
+        "description": "[pycofbuilder] 3a,9a-dihydro-s-indaceno[2,1-b:6,5-b']dithiophene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_4IDT_L2": {
+        "smiles": "*C1=CC2=CC3C=C4C(=Cc5cc(*)sc54)C=C3C2S1",
+        "description": "[pycofbuilder] 4a,10b-dihydro-s-indaceno[1,2-b:5,6-b']dithiophene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_ANTR_L2": {
+        "smiles": "*c1ccc2cc3cc(*)ccc3cc2c1",
+        "description": "[pycofbuilder] anthracene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_BBTZ_L2": {
+        "smiles": "*c1nc2cc3sc(*)nc3cc2s1",
+        "description": "[pycofbuilder] benzo[1,2-d:4,5-d']bis(thiazole) (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_BDFN_L2": {
+        "smiles": "*c1cc2cc3oc(*)cc3cc2o1",
+        "description": "[pycofbuilder] benzo[1,2-b:4,5-b']difuran (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_BDTP_L2": {
+        "smiles": "*c1cc2cc3sc(*)cc3cc2s1",
+        "description": "[pycofbuilder] benzo[1,2-b:4,5-b']dithiophene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_BENZ_L2": {
+        "smiles": "*c1ccc(*)cc1",
+        "description": "[pycofbuilder] benzene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_DFFE_L2": {
+        "smiles": "*c1ccc2c(c1)C=C1C=CC3C(=C12)C=CC1=C3c2ccc(*)cc2C1",
+        "description": "[pycofbuilder] 1,5c-dihydrofluoreno[4,3-c]fluorene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_DHPI_L2": {
+        "smiles": "*c1cc2cc3[nH]c(*)cc3cc2[nH]1",
+        "description": "[pycofbuilder] 1,5-dihydropyrrolo[2,3-f]indole (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_DHSI_L2": {
+        "smiles": "*C1=Cc2cc3c(cc2C1)CC(*)=C3",
+        "description": "[pycofbuilder] 1,7-dihydro-s-indacene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_IITT_L2": {
+        "smiles": "*c1ccc2c(c1)C=c1sc3c4c(sc3c1-2)=Cc1cc(*)ccc1-4",
+        "description": "[pycofbuilder] indeno[2,1-b]indeno[1',2':4,5]thieno[2,3-d]thiophene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_INDE_L2": {
+        "smiles": "*c1ccc2c(c1)C=C1C2=Cc2cc(*)ccc21",
+        "description": "[pycofbuilder] indeno[2,1-a]indene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_INFL_L2": {
+        "smiles": "*c1ccc2c(c1)C=c1cc3c(cc1-2)=Cc1cc(*)ccc1-3",
+        "description": "[pycofbuilder] indeno[1,2-b]fluorene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_INTO_L2": {
+        "smiles": "O=C1*C(=O)c2cc3c(cc21)C(=O)*C3=O",
+        "description": "[pycofbuilder] s-indacene-1,3,5,7(2H,6H)-tetraone (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_NAP2_L2": {
+        "smiles": "*C1CCCC2C(*)CCCC12",
+        "description": "[pycofbuilder] 1,5-naphthalene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_NAPT_L2": {
+        "smiles": "*c1ccc2cc(*)ccc2c1",
+        "description": "[pycofbuilder] naphthalene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_NDTP_L2": {
+        "smiles": "*c1cc2ccc3c(ccc4cc(*)sc43)c2s1",
+        "description": "[pycofbuilder] naphtho[1,2-b:5,6-b']dithiophene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_PHEN_L2": {
+        "smiles": "*c1ccc(N2[C]N(c3ccc(*)cc3)C=C2)cc1",
+        "description": "[pycofbuilder] 1,3-diphenyl-1H-imidazol-3-ium-2-ide  (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_PTCD_L2": {
+        "smiles": "O=C1*C(=O)C2C=Cc3c4c5c6c(ccc5c5ccc1c2c35)C(=O)*C(=O)C6C=C4",
+        "description": "[pycofbuilder] 3a,7a-dihydroanthra[2,1,9-def:6,5,10-d'e'f']diisochromene-1,3,8,10-tetraone (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_PYEN_L2": {
+        "smiles": "*c1ccc(N2[C]N(c3ccc(*)cn3)C=C2)nc1",
+        "description": "[pycofbuilder] 1,3-di(pyridin-2-yl)-1H-imidazol-3-ium-2-ide (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_PYRN_L2": {
+        "smiles": "*c1cc2ccc3cc(*)cc4ccc(c1)c2c34",
+        "description": "[pycofbuilder] pyrene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_PYTO_L2": {
+        "smiles": "O=c1*c(=O)c2ccc3c(=O)*c(=O)c4ccc1c2c43",
+        "description": "[pycofbuilder] pyrene-1,3,6,8(2H,7H)-tetraone (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_TIDA_L2": {
+        "smiles": "*c1cc2c(s1)/C(=C1\C(=O)N(C)c3cc(*)sc31)C(=O)N2C",
+        "description": "[pycofbuilder] (E)-4,4'-dimethyl-[6,6'-bithieno[3,2-b]pyrrolylidene]-5,5'(4H,4'H)-dione (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_TIEN_L2": {
+        "smiles": "*c1ccc(-c2ccc(-c3ccc(*)cc3)c3c2N(CC)[C]N3CC)cc1",
+        "description": "[pycofbuilder] 1,3-diethyl-4,7-diphenyl-1H-benzo[d]imidazol-3-ium-2-ide (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_TPDI_L2": {
+        "smiles": "*c1ccc2c(c1)C=C1C=C3C4=C(Cc5cc(*)ccc54)CC3C12",
+        "description": "[pycofbuilder] 4b,4c,5,6-tetrahydropentaleno[1,2-a:4,5-a']diindene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_TPNY_L2": {
+        "smiles": "*c1ccc(-c2ccc(-c3ccc(*)cc3)cc2)cc1",
+        "description": "[pycofbuilder] 1,1':4',1''-terphenyl (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_TTPH_L2": {
+        "smiles": "*c1cc2sc(*)cc2s1",
+        "description": "[pycofbuilder] thieno[3,2-b]thiophene (L2)",
+        "target_pg": "C2",
+        "n_arms": 2,
+        "symmetry_family": "C2",
+    },
+
+    "pb_BENZ_T3": {
+        "smiles": "*c1cc(*)cc(*)c1",
+        "description": "[pycofbuilder] benzene (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_BRZN_T3": {
+        "smiles": "*N1BN(*)BN(*)B1",
+        "description": "[pycofbuilder] borazine (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_BTTP_T3": {
+        "smiles": "*c1cc2c(s1)c1cc(*)sc1c1cc(*)sc21",
+        "description": "[pycofbuilder] benzo[1,2-b:3,4-b':5,6-b'']trithiophene (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_DBA1_T3": {
+        "smiles": "*c1ccc2c(c1)C#Cc1ccc(*)cc1C#Cc1ccc(*)cc1C#C2",
+        "description": "[pycofbuilder] None (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_DBA2_T3": {
+        "smiles": "*c1ccc2c#cc#cc3cc(*)ccc3c#cc#cc3cc(*)ccc3c#cc#cc2c1",
+        "description": "[pycofbuilder] None (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_DICZ_T3": {
+        "smiles": "*c1ccc2c(c1)[nH]c1c2c2[nH]c3cc(*)ccc3c2c2[nH]c3cc(*)ccc3c12",
+        "description": "[pycofbuilder] 10,15-dihydro-5H-diindolo[3,2-a:3',2'-c]carbazole (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_STAR_T3": {
+        "smiles": "*c1cc2ccc3cc2c2c1C=CC(C2)c1ccc2cc(*)c4ccc(cc4c2c1)-c1ccc2cc(*)c4ccc-3cc4c2c1",
+        "description": "[pycofbuilder] 13,14-dihydro-1,2,3(3,6)-triphenanthrenacyclopropaphane (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_STAR1_T3": {
+        "smiles": (
+            "*c1cc2ccc3cc2c2c1C=CC(C#Cc1ccc4cc(*)c5ccc(cc5c4c1)C#Cc1ccc4cc(*)c5ccc(cc5c4c1)C#"
+            "C3)C2"
+        ),
+        "description": "[pycofbuilder] None (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_TBBZ_T3": {
+        "smiles": (
+            "*c1ccc(-c2ccc(-c3cc(-c4ccc(-c5ccc(*)cc5)cc4)cc(-c4ccc(-c5ccc(*)cc5)cc4)c3)cc2)cc"
+            "1"
+        ),
+        "description": "[pycofbuilder] 5''-([1,1'-biphenyl]-4-yl)-1,1':4',1'':3'',1''':4''',1''''-quinquephenyl (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_TPAM_T3": {
+        "smiles": "*c1ccc(N(c2ccc(*)cc2)c2ccc(*)cc2)cc1",
+        "description": "[pycofbuilder] triphenylamine (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_TPNY_T3": {
+        "smiles": "*c1ccc2c(c1)c1ccc(*)cc1c1ccc(*)cc21",
+        "description": "[pycofbuilder] triphenylene (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_TPOB_T3": {
+        "smiles": "*c1ccc(Oc2nc(Oc3ccc(*)cc3)nc(Oc3ccc(*)cc3)n2)cc1",
+        "description": "[pycofbuilder] 2,4,6-triphenoxy-1,3,5-triazine (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_TPTA_T3": {
+        "smiles": "*c1ccc(Oc2cc(Oc3ccc(*)cc3)cc(Oc3ccc(*)cc3)c2)cc1",
+        "description": "[pycofbuilder] 1,3,5-triphenoxybenzene (T3)",
+        "target_pg": "C3",
+        "n_arms": 3,
+        "symmetry_family": "C3",
+    },
+
+    "pb_ADAM_D4": {
+        "smiles": "*C12CC3(*)CC(*)(C1)CC(*)(C2)C3",
+        "description": "[pycofbuilder] adamantane (D4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_SBFE_D4": {
+        "smiles": "*c1ccc2c(c1)-c1cc(*)ccc1C21c2ccc(*)cc2-c2cc(*)ccc21",
+        "description": "[pycofbuilder] 9,9-spirobi[fluorene] (D4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_TDAT_D4": {
+        "smiles": (
+            "*c1ccc(-c2ccc(C3[C@H]4CC5(c6ccc(-c7ccc(*)cc7)cc6)C[C@@H]3[C@@H](c3ccc(-c6ccc(*)c"
+            "c6)cc3)[C@H](C5)[C@H]4c3ccc(-c4ccc(*)cc4)cc3)cc2)cc1"
+        ),
+        "description": "[pycofbuilder] tetradiphenyladamantane (D4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_TKAT_D4": {
+        "smiles": (
+            "*c1ccc(C2[C@H]3C[C@@]4(c5ccc(*)cc5)C[C@@H]2[C@@H](c2ccc(*)cc2)[C@H](C4)[C@H]3c2c"
+            "cc(*)cc2)cc1"
+        ),
+        "description": "[pycofbuilder] tetraphenyladamantane (D4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_TKDM_D4": {
+        "smiles": (
+            "*c1ccc(-c2ccc(C(c3ccc(-c4ccc(*)cc4)cc3)(c3ccc(-c4ccc(*)cc4)cc3)c3ccc(-c4ccc(*)cc"
+            "4)cc3)cc2)cc1"
+        ),
+        "description": "[pycofbuilder] tetra([1,1-biphenyl]-4-yl)methane (D4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_CoBTC_S4": {
+        "smiles": "*c1cc(*)c(*)cc1*",
+        "description": "[pycofbuilder] CoBTC (S4)",
+        "target_pg": "S4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_OTPR_S4": {
+        "smiles": (
+            "*c1cc2sc3c(c2s1)-c1nc-3nc2[nH]c(nc3nc(nc4[nH]c(n1)c1sc5cc(*)sc5c41)-c1sc4cc(*)sc"
+            "4c1-3)c1sc3cc(*)sc3c21"
+        ),
+        "description": "[pycofbuilder] octylthienothiophene-fused porphyrazin (S4)",
+        "target_pg": "S4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_PHPR_S4": {
+        "smiles": (
+            "*c1ccc(-c2c3nc(c(-c4ccc(*)cc4)c4ccc([nH]4)c(-c4ccc(*)cc4)c4nc(c(-c5ccc(*)cc5)c5c"
+            "cc2[nH]5)C=C4)C=C3)cc1"
+        ),
+        "description": "[pycofbuilder] 5,10,15,20-tetraphenylporphyrin (S4)",
+        "target_pg": "S4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_PORP_S4": {
+        "smiles": "*c1c2nc(c(*)c3ccc([nH]3)c(*)c3nc(c(*)c4ccc1[nH]4)C=C3)C=C2",
+        "description": "[pycofbuilder] porphyrin (S4)",
+        "target_pg": "S4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_PTCA_S4": {
+        "smiles": (
+            "*c1ccc2c(c1)-c1nc-2nc2[nH]c(nc3nc(nc4[nH]c(n1)c1ccc(*)cc41)-c1ccc(*)cc1-3)c1ccc("
+            "*)cc21"
+        ),
+        "description": "[pycofbuilder] phthalocyanine (S4)",
+        "target_pg": "S4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_ATTP_R4": {
+        "smiles": "*c1cc2c3cc(*)sc3c3cc4c(cc3c2s1)c1sc(*)cc1c1cc(*)sc14",
+        "description": "[pycofbuilder] anthra[1,2-b:4,3-b:5,6-b:8,7-b]tetrathiophene (R4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_ETKB_R4": {
+        "smiles": (
+            "*C1CCC(C2CCC(C(=C(C3CCC(C4CCC(*)CC4)CC3)C3CCC(C4CCC(*)CC4)CC3)C3CCC(C4CCC(*)CC4)"
+            "CC3)CC2)CC1"
+        ),
+        "description": "[pycofbuilder] 4,4,4,4-(ethene-1,1,2,2-tetrayl)tetrakis(1,1-biphenyl) (R4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_TPLN_R4": {
+        "smiles": (
+            "*c1ccc(-c2cc3cc(-c4ccc(*)cc4)cc4c5cc(-c6ccc(*)cc6)cc6cc(-c7ccc(*)cc7)cc(c(c2)c34"
+            ")c65)cc1"
+        ),
+        "description": "[pycofbuilder] 2,5,8,11-tetraphenylperylene (R4)",
+        "target_pg": "C4",
+        "n_arms": 4,
+        "symmetry_family": "C4",
+    },
+
+    "pb_HECO_H6": {
+        "smiles": (
+            "*c1cc2c3cc(*)cc4c5cc(*)cc6c7cc(*)cc8c9cc(*)cc%10c%11cc(*)cc%12c(c1)c2c1c(c34)c(c"
+            "56)c(c78)c(c%109)c1c%12%11"
+        ),
+        "description": "[pycofbuilder] hexabenzo[bc,ef,hi,kl,no,qr]coronene (H6)",
+        "target_pg": "D6h",
+        "n_arms": 6,
+        "symmetry_family": "H6",
+    },
+
+    "pb_HPCO_H6": {
+        "smiles": (
+            "*c1ccc(-c2cc3c4cc(-c5ccc(*)cc5)cc5c6cc(-c7ccc(*)cc7)cc7c8cc(-c9ccc(*)cc9)cc9c%10"
+            "cc(-c%11ccc(*)cc%11)cc%11c%12cc(-c%13ccc(*)cc%13)cc%13c(c2)c3c2c(c45)c(c67)c(c89"
+            ")c(c%11%10)c2c%13%12)cc1"
+        ),
+        "description": "[pycofbuilder] 2,5,8,11,14,17-hexaphenylhexabenzo[bc,ef,hi,kl,no,qr]coronene (H6)",
+        "target_pg": "D6h",
+        "n_arms": 6,
+        "symmetry_family": "H6",
+    },

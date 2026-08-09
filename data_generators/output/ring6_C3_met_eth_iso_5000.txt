@@ -1,0 +1,36 @@
+{
+  "n_graphs": 5000,
+  "max_nodes": 15,
+  "min_nodes": 9,
+  "avg_nodes": 11.9304,
+  "avg_edges": 11.9304,
+  "stats": {
+    "subst_type_dist": {
+      "methyl": 1738,
+      "ethyl": 1640,
+      "isopropyl": 1622
+    },
+    "N_dist": {
+      "15": 1622,
+      "9": 1738,
+      "12": 1640
+    },
+    "total_attempts": 5000
+  },
+  "param_space": {
+    "ring_size": 6,
+    "symmetry": "C_3",
+    "attach_positions": [
+      0,
+      2,
+      4
+    ],
+    "subst_type": [
+      "methyl",
+      "ethyl",
+      "isopropyl"
+    ]
+  },
+  "seed": 42,
+  "mode": "ring_subst_topo"
+}

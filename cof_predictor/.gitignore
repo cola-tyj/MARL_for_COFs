@@ -1,0 +1,8 @@
+__pycache__/
+.idea/
+# dataset/
+.env
+log/
+*.ckpt
+*.pkl
+*.log
