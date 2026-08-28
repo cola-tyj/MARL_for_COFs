@@ -1,0 +1,270 @@
+{
+  "decision": {
+    "fail_action": "one bounded EQGAT replacement; no local architecture series",
+    "fail_status": "FAIL_SEMLA_BACKBONE_FAST32_V2_SWITCH_ONCE_TO_EQGAT",
+    "pass_action": "prepare the 2026-molecule IID-train command; no test/Core-OOD use",
+    "pass_status": "PASS_SEMLA_BACKBONE_FAST32_V2_ADVANCE_TO_IID_TRAIN"
+  },
+  "gate_thresholds": {
+    "collision_free_fraction_min": 0.9,
+    "each_sigma_rmsd_ratio_max": 0.95,
+    "pg_condition_sensitivity_rmsd_min": 0.0001,
+    "projected_analyzer_success_fraction_min": 0.9,
+    "projected_pg_compatible_fraction_min": 0.9,
+    "symmetry_improved_fraction_min": 0.5,
+    "training_loss_window_ratio_max": 0.8,
+    "validation_mean_rmsd_ratio_max": 0.9,
+    "validation_rmsd_improved_fraction_min": 0.75
+  },
+  "identity": {
+    "adapter_source_relative_path": "generative_model/models/graph_pg_3d_semla_backbone.py",
+    "adapter_source_sha256": "2ccd4c5921158b7f780fa8a2c41541e1b1a60f2d5bee60e44f0e9944853faad2",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "invalid_v1_reason": "official GEOM coordinate standardization was missing",
+    "invalid_v1_report_sha256": "bab007f3f767266f0076d7e1e8837d92aa6e78eb75e996db27a1ed3e9c790c51",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "split_iid_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1",
+    "trainer_source_relative_path": "generative_model/smoke/train_graph_pg_3d_semla_fast32.py",
+    "trainer_source_sha256": "385f6953cb082c85a27ed70e04cf84e57f39589dadefab465cef555a63aa8548",
+    "upstream_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283",
+    "upstream_source_relative_path": "generative_model/external/semla-flow/semlaflow/models/semla.py",
+    "upstream_source_sha256": "957443cd392513d1e8f25b8ece07e01ee510e7481f11fabba363536d4ff6ad72"
+  },
+  "model": {
+    "configuration": {
+      "atom_vocab_size": 13,
+      "bond_vocab_size": 5,
+      "coordinate_std_angstrom": 2.407038688659668,
+      "d_edge": 32,
+      "d_message": 48,
+      "d_model": 96,
+      "known_graph_only": true,
+      "n_attn_heads": 8,
+      "n_coord_sets": 4,
+      "n_layers": 6,
+      "parameter_count": 768544,
+      "pg_vocab_size": 4,
+      "schema_version": "graph-pg-3d-semla-equivinv-denoiser-v2",
+      "upstream": "SemlaFlow EquiInvDynamics",
+      "upstream_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283"
+    },
+    "constructor": {
+      "atom_vocab_size": 13,
+      "bond_vocab_size": 5,
+      "coordinate_std_angstrom": 2.407038688659668,
+      "d_edge": 32,
+      "d_message": 48,
+      "d_model": 96,
+      "n_attn_heads": 8,
+      "n_coord_sets": 4,
+      "n_layers": 6,
+      "pg_vocab_size": 4
+    }
+  },
+  "objective": {
+    "all_pair_distance_mse_weight": 0.1,
+    "bond_length_mse_weight": 0.25,
+    "coordinate_mse_weight": 1.0,
+    "soft_symmetry_mse_weight": 0.05
+  },
+  "panels": {
+    "selection": "SHA256 namespace ranking within frozen IID split, Target_PG and N<=64; selection is independent of model performance",
+    "train_audit": {
+      "atom_count_max": 63,
+      "atom_count_min": 12,
+      "element_type_indices_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "molecules": 32,
+      "sn_containing_molecules": 0,
+      "target_pg": {
+        "C2": 24,
+        "C3": 8
+      }
+    },
+    "train_by_pg": {
+      "C2": [
+        1430,
+        242,
+        461,
+        613,
+        443,
+        2060,
+        1541,
+        2344,
+        2107,
+        1726,
+        193,
+        1554,
+        1880,
+        961,
+        2119,
+        1907,
+        2270,
+        1668,
+        468,
+        1026,
+        825,
+        686,
+        1599,
+        1812
+      ],
+      "C3": [
+        1229,
+        1259,
+        1152,
+        80,
+        76,
+        1288,
+        1144,
+        1360
+      ]
+    },
+    "train_package_indices": [
+      1430,
+      242,
+      461,
+      613,
+      443,
+      2060,
+      1541,
+      2344,
+      2107,
+      1726,
+      193,
+      1554,
+      1880,
+      961,
+      2119,
+      1907,
+      2270,
+      1668,
+      468,
+      1026,
+      825,
+      686,
+      1599,
+      1812,
+      1229,
+      1259,
+      1152,
+      80,
+      76,
+      1288,
+      1144,
+      1360
+    ],
+    "validation_audit": {
+      "atom_count_max": 60,
+      "atom_count_min": 15,
+      "element_type_indices_present": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "molecules": 8,
+      "sn_containing_molecules": 0,
+      "target_pg": {
+        "C2": 6,
+        "C3": 2
+      }
+    },
+    "validation_by_pg": {
+      "C2": [
+        575,
+        1074,
+        845,
+        1490,
+        1080,
+        334
+      ],
+      "C3": [
+        1254,
+        1215
+      ]
+    },
+    "validation_package_indices": [
+      575,
+      1074,
+      845,
+      1490,
+      1080,
+      334,
+      1254,
+      1215
+    ]
+  },
+  "protocol_fingerprint": "59e0bc804e0bebe0cd5e4f3e43ff609a7410da2e4845b138a1c81640985b4eff",
+  "purpose": "Dataset-level fast validation of the locked SemlaFlow EquiInvDynamics backbone for immutable graph + Target_PG conditioned all-atom coordinate denoising, with the official GEOM coordinate standardization restored.",
+  "schema_version": "graph-pg-3d-semla-fast32-protocol-v2",
+  "scope": {
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "explicit_h": true,
+    "single_reference_rmsd_0p05_is_gate": false,
+    "test_used": false
+  },
+  "status": "FROZEN_BEFORE_FAST32_V2_TRAINING",
+  "training": {
+    "batch_seed": 20260822,
+    "batch_size_molecules": 4,
+    "checkpoint_every": 128,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0002,
+    "max_steps": 512,
+    "model_seed": 20260821,
+    "noise_sigmas_angstrom": [
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.8,
+      1.2
+    ],
+    "optimizer": "AdamW",
+    "prediction_target": "centered clean coordinates x0",
+    "weight_decay": 1e-06
+  },
+  "validation": {
+    "evaluate_steps": [
+      0,
+      128,
+      256,
+      512
+    ],
+    "noise_sigmas_angstrom": [
+      0.15,
+      0.5
+    ],
+    "pg_sensitivity_sigma_angstrom": 0.5,
+    "seeds": [
+      20261001,
+      20261002
+    ],
+    "symmetry_analyzer": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  }
+}

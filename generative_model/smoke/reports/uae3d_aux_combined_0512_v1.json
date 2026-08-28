@@ -1,0 +1,41 @@
+{
+  "artifact_hashes": {
+    "last.pt": "64d6ac1a6d5440f9f8c27a29cf11063372b1bd36b08fb9747c10c3d397c1f78e",
+    "losses.npz": "d2826d755aac129fb6f27bf62c0fc5a705b92843d4a1bbae5d2496018562292b",
+    "report.json": "5b5d9c2e5818899990eadb8991dfa8a0eb895e8b3163b07086285c4311f024b5"
+  },
+  "categorical_and_chemistry_gate": {
+    "first_passing_step": 320,
+    "passing_audit_steps": [320, 384, 448, 512],
+    "step_512": {
+      "atom_correct": 10,
+      "bond_pair_correct": 100,
+      "connected": true,
+      "none_bond_correct": 72,
+      "present_bond_correct": 18,
+      "representation_status": "VALID",
+      "sanitize_valid": true,
+      "self_loop_correct": 10
+    }
+  },
+  "coordinate_gate": {
+    "limit_angstrom": 0.05,
+    "passed": false,
+    "step_256_rmsd_angstrom": 1.8457473516464233,
+    "step_320_rmsd_angstrom": 1.2980904579162598,
+    "step_384_rmsd_angstrom": 1.1015416383743286,
+    "step_448_rmsd_angstrom": 0.9823148846626282,
+    "step_512_pair_distance_mae_angstrom": 0.3024364411830902,
+    "step_512_rmsd_angstrom": 0.8057799935340881
+  },
+  "decision": {
+    "advance_to_tier_4": false,
+    "resume_same_branch_to_step_1024": true,
+    "reason": "All categorical, representation, sanitization and connectivity checks passed at four consecutive audits, while coordinate RMSD and deterministic mean-coordinate loss continued to decrease without a plateau. Preserve the same objective, optimizer and RNG to isolate additional training length."
+  },
+  "metrics_version": "uae3d-mean-reconstruction-v1.1",
+  "model_state_fingerprint": "f545c6fbd0cd18c78ce360de1aec2cb979a98eaf6cf6394460686eea449017bb",
+  "schema_version": "1.0",
+  "status": "PASS_U2_CATEGORICAL_CHEMISTRY_EXTEND_COORDINATE_TO_1024",
+  "strict_u2_gate_passed": false
+}

@@ -1,0 +1,141 @@
+{
+  "artifacts": {
+    "generated_npz": {
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_5seed/generated.npz",
+      "sha256": "637fb177d26b9f71462439a51c09dcd3b973fa4a7a95afadeceb87848f4e05df"
+    },
+    "sampling_report": {
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_5seed/sampling_report.json",
+      "sha256": "85ba9dc54e1468c9bfbda9ebfa98e99f2b12fb82a0130d42b4a7baafdbe8708e"
+    }
+  },
+  "checkpoint": {
+    "bytes": 375024911,
+    "epoch": 644,
+    "global_step": 2565270,
+    "missing_keys": 0,
+    "path": "generative_model/checkpoints/midi/geom/geom_with_h_adaptive.ckpt",
+    "sha256": "c96d6712cfa69e94b7bf9be115c3584d8a1da9fe42b3b554d8e565f6cb530173",
+    "strict_state_dict_load": true,
+    "unexpected_keys": 0
+  },
+  "current": {
+    "collision_rate": 0.0,
+    "collisions": 0,
+    "connected": 4,
+    "connected_rate": 0.8,
+    "evaluation_reports": [
+      {
+        "path": "generative_model/runs/midi_zero_shot_geom_approx_5seed/evaluation_report.json",
+        "report_fingerprint": "84b596da7d449e7a2f06a16b924b77a9ec91b298d3d8570c2efb1d06d88f4902",
+        "sha256": "49af9956ae78d1aa3e1690a06c129debad65f818ceac4e10687aff7a7935a8b0"
+      }
+    ],
+    "minimum_pair_distance_mean_angstrom": 0.9754342999987422,
+    "samples": 5,
+    "sanitize_valid": 4,
+    "sanitize_valid_rate": 0.8
+  },
+  "decision": {
+    "gate2_passed": false,
+    "limits": [
+      "TABASCO-derived marginals are approximate, not official MiDi GEOM statistics",
+      "five samples are a smoke diagnostic, not a quantitative model conclusion",
+      "historical controls include one COF optimization step, so the comparison does not isolate marginals from that step exactly",
+      "this experiment is unconditional and does not test point-group conditioning"
+    ],
+    "next_action": "scale zero-shot diagnostic before designing COF fine-tuning; retain exact official GEOM statistics recovery as a provenance improvement",
+    "official_checkpoint_functional_with_domain_like_marginals": true,
+    "reject_model_as_incompatible": false
+  },
+  "historical_baselines": {
+    "one_cof_optimization_step_with_full_cof_marginals": {
+      "caveat": "not exact zero-shot; official checkpoint followed by one COF step",
+      "collision_rate": 1.0,
+      "collisions": 5,
+      "connected": 0,
+      "connected_rate": 0.0,
+      "evaluation_reports": [
+        {
+          "path": "generative_model/runs/midi_overfit1/sample_pretrained_cofstats_step1_5seed/evaluation_report.json",
+          "report_fingerprint": "a9c87819c7244df872093702ae7cf16cf43f52e35dc7cb023989a9d3b91c56cf",
+          "sha256": "69d50c05282e78adf504fbfe4d2fe3a045427ffab33ca6b6ff9eb2811f549d07"
+        }
+      ],
+      "minimum_pair_distance_mean_angstrom": 0.04292432218680877,
+      "samples": 5,
+      "sanitize_valid": 0,
+      "sanitize_valid_rate": 0.0
+    },
+    "one_cof_optimization_step_with_tier1_marginals": {
+      "caveat": "not exact zero-shot; official checkpoint followed by one COF step",
+      "collision_rate": 1.0,
+      "collisions": 5,
+      "connected": 0,
+      "connected_rate": 0.0,
+      "evaluation_reports": [
+        {
+          "path": "generative_model/runs/midi_overfit1/sample_pretrained_step1_seed20260812/evaluation_report.json",
+          "report_fingerprint": "fa645ee3d69d285eda36437198950a52d043d4907c028ffdd4304f5c9b76647f",
+          "sha256": "f059cb015e48308ecf3566fb032432aa1aae0b73c3da99baafe9de9e2ac7d445"
+        },
+        {
+          "path": "generative_model/runs/midi_overfit1/sample_pretrained_step1_seed20260813/evaluation_report.json",
+          "report_fingerprint": "584db82fd644c253adfb3676b031373674d85fdf704695ffb5258c962af6ef0c",
+          "sha256": "83a766391ccae7b80207709e3c15bef225c9bebd009a04d6deb3d9ae0917aa4d"
+        },
+        {
+          "path": "generative_model/runs/midi_overfit1/sample_pretrained_step1_seed20260814/evaluation_report.json",
+          "report_fingerprint": "fced1db8cf774f30979ae938941bc54653f356fa717daeced74be776319e35a9",
+          "sha256": "044262139eaf30ffda22410b1a8a13f10ff2dc0f63f9ad316d33679e6808d1c9"
+        },
+        {
+          "path": "generative_model/runs/midi_overfit1/sample_pretrained_step1_seed20260815/evaluation_report.json",
+          "report_fingerprint": "7304c3255a8f397a56e5d0d22fd5229e4a0c9f76c19f29f2c7f41c0ae2e06bc7",
+          "sha256": "775332b545de3b736faf691a010c63d7f3914a4c8319f41feec30fa982a0da13"
+        },
+        {
+          "path": "generative_model/runs/midi_overfit1/sample_pretrained_step1_seed20260816/evaluation_report.json",
+          "report_fingerprint": "da2567896a6e92c803150a9b4f23268a92a6d9e52735b08d7925ddbfe7a74d7a",
+          "sha256": "e19ac068a52b19bc4abbbdd0cd43384e4844d6417b894d9499f9ef68989ff3da"
+        }
+      ],
+      "minimum_pair_distance_mean_angstrom": 0.04651059206536897,
+      "samples": 5,
+      "sanitize_valid": 0,
+      "sanitize_valid_rate": 0.0
+    }
+  },
+  "interpretation": {
+    "collisions": "improved from 5/5 in both historical controls to 0/5",
+    "connectivity": "improved from 0/5 in both historical controls to 4/5",
+    "geometry": "mean minimum pair distance increased from 0.043-0.047 A to 0.975 A",
+    "remaining_failure": "one SANITIZE_KEKULIZE failure",
+    "validity": "improved from 0/5 in both historical controls to 4/5"
+  },
+  "noise_statistics": {
+    "excluded_implicit_h_molecules": 30,
+    "molecules": 1172272,
+    "not_official_geom_statistics": true,
+    "path": "generative_model/smoke/statistics/midi_geom_tabasco_filtered_approx_v1.json",
+    "scope": "geom_tabasco_midi_split_filtered_approx_explicit_h",
+    "semantic_sha256": "05bbdf28ff6a1ecbe3e320469c1150cc239113356a6ba5a25e481874fa3661f6",
+    "sha256": "99696e060fb7eb8d4a0c2ba6bf4378351846080425f99edccfe1612f53123c6b"
+  },
+  "protocol": {
+    "diffusion_steps": 500,
+    "explicit_h": true,
+    "node_count_condition": 32,
+    "seeds": [
+      20260812,
+      20260813,
+      20260814,
+      20260815,
+      20260816
+    ],
+    "test_mode_full_reverse_steps": true
+  },
+  "schema_version": "1.0",
+  "scope": "five_seed_fixed_32_atom_diagnostic",
+  "status": "PASS_CLEAR_DIAGNOSTIC_IMPROVEMENT"
+}

@@ -4113,15 +4113,17 @@ class PipelineConfig:
 
 ATOMIC_NUMBER_TO_SYMBOL: Dict[int, str] = {
     1: "H", 5: "B", 6: "C", 7: "N", 8: "O", 9: "F",
-    15: "P", 16: "S", 17: "Cl", 35: "Br", 53: "I",
+    14: "Si", 15: "P", 16: "S", 17: "Cl", 35: "Br", 50: "Sn", 53: "I",
 }
 SYMBOL_TO_ATOMIC_NUMBER: Dict[str, int] = {v: k for k, v in ATOMIC_NUMBER_TO_SYMBOL.items()}
 
-PG_EQUIVALENCE = {
-    "C3":  {"C3", "C3v", "C3h", "D3", "D3h", "D3d"},
-    "C4":  {"C4", "C4v", "C4h", "S4", "D2d", "D4", "D4h", "D4d"},
-    "C2":  {"C2", "C2v", "C2h", "D2", "D2h", "D2d"},
-    "S4":  {"S4", "C4", "C4v", "C4h", "D2d", "D4", "D4h", "D4d"},
-    "D6h": {"D6h", "D6", "D3h", "D3d", "C6v", "C6h", "C6", "D6d"},
+# 每个目标点群允许接受的实际点群。该表是项目的数据接纳策略，
+# 不是完整的群论超群枚举；不同旋转阶数的点群不会跨族接纳。
+PG_ALLOWED_ACTUAL = {
+    "C2": {"C2", "C2v", "C2h", "D2", "D2h", "D2d"},
+    "C3": {"C3", "C3v", "C3h", "D3", "D3h", "D3d"},
+    "C4": {"C4", "C4v", "C4h", "D4", "D4h", "D4d"},
+    "S4": {"S4", "D2d"},
+    "D6h": {"D6h"},
 }
 BROKEN_SYMMETRY_TAGS = {"C1", "Cs", "Ci"}

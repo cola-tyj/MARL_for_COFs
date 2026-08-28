@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "deterministic_validation_protocol_sha256": "e9dcaa6640953a235d7f49be4edf6de80e2016044589b0ab1cf3de50f1131ee6",
+    "deterministic_validation_report_sha256": "9abdbfe0c49660be7b05773568f6eb0af5ba9116446f337660214b75584fd14e",
+    "fixed_noisy_inputs_sha256": "f36f529b908e8a63017b9d81cc49528611388db30f377160daf0c9781a45ccd5",
+    "losses_sha256": "cca9d2d4d9aba2d7337cbd0af97e201887b4071a9bd2c86ea1bfc7a6245f653d",
+    "training_report_sha256": "baaa3461306ea7c3e6a10916523155f89fde681e6138e20208aa4f8498cdef81"
+  },
+  "comparison": {
+    "bounded_sqrt_min_snr": {
+      "case_wins": 14,
+      "mean_total_loss_ratio_to_official": 0.9848248269773896,
+      "timestep_ratios": {
+        "1": 7.387608242150127,
+        "25": 6.451658163107369,
+        "50": 5.3339773029878605,
+        "100": 3.570946224905787,
+        "200": 0.8245343867413516,
+        "300": 0.7975182447670319,
+        "400": 0.9581721315423561,
+        "500": 0.999993029706304
+      },
+      "timestep_wins": 4
+    },
+    "constant_weight_stratified": {
+      "case_wins": 14,
+      "mean_total_loss_ratio_to_official": 0.983819195409361,
+      "timestep_wins": 4
+    },
+    "normalized_min_snr": {
+      "case_wins": 14,
+      "mean_total_loss_ratio_to_official": 0.9881494133285111,
+      "timestep_wins": 4
+    }
+  },
+  "decision": {
+    "advance_to_full_dataset_finetuning": false,
+    "advance_to_longer_tier1_training": false,
+    "advance_to_pg_conditioning": false,
+    "advance_to_tier4": false,
+    "next_action": "stop local MiDi loss-weight tuning and evaluate another model base",
+    "reason": "all three weighting strategies retain exactly 14/32 case wins and 4/8 timestep wins; weighting only moves the low/high-noise tradeoff",
+    "run_native_sampling": false,
+    "sampling_skip_reason": "deterministic validation is a necessary overall-gate condition and has already failed; sampling cannot change the decision"
+  },
+  "gate": {
+    "case_win_fraction": 0.4375,
+    "case_win_fraction_min": 0.6,
+    "case_win_fraction_passed": false,
+    "mean_total_loss_ratio": 0.9848248269773896,
+    "mean_total_loss_ratio_max": 0.99,
+    "mean_total_loss_ratio_passed": true,
+    "passed": false,
+    "timestep_win_fraction": 0.5,
+    "timestep_win_fraction_min": 0.75,
+    "timestep_win_fraction_passed": false
+  },
+  "purpose": "early-stop record for the bounded sqrt-Min-SNR MiDi tier-1 pilot",
+  "schema_version": "1.0",
+  "status": "FAIL_BOUNDED_SNR_DETERMINISTIC_GATE_STOP_BEFORE_SAMPLING"
+}

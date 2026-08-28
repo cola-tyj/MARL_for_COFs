@@ -1,0 +1,53 @@
+{
+  "artifact_hashes": {
+    "last.pt": "5cdf872a7f967a334bcb97001a5602546b6cc8bd172481624d54713c2e247c7f",
+    "losses.npz": "2a85930b80ebc79aacd3809f464919ab63f251ce2693b2f8a491f435bb89336c",
+    "report.json": "2aad1818a4d19796af7b0655c9544c1a702afd2d6f83dc02fed4634b4bdb8570"
+  },
+  "baseline_step_1024": {
+    "atom_correct": 10,
+    "bond_pair_correct": 74,
+    "connected": false,
+    "coordinate_rmsd_angstrom": 2.533944845199585,
+    "none_bond_correct": 52,
+    "pair_distance_mae_angstrom": 1.272789716720581,
+    "present_bond_correct": 14,
+    "sanitize_valid": false,
+    "self_loop_correct": 8
+  },
+  "decision": {
+    "advance_to_tier_4": false,
+    "extend_same_combined_branch_to_step_512": true,
+    "reason": "At step 256 the combined branch improved every discrete stratum and both geometry metrics relative to the shared source; losses remained finite and the largest categorical gain occurred from step 192 to 256. Resume with the same optimizer rather than initializing another branch."
+  },
+  "final_step_256": {
+    "atom_correct": 10,
+    "bond_pair_correct": 90,
+    "connected": false,
+    "coordinate_rmsd_angstrom": 1.8457473516464233,
+    "none_bond_correct": 62,
+    "off_diagonal_no_self_loop": false,
+    "pair_distance_mae_angstrom": 0.7900566458702087,
+    "present_bond_correct": 18,
+    "sanitize_valid": false,
+    "self_loop_correct": 10
+  },
+  "improvement_from_source": {
+    "bond_pair_correct_absolute": 16,
+    "coordinate_rmsd_percent": 27.159134692963537,
+    "none_bond_correct_absolute": 10,
+    "pair_distance_mae_percent": 37.927166169613855,
+    "present_bond_correct_absolute": 4,
+    "self_loop_correct_absolute": 2
+  },
+  "metrics_version": "uae3d-mean-reconstruction-v1.1",
+  "objective": {
+    "balanced_bond_aux_weight": 1.0,
+    "mean_coordinate_aux_weight": 1.0,
+    "version": "uae3d-exact-reconstruction-aux-v1"
+  },
+  "schema_version": "1.0",
+  "source_checkpoint_sha256": "99c4e819802fa2b5051ff08cdaf2996e4f744b7e7d6c891298133d2f49360c5d",
+  "status": "PASS_U2_COMBINED_DIRECTIONAL_SIGNAL_EXTEND_TO_0512",
+  "strict_u2_gate_passed": false
+}

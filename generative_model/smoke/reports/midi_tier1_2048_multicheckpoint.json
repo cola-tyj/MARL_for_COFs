@@ -1,0 +1,113 @@
+{
+  "checkpoints": [
+    {
+      "bond_count_mean": 80.6,
+      "checkpoint_sha256": "12ae3a526ccdafc55dbb4978031c14105ed4a5edddfc321d556074c5eb513a52",
+      "collision_molecules": 5,
+      "component_count_mean": 2.4,
+      "connected": 1,
+      "evaluation_report_sha256": "a4d688abe4a5599a7ae7dfe19e2103ab8a91c0cd4531f2bff73358f5e5dc5a74",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "generated_npz_sha256": "f276882b73a00ee5c7d906caab8382544c2adb6888d1b6438c577b448bc64c38",
+      "maximum_radius_mean_angstrom": 10.836854612605686,
+      "minimum_interatomic_distance_mean_angstrom": 0.005747455390797813,
+      "sampling_report_sha256": "d34e75b8df025cda1630d34f06d2f7abd41d314994f35760225180d63ac67058",
+      "sanitize_valid": 0,
+      "step": 512,
+      "symmetry_analyzed": 0
+    },
+    {
+      "bond_count_mean": 122.6,
+      "checkpoint_sha256": "73f57300b5152890aa1c756f2c9b5525dfce5dde820608bc1b9c5b8e58a6341b",
+      "collision_molecules": 5,
+      "component_count_mean": 3.2,
+      "connected": 1,
+      "evaluation_report_sha256": "28f03b30b25133f9217df8fc895d839b96cde828e8dbc06352ca1393c3c52f6e",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "generated_npz_sha256": "4611bfe38c3263f178c960045f8d273bd63b72e63319cfabd712e35f58d4fa7b",
+      "maximum_radius_mean_angstrom": 12.687079442599678,
+      "minimum_interatomic_distance_mean_angstrom": 0.00025577599347648697,
+      "sampling_report_sha256": "23b17cb588fdecad66992a95cbe4dfb6b847d3e3e3930502ec1474b88ca4812d",
+      "sanitize_valid": 0,
+      "step": 1024,
+      "symmetry_analyzed": 0
+    },
+    {
+      "bond_count_mean": 41.6,
+      "checkpoint_sha256": "ba535fd4a6794c52ccd99e88720c3b0b5bb6b63eab6c300ddff604446f9c81c4",
+      "collision_molecules": 5,
+      "component_count_mean": 13.4,
+      "connected": 0,
+      "evaluation_report_sha256": "6306874e713a1527dcaefb77782a575ba9787509f6ba4480a61b7dd31b7a1c37",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "generated_npz_sha256": "256f38bd9e69cfa9755b550525b717df6ddf9ae2a96dd8e7b0d0ba182e9b636b",
+      "maximum_radius_mean_angstrom": 10.28303215481842,
+      "minimum_interatomic_distance_mean_angstrom": 0.05337275482512873,
+      "sampling_report_sha256": "6f372648c5598280a731371e48013d907e9e11d7c4c801af4b96a7679d55b173",
+      "sanitize_valid": 0,
+      "step": 1536,
+      "symmetry_analyzed": 5
+    },
+    {
+      "bond_count_mean": 70.6,
+      "checkpoint_sha256": "3671928f95f27f04bdbf6a1310296a6df808e43f8539db4714d4c8716d860db9",
+      "collision_molecules": 5,
+      "component_count_mean": 2.4,
+      "connected": 1,
+      "evaluation_report_sha256": "e00c99498beeed2fbb573e449526453e2395cede27f1abeffa7ccd80061dfc92",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "generated_npz_sha256": "c3fd82e52bd64c83a0b9f34b0b307bb7aad85a69e214f800258e4a72c5ff5ff6",
+      "maximum_radius_mean_angstrom": 9.01243891726203,
+      "minimum_interatomic_distance_mean_angstrom": 0.0010115868656842158,
+      "sampling_report_sha256": "e6f8f6e7a090c2888dc124e9aa5abaffa5340d44605f86969b3947607bb18c7f",
+      "sanitize_valid": 0,
+      "step": 2048,
+      "symmetry_analyzed": 1
+    }
+  ],
+  "decision": {
+    "advance_to_tier4": false,
+    "next_action": "audit pretrained MiDi checkpoint availability/identity and deterministic denoising targets before any additional from-scratch training",
+    "reason": "all 20 native samples fail strict RDKit sanitization and all 20 contain an interatomic collision below 0.6 angstrom"
+  },
+  "protocol": {
+    "checkpoint_steps": [
+      512,
+      1024,
+      1536,
+      2048
+    ],
+    "collision_threshold_angstrom": 0.6,
+    "diffusion_steps": 500,
+    "native_outputs_only": true,
+    "node_count_condition": 32,
+    "postprocessing": "none",
+    "samples_per_checkpoint": 5,
+    "seeds": [
+      20260812,
+      20260813,
+      20260814,
+      20260815,
+      20260816
+    ]
+  },
+  "purpose": "MiDi tier-1 native multi-checkpoint generation decision",
+  "schema_version": "1.0",
+  "status": "FAIL_GATE2_STOP_BEFORE_TIER4",
+  "totals": {
+    "collision_rate": 1.0,
+    "collisions": 20,
+    "connected": 3,
+    "connected_rate": 0.15,
+    "exact": 0,
+    "exact_train_smiles_rate": 0.0,
+    "generated": 20,
+    "sanitize_valid_rate": 0.0,
+    "valid": 0
+  },
+  "training_report_sha256": "ae0aa0f290266516217ba5481d70b70886dec44393396e642c2d6cc9be3bc92b"
+}

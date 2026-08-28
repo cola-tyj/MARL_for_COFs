@@ -1,0 +1,992 @@
+{
+  "checkpoints": {
+    "candidate_step16": {
+      "auxiliary_probes": {
+        "hidden_features": {
+          "binary_probe": {
+            "algorithm": "float64 Newton/IRLS logistic regression",
+            "constant_feature_count": 0,
+            "converged": true,
+            "fit_calibration": {
+              "raw_zero": {
+                "existence_accuracy": 0.7665695012799671,
+                "existence_error_count": 24985,
+                "macro_molecule_balanced_existence_accuracy": 0.8039364373335689,
+                "minimum_molecule_balanced_existence_accuracy": 0.6388888888888888,
+                "molecule_count": 128,
+                "none_accuracy": 0.7619813949837108,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.8577838470542333,
+                "threshold": 0.0
+              },
+              "selected": {
+                "existence_accuracy": 0.726572864697199,
+                "existence_error_count": 29266,
+                "macro_molecule_balanced_existence_accuracy": 0.8088109074193032,
+                "minimum_molecule_balanced_existence_accuracy": 0.625,
+                "molecule_count": 128,
+                "none_accuracy": 0.7172449660478079,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.9120171673819742,
+                "threshold": -0.34008893049757527
+              }
+            },
+            "fit_global_threshold": -0.34008893049757527,
+            "fit_roc_auc_all_pairs": 0.8841203420477439,
+            "iterations": 8,
+            "l2": 0.01,
+            "transfer_calibrated": {
+              "existence_accuracy": 0.7235775825300691,
+              "existence_error_count": 6481,
+              "macro_molecule_balanced_existence_accuracy": 0.7989322774855453,
+              "minimum_molecule_balanced_existence_accuracy": 0.675,
+              "molecule_count": 32,
+              "none_accuracy": 0.7128276606267704,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.9219917012448133,
+              "threshold": -0.34008893049757527
+            },
+            "transfer_raw_zero": {
+              "existence_accuracy": 0.7685319457476755,
+              "existence_error_count": 5427,
+              "macro_molecule_balanced_existence_accuracy": 0.8017437473753892,
+              "minimum_molecule_balanced_existence_accuracy": 0.6857764876632801,
+              "molecule_count": 32,
+              "none_accuracy": 0.7627804505193112,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.8746887966804979,
+              "threshold": 0.0
+            },
+            "transfer_roc_auc_all_pairs": 0.8879331487714458
+          },
+          "conditional_type_probe": {
+            "algorithm": "class-balanced float64 ridge least squares",
+            "constant_feature_count": 0,
+            "fit": {
+              "macro_supported_class_accuracy": 0.627845638913865,
+              "micro_accuracy": 0.6543113538821693,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.719875500222321,
+                  "class_index": 4,
+                  "correct": 1619,
+                  "total": 2249
+                },
+                "double": {
+                  "accuracy": 0.730593607305936,
+                  "class_index": 2,
+                  "correct": 160,
+                  "total": 219
+                },
+                "single": {
+                  "accuracy": 0.5999205403257847,
+                  "class_index": 1,
+                  "correct": 1510,
+                  "total": 2517
+                },
+                "triple": {
+                  "accuracy": 0.46099290780141844,
+                  "class_index": 3,
+                  "correct": 65,
+                  "total": 141
+                }
+              }
+            },
+            "l2": 0.01,
+            "transfer": {
+              "macro_supported_class_accuracy": 0.5476724494694981,
+              "micro_accuracy": 0.6149377593360996,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.7025547445255474,
+                  "class_index": 4,
+                  "correct": 385,
+                  "total": 548
+                },
+                "double": {
+                  "accuracy": 0.5797101449275363,
+                  "class_index": 2,
+                  "correct": 40,
+                  "total": 69
+                },
+                "single": {
+                  "accuracy": 0.5512820512820513,
+                  "class_index": 1,
+                  "correct": 301,
+                  "total": 546
+                },
+                "triple": {
+                  "accuracy": 0.35714285714285715,
+                  "class_index": 3,
+                  "correct": 15,
+                  "total": 42
+                }
+              }
+            }
+          },
+          "feature_name": "hidden_features",
+          "fit_balanced_pair_count": 10252,
+          "fit_present_pair_count": 5126,
+          "linear_signal_classification": "FEATURE_SEPARABLE",
+          "probe_scope": "diagnostic_only_not_a_tier_gate",
+          "transfer_present_pair_count": 1205
+        },
+        "pair_features": {
+          "binary_probe": {
+            "algorithm": "float64 Newton/IRLS logistic regression",
+            "constant_feature_count": 0,
+            "converged": true,
+            "fit_calibration": {
+              "raw_zero": {
+                "existence_accuracy": 0.588392473419661,
+                "existence_error_count": 44056,
+                "macro_molecule_balanced_existence_accuracy": 0.6060266350804235,
+                "minimum_molecule_balanced_existence_accuracy": 0.5208018154311649,
+                "molecule_count": 128,
+                "none_accuracy": 0.5875986183616595,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.6041747951619196,
+                "threshold": 0.0
+              },
+              "selected": {
+                "existence_accuracy": 0.7000859539959265,
+                "existence_error_count": 32101,
+                "macro_molecule_balanced_existence_accuracy": 0.6116950338486444,
+                "minimum_molecule_balanced_existence_accuracy": 0.502734375,
+                "molecule_count": 128,
+                "none_accuracy": 0.7097774463241355,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.5074131876706984,
+                "threshold": 0.2548214709985203
+              }
+            },
+            "fit_global_threshold": 0.2548214709985203,
+            "fit_roc_auc_all_pairs": 0.6590621752414574,
+            "iterations": 5,
+            "l2": 0.01,
+            "transfer_calibrated": {
+              "existence_accuracy": 0.7042992408086668,
+              "existence_error_count": 6933,
+              "macro_molecule_balanced_existence_accuracy": 0.5995545484616298,
+              "minimum_molecule_balanced_existence_accuracy": 0.49074074074074076,
+              "molecule_count": 32,
+              "none_accuracy": 0.7157501910885302,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.49294605809128633,
+              "threshold": 0.2548214709985203
+            },
+            "transfer_raw_zero": {
+              "existence_accuracy": 0.5826153714919389,
+              "existence_error_count": 9786,
+              "macro_molecule_balanced_existence_accuracy": 0.6016659227797393,
+              "minimum_molecule_balanced_existence_accuracy": 0.5299837045084194,
+              "molecule_count": 32,
+              "none_accuracy": 0.5809091317836428,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.6141078838174274,
+              "threshold": 0.0
+            },
+            "transfer_roc_auc_all_pairs": 0.6606210615100779
+          },
+          "conditional_type_probe": {
+            "algorithm": "class-balanced float64 ridge least squares",
+            "constant_feature_count": 0,
+            "fit": {
+              "macro_supported_class_accuracy": 0.6677396886859321,
+              "micro_accuracy": 0.666601638704643,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.7425522454424188,
+                  "class_index": 4,
+                  "correct": 1670,
+                  "total": 2249
+                },
+                "double": {
+                  "accuracy": 0.7579908675799086,
+                  "class_index": 2,
+                  "correct": 166,
+                  "total": 219
+                },
+                "single": {
+                  "accuracy": 0.5959475566150179,
+                  "class_index": 1,
+                  "correct": 1500,
+                  "total": 2517
+                },
+                "triple": {
+                  "accuracy": 0.574468085106383,
+                  "class_index": 3,
+                  "correct": 81,
+                  "total": 141
+                }
+              }
+            },
+            "l2": 0.01,
+            "transfer": {
+              "macro_supported_class_accuracy": 0.5841050808918153,
+              "micro_accuracy": 0.6224066390041494,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.7007299270072993,
+                  "class_index": 4,
+                  "correct": 384,
+                  "total": 548
+                },
+                "double": {
+                  "accuracy": 0.6521739130434783,
+                  "class_index": 2,
+                  "correct": 45,
+                  "total": 69
+                },
+                "single": {
+                  "accuracy": 0.554945054945055,
+                  "class_index": 1,
+                  "correct": 303,
+                  "total": 546
+                },
+                "triple": {
+                  "accuracy": 0.42857142857142855,
+                  "class_index": 3,
+                  "correct": 18,
+                  "total": 42
+                }
+              }
+            }
+          },
+          "feature_name": "pair_features",
+          "fit_balanced_pair_count": 10252,
+          "fit_present_pair_count": 5126,
+          "linear_signal_classification": "NOT_LINEARLY_SEPARABLE",
+          "probe_scope": "diagnostic_only_not_a_tier_gate",
+          "transfer_present_pair_count": 1205
+        }
+      },
+      "checkpoint": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/hierarchical_v4_balanced_0016/last.pt",
+      "checkpoint_sha256": "137714cebeb146c5e6493e8f9f2363daf43ef0fe26d277729585b938be0881eb",
+      "checkpoint_step": 16,
+      "diagnosis": "POST_GELU_FEATURES_SUPPORT_EXPLICIT_EXISTENCE_HEAD",
+      "fit_feature_table_fingerprint": "f6272f7929edcdfd9b971fc2da3bf6d29a194fe4055bd47652f97d2491a5d7ce",
+      "legacy_head": {
+        "conditional_type": {
+          "fit": {
+            "macro_supported_class_accuracy": 0.33441466420124266,
+            "micro_accuracy": 0.5669137729223566,
+            "per_class": {
+              "aromatic": {
+                "accuracy": 0.424188528234771,
+                "class_index": 4,
+                "correct": 954,
+                "total": 2249
+              },
+              "double": {
+                "accuracy": 0.0410958904109589,
+                "class_index": 2,
+                "correct": 9,
+                "total": 219
+              },
+              "single": {
+                "accuracy": 0.7659912594358363,
+                "class_index": 1,
+                "correct": 1928,
+                "total": 2517
+              },
+              "triple": {
+                "accuracy": 0.10638297872340426,
+                "class_index": 3,
+                "correct": 15,
+                "total": 141
+              }
+            }
+          },
+          "transfer": {
+            "macro_supported_class_accuracy": 0.36527824761718763,
+            "micro_accuracy": 0.591701244813278,
+            "per_class": {
+              "aromatic": {
+                "accuracy": 0.5291970802919708,
+                "class_index": 4,
+                "correct": 290,
+                "total": 548
+              },
+              "double": {
+                "accuracy": 0.028985507246376812,
+                "class_index": 2,
+                "correct": 2,
+                "total": 69
+              },
+              "single": {
+                "accuracy": 0.76007326007326,
+                "class_index": 1,
+                "correct": 415,
+                "total": 546
+              },
+              "triple": {
+                "accuracy": 0.14285714285714285,
+                "class_index": 3,
+                "correct": 6,
+                "total": 42
+              }
+            }
+          }
+        },
+        "fit_calibration": {
+          "raw_zero": {
+            "existence_accuracy": 0.9294242950838052,
+            "existence_error_count": 7554,
+            "macro_molecule_balanced_existence_accuracy": 0.6170610446037906,
+            "minimum_molecule_balanced_existence_accuracy": 0.4942528735632184,
+            "molecule_count": 128,
+            "none_accuracy": 0.9643403854456961,
+            "pair_count_unique": 107034,
+            "present_existence_recall": 0.23527116660163871,
+            "threshold": 0.0
+          },
+          "selected": {
+            "existence_accuracy": 0.8014088981071436,
+            "existence_error_count": 21256,
+            "macro_molecule_balanced_existence_accuracy": 0.7200124883983269,
+            "minimum_molecule_balanced_existence_accuracy": 0.5,
+            "molecule_count": 128,
+            "none_accuracy": 0.808974761549633,
+            "pair_count_unique": 107034,
+            "present_existence_recall": 0.6509949278189622,
+            "threshold": -6.75501549243927
+          }
+        },
+        "fit_global_threshold": -6.75501549243927,
+        "fit_roc_auc_all_pairs": 0.8139821172236613,
+        "head": "official 64->64 GELU -> 6-class bond head",
+        "probe_scope": "frozen_baseline_not_a_tier_gate",
+        "transfer_calibrated": {
+          "existence_accuracy": 0.7461400665358697,
+          "existence_error_count": 5952,
+          "macro_molecule_balanced_existence_accuracy": 0.7289760224651757,
+          "minimum_molecule_balanced_existence_accuracy": 0.5738798008534851,
+          "molecule_count": 32,
+          "none_accuracy": 0.7457398498268962,
+          "pair_count_unique": 23446,
+          "present_existence_recall": 0.7535269709543568,
+          "threshold": -6.75501549243927
+        },
+        "transfer_raw_zero": {
+          "existence_accuracy": 0.922033609144417,
+          "existence_error_count": 1828,
+          "macro_molecule_balanced_existence_accuracy": 0.6429043558626697,
+          "minimum_molecule_balanced_existence_accuracy": 0.5,
+          "molecule_count": 32,
+          "none_accuracy": 0.9554426509599389,
+          "pair_count_unique": 23446,
+          "present_existence_recall": 0.3053941908713693,
+          "threshold": 0.0
+        },
+        "transfer_roc_auc_all_pairs": 0.8352149529083609
+      },
+      "model_state_fingerprint": "bb2263a333f7882a074607d84f145994403b5dbc72ccf1c9d319e2f3dcef223d",
+      "model_state_unchanged": true,
+      "transfer_feature_table_fingerprint": "18c77980405e62ea40e15ffa191c6981482ae3acbde9761e05080e4e758ef116"
+    },
+    "source_step3008": {
+      "auxiliary_probes": {
+        "hidden_features": {
+          "binary_probe": {
+            "algorithm": "float64 Newton/IRLS logistic regression",
+            "constant_feature_count": 0,
+            "converged": true,
+            "fit_calibration": {
+              "raw_zero": {
+                "existence_accuracy": 0.766513444326102,
+                "existence_error_count": 24991,
+                "macro_molecule_balanced_existence_accuracy": 0.8036505257994514,
+                "minimum_molecule_balanced_existence_accuracy": 0.6527777777777778,
+                "molecule_count": 128,
+                "none_accuracy": 0.7619323311221886,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.8575887631681623,
+                "threshold": 0.0
+              },
+              "selected": {
+                "existence_accuracy": 0.7372890857110825,
+                "existence_error_count": 28119,
+                "macro_molecule_balanced_existence_accuracy": 0.8087755499772903,
+                "minimum_molecule_balanced_existence_accuracy": 0.6388888888888888,
+                "molecule_count": 128,
+                "none_accuracy": 0.7290791694469522,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.9005072181037846,
+                "threshold": -0.2508005965230932
+              }
+            },
+            "fit_global_threshold": -0.2508005965230932,
+            "fit_roc_auc_all_pairs": 0.8840531898355576,
+            "iterations": 8,
+            "l2": 0.01,
+            "transfer_calibrated": {
+              "existence_accuracy": 0.7358611276976883,
+              "existence_error_count": 6193,
+              "macro_molecule_balanced_existence_accuracy": 0.8004059803510315,
+              "minimum_molecule_balanced_existence_accuracy": 0.6808823529411765,
+              "molecule_count": 32,
+              "none_accuracy": 0.7262713007508655,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.9128630705394191,
+              "threshold": -0.2508005965230932
+            },
+            "transfer_raw_zero": {
+              "existence_accuracy": 0.7685745969461741,
+              "existence_error_count": 5426,
+              "macro_molecule_balanced_existence_accuracy": 0.8023453189322871,
+              "minimum_molecule_balanced_existence_accuracy": 0.6878926327812679,
+              "molecule_count": 32,
+              "none_accuracy": 0.7627354885122072,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.8763485477178423,
+              "threshold": 0.0
+            },
+            "transfer_roc_auc_all_pairs": 0.8879613946132531
+          },
+          "conditional_type_probe": {
+            "algorithm": "class-balanced float64 ridge least squares",
+            "constant_feature_count": 0,
+            "fit": {
+              "macro_supported_class_accuracy": 0.6288642367947929,
+              "micro_accuracy": 0.6531408505657432,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.7176522899066252,
+                  "class_index": 4,
+                  "correct": 1614,
+                  "total": 2249
+                },
+                "double": {
+                  "accuracy": 0.730593607305936,
+                  "class_index": 2,
+                  "correct": 160,
+                  "total": 219
+                },
+                "single": {
+                  "accuracy": 0.5991259435836314,
+                  "class_index": 1,
+                  "correct": 1508,
+                  "total": 2517
+                },
+                "triple": {
+                  "accuracy": 0.46808510638297873,
+                  "class_index": 3,
+                  "correct": 66,
+                  "total": 141
+                }
+              }
+            },
+            "l2": 0.01,
+            "transfer": {
+              "macro_supported_class_accuracy": 0.5481303249273736,
+              "micro_accuracy": 0.6157676348547718,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.7025547445255474,
+                  "class_index": 4,
+                  "correct": 385,
+                  "total": 548
+                },
+                "double": {
+                  "accuracy": 0.5797101449275363,
+                  "class_index": 2,
+                  "correct": 40,
+                  "total": 69
+                },
+                "single": {
+                  "accuracy": 0.5531135531135531,
+                  "class_index": 1,
+                  "correct": 302,
+                  "total": 546
+                },
+                "triple": {
+                  "accuracy": 0.35714285714285715,
+                  "class_index": 3,
+                  "correct": 15,
+                  "total": 42
+                }
+              }
+            }
+          },
+          "feature_name": "hidden_features",
+          "fit_balanced_pair_count": 10252,
+          "fit_present_pair_count": 5126,
+          "linear_signal_classification": "FEATURE_SEPARABLE",
+          "probe_scope": "diagnostic_only_not_a_tier_gate",
+          "transfer_present_pair_count": 1205
+        },
+        "pair_features": {
+          "binary_probe": {
+            "algorithm": "float64 Newton/IRLS logistic regression",
+            "constant_feature_count": 0,
+            "converged": true,
+            "fit_calibration": {
+              "raw_zero": {
+                "existence_accuracy": 0.588392473419661,
+                "existence_error_count": 44056,
+                "macro_molecule_balanced_existence_accuracy": 0.6060266350804235,
+                "minimum_molecule_balanced_existence_accuracy": 0.5208018154311649,
+                "molecule_count": 128,
+                "none_accuracy": 0.5875986183616595,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.6041747951619196,
+                "threshold": 0.0
+              },
+              "selected": {
+                "existence_accuracy": 0.7000859539959265,
+                "existence_error_count": 32101,
+                "macro_molecule_balanced_existence_accuracy": 0.6116950338486444,
+                "minimum_molecule_balanced_existence_accuracy": 0.502734375,
+                "molecule_count": 128,
+                "none_accuracy": 0.7097774463241355,
+                "pair_count_unique": 107034,
+                "present_existence_recall": 0.5074131876706984,
+                "threshold": 0.2548214709985203
+              }
+            },
+            "fit_global_threshold": 0.2548214709985203,
+            "fit_roc_auc_all_pairs": 0.6590621752414574,
+            "iterations": 5,
+            "l2": 0.01,
+            "transfer_calibrated": {
+              "existence_accuracy": 0.7042992408086668,
+              "existence_error_count": 6933,
+              "macro_molecule_balanced_existence_accuracy": 0.5995545484616298,
+              "minimum_molecule_balanced_existence_accuracy": 0.49074074074074076,
+              "molecule_count": 32,
+              "none_accuracy": 0.7157501910885302,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.49294605809128633,
+              "threshold": 0.2548214709985203
+            },
+            "transfer_raw_zero": {
+              "existence_accuracy": 0.5826153714919389,
+              "existence_error_count": 9786,
+              "macro_molecule_balanced_existence_accuracy": 0.6016659227797393,
+              "minimum_molecule_balanced_existence_accuracy": 0.5299837045084194,
+              "molecule_count": 32,
+              "none_accuracy": 0.5809091317836428,
+              "pair_count_unique": 23446,
+              "present_existence_recall": 0.6141078838174274,
+              "threshold": 0.0
+            },
+            "transfer_roc_auc_all_pairs": 0.6606210615100779
+          },
+          "conditional_type_probe": {
+            "algorithm": "class-balanced float64 ridge least squares",
+            "constant_feature_count": 0,
+            "fit": {
+              "macro_supported_class_accuracy": 0.6677396886859321,
+              "micro_accuracy": 0.666601638704643,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.7425522454424188,
+                  "class_index": 4,
+                  "correct": 1670,
+                  "total": 2249
+                },
+                "double": {
+                  "accuracy": 0.7579908675799086,
+                  "class_index": 2,
+                  "correct": 166,
+                  "total": 219
+                },
+                "single": {
+                  "accuracy": 0.5959475566150179,
+                  "class_index": 1,
+                  "correct": 1500,
+                  "total": 2517
+                },
+                "triple": {
+                  "accuracy": 0.574468085106383,
+                  "class_index": 3,
+                  "correct": 81,
+                  "total": 141
+                }
+              }
+            },
+            "l2": 0.01,
+            "transfer": {
+              "macro_supported_class_accuracy": 0.5841050808918153,
+              "micro_accuracy": 0.6224066390041494,
+              "per_class": {
+                "aromatic": {
+                  "accuracy": 0.7007299270072993,
+                  "class_index": 4,
+                  "correct": 384,
+                  "total": 548
+                },
+                "double": {
+                  "accuracy": 0.6521739130434783,
+                  "class_index": 2,
+                  "correct": 45,
+                  "total": 69
+                },
+                "single": {
+                  "accuracy": 0.554945054945055,
+                  "class_index": 1,
+                  "correct": 303,
+                  "total": 546
+                },
+                "triple": {
+                  "accuracy": 0.42857142857142855,
+                  "class_index": 3,
+                  "correct": 18,
+                  "total": 42
+                }
+              }
+            }
+          },
+          "feature_name": "pair_features",
+          "fit_balanced_pair_count": 10252,
+          "fit_present_pair_count": 5126,
+          "linear_signal_classification": "NOT_LINEARLY_SEPARABLE",
+          "probe_scope": "diagnostic_only_not_a_tier_gate",
+          "transfer_present_pair_count": 1205
+        }
+      },
+      "checkpoint": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+      "checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+      "checkpoint_step": 3008,
+      "diagnosis": "POST_GELU_FEATURES_SUPPORT_EXPLICIT_EXISTENCE_HEAD",
+      "fit_feature_table_fingerprint": "0a301bf29819a2dad3800a023fa03745d729aea8daf84b25b0893d09a3397287",
+      "legacy_head": {
+        "conditional_type": {
+          "fit": {
+            "macro_supported_class_accuracy": 0.3345275048242322,
+            "micro_accuracy": 0.5639875146312915,
+            "per_class": {
+              "aromatic": {
+                "accuracy": 0.42152067585593594,
+                "class_index": 4,
+                "correct": 948,
+                "total": 2249
+              },
+              "double": {
+                "accuracy": 0.0410958904109589,
+                "class_index": 2,
+                "correct": 9,
+                "total": 219
+              },
+              "single": {
+                "accuracy": 0.7620182757250695,
+                "class_index": 1,
+                "correct": 1918,
+                "total": 2517
+              },
+              "triple": {
+                "accuracy": 0.11347517730496454,
+                "class_index": 3,
+                "correct": 16,
+                "total": 141
+              }
+            }
+          },
+          "transfer": {
+            "macro_supported_class_accuracy": 0.36299388356275064,
+            "micro_accuracy": 0.587551867219917,
+            "per_class": {
+              "aromatic": {
+                "accuracy": 0.5237226277372263,
+                "class_index": 4,
+                "correct": 287,
+                "total": 548
+              },
+              "double": {
+                "accuracy": 0.028985507246376812,
+                "class_index": 2,
+                "correct": 2,
+                "total": 69
+              },
+              "single": {
+                "accuracy": 0.7564102564102564,
+                "class_index": 1,
+                "correct": 413,
+                "total": 546
+              },
+              "triple": {
+                "accuracy": 0.14285714285714285,
+                "class_index": 3,
+                "correct": 6,
+                "total": 42
+              }
+            }
+          }
+        },
+        "fit_calibration": {
+          "raw_zero": {
+            "existence_accuracy": 0.9337219948801315,
+            "existence_error_count": 7094,
+            "macro_molecule_balanced_existence_accuracy": 0.6055358920535981,
+            "minimum_molecule_balanced_existence_accuracy": 0.49712643678160917,
+            "molecule_count": 128,
+            "none_accuracy": 0.9702378616006594,
+            "pair_count_unique": 107034,
+            "present_existence_recall": 0.2077643386656262,
+            "threshold": 0.0
+          },
+          "selected": {
+            "existence_accuracy": 0.8021563241586785,
+            "existence_error_count": 21176,
+            "macro_molecule_balanced_existence_accuracy": 0.7193256495294874,
+            "minimum_molecule_balanced_existence_accuracy": 0.5,
+            "molecule_count": 128,
+            "none_accuracy": 0.809906974918554,
+            "pair_count_unique": 107034,
+            "present_existence_recall": 0.648068669527897,
+            "threshold": -7.192663326859474
+          }
+        },
+        "fit_global_threshold": -7.192663326859474,
+        "fit_roc_auc_all_pairs": 0.813173425906892,
+        "head": "official 64->64 GELU -> 6-class bond head",
+        "probe_scope": "frozen_baseline_not_a_tier_gate",
+        "transfer_calibrated": {
+          "existence_accuracy": 0.7472063464983366,
+          "existence_error_count": 5927,
+          "macro_molecule_balanced_existence_accuracy": 0.7268806880159885,
+          "minimum_molecule_balanced_existence_accuracy": 0.5484086059743954,
+          "molecule_count": 32,
+          "none_accuracy": 0.7471336720471202,
+          "pair_count_unique": 23446,
+          "present_existence_recall": 0.7485477178423237,
+          "threshold": -7.192663326859474
+        },
+        "transfer_raw_zero": {
+          "existence_accuracy": 0.9281753817282266,
+          "existence_error_count": 1684,
+          "macro_molecule_balanced_existence_accuracy": 0.6301888940544853,
+          "minimum_molecule_balanced_existence_accuracy": 0.497134670487106,
+          "molecule_count": 32,
+          "none_accuracy": 0.9641203183310103,
+          "pair_count_unique": 23446,
+          "present_existence_recall": 0.26473029045643154,
+          "threshold": 0.0
+        },
+        "transfer_roc_auc_all_pairs": 0.8346441779517885
+      },
+      "model_state_fingerprint": "025c91c2164f2e611700dec4adba2828affc76c7684ff8a8230bce37aa299b8c",
+      "model_state_unchanged": true,
+      "transfer_feature_table_fingerprint": "f5357c91e606319fccb30f3ce795e485c54db7973b18112e1f2900f1880fbddc"
+    }
+  },
+  "decision_scope": {
+    "enter_tier32": false,
+    "reason": "This report selects only the next bounded architecture diagnostic; strict tier gates remain unchanged.",
+    "resume_current_tier4_training": false
+  },
+  "environment": {
+    "device": "cpu",
+    "numpy": "1.26.2",
+    "python": "3.11.15",
+    "rdkit": "2024.03.5",
+    "seed": 20260820,
+    "torch": "2.5.0+cu121",
+    "torch_geometric": "2.6.1",
+    "torch_threads": 1
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "fit_package_indices": [
+      885,
+      892,
+      883,
+      1768,
+      653,
+      1066,
+      1814,
+      307,
+      712,
+      1450,
+      1784,
+      152,
+      434,
+      707,
+      1015,
+      1606,
+      1801,
+      105,
+      380,
+      644,
+      767,
+      1444,
+      1635,
+      1753,
+      2098,
+      225,
+      399,
+      635,
+      957,
+      1489,
+      1721,
+      1862,
+      100,
+      277,
+      457,
+      772,
+      1027,
+      1620,
+      1889,
+      2191,
+      204,
+      495,
+      764,
+      927,
+      1541,
+      1965,
+      2215,
+      252,
+      499,
+      813,
+      1495,
+      1973,
+      2144,
+      12,
+      496,
+      967,
+      1870,
+      2213,
+      102,
+      498,
+      1518,
+      2012,
+      2282,
+      21,
+      553,
+      1787,
+      2026,
+      2273,
+      187,
+      737,
+      1933,
+      2315,
+      522,
+      991,
+      2072,
+      331,
+      567,
+      1652,
+      42,
+      556,
+      1589,
+      22,
+      747,
+      1893,
+      765,
+      2268,
+      2194,
+      1063,
+      1060,
+      655,
+      652,
+      28,
+      612,
+      229,
+      2239,
+      2306,
+      1148,
+      1222,
+      2402,
+      1225,
+      1188,
+      1131,
+      1197,
+      1128,
+      2453,
+      1271,
+      1256,
+      2476,
+      1181,
+      1396,
+      1288,
+      59,
+      1295,
+      2500,
+      2452,
+      1409,
+      2510,
+      1309,
+      1415,
+      2408,
+      48,
+      1112,
+      1410,
+      1421,
+      2527,
+      858,
+      2526,
+      859
+    ],
+    "official_source_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "position_std": 2.3859,
+    "tier4_checkpoint_training_indices": [
+      864,
+      1135,
+      1114,
+      862
+    ],
+    "transfer_package_indices": [
+      2376,
+      2350,
+      351,
+      1790,
+      1720,
+      317,
+      1471,
+      362,
+      1594,
+      332,
+      1440,
+      250,
+      1906,
+      763,
+      1745,
+      850,
+      2224,
+      2308,
+      2212,
+      1960,
+      2299,
+      2109,
+      2209,
+      2333,
+      1145,
+      1122,
+      81,
+      2523,
+      1407,
+      2458,
+      1113,
+      2529
+    ]
+  },
+  "protocol": {
+    "canonical_report_execution": "CPU single-thread only",
+    "capacity_split": "/home/tianyajun/MARL_for_COFs/generative_model/smoke/splits/uae3d_bond_capacity_v1.json",
+    "capacity_split_fingerprint": "a3e510a050109c721d2ed6c706f16b3b4184489df39558e2096feaf5964be1cc",
+    "capacity_split_sha256": "be6827303b2b882cb1cf64ae26d12022538f52371fb8df76213a208a964096bc",
+    "core_ood_used": false,
+    "existence_fit_sampling": "per molecule all present unique pairs plus equal evenly-spaced none pairs",
+    "features": {
+      "hidden_features": "64-d post-GELU input to final 6-class linear",
+      "pair_features": "decoder pair=h_i+h_j before bond_head"
+    },
+    "fit_molecule_count": 128,
+    "fit_role": "UAE-compatible IID train, excluding frozen tier-4",
+    "predeclared_signal_classification": {
+      "FEATURE_SEPARABLE": "transfer ROC-AUC>=0.85, calibrated macro-balanced>=0.75, none accuracy>=0.70, present recall>=0.70",
+      "NOT_LINEARLY_SEPARABLE": "transfer ROC-AUC<0.70",
+      "WEAK_LINEAR_SIGNAL": "transfer ROC-AUC>=0.70 otherwise"
+    },
+    "probe_is_a_tier_gate": false,
+    "test_used": false,
+    "transfer_molecule_count": 32,
+    "transfer_role": "frozen disjoint IID validation calibration panel",
+    "uae3d_weights_updated": false
+  },
+  "purpose": "Read-only diagnosis of whether frozen UAE-3D pair/post-GELU features contain transferable bond-existence and conditional-type signal.",
+  "schema_version": "uae3d-frozen-bond-capacity-v1",
+  "status": "EVIDENCE_SUPPORTS_EXPLICIT_EXISTENCE_HEAD_PROTOTYPE"
+}

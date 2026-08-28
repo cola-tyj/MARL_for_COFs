@@ -1,0 +1,91 @@
+{
+  "artifacts": {
+    "frozen_split": "/home/tianyajun/MARL_for_COFs/generative_model/smoke/splits/uae3d_v1.json",
+    "frozen_split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+    "frozen_split_sha256": "59abc7d59b5f6f1f2ff07ef907ff6191458ca9f4c4ec4411f80ba78ef6c49c8d",
+    "package_manifest": "/home/tianyajun/MARL_for_COFs/generative_model/data/processed/v2/manifest.json",
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511"
+  },
+  "dataset": {
+    "all_strict_samples_rdkit_atom_bond_index_exact": true,
+    "element_vocabulary_compatible": 2530,
+    "feature_dimension_counts": {
+      "55": 2242
+    },
+    "fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "molecules": 2532,
+    "strict_atom_count": {
+      "max": 105,
+      "median": 32.0,
+      "min": 9
+    },
+    "strict_target_pg_counts": {
+      "C2": 1789,
+      "C3": 406,
+      "D6h": 11,
+      "S4": 36
+    },
+    "strict_three_head_compatible": 2242,
+    "strict_three_head_compatible_iid_train": 1784
+  },
+  "environment": {
+    "numpy": "1.26.2",
+    "python": "3.11.15",
+    "rdkit": "2024.03.5",
+    "torch": "2.5.0+cu121",
+    "torch_cuda": "12.1",
+    "torch_geometric": "2.6.1"
+  },
+  "exclusions": {
+    "charge_radical_overlap_molecules": 2,
+    "nonzero_formal_charge_molecules": 234,
+    "nonzero_radical_molecules": 56,
+    "policy": "strict failure; never remap Sn to C/Si and never zero charge/radical silently",
+    "sn_charge_overlap_molecules": 0,
+    "sn_indices": [
+      1684,
+      2378
+    ],
+    "sn_molecules": 2,
+    "sn_radical_overlap_molecules": 0,
+    "union_molecules": 290
+  },
+  "official": {
+    "atom_vocabulary": [
+      "H",
+      "B",
+      "C",
+      "N",
+      "O",
+      "F",
+      "Al",
+      "Si",
+      "P",
+      "S",
+      "Cl",
+      "As",
+      "Br",
+      "I",
+      "Hg",
+      "Bi"
+    ],
+    "commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+    "edge_feature_dim_without_self_loop": 4,
+    "missing_canonical_heads": [
+      "formal_charges",
+      "radical_electrons"
+    ],
+    "node_feature_dim": 55,
+    "output_heads": [
+      "atom_types",
+      "bond_types",
+      "coordinates"
+    ],
+    "position_std": 2.3859,
+    "repository": "https://github.com/lyc0930/UAE-3D"
+  },
+  "purpose": "Canonical v2 to UAE-3D official three-head compatibility audit",
+  "schema_version": "1.0",
+  "source_commit_expected": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+  "status": "PASS"
+}

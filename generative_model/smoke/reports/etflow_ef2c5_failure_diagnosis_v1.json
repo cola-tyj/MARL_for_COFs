@@ -1,0 +1,66 @@
+{
+  "decision_required": "Either honor the frozen stop action, or explicitly authorize a new disjoint IID-validation confirmatory protocol whose control is diagnostic rather than a prerequisite.",
+  "diagnosis": {
+    "candidate_analyzer_failure_count": 1,
+    "candidate_compatible_gain_over_parent": 0.09375,
+    "candidate_dual_run_actual_pg_agreement_fraction": 0.96875,
+    "candidate_dual_run_compatible_label_agreement_fraction": 1.0,
+    "candidate_exact_match_gain_over_parent": 0.125,
+    "candidate_failures": [
+      [
+        296,
+        2026083196
+      ]
+    ],
+    "candidate_regression_count": 0,
+    "candidate_regressions": [],
+    "candidate_repaired_parent_failure_count": 3,
+    "candidate_repaired_parent_failures": [
+      [
+        1522,
+        2026084422
+      ],
+      [
+        1552,
+        2026084452
+      ],
+      [
+        1611,
+        2026184511
+      ]
+    ],
+    "collision_failures_stable_across_runs": true,
+    "parent_analyzer_failure_count": 4,
+    "parent_failures": [
+      [
+        296,
+        2026083196
+      ],
+      [
+        1522,
+        2026084422
+      ],
+      [
+        1552,
+        2026084452
+      ],
+      [
+        1611,
+        2026184511
+      ]
+    ]
+  },
+  "failed_checks": [
+    "repeat0_parent_analyzer_success",
+    "repeat1_parent_analyzer_success"
+  ],
+  "formal_ef2c5_status_preserved": true,
+  "identity": {
+    "ef2c4_report_sha256": "a814d054de683a86c529a065b87564b34dfde100ed35683ff08517070a6e40dd",
+    "ef2c5_report_sha256": "ba9e9c90999239d78607cc215d0f41734d2974ed5e51cbee18cbde135c735b78",
+    "summarizer_source_sha256": "6b0ac015dd59937dce86f5f5ae4736c8355ad60b02e7cc67f1463df3fbc47810"
+  },
+  "interpretation": "All candidate-specific frozen PG thresholds passed. The formal Gate failed only because the A2 control analyzer-success fraction was 28/32, below 0.90. This is positive descriptive candidate evidence but cannot be converted into a PASS post hoc.",
+  "schema_version": "etflow-ef2c5-failure-diagnosis-v1",
+  "status": "DIAGNOSED_EF2C5_CONTROL_ONLY_GATE_FAILURE_NO_POSTHOC_PROMOTION"
+}

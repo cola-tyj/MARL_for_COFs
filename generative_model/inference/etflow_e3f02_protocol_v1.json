@@ -1,0 +1,84 @@
+{
+  "candidate_selection": "minimum final UFF+repulsion objective among strict geometry-passing candidates, then candidate id; reference-free",
+  "etflow": {
+    "candidate_count": 4,
+    "model_name": "drugs-o3",
+    "n_timesteps": 50,
+    "role": "learned initial-conformer prior only",
+    "sampler_type": "ODE",
+    "target_pg_conditioned_inside_backbone": false
+  },
+  "gate_thresholds": {
+    "acceptable_gradient_norm_max": 1.0,
+    "maximum_operation_error_angstrom": 1e-05,
+    "minimum_pair_distance_angstrom": 0.6
+  },
+  "identity": {
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/inference/build_etflow_e3f02_protocol.py": "c26d541c604772bac14326b1dbe983816c570948c38bc115ea653273ab3701a8",
+      "generative_model/inference/generate_etflow_symmetric_xyz.py": "8c445c441ec1cf807941a3387dbca9265b079038a0c1ac1ccb92a2a7347b71a1",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c",
+      "generative_model/symmetry/graph_action.py": "9517d125bbdb897d5ef6d8e4c7ebf97051131a8946e473b670ccb21fb49864fe",
+      "generative_model/tests/test_etflow_e3f02_inference.py": "34968b7573bce6ca52b280f26170c5d1e03fa125ed2194a42374fb9b0928bc80"
+    }
+  },
+  "input_contract": {
+    "element_fallback": false,
+    "graph": "canonical v2 atomic numbers/charges/radicals/typed bonds with explicit H",
+    "graph_action": "recovered from the graph only; coordinates and stored permutations forbidden",
+    "strict_failure": true,
+    "target_pg": "requested C2 or C3; canonical dataset label is not used as the action source"
+  },
+  "optimizer": {
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 500,
+    "method": "L-BFGS-B",
+    "orbit_subspace_constrained": true,
+    "primary_force_field": "UFF",
+    "repulsion_cutoff_angstrom": 0.8,
+    "repulsion_force_constant_kcal_mol_angstrom2": 2000.0
+  },
+  "output_contract": {
+    "coordinates_npz": "all stages plus action/permutation/orbit arrays",
+    "final_xyz": "F0.2 orbit-constrained UFF+repulsion coordinates",
+    "independent_point_group_audit_required": true,
+    "projected_xyz": "E3 Target_PG orbit projection",
+    "raw_xyz": "official ET-Flow coordinates before Target_PG enforcement",
+    "report_json": "bridge/action/geometry/identity audit"
+  },
+  "prerequisite_evidence": {
+    "ef1_geometry_report_sha256": "1d2350e89c1c29e970321f485c74aac8653480489c7feb41d7947f9783682f8e",
+    "ef1_geometry_status": "PASS_ETFLOW_EF1_GEOMETRY_AWAIT_POINT_GROUP_AUDIT",
+    "ef1_point_group_report_sha256": "60a59d2997bc69d250801da9dd96e98fc3077e817d9167e685dfaa156da92c7f",
+    "ef1_point_group_status": "PASS_ETFLOW_EF1_ZEROSHOT_ADVANCE_TO_FINETUNE_EVALUATION"
+  },
+  "projection": {
+    "hard_symmetry_projection": true,
+    "match_radius_of_gyration": true,
+    "method": "24-orientation search followed by one Reynolds orbit projection",
+    "selection": "minimum projection displacement without reference coordinates"
+  },
+  "protocol_fingerprint": "fbb681cfd121c5d851987cfeba82df69cf7b97e6204c69715e917fe9e0712650",
+  "route": "ET-Flow learned prior + E3 graph action/projection + F0.2 refinement",
+  "schema_version": "etflow-e3f02-inference-protocol-v1",
+  "scope": {
+    "etkdg_used": false,
+    "hard_symmetry_projection_used": true,
+    "known_graph": true,
+    "known_target_pg": true,
+    "raw_learned_target_pg_claim": false,
+    "reference_xyz_used": false,
+    "stored_symmetry_action_used": false
+  },
+  "status": "FROZEN_KNOWN_GRAPH_TARGET_PG_TO_XYZ",
+  "supported_target_pgs": [
+    "C2",
+    "C3"
+  ]
+}

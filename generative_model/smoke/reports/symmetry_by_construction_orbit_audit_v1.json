@@ -1,0 +1,480 @@
+{
+  "aggregate": {
+    "collision_free_fraction": 1.0,
+    "contains_sn_molecules": 2,
+    "coordinate_dof_ratio": {
+      "max": 0.725,
+      "mean": 0.4698393031604012,
+      "median": 0.5,
+      "p95": 0.5161290322580645
+    },
+    "max_operation_error_angstrom": 6.113260005092975e-07,
+    "molecules": 2279,
+    "reconstruction_bond_mae_angstrom": {
+      "max": 0.0174671983032184,
+      "mean": 0.0002937563684261079,
+      "median": 2.3564267354710076e-06,
+      "p95": 0.0016354826383887119
+    },
+    "reconstruction_rmsd_angstrom": {
+      "max": 0.1348022566943079,
+      "mean": 0.009973872450753958,
+      "median": 9.343767523729648e-05,
+      "p95": 0.05941088342389979
+    },
+    "reynolds_reference_rmsd_angstrom": {
+      "max": 0.11178599478924059,
+      "mean": 0.007284896450005442,
+      "median": 6.949763733163407e-05,
+      "p95": 0.043450891461610595
+    },
+    "strict_failures": 0
+  },
+  "by_target_pg": {
+    "C2": {
+      "collision_free_fraction": 1.0,
+      "coordinate_dof_ratio": {
+        "max": 0.725,
+        "mean": 0.5071946888614155,
+        "median": 0.5,
+        "p95": 0.5625
+      },
+      "molecules": 1817,
+      "reconstruction_bond_mae_angstrom": {
+        "max": 0.0174671983032184,
+        "mean": 0.0002675904262223772,
+        "median": 1.7411157107469837e-06,
+        "p95": 0.0014487846922464432
+      },
+      "reconstruction_rmsd_angstrom": {
+        "max": 0.1304624954272209,
+        "mean": 0.008455900305332642,
+        "median": 5.602690032211597e-05,
+        "p95": 0.05500826907745899
+      }
+    },
+    "C3": {
+      "collision_free_fraction": 1.0,
+      "coordinate_dof_ratio": {
+        "max": 0.35294117647058826,
+        "mean": 0.33401771674217196,
+        "median": 0.3333333333333333,
+        "p95": 0.3333333333333333
+      },
+      "molecules": 415,
+      "reconstruction_bond_mae_angstrom": {
+        "max": 0.006444774469549761,
+        "mean": 0.00033010451038168826,
+        "median": 9.912249377976595e-06,
+        "p95": 0.0016818919586552255
+      },
+      "reconstruction_rmsd_angstrom": {
+        "max": 0.12073940499761225,
+        "mean": 0.014199397254056693,
+        "median": 0.0005354064726250047,
+        "p95": 0.07663362931637605
+      }
+    },
+    "D6h": {
+      "collision_free_fraction": 1.0,
+      "coordinate_dof_ratio": {
+        "max": 0.1282051282051282,
+        "mean": 0.11565464450079836,
+        "median": 0.11538461538461539,
+        "p95": 0.12628205128205128
+      },
+      "molecules": 13,
+      "reconstruction_bond_mae_angstrom": {
+        "max": 0.0020081626140972877,
+        "mean": 0.000539444850800832,
+        "median": 1.0303096621794912e-05,
+        "p95": 0.001708818979145543
+      },
+      "reconstruction_rmsd_angstrom": {
+        "max": 0.08149381726406998,
+        "mean": 0.024003674231266044,
+        "median": 0.0012693816336834729,
+        "p95": 0.07575302275517205
+      }
+    },
+    "S4": {
+      "collision_free_fraction": 1.0,
+      "coordinate_dof_ratio": {
+        "max": 0.2857142857142857,
+        "mean": 0.26676939455442783,
+        "median": 0.2641509433962264,
+        "p95": 0.2857142857142857
+      },
+      "molecules": 34,
+      "reconstruction_bond_mae_angstrom": {
+        "max": 0.009508334217023068,
+        "mean": 0.001154494244947915,
+        "median": 0.0001417764075481244,
+        "p95": 0.005055799535310792
+      },
+      "reconstruction_rmsd_angstrom": {
+        "max": 0.1348022566943079,
+        "mean": 0.034155495148202146,
+        "median": 0.009779327501297914,
+        "p95": 0.12046568648497698
+      }
+    }
+  },
+  "checks": {
+    "all_2279_iid_train_validation_processed": true,
+    "all_outputs_finite": true,
+    "byte_deterministic_repeat_all": true,
+    "max_operation_error_le_1e_5": true,
+    "sn_records_processed": true,
+    "test_and_core_ood_not_used": true,
+    "zero_strict_failures": true
+  },
+  "decision": {
+    "next_if_fail": "repair orbit/action annotations only; do not train a model",
+    "next_if_pass": "freeze an orbit-representative coordinate baseline on C2/C3 IID-train/validation; full coordinates must always be obtained through the hard expansion"
+  },
+  "failures": [],
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "implementation_sha256": "0ba4cdb17ab3f73d3d19cdbd76f4970422b4f88f1f0a3a6a6b8a96632ce9996a",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "numpy": "1.26.2",
+    "python": "3.11.15",
+    "split_iid_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1",
+    "test_source_sha256": "0d58f96bb0e020d577e61c738ceefdf30c3f92217b317da0c3c494794dc09a1f"
+  },
+  "orbit_expansion_schema_version": "orbit-representative-hard-symmetry-v1",
+  "passed": true,
+  "schema_version": "symmetry-by-construction-orbit-audit-v1",
+  "scope": {
+    "core_ood_used": false,
+    "generation_quality_claimed": false,
+    "iid_train_molecules": 2026,
+    "iid_validation_molecules": 253,
+    "model_trained": false,
+    "test_used": false
+  },
+  "status": "PASS_SYMMETRY_BY_CONSTRUCTION_ORBIT_INTERFACE",
+  "worst_reconstruction_cases": [
+    {
+      "atom_count": 45,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.26666666666666666,
+      "max_operation_error_angstrom": 2.2035251062458532e-07,
+      "minimum_pair_distance_angstrom": 1.0181214038210282,
+      "molecule_id": "cof_001379",
+      "orbit_count": 12,
+      "package_index": 1379,
+      "reconstruction_bond_mae_angstrom": 0.00036124846112392273,
+      "reconstruction_rmsd_angstrom": 0.1348022566943079,
+      "reynolds_reference_rmsd_angstrom": 0.11178599478924059,
+      "split": "train",
+      "target_pg": "S4"
+    },
+    {
+      "atom_count": 33,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5151515151515151,
+      "max_operation_error_angstrom": 3.752279234186152e-08,
+      "minimum_pair_distance_angstrom": 1.0787469815955408,
+      "molecule_id": "cof_002169",
+      "orbit_count": 17,
+      "package_index": 2169,
+      "reconstruction_bond_mae_angstrom": 0.01229484770589824,
+      "reconstruction_rmsd_angstrom": 0.1304624954272209,
+      "reynolds_reference_rmsd_angstrom": 0.09238518764191755,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 66,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5,
+      "max_operation_error_angstrom": 4.080463688473467e-07,
+      "minimum_pair_distance_angstrom": 1.0844981699916902,
+      "molecule_id": "cof_000560",
+      "orbit_count": 33,
+      "package_index": 560,
+      "reconstruction_bond_mae_angstrom": 0.009378701689525362,
+      "reconstruction_rmsd_angstrom": 0.1286853954281383,
+      "reynolds_reference_rmsd_angstrom": 0.09113732892721028,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 68,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.6176470588235294,
+      "max_operation_error_angstrom": 4.1777133517480985e-07,
+      "minimum_pair_distance_angstrom": 1.0873358891931688,
+      "molecule_id": "cof_000783",
+      "orbit_count": 42,
+      "package_index": 783,
+      "reconstruction_bond_mae_angstrom": 0.014108810752993216,
+      "reconstruction_rmsd_angstrom": 0.12358026252980922,
+      "reynolds_reference_rmsd_angstrom": 0.0944450187282416,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 40,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5,
+      "max_operation_error_angstrom": 2.6079938906163235e-07,
+      "minimum_pair_distance_angstrom": 1.015075403738742,
+      "molecule_id": "cof_000584",
+      "orbit_count": 20,
+      "package_index": 584,
+      "reconstruction_bond_mae_angstrom": 0.00016584397807361566,
+      "reconstruction_rmsd_angstrom": 0.12125446422853808,
+      "reynolds_reference_rmsd_angstrom": 0.09001279745285234,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 28,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5,
+      "max_operation_error_angstrom": 1.0150695005991642e-07,
+      "minimum_pair_distance_angstrom": 1.086624942937867,
+      "molecule_id": "cof_000312",
+      "orbit_count": 14,
+      "package_index": 312,
+      "reconstruction_bond_mae_angstrom": 0.0013064948032269037,
+      "reconstruction_rmsd_angstrom": 0.12076411915393478,
+      "reynolds_reference_rmsd_angstrom": 0.09386047453442299,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 51,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.3333333333333333,
+      "max_operation_error_angstrom": 2.674275099238103e-07,
+      "minimum_pair_distance_angstrom": 1.0655878656555338,
+      "molecule_id": "cof_001337",
+      "orbit_count": 17,
+      "package_index": 1337,
+      "reconstruction_bond_mae_angstrom": 0.0016356807447734276,
+      "reconstruction_rmsd_angstrom": 0.12073940499761225,
+      "reynolds_reference_rmsd_angstrom": 0.07998188779294522,
+      "split": "train",
+      "target_pg": "C3"
+    },
+    {
+      "atom_count": 21,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.2857142857142857,
+      "max_operation_error_angstrom": 1.1775782642337653e-07,
+      "minimum_pair_distance_angstrom": 1.1607606045163001,
+      "molecule_id": "cof_000048",
+      "orbit_count": 6,
+      "package_index": 48,
+      "reconstruction_bond_mae_angstrom": 0.00027880476997653724,
+      "reconstruction_rmsd_angstrom": 0.12073621250881014,
+      "reynolds_reference_rmsd_angstrom": 0.08144598662225282,
+      "split": "train",
+      "target_pg": "S4"
+    },
+    {
+      "atom_count": 85,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.25882352941176473,
+      "max_operation_error_angstrom": 3.421646427262418e-07,
+      "minimum_pair_distance_angstrom": 1.0880547015475408,
+      "molecule_id": "cof_001372",
+      "orbit_count": 22,
+      "package_index": 1372,
+      "reconstruction_bond_mae_angstrom": 0.009508334217023068,
+      "reconstruction_rmsd_angstrom": 0.12032001862598989,
+      "reynolds_reference_rmsd_angstrom": 0.07875129736458553,
+      "split": "train",
+      "target_pg": "S4"
+    },
+    {
+      "atom_count": 30,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5,
+      "max_operation_error_angstrom": 2.1806137311915283e-07,
+      "minimum_pair_distance_angstrom": 1.087543072836301,
+      "molecule_id": "cof_000708",
+      "orbit_count": 15,
+      "package_index": 708,
+      "reconstruction_bond_mae_angstrom": 0.00011339504306397962,
+      "reconstruction_rmsd_angstrom": 0.11661151246335323,
+      "reynolds_reference_rmsd_angstrom": 0.08276082091086016,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 46,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5,
+      "max_operation_error_angstrom": 9.613295733006978e-08,
+      "minimum_pair_distance_angstrom": 0.9904286177592007,
+      "molecule_id": "cof_001703",
+      "orbit_count": 23,
+      "package_index": 1703,
+      "reconstruction_bond_mae_angstrom": 0.0013255525114331812,
+      "reconstruction_rmsd_angstrom": 0.11601070065295818,
+      "reynolds_reference_rmsd_angstrom": 0.0953489509772769,
+      "split": "validation",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 69,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.3333333333333333,
+      "max_operation_error_angstrom": 3.241758429511393e-07,
+      "minimum_pair_distance_angstrom": 1.0889876310774396,
+      "molecule_id": "cof_001357",
+      "orbit_count": 23,
+      "package_index": 1357,
+      "reconstruction_bond_mae_angstrom": 0.0013880857546603664,
+      "reconstruction_rmsd_angstrom": 0.11558261133647231,
+      "reynolds_reference_rmsd_angstrom": 0.0982739481808307,
+      "split": "train",
+      "target_pg": "C3"
+    },
+    {
+      "atom_count": 36,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.3333333333333333,
+      "max_operation_error_angstrom": 1.5712294106941352e-07,
+      "minimum_pair_distance_angstrom": 1.0832064576393425,
+      "molecule_id": "cof_002427",
+      "orbit_count": 12,
+      "package_index": 2427,
+      "reconstruction_bond_mae_angstrom": 9.201874387204798e-05,
+      "reconstruction_rmsd_angstrom": 0.1149754162687004,
+      "reynolds_reference_rmsd_angstrom": 0.06652201681849566,
+      "split": "train",
+      "target_pg": "C3"
+    },
+    {
+      "atom_count": 33,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5151515151515151,
+      "max_operation_error_angstrom": 1.3750675059967964e-07,
+      "minimum_pair_distance_angstrom": 1.0787314067190734,
+      "molecule_id": "cof_002168",
+      "orbit_count": 17,
+      "package_index": 2168,
+      "reconstruction_bond_mae_angstrom": 0.003974122857696306,
+      "reconstruction_rmsd_angstrom": 0.11401124367096978,
+      "reynolds_reference_rmsd_angstrom": 0.08136076228133153,
+      "split": "validation",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 75,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.3333333333333333,
+      "max_operation_error_angstrom": 2.787441143441739e-07,
+      "minimum_pair_distance_angstrom": 0.9712674333438283,
+      "molecule_id": "cof_000082",
+      "orbit_count": 25,
+      "package_index": 82,
+      "reconstruction_bond_mae_angstrom": 0.004305712698946612,
+      "reconstruction_rmsd_angstrom": 0.11273537876197584,
+      "reynolds_reference_rmsd_angstrom": 0.08160778360000659,
+      "split": "train",
+      "target_pg": "C3"
+    },
+    {
+      "atom_count": 35,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5142857142857142,
+      "max_operation_error_angstrom": 1.507857559903908e-07,
+      "minimum_pair_distance_angstrom": 0.9712046875355457,
+      "molecule_id": "cof_000608",
+      "orbit_count": 18,
+      "package_index": 608,
+      "reconstruction_bond_mae_angstrom": 0.00036917214411856113,
+      "reconstruction_rmsd_angstrom": 0.11215755737340374,
+      "reynolds_reference_rmsd_angstrom": 0.0852450182226575,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 22,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5,
+      "max_operation_error_angstrom": 1.1877093159253204e-07,
+      "minimum_pair_distance_angstrom": 1.0154717729930611,
+      "molecule_id": "cof_000722",
+      "orbit_count": 11,
+      "package_index": 722,
+      "reconstruction_bond_mae_angstrom": 0.0174671983032184,
+      "reconstruction_rmsd_angstrom": 0.1120247030098501,
+      "reynolds_reference_rmsd_angstrom": 0.0822711228121075,
+      "split": "train",
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 93,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.25806451612903225,
+      "max_operation_error_angstrom": 3.933926968036971e-07,
+      "minimum_pair_distance_angstrom": 1.0649597361298602,
+      "molecule_id": "cof_001373",
+      "orbit_count": 24,
+      "package_index": 1373,
+      "reconstruction_bond_mae_angstrom": 0.006882880060894925,
+      "reconstruction_rmsd_angstrom": 0.11165538464007578,
+      "reynolds_reference_rmsd_angstrom": 0.06940644777335499,
+      "split": "validation",
+      "target_pg": "S4"
+    },
+    {
+      "atom_count": 63,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.3333333333333333,
+      "max_operation_error_angstrom": 3.507571676382502e-07,
+      "minimum_pair_distance_angstrom": 0.9903216283838355,
+      "molecule_id": "cof_002409",
+      "orbit_count": 21,
+      "package_index": 2409,
+      "reconstruction_bond_mae_angstrom": 0.0016354606265681878,
+      "reconstruction_rmsd_angstrom": 0.10796404806498323,
+      "reynolds_reference_rmsd_angstrom": 0.07890102445212865,
+      "split": "validation",
+      "target_pg": "C3"
+    },
+    {
+      "atom_count": 68,
+      "collision_free": true,
+      "contains_sn": false,
+      "coordinate_dof_ratio": 0.5,
+      "max_operation_error_angstrom": 3.251511088616413e-07,
+      "minimum_pair_distance_angstrom": 1.0150991906127644,
+      "molecule_id": "cof_000776",
+      "orbit_count": 34,
+      "package_index": 776,
+      "reconstruction_bond_mae_angstrom": 0.005713071708409816,
+      "reconstruction_rmsd_angstrom": 0.1039229897241013,
+      "reynolds_reference_rmsd_angstrom": 0.07348468088510682,
+      "split": "train",
+      "target_pg": "C2"
+    }
+  ]
+}

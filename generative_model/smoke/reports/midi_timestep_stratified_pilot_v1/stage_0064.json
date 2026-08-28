@@ -1,0 +1,83 @@
+{
+  "conclusion": "native generation remains stable, but fixed validation improvement is not broad across cases/timesteps",
+  "deterministic_validation": {
+    "case_win_fraction": 0.4375,
+    "case_wins": 14,
+    "checks": {
+      "case_win_fraction": false,
+      "mean_ratio": true,
+      "timestep_win_fraction": false
+    },
+    "component_means": {
+      "atom_cross_entropy": 0.40315794289881524,
+      "charge_cross_entropy": 0.002608760300478963,
+      "edge_cross_entropy": 0.08591400882271216,
+      "position_mse": 2.33474314364139
+    },
+    "mean_total_loss": 7.339929430512711,
+    "mean_total_loss_ratio_to_official": 0.983819195409361,
+    "passed": false,
+    "timestep_total_loss_means": {
+      "1": 0.03963933978229761,
+      "100": 0.03565147798508406,
+      "200": 0.12350431084632874,
+      "25": 0.03625256381928921,
+      "300": 1.5387740731239319,
+      "400": 13.950619220733643,
+      "50": 0.033685024827718735,
+      "500": 42.9613094329834
+    },
+    "timestep_win_fraction": 0.5,
+    "timestep_wins": 4
+  },
+  "native_sampling": {
+    "checks": {
+      "collisions": true,
+      "connected": true,
+      "sanitize_valid": true
+    },
+    "collisions": 0,
+    "connected": 5,
+    "evaluation_fingerprint": "f174c65476fa755a4328da20ae913d9299d0854630616214c8c85d38788cd6d2",
+    "evaluation_report_sha256": "1dd5939ccd851f5e7f1dc0f0dd2f387214d1343f6efa867a2a11247dbac0036c",
+    "exact_train_smiles": 0,
+    "minimum_pair_distance_mean_angstrom": 1.0117348276144782,
+    "nearest_train_tanimoto_mean": 0.1235341707472855,
+    "passed": true,
+    "sampling_report_sha256": "7059a39698a66beba9ce89fed96fc0c8f5681527df8d50b62c0e46a33fd3ee98",
+    "sanitize_failure_counts": {},
+    "sanitize_valid": 5
+  },
+  "schema_version": "1.0",
+  "stage_gate_passed": false,
+  "status": "FAIL_TIMESTEP_STRATIFIED_STAGE_DETERMINISTIC_GATE",
+  "step": 64,
+  "training_segment": {
+    "begin_step": 49,
+    "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/last.pt",
+    "checkpoint_sha256": "17b74a46e674ffd227e513993ff057bddd1fa6738d8a37953598e44ddc6aa05b",
+    "end_step": 64,
+    "loss_maximum": 42.69780349731445,
+    "loss_mean": 7.9825075173866935,
+    "loss_median": 0.8927954882383347,
+    "loss_minimum": 0.006772251799702644,
+    "timesteps": [
+      373,
+      377,
+      476,
+      241,
+      132,
+      1,
+      113,
+      305,
+      464,
+      143,
+      345,
+      298,
+      222,
+      412,
+      66,
+      50
+    ]
+  }
+}

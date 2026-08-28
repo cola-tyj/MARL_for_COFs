@@ -1,0 +1,246 @@
+{
+  "artifacts": {
+    "evaluation_report": {
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_stratified100/evaluation_report.json",
+      "report_fingerprint": "4f35604c592dfaba923bc73a1d96730dbe364102de3cf3109d626e3ed7619790",
+      "sha256": "92cb5e6a398cd7f074c946fa15e63315f8caf301a0a841535e55dc9213fe7314"
+    },
+    "generated_npz": {
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_stratified100/generated.npz",
+      "sha256": "737aa010826a1012096fdc298751f5a3cbb85207b663530055d580ce150c075e"
+    },
+    "protocol": {
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_stratified100/protocol.json",
+      "sha256": "e3258547c971598103d79517472fe7043639d7717b16a179c4c877f78586c0e8"
+    },
+    "sampling_report": {
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_stratified100/sampling_report.json",
+      "sha256": "fdf3a4e10014c9f0694d6f45ec0a24ba9e264715c6f3451fb9a9bb8e1a4a72cb"
+    }
+  },
+  "by_stratum": {
+    "0": {
+      "collision_interval": {
+        "collision_count": 0,
+        "metric": "collision_free_rate",
+        "rate": 1.0,
+        "wilson_95_high": 1.0,
+        "wilson_95_low": 0.8388748419471806
+      },
+      "collisions": 0,
+      "connected": 19,
+      "connected_interval": {
+        "rate": 0.95,
+        "wilson_95_high": 0.9911185511992047,
+        "wilson_95_low": 0.763868806553258
+      },
+      "minimum_pair_distance_mean_angstrom": 1.0154076546430588,
+      "node_count_max": 35,
+      "node_count_min": 22,
+      "samples": 20,
+      "sanitize_valid": 16,
+      "sanitize_valid_interval": {
+        "rate": 0.8,
+        "wilson_95_high": 0.919342337420202,
+        "wilson_95_low": 0.5839825677481064
+      },
+      "unique_valid_smiles": 16
+    },
+    "1": {
+      "collision_interval": {
+        "collision_count": 0,
+        "metric": "collision_free_rate",
+        "rate": 1.0,
+        "wilson_95_high": 1.0,
+        "wilson_95_low": 0.8388748419471806
+      },
+      "collisions": 0,
+      "connected": 20,
+      "connected_interval": {
+        "rate": 1.0,
+        "wilson_95_high": 1.0,
+        "wilson_95_low": 0.8388748419471806
+      },
+      "minimum_pair_distance_mean_angstrom": 1.032853189110756,
+      "node_count_max": 41,
+      "node_count_min": 36,
+      "samples": 20,
+      "sanitize_valid": 16,
+      "sanitize_valid_interval": {
+        "rate": 0.8,
+        "wilson_95_high": 0.919342337420202,
+        "wilson_95_low": 0.5839825677481064
+      },
+      "unique_valid_smiles": 16
+    },
+    "2": {
+      "collision_interval": {
+        "collision_count": 0,
+        "metric": "collision_free_rate",
+        "rate": 1.0,
+        "wilson_95_high": 1.0,
+        "wilson_95_low": 0.8388748419471806
+      },
+      "collisions": 0,
+      "connected": 18,
+      "connected_interval": {
+        "rate": 0.9,
+        "wilson_95_high": 0.9721335187862319,
+        "wilson_95_low": 0.6989663547715128
+      },
+      "minimum_pair_distance_mean_angstrom": 1.0096552193164825,
+      "node_count_max": 47,
+      "node_count_min": 42,
+      "samples": 20,
+      "sanitize_valid": 13,
+      "sanitize_valid_interval": {
+        "rate": 0.65,
+        "wilson_95_high": 0.818808175898918,
+        "wilson_95_low": 0.43285427668523624
+      },
+      "unique_valid_smiles": 13
+    },
+    "3": {
+      "collision_interval": {
+        "collision_count": 0,
+        "metric": "collision_free_rate",
+        "rate": 1.0,
+        "wilson_95_high": 1.0,
+        "wilson_95_low": 0.8388748419471806
+      },
+      "collisions": 0,
+      "connected": 20,
+      "connected_interval": {
+        "rate": 1.0,
+        "wilson_95_high": 1.0,
+        "wilson_95_low": 0.8388748419471806
+      },
+      "minimum_pair_distance_mean_angstrom": 0.9920904874801636,
+      "node_count_max": 53,
+      "node_count_min": 47,
+      "samples": 20,
+      "sanitize_valid": 12,
+      "sanitize_valid_interval": {
+        "rate": 0.6,
+        "wilson_95_high": 0.781193467627183,
+        "wilson_95_low": 0.3865815007622531
+      },
+      "unique_valid_smiles": 12
+    },
+    "4": {
+      "collision_interval": {
+        "collision_count": 0,
+        "metric": "collision_free_rate",
+        "rate": 1.0,
+        "wilson_95_high": 1.0,
+        "wilson_95_low": 0.8388748419471806
+      },
+      "collisions": 0,
+      "connected": 17,
+      "connected_interval": {
+        "rate": 0.85,
+        "wilson_95_high": 0.9476312541037835,
+        "wilson_95_low": 0.6395811352592431
+      },
+      "minimum_pair_distance_mean_angstrom": 0.9879517525434494,
+      "node_count_max": 79,
+      "node_count_min": 54,
+      "samples": 20,
+      "sanitize_valid": 17,
+      "sanitize_valid_interval": {
+        "rate": 0.85,
+        "wilson_95_high": 0.9476312541037835,
+        "wilson_95_low": 0.6395811352592431
+      },
+      "unique_valid_smiles": 17
+    }
+  },
+  "checkpoint": {
+    "epoch": 644,
+    "global_step": 2565270,
+    "path": "generative_model/checkpoints/midi/geom/geom_with_h_adaptive.ckpt",
+    "sha256": "c96d6712cfa69e94b7bf9be115c3584d8a1da9fe42b3b554d8e565f6cb530173",
+    "strict_state_dict_load": true
+  },
+  "decision": {
+    "cof_transfer_gate": "NOT_YET_RUN_WITH_GEOM_APPROX_MARGINALS",
+    "limits": [
+      "TABASCO-derived marginals remain approximate rather than official GEOM statistics",
+      "the run is unconditional and does not measure target point-group control",
+      "the 100 empirical-quantile sizes represent GEOM, not a reweighted COF target distribution"
+    ],
+    "next_action": "rerun the frozen COF transfer/overfit gate initialized from the official checkpoint while retaining these GEOM-like marginals",
+    "official_checkpoint_with_domain_like_marginals": "PASS_ZERO_SHOT_BASELINE",
+    "point_group_conditioning": "NOT_TESTED"
+  },
+  "descriptive_size_effect": {
+    "interpretation": "validity has no monotonic size trend in this diagnostic; connectivity is slightly lower at larger sizes; minimum pair distance decreases modestly with size but remains above the 0.6 A collision threshold for every sample",
+    "pearson_node_count_vs_connected": -0.11928315864039397,
+    "pearson_node_count_vs_minimum_pair_distance": -0.3115786017626155,
+    "pearson_node_count_vs_sanitize_valid": 0.0012477668823165807
+  },
+  "metrics": {
+    "collision_free": {
+      "collision_count": 0,
+      "count": 100,
+      "rate": 1.0,
+      "wilson_95_high": 1.0,
+      "wilson_95_low": 0.9630065017930143
+    },
+    "connected": {
+      "count": 94,
+      "rate": 0.94,
+      "wilson_95_high": 0.9722138760368118,
+      "wilson_95_low": 0.8752318455410406
+    },
+    "minimum_nonbonded_distance_angstrom": {
+      "count": 100,
+      "max": 2.0328823363908253,
+      "mean": 1.7342919000103336,
+      "median": 1.745891341463844,
+      "min": 1.374375681982808,
+      "p95": 1.7891801069500772
+    },
+    "minimum_pair_distance_angstrom": {
+      "count": 100,
+      "max": 1.0804362994217145,
+      "mean": 1.0075916578456472,
+      "median": 1.0073191786095237,
+      "min": 0.8943780069134704,
+      "p95": 1.0759664992471436
+    },
+    "sanitize_valid": {
+      "count": 74,
+      "failure_counts": {
+        "SANITIZE_KEKULIZE": 19,
+        "SANITIZE_PROPERTIES": 7
+      },
+      "rate": 0.74,
+      "wilson_95_high": 0.8159530153525186,
+      "wilson_95_low": 0.6462901055081282
+    },
+    "unique_among_valid": {
+      "count": 74,
+      "rate": 1.0,
+      "valid_count": 74
+    }
+  },
+  "noise_statistics": {
+    "path": "generative_model/smoke/statistics/midi_geom_tabasco_filtered_approx_v1.json",
+    "semantic_sha256": "05bbdf28ff6a1ecbe3e320469c1150cc239113356a6ba5a25e481874fa3661f6",
+    "sha256": "99696e060fb7eb8d4a0c2ba6bf4378351846080425f99edccfe1612f53123c6b"
+  },
+  "protocol": {
+    "node_count_max": 79,
+    "node_count_min": 22,
+    "path": "generative_model/runs/midi_zero_shot_geom_approx_stratified100/protocol.json",
+    "sample_count": 100,
+    "samples_per_stratum": 20,
+    "semantic_sha256": "afc14743698686c13ce7fb943200375a507f466c17b3f466ac832b51b41bd2fa",
+    "sha256": "e3258547c971598103d79517472fe7043639d7717b16a179c4c877f78586c0e8",
+    "strata": 5
+  },
+  "schema_version": "1.0",
+  "scope": "100_samples_5_empirical_node_quantile_strata",
+  "status": "PASS_SCALED_ZERO_SHOT_DIAGNOSTIC"
+}

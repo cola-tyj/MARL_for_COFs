@@ -1,0 +1,170 @@
+{
+  "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+  "fit": {
+    "molecule_ids": [
+      "cof_000864",
+      "cof_001135",
+      "cof_001114",
+      "cof_000862"
+    ],
+    "package_indices": [
+      864,
+      1135,
+      1114,
+      862
+    ],
+    "split": "iid/train",
+    "target_pg_counts": {
+      "C2": 1,
+      "C3": 1,
+      "D6h": 1,
+      "S4": 1
+    }
+  },
+  "leakage_policy": {
+    "core_ood_used": false,
+    "per_molecule_thresholds_allowed": false,
+    "test_used": false,
+    "threshold_fit_role": "IID train tier-4 molecules used by the checkpoint",
+    "threshold_transfer_role": "disjoint IID validation panel"
+  },
+  "model_family": "UAE-3D",
+  "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+  "schema_version": "uae3d-bond-threshold-calibration-split-v1",
+  "selection_algorithm": "fit=frozen tier-4 in existing UAE split; transfer=three-head-compatible IID validation only, fixed Target_PG quotas, within each PG sort by (Num_Atoms, Package_Index) and select evenly spaced ranks",
+  "source_iid_split_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1",
+  "source_uae_split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+  "source_uae_split_sha256": "59abc7d59b5f6f1f2ff07ef907ff6191458ca9f4c4ec4411f80ba78ef6c49c8d",
+  "split_fingerprint": "a301b632ceb57eb244e397ec34f32cc01898ddfa1a442374828445fad3b58d19",
+  "transfer": {
+    "atom_count": {
+      "max": 78,
+      "median": 32.0,
+      "min": 12
+    },
+    "compatible_candidate_count": 228,
+    "indices_by_target_pg": {
+      "C2": [
+        2376,
+        2350,
+        351,
+        1790,
+        1720,
+        317,
+        1471,
+        362,
+        1594,
+        332,
+        1440,
+        250,
+        1906,
+        763,
+        1745,
+        850,
+        2224,
+        2308,
+        2212,
+        1960,
+        2299,
+        2109,
+        2209,
+        2333
+      ],
+      "C3": [
+        1145,
+        1122,
+        81,
+        2523,
+        1407,
+        2458
+      ],
+      "D6h": [
+        2529
+      ],
+      "S4": [
+        1113
+      ]
+    },
+    "molecule_ids": [
+      "cof_002376",
+      "cof_002350",
+      "cof_000351",
+      "cof_001790",
+      "cof_001720",
+      "cof_000317",
+      "cof_001471",
+      "cof_000362",
+      "cof_001594",
+      "cof_000332",
+      "cof_001440",
+      "cof_000250",
+      "cof_001906",
+      "cof_000763",
+      "cof_001745",
+      "cof_000850",
+      "cof_002224",
+      "cof_002308",
+      "cof_002212",
+      "cof_001960",
+      "cof_002299",
+      "cof_002109",
+      "cof_002209",
+      "cof_002333",
+      "cof_001145",
+      "cof_001122",
+      "cof_000081",
+      "cof_002523",
+      "cof_001407",
+      "cof_002458",
+      "cof_001113",
+      "cof_002529"
+    ],
+    "package_indices": [
+      2376,
+      2350,
+      351,
+      1790,
+      1720,
+      317,
+      1471,
+      362,
+      1594,
+      332,
+      1440,
+      250,
+      1906,
+      763,
+      1745,
+      850,
+      2224,
+      2308,
+      2212,
+      1960,
+      2299,
+      2109,
+      2209,
+      2333,
+      1145,
+      1122,
+      81,
+      2523,
+      1407,
+      2458,
+      1113,
+      2529
+    ],
+    "split": "iid/val",
+    "target_pg_counts": {
+      "C2": 24,
+      "C3": 6,
+      "D6h": 1,
+      "S4": 1
+    },
+    "target_quotas": {
+      "C2": 24,
+      "C3": 6,
+      "D6h": 1,
+      "S4": 1
+    }
+  }
+}

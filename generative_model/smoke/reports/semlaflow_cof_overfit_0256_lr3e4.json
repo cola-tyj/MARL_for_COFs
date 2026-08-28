@@ -1,0 +1,51 @@
+{
+  "artifacts": {
+    "data_manifest_sha256": "3e0fd9d26d474395c1bf67f6b6e1b645093b420112f7e9864f3e3221e8f8e674",
+    "ema_evaluation_report_sha256": "544f29e5ea51a3b457fdf0f04f9d20327f00a35655a1e7499aaa4a3610706f06",
+    "ema_sampling_report_sha256": "bbf073104c0ad53e24190a3639d4567144eb8f5aa096e12d73f14e9f3e686792",
+    "raw_evaluation_report_sha256": "3d944c93bda5cf6437d79a75ea6f3a5d541bcc0b702f6176fcad17833e713e92",
+    "raw_sampling_report_sha256": "9ab2a99fcf8c7c2c0c4f6594b76a96b316ee47fa3f50d77ad7bfe9d176fdd3bf",
+    "training_report_sha256": "67a04e578d29e4e6747c709b5882d608c788c9723c00c92b162ccacd87cdb83b"
+  },
+  "conclusion": "pipeline_pass_domain_adaptation_visible_overfit_not_yet_accepted",
+  "ema_sampling": {
+    "collision_rate": 0.09375,
+    "connected_rate": 0.96875,
+    "exact_training_smiles_matches": 0,
+    "nearest_train_tanimoto_max": 0.2647058823529412,
+    "nearest_train_tanimoto_mean": 0.15339433754883453,
+    "rdkit_sanitize_valid": 29,
+    "samples": 32
+  },
+  "experiment": {
+    "batch_size": 4,
+    "checkpoint_sha256": "7b98ac8f5870a9cd316be3f4bd0f18136fec9c8553aee1610ecab3096990cf26",
+    "integration_steps": 50,
+    "learning_rate": 0.0003,
+    "molecules": 32,
+    "seed": 20260812,
+    "training_steps": 256
+  },
+  "fixed_loss_audit": {
+    "after": 0.8024585098028183,
+    "after_over_before_ratio": 0.9162523337054093,
+    "before": 0.8758051469922066
+  },
+  "raw_sampling": {
+    "collision_rate": 0.0625,
+    "connected_rate": 1.0,
+    "exact_training_smiles_matches": 0,
+    "nearest_train_tanimoto_max": 0.6428571428571429,
+    "nearest_train_tanimoto_mean": 0.17293940953441422,
+    "rdkit_sanitize_valid": 27,
+    "samples": 32
+  },
+  "schema_version": "1.0",
+  "status": "INCOMPLETE",
+  "training": {
+    "all_gradients_finite": true,
+    "peak_cuda_memory_bytes": 2872919552,
+    "seconds": 106.31169635802507,
+    "strict_official_checkpoint_reload": true
+  }
+}

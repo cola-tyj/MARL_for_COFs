@@ -1,0 +1,122 @@
+{
+  "artifacts": {
+    "uniform_validation_report_sha256": "9451b4dac37843d19c181106bd67c8c2437367c722e4b72be60f7eb52de77bff",
+    "validation_report_sha256": "54785e261739986c8dd084d90dda6181f5ea941cb8f824de4828f66c495e4587"
+  },
+  "comparison_to_uniform_random_64_step": {
+    "interpretation": "stratification slightly improves the mean and reduces low-timestep/charge regression magnitude, but does not increase case or timestep win coverage",
+    "stratified_step64_case_win_fraction": 0.4375,
+    "stratified_step64_mean_ratio": 0.983819195409361,
+    "stratified_step64_timestep_ratios": {
+      "1": 7.263271206254864,
+      "100": 3.4744714097065548,
+      "200": 0.8264316396871746,
+      "25": 6.321206240328487,
+      "300": 0.803605374521605,
+      "400": 0.9534601790486219,
+      "50": 5.212237352078538,
+      "500": 0.9999973583918795
+    },
+    "stratified_step64_timestep_win_fraction": 0.5,
+    "uniform_step64_case_win_fraction": 0.4375,
+    "uniform_step64_mean_ratio": 0.9841434973137172,
+    "uniform_step64_timestep_ratios": {
+      "1": 8.675220946794525,
+      "100": 4.142137034808877,
+      "200": 0.8245742775441273,
+      "25": 7.595305940268896,
+      "300": 0.7839811334556654,
+      "400": 0.9554417088218706,
+      "50": 6.237665404888925,
+      "500": 0.9999910096530354
+    },
+    "uniform_step64_timestep_win_fraction": 0.5
+  },
+  "decision": {
+    "conclusion": "all native stage gates pass, but no stage passes the deterministic case/timestep breadth requirements",
+    "next_action": "do not extend this schedule; design a loss/SNR reweighting single-variable pilot that directly constrains low-timestep regression",
+    "prohibited_action": "do not advance to tier-4, full-dataset fine-tuning, or PG conditioning"
+  },
+  "gate": {
+    "advance_to_longer_tier1_training": false,
+    "advance_to_tier4": false,
+    "all_stage_native_sampling_passed": true,
+    "final_stage_deterministic_passed": false,
+    "overall_passed": false,
+    "training_passed": true
+  },
+  "protocol": {
+    "path": "generative_model/configs/midi/cof_transfer_lr1e6_timestep_stratified_pilot_v1.json",
+    "sha256": "383c6e38b0dd60872fa2fed848f195b773e5efef7093bb389a28fdb9e5f3430c",
+    "validation_protocol_path": "generative_model/configs/midi/deterministic_validation_loss_stratified_audit_v1.json",
+    "validation_protocol_sha256": "fdd0886e2b2e3d0f886c2d399274af91c619289be19b23edce5e8240a8c5a51c"
+  },
+  "schema_version": "1.0",
+  "stage_reports": [
+    {
+      "collisions": 0,
+      "connected": 4,
+      "deterministic_case_win_fraction": 0.46875,
+      "deterministic_mean_ratio": 0.9946668398474146,
+      "deterministic_timestep_win_fraction": 0.5,
+      "exact_train_smiles": 0,
+      "path": "generative_model/smoke/reports/midi_timestep_stratified_pilot_v1/stage_0016.json",
+      "sanitize_valid": 4,
+      "sha256": "7e5488f5468da95954abb2a6278d00a5a040457c19953ac61b02ba1b65e255e0",
+      "stage_gate_passed": false,
+      "status": "FAIL_TIMESTEP_STRATIFIED_STAGE_DETERMINISTIC_GATE",
+      "step": 16
+    },
+    {
+      "collisions": 0,
+      "connected": 4,
+      "deterministic_case_win_fraction": 0.46875,
+      "deterministic_mean_ratio": 0.9907855470008217,
+      "deterministic_timestep_win_fraction": 0.5,
+      "exact_train_smiles": 0,
+      "path": "generative_model/smoke/reports/midi_timestep_stratified_pilot_v1/stage_0032.json",
+      "sanitize_valid": 5,
+      "sha256": "8259ca1fa67943391443bb5422ce37052d5ff3ef7dfb9af44b0f9de7199a5b3a",
+      "stage_gate_passed": false,
+      "status": "FAIL_TIMESTEP_STRATIFIED_STAGE_DETERMINISTIC_GATE",
+      "step": 32
+    },
+    {
+      "collisions": 0,
+      "connected": 5,
+      "deterministic_case_win_fraction": 0.4375,
+      "deterministic_mean_ratio": 0.9873625490963259,
+      "deterministic_timestep_win_fraction": 0.5,
+      "exact_train_smiles": 0,
+      "path": "generative_model/smoke/reports/midi_timestep_stratified_pilot_v1/stage_0048.json",
+      "sanitize_valid": 5,
+      "sha256": "14942b1e8fe0ee90b166afd729301ff4ab80f19a849760aed16a731657a90478",
+      "stage_gate_passed": false,
+      "status": "FAIL_TIMESTEP_STRATIFIED_STAGE_DETERMINISTIC_GATE",
+      "step": 48
+    },
+    {
+      "collisions": 0,
+      "connected": 5,
+      "deterministic_case_win_fraction": 0.4375,
+      "deterministic_mean_ratio": 0.983819195409361,
+      "deterministic_timestep_win_fraction": 0.5,
+      "exact_train_smiles": 0,
+      "path": "generative_model/smoke/reports/midi_timestep_stratified_pilot_v1/stage_0064.json",
+      "sanitize_valid": 5,
+      "sha256": "e1d3f0205626990e6b457dc00acb4f02b68fe8a65f497e758adf7d37e8f682ea",
+      "stage_gate_passed": false,
+      "status": "FAIL_TIMESTEP_STRATIFIED_STAGE_DETERMINISTIC_GATE",
+      "step": 64
+    }
+  ],
+  "status": "FAIL_TIMESTEP_STRATIFIED_PILOT_TIER1",
+  "training": {
+    "all_finite": true,
+    "first_window_mean": 9.255976402782835,
+    "last_window_mean": 7.9825075173866935,
+    "report_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/report.json",
+    "report_sha256": "b36a41dcdbe42690212cc0bd5a9de625142fc199f588e574ebc250f251fdfa7b",
+    "schedule_sha256": "bdddedeb2e52a5f9ad22ed7473cc667e7172a915d2b5b93b03d095f1bb2cccf0"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "conclusion": "native generation remains stable, but fixed validation improvement is not broad",
+  "deterministic_validation": {
+    "case_win_fraction": 0.46875,
+    "case_wins": 15,
+    "checks": {
+      "case_win_fraction": false,
+      "mean_ratio": false,
+      "timestep_win_fraction": false
+    },
+    "component_means": {
+      "atom_cross_entropy": 0.40601500038120264,
+      "charge_cross_entropy": 0.002523056528285217,
+      "edge_cross_entropy": 0.08613493204390466,
+      "position_mse": 2.3634846238564933
+    },
+    "mean_total_loss": 7.4276527587499,
+    "mean_total_loss_ratio_to_official": 0.9955773321901004,
+    "passed": false,
+    "timestep_total_loss_means": {
+      "1": 0.015143557218834758,
+      "100": 0.01681053452193737,
+      "200": 0.12855362240225077,
+      "25": 0.014484443934634328,
+      "300": 1.7781710028648376,
+      "400": 14.492447137832642,
+      "50": 0.014358605025336146,
+      "500": 42.96125316619873
+    },
+    "timestep_win_fraction": 0.5,
+    "timestep_wins": 4
+  },
+  "native_sampling": {
+    "checks": {
+      "collisions": true,
+      "connected": true,
+      "sanitize_valid": true
+    },
+    "collisions": 0,
+    "connected": 4,
+    "evaluation_fingerprint": "48acbad885a32006776db2aeaf200cb5eb8e8ee9b3ef58cba9af708068752555",
+    "evaluation_report_sha256": "10e681b2cf68a2d8d3f3183900576d3b392fa2a0de2bc9b9edbb6f33385e1224",
+    "exact_train_smiles": 0,
+    "minimum_pair_distance_mean_angstrom": 0.9847711970077455,
+    "nearest_train_tanimoto_mean": 0.11837635716854741,
+    "passed": true,
+    "sampling_report_sha256": "27bd85b04f1abdc311b034123a14ae35df592735935e0ea17efc2231aafa6355",
+    "sanitize_failure_counts": {
+      "SANITIZE_KEKULIZE": 1
+    },
+    "sanitize_valid": 4
+  },
+  "schema_version": "1.0",
+  "stage_gate_passed": false,
+  "status": "FAIL_MIN_SNR_STAGE_DETERMINISTIC_GATE",
+  "step": 16,
+  "training_segment": {
+    "begin_step": 1,
+    "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_min_snr_0064/checkpoints/step-000016.pt",
+    "checkpoint_sha256": "90cedcf076ac61cb5cc2e90eef13aad6ef5d785d088eed6fa865ebdb37c6605a",
+    "end_step": 16,
+    "loss_maximum": 1.5300860404968262,
+    "loss_mean": 0.7112513775937259,
+    "loss_median": 0.7369712591171265,
+    "loss_minimum": 0.018055874854326248,
+    "position_loss_weighting": {
+      "optimized_loss_mean": 0.7112513775937259,
+      "position_mse_mean": 2.930682367295958,
+      "unweighted_base_loss_mean": 9.257637279806659,
+      "weight_maximum": 1.8805872175592304,
+      "weight_mean": 0.9786159826121918,
+      "weight_minimum": 8.236604491788251e-05
+    },
+    "timesteps": [
+      49,
+      151,
+      401,
+      460,
+      191,
+      281,
+      348,
+      115,
+      282,
+      97,
+      18,
+      370,
+      437,
+      143,
+      480,
+      238
+    ]
+  }
+}

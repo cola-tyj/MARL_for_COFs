@@ -1,0 +1,112 @@
+{
+  "checks": {
+    "all_four_target_groups_covered": true,
+    "all_independent_analyzers_succeeded": true,
+    "all_target_compatible_fractions_one": true,
+    "all_target_geometry_fractions_one": true,
+    "artifact_hashes_frozen": true,
+    "forbidden_dependencies_absent": true,
+    "single_inference_geometry_passed": true,
+    "single_inference_point_group_passed": true,
+    "single_inference_xyz_is_well_formed": true
+  },
+  "evidence": {
+    "c2_c3_exact_fraction": 0.515625,
+    "deliverable_xyz_atom_count": 45,
+    "s4_d6h_exact_fraction": 0.5961538461538461,
+    "s4_minimum_selected_inertia_separation": 0.01662469865275489,
+    "target_groups": {
+      "C2": {
+        "compatible_fraction": 1.0,
+        "geometry_fraction": 1.0,
+        "panel_count": 48
+      },
+      "C3": {
+        "compatible_fraction": 1.0,
+        "geometry_fraction": 1.0,
+        "panel_count": 16
+      },
+      "D6h": {
+        "compatible_fraction": 1.0,
+        "geometry_fraction": 1.0,
+        "panel_count": 14
+      },
+      "S4": {
+        "compatible_fraction": 1.0,
+        "geometry_fraction": 1.0,
+        "panel_count": 38
+      }
+    },
+    "total_fixed_panel_molecules": 116
+  },
+  "forbidden_dependency_checks": {
+    "etkdg_never_used": true,
+    "reference_xyz_never_used": true,
+    "stored_action_never_used": true
+  },
+  "identity": {
+    "c2_c3_geometry": {
+      "path": "generative_model/runs/etflow_e3f02_iidtest_v1/geometry_report.json",
+      "sha256": "5c0efdedfef123cfcf93846a15c440a9a571c19978761c8d589f28149111e587"
+    },
+    "c2_c3_point_group": {
+      "path": "generative_model/runs/etflow_e3f02_iidtest_v1/point_group_report.json",
+      "sha256": "6dcada7369e3d3b61db249310d9385cb944f7ce6790beee3404585edb32adf0a"
+    },
+    "c2_c3_protocol": {
+      "path": "generative_model/inference/etflow_e3f02_iidtest_protocol_v1.json",
+      "sha256": "6dee96f0092747aaa6bf18660949652aa56718416976fa810d3212467676f86c"
+    },
+    "deliverable_geometry": {
+      "path": "generative_model/runs/etflow_e3f02_v5_examples/s4_001102/report.json",
+      "sha256": "288e11f22b5d3bcf7e525afc1db313c57858c51dc160424c9be7b0e47ba8d40c"
+    },
+    "deliverable_point_group": {
+      "path": "generative_model/runs/etflow_e3f02_v5_examples/s4_001102/point_group_report.json",
+      "sha256": "b676c44c5747a7d04002ed71f1aa5a0f024ea4024b8ffb02a02326f6f422f7b5"
+    },
+    "deliverable_xyz": {
+      "path": "generative_model/runs/etflow_e3f02_v5_examples/s4_001102/final.xyz",
+      "sha256": "3cb94ecbe4d6137338ed4549df4859496488b3b9a1695dc7aee2c485473ac207"
+    },
+    "inference_protocol": {
+      "path": "generative_model/inference/etflow_e3f02_protocol_v5.json",
+      "sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2"
+    },
+    "official_checkpoint": {
+      "path": "generative_model/checkpoints/etflow/drugs-o3.ckpt",
+      "sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2"
+    },
+    "s4_d6h_geometry": {
+      "path": "generative_model/runs/etflow_e3f02_rare_targets_v3/geometry_report.json",
+      "sha256": "04d2d6224f6a16d688a34ce15916eb6c87d87b8c334a143d99bc5bc8c3707df9"
+    },
+    "s4_d6h_point_group": {
+      "path": "generative_model/runs/etflow_e3f02_rare_targets_v3/point_group_report.json",
+      "sha256": "76e94776fb41c0d8ae6410be695118db4319fd20d01754f9882357096af91cd3"
+    },
+    "s4_d6h_protocol": {
+      "path": "generative_model/inference/etflow_e3f02_rare_targets_protocol_v3.json",
+      "sha256": "290b2127b079da2a27432e0f7ab225353791a0fc6e06b2ec7c63cee1eb73e2a1"
+    }
+  },
+  "passed": true,
+  "schema_version": "etflow-e3f02-four-target-completion-v1",
+  "status": "PASS_ETFLOW_E3F02_KNOWN_GRAPH_TARGET_PG_TO_XYZ_DELIVERABLE",
+  "task_boundary": {
+    "guarantee": "strict geometry gate and independent actual-PG compatible audit",
+    "input": "canonical known molecular graph + requested Target_PG",
+    "not_claimed": [
+      "raw ET-Flow learned Target_PG conditioning without hard projection",
+      "novel 2D graph or SMILES generation",
+      "success for graph/point-group pairs without a legal graph automorphism"
+    ],
+    "output": "explicit-H final.xyz plus deterministic NPZ and audit JSON",
+    "supported_target_pg": [
+      "C2",
+      "C3",
+      "S4",
+      "D6h"
+    ]
+  }
+}

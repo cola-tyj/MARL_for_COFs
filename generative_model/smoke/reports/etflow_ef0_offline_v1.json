@@ -1,0 +1,90 @@
+{
+  "checkpoint_loaded": false,
+  "checks": {
+    "atom_map_roundtrip_exact_all": true,
+    "element_fallback_never": true,
+    "etkdg_coordinates_never_used": true,
+    "graph_mutation_never": true,
+    "panel_count": true,
+    "projection_operation_error_max": true,
+    "reference_coordinates_never_read": true,
+    "sn_preserved_all": true
+  },
+  "metrics": {
+    "maximum_operation_error_angstrom": 1.88411095042053e-15,
+    "molecule_count": 4,
+    "sn_molecule_count": 2
+  },
+  "official_etflow_loaded": false,
+  "passed": true,
+  "protocol_sha256": "daed499dea346665ef96d8422d0040f4f009df3d602a079325b8196e8bc0082d",
+  "quality_claim": false,
+  "records": [
+    {
+      "atom_count": 50,
+      "atom_map_roundtrip_exact": true,
+      "bond_count": 53,
+      "contains_sn": false,
+      "element_fallback_used": false,
+      "etkdg_coordinates_used": false,
+      "graph_mutation_used": false,
+      "maximum_operation_error_angstrom": 1.1102230246251565e-16,
+      "molecule_id": "cof_000045",
+      "orientation_candidates": 24,
+      "package_index": 45,
+      "reference_coordinates_used": false,
+      "sn_preserved": true,
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 33,
+      "atom_map_roundtrip_exact": true,
+      "bond_count": 33,
+      "contains_sn": false,
+      "element_fallback_used": false,
+      "etkdg_coordinates_used": false,
+      "graph_mutation_used": false,
+      "maximum_operation_error_angstrom": 1.88411095042053e-15,
+      "molecule_id": "cof_000081",
+      "orientation_candidates": 24,
+      "package_index": 81,
+      "reference_coordinates_used": false,
+      "sn_preserved": true,
+      "target_pg": "C3"
+    },
+    {
+      "atom_count": 42,
+      "atom_map_roundtrip_exact": true,
+      "bond_count": 44,
+      "contains_sn": true,
+      "element_fallback_used": false,
+      "etkdg_coordinates_used": false,
+      "graph_mutation_used": false,
+      "maximum_operation_error_angstrom": 5.551115123125783e-17,
+      "molecule_id": "cof_001684",
+      "orientation_candidates": 24,
+      "package_index": 1684,
+      "reference_coordinates_used": false,
+      "sn_preserved": true,
+      "target_pg": "C2"
+    },
+    {
+      "atom_count": 36,
+      "atom_map_roundtrip_exact": true,
+      "bond_count": 37,
+      "contains_sn": true,
+      "element_fallback_used": false,
+      "etkdg_coordinates_used": false,
+      "graph_mutation_used": false,
+      "maximum_operation_error_angstrom": 3.209238430557093e-17,
+      "molecule_id": "cof_002378",
+      "orientation_candidates": 24,
+      "package_index": 2378,
+      "reference_coordinates_used": false,
+      "sn_preserved": true,
+      "target_pg": "C2"
+    }
+  ],
+  "schema_version": "etflow-ef0-offline-engineering-v1",
+  "status": "PASS_ETFLOW_EF0A_OFFLINE_BRIDGE_AWAIT_OFFICIAL_PREFLIGHT"
+}

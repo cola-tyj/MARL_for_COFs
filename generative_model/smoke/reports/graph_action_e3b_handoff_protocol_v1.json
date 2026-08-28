@@ -1,0 +1,110 @@
+{
+  "decision": {
+    "fail_action": "localize recovered action/geometry failures before any novel graph generation",
+    "pass_action": "begin symmetry-by-construction novel 2D graph baseline",
+    "pass_status": "PASS_GRAPH_ACTION_E3B_RECOVERED_ACTION_TO_3D"
+  },
+  "etkdg": {
+    "atom_order_contract": "build directly from canonical graph; no AddHs or SMILES reparse",
+    "candidate_count": 8928,
+    "enforce_chirality": true,
+    "explicit_h_graph": true,
+    "implementation": "RDKit ETKDGv3",
+    "maximum_iterations": 1000,
+    "seeds": [
+      2026082401,
+      2026082402,
+      2026082403,
+      2026082404
+    ],
+    "use_macrocycle_torsions": true,
+    "use_random_coordinates": false,
+    "use_small_ring_torsions": true
+  },
+  "gate_thresholds": {
+    "acceptable_gradient_norm_max": 1.0,
+    "bond_length_mae_to_reference_angstrom_max": 0.15,
+    "maximum_operation_error_angstrom": 1e-05,
+    "minimum_pair_distance_angstrom": 0.6
+  },
+  "identity": {
+    "e2_protocol_sha256": "d2480ea341815764b7e6e5f091703948748da0724e49d1be3a32075573ce5de6",
+    "e3a_actions_sha256": "b76bea3d95200bde0770605a21c5bad3ae539b10400bcce36b225777276618f3",
+    "e3a_audit_sha256": "12d1ddc07ba2fb117ed027cb305fb39f1a51902fd85966594a33459451abd6fa",
+    "e3a_protocol_sha256": "e97f2512a7cb6daf64cfeea1087aab874afe53e552a9e681f7781dc4911bf725",
+    "source_sha256": {
+      "generative_model/smoke/audit_etkdg_orbit_e0_point_groups.py": "4a591db374f08ab8273ba320b8292226b5c8bf64775c66e461462f1989701870",
+      "generative_model/smoke/audit_graph_action_e3_3d_handoff.py": "bd6a79b82c437b772b1f2f57a8a864bea76c62878c230e4559f4c48bd49fc5ca",
+      "generative_model/smoke/run_graph_action_e3_3d_handoff.py": "4839ffa597908ad804e5fc78aec397532cfd7d537139b2c09cd13e796b57a332",
+      "generative_model/symmetry/graph_action.py": "9517d125bbdb897d5ef6d8e4c7ebf97051131a8946e473b670ccb21fb49864fe"
+    }
+  },
+  "optimizer": {
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 500,
+    "method": "L-BFGS-B",
+    "primary_force_field": "UFF",
+    "repulsion_cutoff_angstrom": 0.8,
+    "repulsion_force_constant_kcal_mol_angstrom2": 2000.0,
+    "source": "unchanged F0.2/E1 orbit-constrained UFF+nonbonded repulsion backend"
+  },
+  "orientation_and_projection": {
+    "match_radius_of_gyration": true,
+    "orientation_candidates": "PCA frame x 24 proper signed axis permutations",
+    "orientation_selection": "minimum Reynolds projection RMSD, then orientation id",
+    "projection": "one Reynolds average with stored target operations/permutations",
+    "reference_alignment": false
+  },
+  "panel": {
+    "high_search_c3_indices": [
+      69,
+      1371
+    ],
+    "historical_e2_analyzer_failure_index": [
+      17
+    ],
+    "molecule_count": 16,
+    "package_indices": [
+      0,
+      17,
+      45,
+      92,
+      781,
+      1490,
+      1684,
+      2378,
+      65,
+      69,
+      81,
+      1122,
+      1249,
+      1254,
+      1371,
+      2436
+    ],
+    "selection": "frozen stress panel covering C2/C3, Sn, high-search, resonance and saved-action-different cases",
+    "sn_package_indices": [
+      1684,
+      2378
+    ],
+    "target_pg_counts": {
+      "C2": 8,
+      "C3": 8
+    }
+  },
+  "protocol_fingerprint": "a64be4fb92ec264e6ef4a20cb8bb469f147e22ed5e4aabca76ef6a5b83044673",
+  "purpose": "Bounded stress Gate proving that graph-only recovered C2/C3 actions, including actions different from saved annotations, can drive the frozen E2 3D backend.",
+  "schema_version": "graph-action-e3b-handoff-protocol-v1",
+  "scope": {
+    "checkpoint_produced": false,
+    "core_ood_used": false,
+    "iid_test_used": false,
+    "model_training": false,
+    "recovered_e3a_action_used": true,
+    "reference_xyz_used_for_initialization_or_selection": false,
+    "reference_xyz_used_for_posthoc_metrics_only": true,
+    "saved_target_action_used": false
+  },
+  "status": "FROZEN_BEFORE_GRAPH_ACTION_E3B_HANDOFF"
+}

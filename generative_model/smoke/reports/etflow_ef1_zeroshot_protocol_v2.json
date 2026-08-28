@@ -1,0 +1,155 @@
+{
+  "candidate_selection": "minimum final UFF+repulsion objective, then candidate id; reference-free",
+  "decision": {
+    "fail_action": "retain deterministic E3 route and stop ET-Flow; never lower thresholds post hoc",
+    "fail_status": "FAIL_ETFLOW_EF1_ZEROSHOT_STOP_BRANCH",
+    "pass_action": "design bounded COF-domain fine-tuning; do not start it automatically",
+    "pass_status": "PASS_ETFLOW_EF1_ZEROSHOT_ADVANCE_TO_FINETUNE_EVALUATION"
+  },
+  "etflow": {
+    "base_seed": 2026082500,
+    "candidate_count": 4,
+    "model_name": "drugs-o3",
+    "n_timesteps": 50,
+    "package_version": "0.1.2",
+    "sampler_type": "ode"
+  },
+  "etkdg": {
+    "implementation": "RDKit ETKDGv3 with frozen terminal-resonance contract",
+    "maximum_iterations": 1000,
+    "seeds": [
+      2026082401,
+      2026082402,
+      2026082403,
+      2026082404
+    ],
+    "use_random_coordinates": false
+  },
+  "gate_thresholds": {
+    "acceptable_gradient_norm_max": 1.0,
+    "acceptable_optimizer_termination_fraction_min": 0.75,
+    "analyzer_success_fraction_min": 0.95,
+    "bond_length_mae_to_reference_angstrom_max": 0.15,
+    "bond_quality_fraction_min": 0.95,
+    "candidate_success_fraction_min": 0.9,
+    "collision_free_fraction_min": 0.95,
+    "compatible_fraction_margin_max": 0.05,
+    "final_objective_win_fraction_min": 0.4,
+    "maximum_operation_error_angstrom": 1e-05,
+    "median_final_objective_delta_kcal_mol_max": 5.0,
+    "minimum_pair_distance_angstrom": 0.6,
+    "pg_compatible_fraction_min": 0.9
+  },
+  "identity": {
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "ef0b_report_sha256": "d57cbb88435564d92c323041e3a77c9045cd34c90cdd4ca174aa6f9352e29b20",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/optimization/etkdg_orbit_resonance.py": "579644df91442d768c65899fa4ec84c1d18382b6b51a1f17727517d15d3c210d",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c",
+      "generative_model/smoke/audit_etflow_ef1_point_groups.py": "768b9f2eb000a467f768f0b69ac2009818055ca93502546dcc9de03cf6d86cd9",
+      "generative_model/smoke/run_etflow_ef1_zeroshot.py": "b8c9a402461c98c46939fd291069235625b5cc45d617fbdc322a87adc4a1fee4",
+      "generative_model/symmetry/graph_action.py": "9517d125bbdb897d5ef6d8e4c7ebf97051131a8946e473b670ccb21fb49864fe"
+    },
+    "supersedes_v1_protocol_sha256": "4ded9baadf998c2c31045b7273441a45bf296921fabdf24754aea1c24ff308a1",
+    "symmetry_protocol": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    },
+    "v2_change_scope": "NumPy ndarray/scalar JSON encoding only; panel, model, candidates, thresholds and decisions unchanged"
+  },
+  "optimizer": {
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 500,
+    "method": "L-BFGS-B",
+    "primary_force_field": "UFF",
+    "repulsion_cutoff_angstrom": 0.8,
+    "repulsion_force_constant_kcal_mol_angstrom2": 2000.0,
+    "source": "unchanged F0.2/E1 orbit-constrained UFF+nonbonded repulsion backend"
+  },
+  "panel": {
+    "maximum_atom_count": 78,
+    "minimum_atom_count": 14,
+    "molecule_count": 32,
+    "package_indices": [
+      2102,
+      888,
+      931,
+      243,
+      1699,
+      1079,
+      511,
+      2034,
+      526,
+      2301,
+      2218,
+      822,
+      2183,
+      1972,
+      1766,
+      320,
+      437,
+      2136,
+      807,
+      197,
+      1704,
+      363,
+      1774,
+      218,
+      1213,
+      2392,
+      2470,
+      1262,
+      1392,
+      1187,
+      2464,
+      1414
+    ],
+    "selection": "SHA256(dataset_fingerprint:etflow-ef1:Package_Index), first 24 C2 + 8 C3 from IID-test",
+    "sn_molecule_count": 0,
+    "target_pg_counts": {
+      "C2": 24,
+      "C3": 8
+    }
+  },
+  "projection": {
+    "match_radius_of_gyration": true,
+    "operation_source": "E3-A graph-only recovery",
+    "orientation_candidates": 24,
+    "selection": "minimum Reynolds projection displacement; no reference alignment",
+    "stored_action_used": false
+  },
+  "protocol_fingerprint": "01cd0b8f511f6ca1768866c24d2f5de228124b26e5f9818ed859cd309260cf88",
+  "purpose": "Paired zero-shot initial-conformer comparison under identical E3 projection and F0.2 backend.",
+  "reported_not_gated": [
+    "raw/projected/final Kabsch RMSD to the single canonical conformer",
+    "raw/projected/final pair-distance MAE",
+    "PG exact-match fraction",
+    "ET-Flow upstream auxiliary-feature misc counts"
+  ],
+  "route": "EF1",
+  "schema_version": "etflow-ef1-zeroshot-protocol-v2",
+  "scope": {
+    "fine_tuning": false,
+    "iid_test_used": true,
+    "iid_train_used": false,
+    "iid_validation_used": false,
+    "known_graph": true,
+    "known_target_pg": true,
+    "model_training": false,
+    "reference_xyz_used_for_candidate_selection": false,
+    "reference_xyz_used_for_posthoc_metrics_only": true,
+    "stored_symmetry_action_used": false,
+    "target_pg_conditioned_etflow": false
+  },
+  "status": "FROZEN_AFTER_V1_JSON_SERIALIZATION_FAILURE_BEFORE_ANY_VALID_SCIENTIFIC_REPORT"
+}

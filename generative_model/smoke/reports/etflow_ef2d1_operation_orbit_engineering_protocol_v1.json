@@ -1,0 +1,202 @@
+{
+  "decision": {
+    "fail_action": "diagnose the implementation or reject this head without changing the frozen thresholds and without using IID-test/Core-OOD",
+    "fail_status": "FAIL_ETFLOW_EF2D1_OPERATION_ORBIT_ENGINEERING_STOP_BRANCH",
+    "pass_action": "freeze a paired C2/C3 adapter-only training protocol using a training panel disjoint from this development holdout",
+    "pass_status": "PASS_ETFLOW_EF2D1_OPERATION_ORBIT_ENGINEERING_FREEZE_TRAINING"
+  },
+  "development_holdout": {
+    "excluded_from_future_ef2d1_training": true,
+    "iid_test_used": false,
+    "iid_validation_used": false,
+    "overlap_with_previous_adapter_training": 0,
+    "reserved_count": 64,
+    "reserved_package_indices_by_pg": {
+      "C2": [
+        2072,
+        457,
+        960,
+        1572,
+        607,
+        2283,
+        806,
+        2235,
+        1565,
+        436,
+        1675,
+        939,
+        1991,
+        119,
+        637,
+        2256,
+        1491,
+        206,
+        2357,
+        770,
+        1026,
+        242,
+        1761,
+        2085,
+        2025,
+        505,
+        2131,
+        1936,
+        673,
+        1783,
+        470,
+        1536
+      ],
+      "C3": [
+        1140,
+        1412,
+        2459,
+        1236,
+        1336,
+        1220,
+        2418,
+        64,
+        1128,
+        1389,
+        1151,
+        1399,
+        2425,
+        1322,
+        1206,
+        1418,
+        2451,
+        1368,
+        2518,
+        1403,
+        2390,
+        1301,
+        1275,
+        1207,
+        2491,
+        2415,
+        1270,
+        1149,
+        1259,
+        1400,
+        2391,
+        1171
+      ]
+    },
+    "selection_method": "SHA-256 rank within IID-train and Target_PG after excluding the union of EF2-A2 and C7-RS training molecules",
+    "selection_seed": 2026082632
+  },
+  "engineering_gate": {
+    "base_seed": 202608263200,
+    "diagnostic_positive_gate_bias": 0.25,
+    "direction_package_indices": [
+      2072,
+      1140,
+      457,
+      1412,
+      960,
+      2459,
+      1572,
+      1236,
+      607,
+      1336,
+      2283,
+      1220,
+      806,
+      2418,
+      2235,
+      64
+    ],
+    "direction_time": 0.5,
+    "gradient_package_indices": [
+      960,
+      2459,
+      1572,
+      1236
+    ],
+    "multi_times": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "short_rollout": {
+      "start_time": 0.2,
+      "step_size": 0.05,
+      "steps": 4
+    },
+    "sn_package_indices": [
+      1684,
+      2378
+    ],
+    "thresholds": {
+      "direction_mean_improved_fraction_min": 0.9,
+      "direction_worst_improved_fraction_min": 0.75,
+      "maximum_endpoint_delta_norm_angstrom": 0.050001,
+      "short_rollout_bond_loss_ratio_max": 1.25,
+      "short_rollout_improved_fraction_min": 0.75,
+      "short_rollout_maximum_case_ratio_max": 1.5,
+      "short_rollout_mean_operation_ratio_max": 1.0
+    },
+    "zero_increment_package_indices": [
+      2072,
+      1140,
+      457,
+      1412
+    ]
+  },
+  "identity": {
+    "c7_failure_diagnosis_sha256": "06452ade66fa53eafe767ba785b276785e2cc92ee53c1484c87566d96fd1480a",
+    "c7_protocol_sha256": "5c7b298202ccecce1e4c4a0debe6a9b2894296703340370e2bfa6ada1d26895c",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "official_checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "official_model_name": "drugs-o3",
+    "parent_a2_checkpoint": "generative_model/runs/etflow_ef2a2_endpoint_interleaved_0256/checkpoints/step-000256.pt",
+    "parent_a2_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "parent_protocol_sha256": "eaf696764009ee46aa827dbd03a061f930c4d1c0825b73d79fc9d2a235ceb256",
+    "parent_report_sha256": "e293895f5047239b5661e3ac554601acf6f0a343ed271a00b5eeef9bf9f5d2e2",
+    "source_sha256": {
+      "generative_model/models/etflow_pg_operation_orbit_v1.py": "ce18e71f0100d241b8930bc8245d888ef4693e378edc7730a2745d69ea360204",
+      "generative_model/smoke/audit_etflow_ef2d1_operation_orbit_engineering.py": "32ef104e53ea5c44e8bdd7906f6800888e352bee46c004af8ac8fb343967d9a0",
+      "generative_model/smoke/build_etflow_ef2d1_operation_orbit_engineering_protocol.py": "f0ab3b96d858f4cb18b3b12d184626b02bdb1851def381458802d289914ddf9f",
+      "generative_model/tests/test_etflow_pg_operation_orbit_v1.py": "0c762fb3ebb0b3086332d148097e7db0167ceb1487be010984ebbe6dacfec672"
+    }
+  },
+  "loss": {
+    "bond_length_weight": 0.25,
+    "flow_matching_weight": 1.0,
+    "mean_operation_weight": 0.25,
+    "molecule_balanced": true,
+    "nonbonded_collision_weight": 0.25,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "orbit_balanced_weight": 0.5,
+    "worst_operation_weight": 0.5
+  },
+  "model": {
+    "atom_wise_gate": true,
+    "hard_projection_in_forward": false,
+    "hidden_dim": 64,
+    "maximum_endpoint_displacement_angstrom": 0.05,
+    "minimum_remaining_time": 0.05,
+    "operation_aggregation": "shared score and softmax across all nonidentity operations",
+    "orbit_features": "label-invariant mean/max pooling and atom broadcast",
+    "parent": "frozen selected EF2-A2 step-256 adapter",
+    "parent_frozen": true,
+    "zero_increment_initialized": true
+  },
+  "protocol_fingerprint": "b21eee52d61c205ca63dd865f104b3fca7749dffa2f4254879ed188d2e9f2fe7",
+  "purpose": "Test a zero-increment, bounded operation/orbit-aware residual head on the frozen selected EF2-A2 parent before any new training.",
+  "route": "ET-Flow/EF2-D1",
+  "schema_version": "etflow-ef2d1-operation-orbit-engineering-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_train_used": true,
+    "iid_validation_used": false,
+    "official_base_frozen": true,
+    "parent_a2_frozen": true,
+    "quality_claim": false,
+    "threshold_tuning": false,
+    "training_started": false
+  },
+  "status": "FROZEN_BEFORE_ENGINEERING_GATE"
+}

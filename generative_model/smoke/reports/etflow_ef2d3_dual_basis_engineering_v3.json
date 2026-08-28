@@ -1,0 +1,867 @@
+{
+  "architecture_revision": {
+    "diagnostic_operation_gate_bias": 0.1,
+    "diagnostic_overlap_gate_bias": 2.0,
+    "operation_to_overlap_gradient_path": false,
+    "overlap_gate_parameter_gradient_preserved": true,
+    "overlap_geometry_stop_gradient": true,
+    "v2_formal_status_preserved": "FAIL_ETFLOW_EF2D3_V2_ENGINEERING_STOP_BRANCH"
+  },
+  "checks": {
+    "archived_regression_collision_improves": true,
+    "archived_regression_operation_improves": true,
+    "direction_active_bond_coverage": true,
+    "direction_active_collision_coverage": true,
+    "direction_bond_overlap_non_degradation": true,
+    "direction_collision_non_degradation": true,
+    "direction_operation_improves": true,
+    "direction_total_cap_respected": true,
+    "hard_projection_never_used": true,
+    "iid_test_sealed": true,
+    "operation_gradients_finite_nonzero": true,
+    "overlap_gradient_available_on_archived_active_case": true,
+    "parent_trainable_parameters_zero": true,
+    "parent_unchanged": true,
+    "short_rollout_bond_overlap_non_degradation": true,
+    "short_rollout_collision_non_degradation": false,
+    "short_rollout_finite": true,
+    "short_rollout_operation_non_degradation": true,
+    "short_rollout_total_cap_respected": true,
+    "zero_increment_exact": true,
+    "zero_panel_complete": true
+  },
+  "direction_records": [
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 1.9398472431930713e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 1.9398474250920117e-05,
+        "worst_operation": 1.9398472431930713e-05
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.017376607283949852,
+      "mean_operation_improved": true,
+      "package_index": 138,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 3.0048488042666577e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 3.0048488042666577e-05,
+        "worst_operation": 3.0048488042666577e-05
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0021296110935509205,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0021296110935509205,
+        "worst_operation": 0.002129612024873495
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.021481908857822418,
+      "mean_operation_improved": true,
+      "package_index": 1341,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.002884493675082922,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.002884493675082922,
+        "worst_operation": 0.002884495537728071
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 7.705069947405718e-06,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 7.705069947405718e-06,
+        "worst_operation": 7.705069947405718e-06
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.017453238368034363,
+      "mean_operation_improved": true,
+      "package_index": 869,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 1.1903412087121978e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 1.1903412087121978e-05,
+        "worst_operation": 1.1903412087121978e-05
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 1.905099634313956e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 1.9050992705160752e-05,
+        "worst_operation": 1.9051050912821665e-05
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.017267949879169464,
+      "mean_operation_improved": true,
+      "package_index": 2420,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 2.6212986995233223e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 2.6212988814222626e-05,
+        "worst_operation": 2.6213030650978908e-05
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.00011512323544593528,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0001151232427218929,
+        "worst_operation": 0.00011512323544593528
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.017982160672545433,
+      "mean_operation_improved": true,
+      "package_index": 824,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0001775015698513016,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0001775015698513016,
+        "worst_operation": 0.0001775015698513016
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0002596565173007548,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0002596565173007548,
+        "worst_operation": 0.0002596568374428898
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.02158964052796364,
+      "mean_operation_improved": true,
+      "package_index": 1281,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.00035372591810300946,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.00035372591810300946,
+        "worst_operation": 0.0003537271113600582
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 4.131623427383602e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 4.1316237911814824e-05,
+        "worst_operation": 4.131623427383602e-05
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.01787894405424595,
+      "mean_operation_improved": true,
+      "package_index": 173,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 6.405032036127523e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 6.405031308531761e-05,
+        "worst_operation": 6.405032036127523e-05
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 2.242379923700355e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 2.242379923700355e-05,
+        "worst_operation": 2.242390655737836e-05
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.018094582483172417,
+      "mean_operation_improved": true,
+      "package_index": 2432,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 3.051612657145597e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 3.051612657145597e-05,
+        "worst_operation": 3.051625026273541e-05
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 1.16656519821845e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 1.16656519821845e-05,
+        "worst_operation": 1.16656519821845e-05
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.017597557976841927,
+      "mean_operation_improved": true,
+      "package_index": 1517,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 1.8007018297794275e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 1.800701647880487e-05,
+        "worst_operation": 1.8007018297794275e-05
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0004945940454490483,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0004945940454490483,
+        "worst_operation": 0.0004945950931869447
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.018419764935970306,
+      "mean_operation_improved": true,
+      "package_index": 1271,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0006763966521248221,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0006763966521248221,
+        "worst_operation": 0.0006763971759937704
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 4.699253167927964e-06,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 4.699252713180613e-06,
+        "worst_operation": 4.699253167927964e-06
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.017653414979577065,
+      "mean_operation_improved": true,
+      "package_index": 1092,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 7.151882073230809e-06,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 7.151881163736107e-06,
+        "worst_operation": 7.151882073230809e-06
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.00014251100947149098,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.00014251103857532144,
+        "worst_operation": 0.00014251170796342194
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.01802898198366165,
+      "mean_operation_improved": true,
+      "package_index": 1214,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.00019608229922596365,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.00019608228467404842,
+        "worst_operation": 0.00019608264847192913
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0011504063149914145,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0011504061985760927,
+        "worst_operation": 0.0011504063149914145
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.02140175923705101,
+      "mean_operation_improved": true,
+      "package_index": 613,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0017633202951401472,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0017633205279707909,
+        "worst_operation": 0.0017633202951401472
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.002476498717442155,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0024764989502727985,
+        "worst_operation": 0.002476503374055028
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.025319591164588928,
+      "mean_operation_improved": true,
+      "package_index": 1284,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0033478920813649893,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.003347892314195633,
+        "worst_operation": 0.0033478965051472187
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 3.3754815376596525e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 3.375481173861772e-05,
+        "worst_operation": 3.3754815376596525e-05
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.017722323536872864,
+      "mean_operation_improved": true,
+      "package_index": 815,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 5.1852486649295315e-05,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 5.185248301131651e-05,
+        "worst_operation": 5.1852486649295315e-05
+      },
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "bond_overlap_active": false,
+      "bond_overlap_improved": false,
+      "candidate": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0005204444751143456,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0005204444751143456,
+        "worst_operation": 0.0005204446497373283
+      },
+      "collision_active": false,
+      "collision_improved": false,
+      "maximum_endpoint_delta_norm": 0.019374800845980644,
+      "mean_operation_improved": true,
+      "package_index": 2515,
+      "parent": {
+        "bond_overlap": 0.0,
+        "mean_operation": 0.0007134706247597933,
+        "nonbonded_collision": 0.0,
+        "orbit_balanced": 0.0007134707411751151,
+        "worst_operation": 0.0007134709740057588
+      },
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": true,
+      "bond_overlap_active": true,
+      "bond_overlap_improved": true,
+      "candidate": {
+        "bond_overlap": 0.00026527410955168307,
+        "mean_operation": 0.00022580477525480092,
+        "nonbonded_collision": 0.4983515739440918,
+        "orbit_balanced": 0.00022580477525480092,
+        "worst_operation": 0.00022580477525480092
+      },
+      "collision_active": true,
+      "collision_improved": true,
+      "maximum_endpoint_delta_norm": 0.029155632480978966,
+      "mean_operation_improved": true,
+      "package_index": 2235,
+      "parent": {
+        "bond_overlap": 0.0012264713877812028,
+        "mean_operation": 0.00034461572067812085,
+        "nonbonded_collision": 0.5148857831954956,
+        "orbit_balanced": 0.0003446157497819513,
+        "worst_operation": 0.00034461572067812085
+      },
+      "target_pg": "C2"
+    }
+  ],
+  "gradient_records": [
+    {
+      "operation_gradient_finite": true,
+      "operation_gradient_norm": 0.001167454058304429,
+      "overlap_gradient_finite": true,
+      "overlap_gradient_norm": 0.000752211723010987,
+      "package_index": 824,
+      "parent_collision_loss": 0.0,
+      "target_pg": "C2"
+    },
+    {
+      "operation_gradient_finite": true,
+      "operation_gradient_norm": 0.0013847502414137125,
+      "overlap_gradient_finite": true,
+      "overlap_gradient_norm": 0.003560837358236313,
+      "package_index": 1281,
+      "parent_collision_loss": 0.0,
+      "target_pg": "C3"
+    },
+    {
+      "operation_gradient_finite": true,
+      "operation_gradient_norm": 0.1109888106584549,
+      "overlap_gradient_finite": true,
+      "overlap_gradient_norm": 0.020984871312975883,
+      "package_index": 2235,
+      "parent_collision_loss": 0.0,
+      "target_pg": "C2"
+    }
+  ],
+  "identity": {
+    "auditor_source_sha256": "7dd0dedf4a8cb86a2934e7d8e8c131e2d1de400513afc84e71894e32e1413f08",
+    "official_checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "parent_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "parent_state_after": "3c9d04fca2399d2bce93edb11da5e2270881b5c6b1d756e62f7964fef46d4378",
+    "parent_state_before": "3c9d04fca2399d2bce93edb11da5e2270881b5c6b1d756e62f7964fef46d4378",
+    "protocol_fingerprint": "7f66f64f07523bca58343eeb837e6830cdb368c4916721ca84c7455825fea694",
+    "protocol_sha256": "8c03e1b41ffe70c73cc5be06c5e215365441c3c94a6e29ee1d6239abdfaf9483"
+  },
+  "metrics": {
+    "archived_regression_collision_ratio": 0.9678876174269392,
+    "archived_regression_operation_improved_fraction": 1.0,
+    "direction_active_bond_count": 0,
+    "direction_active_bond_improved_fraction": 1.0,
+    "direction_active_collision_count": 0,
+    "direction_active_collision_improved_fraction": 1.0,
+    "direction_bond_overlap_ratio": 1.0,
+    "direction_collision_ratio": 1.0,
+    "direction_mean_operation_improved_fraction": 1.0,
+    "maximum_direction_endpoint_delta_norm": 0.029155632480978966,
+    "maximum_zero_velocity_error": 0.0,
+    "short_rollout_bond_overlap_ratio": 0.9832821122866345,
+    "short_rollout_collision_ratio": 1.0014766083677378,
+    "short_rollout_maximum_endpoint_delta_norm": 0.034976061433553696,
+    "short_rollout_operation_ratio": 0.9988760325541496
+  },
+  "model_configuration": {
+    "endpoint_overlap_weight": 0.5,
+    "hard_projection_in_forward": false,
+    "maximum_operation_basis_displacement_angstrom": 0.05,
+    "maximum_overlap_basis_displacement_angstrom": 0.05,
+    "maximum_total_endpoint_displacement_angstrom": 0.05,
+    "minimum_bond_distance_angstrom": 0.6,
+    "minimum_remaining_time": 0.05,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "operation_basis": "order-invariant operation/orbit restoring residual",
+    "operation_gate_zero_initialized": true,
+    "operation_hidden_dim": 64,
+    "operation_to_overlap_gradient_path": false,
+    "overlap_basis": "shared-gate weighted endpoint and current-trajectory Reynolds-averaged overlap fields",
+    "overlap_basis_evaluated_after_operation_delta": true,
+    "overlap_gate_parameter_gradient_preserved": true,
+    "overlap_gate_zero_initialized": true,
+    "overlap_geometry_stop_gradient": true,
+    "overlap_hidden_dim": 32,
+    "parent": "frozen selected EF2-A2",
+    "parent_frozen": true,
+    "posthoc_force_field_in_forward": false,
+    "safe_operation_norm_epsilon": 1e-12,
+    "schema_version": "etflow-pg-dual-basis-residual-v3",
+    "trajectory_overlap_weight": 0.5,
+    "trajectory_to_overlap_geometry_gradient_path": false
+  },
+  "passed": false,
+  "schema_version": "etflow-ef2d3-dual-basis-engineering-v3",
+  "scope": {
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_train_used": true,
+    "iid_validation_used": false,
+    "official_base_frozen": true,
+    "parent_a2_frozen": true,
+    "posthoc_force_field_used": false,
+    "quality_claim": false,
+    "threshold_tuning": false,
+    "training_started": false
+  },
+  "short_rollout_records": [
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.03351385146379471,
+      "candidate_collision": 0.0228133387863636,
+      "candidate_mean_operation": 0.34676480293273926,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.018865415826439857,
+      "package_index": 138,
+      "parent_bond_overlap": 0.03440519794821739,
+      "parent_collision": 0.025981411337852478,
+      "parent_mean_operation": 0.34676772356033325,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.05714215710759163,
+      "candidate_collision": 0.0673220083117485,
+      "candidate_mean_operation": 1.0664238929748535,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.031019646674394608,
+      "package_index": 1341,
+      "parent_bond_overlap": 0.058006756007671356,
+      "parent_collision": 0.06819149851799011,
+      "parent_mean_operation": 1.0697779655456543,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.015325131826102734,
+      "candidate_collision": 0.059883963316679,
+      "candidate_mean_operation": 0.7812697887420654,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.017412094399333,
+      "package_index": 869,
+      "parent_bond_overlap": 0.015573715791106224,
+      "parent_collision": 0.05408155918121338,
+      "parent_mean_operation": 0.7812584042549133,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.1011088490486145,
+      "candidate_collision": 0.07633881270885468,
+      "candidate_mean_operation": 0.3013785183429718,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.01740940287709236,
+      "package_index": 2420,
+      "parent_bond_overlap": 0.10154438018798828,
+      "parent_collision": 0.07765783369541168,
+      "parent_mean_operation": 0.3014507293701172,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.0509040541946888,
+      "candidate_collision": 0.08508051931858063,
+      "candidate_mean_operation": 0.8391482830047607,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.023322338238358498,
+      "package_index": 824,
+      "parent_bond_overlap": 0.05143878981471062,
+      "parent_collision": 0.07155142724514008,
+      "parent_mean_operation": 0.8398629426956177,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.11205969750881195,
+      "candidate_collision": 0.0673864558339119,
+      "candidate_mean_operation": 1.2712630033493042,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.027071965858340263,
+      "package_index": 1281,
+      "parent_bond_overlap": 0.11287615448236465,
+      "parent_collision": 0.07003822922706604,
+      "parent_mean_operation": 1.274884581565857,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.03547362983226776,
+      "candidate_collision": 0.01822878234088421,
+      "candidate_mean_operation": 0.5713240504264832,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.01800125651061535,
+      "package_index": 173,
+      "parent_bond_overlap": 0.03708292543888092,
+      "parent_collision": 0.018646501004695892,
+      "parent_mean_operation": 0.5716388821601868,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.027665818110108376,
+      "candidate_collision": 0.06776223331689835,
+      "candidate_mean_operation": 0.6083856225013733,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.018937114626169205,
+      "package_index": 2432,
+      "parent_bond_overlap": 0.02843623422086239,
+      "parent_collision": 0.069656603038311,
+      "parent_mean_operation": 0.6085242629051208,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.08810332417488098,
+      "candidate_collision": 0.09270092099905014,
+      "candidate_mean_operation": 0.6146677136421204,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.018592659384012222,
+      "package_index": 1517,
+      "parent_bond_overlap": 0.08976498246192932,
+      "parent_collision": 0.09375345706939697,
+      "parent_mean_operation": 0.6148747801780701,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.05155321955680847,
+      "candidate_collision": 0.05291777849197388,
+      "candidate_mean_operation": 0.6708389520645142,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.034976061433553696,
+      "package_index": 1271,
+      "parent_bond_overlap": 0.05172450840473175,
+      "parent_collision": 0.05522434785962105,
+      "parent_mean_operation": 0.6725423336029053,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.02838839218020439,
+      "candidate_collision": 0.05945281311869621,
+      "candidate_mean_operation": 0.6652266979217529,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.017725225538015366,
+      "package_index": 1092,
+      "parent_bond_overlap": 0.028793759644031525,
+      "parent_collision": 0.06120002642273903,
+      "parent_mean_operation": 0.6652487516403198,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.13613352179527283,
+      "candidate_collision": 0.24867285788059235,
+      "candidate_mean_operation": 0.6828212738037109,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.018814370036125183,
+      "package_index": 1214,
+      "parent_bond_overlap": 0.1398562341928482,
+      "parent_collision": 0.25055593252182007,
+      "parent_mean_operation": 0.6829860806465149,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.06638146191835403,
+      "candidate_collision": 0.10962042957544327,
+      "candidate_mean_operation": 0.8003153800964355,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.028968358412384987,
+      "package_index": 613,
+      "parent_bond_overlap": 0.06798776239156723,
+      "parent_collision": 0.1110563725233078,
+      "parent_mean_operation": 0.8012731671333313,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.017090806737542152,
+      "candidate_collision": 0.05897053703665733,
+      "candidate_mean_operation": 1.1587626934051514,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.03360786661505699,
+      "package_index": 1284,
+      "parent_bond_overlap": 0.017510758712887764,
+      "parent_collision": 0.05708518624305725,
+      "parent_mean_operation": 1.1609477996826172,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.03767377510666847,
+      "candidate_collision": 0.047892045229673386,
+      "candidate_mean_operation": 0.7264026999473572,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.01759035512804985,
+      "package_index": 815,
+      "parent_bond_overlap": 0.0391194149851799,
+      "parent_collision": 0.0482010617852211,
+      "parent_mean_operation": 0.7267436981201172,
+      "target_pg": "C2"
+    },
+    {
+      "archived_regression_case": false,
+      "candidate_bond_overlap": 0.05658963322639465,
+      "candidate_collision": 0.038743339478969574,
+      "candidate_mean_operation": 1.0313271284103394,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.02164366841316223,
+      "package_index": 2515,
+      "parent_bond_overlap": 0.05681903287768364,
+      "parent_collision": 0.039169009774923325,
+      "parent_mean_operation": 1.0315004587173462,
+      "target_pg": "C3"
+    },
+    {
+      "archived_regression_case": true,
+      "candidate_bond_overlap": 0.06532353162765503,
+      "candidate_collision": 0.08830666542053223,
+      "candidate_mean_operation": 0.9184556603431702,
+      "finite": true,
+      "maximum_endpoint_delta_norm": 0.026070941239595413,
+      "package_index": 2235,
+      "parent_bond_overlap": 0.06615965813398361,
+      "parent_collision": 0.08818217366933823,
+      "parent_mean_operation": 0.9191832542419434,
+      "target_pg": "C2"
+    }
+  ],
+  "status": "FAIL_ETFLOW_EF2D3_V3_ENGINEERING_STOP_BRANCH",
+  "zero_records": [
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 138,
+      "target_pg": "C2",
+      "time": 0.2
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 138,
+      "target_pg": "C2",
+      "time": 0.5
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 138,
+      "target_pg": "C2",
+      "time": 0.8
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 1341,
+      "target_pg": "C3",
+      "time": 0.2
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 1341,
+      "target_pg": "C3",
+      "time": 0.5
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 1341,
+      "target_pg": "C3",
+      "time": 0.8
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 869,
+      "target_pg": "C2",
+      "time": 0.2
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 869,
+      "target_pg": "C2",
+      "time": 0.5
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 869,
+      "target_pg": "C2",
+      "time": 0.8
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 2420,
+      "target_pg": "C3",
+      "time": 0.2
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 2420,
+      "target_pg": "C3",
+      "time": 0.5
+    },
+    {
+      "maximum_endpoint_delta_norm": 0.0,
+      "maximum_velocity_difference": 0.0,
+      "package_index": 2420,
+      "target_pg": "C3",
+      "time": 0.8
+    }
+  ]
+}

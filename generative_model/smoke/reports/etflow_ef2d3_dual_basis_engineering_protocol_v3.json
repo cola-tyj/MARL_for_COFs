@@ -1,0 +1,228 @@
+{
+  "architecture_revision": {
+    "changes": [
+      "detach endpoint and trajectory coordinate inputs only while constructing analytic overlap fields",
+      "preserve gradients through both learned gates and the operation basis",
+      "predeclare diagnostic biases operation=0.10 and overlap=2.0 from v2 failure analysis"
+    ],
+    "held_fixed": [
+      "frozen official ET-Flow and selected A2 parent",
+      "zero initialization used for all trainable adapters",
+      "endpoint/trajectory overlap weights 0.5/0.5",
+      "nonbonded 0.8 A and canonical short-bond 0.6 A definitions",
+      "one shared 0.05 A total endpoint trust region",
+      "all v2 engineering thresholds and archived package 2235",
+      "IID-validation/IID-test/Core-OOD sealed and no hard projection"
+    ],
+    "parent_v2_protocol_sha256": "9b5d54f0440bcef27eedafad35e09fd6742f76f1c38eebb6fac610e62b4a1960",
+    "parent_v2_report_sha256": "e05d59857adae4c41cd6b254d67251cbb8c28b136936492374858739659ed148",
+    "scientific_architecture_changed": true,
+    "v2_formal_status_preserved": "FAIL_ETFLOW_EF2D3_V2_ENGINEERING_STOP_BRANCH"
+  },
+  "decision": {
+    "fail_action": "stop the dual-basis route without threshold changes or further use of the third fresh panel",
+    "fail_status": "FAIL_ETFLOW_EF2D3_V3_ENGINEERING_STOP_BRANCH",
+    "pass_action": "freeze collision-active paired C2/C3 training with differentiable short-rollout loss and molecule-level CVaR",
+    "pass_status": "PASS_ETFLOW_EF2D3_V3_ENGINEERING_FREEZE_TAIL_TRAINING"
+  },
+  "development_holdout": {
+    "excluded_from_future_ef2d3_training": true,
+    "iid_test_used": false,
+    "iid_validation_used": false,
+    "overlap_with_d1_d2_d3v1_or_d3v2_used_records": 0,
+    "reserved_count": 48,
+    "reserved_package_indices_by_pg": {
+      "C2": [
+        138,
+        869,
+        824,
+        173,
+        1517,
+        1092,
+        613,
+        815,
+        2035,
+        1631,
+        1084,
+        1853,
+        2049,
+        634,
+        1862,
+        453,
+        897,
+        139,
+        1028,
+        1641,
+        1087,
+        839,
+        535,
+        285
+      ],
+      "C3": [
+        1341,
+        2420,
+        1281,
+        2432,
+        1271,
+        1214,
+        1284,
+        2515,
+        1226,
+        1361,
+        1200,
+        1230,
+        1274,
+        1309,
+        1174,
+        2504,
+        1266,
+        2481,
+        1242,
+        1290,
+        1127,
+        2501,
+        1258,
+        1191
+      ]
+    },
+    "selection_seed": 2026082637
+  },
+  "engineering_gate": {
+    "archived_regression_package_indices": [
+      2235
+    ],
+    "base_seed": 202608263400,
+    "diagnostic_operation_gate_bias": 0.1,
+    "diagnostic_overlap_gate_bias": 2.0,
+    "direction_package_indices": [
+      138,
+      1341,
+      869,
+      2420,
+      824,
+      1281,
+      173,
+      2432,
+      1517,
+      1271,
+      1092,
+      1214,
+      613,
+      1284,
+      815,
+      2515
+    ],
+    "direction_time": 0.5,
+    "gradient_package_indices": [
+      824,
+      1281,
+      2235
+    ],
+    "multi_times": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "short_rollout": {
+      "start_time": 0.2,
+      "step_size": 0.05,
+      "steps": 4
+    },
+    "thresholds": {
+      "archived_regression_collision_ratio_max": 0.99,
+      "direction_active_bond_improved_fraction_min": 0.75,
+      "direction_active_collision_improved_fraction_min": 0.75,
+      "direction_bond_overlap_ratio_max": 1.0,
+      "direction_collision_ratio_max": 1.0,
+      "direction_mean_operation_improved_fraction_min": 0.9,
+      "maximum_endpoint_delta_norm_angstrom": 0.050001,
+      "short_rollout_bond_overlap_ratio_max": 1.0,
+      "short_rollout_collision_ratio_max": 1.0,
+      "short_rollout_operation_ratio_max": 1.0
+    },
+    "zero_increment_package_indices": [
+      138,
+      1341,
+      869,
+      2420
+    ]
+  },
+  "identity": {
+    "d1_protocol_sha256": "092774634330d522399dee74b9f4d8b786beae12223ae130e24a6f9a54d33124",
+    "d2_failure_report_sha256": "400319212b5a69caefdbe4e75df608ccbeb224ab618d6cb71a7935858a4a6ae8",
+    "d2_protocol_sha256": "a92e2393feac1d29f27dbd315d9afcf4fe36e243826483f05330b5b045caafbd",
+    "d3_v1_failure_report_sha256": "2c8906cc811fb877b1ca20cf7b520c7fce444f2a675b87cb2258a6a32edd7fc0",
+    "d3_v1_protocol_sha256": "5fb8291bbbbbd5d82ecaa82b96ca23c3a6c6e4316ac3b4dc76acda6940b80cc3",
+    "d3_v2_failure_report_sha256": "e05d59857adae4c41cd6b254d67251cbb8c28b136936492374858739659ed148",
+    "d3_v2_protocol_sha256": "9b5d54f0440bcef27eedafad35e09fd6742f76f1c38eebb6fac610e62b4a1960",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "official_checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "official_model_name": "drugs-o3",
+    "parent_a2_checkpoint": "generative_model/runs/etflow_ef2a2_endpoint_interleaved_0256/checkpoints/step-000256.pt",
+    "parent_a2_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "source_sha256": {
+      "generative_model/models/etflow_pg_dual_basis_v1.py": "2258a9fee69e89c173e294d553d9aec70f909b0001f19ae17c9a5fa3c7208ba1",
+      "generative_model/models/etflow_pg_dual_basis_v2.py": "6924934a3318c1f92df1f6af9b9bd801c34e4c6f1cc1fd1455677eebc093fb5b",
+      "generative_model/models/etflow_pg_dual_basis_v3.py": "e1a10dbf371eb64bfc84fb2505139c6a737a242cc2ae6c70cbea7a187261e71f",
+      "generative_model/smoke/audit_etflow_ef2d3_dual_basis_engineering.py": "7dd0dedf4a8cb86a2934e7d8e8c131e2d1de400513afc84e71894e32e1413f08",
+      "generative_model/smoke/audit_etflow_ef2d3_dual_basis_engineering_v3.py": "83654503126ceae2a9d55303510786df655734e775fff4444dd91cecb6b24b0a",
+      "generative_model/smoke/build_etflow_ef2d3_dual_basis_engineering_protocol_v3.py": "ff5914620caca7ed6eae2663f72bd4ead445fc48d3cc72e33851a37669d17728",
+      "generative_model/tests/test_etflow_pg_dual_basis_v3.py": "25529c86546b3937f766882b486b75516892cf05fa9270f081a0e6772d5bb1f0"
+    }
+  },
+  "loss": {
+    "bond_length_weight": 0.25,
+    "bond_overlap_weight": 0.5,
+    "flow_matching_weight": 1.0,
+    "future_training_tail_objective": "molecule-level collision-active CVaR; not worst-operation",
+    "mean_operation_weight": 0.25,
+    "minimum_bond_distance_angstrom": 0.6,
+    "nonbonded_collision_weight": 0.5,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "orbit_balanced_weight": 0.5,
+    "worst_operation_weight": 0.0
+  },
+  "model": {
+    "endpoint_overlap_weight": 0.5,
+    "hard_projection_in_forward": false,
+    "maximum_operation_basis_displacement_angstrom": 0.05,
+    "maximum_overlap_basis_displacement_angstrom": 0.05,
+    "maximum_total_endpoint_displacement_angstrom": 0.05,
+    "minimum_bond_distance_angstrom": 0.6,
+    "minimum_remaining_time": 0.05,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "operation_hidden_dim": 64,
+    "operation_to_overlap_gradient_path": false,
+    "overlap_basis_evaluated_after_operation_delta": true,
+    "overlap_basis_evaluated_at": [
+      "preliminary operation-corrected endpoint",
+      "current trajectory coordinates"
+    ],
+    "overlap_gate_parameter_gradient_preserved": true,
+    "overlap_geometry_stop_gradient": true,
+    "overlap_hidden_dim": 32,
+    "parent": "frozen selected EF2-A2 step-256 adapter",
+    "parent_frozen": true,
+    "safe_norm_epsilon": 1e-12,
+    "trajectory_overlap_weight": 0.5
+  },
+  "protocol_fingerprint": "7f66f64f07523bca58343eeb837e6830cdb368c4916721ca84c7455825fea694",
+  "purpose": "Test predeclared cross-basis stop-gradient isolation and a bounded overlap-dominant diagnostic operating point on a third disjoint IID-train holdout without changing any v2 threshold.",
+  "route": "ET-Flow/EF2-D3-v3",
+  "schema_version": "etflow-ef2d3-dual-basis-engineering-protocol-v3",
+  "scope": {
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_train_used": true,
+    "iid_validation_used": false,
+    "official_base_frozen": true,
+    "parent_a2_frozen": true,
+    "posthoc_force_field_used": false,
+    "quality_claim": false,
+    "threshold_tuning": false,
+    "training_started": false
+  },
+  "status": "FROZEN_BEFORE_DUAL_BASIS_V3_ENGINEERING_GATE"
+}

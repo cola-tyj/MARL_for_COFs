@@ -1,0 +1,92 @@
+{"completed": 1, "target": 2232, "package_index": 0, "status": "SUCCESS"}
+{"completed": 100, "target": 2232, "package_index": 116, "status": "SUCCESS"}
+{"completed": 200, "target": 2232, "package_index": 229, "status": "SUCCESS"}
+{"completed": 300, "target": 2232, "package_index": 346, "status": "SUCCESS"}
+{"completed": 400, "target": 2232, "package_index": 452, "status": "SUCCESS"}
+{"completed": 500, "target": 2232, "package_index": 559, "status": "SUCCESS"}
+{"completed": 600, "target": 2232, "package_index": 670, "status": "SUCCESS"}
+{"completed": 700, "target": 2232, "package_index": 775, "status": "SUCCESS"}
+{"completed": 800, "target": 2232, "package_index": 897, "status": "SUCCESS"}
+{"completed": 900, "target": 2232, "package_index": 1009, "status": "SUCCESS"}
+{"completed": 1000, "target": 2232, "package_index": 1144, "status": "SUCCESS"}
+{"completed": 1100, "target": 2232, "package_index": 1254, "status": "SUCCESS"}
+{"completed": 1200, "target": 2232, "package_index": 1366, "status": "SUCCESS"}
+{"completed": 1300, "target": 2232, "package_index": 1485, "status": "SUCCESS"}
+{"completed": 1400, "target": 2232, "package_index": 1594, "status": "SUCCESS"}
+{"completed": 1500, "target": 2232, "package_index": 1710, "status": "SUCCESS"}
+{"completed": 1600, "target": 2232, "package_index": 1823, "status": "SUCCESS"}
+{"completed": 1700, "target": 2232, "package_index": 1930, "status": "SUCCESS"}
+{"completed": 1800, "target": 2232, "package_index": 2044, "status": "SUCCESS"}
+{"completed": 1900, "target": 2232, "package_index": 2152, "status": "SUCCESS"}
+{"completed": 2000, "target": 2232, "package_index": 2264, "status": "SUCCESS"}
+{"completed": 2100, "target": 2232, "package_index": 2376, "status": "SUCCESS"}
+{"completed": 2200, "target": 2232, "package_index": 2489, "status": "SUCCESS"}
+{
+  "checks": {
+    "all_panel_records_present": true,
+    "graph_only_arrays_exact": true,
+    "minimum_moved_atom_fraction": true,
+    "recovery_success_fraction": true,
+    "sn_recovery_fraction": true,
+    "validation_success_fraction": true,
+    "wl_upper_bound_reached_fraction": true
+  },
+  "metrics": {
+    "by_split_and_target_pg": {
+      "train:C2": {
+        "success": 1615,
+        "total": 1615
+      },
+      "train:C3": {
+        "success": 369,
+        "total": 369
+      },
+      "val:C2": {
+        "success": 202,
+        "total": 202
+      },
+      "val:C3": {
+        "success": 46,
+        "total": 46
+      }
+    },
+    "failure_counts": {},
+    "maximum_search_match_yields": 9223,
+    "mean_moved_atom_fraction": 0.9954319244335877,
+    "median_search_match_yields": 1.0,
+    "minimum_moved_atom_fraction": 0.55,
+    "panel_molecule_count": 2232,
+    "recovery_success_count": 2232,
+    "recovery_success_fraction": 1.0,
+    "resonance_normalized_molecule_count": 2,
+    "sn_recovery_count": 2,
+    "sn_total": 2,
+    "wl_upper_bound_reached_fraction": 1.0
+  },
+  "passed": true,
+  "status": "PASS_GRAPH_ACTION_E3A_RECOVERY_AWAIT_INDEPENDENT_AUDIT"
+}
+report=/home/tianyajun/MARL_for_COFs/generative_model/smoke/reports/graph_action_e3a_recovery_v1.json
+	Command being timed: "/home/tianyajun/anaconda3/envs/env_cof/bin/python -m generative_model.smoke.run_graph_action_e3_recovery"
+	User time (seconds): 74.04
+	System time (seconds): 0.17
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:14.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 157392
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42078
+	Voluntary context switches: 1
+	Involuntary context switches: 184
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 5256
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

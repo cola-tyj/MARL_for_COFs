@@ -1,0 +1,129 @@
+{
+  "candidate_selection": "minimum final UFF+repulsion objective among strict geometry-passing optimized combinations, then preselection rank",
+  "d6h_action_selection": {
+    "combination_count": 256,
+    "maximum_actions": 64,
+    "maximum_search_matches": 100000,
+    "optimize_top_combinations": 8,
+    "projection_ranking": [
+      "pair_count_below_0.6 ascending",
+      "pair_count_below_0.8 ascending",
+      "minimum_pair_distance descending",
+      "projection_rmsd ascending",
+      "raw_candidate_id ascending",
+      "action_candidate_id ascending"
+    ],
+    "reference_xyz_used_for_ranking": false,
+    "stored_action_used_for_ranking": false
+  },
+  "decision": {
+    "fail_action": "preserve v4 and diagnose without changing v3 evidence",
+    "next_gate": "formal package-53 S4 geometry plus independent point-group audit",
+    "pass_action": "freeze a new all-52 rare-target batch protocol"
+  },
+  "etflow": {
+    "candidate_count": 4,
+    "model_name": "drugs-o3",
+    "n_timesteps": 50,
+    "role": "learned initial-conformer prior only",
+    "sampler_type": "ODE"
+  },
+  "gate_thresholds": {
+    "acceptable_gradient_norm_max": 1.0,
+    "maximum_operation_error_angstrom": 1e-05,
+    "minimum_pair_distance_angstrom": 0.6
+  },
+  "identity": {
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "parent_v3_protocol_sha256": "367f336f3a11101d025f4cc177f44b9177df79af6058b644acd183fbe1692cf8",
+    "rare_target_v1_geometry_sha256": "45257ec814cd6640300a7ab326e5eca0de135db904fcbde87b82ff53cc0745b4",
+    "rare_target_v1_point_group_sha256": "b1082f9e42b4ca7535595ecacfe2a2ce9ac30326ed8bfd662acc95ac47a36b2a",
+    "s4_package53_diagnosis_sha256": "59aa7814efaf585a108bff2c96c3bc812e62360c79c5d1d75cb974136684dba1",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/inference/audit_etflow_e3f02_point_group.py": "02af21f6703b9bef901be545a9ffc7c93005fb187411f1f5c920da41f17eccbb",
+      "generative_model/inference/build_etflow_e3f02_protocol_v3.py": "d323ff5431db4596fbb0bc0b54177f26495b97a98b0786f8a86cfff6cbbb0031",
+      "generative_model/inference/build_etflow_e3f02_protocol_v4.py": "1cf6e4bba9873dfee7fbc1df31486a2173b24c21e5e6224cc2085dbe45b625a8",
+      "generative_model/inference/generate_etflow_symmetric_xyz.py": "8c445c441ec1cf807941a3387dbca9265b079038a0c1ac1ccb92a2a7347b71a1",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v2.py": "b049f4790f0aa66ba1ce85cf026c2bea71db0369d4e0c3f11faefe44083fbcbd",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v3.py": "bc125b39b7a1db7f4b3f7dd5230ce9cd8ae4cfb4004cda588adb7fadedb22c89",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v4.py": "ce61f53b04780d78bb281cd5f3e7184a92965019a583ac388fbf48f7ef8eb627",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c",
+      "generative_model/symmetry/graph_action.py": "9517d125bbdb897d5ef6d8e4c7ebf97051131a8946e473b670ccb21fb49864fe",
+      "generative_model/symmetry/graph_action_candidates.py": "6e4910cdcedaf62d0415b4ede665295b8c674cbae6fde19b5348fed1398223da",
+      "generative_model/symmetry/graph_action_candidates_v2.py": "53c3261107070c8e94b9ecb3d610a690a53dd398d0831b9fc9661a8c21159a69",
+      "generative_model/symmetry/graph_action_extended.py": "bf314e8c8da9b9ac31a7d9475421d035682e94b1c93d695423167c7bfdf97fc9",
+      "generative_model/tests/test_etflow_e3f02_inference_v3.py": "4784c857fa4b34c31fbb9d716299182340ae70d6d26728c886c04a2d65f625db",
+      "generative_model/tests/test_etflow_e3f02_inference_v4.py": "9b8f36e432e27c83a88edf74983fe9a88b5c9addc11d773b7509e7e6b28bce51",
+      "generative_model/tests/test_graph_action_candidates_v2.py": "974addde279ed0a8970dcaf1ccec1ca8bf60f5a576ccc689606236ff4bbaafc1"
+    },
+    "symmetry_protocol": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "optimizer": {
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 500,
+    "method": "L-BFGS-B",
+    "orbit_subspace_constrained": true,
+    "primary_force_field": "UFF",
+    "repulsion_cutoff_angstrom": 0.8,
+    "repulsion_force_constant_kcal_mol_angstrom2": 2000.0
+  },
+  "prerequisite_evidence": {
+    "extended_action_report_sha256": "efdd6e3e35bb73a294f23db2fa855b10e32a7837b9e5611dbfd9f082a8cf1700",
+    "multi_action_direction_report_sha256": "44329ca0fe5d1c3116a014d577db15f93f907916d1ba4359cdffa74870414f77",
+    "s4_point_group_report_sha256": "93c08c7118044be6d132464d16103e2dec2161d8202413e99f9213f8c4ab616c",
+    "single_action_d6h_failure_sha256": "f5c4f62299bd6c9e514ffaad50486c5cc6dfee9baa1be471c8546af3071d5185",
+    "v2_protocol_sha256": "21f17573cf85a25d2e8dfd0838451a4aa3124e2454995beba57bc29ecf157d04"
+  },
+  "projection": {
+    "hard_symmetry_projection": true,
+    "match_radius_of_gyration": true,
+    "method": "24-orientation search + one Reynolds projection"
+  },
+  "protocol_fingerprint": "17fd7a1e94cef3595f562e7fa483f2ca84fb1bec769f1cc9f41fec389098c42a",
+  "purpose": "Preserve v3 D6h behavior and add reference-free S4 action/raw conformer matching after the all-canonical v1 S4 failure.",
+  "rare_action_selection": {
+    "D6h": {
+      "maximum_actions": 64,
+      "maximum_search_matches": 100000,
+      "optimize_top_combinations": 8
+    },
+    "S4": {
+      "maximum_actions": 64,
+      "maximum_search_matches": 100000,
+      "optimize_top_combinations": 8
+    }
+  },
+  "route": "ET-Flow/E3/F0.2-v4-S4-D6h-multi-action",
+  "schema_version": "etflow-e3f02-inference-protocol-v4",
+  "scope": {
+    "etflow_used_as_initial_conformer_prior": true,
+    "etkdg_used": false,
+    "hard_symmetry_projection_used": true,
+    "known_canonical_graph": true,
+    "orbit_constrained_force_field_used": true,
+    "raw_learned_target_pg_claim": false,
+    "reference_xyz_used": false,
+    "requested_target_pg": true,
+    "stored_symmetry_action_used": false
+  },
+  "status": "FROZEN_S4_D6H_MULTI_ACTION_BEFORE_FORMAL_S4_PILOT",
+  "supported_target_pgs": [
+    "C2",
+    "C3",
+    "S4",
+    "D6h"
+  ]
+}

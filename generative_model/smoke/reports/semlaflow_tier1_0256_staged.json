@@ -1,0 +1,292 @@
+{
+  "artifacts": {
+    "checkpoint_sweep_report_sha256": "792deeb0531aabb66d9681fa212844c697eae7d78cf05dca7e37ce06c64b6d12",
+    "categorical_noise_0_multiseed_report_sha256": "3e8483c1b0885256b1fb7354cd83ab17c618c3a56bb36f8f2baada429ef6c1b8",
+    "ema99_multiseed_report_sha256": "d65a53e561c3fb7a450ca3fa924d16d7094f2f72ae2e72b10667c8a0324d3bb5",
+    "ema99_training_report_sha256": "05571e05bf040d44117317fac94a58bf4caf9337da409d35c223a6be8462499d",
+    "guarded_valence_prune_v2_multiseed_report_sha256": "ceb077d13ecda561657255bd2d4a10aa745874a8372529bc04c4c7672870c43f",
+    "bond_weight_2_training_report_sha256": "cbeb4a75b141fd1654bf701aac7d3fad170eefa284ab8138f457cbf6add78316",
+    "bond_weight_2_multiseed_report_sha256": "4a1abf5fdfd5a09bccf394b11a6003bde2ec21d09b017ef23d9fd7112eb0dfba",
+    "probability_audit_report_sha256": "4b1ab366afbeaacefd8bc71fb490b25ff2c3efdfb8b6cb6bc993d5d95c7f369c",
+    "final_probabilities_npz_sha256": "3cf60de0375047433401658d10be5f6baa7df72d9ad52982824d2e3354235660",
+    "present_bond_aux_0.1_training_report_sha256": "dbd6addd7ab44b0a0d035e7c07c237863c4089ae370e836b2ad01817e321b5c3",
+    "present_bond_aux_0.1_multiseed_report_sha256": "0249ca3bac38fb658ee1c825ef78362701cf5254fabe489fb20dbf8b36efb587",
+    "incident_bond_profile_0.1_training_report_sha256": "fa10635cf3056e129e228e674b6656cafff936be89b7f71e801404ba4e930109",
+    "midi_compatibility_report_sha256": "40e6a5a4d42a23156732ca6d254c5533bdfb6169164c2be2d7afa59819330ce2",
+    "midi_random_forward_cpu_report_sha256": "1635335c14b8cc1413c654adf136583b39366a376daf7ac32b0d77f251e2610c",
+    "midi_random_forward_cuda_report_sha256": "780a265a9ce70fc847c8a025eba9c4e4cd6269e7e5c96d795c8421d89a147d2e",
+    "reconstruction_sweep_report_sha256": "c78d94332119ed1004136ceff5d6f97b3e790ca822092beb5a4da189da94dc4d",
+    "training_report_sha256": "dc2a9372e1fd9b360f6c85c761825f28465aa1a4d00e78b8324e2e88ea1bf178"
+  },
+  "configuration": {
+    "batch_size": 1,
+    "checkpoint_steps": [
+      64,
+      128,
+      192,
+      256
+    ],
+    "ema_decay": 0.999,
+    "integration_steps": 100,
+    "learning_rate": {
+      "initial": 0.0003,
+      "step_128_and_after": 0.0001
+    },
+    "molecule_count": 1,
+    "package_index": 1600,
+    "sampling_seeds": [
+      20260812,
+      20260813,
+      20260814,
+      20260815,
+      20260816
+    ],
+    "training_seed": 20260812
+  },
+  "decision": {
+    "advance_to_tier4": false,
+    "reason": "Raw sampling proves memorization at steps 128 and 256, but validity and exact recovery are unstable across seeds. Official EMA remains chemically safer but does not track the learned molecule. EMA decay 0.99, categorical noise 0, global bond loss weight 2, target-present auxiliary CE 0.1, and incident bond profile 0.1 are rejected. A sanitize-guarded minimal valence prune diagnoses that one of three invalid raw samples is repairable by three bond edits, but repaired validity is not counted as native model validity. SemlaFlow Gate 2 is closed and the next candidate is MiDi.",
+    "selected_checkpoint_for_diagnosis": 128,
+    "tier1_status": "FAIL_GATE2_SWITCH_TO_MIDI"
+  },
+  "bond_loss_weight_ablation_at_step_128": {
+    "bond_weight_1_raw": {
+      "exact_training_smiles": 2,
+      "sanitize_valid": 2,
+      "total": 5
+    },
+    "bond_weight_2_ema": {
+      "exact_training_smiles": 0,
+      "sanitize_valid": 5,
+      "total": 5
+    },
+    "bond_weight_2_raw": {
+      "exact_training_smiles": 0,
+      "sanitize_failure_counts": {
+        "SANITIZE_KEKULIZE": 1,
+        "SANITIZE_PROPERTIES": 4
+      },
+      "sanitize_valid": 0,
+      "total": 5
+    },
+    "result": "Reject global bond loss weight 2; it worsens fixed present-bond accuracy and native raw sampling."
+  },
+  "categorical_noise_ablation_at_step_128": {
+    "noise_0_raw": {
+      "exact_training_smiles": 0,
+      "sanitize_failure_counts": {
+        "SANITIZE_KEKULIZE": 3,
+        "SANITIZE_PROPERTIES": 2
+      },
+      "sanitize_valid": 0,
+      "total": 5
+    },
+    "noise_1_raw": {
+      "exact_training_smiles": 2,
+      "sanitize_failure_counts": {
+        "SANITIZE_KEKULIZE": 2,
+        "SANITIZE_PROPERTIES": 1
+      },
+      "sanitize_valid": 2,
+      "total": 5
+    },
+    "result": "Keep the official categorical noise level 1; zero noise worsens validity and exact recovery."
+  },
+  "ema_decay_ablation_at_step_128": {
+    "ema_0.99": {
+      "connected": 2,
+      "exact_training_smiles": 0,
+      "nearest_train_tanimoto_max": 0.41304347826086957,
+      "sanitize_valid": 2,
+      "total": 5
+    },
+    "ema_0.999": {
+      "connected": 4,
+      "exact_training_smiles": 0,
+      "nearest_train_tanimoto_max": 0.20967741935483872,
+      "sanitize_valid": 4,
+      "total": 5
+    },
+    "result": "EMA decay 0.99 is rejected for the next tier because it loses chemical validity and still has no exact recovery."
+  },
+  "official_source_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283",
+  "next_candidate": {
+    "id": "midi",
+    "official_source_commit": "775b731c38967a1e49615b2ad70ac6b5db24909a",
+    "pretrained_compatible_molecules": 2474,
+    "excluded_radical_molecules": 56,
+    "excluded_sn_molecules": 2,
+    "environment_status": "READY",
+    "official_import_gate": "PASS",
+    "canonical_pyg_roundtrip_gate": "PASS",
+    "cpu_cuda_forward_backward_gate": "PASS",
+    "next_gate": "freeze MiDi 1/4/32 overfit data and training configuration"
+  },
+  "probability_audit_at_step_128_raw": {
+    "alignment": "oracle target-node permutation; multi-start Hungarian plus deterministic pair swaps",
+    "atom_top1": 0.975,
+    "charge_top1": 1.0,
+    "all_bond_pair_top1": 0.9883064516129032,
+    "present_bond_top1": 0.9176470588235294,
+    "aromatic_bond_top1": 0.8714285714285714,
+    "wrong_present_bonds": 14,
+    "wrong_present_target_top2_rate": 0.7857142857142857,
+    "wrong_present_target_probability_median": 1.5297081858989259e-06,
+    "wrong_present_argmax_target_margin_median": 0.9999944368963156,
+    "wrong_present_target_probability_at_least_0.05_rate": 0.0,
+    "selected_next_route": "target-present class-balanced auxiliary CE before structured decoding"
+  },
+  "structured_bond_auxiliary_ablations": {
+    "target_present_ce_0.1": {
+      "fixed_present_bond_accuracy_before": 0.7941176470588235,
+      "fixed_present_bond_accuracy_after": 0.7941176470588235,
+      "fixed_present_bond_ce_before": 0.7628004550933838,
+      "fixed_present_bond_ce_after": 1.1863216161727905,
+      "raw_multiseed_sanitize_valid": 0,
+      "raw_multiseed_exact_training_smiles": 0,
+      "ema_multiseed_sanitize_valid": 5,
+      "total_per_weight": 5,
+      "result": "REJECT"
+    },
+    "incident_bond_profile_0.1": {
+      "fixed_present_bond_accuracy_before": 0.7941176470588235,
+      "fixed_present_bond_accuracy_after": 0.35294117647058826,
+      "fixed_atom_accuracy_before": 0.84375,
+      "fixed_atom_accuracy_after": 0.78125,
+      "fixed_profile_loss_before": 0.1027301549911499,
+      "fixed_profile_loss_after": 0.1839337795972824,
+      "sampling_skipped": "fixed reconstruction regression triggered early rejection",
+      "result": "REJECT"
+    },
+    "decision": "Do not continue local bond-loss weight sweeps; close SemlaFlow Gate 2 and switch candidate to MiDi."
+  },
+  "reconstruction": {
+    "0": {
+      "atom_accuracy": 0.84375,
+      "categorical_exact_rate": 0.0,
+      "fixed_total_loss": 0.2814320817706175,
+      "molecule_rmsd_scaled": 0.5832453966140747,
+      "present_bond_accuracy": 0.7941176470588235
+    },
+    "64": {
+      "atom_accuracy": 1.0,
+      "categorical_exact_rate": 0.0,
+      "fixed_total_loss": 0.06867921603043214,
+      "molecule_rmsd_scaled": 0.21660101413726807,
+      "present_bond_accuracy": 0.8529411764705882
+    },
+    "128": {
+      "atom_accuracy": 0.90625,
+      "categorical_exact_rate": 0.0,
+      "fixed_total_loss": 0.14733285767579218,
+      "molecule_rmsd_scaled": 0.274028480052948,
+      "present_bond_accuracy": 0.7941176470588235
+    },
+    "192": {
+      "atom_accuracy": 0.9375,
+      "categorical_exact_rate": 0.0,
+      "fixed_total_loss": 0.11847292994366398,
+      "molecule_rmsd_scaled": 0.27548500895500183,
+      "present_bond_accuracy": 0.8529411764705882
+    },
+    "256": {
+      "atom_accuracy": 0.9375,
+      "categorical_exact_rate": 0.0,
+      "fixed_total_loss": 0.08939606136365796,
+      "molecule_rmsd_scaled": 0.1794680655002594,
+      "present_bond_accuracy": 0.9411764705882353
+    }
+  },
+  "sampling": {
+    "128": {
+      "ema": {
+        "connected": 4,
+        "exact_training_smiles": 0,
+        "nearest_train_tanimoto_max": 0.20967741935483872,
+        "sanitize_valid": 4,
+        "total": 5
+      },
+      "raw": {
+        "connected": 2,
+        "exact_training_smiles": 2,
+        "nearest_train_tanimoto_max": 1.0,
+        "sanitize_valid": 2,
+        "total": 5
+      }
+    },
+    "192": {
+      "ema": {
+        "connected": 5,
+        "exact_training_smiles": 0,
+        "nearest_train_tanimoto_max": 0.16981132075471697,
+        "sanitize_valid": 5,
+        "total": 5
+      },
+      "raw": {
+        "connected": 0,
+        "exact_training_smiles": 0,
+        "nearest_train_tanimoto_max": 0.4074074074074074,
+        "sanitize_valid": 2,
+        "total": 5
+      }
+    },
+    "256": {
+      "ema": {
+        "connected": 4,
+        "exact_training_smiles": 0,
+        "nearest_train_tanimoto_max": 0.22807017543859648,
+        "sanitize_valid": 4,
+        "total": 5
+      },
+      "raw": {
+        "connected": 1,
+        "exact_training_smiles": 1,
+        "nearest_train_tanimoto_max": 1.0,
+        "sanitize_valid": 1,
+        "total": 5
+      }
+    },
+    "64": {
+      "ema": {
+        "connected": 4,
+        "exact_training_smiles": 0,
+        "nearest_train_tanimoto_max": 0.11666666666666667,
+        "sanitize_valid": 4,
+        "total": 5
+      },
+      "raw": {
+        "connected": 0,
+        "exact_training_smiles": 0,
+        "nearest_train_tanimoto_max": null,
+        "sanitize_valid": 0,
+        "total": 5
+      }
+    },
+    "all_finite_coordinates": true,
+    "all_representation_audits_zero": true
+  },
+  "strict_sanitize_failure_analysis": {
+    "ema_across_20_stage_samples": {
+      "SANITIZE_KEKULIZE": 3,
+      "valid": 17
+    },
+    "raw_across_20_stage_samples": {
+      "SANITIZE_KEKULIZE": 4,
+      "SANITIZE_PROPERTIES": 11,
+      "valid": 5
+    },
+    "sanitize_guarded_valence_prune_v2": {
+      "claim_scope": "diagnostic post-processing only; not native model validity",
+      "exact_training_smiles": 2,
+      "postdecode_connected_valid": 3,
+      "postdecode_sanitize_valid": 3,
+      "predecode_connected_valid": 2,
+      "predecode_sanitize_valid": 2,
+      "total": 5,
+      "changed_molecules": 1,
+      "bond_pairs_changed": 3
+    }
+  },
+  "schema_version": "1.0",
+  "status": "PASS"
+}

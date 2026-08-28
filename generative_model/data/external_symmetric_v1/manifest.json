@@ -1,0 +1,14 @@
+{
+  "canonical_cof_v2_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+  "molecule_count": 12,
+  "reference_coordinates": "deterministic ETKDGv3+UFF, evaluation-only; never used by generation or candidate selection",
+  "schema_version": "external-symmetric-graph-package-v1",
+  "source_candidate_pool_sha256": "2df23b5eb04dd554e6f330713702335af1a9793c501b0e57ebc72ed566779d52",
+  "strict_nonoverlap": {
+    "bemis_murcko_scaffold": true,
+    "canonical_smiles": true,
+    "exact_morgan_fingerprint": true,
+    "morgan_bits": 2048,
+    "morgan_radius": 2
+  }
+}

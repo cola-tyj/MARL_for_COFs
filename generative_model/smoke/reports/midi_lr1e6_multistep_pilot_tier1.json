@@ -1,0 +1,116 @@
+{
+  "checkpoint_results": [
+    {
+      "checkpoint_sha256": "119adbe9f7a717427265946b70b41beb7c5d90cd0057ac8d9ce61a1160c8c75b",
+      "collisions": 0,
+      "connected": 4,
+      "evaluation_fingerprint": "62fca24e5cd19d348fe7691d0cb38cb64413ed7cf2c72ec7ee0961e2271eb4b4",
+      "evaluation_report_sha256": "6b19a585351ae8d8d66322aafbf78489643579a7f59c22618d05bae2c5c0e620",
+      "exact_train_smiles": 0,
+      "meets_sampling_thresholds": true,
+      "minimum_pair_distance_mean_angstrom": 0.9849214260781199,
+      "parameter_update": {
+        "changed_fraction": 0.7553597483240485,
+        "changed_parameter_count": 18182229,
+        "delta_l2": 0.023577621002240083,
+        "floating_parameter_count": 24070953,
+        "maximum_absolute_delta": 1.5062862075865269e-05,
+        "relative_l2": 8.000352026091291e-05
+      },
+      "sampling_report_sha256": "ddb62032a187de227895f07490362ba6ff2259c0bb0106c828942a186c67e513",
+      "sanitize_failure_counts": {
+        "SANITIZE_KEKULIZE": 1
+      },
+      "sanitize_valid": 4,
+      "step": 16
+    },
+    {
+      "checkpoint_sha256": "62b43c45b35a927d95dc066ab42a5d1953fb94f69e547ff6142946795d6daa69",
+      "collisions": 0,
+      "connected": 4,
+      "evaluation_fingerprint": "491d91a5be4c04fd2e128e4ebc29791a96069d637f65945ed933d9b8096fd1e4",
+      "evaluation_report_sha256": "2da6e3cc6c4b0ba3a65e18aad5e306bbcc43a1a96330e73e2b00d41755f10786",
+      "exact_train_smiles": 0,
+      "meets_sampling_thresholds": true,
+      "minimum_pair_distance_mean_angstrom": 0.973573039009042,
+      "parameter_update": {
+        "changed_fraction": 0.7693981206311191,
+        "changed_parameter_count": 18520146,
+        "delta_l2": 0.040035188597883686,
+        "floating_parameter_count": 24070953,
+        "maximum_absolute_delta": 3.0183233320713043e-05,
+        "relative_l2": 0.00013584729442533443
+      },
+      "sampling_report_sha256": "270fcff4462d3247a270c8c96e3d79af123177ca2203ecfabfce71f7d56efdf5",
+      "sanitize_failure_counts": {},
+      "sanitize_valid": 5,
+      "step": 32
+    },
+    {
+      "checkpoint_sha256": "196f82d48145c8136ad92f9c57cf1daa41690ced9c0d246925497e1b35126fe2",
+      "collisions": 0,
+      "connected": 5,
+      "evaluation_fingerprint": "ccd263410bfdfccdf528d3aad0c4278f5ec7b2da42a6d39b1de0d34ac72f50df",
+      "evaluation_report_sha256": "34404b6d721e14cec3d197befa77525061e900453fa9c507b1420afd8cc1f0e8",
+      "exact_train_smiles": 0,
+      "meets_sampling_thresholds": true,
+      "minimum_pair_distance_mean_angstrom": 1.01927938623994,
+      "parameter_update": {
+        "changed_fraction": 0.7828238873633295,
+        "changed_parameter_count": 18843317,
+        "delta_l2": 0.06852685122147294,
+        "floating_parameter_count": 24070953,
+        "maximum_absolute_delta": 5.7734549045562744e-05,
+        "relative_l2": 0.00023252512751786107
+      },
+      "sampling_report_sha256": "545c5b6709c31a26c4c5e2a25db43e6fd7b57f387a3cdcee29222d9cca98ba49",
+      "sanitize_failure_counts": {},
+      "sanitize_valid": 5,
+      "step": 64
+    }
+  ],
+  "decision": {
+    "interpretation": "native generation is preserved through 64 low-lr steps; the highly variable single-draw diffusion training loss does not yet demonstrate a reliable optimization trend",
+    "next_action": "before more training, implement a deterministic fixed-noise, fixed-timestep validation-loss audit across official, step-1, step-16, step-32, and step-64 weights",
+    "observed": "all three checkpoint sampling gates pass without collisions, but the pre-frozen stochastic training-loss window condition fails",
+    "prohibited_action": "do not advance to tier-4, full-dataset fine-tuning, or PG conditioning"
+  },
+  "gate": {
+    "advance_to_tier4": false,
+    "checks": {
+      "all_checkpoint_sampling_conditions": true,
+      "loss_all_finite": true,
+      "loss_window_condition": false,
+      "training_completed": true
+    },
+    "passed": false,
+    "sampling_preserved_through_step64": true
+  },
+  "protocol": {
+    "criteria": {
+      "pass_only_if_all": {
+        "all_checkpoint_collision_count_max_of_5": 1,
+        "all_checkpoint_connected_min_of_5": 3,
+        "all_checkpoint_sanitize_valid_min_of_5": 3,
+        "completed_training_steps": 64,
+        "last_loss_window_not_greater_than_first_loss_window": true,
+        "loss_all_finite": true
+      },
+      "sampling_thresholds_must_hold_at_every_checkpoint": true
+    },
+    "path": "generative_model/configs/midi/cof_transfer_lr1e6_multistep_pilot_v1.json",
+    "sha256": "5fa566cabda265857da232a2da1c4aaeb7cf47cf2c26dbc284c7602cb686f25c"
+  },
+  "schema_version": "1.0",
+  "status": "FAIL_LR1E6_MULTISTEP_PILOT_LOSS_ONLY",
+  "training": {
+    "all_finite": true,
+    "first_window_mean": 7.568477990280371,
+    "last_over_first_window_ratio": 1.6335262977252325,
+    "last_window_mean": 12.363307830877602,
+    "loss_window_condition": false,
+    "losses_sha256": "bccb27fe350ec8b64f51491760ececdf939d92dd4155b125a091522c63ba8626",
+    "report_sha256": "49135690e9f767ae89b2f6a5427ff13f1d7d9f46d8bbe3d8aa12258f56edd374",
+    "steps": 64
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "decision": {
+    "fail_action": "stop overlap branch without threshold/checkpoint tuning or IID-test",
+    "fail_status": "FAIL_ETFLOW_EF2C3_RAW_GEOMETRY_STOP_OVERLAP_BRANCH",
+    "pass_action": "run independent env_cof point-group audit; keep IID-test sealed",
+    "pass_status": "PASS_ETFLOW_EF2C3_RAW_GEOMETRY_AWAIT_POINT_GROUP_AUDIT"
+  },
+  "gate_thresholds": {
+    "bond_length_mae_to_reference_angstrom_max": 0.15,
+    "candidate_all_pair_collision_free_fraction_min": 0.9,
+    "candidate_bond_quality_fraction_min": 0.9,
+    "candidate_collision_free_gain_over_parent_min": 0.05,
+    "mean_operation_rms_ratio_to_parent_max": 1.25,
+    "mean_overlap_loss_ratio_to_parent_max": 0.5,
+    "parent_reproduction_max_abs_error_angstrom": 0.0001
+  },
+  "identity": {
+    "a2_selected_checkpoint": "generative_model/runs/etflow_ef2a2_endpoint_interleaved_0256/checkpoints/step-000256.pt",
+    "a2_selected_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "corrected_training_result_sha256": "4809f3a8209be25b4415544221a56407c121dd3c8a96061060d72598ad5053c9",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "ef2b_parent_coordinates_sha256": "e579589c8f6669f7e466683c65eb0174c4af8d6d753555e2b36ffe059425b94b",
+    "ef2b_protocol_sha256": "6572184cb1ed0192611eceee1a421eafd91d096e0f1c1da956fc4a00c9d33b2f",
+    "official_checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "official_model_name": "drugs-o3",
+    "overlap_checkpoint": "generative_model/runs/etflow_ef2c2_overlap_v2_0256/checkpoints/step-000256.pt",
+    "overlap_checkpoint_sha256": "e09a15a1a028b0ccd0e6b62f0b244b99adbf60bf2de815f349145c51c39babc1",
+    "source_sha256": {
+      "generative_model/conformer/etflow_pg_sampler.py": "995317306edec3379eccaaa88c9d78f1268f7f3eee5defd247c31b5271cd5c79",
+      "generative_model/data/etflow_pg_inference.py": "a285d33d42100627431c17c8308749c66fc358dca072e4ee6ebba2971c3f61fb",
+      "generative_model/models/etflow_pg_collision_aware_v2.py": "6e632d3c2964924b800fb3ba79666f97780afad0cd2e455b1224e74405f43cff",
+      "generative_model/smoke/build_etflow_ef2c3_raw_sampling_protocol.py": "34662196976f5294ac9db15ba3a484088fe6a0a3fc59ac382e377ee60bdd6c69",
+      "generative_model/smoke/run_etflow_ef2c3_raw_sampling.py": "802ee369127c6a2f35c8ef87efc92bbc3925f6fa6e6320ae8ec4b6f348d5ad47"
+    },
+    "training_protocol_v2_sha256": "075352be70bc4209e9fb19f6aaa95eeea2330ddfd94587b00b41997d12834805"
+  },
+  "panel": {
+    "molecule_count": 16,
+    "package_indices": [
+      1669,
+      1611,
+      2209,
+      2265,
+      547,
+      1522,
+      1552,
+      1663,
+      1080,
+      2359,
+      296,
+      2242,
+      1129,
+      1388,
+      2495,
+      1133
+    ],
+    "source_split": "same sealed IID-validation panel as EF2-B",
+    "target_pg_counts": {
+      "C2": 12,
+      "C3": 4
+    }
+  },
+  "protocol_fingerprint": "2028dc7730ec45f2da067b042e992abd6e87c28288fa04ec16df3f23520bff07",
+  "purpose": "Test whether the trained overlap head fixes full-trajectory raw collisions without degrading A2 symmetry or bond geometry.",
+  "route": "EF2-C3",
+  "sampling": {
+    "base_seed": 2026082900,
+    "branches": [
+      "selected_frozen_A2_parent",
+      "trained_EF2_C2_overlap_head"
+    ],
+    "candidate_count": 32,
+    "candidates_per_molecule": 2,
+    "graph_recovered_action": true,
+    "hard_projection_used": false,
+    "n_timesteps": 50,
+    "paired_shared_prior": true,
+    "reference_xyz_used_for_sampling": false,
+    "seed_offsets": [
+      0,
+      100000
+    ]
+  },
+  "schema_version": "etflow-ef2c3-raw-sampling-protocol-v1",
+  "scope": {
+    "a2_parent_frozen": true,
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_validation_reused": true,
+    "official_base_frozen": true,
+    "posthoc_force_field_used": false,
+    "quality_claim": false,
+    "reference_xyz_posthoc_bond_metric_only": true,
+    "stored_action_used": false
+  },
+  "status": "FROZEN_BEFORE_PAIRED_RAW_ODE_GEOMETRY_GATE"
+}

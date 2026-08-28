@@ -1,0 +1,41 @@
+{
+  "artifact_hashes": {
+    "last.pt": "cb3ae9f9c0fd4e76a13a926e1137c37f1559343717832df76c9a7ee0317e2559",
+    "losses.npz": "9fc0f332c9396fea8bba866b1b26e58e18f150d08d00769832681e6391951e18",
+    "report.json": "ab448f27e51e0d36bbee00cc8db2da34f63a2b50ce8c3bf23524381eb71386a2"
+  },
+  "decision": {
+    "advance_to_tier_32": false,
+    "resume_same_branch_to_step_1024": true,
+    "reason": "Atom exact reached 3/4 and both coordinate errors and all optimized loss components continued to improve through the final window. Bond exact remains 0/4, so preserve the same objective and optimizer for another controlled 512 steps."
+  },
+  "initial_step_0": {
+    "atom_exact_molecules": 2,
+    "bond_exact_molecules": 1,
+    "coordinate_rmsd_max_angstrom": 4.103704929351807,
+    "coordinate_rmsd_mean_angstrom": 2.5006818594411016
+  },
+  "objective_version": "uae3d-exact-reconstruction-aux-v2-molecule-balanced",
+  "schema_version": "1.0",
+  "step_512": {
+    "atom_exact_molecules": 3,
+    "bond_exact_molecules": 0,
+    "bond_full_pair_accuracy": 0.9351017254699975,
+    "connected_molecules": 0,
+    "coordinate_rmsd_max_angstrom": 1.846279263496399,
+    "coordinate_rmsd_mean_angstrom": 1.112256370484829,
+    "none_bond_accuracy": 0.9751705320600272,
+    "present_bond_accuracy": 0.16216216216216217,
+    "sanitize_valid_molecules": 0,
+    "self_loop_accuracy": 0.4714285714285714
+  },
+  "status": "PASS_TIER4_DIRECTIONAL_SIGNAL_EXTEND_TO_1024",
+  "strict_u2_gate_passed": false,
+  "tier": 4,
+  "training_window_means": {
+    "steps_1_64_total_loss": 17.13895469903946,
+    "steps_449_512_balanced_bond_loss": 0.6354749426245689,
+    "steps_449_512_mean_coordinate_loss": 0.09915876458398998,
+    "steps_449_512_total_loss": 2.9348605647683144
+  }
+}

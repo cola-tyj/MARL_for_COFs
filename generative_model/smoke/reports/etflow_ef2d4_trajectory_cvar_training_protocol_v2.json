@@ -1,0 +1,3148 @@
+{
+  "decision": {
+    "fail_action": "stop learned dual-basis development without IID-test or threshold changes",
+    "fail_status": "FAIL_ETFLOW_EF2D4_TRAJECTORY_CVAR_STOP_LEARNED_DUAL_BASIS",
+    "pass_action": "freeze selected checkpoint and run one paired raw ODE geometry/PG Gate",
+    "pass_status": "PASS_ETFLOW_EF2D4_TRAJECTORY_CVAR_ADVANCE_TO_RAW_ODE"
+  },
+  "execution_revision": {
+    "checkpoint_written_before_failure": false,
+    "failed_console_log_sha256": "c9233eca04a4919a82bd8c4163c4d9d4f20f689486458050474724901c516bec",
+    "failure_signature": "TypeError: unsupported operand type(s) for /: 'dict' and 'str'",
+    "failure_step": 16,
+    "parent_v1_protocol_sha256": "116d65bc49c4b95b0b72c2c2f5c08d0b0bb75b90921ecef18c646b773e59b03f",
+    "restart_policy": "restart deterministically from optimizer step 1 in a new output directory",
+    "scientific_protocol_changed": false,
+    "sole_code_change": "AST-rename only the output-directory local in mkdir and Path / operations; model-return output dictionaries and all scientific expressions are unchanged",
+    "v1_failed_state_reused": false
+  },
+  "identity": {
+    "d2_protocol_sha256": "a92e2393feac1d29f27dbd315d9afcf4fe36e243826483f05330b5b045caafbd",
+    "d3_v3_protocol_sha256": "8c03e1b41ffe70c73cc5be06c5e215365441c3c94a6e29ee1d6239abdfaf9483",
+    "d3_v3_report_sha256": "6fa378818a4e22a18a64cc6cb736ab38d122272b9bd6bd74a5caf87cbf2c772a",
+    "official_checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "official_model_name": "drugs-o3",
+    "parent_a2_checkpoint": "generative_model/runs/etflow_ef2a2_endpoint_interleaved_0256/checkpoints/step-000256.pt",
+    "parent_a2_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "source_sha256": {
+      "generative_model/models/etflow_pg_dual_basis_v3.py": "e1a10dbf371eb64bfc84fb2505139c6a737a242cc2ae6c70cbea7a187261e71f",
+      "generative_model/models/etflow_pg_trajectory_risk_v1.py": "cce9376fcd178e8ced61eb96e611c08f90987a4370a4bfaf2b2e3d955790148f",
+      "generative_model/smoke/build_etflow_ef2d4_trajectory_cvar_training_protocol_v2.py": "b07f85d4a4b4c4228e5f3f2a3af51bc66c4b09a09c5386b32712019076c86019",
+      "generative_model/smoke/train_etflow_ef2d4_trajectory_cvar.py": "4c5f3a199e39b6980e770bd91d4a75511ce8aa56c594ad17b231e84871888599",
+      "generative_model/smoke/train_etflow_ef2d4_trajectory_cvar_v2.py": "0d4a0bc4209462920764bee5255c304204b28baa68ac20b9a5b33a65bf4df593",
+      "generative_model/tests/test_etflow_ef2d4_execution_fix_v2.py": "b6c359f5f7dcc79705dbcc96ceb6787b52aaa49e926e436e273adc64dab6aaec",
+      "generative_model/tests/test_etflow_pg_dual_basis_v3.py": "25529c86546b3937f766882b486b75516892cf05fa9270f081a0e6772d5bb1f0",
+      "generative_model/tests/test_etflow_pg_trajectory_risk_v1.py": "d4a8aba6624f78469ee885dc55cc56704175d9b1ad0635dba2c050cf63f5df5b"
+    },
+    "v1_failed_console_sha256": "c9233eca04a4919a82bd8c4163c4d9d4f20f689486458050474724901c516bec",
+    "v1_protocol_sha256": "116d65bc49c4b95b0b72c2c2f5c08d0b0bb75b90921ecef18c646b773e59b03f"
+  },
+  "loss": {
+    "bond_length_weight": 0.25,
+    "bond_overlap_weight": 0.25,
+    "flow_matching_weight": 1.0,
+    "mean_operation_weight": 0.25,
+    "minimum_bond_distance_angstrom": 0.6,
+    "nonbonded_collision_weight": 0.25,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "orbit_balanced_weight": 0.5,
+    "worst_operation_weight": 0.5
+  },
+  "model": {
+    "endpoint_overlap_weight": 0.5,
+    "hard_projection_in_forward": false,
+    "maximum_operation_basis_displacement_angstrom": 0.05,
+    "maximum_overlap_basis_displacement_angstrom": 0.05,
+    "maximum_total_endpoint_displacement_angstrom": 0.05,
+    "minimum_bond_distance_angstrom": 0.6,
+    "minimum_remaining_time": 0.05,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "operation_hidden_dim": 64,
+    "overlap_geometry_stop_gradient": true,
+    "overlap_hidden_dim": 32,
+    "parent": "frozen selected EF2-A2 step-256 adapter",
+    "parent_frozen": true,
+    "safe_norm_epsilon": 1e-12,
+    "trajectory_overlap_weight": 0.5,
+    "zero_increment_initialized": true
+  },
+  "panel": {
+    "checkpoint_selection_package_indices_by_pg": {
+      "C2": [
+        2170,
+        748,
+        1099,
+        956,
+        1568,
+        996,
+        337,
+        1771,
+        577,
+        376,
+        2224,
+        1906,
+        1506,
+        924,
+        2350,
+        1894,
+        971,
+        1610,
+        250,
+        1611,
+        409,
+        92,
+        2160,
+        45,
+        2202,
+        1745,
+        2379,
+        1496,
+        343,
+        1528,
+        1960,
+        690
+      ],
+      "C3": [
+        2505,
+        2475,
+        1377,
+        1254,
+        2458,
+        1249,
+        1296,
+        2516,
+        2409,
+        65,
+        1260,
+        2388,
+        2405,
+        2422,
+        1145,
+        1320,
+        1407,
+        1318,
+        2429,
+        2523,
+        1388,
+        1343,
+        1411,
+        1285,
+        2465,
+        1215,
+        2395,
+        1122,
+        81,
+        1153,
+        2436,
+        1199
+      ]
+    },
+    "d3_engineering_holdout_excluded": true,
+    "iid_test_used": false,
+    "iid_validation_used_for_model_selection": true,
+    "optimizer_step_groups": [
+      {
+        "records": [
+          {
+            "d2_pair_step": 1,
+            "package_index": 1684,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 1,
+            "package_index": 1295,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 2,
+            "package_index": 2378,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 2,
+            "package_index": 1369,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 3,
+            "package_index": 1101,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 3,
+            "package_index": 1205,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 4,
+            "package_index": 934,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 4,
+            "package_index": 67,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 1
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 5,
+            "package_index": 1606,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 5,
+            "package_index": 2479,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 6,
+            "package_index": 698,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 6,
+            "package_index": 1317,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 7,
+            "package_index": 840,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 7,
+            "package_index": 2455,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 8,
+            "package_index": 901,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 8,
+            "package_index": 1173,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 2
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 9,
+            "package_index": 41,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 9,
+            "package_index": 2396,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 10,
+            "package_index": 383,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 10,
+            "package_index": 1366,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 11,
+            "package_index": 485,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 11,
+            "package_index": 1265,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 12,
+            "package_index": 635,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 12,
+            "package_index": 2474,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 3
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 13,
+            "package_index": 2045,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 13,
+            "package_index": 1307,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 14,
+            "package_index": 2200,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 14,
+            "package_index": 1304,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 15,
+            "package_index": 2270,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 15,
+            "package_index": 2471,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 16,
+            "package_index": 953,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 16,
+            "package_index": 1286,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 4
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 17,
+            "package_index": 1062,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 17,
+            "package_index": 1126,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 18,
+            "package_index": 257,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 18,
+            "package_index": 1157,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 19,
+            "package_index": 1619,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 19,
+            "package_index": 1316,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 20,
+            "package_index": 2334,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 20,
+            "package_index": 1255,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 5
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 21,
+            "package_index": 458,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 21,
+            "package_index": 1334,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 22,
+            "package_index": 104,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 22,
+            "package_index": 1293,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 23,
+            "package_index": 1455,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 23,
+            "package_index": 2403,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 24,
+            "package_index": 89,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 24,
+            "package_index": 1289,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 6
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 25,
+            "package_index": 303,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 25,
+            "package_index": 2446,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 26,
+            "package_index": 608,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 26,
+            "package_index": 1234,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 27,
+            "package_index": 477,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 27,
+            "package_index": 1390,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 28,
+            "package_index": 1812,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 28,
+            "package_index": 1240,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 7
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 29,
+            "package_index": 1760,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 29,
+            "package_index": 1313,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 30,
+            "package_index": 1538,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 30,
+            "package_index": 2441,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 31,
+            "package_index": 1581,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 31,
+            "package_index": 66,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 32,
+            "package_index": 1940,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 32,
+            "package_index": 61,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 8
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 33,
+            "package_index": 2294,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 33,
+            "package_index": 2431,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 34,
+            "package_index": 760,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 34,
+            "package_index": 73,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 35,
+            "package_index": 2293,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 35,
+            "package_index": 2428,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 36,
+            "package_index": 1961,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 36,
+            "package_index": 1221,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 9
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 37,
+            "package_index": 884,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 37,
+            "package_index": 1306,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 38,
+            "package_index": 2213,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 38,
+            "package_index": 1311,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 39,
+            "package_index": 1569,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 39,
+            "package_index": 1201,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 40,
+            "package_index": 1469,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 40,
+            "package_index": 1291,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 10
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 41,
+            "package_index": 1634,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 41,
+            "package_index": 2386,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 42,
+            "package_index": 199,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 42,
+            "package_index": 1276,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 43,
+            "package_index": 2306,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 43,
+            "package_index": 2488,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 44,
+            "package_index": 1988,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 44,
+            "package_index": 2387,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 11
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 45,
+            "package_index": 591,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 45,
+            "package_index": 1346,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 46,
+            "package_index": 900,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 46,
+            "package_index": 1148,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 47,
+            "package_index": 132,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 47,
+            "package_index": 1130,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 48,
+            "package_index": 951,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 48,
+            "package_index": 1216,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 12
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 49,
+            "package_index": 797,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 49,
+            "package_index": 2509,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 50,
+            "package_index": 1788,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 50,
+            "package_index": 1227,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 51,
+            "package_index": 1515,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 51,
+            "package_index": 1239,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 52,
+            "package_index": 90,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 52,
+            "package_index": 1172,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 13
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 53,
+            "package_index": 222,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 53,
+            "package_index": 1408,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 54,
+            "package_index": 328,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 54,
+            "package_index": 2454,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 55,
+            "package_index": 1678,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 55,
+            "package_index": 2440,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 56,
+            "package_index": 879,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 56,
+            "package_index": 2402,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 14
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 57,
+            "package_index": 382,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 57,
+            "package_index": 2399,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 58,
+            "package_index": 2247,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 58,
+            "package_index": 1413,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 59,
+            "package_index": 1646,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 59,
+            "package_index": 2519,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 60,
+            "package_index": 467,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 60,
+            "package_index": 1186,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 15
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 61,
+            "package_index": 1438,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 61,
+            "package_index": 82,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 62,
+            "package_index": 2156,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 62,
+            "package_index": 1280,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 63,
+            "package_index": 385,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 63,
+            "package_index": 1404,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 64,
+            "package_index": 543,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 64,
+            "package_index": 2517,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 16
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 65,
+            "package_index": 112,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 65,
+            "package_index": 2452,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 66,
+            "package_index": 1754,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 66,
+            "package_index": 1312,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 67,
+            "package_index": 1736,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 67,
+            "package_index": 1212,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 68,
+            "package_index": 491,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 68,
+            "package_index": 2411,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 17
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 69,
+            "package_index": 24,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 69,
+            "package_index": 2498,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 70,
+            "package_index": 530,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 70,
+            "package_index": 1134,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 71,
+            "package_index": 1892,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 71,
+            "package_index": 1348,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 72,
+            "package_index": 1432,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 72,
+            "package_index": 1235,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 18
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 73,
+            "package_index": 1986,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 73,
+            "package_index": 1395,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 74,
+            "package_index": 1845,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 74,
+            "package_index": 1264,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 75,
+            "package_index": 1826,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 75,
+            "package_index": 1156,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 76,
+            "package_index": 281,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 76,
+            "package_index": 80,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 19
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 77,
+            "package_index": 1725,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 77,
+            "package_index": 1328,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 78,
+            "package_index": 2371,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 78,
+            "package_index": 1169,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 79,
+            "package_index": 25,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 79,
+            "package_index": 1251,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 80,
+            "package_index": 983,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 80,
+            "package_index": 68,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 20
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 81,
+            "package_index": 2055,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 81,
+            "package_index": 69,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 82,
+            "package_index": 254,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 82,
+            "package_index": 2493,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 83,
+            "package_index": 948,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 83,
+            "package_index": 1277,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 84,
+            "package_index": 955,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 84,
+            "package_index": 1324,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 21
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 85,
+            "package_index": 1584,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 85,
+            "package_index": 2496,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 86,
+            "package_index": 609,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 86,
+            "package_index": 71,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 87,
+            "package_index": 2053,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 87,
+            "package_index": 1394,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 88,
+            "package_index": 1763,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 88,
+            "package_index": 2449,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 22
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 89,
+            "package_index": 2300,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 89,
+            "package_index": 1355,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 90,
+            "package_index": 1807,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 90,
+            "package_index": 1416,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 91,
+            "package_index": 1502,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 91,
+            "package_index": 1219,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 92,
+            "package_index": 1037,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 92,
+            "package_index": 1152,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 23
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 93,
+            "package_index": 1998,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 93,
+            "package_index": 1362,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 94,
+            "package_index": 8,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 94,
+            "package_index": 2499,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 95,
+            "package_index": 1457,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 95,
+            "package_index": 1193,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 96,
+            "package_index": 2354,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 96,
+            "package_index": 2478,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 24
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 97,
+            "package_index": 180,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 97,
+            "package_index": 1142,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 98,
+            "package_index": 2199,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 98,
+            "package_index": 1272,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 99,
+            "package_index": 1824,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 99,
+            "package_index": 79,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 100,
+            "package_index": 192,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 100,
+            "package_index": 1381,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 25
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 101,
+            "package_index": 856,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 101,
+            "package_index": 1250,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 102,
+            "package_index": 616,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 102,
+            "package_index": 1342,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 103,
+            "package_index": 1981,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 103,
+            "package_index": 1164,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 104,
+            "package_index": 727,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 104,
+            "package_index": 1135,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 26
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 105,
+            "package_index": 28,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 105,
+            "package_index": 1393,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 106,
+            "package_index": 553,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 106,
+            "package_index": 2394,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 107,
+            "package_index": 804,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 107,
+            "package_index": 1168,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 108,
+            "package_index": 2292,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 108,
+            "package_index": 1257,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 27
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 109,
+            "package_index": 585,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 109,
+            "package_index": 2406,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 110,
+            "package_index": 1582,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 110,
+            "package_index": 62,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 111,
+            "package_index": 693,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 111,
+            "package_index": 2427,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 112,
+            "package_index": 1,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 112,
+            "package_index": 1319,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 28
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 113,
+            "package_index": 490,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 113,
+            "package_index": 1282,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 114,
+            "package_index": 2016,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 114,
+            "package_index": 2484,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 115,
+            "package_index": 2041,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 115,
+            "package_index": 1354,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 116,
+            "package_index": 1624,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 116,
+            "package_index": 1365,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 29
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 117,
+            "package_index": 1439,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 117,
+            "package_index": 2487,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 118,
+            "package_index": 396,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 118,
+            "package_index": 1405,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 119,
+            "package_index": 1879,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 119,
+            "package_index": 1196,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 120,
+            "package_index": 874,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 120,
+            "package_index": 1327,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 30
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 121,
+            "package_index": 1979,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 121,
+            "package_index": 1198,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 122,
+            "package_index": 1475,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 122,
+            "package_index": 1247,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 123,
+            "package_index": 714,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 123,
+            "package_index": 1385,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 124,
+            "package_index": 564,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 124,
+            "package_index": 2389,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 31
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 125,
+            "package_index": 1693,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 125,
+            "package_index": 2483,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 126,
+            "package_index": 1939,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 126,
+            "package_index": 1183,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 127,
+            "package_index": 2078,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 127,
+            "package_index": 1406,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 128,
+            "package_index": 851,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 128,
+            "package_index": 1124,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 32
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 129,
+            "package_index": 2157,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 129,
+            "package_index": 1237,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 130,
+            "package_index": 346,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 130,
+            "package_index": 1184,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 131,
+            "package_index": 466,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 131,
+            "package_index": 1349,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 132,
+            "package_index": 1846,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 132,
+            "package_index": 72,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 33
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 133,
+            "package_index": 94,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 133,
+            "package_index": 1229,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 134,
+            "package_index": 624,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 134,
+            "package_index": 1159,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 135,
+            "package_index": 538,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 135,
+            "package_index": 2401,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 136,
+            "package_index": 722,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 136,
+            "package_index": 1359,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 34
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 137,
+            "package_index": 248,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 137,
+            "package_index": 1204,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 138,
+            "package_index": 1708,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 138,
+            "package_index": 1176,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 139,
+            "package_index": 102,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 139,
+            "package_index": 1371,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 140,
+            "package_index": 899,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 140,
+            "package_index": 1143,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 35
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 141,
+            "package_index": 1666,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 141,
+            "package_index": 1315,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 142,
+            "package_index": 2191,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 142,
+            "package_index": 1175,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 143,
+            "package_index": 1498,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 143,
+            "package_index": 2447,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 144,
+            "package_index": 497,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 144,
+            "package_index": 2426,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 36
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 145,
+            "package_index": 1758,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 145,
+            "package_index": 1303,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 146,
+            "package_index": 450,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 146,
+            "package_index": 1375,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 147,
+            "package_index": 1937,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 147,
+            "package_index": 1363,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 148,
+            "package_index": 756,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 148,
+            "package_index": 1314,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 37
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 149,
+            "package_index": 1677,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 149,
+            "package_index": 1350,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 150,
+            "package_index": 325,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 150,
+            "package_index": 1194,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 151,
+            "package_index": 270,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 151,
+            "package_index": 1279,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 152,
+            "package_index": 970,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 152,
+            "package_index": 1382,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 38
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 153,
+            "package_index": 106,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 153,
+            "package_index": 1367,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 154,
+            "package_index": 256,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 154,
+            "package_index": 2438,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 155,
+            "package_index": 178,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 155,
+            "package_index": 1398,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 156,
+            "package_index": 548,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 156,
+            "package_index": 2507,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 39
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 157,
+            "package_index": 1944,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 157,
+            "package_index": 2489,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 158,
+            "package_index": 455,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 158,
+            "package_index": 1222,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 159,
+            "package_index": 627,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 159,
+            "package_index": 1339,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 160,
+            "package_index": 957,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 160,
+            "package_index": 1208,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 40
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 161,
+            "package_index": 2380,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 161,
+            "package_index": 1351,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 162,
+            "package_index": 1794,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 162,
+            "package_index": 2423,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 163,
+            "package_index": 377,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 163,
+            "package_index": 1165,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 164,
+            "package_index": 2112,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 164,
+            "package_index": 1243,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 41
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 165,
+            "package_index": 678,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 165,
+            "package_index": 1294,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 166,
+            "package_index": 1925,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 166,
+            "package_index": 2511,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 167,
+            "package_index": 541,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 167,
+            "package_index": 2384,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 168,
+            "package_index": 1707,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 168,
+            "package_index": 1417,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 42
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 169,
+            "package_index": 1827,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 169,
+            "package_index": 1267,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 170,
+            "package_index": 1692,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 170,
+            "package_index": 2443,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 171,
+            "package_index": 699,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 171,
+            "package_index": 1224,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 172,
+            "package_index": 531,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 172,
+            "package_index": 1332,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 43
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 173,
+            "package_index": 855,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 173,
+            "package_index": 2508,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 174,
+            "package_index": 584,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 174,
+            "package_index": 1269,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 175,
+            "package_index": 1948,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 175,
+            "package_index": 84,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 176,
+            "package_index": 273,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 176,
+            "package_index": 1123,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 44
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 177,
+            "package_index": 650,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 177,
+            "package_index": 2490,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 178,
+            "package_index": 2122,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 178,
+            "package_index": 2467,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 179,
+            "package_index": 566,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 179,
+            "package_index": 85,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 180,
+            "package_index": 468,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 180,
+            "package_index": 2472,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 45
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 181,
+            "package_index": 2322,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 181,
+            "package_index": 1190,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 182,
+            "package_index": 304,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 182,
+            "package_index": 1232,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 183,
+            "package_index": 1700,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 183,
+            "package_index": 2497,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 184,
+            "package_index": 1025,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 184,
+            "package_index": 2435,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 46
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 185,
+            "package_index": 2246,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 185,
+            "package_index": 1167,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 186,
+            "package_index": 514,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 186,
+            "package_index": 2473,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 187,
+            "package_index": 2339,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 187,
+            "package_index": 1261,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 188,
+            "package_index": 1481,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 188,
+            "package_index": 1386,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 47
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 189,
+            "package_index": 762,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 189,
+            "package_index": 2510,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 190,
+            "package_index": 297,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 190,
+            "package_index": 1256,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 191,
+            "package_index": 372,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 191,
+            "package_index": 1345,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 192,
+            "package_index": 1561,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 192,
+            "package_index": 1188,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 48
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 193,
+            "package_index": 2115,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 193,
+            "package_index": 1163,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 194,
+            "package_index": 215,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 194,
+            "package_index": 1340,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 195,
+            "package_index": 1835,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 195,
+            "package_index": 1333,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 196,
+            "package_index": 430,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 196,
+            "package_index": 83,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 49
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 197,
+            "package_index": 986,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 197,
+            "package_index": 1370,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 198,
+            "package_index": 1535,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 198,
+            "package_index": 1374,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 199,
+            "package_index": 810,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 199,
+            "package_index": 1337,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 200,
+            "package_index": 679,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 200,
+            "package_index": 2442,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 50
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 201,
+            "package_index": 228,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 201,
+            "package_index": 1344,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 202,
+            "package_index": 601,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 202,
+            "package_index": 2480,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 203,
+            "package_index": 1750,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 203,
+            "package_index": 1209,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 204,
+            "package_index": 99,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 204,
+            "package_index": 2457,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 51
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 205,
+            "package_index": 2080,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 205,
+            "package_index": 2445,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 206,
+            "package_index": 105,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 206,
+            "package_index": 2466,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 207,
+            "package_index": 1467,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 207,
+            "package_index": 1139,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 208,
+            "package_index": 2336,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 208,
+            "package_index": 2492,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 52
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 209,
+            "package_index": 2140,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 209,
+            "package_index": 1144,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 210,
+            "package_index": 279,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 210,
+            "package_index": 1396,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 211,
+            "package_index": 454,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 211,
+            "package_index": 78,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 212,
+            "package_index": 612,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 212,
+            "package_index": 1177,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 53
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 213,
+            "package_index": 764,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 213,
+            "package_index": 2434,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 214,
+            "package_index": 122,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 214,
+            "package_index": 1180,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 215,
+            "package_index": 776,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 215,
+            "package_index": 1195,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 216,
+            "package_index": 1909,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 216,
+            "package_index": 1162,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 54
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 217,
+            "package_index": 1896,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 217,
+            "package_index": 2404,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 218,
+            "package_index": 964,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 218,
+            "package_index": 2522,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 219,
+            "package_index": 1804,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 219,
+            "package_index": 1298,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 220,
+            "package_index": 427,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 220,
+            "package_index": 1273,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 55
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 221,
+            "package_index": 977,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 221,
+            "package_index": 1154,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 222,
+            "package_index": 2144,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 222,
+            "package_index": 1245,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 223,
+            "package_index": 2124,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 223,
+            "package_index": 2412,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 224,
+            "package_index": 380,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 224,
+            "package_index": 1185,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 56
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 225,
+            "package_index": 2188,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 225,
+            "package_index": 2408,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 226,
+            "package_index": 684,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 226,
+            "package_index": 1146,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 227,
+            "package_index": 732,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 227,
+            "package_index": 1166,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 228,
+            "package_index": 202,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 228,
+            "package_index": 1335,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 57
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 229,
+            "package_index": 1889,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 229,
+            "package_index": 1360,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 230,
+            "package_index": 29,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 230,
+            "package_index": 2393,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 231,
+            "package_index": 2126,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 231,
+            "package_index": 1158,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 232,
+            "package_index": 91,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 232,
+            "package_index": 2520,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 58
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 233,
+            "package_index": 812,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 233,
+            "package_index": 1217,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 234,
+            "package_index": 730,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 234,
+            "package_index": 74,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 235,
+            "package_index": 512,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 235,
+            "package_index": 1210,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 236,
+            "package_index": 1924,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 236,
+            "package_index": 1415,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 59
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 237,
+            "package_index": 2309,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 237,
+            "package_index": 1125,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 238,
+            "package_index": 2287,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 238,
+            "package_index": 2462,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 239,
+            "package_index": 432,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 239,
+            "package_index": 2456,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 240,
+            "package_index": 820,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 240,
+            "package_index": 1202,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 60
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 241,
+            "package_index": 2243,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 241,
+            "package_index": 1325,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 242,
+            "package_index": 571,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 242,
+            "package_index": 1189,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 243,
+            "package_index": 950,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 243,
+            "package_index": 2421,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 244,
+            "package_index": 689,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 244,
+            "package_index": 1268,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 61
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 245,
+            "package_index": 1712,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 245,
+            "package_index": 1329,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 246,
+            "package_index": 908,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 246,
+            "package_index": 2494,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 247,
+            "package_index": 1854,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 247,
+            "package_index": 2469,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 248,
+            "package_index": 162,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 248,
+            "package_index": 1225,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 62
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 249,
+            "package_index": 540,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 249,
+            "package_index": 1253,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 250,
+            "package_index": 156,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 250,
+            "package_index": 2397,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 251,
+            "package_index": 313,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 251,
+            "package_index": 2521,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 252,
+            "package_index": 2028,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 252,
+            "package_index": 1137,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 63
+      },
+      {
+        "records": [
+          {
+            "d2_pair_step": 253,
+            "package_index": 189,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 253,
+            "package_index": 2503,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 254,
+            "package_index": 734,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 254,
+            "package_index": 1338,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 255,
+            "package_index": 2143,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 255,
+            "package_index": 1308,
+            "target_pg": "C3"
+          },
+          {
+            "d2_pair_step": 256,
+            "package_index": 364,
+            "target_pg": "C2"
+          },
+          {
+            "d2_pair_step": 256,
+            "package_index": 2460,
+            "target_pg": "C3"
+          }
+        ],
+        "step": 64
+      }
+    ],
+    "post_selection_confirmation_package_indices_by_pg": {
+      "C2": [
+        332,
+        1985,
+        1808,
+        575,
+        1912,
+        447,
+        1571,
+        1532,
+        2097,
+        2163,
+        1574,
+        2090,
+        1722,
+        2008
+      ],
+      "C3": [
+        1244,
+        1347,
+        2514,
+        1397,
+        1402,
+        2417,
+        1133,
+        1170,
+        2461,
+        1161,
+        1129,
+        2385,
+        2495,
+        1182
+      ]
+    },
+    "reused_d2_train_pool": true,
+    "reused_d2_train_pool_sha256": "a92e2393feac1d29f27dbd315d9afcf4fe36e243826483f05330b5b045caafbd"
+  },
+  "parent_failure": {
+    "d3_v3_rollout_collision_ratio": 1.0014766083677378,
+    "d3_v3_status": "FAIL_ETFLOW_EF2D3_V3_ENGINEERING_STOP_BRANCH",
+    "d3_v3_status_preserved": true,
+    "new_branch_not_reinterpretation": true,
+    "only_failed_check": "short_rollout_collision_non_degradation"
+  },
+  "protocol_fingerprint": "69c75da27ae78763c3340f3a6aac3b76a5f921816facffa5ea1e85521b26023d",
+  "purpose": "Replace molecule-mean endpoint-only geometry pressure with PG-balanced eight-molecule updates and upper-tail CVaR on both endpoint and a differentiable short trajectory.",
+  "route": "ET-Flow/EF2-D4-v2",
+  "schema_version": "etflow-ef2d4-trajectory-cvar-training-protocol-v2",
+  "scope": {
+    "a2_parent_frozen": true,
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_train_used": true,
+    "iid_validation_used": true,
+    "official_base_frozen": true,
+    "posthoc_force_field_used": false,
+    "raw_ode_quality_claim": false
+  },
+  "status": "FROZEN_EXECUTION_FIX_RESTART_FROM_STEP_1",
+  "training": {
+    "c2_per_optimizer_step": 4,
+    "c3_per_optimizer_step": 4,
+    "checkpoint_every": 16,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 3e-05,
+    "molecule_exposures": 512,
+    "molecules_per_optimizer_step": 8,
+    "optimizer": "AdamW",
+    "optimizer_steps": 64,
+    "records_unique": true,
+    "seed": 2026082638,
+    "short_rollout": {
+      "applied_every_optimizer_step": true,
+      "start_time": 0.2,
+      "step_size": 0.05,
+      "steps": 4
+    },
+    "weight_decay": 0.0
+  },
+  "trajectory_risk": {
+    "distance_epsilon": 1e-12,
+    "pair_normalization": "all eligible pairs per molecule",
+    "parent_risk_stop_gradient": true,
+    "tail_fraction": 0.25,
+    "weights": {
+      "endpoint_bond_overlap_cvar": 1.0,
+      "endpoint_bond_overlap_excess_cvar": 4.0,
+      "endpoint_collision_cvar": 1.0,
+      "endpoint_collision_excess_cvar": 4.0,
+      "rollout_bond_overlap_cvar": 2.0,
+      "rollout_bond_overlap_excess_cvar": 8.0,
+      "rollout_collision_cvar": 2.0,
+      "rollout_collision_excess_cvar": 8.0,
+      "rollout_operation": 0.25
+    }
+  },
+  "validation": {
+    "base_seed": 2026082738,
+    "checkpoint_selection_molecules": 64,
+    "iid_test_used": false,
+    "post_selection_confirmation_molecules": 28,
+    "selection_and_confirmation_disjoint": true,
+    "short_rollout": {
+      "start_time": 0.2,
+      "step_size": 0.05,
+      "steps": 4
+    },
+    "single_time": 0.5,
+    "thresholds": {
+      "endpoint_bond_overlap_ratio_max": 1.0,
+      "endpoint_collision_ratio_max": 1.0,
+      "endpoint_operation_ratio_max": 0.995,
+      "flow_mse_ratio_max": 1.1,
+      "maximum_endpoint_delta_norm_angstrom": 0.050001,
+      "per_pg_operation_improved_fraction_min": 0.5,
+      "rollout_bond_overlap_ratio_max": 1.0,
+      "rollout_collision_maximum_absolute_increase_max": 0.005,
+      "rollout_collision_ratio_max": 1.0,
+      "rollout_collision_worsened_fraction_max": 0.1,
+      "rollout_operation_ratio_max": 1.0
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "identity": {
+    "candidate_pool_sha256": "2df23b5eb04dd554e6f330713702335af1a9793c501b0e57ebc72ed566779d52",
+    "checkpoint_path": "generative_model/checkpoints/etflow/drugs-o3.ckpt",
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "dataset_graphs_sha256": "d95f2b8ec003d93ad79afbd8aa7406a2515df50a0b701271139b8c38d936605d",
+    "dataset_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "dataset_metadata_sha256": "d14a4ac4722b95e4be147843af75264a3d7809b0fcd85b85ee2821c05f0a6b02",
+    "external_package_sha256": {
+      "candidate_audit.json": "38bab13880b5a784c46838da78fad976119d6cfe4c0b87e3eb2b50760df9966a",
+      "cof_graphs.npz": "16ba1863cc8ed068876fd034021fc6ce4a1af7bf9090c68b6c997342fdd5f858",
+      "manifest.json": "a33ec43df7cb0fab0339a68d0a845afabaac3419b571fd94c555c6999ee6c7a2",
+      "metadata.csv": "8568d4b6bd1c5fdc2efe19401b323307968f7b40e6e97f78bcfa69fd5b1a8698",
+      "statistics.json": "b746acd5a828ffc06f66cfa2fc484814e9bfeb9b7db85ede8c07e32412a771ab",
+      "vocab.json": "03db590701f50e74826493eb606fc5fe7cbfc80151a199cf160ae9c71b6434ff"
+    },
+    "iid_panel_protocol_sha256": "6dee96f0092747aaa6bf18660949652aa56718416976fa810d3212467676f86c",
+    "parent_ablation_protocol_sha256": "f9ed9f7991dc5898e4bcd57632a47adc625715ee781fccc509debe9e4b819e9e",
+    "rare_panel_protocol_sha256": "290b2127b079da2a27432e0f7ab225353791a0fc6e06b2ec7c63cee1eb73e2a1",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/evaluation/audit_our_etflow_ablation_point_group.py": "224dfc7acf9777cdbd00b464367c9630bd67b4a4382fe75f4baf9dc1d6b97730",
+      "generative_model/evaluation/build_our_etflow_external_package_v1.py": "911ade4b47e7728b0290b8744d6b2e82a82675fdfb0a50fbc8f1bb3abfe065b9",
+      "generative_model/evaluation/our_etflow_ablation.py": "ddc8008e90f62b783cfc58dde7117cfa3f584a696f65ea73d3c292f00e7ecdf1",
+      "generative_model/evaluation/run_our_etflow_ablation.py": "b8c8f447bbed77d90da48d4fdbf90f0f5d14777bbf52188331ecb5b74686f1da",
+      "generative_model/evaluation/run_our_etflow_external.py": "a13afc9b63b9482828e69188812a12c35b66a30b0fcf536bc2aa6d0a8c87e12b",
+      "generative_model/inference/generate_etflow_symmetric_xyz.py": "8c445c441ec1cf807941a3387dbca9265b079038a0c1ac1ccb92a2a7347b71a1",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v3.py": "bc125b39b7a1db7f4b3f7dd5230ce9cd8ae4cfb4004cda588adb7fadedb22c89",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v4.py": "ce61f53b04780d78bb281cd5f3e7184a92965019a583ac388fbf48f7ef8eb627",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v5.py": "88a6f1357acbf790a6a5197787cd8427992b4280c98f29131bc464ea461f283f",
+      "generative_model/optimization/etkdg_orbit_initializer.py": "e64ed195f7ffe89ba89677ea44dbbe6660627b6f139627c5e3a89a05d20fedf0",
+      "generative_model/optimization/force_field_support.py": "5343e67b1a7ee8ca103833b139609ebf1bcbf21d8adf860d7826386145cd9295",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c"
+    },
+    "v5_protocol_sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2"
+  },
+  "metrics": {
+    "energy_note": "UFF energies are compared only within paired routes of the same graph; cross-molecule means are additionally normalized per atom",
+    "external_reference_note": "bond/RMSD metrics use evaluation-only ETKDGv3+UFF coordinates and must not be interpreted as experimental conformer truth",
+    "primary": [
+      "independent pymatgen PG-compatible fraction",
+      "collision-free fraction at 0.6 angstrom",
+      "bond-length MAE to canonical coordinates",
+      "strict UFF single-point energy per atom",
+      "descriptive wall runtime",
+      "within-graph candidate diversity"
+    ],
+    "runtime_note": "wall timing is descriptive and machine-dependent; the ET-Flow prior time is measured once and attributed to each ET-Flow end-to-end route",
+    "secondary": [
+      "PG exact match",
+      "Kabsch RMSD to the one canonical conformer",
+      "all-pair distance MAE to the one canonical conformer"
+    ]
+  },
+  "paired_contract": {
+    "etflow_raw_coordinates_shared_by_routes": [
+      "etflow_raw",
+      "etflow_hard_projection",
+      "etflow_hard_projection_f02"
+    ],
+    "full_panel_denominator_for_failures": true,
+    "reference_xyz_role": "post-hoc bond/RMSD metrics only",
+    "reference_xyz_used_for_generation": false,
+    "reference_xyz_used_for_selection": false,
+    "same_base_seed": true,
+    "same_canonical_graph": true,
+    "same_requested_target_pg": true
+  },
+  "panel": {
+    "accepted_before_quota_count": 16,
+    "candidate_pool_count": 39,
+    "molecule_count": 12,
+    "records": [
+      {
+        "atom_count": 21,
+        "canonical_smiles": "c1ccc2c(c1)sc1ccccc12",
+        "molecule_id": "external_0000_dibenzothiophene",
+        "murcko_scaffold_smiles": "c1ccc2c(c1)sc1ccccc12",
+        "name": "dibenzothiophene",
+        "nearest_cof_v2_tanimoto": 0.3181818181818182,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 0,
+        "seed": 394257351,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 12,
+        "canonical_smiles": "O=C1C=CC(=O)C=C1",
+        "molecule_id": "external_0001_para_benzoquinone",
+        "murcko_scaffold_smiles": "O=C1C=CC(=O)C=C1",
+        "name": "para_benzoquinone",
+        "nearest_cof_v2_tanimoto": 0.2,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 1,
+        "seed": 1065381488,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 21,
+        "canonical_smiles": "c1ccc2c(c1)oc1ccccc12",
+        "molecule_id": "external_0002_dibenzofuran",
+        "murcko_scaffold_smiles": "c1ccc2c(c1)oc1ccccc12",
+        "name": "dibenzofuran",
+        "nearest_cof_v2_tanimoto": 0.21739130434782608,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 2,
+        "seed": 180279653,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 23,
+        "canonical_smiles": "c1ccc2c(c1)Cc1ccccc1-2",
+        "molecule_id": "external_0003_fluorene",
+        "murcko_scaffold_smiles": "c1ccc2c(c1)Cc1ccccc1-2",
+        "name": "fluorene",
+        "nearest_cof_v2_tanimoto": 0.23076923076923078,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 3,
+        "seed": 1998035045,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 27,
+        "canonical_smiles": "C1CCCCCCCC1",
+        "molecule_id": "external_0004_cyclononane",
+        "murcko_scaffold_smiles": "C1CCCCCCCC1",
+        "name": "cyclononane",
+        "nearest_cof_v2_tanimoto": 0.14285714285714285,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 4,
+        "seed": 297468124,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 45,
+        "canonical_smiles": "C1CCCCCCCCCCCCCC1",
+        "molecule_id": "external_0005_cyclopentadecane",
+        "murcko_scaffold_smiles": "C1CCCCCCCCCCCCCC1",
+        "name": "cyclopentadecane",
+        "nearest_cof_v2_tanimoto": 0.14285714285714285,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 5,
+        "seed": 796126353,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 9,
+        "canonical_smiles": "C1CC1",
+        "molecule_id": "external_0006_cyclopropane",
+        "murcko_scaffold_smiles": "C1CC1",
+        "name": "cyclopropane",
+        "nearest_cof_v2_tanimoto": 0.14285714285714285,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 6,
+        "seed": 1193346068,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 36,
+        "canonical_smiles": "C1CCCCCCCCCCC1",
+        "molecule_id": "external_0007_cyclododecane",
+        "murcko_scaffold_smiles": "C1CCCCCCCCCCC1",
+        "name": "cyclododecane",
+        "nearest_cof_v2_tanimoto": 0.14285714285714285,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 7,
+        "seed": 1463508529,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 16,
+        "canonical_smiles": "C12C3C4C1C1C2C3C41",
+        "molecule_id": "external_0008_cubane",
+        "murcko_scaffold_smiles": "C12C3C4C1C1C2C3C41",
+        "name": "cubane",
+        "nearest_cof_v2_tanimoto": 0.07142857142857142,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 8,
+        "seed": 1435884787,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 26,
+        "canonical_smiles": "C1C2CC3CC1CC(C2)C3",
+        "molecule_id": "external_0009_adamantane",
+        "murcko_scaffold_smiles": "C1C2CC3CC1CC(C2)C3",
+        "name": "adamantane",
+        "nearest_cof_v2_tanimoto": 0.11764705882352941,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 9,
+        "seed": 385186642,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 18,
+        "canonical_smiles": "[SiH2]1[SiH2][SiH2][SiH2][SiH2][SiH2]1",
+        "molecule_id": "external_0010_cyclohexasilane",
+        "murcko_scaffold_smiles": "[SiH2]1[SiH2][SiH2][SiH2][SiH2][SiH2]1",
+        "name": "cyclohexasilane",
+        "nearest_cof_v2_tanimoto": 0.0625,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 10,
+        "seed": 1466160970,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 18,
+        "canonical_smiles": "C1CCCCC1",
+        "molecule_id": "external_0011_cyclohexane_d6h",
+        "murcko_scaffold_smiles": "C1CCCCC1",
+        "name": "cyclohexane_d6h",
+        "nearest_cof_v2_tanimoto": 0.14285714285714285,
+        "nonoverlap_checks": {
+          "canonical_smiles_not_in_cof_v2": true,
+          "exact_morgan_fingerprint_not_in_cof_v2": true,
+          "murcko_scaffold_not_in_cof_v2": true,
+          "unique_within_external_pool": true
+        },
+        "package_index": 11,
+        "seed": 938210322,
+        "target_pg": "D6h"
+      }
+    ],
+    "rejected_count": 23,
+    "selection": "strict nonoverlap screen followed by SHA-ranked fixed PG quotas",
+    "target_pg_counts": {
+      "C2": 4,
+      "C3": 4,
+      "D6h": 2,
+      "S4": 2
+    }
+  },
+  "protocol_fingerprint": "89494a6ee176b0e34ddb9decb6d978840dd6f9edc42f9ed8808300348b7b02dc",
+  "purpose": "Four-route evaluation on graphs outside canonical COF v2.",
+  "routes": {
+    "etflow_hard_projection": {
+      "action_source": "coordinate-free typed-graph automorphism recovery",
+      "candidate_count": 4,
+      "f02_used": false,
+      "hard_projection": "24 PCA orientations plus one Reynolds projection",
+      "selection": "frozen reference-free v5 projection rank per raw candidate"
+    },
+    "etflow_hard_projection_f02": {
+      "candidate_count": 4,
+      "definition": "frozen production v5 combination ranking and F0.2 selection",
+      "f02_used": true
+    },
+    "etflow_raw": {
+      "candidate_count": 4,
+      "n_timesteps": 50,
+      "selection": "lowest strict UFF single-point energy, then candidate id",
+      "target_pg_used": false
+    },
+    "etkdg_v3_best_of_n": {
+      "candidate_count": 4,
+      "maximum_iterations": 1000,
+      "selection": "lowest strict UFF single-point energy, then candidate id",
+      "target_pg_used": false,
+      "unconstrained_force_field_optimization_used": false,
+      "use_random_coordinates": false
+    }
+  },
+  "schema_version": "our-etflow-external-paired-protocol-v1",
+  "scope": {
+    "all_atoms_explicit_including_hydrogen": true,
+    "core_ood_test_only": false,
+    "external_graph_claim": true,
+    "external_to_canonical_cof_v2": true,
+    "guaranteed_unseen_to_official_geom_training": false,
+    "known_canonical_graph": true,
+    "new_graph_generation_claim": false,
+    "quality_claim_before_audit": false,
+    "raw_etflow_target_pg_conditioning_claim": false,
+    "target_pgs": [
+      "C2",
+      "C3",
+      "S4",
+      "D6h"
+    ],
+    "unseen_graph_claim": false
+  },
+  "status": "FROZEN_BEFORE_EXTERNAL_COORDINATE_GENERATION",
+  "symmetry_protocol": {
+    "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+    "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+    "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+    "eigen_tolerance": 0.01,
+    "matrix_tolerance": 0.1,
+    "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+    "tolerance_angstrom": 0.3
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "artifact_hashes": {
+    "last.pt": "e4dd0bde6ba35ed35c807b4b91e9905acd93e7034edb7666728a8d3343141626",
+    "losses.npz": "95b2df1a1ffbd9f94d5e3b12f5aee5265a3bc59329d95491d68ab176a09a9fdc",
+    "report.json": "be39d3a41b37edbfc6f7c96e575575d029fb07013c10042e6a9f2b2e8b8eb7a5"
+  },
+  "decision": {
+    "advance_to_tier_32": false,
+    "resume_same_branch_to_step_3072": true,
+    "reason": "Molecule 1135 became fully exact and stable, raising the tier to 2/4 exact. The two large molecules remain incomplete, but present accuracy and all recent balanced bond windows continue improving."
+  },
+  "objective_version": "uae3d-exact-reconstruction-aux-v2-molecule-balanced",
+  "schema_version": "1.0",
+  "step_2560": {
+    "atom_exact_molecules": 4,
+    "bond_exact_molecules": 2,
+    "bond_full_pair_accuracy": 0.9196497553438063,
+    "connected_molecules": 2,
+    "coordinate_rmsd_max_angstrom": 0.1657513827085495,
+    "coordinate_rmsd_mean_angstrom": 0.11325826402753592,
+    "none_bond_accuracy": 0.9252387448840382,
+    "present_bond_accuracy": 0.7702702702702703,
+    "sanitize_valid_molecules": 2,
+    "self_loop_accuracy": 0.9428571428571428
+  },
+  "status": "PASS_TIER4_TWO_EXACT_EXTEND_TO_3072",
+  "strict_u2_gate_passed": false,
+  "tier": 4,
+  "training_window_means": {
+    "steps_2369_2432_balanced_bond_loss": 0.22954668919555843,
+    "steps_2433_2496_balanced_bond_loss": 0.22723440220579505,
+    "steps_2497_2560_balanced_bond_loss": 0.2232784484513104,
+    "steps_2497_2560_mean_coordinate_loss": 0.0009067825776583049
+  }
+}

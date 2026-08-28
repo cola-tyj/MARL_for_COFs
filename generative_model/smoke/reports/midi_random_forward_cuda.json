@@ -1,0 +1,98 @@
+{
+  "environment": {
+    "device": "cuda:0",
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "midi_path": "/home/tianyajun/MARL_for_COFs/generative_model/external/midi/midi/__init__.py",
+    "python": "3.9.25",
+    "torch": "2.0.1+cu118",
+    "torch_cuda": "11.8",
+    "torch_geometric": "2.3.1"
+  },
+  "input": {
+    "atoms": 87,
+    "canonical_pyg_roundtrip_exact": true,
+    "explicit_h": true,
+    "molecule_id": "cof_002408",
+    "official_to_dense_atom_charge_exact": true,
+    "package_index": 2408,
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "pyg_directed_edges": 192,
+    "undirected_bonds": 96
+  },
+  "model": {
+    "class": "midi.models.transformer_model.GraphTransformer",
+    "layers": 2,
+    "output_shapes": {
+      "E": [
+        1,
+        87,
+        87,
+        5
+      ],
+      "X": [
+        1,
+        87,
+        16
+      ],
+      "charges": [
+        1,
+        87,
+        6
+      ],
+      "pos": [
+        1,
+        87,
+        3
+      ],
+      "y": [
+        1,
+        0
+      ]
+    },
+    "parameters": 512767,
+    "random_initialization": true
+  },
+  "numerics": {
+    "all_gradients_finite": true,
+    "coordinate_com_max_abs": 3.768109824164867e-09,
+    "loss": 0.7636135816574097,
+    "outputs_finite": true,
+    "parameter_tensors_with_gradient": 176,
+    "parameter_tensors_without_gradient": 24,
+    "parameters_without_gradient": [
+      "tf_layers.0.self_attn.pre_softmax.weight",
+      "tf_layers.0.self_attn.pre_softmax.bias",
+      "tf_layers.1.self_attn.pre_softmax.weight",
+      "tf_layers.1.self_attn.pre_softmax.bias",
+      "tf_layers.1.self_attn.y_y.weight",
+      "tf_layers.1.self_attn.y_y.bias",
+      "tf_layers.1.self_attn.x_y.lin.weight",
+      "tf_layers.1.self_attn.x_y.lin.bias",
+      "tf_layers.1.self_attn.e_y.lin.weight",
+      "tf_layers.1.self_attn.e_y.lin.bias",
+      "tf_layers.1.self_attn.dist_y.lin.weight",
+      "tf_layers.1.self_attn.dist_y.lin.bias",
+      "tf_layers.1.self_attn.y_out.0.weight",
+      "tf_layers.1.self_attn.y_out.0.bias",
+      "tf_layers.1.self_attn.y_out.2.weight",
+      "tf_layers.1.self_attn.y_out.2.bias",
+      "tf_layers.1.lin_y1.weight",
+      "tf_layers.1.lin_y1.bias",
+      "tf_layers.1.lin_y2.weight",
+      "tf_layers.1.lin_y2.bias",
+      "tf_layers.1.norm_y1.weight",
+      "tf_layers.1.norm_y1.bias",
+      "tf_layers.1.norm_y2.weight",
+      "tf_layers.1.norm_y2.bias"
+    ],
+    "required_output_heads_have_gradients": true
+  },
+  "official_source_commit": "775b731c38967a1e49615b2ad70ac6b5db24909a",
+  "peak_cuda_memory_bytes": 93937664,
+  "purpose": "MiDi random mini GraphTransformer interface forward/backward gate",
+  "schema_version": "1.0",
+  "status": "PASS",
+  "timing_seconds": {
+    "forward_backward": 0.29019421711564064
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "identity": {
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "dataset_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/evaluation/audit_our_etflow_controllability.py": "0206393147f26e167e43dd910524cd5456019323fbb7bc8bebf90b80ac99894f",
+      "generative_model/evaluation/our_etflow_ablation.py": "ddc8008e90f62b783cfc58dde7117cfa3f584a696f65ea73d3c292f00e7ecdf1",
+      "generative_model/evaluation/run_our_etflow_controllability.py": "d09af8161220734a93156f9e2c488661124dac65b650e15b3b70221be7c930a3",
+      "generative_model/inference/generate_etflow_symmetric_xyz.py": "8c445c441ec1cf807941a3387dbca9265b079038a0c1ac1ccb92a2a7347b71a1",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v3.py": "bc125b39b7a1db7f4b3f7dd5230ce9cd8ae4cfb4004cda588adb7fadedb22c89",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v4.py": "ce61f53b04780d78bb281cd5f3e7184a92965019a583ac388fbf48f7ef8eb627",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c",
+      "generative_model/symmetry/graph_action.py": "9517d125bbdb897d5ef6d8e4c7ebf97051131a8946e473b670ccb21fb49864fe",
+      "generative_model/symmetry/graph_action_candidates_v2.py": "53c3261107070c8e94b9ecb3d610a690a53dd398d0831b9fc9661a8c21159a69",
+      "generative_model/symmetry/graph_action_extended.py": "bf314e8c8da9b9ac31a7d9475421d035682e94b1c93d695423167c7bfdf97fc9"
+    },
+    "v5_protocol_sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2"
+  },
+  "panel": {
+    "molecule_count": 8,
+    "records": [
+      {
+        "atom_count": 60,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_002527",
+        "package_index": 2527,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 2006264298
+      },
+      {
+        "atom_count": 60,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_002529",
+        "package_index": 2529,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 759507799
+      },
+      {
+        "atom_count": 66,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_002524",
+        "package_index": 2524,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 2110285248
+      },
+      {
+        "atom_count": 72,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_000861",
+        "package_index": 861,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 825374145
+      },
+      {
+        "atom_count": 78,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_000860",
+        "package_index": 860,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 2024430335
+      },
+      {
+        "atom_count": 72,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_002526",
+        "package_index": 2526,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 631708320
+      },
+      {
+        "atom_count": 72,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_000862",
+        "package_index": 862,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 1288334403
+      },
+      {
+        "atom_count": 78,
+        "canonical_target_pg": "D6h",
+        "molecule_id": "cof_002528",
+        "package_index": 2528,
+        "requested_targets": [
+          "C2",
+          "C3",
+          "D6h"
+        ],
+        "seed": 463504904
+      }
+    ],
+    "selection": "SHA-256-ranked 8 canonical D6h graphs"
+  },
+  "protocol_fingerprint": "1bd7174c784454f81e61bfd50d28755d267c3fac0db6bf8a533f810c06ed5c2e",
+  "purpose": "Hold graph, seed and all four raw ET-Flow samples fixed while changing only the legal requested point group C2/C3/D6h.",
+  "response_gate": {
+    "actual_pg_exact_match_descriptive": true,
+    "compatible_under_requested_pg_required": true,
+    "cross_action_errors_descriptive": true,
+    "minimum_kabsch_rmsd_angstrom": 0.05,
+    "minimum_responsive_fraction_per_target_pair": 0.75,
+    "primary_metric": "fraction of same-graph target pairs whose final structures differ after proper-rotation Kabsch alignment"
+  },
+  "schema_version": "our-etflow-target-pg-controllability-protocol-v1",
+  "scope": {
+    "composite_target_pg_controllability_claim": true,
+    "f02_used": true,
+    "hard_projection_used": true,
+    "known_canonical_graph": true,
+    "raw_etflow_target_pg_conditioning_claim": false
+  },
+  "shared_input_contract": {
+    "only_changed_variable": "requested Target_PG and its recovered graph action",
+    "reference_xyz_used_for_generation_or_selection": false,
+    "same_graph": true,
+    "same_raw_etflow_candidate_tensor": true,
+    "same_seed": true
+  },
+  "status": "FROZEN_BEFORE_CONTROLLABILITY_GENERATION",
+  "symmetry_protocol": {
+    "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+    "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+    "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+    "eigen_tolerance": 0.01,
+    "matrix_tolerance": 0.1,
+    "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+    "tolerance_angstrom": 0.3
+  },
+  "targets": [
+    "C2",
+    "C3",
+    "D6h"
+  ]
+}

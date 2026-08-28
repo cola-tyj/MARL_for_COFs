@@ -1,0 +1,65 @@
+{
+  "claim_boundary": {
+    "does_not_authorize_iid_test_or_core_ood": true,
+    "does_not_relax_ef2c3_parent_reproduction_threshold": true,
+    "does_not_revise_ef2c3_status": true,
+    "pass_means": "two-run numerical evidence only; next step is independent dual-run PG audit"
+  },
+  "decision": {
+    "fail_action": "stop the learned overlap branch; do not tune thresholds on the same panel",
+    "fail_status": "FAIL_ETFLOW_EF2C4_NUMERICAL_REPLICATION_STOP_LEARNED_OVERLAP_BRANCH",
+    "pass_action": "audit actual/compatible PG independently for both coordinate archives; keep IID-test sealed",
+    "pass_status": "PASS_ETFLOW_EF2C4_NUMERICAL_REPLICATION_ADVANCE_TO_DUAL_POINT_GROUP_AUDIT"
+  },
+  "execution": {
+    "repeat0_directory": "generative_model/runs/etflow_ef2c3_raw_sampling_v1",
+    "repeat1_directory": "generative_model/runs/etflow_ef2c4_repeat_v1",
+    "repeat_count_total": 2,
+    "runner": "generative_model.smoke.run_etflow_ef2c3_raw_sampling",
+    "same_checkpoint_panel_seed_prior_and_50_step_euler_ode": true,
+    "same_runner_and_frozen_ef2c3_protocol": true
+  },
+  "gate_thresholds": {
+    "candidate_bond_quality_fraction_each_min": 0.9,
+    "candidate_collision_failure_set_symmetric_difference_max": 2,
+    "candidate_collision_free_fraction_abs_difference_max": 0.03125,
+    "candidate_collision_free_fraction_each_min": 0.9,
+    "candidate_collision_free_gain_each_min": 0.05,
+    "candidate_count_each": 32,
+    "candidate_interrun_kabsch_rmsd_max_angstrom": 0.02,
+    "candidate_interrun_pair_distance_mae_max_angstrom": 0.005,
+    "mean_operation_rms_ratio_to_parent_each_max": 1.25,
+    "mean_overlap_loss_ratio_to_parent_each_max": 0.5,
+    "parent_interrun_kabsch_rmsd_max_angstrom": 0.02,
+    "parent_interrun_pair_distance_mae_max_angstrom": 0.005
+  },
+  "identity": {
+    "a2_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "ef2c3_protocol_sha256": "7fefb7d59ddc28dbd22302d9f8c8224b7a6be696eadeed75cd42238a0752180d",
+    "overlap_checkpoint_sha256": "e09a15a1a028b0ccd0e6b62f0b244b99adbf60bf2de815f349145c51c39babc1",
+    "repeat0_coordinates_sha256": "2adbb61332c031a5a1623a2edd6870adf73e1296447224d9cba2471ea6a7c0c9",
+    "repeat0_false_checks": [
+      "parent_reproduction"
+    ],
+    "repeat0_report_sha256": "362173ccf1384747d585a5b5831aef9b875c57cdc2ad64a47feeb8816c4c7a40",
+    "source_sha256": {
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/smoke/audit_etflow_ef2c4_reproducibility.py": "5af8101f49477c6ed19706323661d90f6e794f6a00034aac908ce04baa835a42",
+      "generative_model/smoke/build_etflow_ef2c4_reproducibility_protocol.py": "a938ea073fabe97afdd80a7c75c34547de916b0d48a65dc07283549901f8617a",
+      "generative_model/smoke/run_etflow_ef2c3_raw_sampling.py": "802ee369127c6a2f35c8ef87efc92bbc3925f6fa6e6320ae8ec4b6f348d5ad47"
+    }
+  },
+  "protocol_fingerprint": "f8a78a238157525e24e07acbbf44723d8d525b2732cc82722068e6b1041b06a9",
+  "purpose": "Repeat the frozen EF2-C3 CUDA raw ODE once and determine whether its collision, overlap, symmetry, and bond improvements are numerically reproducible.",
+  "route": "EF2-C4",
+  "schema_version": "etflow-ef2c4-reproducibility-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_validation_reused": true,
+    "posthoc_force_field_used": false,
+    "quality_claim": false
+  },
+  "status": "FROZEN_BEFORE_NUMERICAL_REPEAT_1"
+}

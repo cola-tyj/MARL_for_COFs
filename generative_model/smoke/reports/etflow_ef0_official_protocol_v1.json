@@ -1,0 +1,52 @@
+{
+  "decision": {
+    "fail_action": "stop ET-Flow branch; never map or delete unsupported elements",
+    "pass_action": "bind discovered ET-Flow/package/checkpoint identity and freeze EF1",
+    "pass_status": "PASS_ETFLOW_EF0B_OFFICIAL_PREFLIGHT_FREEZE_EF1"
+  },
+  "etflow": {
+    "base_seed": 20260824,
+    "checkpoint_source": "https://zenodo.org/records/14226681/files/drugs-o3.ckpt?download=1",
+    "model_name": "drugs-o3",
+    "n_timesteps": 10,
+    "num_samples_per_molecule": 1,
+    "sampler_type": "ode"
+  },
+  "gate_thresholds": {
+    "maximum_operation_error_angstrom": 1e-05
+  },
+  "identity": {
+    "parent_ef0a_report_path": "generative_model/smoke/reports/etflow_ef0_offline_v1.json",
+    "parent_ef0a_report_sha256": "e5f71cc1ebd48b48b8966d8d0f3f7646765100c4171b5963a1d306a797df5020",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_symmetry.py": "323af1e8c6be4cabc2ad472cc753e60240b2bcb54c590cec76e3652b8bea7cac",
+      "generative_model/smoke/run_etflow_ef0_official.py": "abf201062d01b434cf1f8e14616be70011f47f658cf82ac032916c789adea9bd"
+    }
+  },
+  "not_gated_quality_metrics": [
+    "minimum_pair_distance",
+    "projection_rmsd",
+    "actual point group",
+    "reference RMSD"
+  ],
+  "panel": {
+    "molecule_count": 4,
+    "package_indices": [
+      45,
+      81,
+      1684,
+      2378
+    ],
+    "sn_package_indices": [
+      1684,
+      2378
+    ]
+  },
+  "protocol_fingerprint": "a860418acaecc93a6db9386a9e776dc3d63e2807554a0aaf761f5ce3f4112133",
+  "purpose": "Official package/checkpoint identity, strict graph bridge and bounded forward preflight.",
+  "quality_claim": false,
+  "route": "EF0-B",
+  "schema_version": "etflow-ef0b-official-protocol-v1",
+  "status": "FROZEN_BEFORE_ETFLOW_INSTALL_OR_CHECKPOINT_DOWNLOAD"
+}

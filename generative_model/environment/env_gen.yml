@@ -1,0 +1,24 @@
+name: env_gen
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pytorch=2.5.0
+  - pytorch-cuda=12.1
+  - ca-certificates
+  - cxx-compiler
+  - openssl
+  - pip
+  - tqdm=4.70.0
+  - pip:
+      - gdown==5.2.0
+      - lightning==2.5.0.post0
+      - numpy==1.26.2
+      - openbabel-wheel==3.1.1.22
+      - pandas==2.2.2
+      - rdkit==2024.3.5
+      - scipy==1.11.4
+      - torchmetrics==1.6.1
+      - typing-extensions==4.12.2

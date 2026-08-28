@@ -1,0 +1,113 @@
+{
+  "schema_version": "uae3d-stage-conclusion-v1",
+  "created_on": "2026-08-17",
+  "status": "FAIL_HIERARCHICAL_V4_RAW_GATE_THRESHOLD_DRIFT_STOP_FOR_CALIBRATION_AUDIT",
+  "experiment": "hierarchical_v4_balanced_0016",
+  "source": {
+    "checkpoint": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a"
+  },
+  "artifacts": {
+    "report.json": "6afe33e374fed41c6643137786fa45283cc3445ca495559d9f8364178c010215",
+    "losses.npz": "5b53aab95e261e4667a2d6c4842487b2861f4e8e7eb2ba2424fda81b932c2fb5",
+    "last.pt": "137714cebeb146c5e6493e8f9f2363daf43ef0fe26d277729585b938be0881eb"
+  },
+  "optimization_integrity": {
+    "all_losses_and_gradients_finite": true,
+    "loss_first": 0.07343241572380066,
+    "loss_last": 0.06381883472204208,
+    "loss_monotonic_decrease": true,
+    "trainable_parameter_count": 4550,
+    "frozen_parameter_count": 637694,
+    "frozen_parameters_unchanged": true,
+    "coordinates_unchanged": true
+  },
+  "raw_zero_threshold_trajectory": {
+    "step_0": {
+      "wrong_unique_pair_count": 119,
+      "none_bond_accuracy": 0.9705320600272851,
+      "present_bond_accuracy": 0.9256756756756757,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules": 2
+    },
+    "step_4": {
+      "wrong_unique_pair_count": 129,
+      "none_bond_accuracy": 0.9672578444747613,
+      "present_bond_accuracy": 0.9391891891891891,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules": 2
+    },
+    "step_8": {
+      "wrong_unique_pair_count": 137,
+      "none_bond_accuracy": 0.9645293315143247,
+      "present_bond_accuracy": 0.9527027027027027,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules": 2
+    },
+    "step_12": {
+      "wrong_unique_pair_count": 157,
+      "none_bond_accuracy": 0.9587994542974079,
+      "present_bond_accuracy": 0.9594594594594594,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules": 2
+    },
+    "step_16": {
+      "wrong_unique_pair_count": 181,
+      "none_bond_accuracy": 0.9522510231923602,
+      "present_bond_accuracy": 0.9594594594594594,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules": 2,
+      "bond_representation_valid_molecules": 4,
+      "sanitize_valid_molecules": 2,
+      "connected_molecules": 2,
+      "coordinate_rmsd_max_angstrom": 0.14410918951034546
+    }
+  },
+  "frozen_raw_gate": {
+    "checks": {
+      "wrong_unique_pair_count_less_than_119": false,
+      "none_bond_accuracy_at_least_source": false,
+      "present_bond_accuracy_at_least_source": true,
+      "self_loop_accuracy_is_one": true,
+      "bond_exact_molecules_at_least_two": true,
+      "bond_representation_valid_molecules_is_four": true,
+      "small_exact_molecules_preserved": true,
+      "coordinate_rmsd_no_regression": true
+    },
+    "passed": false
+  },
+  "read_only_global_threshold_diagnostic": {
+    "protocol": "Scan one global threshold over max(type_logits)-none_logit; no per-molecule threshold.",
+    "source_step_3008": {
+      "zero_threshold_wrong_unique_pairs": 119,
+      "best_frozen_gate_feasible_threshold": 0.016652047634124756,
+      "best_frozen_gate_feasible_wrong_unique_pairs": 117,
+      "none_bond_accuracy": 0.9710777626193724,
+      "present_bond_accuracy": 0.9256756756756757,
+      "oracle_conditional_type_wrong_unique_pairs": 6
+    },
+    "hierarchical_step_16": {
+      "zero_threshold_wrong_unique_pairs": 181,
+      "best_frozen_gate_feasible_threshold": 0.6325861811637878,
+      "best_frozen_gate_feasible_wrong_unique_pairs": 106,
+      "none_bond_accuracy": 0.973806275579809,
+      "present_bond_accuracy": 0.9324324324324325,
+      "per_molecule_wrong_unique_pairs": [0, 0, 35, 71],
+      "exact_molecules": 2,
+      "oracle_conditional_type_wrong_unique_pairs": 6
+    },
+    "interpretation": "Training improved rank separation under a shifted global decision threshold, but the frozen zero-threshold inference rule drifted.",
+    "project_gate_effect": "Diagnostic only; it does not retroactively pass the failed raw gate."
+  },
+  "chemical_interpretation": {
+    "explicit_valence_warnings": "The two large molecules remain sanitize-invalid after structurally valid decoding.",
+    "sanitize_valid_molecules": 2,
+    "connected_molecules": 2,
+    "tier4_gate_passed": false
+  },
+  "decision": {
+    "extend_current_run": false,
+    "enter_tier32": false,
+    "next": "Implement and freeze a deterministic single-global-threshold calibration protocol using training/validation data only, then audit checkpoint ranking and threshold transfer before any further training."
+  }
+}

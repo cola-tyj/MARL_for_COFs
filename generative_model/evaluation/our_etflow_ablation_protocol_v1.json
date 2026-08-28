@@ -1,0 +1,444 @@
+{
+  "identity": {
+    "checkpoint_path": "generative_model/checkpoints/etflow/drugs-o3.ckpt",
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "dataset_graphs_sha256": "d95f2b8ec003d93ad79afbd8aa7406a2515df50a0b701271139b8c38d936605d",
+    "dataset_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "dataset_metadata_sha256": "d14a4ac4722b95e4be147843af75264a3d7809b0fcd85b85ee2821c05f0a6b02",
+    "iid_panel_protocol_sha256": "6dee96f0092747aaa6bf18660949652aa56718416976fa810d3212467676f86c",
+    "rare_panel_protocol_sha256": "290b2127b079da2a27432e0f7ab225353791a0fc6e06b2ec7c63cee1eb73e2a1",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/evaluation/audit_our_etflow_ablation_point_group.py": "224dfc7acf9777cdbd00b464367c9630bd67b4a4382fe75f4baf9dc1d6b97730",
+      "generative_model/evaluation/our_etflow_ablation.py": "ddc8008e90f62b783cfc58dde7117cfa3f584a696f65ea73d3c292f00e7ecdf1",
+      "generative_model/evaluation/run_our_etflow_ablation.py": "b8c8f447bbed77d90da48d4fdbf90f0f5d14777bbf52188331ecb5b74686f1da",
+      "generative_model/inference/generate_etflow_symmetric_xyz.py": "8c445c441ec1cf807941a3387dbca9265b079038a0c1ac1ccb92a2a7347b71a1",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v3.py": "bc125b39b7a1db7f4b3f7dd5230ce9cd8ae4cfb4004cda588adb7fadedb22c89",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v4.py": "ce61f53b04780d78bb281cd5f3e7184a92965019a583ac388fbf48f7ef8eb627",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v5.py": "88a6f1357acbf790a6a5197787cd8427992b4280c98f29131bc464ea461f283f",
+      "generative_model/optimization/etkdg_orbit_initializer.py": "e64ed195f7ffe89ba89677ea44dbbe6660627b6f139627c5e3a89a05d20fedf0",
+      "generative_model/optimization/force_field_support.py": "5343e67b1a7ee8ca103833b139609ebf1bcbf21d8adf860d7826386145cd9295",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c"
+    },
+    "v5_protocol_sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2"
+  },
+  "metrics": {
+    "energy_note": "UFF energies are compared only within paired routes of the same graph; cross-molecule means are additionally normalized per atom",
+    "primary": [
+      "independent pymatgen PG-compatible fraction",
+      "collision-free fraction at 0.6 angstrom",
+      "bond-length MAE to canonical coordinates",
+      "strict UFF single-point energy per atom",
+      "descriptive wall runtime",
+      "within-graph candidate diversity"
+    ],
+    "runtime_note": "wall timing is descriptive and machine-dependent; the ET-Flow prior time is measured once and attributed to each ET-Flow end-to-end route",
+    "secondary": [
+      "PG exact match",
+      "Kabsch RMSD to the one canonical conformer",
+      "all-pair distance MAE to the one canonical conformer"
+    ]
+  },
+  "paired_contract": {
+    "etflow_raw_coordinates_shared_by_routes": [
+      "etflow_raw",
+      "etflow_hard_projection",
+      "etflow_hard_projection_f02"
+    ],
+    "full_panel_denominator_for_failures": true,
+    "reference_xyz_role": "post-hoc bond/RMSD metrics only",
+    "reference_xyz_used_for_generation": false,
+    "reference_xyz_used_for_selection": false,
+    "same_base_seed": true,
+    "same_canonical_graph": true,
+    "same_requested_target_pg": true
+  },
+  "panel": {
+    "molecule_count": 32,
+    "records": [
+      {
+        "atom_count": 28,
+        "contains_sn": false,
+        "molecule_id": "cof_002092",
+        "package_index": 2092,
+        "seed": 1675955410,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 40,
+        "contains_sn": false,
+        "molecule_id": "cof_001017",
+        "package_index": 1017,
+        "seed": 732912784,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 50,
+        "contains_sn": false,
+        "molecule_id": "cof_002002",
+        "package_index": 2002,
+        "seed": 2044641550,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 18,
+        "contains_sn": false,
+        "molecule_id": "cof_000919",
+        "package_index": 919,
+        "seed": 2012941967,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 34,
+        "contains_sn": false,
+        "molecule_id": "cof_000857",
+        "package_index": 857,
+        "seed": 1475528833,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 30,
+        "contains_sn": false,
+        "molecule_id": "cof_002127",
+        "package_index": 2127,
+        "seed": 1502753595,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 40,
+        "contains_sn": false,
+        "molecule_id": "cof_001451",
+        "package_index": 1451,
+        "seed": 511923562,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 28,
+        "contains_sn": false,
+        "molecule_id": "cof_001521",
+        "package_index": 1521,
+        "seed": 1899100690,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 57,
+        "contains_sn": false,
+        "molecule_id": "cof_002463",
+        "package_index": 2463,
+        "seed": 765767302,
+        "split_core_ood": "val",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 21,
+        "contains_sn": false,
+        "molecule_id": "cof_002433",
+        "package_index": 2433,
+        "seed": 300580704,
+        "split_core_ood": "val",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 75,
+        "contains_sn": false,
+        "molecule_id": "cof_001364",
+        "package_index": 1364,
+        "seed": 297115378,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 33,
+        "contains_sn": false,
+        "molecule_id": "cof_002506",
+        "package_index": 2506,
+        "seed": 1525716707,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 60,
+        "contains_sn": false,
+        "molecule_id": "cof_002477",
+        "package_index": 2477,
+        "seed": 1769064834,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 51,
+        "contains_sn": false,
+        "molecule_id": "cof_001179",
+        "package_index": 1179,
+        "seed": 1042625265,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 51,
+        "contains_sn": false,
+        "molecule_id": "cof_000060",
+        "package_index": 60,
+        "seed": 2134742450,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 24,
+        "contains_sn": false,
+        "molecule_id": "cof_000070",
+        "package_index": 70,
+        "seed": 1024320445,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 57,
+        "contains_sn": false,
+        "molecule_id": "cof_001118",
+        "package_index": 1118,
+        "seed": 580297830,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 85,
+        "contains_sn": false,
+        "molecule_id": "cof_001372",
+        "package_index": 1372,
+        "seed": 222253042,
+        "split_core_ood": "test",
+        "split_iid": "train",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 101,
+        "contains_sn": false,
+        "molecule_id": "cof_001421",
+        "package_index": 1421,
+        "seed": 202718853,
+        "split_core_ood": "test",
+        "split_iid": "train",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 21,
+        "contains_sn": false,
+        "molecule_id": "cof_001041",
+        "package_index": 1041,
+        "seed": 924766765,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 45,
+        "contains_sn": false,
+        "molecule_id": "cof_001112",
+        "package_index": 1112,
+        "seed": 1372369299,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 45,
+        "contains_sn": false,
+        "molecule_id": "cof_001379",
+        "package_index": 1379,
+        "seed": 1132815257,
+        "split_core_ood": "val",
+        "split_iid": "train",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 45,
+        "contains_sn": false,
+        "molecule_id": "cof_001115",
+        "package_index": 1115,
+        "seed": 829129620,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 57,
+        "contains_sn": false,
+        "molecule_id": "cof_001113",
+        "package_index": 1113,
+        "seed": 1000834821,
+        "split_core_ood": "train",
+        "split_iid": "val",
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 72,
+        "contains_sn": false,
+        "molecule_id": "cof_002526",
+        "package_index": 2526,
+        "seed": 1240563228,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 72,
+        "contains_sn": false,
+        "molecule_id": "cof_002525",
+        "package_index": 2525,
+        "seed": 1982319617,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 72,
+        "contains_sn": false,
+        "molecule_id": "cof_002531",
+        "package_index": 2531,
+        "seed": 589729308,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 78,
+        "contains_sn": false,
+        "molecule_id": "cof_000860",
+        "package_index": 860,
+        "seed": 1080155323,
+        "split_core_ood": "test",
+        "split_iid": "train",
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 60,
+        "contains_sn": false,
+        "molecule_id": "cof_002530",
+        "package_index": 2530,
+        "seed": 22548787,
+        "split_core_ood": "train",
+        "split_iid": "train",
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 66,
+        "contains_sn": false,
+        "molecule_id": "cof_002524",
+        "package_index": 2524,
+        "seed": 2001263709,
+        "split_core_ood": "train",
+        "split_iid": "test",
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 60,
+        "contains_sn": false,
+        "molecule_id": "cof_002529",
+        "package_index": 2529,
+        "seed": 592625500,
+        "split_core_ood": "train",
+        "split_iid": "val",
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 72,
+        "contains_sn": false,
+        "molecule_id": "cof_000858",
+        "package_index": 858,
+        "seed": 355052295,
+        "split_core_ood": "test",
+        "split_iid": "train",
+        "target_pg": "D6h"
+      }
+    ],
+    "selection": "SHA-256-ranked 8 per Target_PG from the already frozen C2/C3 IID-test and all-S4/D6h panels; coordinates and outcome metrics were not used for selection",
+    "target_pg_counts": {
+      "C2": 8,
+      "C3": 8,
+      "D6h": 8,
+      "S4": 8
+    }
+  },
+  "protocol_fingerprint": "05e561c98ff8058a7264233cb9a00e5f89bdc54447abe5bb0ce50cc5f8cc3d49",
+  "purpose": "Paired decomposition of ETKDGv3, official ET-Flow raw prior, graph-action Reynolds hard projection, and frozen F0.2 refinement.",
+  "routes": {
+    "etflow_hard_projection": {
+      "action_source": "coordinate-free typed-graph automorphism recovery",
+      "candidate_count": 4,
+      "f02_used": false,
+      "hard_projection": "24 PCA orientations plus one Reynolds projection",
+      "selection": "frozen reference-free v5 projection rank per raw candidate"
+    },
+    "etflow_hard_projection_f02": {
+      "candidate_count": 4,
+      "definition": "frozen production v5 combination ranking and F0.2 selection",
+      "f02_used": true
+    },
+    "etflow_raw": {
+      "candidate_count": 4,
+      "n_timesteps": 50,
+      "selection": "lowest strict UFF single-point energy, then candidate id",
+      "target_pg_used": false
+    },
+    "etkdg_v3_best_of_n": {
+      "candidate_count": 4,
+      "maximum_iterations": 1000,
+      "selection": "lowest strict UFF single-point energy, then candidate id",
+      "target_pg_used": false,
+      "unconstrained_force_field_optimization_used": false,
+      "use_random_coordinates": false
+    }
+  },
+  "schema_version": "our-etflow-paired-ablation-protocol-v1",
+  "scope": {
+    "all_atoms_explicit_including_hydrogen": true,
+    "known_canonical_graph": true,
+    "new_graph_generation_claim": false,
+    "quality_claim_before_audit": false,
+    "raw_etflow_target_pg_conditioning_claim": false,
+    "target_pgs": [
+      "C2",
+      "C3",
+      "S4",
+      "D6h"
+    ],
+    "unseen_graph_claim": false
+  },
+  "status": "FROZEN_BEFORE_COORDINATE_GENERATION",
+  "symmetry_protocol": {
+    "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+    "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+    "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+    "eigen_tolerance": 0.01,
+    "matrix_tolerance": 0.1,
+    "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+    "tolerance_angstrom": 0.3
+  }
+}

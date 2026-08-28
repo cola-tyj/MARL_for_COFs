@@ -1,0 +1,860 @@
+{
+  "followup_deleted_paths": [
+    "generative_model/smoke/audit_geom_mirror.py",
+    "generative_model/smoke/build_smoke_split.py",
+    "generative_model/smoke/build_uae3d_bond_capacity_split.py",
+    "generative_model/smoke/run_official_geom.py",
+    "generative_model/tests/test_smoke_split.py"
+  ],
+  "initial_candidate_count": 159,
+  "cleanup_script_sha256": "ff17c2a781ceca9aedf27f57bccd818fff7025380ee390ab7eba15456435a1c6",
+  "policy": {
+    "canonical_data_preserved": true,
+    "frozen_json_reports_preserved": true,
+    "midi_and_semlaflow_checkpoints_preserved": false,
+    "models": [
+      "SemlaFlow",
+      "MiDi",
+      "UAE-3D"
+    ],
+    "our_etflow_preserved": true,
+    "uae3d_step_3008_checkpoint_preserved": true
+  },
+  "initial_reclaimable_bytes": 3570259259,
+  "retained_entrypoints": {
+    "models": [
+      "midi_bridge.py",
+      "midi_cof_runtime.py",
+      "semlaflow_bridge.py",
+      "uae3d_bond_calibration.py",
+      "uae3d_bond_capacity.py",
+      "uae3d_bridge.py",
+      "uae3d_gate_a.py",
+      "uae3d_hierarchical_bonds.py",
+      "uae3d_objectives.py",
+      "uae3d_reconstruction.py"
+    ],
+    "smoke": [
+      "audit_uae3d_bond_capacity.py",
+      "audit_uae3d_c23_reconstruction.py",
+      "audit_uae3d_gate_a.py",
+      "build_uae3d_c23_readonly_protocol.py",
+      "build_uae3d_gate_a_protocol.py",
+      "build_uae3d_split.py",
+      "finalize_uae3d_c23_readonly_audit.py",
+      "run_midi_forward.py",
+      "run_semlaflow_forward.py",
+      "run_uae3d_forward.py",
+      "train_uae3d_reconstruction.py"
+    ],
+    "tests": [
+      "test_midi_bridge.py",
+      "test_uae3d_bond_capacity.py",
+      "test_uae3d_bridge.py",
+      "test_uae3d_gate_a.py"
+    ]
+  },
+  "retained_uae_checkpoint": {
+    "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a"
+  },
+  "schema_version": "legacy-model-cleanup-v1",
+  "status": "APPLIED",
+  "targets": [
+    {
+      "bytes": 1135,
+      "kind": "directory",
+      "path": "generative_model/__pycache__"
+    },
+    {
+      "bytes": 375024911,
+      "kind": "directory",
+      "path": "generative_model/checkpoints/midi"
+    },
+    {
+      "bytes": 466875784,
+      "kind": "directory",
+      "path": "generative_model/checkpoints/semlaflow"
+    },
+    {
+      "bytes": 45115,
+      "kind": "directory",
+      "path": "generative_model/configs/midi"
+    },
+    {
+      "bytes": 86266,
+      "kind": "directory",
+      "path": "generative_model/conformer/__pycache__"
+    },
+    {
+      "bytes": 458202,
+      "kind": "directory",
+      "path": "generative_model/data/__pycache__"
+    },
+    {
+      "bytes": 14311,
+      "kind": "directory",
+      "path": "generative_model/environment/__pycache__"
+    },
+    {
+      "bytes": 525483,
+      "kind": "directory",
+      "path": "generative_model/evaluation/__pycache__"
+    },
+    {
+      "bytes": 391440,
+      "kind": "directory",
+      "path": "generative_model/inference/__pycache__"
+    },
+    {
+      "bytes": 47782,
+      "kind": "file",
+      "path": "generative_model/models/UAE3D_PLAN.md"
+    },
+    {
+      "bytes": 1026860,
+      "kind": "directory",
+      "path": "generative_model/models/__pycache__"
+    },
+    {
+      "bytes": 10570,
+      "kind": "file",
+      "path": "generative_model/models/audit_midi_compatibility.py"
+    },
+    {
+      "bytes": 6834,
+      "kind": "file",
+      "path": "generative_model/models/audit_uae3d_compatibility.py"
+    },
+    {
+      "bytes": 4327,
+      "kind": "file",
+      "path": "generative_model/models/semlaflow_objectives.py"
+    },
+    {
+      "bytes": 13762,
+      "kind": "file",
+      "path": "generative_model/models/uae3d_explicit_bond_head.py"
+    },
+    {
+      "bytes": 8797,
+      "kind": "file",
+      "path": "generative_model/models/uae3d_hard_pairs.py"
+    },
+    {
+      "bytes": 94813,
+      "kind": "directory",
+      "path": "generative_model/optimization/__pycache__"
+    },
+    {
+      "bytes": 594063,
+      "kind": "directory",
+      "path": "generative_model/runs/midi_overfit1"
+    },
+    {
+      "bytes": 30307,
+      "kind": "directory",
+      "path": "generative_model/runs/midi_overfit32"
+    },
+    {
+      "bytes": 7907,
+      "kind": "directory",
+      "path": "generative_model/runs/midi_overfit4"
+    },
+    {
+      "bytes": 14943,
+      "kind": "directory",
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_5seed"
+    },
+    {
+      "bytes": 330198,
+      "kind": "directory",
+      "path": "generative_model/runs/midi_zero_shot_geom_approx_stratified100"
+    },
+    {
+      "bytes": 120962879,
+      "kind": "directory",
+      "path": "generative_model/runs/semlaflow_official"
+    },
+    {
+      "bytes": 5305509,
+      "kind": "directory",
+      "path": "generative_model/runs/semlaflow_overfit1"
+    },
+    {
+      "bytes": 19247640,
+      "kind": "directory",
+      "path": "generative_model/runs/semlaflow_overfit32"
+    },
+    {
+      "bytes": 54737,
+      "kind": "directory",
+      "path": "generative_model/runs/semlaflow_overfit4"
+    },
+    {
+      "bytes": 64084750,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_engineering"
+    },
+    {
+      "bytes": 158351,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_explicit_engineering"
+    },
+    {
+      "bytes": 309509585,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit1"
+    },
+    {
+      "bytes": 3810081,
+      "kind": "directory",
+      "path": "generative_model/smoke/__pycache__"
+    },
+    {
+      "bytes": 20623,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_midi_deterministic_validation_loss.py"
+    },
+    {
+      "bytes": 6101,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_semlaflow_checkpoints.py"
+    },
+    {
+      "bytes": 23760,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_semlaflow_probabilities.py"
+    },
+    {
+      "bytes": 11792,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_uae3d_explicit_bond_head.py"
+    },
+    {
+      "bytes": 9332,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_uae3d_hard_pairs.py"
+    },
+    {
+      "bytes": 11978,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_uae3d_hierarchical_bonds.py"
+    },
+    {
+      "bytes": 8971,
+      "kind": "file",
+      "path": "generative_model/smoke/build_midi_geom_approx_statistics.py"
+    },
+    {
+      "bytes": 6624,
+      "kind": "file",
+      "path": "generative_model/smoke/build_midi_min_snr_weights.py"
+    },
+    {
+      "bytes": 6122,
+      "kind": "file",
+      "path": "generative_model/smoke/build_midi_split.py"
+    },
+    {
+      "bytes": 6567,
+      "kind": "file",
+      "path": "generative_model/smoke/build_midi_statistics.py"
+    },
+    {
+      "bytes": 6808,
+      "kind": "file",
+      "path": "generative_model/smoke/build_uae3d_calibration_split.py"
+    },
+    {
+      "bytes": 9563,
+      "kind": "file",
+      "path": "generative_model/smoke/build_uae3d_explicit_bond_head_pilot_protocol.py"
+    },
+    {
+      "bytes": 17934,
+      "kind": "file",
+      "path": "generative_model/smoke/calibrate_uae3d_bond_threshold.py"
+    },
+    {
+      "bytes": 14613,
+      "kind": "file",
+      "path": "generative_model/smoke/calibrate_uae3d_hard_pair_gradients.py"
+    },
+    {
+      "bytes": 6771,
+      "kind": "file",
+      "path": "generative_model/smoke/evaluate_semlaflow_checkpoint_sweep.py"
+    },
+    {
+      "bytes": 10318,
+      "kind": "file",
+      "path": "generative_model/smoke/evaluate_semlaflow_multiseed.py"
+    },
+    {
+      "bytes": 9264,
+      "kind": "file",
+      "path": "generative_model/smoke/export_midi_overfit.py"
+    },
+    {
+      "bytes": 9498,
+      "kind": "file",
+      "path": "generative_model/smoke/export_semlaflow_overfit.py"
+    },
+    {
+      "bytes": 13920,
+      "kind": "file",
+      "path": "generative_model/smoke/sample_midi_overfit.py"
+    },
+    {
+      "bytes": 12426,
+      "kind": "file",
+      "path": "generative_model/smoke/sample_midi_zero_shot.py"
+    },
+    {
+      "bytes": 25230,
+      "kind": "file",
+      "path": "generative_model/smoke/sample_midi_zero_shot_stratified.py"
+    },
+    {
+      "bytes": 23592,
+      "kind": "file",
+      "path": "generative_model/smoke/sample_semlaflow_overfit.py"
+    },
+    {
+      "bytes": 7941,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_geom_approx_stratified.py"
+    },
+    {
+      "bytes": 6143,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_geom_approx_zero_shot.py"
+    },
+    {
+      "bytes": 10823,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_geomstats_transfer_gate.py"
+    },
+    {
+      "bytes": 9642,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_lr1e6_multistep_pilot.py"
+    },
+    {
+      "bytes": 14268,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_min_snr_pilot.py"
+    },
+    {
+      "bytes": 8691,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_optimizer_stability.py"
+    },
+    {
+      "bytes": 4777,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_pretrained_tier1.py"
+    },
+    {
+      "bytes": 4949,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_tier1.py"
+    },
+    {
+      "bytes": 14021,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_midi_timestep_stratified_pilot.py"
+    },
+    {
+      "bytes": 9876,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_uae3d_explicit_bond_head_engineering.py"
+    },
+    {
+      "bytes": 9385,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_uae3d_explicit_bond_head_pilot.py"
+    },
+    {
+      "bytes": 28338,
+      "kind": "file",
+      "path": "generative_model/smoke/train_midi_overfit.py"
+    },
+    {
+      "bytes": 33712,
+      "kind": "file",
+      "path": "generative_model/smoke/train_semlaflow_overfit.py"
+    },
+    {
+      "bytes": 20284,
+      "kind": "file",
+      "path": "generative_model/smoke/train_uae3d_explicit_bond_head.py"
+    },
+    {
+      "bytes": 138541,
+      "kind": "directory",
+      "path": "generative_model/symmetry/__pycache__"
+    },
+    {
+      "bytes": 1017874,
+      "kind": "directory",
+      "path": "generative_model/tests/__pycache__"
+    },
+    {
+      "bytes": 8247,
+      "kind": "file",
+      "path": "generative_model/tests/test_midi_min_snr_weights.py"
+    },
+    {
+      "bytes": 5720,
+      "kind": "file",
+      "path": "generative_model/tests/test_midi_overfit_data.py"
+    },
+    {
+      "bytes": 4879,
+      "kind": "file",
+      "path": "generative_model/tests/test_midi_timestep_stratified_pilot.py"
+    },
+    {
+      "bytes": 14425,
+      "kind": "file",
+      "path": "generative_model/tests/test_midi_transfer_gate.py"
+    },
+    {
+      "bytes": 3302,
+      "kind": "file",
+      "path": "generative_model/tests/test_midi_zero_shot_stratified.py"
+    },
+    {
+      "bytes": 2242,
+      "kind": "file",
+      "path": "generative_model/tests/test_semlaflow_objectives.py"
+    },
+    {
+      "bytes": 3534,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_bond_calibration.py"
+    },
+    {
+      "bytes": 2909,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_explicit_bond_head.py"
+    },
+    {
+      "bytes": 2856,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_explicit_pilot_gate.py"
+    },
+    {
+      "bytes": 2075,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_explicit_trainer.py"
+    },
+    {
+      "bytes": 880,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_gradient_calibration.py"
+    },
+    {
+      "bytes": 3109,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_hard_pairs.py"
+    },
+    {
+      "bytes": 5547,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_hierarchical_bonds.py"
+    },
+    {
+      "bytes": 6844,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_objectives.py"
+    },
+    {
+      "bytes": 4160,
+      "kind": "file",
+      "path": "generative_model/tests/test_uae3d_tier_expansion.py"
+    },
+    {
+      "bytes": 7481,
+      "kind": "directory",
+      "path": "generative_model/visualization/__pycache__"
+    },
+    {
+      "bytes": 11681,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/__pycache__"
+    },
+    {
+      "bytes": 1744812829,
+      "kind": "directory",
+      "path": "generative_model/external/midi/data"
+    },
+    {
+      "bytes": 56647328,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/bond_refine_w10_coord10_lr1em5_0256"
+    },
+    {
+      "bytes": 369969,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/explicit_bond_head_0064_lr1em4"
+    },
+    {
+      "bytes": 2743331,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hard_pair_v3_engineering_step1_cpu"
+    },
+    {
+      "bytes": 2743331,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hard_pair_v3_engineering_step1_cpu_repeat"
+    },
+    {
+      "bytes": 10949498,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hard_pair_v3_pcgrad_0032"
+    },
+    {
+      "bytes": 2743965,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hard_pair_v3_pcgrad_engineering_step1_cpu"
+    },
+    {
+      "bytes": 2743965,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hard_pair_v3_pcgrad_engineering_step1_cpu_repeat"
+    },
+    {
+      "bytes": 10939375,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hierarchical_v4_balanced_0016"
+    },
+    {
+      "bytes": 2746281,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hierarchical_v4_balanced_engineering_step1_cpu"
+    },
+    {
+      "bytes": 2746282,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hierarchical_v4_balanced_engineering_step1_cpu_repeat"
+    },
+    {
+      "bytes": 2745695,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hierarchical_v4_engineering_step1_cpu"
+    },
+    {
+      "bytes": 2745694,
+      "kind": "directory",
+      "path": "generative_model/runs/uae3d_overfit4/hierarchical_v4_engineering_step1_cpu_repeat"
+    },
+    {
+      "bytes": 3933,
+      "kind": "file",
+      "path": "generative_model/smoke/statistics/midi_cof_iid_train_v1.json"
+    },
+    {
+      "bytes": 6645,
+      "kind": "file",
+      "path": "generative_model/smoke/statistics/midi_geom_tabasco_filtered_approx_v1.json"
+    },
+    {
+      "bytes": 7433,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/evaluation/__pycache__"
+    },
+    {
+      "bytes": 31776,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/model/__pycache__"
+    },
+    {
+      "bytes": 25245,
+      "kind": "directory",
+      "path": "generative_model/external/midi/midi/__pycache__"
+    },
+    {
+      "bytes": 26553,
+      "kind": "directory",
+      "path": "generative_model/external/semla-flow/semlaflow/__pycache__"
+    },
+    {
+      "bytes": 8819838,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/last.pt"
+    },
+    {
+      "bytes": 10171,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/data_provider/utils/__pycache__"
+    },
+    {
+      "bytes": 35966,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/evaluation/jodo/__pycache__"
+    },
+    {
+      "bytes": 32748,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/model/autoencoder/__pycache__"
+    },
+    {
+      "bytes": 38779,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/model/diffusion/__pycache__"
+    },
+    {
+      "bytes": 12870,
+      "kind": "directory",
+      "path": "generative_model/external/UAE-3D/model/property_prediction/__pycache__"
+    },
+    {
+      "bytes": 11661,
+      "kind": "directory",
+      "path": "generative_model/external/midi/midi/analysis/__pycache__"
+    },
+    {
+      "bytes": 9655,
+      "kind": "directory",
+      "path": "generative_model/external/midi/midi/datasets/__pycache__"
+    },
+    {
+      "bytes": 35479,
+      "kind": "directory",
+      "path": "generative_model/external/midi/midi/diffusion/__pycache__"
+    },
+    {
+      "bytes": 45420,
+      "kind": "directory",
+      "path": "generative_model/external/midi/midi/metrics/__pycache__"
+    },
+    {
+      "bytes": 16929,
+      "kind": "directory",
+      "path": "generative_model/external/midi/midi/models/__pycache__"
+    },
+    {
+      "bytes": 50125,
+      "kind": "directory",
+      "path": "generative_model/external/semla-flow/semlaflow/data/__pycache__"
+    },
+    {
+      "bytes": 130993,
+      "kind": "directory",
+      "path": "generative_model/external/semla-flow/semlaflow/models/__pycache__"
+    },
+    {
+      "bytes": 207896,
+      "kind": "directory",
+      "path": "generative_model/external/semla-flow/semlaflow/util/__pycache__"
+    },
+    {
+      "bytes": 8018032,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000064.pt"
+    },
+    {
+      "bytes": 8034992,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000128.pt"
+    },
+    {
+      "bytes": 8051952,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000192.pt"
+    },
+    {
+      "bytes": 8068976,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000256.pt"
+    },
+    {
+      "bytes": 8086000,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000320.pt"
+    },
+    {
+      "bytes": 8103024,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000384.pt"
+    },
+    {
+      "bytes": 8120048,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000448.pt"
+    },
+    {
+      "bytes": 8155824,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000576.pt"
+    },
+    {
+      "bytes": 8172848,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000640.pt"
+    },
+    {
+      "bytes": 8189872,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000704.pt"
+    },
+    {
+      "bytes": 8206960,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000768.pt"
+    },
+    {
+      "bytes": 8223984,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000832.pt"
+    },
+    {
+      "bytes": 8241008,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000896.pt"
+    },
+    {
+      "bytes": 8258032,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-000960.pt"
+    },
+    {
+      "bytes": 8293808,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001088.pt"
+    },
+    {
+      "bytes": 8310832,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001152.pt"
+    },
+    {
+      "bytes": 8327856,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001216.pt"
+    },
+    {
+      "bytes": 8344880,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001280.pt"
+    },
+    {
+      "bytes": 8361968,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001344.pt"
+    },
+    {
+      "bytes": 8378992,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001408.pt"
+    },
+    {
+      "bytes": 8396016,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001472.pt"
+    },
+    {
+      "bytes": 8431728,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001600.pt"
+    },
+    {
+      "bytes": 8448816,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001664.pt"
+    },
+    {
+      "bytes": 8465840,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001728.pt"
+    },
+    {
+      "bytes": 8482864,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001792.pt"
+    },
+    {
+      "bytes": 8499888,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001856.pt"
+    },
+    {
+      "bytes": 8516912,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001920.pt"
+    },
+    {
+      "bytes": 8534000,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-001984.pt"
+    },
+    {
+      "bytes": 8569712,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002112.pt"
+    },
+    {
+      "bytes": 8586736,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002176.pt"
+    },
+    {
+      "bytes": 8603760,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002240.pt"
+    },
+    {
+      "bytes": 8620848,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002304.pt"
+    },
+    {
+      "bytes": 8637872,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002368.pt"
+    },
+    {
+      "bytes": 8654896,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002432.pt"
+    },
+    {
+      "bytes": 8671920,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002496.pt"
+    },
+    {
+      "bytes": 8707696,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002624.pt"
+    },
+    {
+      "bytes": 8724720,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002688.pt"
+    },
+    {
+      "bytes": 8741744,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002752.pt"
+    },
+    {
+      "bytes": 8758768,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002816.pt"
+    },
+    {
+      "bytes": 8775792,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002880.pt"
+    },
+    {
+      "bytes": 8792880,
+      "kind": "file",
+      "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-002944.pt"
+    }
+  ]
+}

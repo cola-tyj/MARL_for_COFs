@@ -1,0 +1,322 @@
+{
+  "gate": {
+    "all_successful_values_finite": true,
+    "calculation_success_fraction_min": 0.875,
+    "collision_free_after_fraction_full_panel_min": 0.9,
+    "energy_nonincreasing_fraction_among_success_min": 0.95,
+    "interpretation": "A diagnostic physical-stability gate. Passing does not establish quantum accuracy or thermodynamic stability.",
+    "median_kabsch_rmsd_pre_to_post_angstrom_max": 0.5,
+    "pg_compatible_after_fraction_full_panel_min": 0.75
+  },
+  "identity": {
+    "dataset_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "parent_ablation_protocol_sha256": "f9ed9f7991dc5898e4bcd57632a47adc625715ee781fccc509debe9e4b819e9e",
+    "parent_ablation_report_sha256": "61b1d9043e81dd80034706914d4411f4cf2c80d72074a8c4e946f8c46eacc824",
+    "source_coordinates_sha256": "9c1f8376d920ed177d813202ab6514f8a821149e9898388247d345caf10b6233",
+    "source_point_group_report_sha256": "645b388fe5cdc051f0048000713a760b18c3a9120050b5728273286f0780917b",
+    "source_sha256": {
+      "generative_model/evaluation/audit_our_etflow_xtb_point_group.py": "583c73f0192c034dad5159fc21ab23118c704c8f98a93c122dfaaeeeb9ece6e8",
+      "generative_model/evaluation/our_etflow_xtb_relaxation.py": "5353e1da32eff587fe15af3fa6f44fc772ac5c154af6aab6674a2fcad8229ce9",
+      "generative_model/evaluation/run_our_etflow_xtb_relaxation.py": "d09aa002d7fa63f098d396e88e0206c4a8c06e3a3b278926243bcacc67ef5aad",
+      "generative_model/evaluation/summarize_our_etflow_xtb.py": "e4907f48038e7fa9558e24f19423ce48c744a90435ccff8b1cfa588b6ffe97c7"
+    }
+  },
+  "metrics": {
+    "collision_threshold_angstrom": 0.6,
+    "coordinate_unit": "angstrom",
+    "energy_unit": "eV",
+    "force_unit": "eV/angstrom",
+    "reported": [
+      "pre/post GFN2-xTB energy and energy per atom",
+      "pre/post maximum force",
+      "optimizer convergence and step count",
+      "pre/post collision state",
+      "pre/post bond-length error",
+      "pre/post Kabsch RMSD and pair-distance MAE",
+      "independent pre/post actual-PG and target compatibility",
+      "wall runtime"
+    ]
+  },
+  "panel": {
+    "molecule_count": 32,
+    "records": [
+      {
+        "atom_count": 28,
+        "molecule_id": "cof_002092",
+        "package_index": 2092,
+        "panel_id": 0,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 40,
+        "molecule_id": "cof_001017",
+        "package_index": 1017,
+        "panel_id": 1,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 50,
+        "molecule_id": "cof_002002",
+        "package_index": 2002,
+        "panel_id": 2,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 18,
+        "molecule_id": "cof_000919",
+        "package_index": 919,
+        "panel_id": 3,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 34,
+        "molecule_id": "cof_000857",
+        "package_index": 857,
+        "panel_id": 4,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 30,
+        "molecule_id": "cof_002127",
+        "package_index": 2127,
+        "panel_id": 5,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 40,
+        "molecule_id": "cof_001451",
+        "package_index": 1451,
+        "panel_id": 6,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 28,
+        "molecule_id": "cof_001521",
+        "package_index": 1521,
+        "panel_id": 7,
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 57,
+        "molecule_id": "cof_002463",
+        "package_index": 2463,
+        "panel_id": 8,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 21,
+        "molecule_id": "cof_002433",
+        "package_index": 2433,
+        "panel_id": 9,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 75,
+        "molecule_id": "cof_001364",
+        "package_index": 1364,
+        "panel_id": 10,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 33,
+        "molecule_id": "cof_002506",
+        "package_index": 2506,
+        "panel_id": 11,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 60,
+        "molecule_id": "cof_002477",
+        "package_index": 2477,
+        "panel_id": 12,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 51,
+        "molecule_id": "cof_001179",
+        "package_index": 1179,
+        "panel_id": 13,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 51,
+        "molecule_id": "cof_000060",
+        "package_index": 60,
+        "panel_id": 14,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 24,
+        "molecule_id": "cof_000070",
+        "package_index": 70,
+        "panel_id": 15,
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 57,
+        "molecule_id": "cof_001118",
+        "package_index": 1118,
+        "panel_id": 16,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 85,
+        "molecule_id": "cof_001372",
+        "package_index": 1372,
+        "panel_id": 17,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 101,
+        "molecule_id": "cof_001421",
+        "package_index": 1421,
+        "panel_id": 18,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 21,
+        "molecule_id": "cof_001041",
+        "package_index": 1041,
+        "panel_id": 19,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 45,
+        "molecule_id": "cof_001112",
+        "package_index": 1112,
+        "panel_id": 20,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 45,
+        "molecule_id": "cof_001379",
+        "package_index": 1379,
+        "panel_id": 21,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 45,
+        "molecule_id": "cof_001115",
+        "package_index": 1115,
+        "panel_id": 22,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 57,
+        "molecule_id": "cof_001113",
+        "package_index": 1113,
+        "panel_id": 23,
+        "target_pg": "S4"
+      },
+      {
+        "atom_count": 72,
+        "molecule_id": "cof_002526",
+        "package_index": 2526,
+        "panel_id": 24,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 72,
+        "molecule_id": "cof_002525",
+        "package_index": 2525,
+        "panel_id": 25,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 72,
+        "molecule_id": "cof_002531",
+        "package_index": 2531,
+        "panel_id": 26,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 78,
+        "molecule_id": "cof_000860",
+        "package_index": 860,
+        "panel_id": 27,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 60,
+        "molecule_id": "cof_002530",
+        "package_index": 2530,
+        "panel_id": 28,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 66,
+        "molecule_id": "cof_002524",
+        "package_index": 2524,
+        "panel_id": 29,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 60,
+        "molecule_id": "cof_002529",
+        "package_index": 2529,
+        "panel_id": 30,
+        "target_pg": "D6h"
+      },
+      {
+        "atom_count": 72,
+        "molecule_id": "cof_000858",
+        "package_index": 858,
+        "panel_id": 31,
+        "target_pg": "D6h"
+      }
+    ],
+    "selection": "exact 32-molecule paired-ablation panel; no result-based reselection",
+    "target_pg_counts": {
+      "C2": 8,
+      "C3": 8,
+      "D6h": 8,
+      "S4": 8
+    }
+  },
+  "protocol_fingerprint": "fd4237059adc894a567c31e9500cac72cf9edc0e366ad7ff633ecf83cfe77681",
+  "purpose": "Test whether the 32 frozen F0.2 coordinates remain collision-free and Target_PG-compatible after unconstrained GFN2-xTB relaxation.",
+  "relaxation": {
+    "accuracy": 1.0,
+    "ase_version": "3.24.0",
+    "calculator": "tblite.ase.TBLite",
+    "calculator_verbosity": 0,
+    "charge_source": "sum of canonical formal_charges",
+    "constraints": null,
+    "electronic_temperature_kelvin": 300.0,
+    "fmax_ev_per_angstrom": 0.1,
+    "hard_projection_during_relaxation": false,
+    "maximum_geometry_steps": 100,
+    "maximum_scf_iterations": 250,
+    "method": "GFN2-xTB",
+    "multiplicity_source": "1 + sum of canonical radical_electrons",
+    "optimizer": "ase.optimize.LBFGS",
+    "periodic_boundary_conditions": false,
+    "posthoc_force_field": false,
+    "tblite_version": "0.7.0",
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "schema_version": "our-etflow-gfn2-xtb-relaxation-protocol-v1",
+  "scope": {
+    "all_atoms_explicit_including_hydrogen": true,
+    "full_panel_denominator_for_failures": true,
+    "hard_projection_used_by_calculator": false,
+    "quality_claim_before_audit": false,
+    "source_coordinates": "etflow_hard_projection_f02",
+    "target_pg_used_by_calculator": false,
+    "unconstrained_relaxation": true
+  },
+  "status": "FROZEN_BEFORE_GFN2_XTB_RELAXATION",
+  "symmetry_protocol": {
+    "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+    "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+    "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+    "eigen_tolerance": 0.01,
+    "matrix_tolerance": 0.1,
+    "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+    "tolerance_angstrom": 0.3
+  }
+}

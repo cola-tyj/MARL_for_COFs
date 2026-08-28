@@ -1,0 +1,174 @@
+{
+  "accepted_before_quota": [
+    "phenanthrene",
+    "para_benzoquinone",
+    "fluorene",
+    "dibenzofuran",
+    "dibenzothiophene",
+    "cyclopropane",
+    "cyclononane",
+    "cyclododecane",
+    "cyclopentadecane",
+    "cubane",
+    "adamantane",
+    "spiropentane",
+    "cyclohexane_d6h",
+    "cyclohexasilane",
+    "cyclohexasulfur",
+    "cyclohexaphosphane"
+  ],
+  "rejected": [
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "naphthalene",
+      "smiles": "c1ccc2ccccc2c1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "anthracene",
+      "smiles": "c1ccc2cc3ccccc3cc2c1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "pyrene",
+      "smiles": "c1cc2ccc3cccc4ccc(c1)c2c34",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "biphenyl",
+      "smiles": "c1ccc(-c2ccccc2)cc1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "trans_stilbene",
+      "smiles": "c1ccc(/C=C/c2ccccc2)cc1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': False, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': False, 'unique_within_external_pool': True}",
+      "name": "para_dichlorobenzene",
+      "smiles": "Clc1ccc(Cl)cc1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': False, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': False, 'unique_within_external_pool': True}",
+      "name": "para_dibromobenzene",
+      "smiles": "Brc1ccc(Br)cc1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': False, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': False, 'unique_within_external_pool': True}",
+      "name": "para_diiodobenzene",
+      "smiles": "Ic1ccc(I)cc1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': False, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': False, 'unique_within_external_pool': True}",
+      "name": "terephthalonitrile",
+      "smiles": "N#Cc1ccc(C#N)cc1",
+      "target_pg": "C2"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "borazine",
+      "smiles": "[BH]1[NH][BH][NH][BH][NH]1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "benzene_c3",
+      "smiles": "c1ccccc1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': False, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': False, 'unique_within_external_pool': True}",
+      "name": "one_three_five_trichlorobenzene",
+      "smiles": "Clc1cc(Cl)cc(Cl)c1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': False, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': False, 'unique_within_external_pool': True}",
+      "name": "one_three_five_tribromobenzene",
+      "smiles": "Brc1cc(Br)cc(Br)c1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': False, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': False, 'unique_within_external_pool': True}",
+      "name": "one_three_five_tricyanobenzene",
+      "smiles": "N#Cc1cc(C#N)cc(C#N)c1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "trimesic_acid",
+      "smiles": "O=C(O)c1cc(C(=O)O)cc(C(=O)O)c1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "triphenylene",
+      "smiles": "c1ccc2c(c1)c1ccccc1c1ccccc21",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "one_three_five_triazine",
+      "smiles": "n1cncnc1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: canonical graph 不存在非平凡 C3 cyclic automorphism",
+      "name": "one_three_five_triphenylbenzene",
+      "smiles": "c1cc(-c2ccccc2)cc(-c2ccccc2)c1-c1ccccc1",
+      "target_pg": "C3"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "tetraphenylmethane",
+      "smiles": "c1ccc(C(c2ccccc2)(c2ccccc2)c2ccccc2)cc1",
+      "target_pg": "S4"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "benzene_d6h",
+      "smiles": "c1ccccc1",
+      "target_pg": "D6h"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "hexafluorobenzene",
+      "smiles": "Fc1c(F)c(F)c(F)c(F)c1F",
+      "target_pg": "D6h"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "hexachlorobenzene",
+      "smiles": "Clc1c(Cl)c(Cl)c(Cl)c(Cl)c1Cl",
+      "target_pg": "D6h"
+    },
+    {
+      "failure": "ValueError: nonoverlap checks failed: {'canonical_smiles_not_in_cof_v2': True, 'murcko_scaffold_not_in_cof_v2': False, 'exact_morgan_fingerprint_not_in_cof_v2': True, 'unique_within_external_pool': True}",
+      "name": "hexabromobenzene",
+      "smiles": "Brc1c(Br)c(Br)c(Br)c(Br)c1Br",
+      "target_pg": "D6h"
+    }
+  ],
+  "selected": [
+    "dibenzothiophene",
+    "para_benzoquinone",
+    "dibenzofuran",
+    "fluorene",
+    "cyclononane",
+    "cyclopentadecane",
+    "cyclopropane",
+    "cyclododecane",
+    "cubane",
+    "adamantane",
+    "cyclohexasilane",
+    "cyclohexane_d6h"
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "analyzer": {
+    "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+    "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+    "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+    "eigen_tolerance": 0.01,
+    "matrix_tolerance": 0.1,
+    "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+    "tolerance_angstrom": 0.3
+  },
+  "claim_boundary": {
+    "ef2c3_formal_fail_preserved": true,
+    "hard_projection_used": false,
+    "pass_is_small_panel_validation_only": true,
+    "point_group_tolerance_not_tuned": true,
+    "posthoc_force_field_used": false
+  },
+  "decision": {
+    "fail_action": "stop learned overlap branch; do not tune analyzer tolerance or reuse IID-test",
+    "fail_status": "FAIL_ETFLOW_EF2C5_DUAL_POINT_GROUP_AUDIT_STOP_LEARNED_OVERLAP_BRANCH",
+    "pass_action": "freeze a larger C2/C3 IID-validation panel; keep IID-test/Core-OOD sealed",
+    "pass_status": "PASS_ETFLOW_EF2C5_DUAL_POINT_GROUP_AUDIT_ADVANCE_TO_LARGER_IID_VALIDATION_PLAN"
+  },
+  "gate_thresholds": {
+    "analyzer_success_fraction_each_branch_min": 0.9,
+    "candidate_actual_pg_interrun_agreement_fraction_min": 0.9,
+    "candidate_c2_compatible_fraction_each_archive_min": 0.9,
+    "candidate_c3_compatible_fraction_each_archive_min": 0.75,
+    "candidate_compatible_label_interrun_agreement_fraction_min": 1.0,
+    "candidate_compatible_margin_below_parent_max": 0.03125,
+    "candidate_pg_compatible_fraction_each_archive_min": 0.9
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "ef2c4_result_sha256": "a814d054de683a86c529a065b87564b34dfde100ed35683ff08517070a6e40dd",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "repeat0_coordinates_sha256": "2adbb61332c031a5a1623a2edd6870adf73e1296447224d9cba2471ea6a7c0c9",
+    "repeat0_report_sha256": "362173ccf1384747d585a5b5831aef9b875c57cdc2ad64a47feeb8816c4c7a40",
+    "repeat1_coordinates_sha256": "a961d9ef491f8ae83f4e82607321b8b3edf0dbf1ed3b0fd10ca6a24180849a0b",
+    "repeat1_report_sha256": "34950018e7e92ce72b0fece8ab9eb699c60df3e7efdee07b608b5213f77768fa",
+    "source_sha256": {
+      "generative_model/data/symmetry.py": "efc312f29993e232082cf20449601662ef3007061bcea3d978bdec70bdce60b6",
+      "generative_model/evaluation/symmetry_metrics.py": "86ea5aca94b4180351c156c474b8ae84b1aa8d98ebadfef5b181dc333e333800",
+      "generative_model/smoke/audit_etflow_ef2c5_dual_point_groups.py": "083b3a857549b4fabdde654f993b175ce3c13a8d321958f7b6c977c612dc1d36",
+      "generative_model/smoke/build_etflow_ef2c5_dual_point_group_protocol.py": "9fde8c92c7e2dda7905ebebcb70294a9d7d2d0677cfb5af90464d0938e907b5f"
+    }
+  },
+  "panel": {
+    "candidate_count_each_archive": 32,
+    "molecule_count": 16,
+    "source_split": "same sealed IID-validation panel as EF2-B/C3/C4",
+    "target_pg_counts_each_archive": {
+      "C2": 24,
+      "C3": 8
+    }
+  },
+  "protocol_fingerprint": "26a3b3abb9a4e8150a2d9b8d374f0f05a0ed05b1608a9a4ce9cb9a17488d07af",
+  "purpose": "Run the canonical pymatgen point-group analyzer independently on A2 parent and EF2-C2 candidate coordinates from both numerical repeats.",
+  "route": "EF2-C5",
+  "schema_version": "etflow-ef2c5-dual-point-group-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "iid_test_used": false,
+    "iid_validation_reused": true,
+    "quality_claim": false,
+    "reference_xyz_used": false
+  },
+  "status": "FROZEN_BEFORE_INDEPENDENT_DUAL_POINT_GROUP_AUDIT"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": "inference-evaluation-tests-cleanup-v1",
+  "status": "APPLIED",
+  "policy": {
+    "v5_runtime_source_hash_closure_preserved": true,
+    "ablation_and_supplement_entrypoints_preserved": true,
+    "independent_auditor_separation_preserved": true,
+    "full_current_test_suite_preserved": true
+  },
+  "deleted": [
+    {
+      "path": "generative_model/inference/graph_action_extended_protocol_v1.json",
+      "bytes": 3165,
+      "sha256": "5ed75b67948f3f4ce1d20cf0c05211249effc49da1513b625c31bbb46e3f0916",
+      "reason": "zero references; its builders and executable branch were already removed"
+    },
+    {
+      "path": "generative_model/inference/graph_action_extended_protocol_v2.json",
+      "bytes": 3932,
+      "sha256": "3cf89ca1fa026ccf0eda9b90f1bee043615bffea8bfed336ea03e0570b4b8ac9",
+      "reason": "zero references; v5 directly freezes the resulting source modules instead"
+    }
+  ],
+  "deleted_bytes": 7097,
+  "structural_changes": [
+    "added lazy public inference.generate_v5 API",
+    "added inference and tests responsibility maps",
+    "documented evaluation builder/runner/auditor/summarizer separation"
+  ],
+  "scientific_protocol_changed": false,
+  "scientific_results_changed": false
+}

@@ -1,0 +1,58 @@
+{
+  "artifacts": {
+    "bond_only": {
+      "last.pt": "644baecc4f4ada08b86617f084d21135a8c44eff0ea17e99e9cc8c4d90b664a8",
+      "losses.npz": "19457709c64b20b73555ec33091410f4f3bf52005a53e9a598b9bbc998ec5a6f",
+      "report.json": "d77f4a1d7363bf3361084fe2968f96be102899117e01a0f8012c6494949e8396"
+    },
+    "coordinate_only": {
+      "last.pt": "a13e343920dcea1115ee3c3df90b6e758540fa39cca42ff44c9070e24dcf0129",
+      "losses.npz": "4e51bf240b544de4aa8b1db0dc6398ed0e511ca52d78f4bdcc473597a44906dd",
+      "report.json": "b4c0a0f65685619757830fb44424c2c541ec1c9b7c84b1c84176cd3ddd5b7ac2"
+    }
+  },
+  "baseline_step_1024": {
+    "atom_correct": 10,
+    "bond_pair_correct": 74,
+    "connected": false,
+    "coordinate_rmsd_angstrom": 2.533944845199585,
+    "none_bond_correct": 52,
+    "pair_distance_mae_angstrom": 1.272789716720581,
+    "present_bond_correct": 14,
+    "sanitize_valid": false,
+    "self_loop_correct": 8
+  },
+  "branches": {
+    "bond_only": {
+      "atom_correct": 10,
+      "bond_pair_correct": 78,
+      "connected": false,
+      "coordinate_rmsd_angstrom": 2.241196393966675,
+      "none_bond_correct": 50,
+      "pair_distance_mae_angstrom": 1.0490610599517822,
+      "present_bond_correct": 18,
+      "sanitize_valid": false,
+      "self_loop_correct": 10
+    },
+    "coordinate_only": {
+      "atom_correct": 10,
+      "bond_pair_correct": 85,
+      "connected": false,
+      "coordinate_rmsd_angstrom": 1.4235953092575073,
+      "none_bond_correct": 72,
+      "pair_distance_mae_angstrom": 0.4623660445213318,
+      "present_bond_correct": 8,
+      "sanitize_valid": true,
+      "self_loop_correct": 5
+    }
+  },
+  "decision": {
+    "advance_to_combined_pilot": true,
+    "advance_to_tier_4": false,
+    "reason": "bond-only made present/self exact but degraded none; coordinate-only strongly improved geometry and none/sanitize but degraded present/self. The signals are complementary, so test a combined objective from the shared step-1024 source."
+  },
+  "metrics_version": "uae3d-mean-reconstruction-v1.1",
+  "schema_version": "1.0",
+  "source_checkpoint_sha256": "99c4e819802fa2b5051ff08cdaf2996e4f744b7e7d6c891298133d2f49360c5d",
+  "status": "PASS_U2_SINGLE_VARIABLE_SIGNAL_ADVANCE_TO_COMBINED_PILOT"
+}

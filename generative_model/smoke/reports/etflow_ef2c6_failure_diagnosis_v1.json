@@ -1,0 +1,112 @@
+{
+  "candidate_pg_regressions": [],
+  "candidate_repaired_parent_pg_failures": [
+    [
+      1571,
+      2026084671
+    ],
+    [
+      1809,
+      2026084909
+    ]
+  ],
+  "failed_checks": [
+    "candidate_c3_compatible"
+  ],
+  "formal_ef2c6_status_preserved": true,
+  "identity": {
+    "geometry_report_sha256": "9f7cb8cbf161d93063641759dc6141a63966855af9724e35f82c3b39fe996c11",
+    "point_group_report_sha256": "47a1a28a7f7afe9daac522ee1122cd1bcbcb52b75c15af67b95aca0349ffcc66",
+    "protocol_sha256": "01fb5c7cf8150514e852f1da61a0c0cbafaede0b1771cee03ca03eebc255a619",
+    "summarizer_source_sha256": "0b3e721aa7eebca4bc18ced0fb8c28d69803ce82fee3b1b63e196d1dc892ea04"
+  },
+  "interpretation": "Overall, C2, geometry, and joint thresholds passed. The sole frozen Gate failure was C3 compatible 12/16 below 14/16. The fixed checkpoint therefore does not advance to IID-test and must not be rescued by threshold tuning.",
+  "joint_failures": [
+    {
+      "actual_pg": null,
+      "bond_length_mae_to_reference_angstrom": 0.2724054130362974,
+      "bond_quality": false,
+      "collision_free": true,
+      "minimum_all_pair_distance_angstrom": 0.8087604149217064,
+      "package_index": 2429,
+      "pg_compatible": false,
+      "pg_failure": "ValueError: 候选操作中不存在完整 C3 目标子群",
+      "seed": 2026085529,
+      "target_pg": "C3"
+    },
+    {
+      "actual_pg": null,
+      "bond_length_mae_to_reference_angstrom": 1.6578112851311404,
+      "bond_quality": false,
+      "collision_free": false,
+      "minimum_all_pair_distance_angstrom": 0.43973865912181914,
+      "package_index": 81,
+      "pg_compatible": false,
+      "pg_failure": "ValueError: 候选操作中不存在完整 C3 目标子群",
+      "seed": 2026083181,
+      "target_pg": "C3"
+    },
+    {
+      "actual_pg": null,
+      "bond_length_mae_to_reference_angstrom": 0.08909008648279985,
+      "bond_quality": true,
+      "collision_free": true,
+      "minimum_all_pair_distance_angstrom": 0.9007503282212693,
+      "package_index": 1377,
+      "pg_compatible": false,
+      "pg_failure": "ValueError: 候选操作中不存在完整 C3 目标子群",
+      "seed": 2026084477,
+      "target_pg": "C3"
+    },
+    {
+      "actual_pg": null,
+      "bond_length_mae_to_reference_angstrom": 0.012505661704052913,
+      "bond_quality": true,
+      "collision_free": true,
+      "minimum_all_pair_distance_angstrom": 1.0727740343262548,
+      "package_index": 418,
+      "pg_compatible": false,
+      "pg_failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+      "seed": 2026083518,
+      "target_pg": "C2"
+    },
+    {
+      "actual_pg": "C2",
+      "bond_length_mae_to_reference_angstrom": 0.1208935510033963,
+      "bond_quality": true,
+      "collision_free": false,
+      "minimum_all_pair_distance_angstrom": 0.5142124463111076,
+      "package_index": 1790,
+      "pg_compatible": true,
+      "pg_failure": null,
+      "seed": 2026084890,
+      "target_pg": "C2"
+    },
+    {
+      "actual_pg": null,
+      "bond_length_mae_to_reference_angstrom": 0.07615550867737785,
+      "bond_quality": true,
+      "collision_free": true,
+      "minimum_all_pair_distance_angstrom": 1.0127298785037087,
+      "package_index": 1407,
+      "pg_compatible": false,
+      "pg_failure": "ValueError: 候选操作中不存在完整 C3 目标子群",
+      "seed": 2026084507,
+      "target_pg": "C3"
+    }
+  ],
+  "metrics": {
+    "candidate_c2_compatible_count": 47,
+    "candidate_c3_compatible_count": 12,
+    "candidate_compatible_count": 59,
+    "candidate_exact_match_count": 43,
+    "candidate_joint_geometry_pg_count": 58,
+    "candidate_pg_regression_count": 0,
+    "candidate_repaired_parent_pg_failure_count": 2,
+    "joint_failure_count": 6,
+    "parent_compatible_count": 57
+  },
+  "next_modeling_problem": "C3-specific conditioning/generalization, with one severe C3 geometry outlier; a future model change requires a new training branch and new validation protocol.",
+  "schema_version": "etflow-ef2c6-failure-diagnosis-v1",
+  "status": "DIAGNOSED_EF2C6_C3_GENERALIZATION_FAILURE_STOP_FROZEN_CHECKPOINT"
+}

@@ -1,0 +1,82 @@
+{
+  "decision": {
+    "fail_action": "do not train; redesign the symmetry-compatible collision direction",
+    "fail_status": "FAIL_ETFLOW_EF2C_DIRECTION_REDESIGN_BEFORE_TRAINING",
+    "pass_action": "freeze a new A2-parent collision-head training protocol",
+    "pass_status": "PASS_ETFLOW_EF2C_DIRECTION_FREEZE_TRAINING_BRANCH"
+  },
+  "direction": {
+    "coordinate_projection": false,
+    "cutoff_angstrom": 0.8,
+    "force_field": false,
+    "maximum_atom_displacement_angstrom": 0.4,
+    "pair_scope": "unique canonical nonbonded atom pairs",
+    "parameter_search": false,
+    "step_fraction": 1.0,
+    "symmetry_compatibility": "Reynolds average of vector field"
+  },
+  "gate_thresholds": {
+    "all_candidate_symmetry_error_increase_max_angstrom": 1e-05,
+    "bond_length_mae_to_reference_angstrom_max": 0.15,
+    "known_collision_loss_improved_fraction_min": 1.0,
+    "known_minimum_nonbonded_distance_improved_fraction_min": 1.0,
+    "post_direction_bond_quality_fraction_min": 0.9,
+    "post_direction_collision_free_fraction_min": 0.9
+  },
+  "identity": {
+    "parent_coordinates_sha256": "e579589c8f6669f7e466683c65eb0174c4af8d6d753555e2b36ffe059425b94b",
+    "parent_report_sha256": "50b02e46636883d19e2d3a6be3cc9e769b9b2c6310da80fb0b804ae305403ded",
+    "source_sha256": {
+      "generative_model/models/etflow_pg_collision_aware.py": "0789cc37627914443bd690808f21e83473ff90f64113b21843c37ec4fb431f61",
+      "generative_model/smoke/audit_etflow_ef2c_collision_direction.py": "23542ab7389d82ea9f730eb3da14f66a7754e7b84c809001307d91d914cb5cfa",
+      "generative_model/smoke/build_etflow_ef2c_collision_direction_protocol.py": "98bba24dbbc868af97ab21ab0218ba69c1d5090be0df4431162efbf295df3401",
+      "generative_model/tests/test_etflow_pg_collision_aware.py": "910044bd6ee907206c649717d9bb432ab06228a30d9efea353dd4403b5cb722a"
+    }
+  },
+  "panel": {
+    "candidate_count": 32,
+    "known_collision_case_count": 6,
+    "known_collision_cases": [
+      {
+        "package_index": 1611,
+        "seed": 2026084511
+      },
+      {
+        "package_index": 1611,
+        "seed": 2026184511
+      },
+      {
+        "package_index": 2265,
+        "seed": 2026085165
+      },
+      {
+        "package_index": 2265,
+        "seed": 2026185165
+      },
+      {
+        "package_index": 1522,
+        "seed": 2026084422
+      },
+      {
+        "package_index": 2359,
+        "seed": 2026085259
+      }
+    ],
+    "source": "all 32 frozen EF2-B IID-validation correct-action endpoints"
+  },
+  "protocol_fingerprint": "52fece282eef285e7158e3a51f82ee0662b6b146527e087beba5b6a0aa941fbf",
+  "purpose": "Check whether one PG-compatible analytic nonbonded repulsion direction improves the frozen EF2-B raw endpoints before any new training.",
+  "route": "EF2-C",
+  "schema_version": "etflow-ef2c-collision-direction-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "engineering_direction_only": true,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_validation_reused": true,
+    "parent_outputs_mutated": false,
+    "posthoc_force_field_used": false,
+    "quality_claim": false
+  },
+  "status": "FROZEN_BEFORE_COLLISION_DIRECTION_DIAGNOSTIC"
+}

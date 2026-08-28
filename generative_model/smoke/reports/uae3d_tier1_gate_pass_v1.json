@@ -1,0 +1,40 @@
+{
+  "artifact_hashes": {
+    "best_step_64.pt": "32a190dd1dd690b2dfe1265783acd42f5ff8f30c6ec73c139361fd2790e3ed69",
+    "last.pt": "799018b89002d404ebfcf8c0693c95efd34299b8929ceb3d5cf9d6cc15f54b39",
+    "losses.npz": "238b984ffa09d624a50a649ae2dc866e27067d013712280b2ebae14accaff036",
+    "report.json": "64b163f24745f793a560d7cfee25190274550c90758bc6d21c7fa934c05f2e9d"
+  },
+  "final_step_128": {
+    "atom_correct": 10,
+    "bond_pair_correct": 100,
+    "connected": true,
+    "coordinate_rmsd_angstrom": 0.048132363706827164,
+    "none_bond_correct": 72,
+    "pair_distance_mae_angstrom": 0.04442491754889488,
+    "present_bond_correct": 18,
+    "representation_status": "VALID",
+    "sanitize_valid": true,
+    "self_loop_correct": 10
+  },
+  "gate": {
+    "coordinate_rmsd_limit_angstrom": 0.05,
+    "passed": true,
+    "passing_audit_steps": [64, 128]
+  },
+  "objective": {
+    "balanced_bond_aux_weight": 1.0,
+    "learning_rate": 0.00003,
+    "mean_coordinate_aux_weight": 10.0,
+    "version": "uae3d-exact-reconstruction-aux-v1"
+  },
+  "schema_version": "1.0",
+  "selected_tier4_initialization": {
+    "checkpoint": "checkpoints/step-000064.pt",
+    "coordinate_rmsd_angstrom": 0.04471674934029579,
+    "reason": "lowest passing audited RMSD with all categorical and chemistry checks exact",
+    "sha256": "32a190dd1dd690b2dfe1265783acd42f5ff8f30c6ec73c139361fd2790e3ed69"
+  },
+  "status": "PASS_U2_TIER1_ADVANCE_TO_TIER4",
+  "tier": 1
+}

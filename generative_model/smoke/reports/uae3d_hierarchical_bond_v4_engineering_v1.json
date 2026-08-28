@@ -1,0 +1,109 @@
+{
+  "schema_version": "uae3d-stage-conclusion-v1",
+  "created_on": "2026-08-17",
+  "status": "PASS_HIERARCHICAL_V4_ENGINEERING_RELEASE_16_STEP_PILOT",
+  "source": {
+    "checkpoint": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a"
+  },
+  "architecture_audit": {
+    "report": "generative_model/smoke/reports/uae3d_hierarchical_bond_architecture_audit_v1.json",
+    "report_sha256": "96108f33a332f175963160084bbf9e79f0523f8b4f5ea88e00473140369cc999",
+    "legacy_wrong_unique_pairs": 179,
+    "constrained_max_wrong_unique_pairs": 119,
+    "legacy_present_accuracy": 0.8513513513513513,
+    "constrained_max_present_accuracy": 0.9256756756756757,
+    "constrained_bond_representation_valid_molecules": 4
+  },
+  "rejected_unbalanced_engineering": {
+    "reason": "Within-molecule existence CE was still dominated by none pairs.",
+    "initial_present_accuracy": 0.9256756756756757,
+    "final_present_accuracy": 0.9121621621621622,
+    "decision": "Rejected before formal training; existence loss changed to molecule/none-present balanced."
+  },
+  "released_objective": {
+    "version": "uae3d-exact-reconstruction-aux-v4-constrained-hierarchical-bonds-strata-balanced",
+    "trainable_scope": "bond-head",
+    "trainable_parameter_count": 4550,
+    "frozen_parameter_count": 637694,
+    "official_loss_weight": 0.0,
+    "hierarchical_bond_weight": 1.0,
+    "present_score_reduction": "max",
+    "existence_balance": "molecule_then_none_present_equal",
+    "conditional_type_balance": "molecule_equal_on_target_present_unique_pairs",
+    "diagonal_self": "structural_class_5",
+    "off_diagonal_self": "forbidden_by_decode"
+  },
+  "deterministic_engineering": {
+    "runs": [
+      {
+        "name": "hierarchical_v4_balanced_engineering_step1_cpu",
+        "report_sha256": "259e4ee2f6c2401f3791267251ca6744098908a075e0ca4c2ce2ac52623be8d5"
+      },
+      {
+        "name": "hierarchical_v4_balanced_engineering_step1_cpu_repeat",
+        "report_sha256": "a335c47a56df93cde8ef65369431dc9942962cdcbfc646f2e69ae37fead40395"
+      }
+    ],
+    "losses_npz_sha256_both": "9298e143569195b1fa5e67b527abd555a2d5269ec28e4afb46af6204e0ed0e30",
+    "last_pt_sha256_both": "b7ba5a1be6c4a5eed8a01b4f8984051addfcd01642830d96124cd782ea3c8c56",
+    "model_state_fingerprint_both": "eb5821974e8a83fa34feb832bac0540b282492116fb08825bb4103aa31403260",
+    "losses_bytes_identical": true,
+    "checkpoint_bytes_identical": true,
+    "final_metrics_identical": true,
+    "frozen_parameters_unchanged": true,
+    "all_losses_and_gradients_finite": true
+  },
+  "one_step_trajectory": {
+    "initial": {
+      "wrong_unique_pair_count": 119,
+      "bond_full_pair_accuracy": 0.9693535925830543,
+      "none_bond_accuracy": 0.9705320600272851,
+      "present_bond_accuracy": 0.9256756756756757,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules": 2,
+      "bond_representation_valid_molecules": 4,
+      "coordinate_rmsd_max_angstrom": 0.14410921931266785
+    },
+    "final": {
+      "wrong_unique_pair_count": 118,
+      "bond_full_pair_accuracy": 0.9696111254184908,
+      "none_bond_accuracy": 0.9705320600272851,
+      "present_bond_accuracy": 0.9324324324324325,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules": 2,
+      "bond_representation_valid_molecules": 4,
+      "coordinate_rmsd_max_angstrom": 0.14410921931266785
+    }
+  },
+  "engineering_gate": {
+    "checks": {
+      "two_runs_byte_deterministic": true,
+      "frozen_parameters_unchanged": true,
+      "coordinates_unchanged": true,
+      "wrong_unique_pairs_improved": true,
+      "none_accuracy_no_regression": true,
+      "present_accuracy_no_regression": true,
+      "self_accuracy_no_regression": true,
+      "bond_exact_no_regression": true,
+      "all_representations_structurally_valid": true
+    },
+    "passed": true
+  },
+  "formal_pilot_gate": {
+    "max_steps": 16,
+    "audit_every_steps": 4,
+    "initialization": "selected step-3008 checkpoint, not an engineering checkpoint",
+    "required_at_step_16": {
+      "wrong_unique_pair_count_less_than": 119,
+      "none_bond_accuracy_at_least": 0.9705320600272851,
+      "present_bond_accuracy_at_least": 0.9256756756756757,
+      "self_loop_accuracy": 1.0,
+      "bond_exact_molecules_at_least": 2,
+      "bond_representation_valid_molecules": 4,
+      "small_exact_package_indices_preserved": [864, 1135],
+      "coordinate_rmsd_max_angstrom": 0.14410921931266785
+    },
+    "decision_if_failed": "Stop without extending or entering tier-32."
+  }
+}

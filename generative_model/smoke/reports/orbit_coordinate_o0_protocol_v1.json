@@ -1,0 +1,201 @@
+{
+  "decision": {
+    "fail_action": "repair only hard pooling/expansion or batch plumbing; do not train",
+    "fail_status": "FAIL_ORBIT_COORDINATE_O0_REPAIR_INTERFACE_ONLY",
+    "pass_action": "implement trainer, freeze O1 source hashes and run one 512-step C2/C3 denoising Gate",
+    "pass_status": "PASS_ORBIT_COORDINATE_O0_FREEZE_O1"
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "environment": {
+      "conda": "env_cof",
+      "numpy": "1.26.4",
+      "pymatgen": "2025.3.10",
+      "python": "3.10.16",
+      "torch": "1.13.1",
+      "torch_cuda_build": "11.7"
+    },
+    "flow_failure_report_sha256": "27c07670e14f254658aab42f1a93806444e7fa8db0841e332498956d5dce6c85",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "orbit_interface_report_sha256": "434b69b3e92a5c03b33d9d88dcf00dfdd0538bacca4e73e88677e361765adc0b",
+    "source_panel_sha256": "791443909591b08246a5f755269ed09638bf5a4a891350788829cd942fa26545",
+    "source_sha256": {
+      "generative_model/models/graph_pg_3d_denoiser_multichannel.py": "83b87991617adff306a2b9ed18ce718392ff6bc9281d88d0cdc6f38fce39fc63",
+      "generative_model/models/orbit_coordinate_denoiser.py": "9c2de5ba8abd5c18857414f7c62b1ef9e5e78dcdcd44d9353e8e56d6dc37e301",
+      "generative_model/models/symmetry_by_construction.py": "0ba4cdb17ab3f73d3d19cdbd76f4970422b4f88f1f0a3a6a6b8a96632ce9996a",
+      "generative_model/smoke/audit_orbit_coordinate_o0.py": "109b9bdfb9220d1f06602e75290e76cfd0822f09c2e33a504eed1fc182123e25",
+      "generative_model/tests/test_orbit_coordinate_denoiser.py": "2372dacfafc53ee5e9ac32d4fed27172cea29102d4ad2414cd9bd7e761e8c837"
+    },
+    "split_iid_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1"
+  },
+  "model": {
+    "configuration": {
+      "base": {
+        "atom_vocab_size": 13,
+        "bond_vocab_size": 5,
+        "channel_normalization": "independent mean aggregation per destination atom",
+        "coordinate_scale": 0.1,
+        "global_scale_ratio": 0.25,
+        "hidden_dim": 96,
+        "known_graph_only": true,
+        "layer_count": 6,
+        "local_cutoff_angstrom": 4.5,
+        "local_scale_ratio": 0.5,
+        "message_channels": [
+          "bonded",
+          "local_nonbonded",
+          "global_nonbonded"
+        ],
+        "parameter_count": 1145970,
+        "pg_vocab_size": 4,
+        "schema_version": "graph-pg-3d-egnn-multichannel-denoiser-v1"
+      },
+      "canonical_graph_mutation": false,
+      "hard_expansion": "stored target O(3) operations and permutation indices",
+      "known_group_action_required": true,
+      "output_parameterization": "one pooled representative coordinate per target orbit",
+      "parameter_count": 1145970,
+      "schema_version": "graph-pg-3d-orbit-hard-denoiser-v1"
+    },
+    "constructor": {
+      "atom_vocab_size": 13,
+      "bond_vocab_size": 5,
+      "coordinate_scale": 0.1,
+      "global_scale_ratio": 0.25,
+      "hidden_dim": 96,
+      "layer_count": 6,
+      "local_cutoff_angstrom": 4.5,
+      "local_scale_ratio": 0.5,
+      "pg_vocab_size": 4
+    }
+  },
+  "o0_engineering_gate": {
+    "canonical_graph_unchanged": true,
+    "deterministic_repeat_exact": true,
+    "e3_with_conjugated_operations": true,
+    "invalid_vocab_and_group_action_fail_strictly": true,
+    "maximum_operation_error_angstrom": 1e-05,
+    "real_c2_c3_forward_backward_finite": true,
+    "strict_sn_forward_no_fallback": true,
+    "unit_tests_required": 5
+  },
+  "o1_candidate_not_yet_authorized": {
+    "authorization_rule": "O0 must pass first; trainer source and final O1 thresholds must then be frozen in a separate protocol",
+    "batch_size_molecules": 4,
+    "evaluate_steps": [
+      0,
+      128,
+      256,
+      512
+    ],
+    "maximum_steps": 512,
+    "panel": "same frozen 32 IID-train / 8 IID-validation C2/C3 panel",
+    "quality_gate_draft": {
+      "collision_free_fraction_min": 0.75,
+      "correct_pg_better_than_swapped_fraction_min": 0.625,
+      "maximum_operation_error_angstrom": 1e-05,
+      "validation_bond_mae_ratio_max": 0.85,
+      "validation_coordinate_rmsd_ratio_max": 0.85,
+      "validation_recovery_improved_fraction_min": 0.75
+    },
+    "training_noise_sigmas_angstrom": [
+      0.15,
+      0.5,
+      1.0
+    ]
+  },
+  "panels": {
+    "sn_engineering_package_index": 1684,
+    "sn_role": "IID-train strict-forward only; not added to C2/C3 quality panel",
+    "source": "generative_model/smoke/reports/graph_pg_3d_coordinate_flow_fast32_protocol_v1.json",
+    "train_audit": {
+      "atom_count_max": 63,
+      "atom_count_min": 12,
+      "mean_coordinate_dof_ratio": 0.4623015873015873,
+      "molecules": 32,
+      "orbit_count_max": 31,
+      "orbit_count_min": 6,
+      "target_pg": {
+        "C2": 24,
+        "C3": 8
+      }
+    },
+    "train_package_indices": [
+      1430,
+      242,
+      461,
+      613,
+      443,
+      2060,
+      1541,
+      2344,
+      2107,
+      1726,
+      193,
+      1554,
+      1880,
+      961,
+      2119,
+      1907,
+      2270,
+      1668,
+      468,
+      1026,
+      825,
+      686,
+      1599,
+      1812,
+      1229,
+      1259,
+      1152,
+      80,
+      76,
+      1288,
+      1144,
+      1360
+    ],
+    "validation_audit": {
+      "atom_count_max": 60,
+      "atom_count_min": 15,
+      "mean_coordinate_dof_ratio": 0.4583333333333333,
+      "molecules": 8,
+      "orbit_count_max": 20,
+      "orbit_count_min": 5,
+      "target_pg": {
+        "C2": 6,
+        "C3": 2
+      }
+    },
+    "validation_package_indices": [
+      575,
+      1074,
+      845,
+      1490,
+      1080,
+      334,
+      1254,
+      1215
+    ]
+  },
+  "protocol_fingerprint": "cf669f7e3b14bab6a3a939bbc2eedcc281f7c38a762f989fe5908345d9d39fdd",
+  "purpose": "Bounded engineering Gate for an E(3)-equivariant graph denoiser whose atom-wise proposals are pooled to orbit representatives and hard-expanded by the stored group action.",
+  "report_schema_version": "orbit-coordinate-o0-engineering-report-v1",
+  "schema_version": "orbit-coordinate-o0-protocol-v1",
+  "scope": {
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "element_vocab_size": 13,
+    "explicit_h": true,
+    "model_quality_claimed": false,
+    "new_graph_generation_claimed": false,
+    "prior_generation_claimed": false,
+    "test_used": false
+  },
+  "status": "FROZEN_BEFORE_ORBIT_COORDINATE_O0_ENGINEERING",
+  "task_contract": {
+    "input": "immutable explicit-H sparse graph + Target_PG + exact-symmetry noisy coordinates + stored target operations/permutations/orbits",
+    "output": "centroid-zero full-atom coordinates parameterized only by pooled orbit representatives",
+    "stage_claim": "denoising engineering only; not prior sampling or new molecule generation",
+    "target": "nearest hard-symmetry coordinates derived from canonical v2 coordinates"
+  }
+}

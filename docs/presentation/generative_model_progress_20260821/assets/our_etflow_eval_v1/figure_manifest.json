@@ -1,0 +1,299 @@
+{
+  "artifacts": [
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/energy_vs_symmetry_error.png",
+      "sha256": "f4d76b6e671ecf0501fd1da697af19ed49c9e53def0134086c4b74fc4140eb0e"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/energy_vs_symmetry_error.svg",
+      "sha256": "8828217ec27a73519e466df701469a1a41a7f7e4515d81c14f9ce285e950ba32"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/evaluation_summary.csv",
+      "sha256": "04b50c543d84a62736b0a0823e98acb177f9b80d3fde90ab4c29093e19b0e932"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/paired_ablation_overview.png",
+      "sha256": "704aa4107561eb3ba6605278aebcc03a5c647167157ee62829acb8c40183c876"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/paired_ablation_overview.svg",
+      "sha256": "eb1f96e0ed509229e4202a979e03146ac918267b5335e8ca0eceb361241d2eb5"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/point_group_success_rates.png",
+      "sha256": "338a34fa77018a7c53ccdd75fe2941490876c577171aa18b758bc51f3be15ae7"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/point_group_success_rates.svg",
+      "sha256": "46c2aca0a37085c8d8d33826687fde9ccceb53ba7956553f5c282496aeac9ff0"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/runtime_vs_joint_success.png",
+      "sha256": "f2253d96614be23cb46924ceb9c4d51de225d406a56242f9688a8182176094ef"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/runtime_vs_joint_success.svg",
+      "sha256": "64fc3dabf3d005c9159626e022ef546d05c586c1c7c7c8a0744aa0170de33dce"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xtb_energy_change_vs_symmetry_error.png",
+      "sha256": "73bb52b14057485df35666083700abbe9e4a9bfc4264930833a774b99611e687"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xtb_energy_change_vs_symmetry_error.svg",
+      "sha256": "0c0354373eca1c816284700981651bf6f0ee53bcad060cf40697fba00e92fbad"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xtb_relaxation_overview.png",
+      "sha256": "3831f4187d21ffa06deb3324344eb6770b87cf324ef8037a5f07b8b1dbe4fb9b"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xtb_relaxation_overview.svg",
+      "sha256": "d3e3ca8e526fa4b6bc267bd3f3363c2827b9c6905da3828fdbbaf4866f21c816"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xtb_relaxation_records.csv",
+      "sha256": "ecf61c9b6a9b1bd577b1244aee1cd6fbe53ffb48a2983db395f02c38ec748f9b"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xtb_xyz_before_after.png",
+      "sha256": "4fdea187a80b651138c6ede6545a92eee3d898d4ba6b267efb2ca7fc5989d90b"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xtb_xyz_before_after.svg",
+      "sha256": "47e616c6c9559dbc14d293110b62ee4f77c36d235715b8ec8aaec27eea14b2f0"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000858_xtb_after.xyz",
+      "sha256": "614a3b2bfa9f9761678ff075819d77bf8fa41e0fc23a0fce660a2504c0ccfb05"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000858_xtb_before.xyz",
+      "sha256": "331634f4a5fbac3178c3deb4cf4bef6cda0197bd5c710264d9ee847babab0553"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000861_C2.xyz",
+      "sha256": "136c064ca5b3b98f6c577dc2c7b780d621b31f6913e880607ced2c3e21b38214"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000861_C3.xyz",
+      "sha256": "b1e509aa545099bedc263ac0142d91aedf3bc433e78f8c2f0c6a44f5908d10ad"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000861_D6h.xyz",
+      "sha256": "420557900e1c3da9d9a3103d762efd1ab22ade9248f5d9d6dea4cc8b2ceb28dd"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002092_etflow_hard_projection.xyz",
+      "sha256": "059a4c6cf91e3c7b9539d6ea756ca14ab1cfab351ca887315f1115c1fd9ef63d"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002092_etflow_hard_projection_f02.xyz",
+      "sha256": "83a268f5e63f93bd2046a612472dee7b38a2cd8d02908a3f7294d88e6691f474"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002526_xtb_after.xyz",
+      "sha256": "ee0bd4b6c0a9d772a284d40916addccf8305fed6e52bf5531adbfabf33042ccb"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002526_xtb_before.xyz",
+      "sha256": "d8b592709c92c090e0058b9c63b3c86eb6e549089fb568ae4f5a61d68a45d121"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002529_C2.xyz",
+      "sha256": "8fc1fc88e60ed4439d9155baf806ca6b43c5d555441a56738bfffbbfb906b8ba"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002529_C3.xyz",
+      "sha256": "88e951be466924ebedbb7325e04ab5b5faed52ed168daba5c6ec7799654f2354"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002529_D6h.xyz",
+      "sha256": "bf28ce3f844b2640f6d3e40a40c5c8f89868ac2fb7d87cc88ae89d6583f03d56"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples_overview.png",
+      "sha256": "73d6130d27a7ad3d9136ddeebea470ba631eee3568d4cfcfab01eb19b7182e2c"
+    },
+    {
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples_overview.svg",
+      "sha256": "eb77e0027302dcfd5acbfbc4ad0fe260b89fee5c8ca87f0540646412b01e3ae3"
+    }
+  ],
+  "builder_source_sha256": "483208f1dd6d8430546d05ddba28847def0fa3a7b038e0aaa874a5765e9a3b75",
+  "input_files": [
+    {
+      "path": "generative_model/runs/our_etflow_ablation_v1/report.json",
+      "sha256": "61b1d9043e81dd80034706914d4411f4cf2c80d72074a8c4e946f8c46eacc824"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_ablation_v1/coordinates.npz",
+      "sha256": "9c1f8376d920ed177d813202ab6514f8a821149e9898388247d345caf10b6233"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_ablation_v1/point_group_report.json",
+      "sha256": "645b388fe5cdc051f0048000713a760b18c3a9120050b5728273286f0780917b"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_core_ood_v1/report.json",
+      "sha256": "c5b1c35e791d79057642933b36769514b69463899caba93d7747c1e9cd49cea8"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_core_ood_v1/coordinates.npz",
+      "sha256": "4778914b36761496fcb30f697df2030833c8f33a41b0e9f5d21eea64e6b272e1"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_core_ood_v1/point_group_report.json",
+      "sha256": "ba081d9d53cd1ce25082ccb47a5569a58fd3ee6cecf6a35f96b6421ab22b0f9d"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_external_v1/report.json",
+      "sha256": "a90c181c7caf1cf61184fed9e0462e62f6e88506573f45fe4b21c859539a579f"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_external_v1/coordinates.npz",
+      "sha256": "31330e695684d3340eff80686ad6ce2a8766dd3d706df1f25c0fd4fc4f150d0d"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_external_v1/point_group_report.json",
+      "sha256": "7033a8a57bc95d69321e2335b6d81f8c6f6fb025499189c70556bec2e6710ff8"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_controllability_v1/report.json",
+      "sha256": "9ec6314e89192d38e1c1c58314f1dd52a1c25599cffe249565e147ca08f3ca61"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_controllability_v1/coordinates.npz",
+      "sha256": "535dd6a1ff1338e969e4a630b27e95deaed72e9babd859f7c9ea85916c9d071a"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_controllability_v1/controllability_audit_v2.json",
+      "sha256": "52e812b23bddf309f888fc4cc7eb2f2e06f936ecbd13e2cfb7a09d1e65eb2eb7"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/relaxation_report.json",
+      "sha256": "e5dd255e4cba3f07286eec7125872df67dfd3b4a3b3d6a1a62ef5023fbd2167c"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/relaxed_coordinates.npz",
+      "sha256": "0f021158df49c265aa697e46ac69f2de4b0385dfcdc3f57778f39a81282281e7"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/point_group_report.json",
+      "sha256": "f7b7bbe2578b82bc57d3956a8cce7f788fc4e3853afb2e5fefc468d914bc3d4f"
+    },
+    {
+      "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/summary.json",
+      "sha256": "72cdbba684038602c4ad791e89d61cb57550bc32d01a96a1590bc28222e91e6a"
+    }
+  ],
+  "schema_version": "our-etflow-presentation-assets-v1",
+  "status": "PASS_PRESENTATION_ASSETS_BUILT_FROM_FROZEN_RESULTS",
+  "xyz_examples": [
+    {
+      "molecule_id": "cof_002092",
+      "package_index": 2092,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002092_etflow_hard_projection.xyz",
+      "role": "failure_collision_after_hard_projection",
+      "route": "etflow_hard_projection",
+      "target_pg": "C2"
+    },
+    {
+      "molecule_id": "cof_002092",
+      "package_index": 2092,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002092_etflow_hard_projection_f02.xyz",
+      "role": "success_same_graph_after_f02",
+      "route": "etflow_hard_projection_f02",
+      "target_pg": "C2"
+    },
+    {
+      "molecule_id": "cof_002529",
+      "package_index": 2529,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002529_C2.xyz",
+      "role": "failure_c2_c3_collapse",
+      "route": "our_etflow_v5",
+      "target_pg": "C2"
+    },
+    {
+      "molecule_id": "cof_002529",
+      "package_index": 2529,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002529_C3.xyz",
+      "role": "failure_c2_c3_collapse",
+      "route": "our_etflow_v5",
+      "target_pg": "C3"
+    },
+    {
+      "molecule_id": "cof_002529",
+      "package_index": 2529,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002529_D6h.xyz",
+      "role": "failure_c2_c3_collapse",
+      "route": "our_etflow_v5",
+      "target_pg": "D6h"
+    },
+    {
+      "molecule_id": "cof_000861",
+      "package_index": 861,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000861_C2.xyz",
+      "role": "success_multi_pg_response",
+      "route": "our_etflow_v5",
+      "target_pg": "C2"
+    },
+    {
+      "molecule_id": "cof_000861",
+      "package_index": 861,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000861_C3.xyz",
+      "role": "success_multi_pg_response",
+      "route": "our_etflow_v5",
+      "target_pg": "C3"
+    },
+    {
+      "molecule_id": "cof_000861",
+      "package_index": 861,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000861_D6h.xyz",
+      "role": "success_multi_pg_response",
+      "route": "our_etflow_v5",
+      "target_pg": "D6h"
+    },
+    {
+      "actual_pg": "D6h",
+      "molecule_id": "cof_000858",
+      "package_index": 858,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000858_xtb_before.xyz",
+      "role": "xtb_symmetry_breaking",
+      "route": "our_etflow_v5_then_unconstrained_gfn2_xtb",
+      "stage": "before",
+      "target_pg": "D6h"
+    },
+    {
+      "actual_pg": "D3h",
+      "molecule_id": "cof_000858",
+      "package_index": 858,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_000858_xtb_after.xyz",
+      "role": "xtb_symmetry_breaking",
+      "route": "our_etflow_v5_then_unconstrained_gfn2_xtb",
+      "stage": "after",
+      "target_pg": "D6h"
+    },
+    {
+      "actual_pg": "D6h",
+      "molecule_id": "cof_002526",
+      "package_index": 2526,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002526_xtb_before.xyz",
+      "role": "xtb_symmetry_retained",
+      "route": "our_etflow_v5_then_unconstrained_gfn2_xtb",
+      "stage": "before",
+      "target_pg": "D6h"
+    },
+    {
+      "actual_pg": "D6h",
+      "molecule_id": "cof_002526",
+      "package_index": 2526,
+      "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/xyz_examples/cof_002526_xtb_after.xyz",
+      "role": "xtb_symmetry_retained",
+      "route": "our_etflow_v5_then_unconstrained_gfn2_xtb",
+      "stage": "after",
+      "target_pg": "D6h"
+    }
+  ]
+}

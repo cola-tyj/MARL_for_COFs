@@ -1,0 +1,86 @@
+{
+  "artifact_hashes": {
+    "gradient_calibration_report.json": "cc2a08b4bdd9102e5c41401a1a58bd42d769ba35c0f75a7f83db9aa6104c22d0",
+    "hard_pair_tail_audit.json": "dc7beb285379eb478dcb391390cda6f07153d90c697a27367b43f8ad958cf592",
+    "pcgrad_run_1_last.pt": "1e1818b53b8e8ba987dd010b2b0bac176872bd41539b5dd414a53a17e89591aa",
+    "pcgrad_run_1_losses.npz": "fdb1786bbe75b96b2bbf38bf5e8dc754f2091036bc5d830330085d08e6f021de",
+    "pcgrad_run_1_report.json": "5697a99c392627d4ad7d8f4ec36e3bd2b31e46aac892a700bbd60d4b29292842",
+    "pcgrad_run_2_last.pt": "1e1818b53b8e8ba987dd010b2b0bac176872bd41539b5dd414a53a17e89591aa",
+    "pcgrad_run_2_losses.npz": "fdb1786bbe75b96b2bbf38bf5e8dc754f2091036bc5d830330085d08e6f021de",
+    "pcgrad_run_2_report.json": "82cf89f999a76266f75d3e2c7f00ea3743e7b1c22b3f054a11c7a42e1a2bca89"
+  },
+  "calibration": {
+    "aggregate_conflicts": {
+      "balanced_vs_hard_ce": -0.5726449489593506,
+      "balanced_vs_hard_margin": -0.6638031005859375,
+      "official_vs_hard_ce": -0.7661136984825134,
+      "official_vs_hard_margin": -0.857121467590332
+    },
+    "hard_pair_count": 326,
+    "hard_pair_counts_by_stratum": {
+      "none": 205,
+      "present": 64,
+      "self": 57
+    },
+    "margin_threshold": 0.5,
+    "present_vs_self_ce_cosine": -0.8411635160446167,
+    "present_vs_self_margin_cosine": -0.9765450954437256
+  },
+  "decision": {
+    "advance_to_tier_32": false,
+    "release_32_step_pcgrad_pilot": true,
+    "reason": "The v3 objective and exact bond-head scope are deterministic and preserve all frozen parameters and coordinates. Stratum gradients conflict strongly, so fixed-order PCGrad is required. A one-step PCGrad update improves total/none/self accuracy and limits the present regression relative to naive summation.",
+    "step_32_gate": {
+      "atom_exact_molecules": 4,
+      "bond_exact_small_molecules_must_remain": [864, 1135],
+      "coordinate_rmsd_must_equal_initial": true,
+      "hard_pair_count_must_be_below": 326,
+      "none_accuracy_must_be_at_least": 0.9620736698499318,
+      "present_accuracy_must_be_at_least": 0.8513513513513513,
+      "self_accuracy_must_be_at_least": 0.8714285714285714
+    }
+  },
+  "engineering_step_1": {
+    "bond_full_pair_accuracy_after": 0.9575070821529745,
+    "bond_full_pair_accuracy_before": 0.9562194179757919,
+    "frozen_parameter_count": 637694,
+    "frozen_parameters_unchanged": true,
+    "model_state_fingerprint": "082b3816cb11cec7d8ad267e2d6c7235ee27476b630c533cb4fbd0558b32fd3d",
+    "none_accuracy_after": 0.96343792633015,
+    "none_accuracy_before": 0.9620736698499318,
+    "pcgrad_conflict_pairs": 3,
+    "present_accuracy_after": 0.8445945945945946,
+    "present_accuracy_before": 0.8513513513513513,
+    "rmsd_max_after_angstrom": 0.14410921931266785,
+    "rmsd_max_before_angstrom": 0.14410921931266785,
+    "self_accuracy_after": 0.8857142857142857,
+    "self_accuracy_before": 0.8714285714285714,
+    "trainable_parameter_count": 4550
+  },
+  "objective": {
+    "balanced_bond_aux_weight": 0.0,
+    "gradient_surgery": "pcgrad-strata",
+    "hard_pair_ce_weight": 1.0,
+    "hard_pair_margin": 0.5,
+    "hard_pair_margin_weight": 0.2123097364513648,
+    "learning_rate": 1e-05,
+    "mean_coordinate_aux_weight": 0.0,
+    "official_loss_weight": 0.0,
+    "trainable_scope": "bond-head",
+    "version": "uae3d-exact-reconstruction-aux-v3-bond-head-hard-margin"
+  },
+  "schema_version": "1.0",
+  "source_checkpoint": {
+    "path": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "step": 3008
+  },
+  "status": "PASS_HARD_PAIR_V3_PCGRAD_ENGINEERING_RELEASE_32_STEP_PILOT",
+  "tests_passed": 16,
+  "two_run_determinism": {
+    "final_evaluation_identical": true,
+    "frozen_fingerprint_identical": true,
+    "loss_arrays_identical": true,
+    "model_state_fingerprint_identical": true
+  }
+}

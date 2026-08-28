@@ -1,0 +1,148 @@
+{
+  "decision": {
+    "advance_to_full_dataset": false,
+    "fail_status": "FAIL_GRAPH_PG_3D_G22_C2_TIER1_STOP_AND_DIAGNOSE",
+    "pass_if": "all unchanged G2 invariant and final-step quality checks pass at step 1024",
+    "pass_status": "PASS_GRAPH_PG_3D_G22_C2_TIER1_ADVANCE_TO_C23_TIER4",
+    "tier4_requires_new_frozen_protocol": true
+  },
+  "fixed_validation": {
+    "evaluate_steps": [
+      0,
+      256,
+      512,
+      768,
+      1024
+    ],
+    "hard_projected_output_evaluated": true,
+    "noise_sigma_angstrom": 0.15,
+    "raw_output_evaluated": true,
+    "seeds": [
+      20260901,
+      20260902,
+      20260903,
+      20260904,
+      20260905,
+      20260906,
+      20260907,
+      20260908
+    ],
+    "symmetry_analyzer": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "gate_thresholds_final_step": {
+    "maximum_projected_atom_symmetry_error_angstrom_max": 0.0001,
+    "maximum_projected_operation_rms_angstrom_max": 1e-05,
+    "mean_projected_coordinate_rmsd_angstrom_max": 0.05,
+    "mean_raw_coordinate_rmsd_angstrom_max": 0.08,
+    "projected_collision_free_cases_min": 8,
+    "projected_pg_compatible_cases_min": 8,
+    "projected_rmsd_improved_cases_min": 8,
+    "raw_rmsd_improved_cases_min": 8,
+    "validation_cases": 8
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "g1_protocol_sha256": "3550ab5fff77924a126c132d7e2bd59bd016cae068720c0a168921d94cde5ce8",
+    "g21_final_report_sha256": "081000d3289de52497045aec838d2b0fa81a31b7461608057d5909bd2328e779",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "model_source_relative_path": "generative_model/models/graph_pg_3d_denoiser_multichannel.py",
+    "model_source_sha256": "83b87991617adff306a2b9ed18ce718392ff6bc9281d88d0cdc6f38fce39fc63",
+    "projection_source_sha256": "5420fd170eac1efd13380f3f242e546f4bfeac359836570df6aaab4cb8ddd1c4",
+    "trainer_source_relative_path": "generative_model/smoke/train_graph_pg_3d_g2_tier1.py",
+    "trainer_source_sha256": "19b5d873c82012048a51767084c47e36af0ee32858e53d665ed0652ce662f897"
+  },
+  "model": {
+    "atom_vocab_size": 13,
+    "bond_vocab_size": 5,
+    "coordinate_scale": 0.1,
+    "coordinate_update": "relative vector times learned invariant scalar per channel",
+    "global_scale_ratio": 0.25,
+    "hidden_dim": 96,
+    "layer_count": 6,
+    "local_cutoff_angstrom": 4.5,
+    "local_scale_ratio": 0.5,
+    "message_edges": "dynamic directed full-pair partitioned into canonical bonded, current-distance local nonbonded, and global nonbonded channels with independent normalization",
+    "parameter_count": 1145970,
+    "pg_vocab_size": 4,
+    "schema_version": "graph-pg-3d-egnn-multichannel-denoiser-v1"
+  },
+  "objective": {
+    "all_pair_distance_mse": "mean_(i<j) (d_pred-d_target)^2",
+    "all_pair_distance_mse_weight": 0.25,
+    "angle_cosine_mse": "mean over canonical bonded neighbor triplets (cos(angle_pred)-cos(angle_target))^2",
+    "angle_cosine_mse_weight": 0.1,
+    "bond_length_mse": "mean_(i,j in known bonds) (d_pred-d_target)^2",
+    "bond_length_mse_weight": 0.25,
+    "coordinate_mse": "mean_i ||pred_i-target_i||^2",
+    "coordinate_mse_weight": 1.0,
+    "soft_symmetry_mse": "mean_(g,i) ||pred@R_g.T-pred[perm_g]||^2",
+    "soft_target_symmetry_mse_weight": 0.1
+  },
+  "package_indices": [
+    2162
+  ],
+  "protocol_fingerprint": "1620ad430f46e070991a18d51930c98f759c5a3874a280e6ffd1e5dad0abe8d0",
+  "purpose": "Pre-registered C2 tier-1 test of a three-channel graph+Target_PG-to-3D denoiser. Canonical bonded, local nonbonded, and global nonbonded messages are aggregated separately; all-pair distance and local bond-angle losses add geometry supervision.",
+  "report_schema_version": "graph-pg-3d-g22-tier1-report-v1",
+  "required_invariants": {
+    "all_losses_and_gradients_finite": true,
+    "all_outputs_centered_tolerance_angstrom": 1e-06,
+    "checkpoint_resume_exact": true,
+    "core_ood_used": false,
+    "known_graph_fingerprint_unchanged": true,
+    "test_used": false
+  },
+  "schema_version": "graph-pg-3d-g22-tier1-protocol-v1",
+  "status": "FROZEN_BEFORE_G22_TIER1_TRAINING",
+  "task": {
+    "bond_prediction": false,
+    "claim_unconditional_generation": false,
+    "hard_projection": "evaluation only after raw denoiser output",
+    "input": "immutable sparse atom/bond graph + noisy centered coordinates + noise sigma + Target_PG",
+    "output": "centered clean all-atom Cartesian coordinates in angstrom",
+    "target_coordinates_used_as_training_supervision": true
+  },
+  "task_scope": {
+    "excluded_from_this_gate": [
+      "S4",
+      "D6h",
+      "IID test",
+      "Core-OOD test"
+    ],
+    "main_target_point_groups": [
+      "C2",
+      "C3"
+    ],
+    "tier1_target_point_group": "C2",
+    "tier4_if_passed": "two C2 plus two C3 molecules"
+  },
+  "tier": 1,
+  "training": {
+    "batch_size_molecules": 1,
+    "checkpoint_every": 256,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.001,
+    "max_steps": 1024,
+    "model_seed": 20260821,
+    "noise_seed_base": 20260821,
+    "noise_seed_formula": "base + 1000003*step + package_index",
+    "optimizer": "Adam",
+    "sigma_schedule": "cyclic by (step-1) mod 5",
+    "training_noise_sigmas_angstrom": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3
+    ],
+    "weight_decay": 1e-06
+  }
+}

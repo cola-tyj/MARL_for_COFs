@@ -1,0 +1,35 @@
+{
+  "schema_version": "smoke-etflow-cleanup-followup-v1",
+  "status": "APPLIED",
+  "parent_manifest": "generative_model/maintenance/smoke_etflow_cleanup_manifest_20260828.json",
+  "reason": "post-cleanup local import audit found four historical references outside the initial candidate set",
+  "actions": [
+    {
+      "action": "deleted",
+      "path": "generative_model/data/etflow_pg_adapter.py",
+      "reason": "obsolete EF2 learned-conditioner adapter"
+    },
+    {
+      "action": "deleted",
+      "path": "generative_model/data/etflow_pg_inference.py",
+      "reason": "obsolete EF2 learned-conditioner inference adapter"
+    },
+    {
+      "action": "deleted",
+      "path": "generative_model/tests/test_etkdg_orbit_e2.py",
+      "reason": "test depended on removed historical ETKDG-E2 runner"
+    },
+    {
+      "action": "updated",
+      "path": "generative_model/tests/test_etflow_bridge.py",
+      "reason": "atomic JSON helper now imports from current v5 base inference; three EF0/EF1 assertions against intentionally deleted runner source were removed while current bridge behavior tests were retained"
+    }
+  ],
+  "historical_source_existence_assertions_removed": [
+    "three EF0/EF1 assertions in test_etflow_bridge.py",
+    "two ETKDG E0/E1 artifact assertions in test_etkdg_orbit_initializer.py",
+    "two graph-action E3A/E3B artifact assertions in test_graph_action_e3.py"
+  ],
+  "scientific_results_changed": false,
+  "v5_or_ablation_dependency_changed": false
+}

@@ -1,0 +1,158 @@
+{
+  "checkpoint_results": [
+    {
+      "checkpoint": {
+        "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/checkpoints/step-000128.pt",
+        "sha256": "af34a2d96ce5265b2ff410744d7e23524c2edd96ebbbe8fed248672ecf11e653",
+        "step": 128
+      },
+      "collisions": 4,
+      "component_count_mean": 2.8,
+      "connected": 0,
+      "evaluation_fingerprint": "41eaf1f5d1b5230281d6ee5304a482ad17244fc034f76f7b2b535e9a7cec15cd",
+      "evaluation_report_sha256": "120b56af17a35021e2e02ca45398ef441a8ae3781416d4482697bdd2a3936412",
+      "exact_train_smiles": 0,
+      "meets_simultaneous_sampling_thresholds": false,
+      "minimum_pair_distance_mean_angstrom": 0.22176022829353412,
+      "sampling_report_sha256": "1682664bb46f5d455297640dc8caef225927429e52d280ceabf1696eccc6970f",
+      "sanitize_failure_counts": {
+        "SANITIZE_PROPERTIES": 5
+      },
+      "sanitize_valid": 0,
+      "step": 128
+    },
+    {
+      "checkpoint": {
+        "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/checkpoints/step-000256.pt",
+        "sha256": "6e943a641631ca700eddeea8f46da53ecc5341d64975e5ffe07d01dce417bb1c",
+        "step": 256
+      },
+      "collisions": 4,
+      "component_count_mean": 3.6,
+      "connected": 0,
+      "evaluation_fingerprint": "cd097c2e5f97972c85ef4bbe320516df92beadbd79aec4afaadcf7ce2ebfa72b",
+      "evaluation_report_sha256": "fc927f12094bcc8c24b516f3f7209151fb28f8878efed73ba1e46594aabb8404",
+      "exact_train_smiles": 0,
+      "meets_simultaneous_sampling_thresholds": false,
+      "minimum_pair_distance_mean_angstrom": 0.15529229076137954,
+      "sampling_report_sha256": "22e56206a4786f0def96edbdd892eec8394d097da0e9e92092437ab4e88de8a9",
+      "sanitize_failure_counts": {
+        "SANITIZE_PROPERTIES": 5
+      },
+      "sanitize_valid": 0,
+      "step": 256
+    },
+    {
+      "checkpoint": {
+        "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/checkpoints/step-000384.pt",
+        "sha256": "d76b4506524e761dfc5f2c1d2390c49d60cf1fd75cbdc0d3bcc373b47c2432ce",
+        "step": 384
+      },
+      "collisions": 4,
+      "component_count_mean": 3.6,
+      "connected": 1,
+      "evaluation_fingerprint": "13372d21792180d06eb403308d798747a43006b361f5439638b6b03237f2d7c1",
+      "evaluation_report_sha256": "625177de365ca5cac3d6c6777e9096ae6fc6528307ed938564ad923d8f492922",
+      "exact_train_smiles": 0,
+      "meets_simultaneous_sampling_thresholds": false,
+      "minimum_pair_distance_mean_angstrom": 0.25856794489923607,
+      "sampling_report_sha256": "e2ee8283bc27488abdbc1f80136ea68afda16139bd4e8adab9bd88766315582c",
+      "sanitize_failure_counts": {
+        "SANITIZE_KEKULIZE": 2,
+        "SANITIZE_PROPERTIES": 3
+      },
+      "sanitize_valid": 0,
+      "step": 384
+    },
+    {
+      "checkpoint": {
+        "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/last.pt",
+        "sha256": "a3b98d48b54a0bee8de74af8c5d62bb13e1e55ba3974435a07e8606842d3bc67",
+        "step": 512
+      },
+      "collisions": 1,
+      "component_count_mean": 3.2,
+      "connected": 0,
+      "evaluation_fingerprint": "d379a6853987105fd6679ef7cdc550f4a858c97e7e4eca67087004e82728175a",
+      "evaluation_report_sha256": "0574522f6adc2d10fffea47bced6cf7890d616032d6bb7cc1128cd90279a7d8e",
+      "exact_train_smiles": 0,
+      "meets_simultaneous_sampling_thresholds": false,
+      "minimum_pair_distance_mean_angstrom": 0.7226617779157456,
+      "sampling_report_sha256": "cf07a51cb271b16288579273e426413609cb43882998c4f607fd052065081928",
+      "sanitize_failure_counts": {
+        "SANITIZE_KEKULIZE": 2,
+        "SANITIZE_PROPERTIES": 3
+      },
+      "sanitize_valid": 0,
+      "step": 512
+    }
+  ],
+  "decision": {
+    "failure_stage": "first_full_parameter_optimizer_step",
+    "next_action": "run a one-variable optimizer-stability gate with a much lower learning rate; require the step-1 checkpoint to retain the zero-shot native gate before any multi-step COF transfer",
+    "observed_mechanism": "fresh AdamW applies an approximately learning-rate-sized first update to most parameters and immediately destroys zero-shot geometry/chemistry",
+    "prohibited_action": "do not advance to tier-4, full-dataset training, or PG conditioning",
+    "statistics_hypothesis": "not_the_remaining_primary_failure"
+  },
+  "gate": {
+    "advance_to_tier4": false,
+    "loss_condition": false,
+    "sampling_condition": false,
+    "training_completed": true
+  },
+  "protocol": {
+    "criteria": {
+      "advance_only_if_all": {
+        "at_least_one_checkpoint_collision_count_max_of_5": 2,
+        "at_least_one_checkpoint_connected_min_of_5": 3,
+        "at_least_one_checkpoint_exact_train_smiles_min_of_5": 1,
+        "at_least_one_checkpoint_sanitize_valid_min_of_5": 3,
+        "completed_training_steps": 512,
+        "last_loss_window_less_than_first_loss_window": true
+      },
+      "checkpoint_thresholds_must_hold_simultaneously": true
+    },
+    "path": "generative_model/configs/midi/cof_transfer_geomstats_gate_v1.json",
+    "sha256": "1cb93718147a92ab5be9dbea1e4076913644a73f89574ddea051a0b57046490d"
+  },
+  "schema_version": "1.0",
+  "status": "FAIL_COF_TRANSFER_GATE_TIER1",
+  "step1_diagnostic": {
+    "after_one_full_parameter_adamw_step": {
+      "collisions": 5,
+      "connected": 0,
+      "evaluation_report_sha256": "b308e7c9405366aa0dc6b49310bb96f6502f79799a2d7ab335dcdafba5cdefb8",
+      "exact_train_smiles": 0,
+      "minimum_pair_distance_mean_angstrom": 0.03045094837145456,
+      "sampling_report_sha256": "de019325cb3bf982c647c22ac86cbe209b51a890424810760f647116e41ccf5a",
+      "sanitize_valid": 0
+    },
+    "parameter_update": {
+      "changed_fraction": 0.672944980616264,
+      "changed_parameter_count": 16198427,
+      "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_smoke1/last.pt",
+      "checkpoint_sha256": "107e925b76d0747057d7175ba7005125805d93a1fd4c4ce23a9ba12b5b2aa243",
+      "delta_l2": 0.7803975070701699,
+      "floating_parameter_count": 24070953,
+      "maximum_absolute_delta": 0.00020003318786621094,
+      "relative_l2": 0.0026480427250282134,
+      "weight_l2": 294.7072944458837
+    },
+    "zero_step_fixed32": {
+      "collisions": 0,
+      "connected": 4,
+      "samples": 5,
+      "sanitize_valid": 4
+    }
+  },
+  "training": {
+    "all_finite": true,
+    "checkpoint_sha256": "a3b98d48b54a0bee8de74af8c5d62bb13e1e55ba3974435a07e8606842d3bc67",
+    "first_window_mean": 6.528041363880038,
+    "last_over_first_window_ratio": 1.2372255052123788,
+    "last_window_mean": 8.076659274473787,
+    "loss_decreased": false,
+    "report_sha256": "fd5a8d017e45be9c3f9029b1283b2ddb166fec797b93c742bf3a63096ff23bed",
+    "steps": 512
+  }
+}

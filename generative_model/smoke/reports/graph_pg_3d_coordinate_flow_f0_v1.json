@@ -1,0 +1,77 @@
+{
+  "checks": {
+    "expected_test_count_13": true,
+    "flow_contract_source_present": true,
+    "test_and_core_ood_not_read": true,
+    "time_conditioned_adapter_source_present": true,
+    "training_not_started": true,
+    "unit_test_process_passed": true,
+    "upstream_commit_locked": true
+  },
+  "decision": {
+    "next_if_fail": "fix F0 only; training remains forbidden",
+    "next_if_pass": "freeze Fast-32 coordinate-flow training and validation protocol"
+  },
+  "identity": {
+    "python_version": "3.11.15",
+    "source_sha256": {
+      "adapter_tests": "5fc81595b49d94939bc8dcf4f1bce6a3484e6cebfdc8aeb0f78a7bbc88815faf",
+      "contract_tests": "f53664a7fed75136dca4404ac2033baa6ec5a0fb4cc7d7a67255868e131e7810",
+      "flow_contract": "7fd0782f5c3f7106654d3c8bd3bde5a01ed86cc8e043ca8b16506a004c9bfb6b",
+      "semla_flow_adapter": "60dda1aec4465c7efcb1f922c90ed140ae3d3670173827f3498878506d087266",
+      "upstream_integrator": "6c04ac907a70dd7a61f6065b85abbbf87aa8eb0e9192a7c8fe84ae08958a699e",
+      "upstream_semla": "957443cd392513d1e8f25b8ece07e01ee510e7481f11fabba363536d4ff6ad72"
+    },
+    "torch_version": "2.5.0+cu121",
+    "upstream_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283"
+  },
+  "model_smoke_configuration": {
+    "atom_vocab_size": 13,
+    "bond_vocab_size": 5,
+    "coordinate_std_angstrom": 2.407038688659668,
+    "d_edge": 8,
+    "d_message": 16,
+    "d_model": 32,
+    "known_graph_only": true,
+    "n_attn_heads": 4,
+    "n_coord_sets": 2,
+    "n_layers": 4,
+    "parameter_count": 67848,
+    "pg_vocab_size": 4,
+    "prediction_target": "centered coordinate endpoint x1",
+    "schema_version": "graph-pg-3d-semla-coordinate-endpoint-flow-v1",
+    "time_conditioning": "explicit [t,t^2,sin(pi*t),cos(pi*t)] embedding",
+    "upstream": "SemlaFlow EquiInvDynamics",
+    "upstream_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283"
+  },
+  "purpose": "Bounded engineering gate for immutable graph + Target_PG coordinate endpoint flow before freezing or running Fast-32 training.",
+  "schema_version": "graph-pg-3d-coordinate-flow-f0-audit-v1",
+  "scope": {
+    "atom_vocabulary_size": 13,
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "explicit_h": true,
+    "test_used": false,
+    "training_run": false
+  },
+  "status": "PASS_COORDINATE_FLOW_F0",
+  "test_summary": {
+    "modules": [
+      "generative_model.tests.test_coordinate_flow",
+      "generative_model.tests.test_graph_pg_3d_semla_flow"
+    ],
+    "required_semantics": [
+      "centered reproducible Gaussian prior",
+      "linear x_t interpolation",
+      "proper-rotation Kabsch pairing without node permutation",
+      "Semla endpoint-to-velocity conversion",
+      "Euler and Heun fixed integration",
+      "finite backward and explicit time gradient",
+      "E(3) and node-permutation equivariance",
+      "checkpoint resume exact trajectory",
+      "13-element strict vocabulary including Sn and no fallback"
+    ],
+    "return_code": 0,
+    "tests_run": 13
+  }
+}

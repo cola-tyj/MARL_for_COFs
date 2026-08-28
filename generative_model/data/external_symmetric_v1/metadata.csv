@@ -1,0 +1,13 @@
+Molecule_ID,SMILES,Core,Target_PG,Num_Atoms,Contains_Sn,Split_IID,Split_Core_OOD,Nearest_COF_v2_Tanimoto,Reference_Coordinates_Role
+external_0000_dibenzothiophene,c1ccc2c(c1)sc1ccccc12,c1ccc2c(c1)sc1ccccc12,C2,21,False,external,external,0.3181818181818182,evaluation-only ETKDGv3+UFF; never generator input
+external_0001_para_benzoquinone,O=C1C=CC(=O)C=C1,O=C1C=CC(=O)C=C1,C2,12,False,external,external,0.2,evaluation-only ETKDGv3+UFF; never generator input
+external_0002_dibenzofuran,c1ccc2c(c1)oc1ccccc12,c1ccc2c(c1)oc1ccccc12,C2,21,False,external,external,0.21739130434782608,evaluation-only ETKDGv3+UFF; never generator input
+external_0003_fluorene,c1ccc2c(c1)Cc1ccccc1-2,c1ccc2c(c1)Cc1ccccc1-2,C2,23,False,external,external,0.23076923076923078,evaluation-only ETKDGv3+UFF; never generator input
+external_0004_cyclononane,C1CCCCCCCC1,C1CCCCCCCC1,C3,27,False,external,external,0.14285714285714285,evaluation-only ETKDGv3+UFF; never generator input
+external_0005_cyclopentadecane,C1CCCCCCCCCCCCCC1,C1CCCCCCCCCCCCCC1,C3,45,False,external,external,0.14285714285714285,evaluation-only ETKDGv3+UFF; never generator input
+external_0006_cyclopropane,C1CC1,C1CC1,C3,9,False,external,external,0.14285714285714285,evaluation-only ETKDGv3+UFF; never generator input
+external_0007_cyclododecane,C1CCCCCCCCCCC1,C1CCCCCCCCCCC1,C3,36,False,external,external,0.14285714285714285,evaluation-only ETKDGv3+UFF; never generator input
+external_0008_cubane,C12C3C4C1C1C2C3C41,C12C3C4C1C1C2C3C41,S4,16,False,external,external,0.07142857142857142,evaluation-only ETKDGv3+UFF; never generator input
+external_0009_adamantane,C1C2CC3CC1CC(C2)C3,C1C2CC3CC1CC(C2)C3,S4,26,False,external,external,0.11764705882352941,evaluation-only ETKDGv3+UFF; never generator input
+external_0010_cyclohexasilane,[SiH2]1[SiH2][SiH2][SiH2][SiH2][SiH2]1,[SiH2]1[SiH2][SiH2][SiH2][SiH2][SiH2]1,D6h,18,False,external,external,0.0625,evaluation-only ETKDGv3+UFF; never generator input
+external_0011_cyclohexane_d6h,C1CCCCC1,C1CCCCC1,D6h,18,False,external,external,0.14285714285714285,evaluation-only ETKDGv3+UFF; never generator input

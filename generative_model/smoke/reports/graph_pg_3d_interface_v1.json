@@ -1,0 +1,100 @@
+{
+  "dataset": {
+    "atom_count": 91113,
+    "core_ood_used": false,
+    "iid_split_counts": {
+      "test": 253,
+      "train": 2026,
+      "val": 253
+    },
+    "molecule_count": 2532,
+    "sparse_undirected_bond_count": 96555,
+    "target_operation_counts": {
+      "C2": 4038,
+      "C3": 1383,
+      "D6h": 336,
+      "S4": 152
+    },
+    "target_pg_counts": {
+      "C2": 2019,
+      "C3": 461,
+      "D6h": 14,
+      "S4": 38
+    },
+    "test_used_for_model_selection": false
+  },
+  "environment": {
+    "numpy": "1.26.2",
+    "python": "3.11.15"
+  },
+  "identity": {
+    "cof_graphs_sha256": "d95f2b8ec003d93ad79afbd8aa7406a2515df50a0b701271139b8c38d936605d",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "package_dir": "/home/tianyajun/MARL_for_COFs/generative_model/data/processed/v2",
+    "symmetry_data_sha256": "0dbd4b0142a7eab361bcbf75a7a2b86d346a0294d9bcf41ff3bd5de58f4e6b3e"
+  },
+  "next_gate": {
+    "gate_b_required": false,
+    "known_graph_remains_immutable": true,
+    "name": "G1 coordinate baseline on frozen 1/4/32 panels",
+    "primary_metrics": [
+      "coordinate finite/centered",
+      "collision-free",
+      "actual-PG exact/compatible",
+      "target symmetry error",
+      "coordinate RMSD"
+    ]
+  },
+  "representative_batch": {
+    "atom_counts": [
+      68,
+      51,
+      21,
+      72
+    ],
+    "operation_counts": [
+      2,
+      3,
+      4,
+      24
+    ],
+    "package_indices": [
+      0,
+      59,
+      48,
+      858
+    ],
+    "target_pg_indices": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "schema_version": "graph-pg-to-3d-interface-audit-v1",
+  "status": "PASS_GRAPH_PG_3D_INTERFACE_G0",
+  "strict_checks": {
+    "all_bonds_sparse_known_graph": true,
+    "all_coordinates_finite_and_centered": true,
+    "all_permutations_bijective_and_element_preserving": true,
+    "four_pg_collation_passed": true,
+    "iid_splits_disjoint_and_complete": true,
+    "maximum_centroid_abs_angstrom": 5.149841513230058e-07,
+    "maximum_stored_target_operation_equation_error_angstrom": 0.496635764837265
+  },
+  "task_contract": {
+    "bond_prediction": false,
+    "canonical_explicit_h_preserved": true,
+    "input": "immutable canonical sparse molecular graph + Target_PG",
+    "optional_constraints": "target operation matrices, atom permutations and target orbits",
+    "prediction_target": "centroid-zero all-atom Cartesian coordinates in angstrom",
+    "sample_schema_version": "graph-pg-to-3d-condition-v1",
+    "target_pg_vocabulary": [
+      "C2",
+      "C3",
+      "S4",
+      "D6h"
+    ]
+  }
+}

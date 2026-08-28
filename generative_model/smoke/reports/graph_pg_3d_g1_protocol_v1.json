@@ -1,0 +1,167 @@
+{
+  "decision": {
+    "fail_status": "FAIL_GRAPH_PG_3D_G1_HARD_PROJECTION",
+    "next_if_fail": "diagnose projection/action consistency before any learned model",
+    "next_if_pass": "freeze G2 learned graph-conditioned coordinate baseline",
+    "pass_if": "all predeclared invariant and tier32 threshold checks are true",
+    "pass_status": "PASS_GRAPH_PG_3D_G1_HARD_PROJECTION"
+  },
+  "gate_thresholds_tier32": {
+    "analyzer_success_molecules_min": 32,
+    "bond_length_mae_improved_molecules_min": 24,
+    "collision_free_molecules_min": 32,
+    "coordinate_rmsd_improved_molecules_min": 28,
+    "maximum_projected_atom_symmetry_error_angstrom_max": 0.0001,
+    "maximum_projected_operation_rms_angstrom_max": 1e-05,
+    "mean_coordinate_rmsd_improvement_fraction_min": 0.25,
+    "mean_projected_coordinate_rmsd_angstrom_max": 0.15,
+    "pg_compatible_molecules_min": 32
+  },
+  "identity": {
+    "cof_graphs_sha256": "d95f2b8ec003d93ad79afbd8aa7406a2515df50a0b701271139b8c38d936605d",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "split_iid_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1",
+    "symmetry_data_sha256": "0dbd4b0142a7eab361bcbf75a7a2b86d346a0294d9bcf41ff3bd5de58f4e6b3e"
+  },
+  "panels": {
+    "tier1": {
+      "molecule_count": 1,
+      "package_indices": [
+        2162
+      ]
+    },
+    "tier32": {
+      "indices_by_target_pg": {
+        "C2": [
+          1610,
+          1751,
+          1551,
+          521,
+          239,
+          646,
+          2356,
+          979,
+          1985,
+          781,
+          1669,
+          846,
+          2162,
+          848,
+          2160,
+          1932,
+          2173,
+          200,
+          447,
+          2242,
+          2299,
+          2090,
+          881,
+          1942
+        ],
+        "C3": [
+          1215,
+          2405,
+          2395,
+          1296,
+          1318,
+          2409
+        ],
+        "D6h": [
+          2529
+        ],
+        "S4": [
+          1113
+        ]
+      },
+      "molecule_count": 32,
+      "package_indices": [
+        1610,
+        1751,
+        1551,
+        521,
+        239,
+        646,
+        2356,
+        979,
+        1985,
+        781,
+        1669,
+        846,
+        2162,
+        848,
+        2160,
+        1932,
+        2173,
+        200,
+        447,
+        2242,
+        2299,
+        2090,
+        881,
+        1942,
+        1215,
+        2405,
+        2395,
+        1296,
+        1318,
+        2409,
+        1113,
+        2529
+      ],
+      "source_split": "IID validation",
+      "target_pg_quotas": {
+        "C2": 24,
+        "C3": 6,
+        "D6h": 1,
+        "S4": 1
+      }
+    },
+    "tier4": {
+      "molecule_count": 4,
+      "package_indices": [
+        2162,
+        1296,
+        1113,
+        2529
+      ]
+    }
+  },
+  "perturbation": {
+    "base_seed": 20260821,
+    "kind": "independent isotropic Gaussian followed by centroid removal",
+    "per_molecule_seed": "base_seed + package_index",
+    "sigma_angstrom": 0.15
+  },
+  "projection": {
+    "algorithm": "Reynolds average: for each target operation, accumulate X@R.T at permutation_index[source], divide by group order, then remove centroid",
+    "iterations": 1,
+    "learned_parameters": 0,
+    "schema_version": "graph-pg-3d-reynolds-projection-v1",
+    "uses_target_coordinates_except_for_noise_start_and_metrics": true,
+    "uses_target_operation_matrices": true,
+    "uses_target_permutation_index": true
+  },
+  "protocol_fingerprint": "b5878a71347fb5ea77341b36637adf7b608bc87b653cbd8493822f0fde94f683",
+  "purpose": "Validate a coordinate-only hard-symmetry baseline while the canonical molecular graph remains immutable.",
+  "required_invariants": {
+    "all_outputs_centroid_zero_within_angstrom": 1e-06,
+    "all_outputs_finite": true,
+    "core_ood_used": false,
+    "known_graph_fingerprint_unchanged": true,
+    "model_selection_performed": false,
+    "test_used": false
+  },
+  "schema_version": "graph-pg-3d-g1-protocol-v1",
+  "selection_algorithm": "Within frozen IID validation, sort each Target_PG by (atom_count, package_index), select centered equal-width quantiles at floor((2j+1)N/(2q)); tier4 takes the upper median selected item per PG; tier1 is tier4 C2.",
+  "status": "FROZEN_BEFORE_G1_EXECUTION",
+  "symmetry_analyzer": {
+    "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+    "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+    "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+    "eigen_tolerance": 0.01,
+    "matrix_tolerance": 0.1,
+    "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+    "tolerance_angstrom": 0.3
+  }
+}

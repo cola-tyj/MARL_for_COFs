@@ -1,0 +1,10 @@
+{
+  "molecule_count": 12,
+  "role": "external-to-COF evaluation only",
+  "target_pg_counts": {
+    "C2": 4,
+    "C3": 4,
+    "D6h": 2,
+    "S4": 2
+  }
+}

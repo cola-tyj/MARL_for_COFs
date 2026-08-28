@@ -29,6 +29,9 @@ symmcd_diffusion/checkpoints/
 symmcd_diffusion/released_weights/
 symmcd_diffusion/marl_interface/checkpoints/
 mappo/model/
+generative_model/checkpoints/
+generative_model/runs/
+generative_model/external/
 
 # IDE
 .claude/
@@ -48,6 +51,10 @@ Thumbs.db
 *.db
 *.sqlite
 data/
+!generative_model/data/
+!generative_model/data/**
+generative_model/**/__pycache__/
+generative_model/**/*.pyc
 
 # COF pipeline - large output files (keep source code only)
 cof_symmetry_pipeline/output/*.csv
@@ -56,6 +63,9 @@ cof_symmetry_pipeline/output/*.log
 cof_symmetry_pipeline/output/*.png
 cof_symmetry_pipeline/output/*.jpg
 cof_symmetry_pipeline/output/*.smi
+!cof_symmetry_pipeline/output/final_dataset.csv
+!cof_symmetry_pipeline/output/missing_xyz_path.csv
+!cof_symmetry_pipeline/output/rejected_pg_rule.csv
 cof_symmetry_pipeline/output/xyz/
 cof_symmetry_pipeline/output/mining/
 cof_symmetry_pipeline/output/hierarchical/
@@ -66,7 +76,12 @@ cof_symmetry_pipeline/jtvae/output/
 cof_symmetry_pipeline/__pycache__/
 cof_symmetry_pipeline/visualization/*.png
 cof_symmetry_pipeline/visualization/*.jpg
+cof_symmetry_pipeline/visualization/*.html
 cof_symmetry_pipeline/*.pyc
+
+# Local download/archive artifacts
+aria2-download.log
+cof_symmetry_pipeline_output.tar.gz
 
 # Environment variables
 .env

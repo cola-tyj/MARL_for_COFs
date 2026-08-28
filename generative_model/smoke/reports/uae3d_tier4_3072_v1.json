@@ -1,0 +1,57 @@
+{
+  "artifact_hashes": {
+    "last.pt": "8ca18d056f5706167752700ddaa9ad7aeefdffeb681352d5f6553edfac2ae191",
+    "losses.npz": "187161c0dbb69ef7651a307c35420dda9e9395cabb3962ebadc402cb9da4f5f9",
+    "report.json": "b627d7dafb775d40b8997ded931591c992ebe3ac12e03d5391291063aa6c2230"
+  },
+  "decision": {
+    "advance_to_tier_32": false,
+    "resume_same_branch_beyond_step_3072": false,
+    "start_bond_focused_refinement": true,
+    "reason": "The continuous objective remains finite and improves slowly, but whole-molecule bond exact has remained 2/4 from step 2240 through step 3072. Start a short, model-only bond-focused refinement instead of mechanically extending the same optimizer branch.",
+    "refinement": {
+      "balanced_bond_aux_weight": 10.0,
+      "checkpoint_every": 64,
+      "init_checkpoint": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/last.pt",
+      "init_checkpoint_sha256": "8ca18d056f5706167752700ddaa9ad7aeefdffeb681352d5f6553edfac2ae191",
+      "learning_rate": 1e-05,
+      "max_steps": 256,
+      "mean_coordinate_aux_weight": 10.0,
+      "optimizer_state": "fresh"
+    }
+  },
+  "model_state_fingerprint": "0563fb2dbda2f824643a3c56d990a8eba7cb8ac6676cb816647ada3aaee536ee",
+  "objective_version": "uae3d-exact-reconstruction-aux-v2-molecule-balanced",
+  "schema_version": "1.0",
+  "step_3008_categorical_reference": {
+    "bond_exact_molecules": 2,
+    "bond_full_pair_accuracy": 0.9562194179757919,
+    "none_bond_accuracy": 0.9620736698499318,
+    "present_bond_accuracy": 0.8513513513513513,
+    "self_loop_accuracy": 0.8714285714285714
+  },
+  "step_3072": {
+    "atom_exact_molecules": 4,
+    "bond_exact_molecules": 2,
+    "bond_full_pair_accuracy": 0.9232552150399176,
+    "connected_molecules": 2,
+    "coordinate_rmsd_max_angstrom": 0.14219971001148224,
+    "coordinate_rmsd_mean_angstrom": 0.09318439476191998,
+    "none_bond_accuracy": 0.9298772169167804,
+    "present_bond_accuracy": 0.7432432432432432,
+    "sanitize_valid_molecules": 2,
+    "self_loop_accuracy": 0.9571428571428572
+  },
+  "status": "STOP_TIER4_BASE_BRANCH_START_BOND_REFINEMENT",
+  "strict_u2_gate_passed": false,
+  "tier": 4,
+  "training_window_means": {
+    "steps_2817_2880_balanced_bond_loss": 0.20599846984259784,
+    "steps_2881_2944_balanced_bond_loss": 0.20375468255952,
+    "steps_2945_3008_balanced_bond_loss": 0.20050918916240335,
+    "steps_3009_3072_balanced_bond_loss": 0.19889801717363298,
+    "steps_3009_3072_mean_coordinate_loss": 0.0006657539552179514,
+    "steps_3009_3072_present_stratum_loss": 0.3060935866087675,
+    "steps_3009_3072_total_loss": 0.5117576750926673
+  }
+}

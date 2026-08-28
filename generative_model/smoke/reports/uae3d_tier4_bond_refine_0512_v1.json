@@ -1,0 +1,91 @@
+{
+  "artifact_hashes": {
+    "last.pt": "342cd2c3b8967b9f673f7cabd8721b9f8d4ec0ece72e542febf1c539f83928f8",
+    "losses.npz": "f1090f334c4e1ab0521dc510b94fa3fa05da06f0866876acc5b1fb9e1347bd1c",
+    "report.json": "50bc1574c2128ad20ab0de0c95d0da305f8385d7cbe9ba600e042be142b733ff"
+  },
+  "decision": {
+    "advance_to_tier_32": false,
+    "resume_same_refinement_beyond_step_512": false,
+    "reason": "The pre-frozen stop rule fired: whole-molecule bond exact remains 2/4 at step 512. Average stratum CE keeps decreasing, but the two large molecules still have 127 and 311 wrong full-pair entries and coordinate RMSD regresses monotonically.",
+    "required_next_audit": {
+      "candidate_checkpoints": [
+        "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+        "generative_model/runs/uae3d_overfit4/bond_refine_w10_coord10_lr1em5_0256/last.pt"
+      ],
+      "metrics": [
+        "per_molecule_per_stratum_cross_entropy_quantiles",
+        "top_k_cross_entropy_means",
+        "target_logit_margin_quantiles",
+        "wrong_pair_counts"
+      ],
+      "purpose": "Choose the initialization checkpoint and freeze a hard-pair/top-k bond auxiliary before any further training."
+    }
+  },
+  "model_state_fingerprint": "72926ae5524eb068c15001a323e84da1a74746239beb9ab38eea36849b66b4fd",
+  "objective": {
+    "balanced_bond_aux_weight": 10.0,
+    "learning_rate": 1e-05,
+    "mean_coordinate_aux_weight": 10.0,
+    "optimizer": "AdamW",
+    "version": "uae3d-exact-reconstruction-aux-v2-molecule-balanced"
+  },
+  "schema_version": "1.0",
+  "status": "FAIL_TIER4_BOND_REFINEMENT_STOP_FOR_HARD_PAIR_AUDIT",
+  "step_512": {
+    "atom_exact_molecules": 4,
+    "bond_exact_molecules": 2,
+    "bond_full_pair_accuracy": 0.9436003090394025,
+    "connected_molecules": 2,
+    "coordinate_rmsd_max_angstrom": 0.20442035794258118,
+    "coordinate_rmsd_mean_angstrom": 0.11860107909888029,
+    "none_bond_accuracy": 0.9448840381991814,
+    "present_bond_accuracy": 0.8986486486486487,
+    "records": [
+      {
+        "bond_pair_correct": 100,
+        "bond_pair_total": 100,
+        "molecule_id": "cof_000864",
+        "package_index": 864,
+        "wrong_bond_pairs": 0
+      },
+      {
+        "bond_pair_correct": 81,
+        "bond_pair_total": 81,
+        "molecule_id": "cof_001135",
+        "package_index": 1135,
+        "wrong_bond_pairs": 0
+      },
+      {
+        "bond_pair_correct": 2274,
+        "bond_pair_total": 2401,
+        "molecule_id": "cof_001114",
+        "package_index": 1114,
+        "wrong_bond_pairs": 127
+      },
+      {
+        "bond_pair_correct": 4873,
+        "bond_pair_total": 5184,
+        "molecule_id": "cof_000862",
+        "package_index": 862,
+        "wrong_bond_pairs": 311
+      }
+    ],
+    "sanitize_valid_molecules": 2,
+    "self_loop_accuracy": 0.9714285714285714
+  },
+  "strict_u2_gate_passed": false,
+  "tier": 4,
+  "training_window_means": {
+    "steps_193_256_balanced_bond_loss": 0.16735484916716814,
+    "steps_257_320_balanced_bond_loss": 0.16201246762648225,
+    "steps_321_384_balanced_bond_loss": 0.15700974338687956,
+    "steps_385_448_balanced_bond_loss": 0.15254111727699637,
+    "steps_449_512_balanced_bond_loss": 0.14855236909352243,
+    "steps_449_512_mean_coordinate_loss": 0.0010371296284574782,
+    "steps_449_512_none_stratum_loss": 0.06950641993898898,
+    "steps_449_512_present_stratum_loss": 0.2206553581636399,
+    "steps_449_512_self_stratum_loss": 0.15549531485885382,
+    "steps_449_512_total_loss": 1.8251337017863989
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "decision": {
+    "advance_to_tier4": false,
+    "generation_gate": "FAIL_0_OF_25_NATIVE_SANITIZE_VALID",
+    "known_protocol_gap": "official Lightning checkpoint does not contain GEOM node/atom/edge/charge statistics; current noise marginals are derived from the one-molecule tier",
+    "next_action": "reconstruct exact official GEOM explicit-H statistics and run official-domain zero-shot sampling before changing fine-tuning hyperparameters",
+    "weight_compatibility": "PASS_STRICT_LOAD_AND_LOW_INITIAL_LOSS"
+  },
+  "fine_tuned_checkpoints": [
+    {
+      "collisions": 4,
+      "component_count_mean": 2.6,
+      "connected": 0,
+      "evaluation_report_sha256": "beab3f3c79356408eff348d863d1f3e8bc758dca182c16aed975bf05ccce8efb",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "minimum_interatomic_distance_mean_angstrom": 0.3320478798204304,
+      "sampling_report_sha256": "ff5306bfc03056fd79c0028fdc6058de897c47ce9aaf94244cabf2fd099f3a97",
+      "sanitize_valid": 0,
+      "step": 128
+    },
+    {
+      "collisions": 2,
+      "component_count_mean": 1.4,
+      "connected": 4,
+      "evaluation_report_sha256": "d83426897ae9cdcaafc0b4106ac6908e22d5eae811ed06cdf815549f5d3b4f06",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "minimum_interatomic_distance_mean_angstrom": 0.5935214943484934,
+      "sampling_report_sha256": "09d63f07adf5a52de944e9c0843c3159c3b0bc34df01352b700a15c962bc4ff0",
+      "sanitize_valid": 0,
+      "step": 256
+    },
+    {
+      "collisions": 5,
+      "component_count_mean": 8.0,
+      "connected": 0,
+      "evaluation_report_sha256": "d953692b9661bcf5cab0b0b6bd9cd2eae7689d7ddef0c38ec4e35ad11b6519cf",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "minimum_interatomic_distance_mean_angstrom": 0.0094910685212203,
+      "sampling_report_sha256": "892b45563167579226a1a368f25aceb0dd393085d720c719fc06c55798f50c6c",
+      "sanitize_valid": 0,
+      "step": 384
+    },
+    {
+      "collisions": 5,
+      "component_count_mean": 3.0,
+      "connected": 1,
+      "evaluation_report_sha256": "af56ed2c2f61e178758b9ffa223eb76f09bee380b42583db4dbdfc623880d723",
+      "exact_train_smiles": 0,
+      "generated": 5,
+      "minimum_interatomic_distance_mean_angstrom": 0.037906695065770275,
+      "sampling_report_sha256": "7239a15d9e6262d0a80f33734fc780a633295bce873d0d4cc4640a1a387b86cc",
+      "sanitize_valid": 0,
+      "step": 512
+    }
+  ],
+  "near_zero_step_samples": [
+    {
+      "collisions": 1,
+      "component_count_mean": 4.0,
+      "connected": 0,
+      "evaluation_report_sha256": "f059cb015e48308ecf3566fb032432aa1aae0b73c3da99baafe9de9e2ac7d445",
+      "exact_train_smiles": 0,
+      "generated": 1,
+      "minimum_interatomic_distance_mean_angstrom": 0.018772464882166325,
+      "sampling_report_sha256": "6bbb0f60015ac9b6248cc2a52990bf03b8450f560eaffb6d01ddef7c562c199d",
+      "sanitize_valid": 0,
+      "seed": 20260812
+    },
+    {
+      "collisions": 1,
+      "component_count_mean": 3.0,
+      "connected": 0,
+      "evaluation_report_sha256": "83a766391ccae7b80207709e3c15bef225c9bebd009a04d6deb3d9ae0917aa4d",
+      "exact_train_smiles": 0,
+      "generated": 1,
+      "minimum_interatomic_distance_mean_angstrom": 0.013894890645901355,
+      "sampling_report_sha256": "9c1974a88045730135cd0db5471ce488f528a7b14bfb7e56b38ee00e5fef80af",
+      "sanitize_valid": 0,
+      "seed": 20260813
+    },
+    {
+      "collisions": 1,
+      "component_count_mean": 4.0,
+      "connected": 0,
+      "evaluation_report_sha256": "044262139eaf30ffda22410b1a8a13f10ff2dc0f63f9ad316d33679e6808d1c9",
+      "exact_train_smiles": 0,
+      "generated": 1,
+      "minimum_interatomic_distance_mean_angstrom": 0.005811224487903573,
+      "sampling_report_sha256": "4e3bd821af00fba648e044103f893762a0ca8761d9eb77a1a5d327a9987b88e0",
+      "sanitize_valid": 0,
+      "seed": 20260814
+    },
+    {
+      "collisions": 1,
+      "component_count_mean": 5.0,
+      "connected": 0,
+      "evaluation_report_sha256": "775332b545de3b736faf691a010c63d7f3914a4c8319f41feec30fa982a0da13",
+      "exact_train_smiles": 0,
+      "generated": 1,
+      "minimum_interatomic_distance_mean_angstrom": 0.1562532029188382,
+      "sampling_report_sha256": "9f0b7f82c01a4333697e27dab20035ddb82cd7a5b6f82d0a06b29b11c929268e",
+      "sanitize_valid": 0,
+      "seed": 20260815
+    },
+    {
+      "collisions": 1,
+      "component_count_mean": 4.0,
+      "connected": 0,
+      "evaluation_report_sha256": "e19ac068a52b19bc4abbbdd0cd43384e4844d6417b894d9499f9ef68989ff3da",
+      "exact_train_smiles": 0,
+      "generated": 1,
+      "minimum_interatomic_distance_mean_angstrom": 0.03782117739203539,
+      "sampling_report_sha256": "00e13ae410fc329419a704ca2b877cf3ebce0272f76405ca6e548086c1ae790e",
+      "sanitize_valid": 0,
+      "seed": 20260816
+    }
+  ],
+  "official_checkpoint": {
+    "bytes": 375024911,
+    "epoch": 644,
+    "global_step": 2565270,
+    "missing_keys": 0,
+    "path": "generative_model/checkpoints/midi/geom/geom_with_h_adaptive.ckpt",
+    "sha256": "c96d6712cfa69e94b7bf9be115c3584d8a1da9fe42b3b554d8e565f6cb530173",
+    "strict_state_dict_load": true,
+    "unexpected_keys": 0
+  },
+  "schema_version": "1.0",
+  "status": "STOP_BEFORE_TIER4_REQUIRES_GEOM_STATISTICS_AUDIT",
+  "totals": {
+    "collision_rate": 0.84,
+    "collisions": 21,
+    "connected": 5,
+    "connected_rate": 0.2,
+    "exact_train_smiles": 0,
+    "exact_train_smiles_rate": 0.0,
+    "generated": 25,
+    "sanitize_valid": 0,
+    "sanitize_valid_rate": 0.0
+  },
+  "training": {
+    "first_loss": 0.02372678741812706,
+    "last_loss": 0.20670562982559204,
+    "minimum_loss": 0.009216035716235638,
+    "report_sha256": "77fb97b130677264943f766cb4430650ccde56483091d1361a7f2c3466062508",
+    "steps": 512
+  }
+}

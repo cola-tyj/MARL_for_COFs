@@ -1,0 +1,319 @@
+{
+  "schema_version": "checkpoint-cleanup-manifest-v1",
+  "date": "2026-08-27",
+  "scope": "MiDi and SemlaFlow .pt/.ckpt under generative_model/runs only",
+  "roots": [
+    "generative_model/runs/midi_overfit1",
+    "generative_model/runs/midi_overfit32",
+    "generative_model/runs/midi_overfit4",
+    "generative_model/runs/midi_zero_shot_geom_approx_5seed",
+    "generative_model/runs/midi_zero_shot_geom_approx_stratified100",
+    "generative_model/runs/semlaflow_official",
+    "generative_model/runs/semlaflow_overfit1",
+    "generative_model/runs/semlaflow_overfit32",
+    "generative_model/runs/semlaflow_overfit4"
+  ],
+  "file_count": 72,
+  "total_bytes": 27637231393,
+  "deletion_result": {
+    "status": "COMPLETED",
+    "deleted_file_count": 72,
+    "deleted_bytes": 27637231393,
+    "retained_noncheckpoint_file_count_before": 710,
+    "retained_noncheckpoint_file_count_after": 710,
+    "retained_noncheckpoint_bytes_before": 146548183,
+    "retained_noncheckpoint_bytes_after": 146548183,
+    "remaining_midi_semlaflow_pt_ckpt": 0,
+    "removed_empty_checkpoint_directories": 19
+  },
+  "files": [
+    {
+      "path": "generative_model/runs/midi_overfit1/train_mini/last.pt",
+      "size_bytes": 6553043
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_mini_resume_base/checkpoints/step-000001.pt",
+      "size_bytes": 6613019
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_mini_resume_base/last.pt",
+      "size_bytes": 6562510
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_mini_resume_check/last.pt",
+      "size_bytes": 6562574
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-000128.pt",
+      "size_bytes": 375029043
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-000256.pt",
+      "size_bytes": 375029043
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-000384.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-000512.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-000640.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-000768.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-000896.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001024.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001152.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001280.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001408.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001536.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001664.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001792.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/checkpoints/step-001920.pt",
+      "size_bytes": 375040243
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_2048/last.pt",
+      "size_bytes": 374751611
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_official_step1/last.pt",
+      "size_bytes": 374740411
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_0512/checkpoints/step-000128.pt",
+      "size_bytes": 375029299
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_0512/checkpoints/step-000256.pt",
+      "size_bytes": 375029299
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_0512/checkpoints/step-000384.pt",
+      "size_bytes": 375029299
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_0512/last.pt",
+      "size_bytes": 374740667
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_cofstats_step1/last.pt",
+      "size_bytes": 374740731
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/checkpoints/step-000128.pt",
+      "size_bytes": 375029363
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/checkpoints/step-000256.pt",
+      "size_bytes": 375029427
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/checkpoints/step-000384.pt",
+      "size_bytes": 375029427
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_0512/last.pt",
+      "size_bytes": 374740731
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_0064/checkpoints/step-000016.pt",
+      "size_bytes": 375029363
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_0064/checkpoints/step-000032.pt",
+      "size_bytes": 375029363
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_0064/checkpoints/step-000048.pt",
+      "size_bytes": 375029363
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_0064/last.pt",
+      "size_bytes": 374740731
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_bounded_snr_0064/checkpoints/step-000016.pt",
+      "size_bytes": 375029619
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_bounded_snr_0064/checkpoints/step-000032.pt",
+      "size_bytes": 375029619
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_bounded_snr_0064/checkpoints/step-000048.pt",
+      "size_bytes": 375029619
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_bounded_snr_0064/last.pt",
+      "size_bytes": 374740987
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_min_snr_0064/checkpoints/step-000016.pt",
+      "size_bytes": 375029619
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_min_snr_0064/checkpoints/step-000032.pt",
+      "size_bytes": 375029619
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_min_snr_0064/checkpoints/step-000048.pt",
+      "size_bytes": 375029619
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_min_snr_0064/last.pt",
+      "size_bytes": 374740987
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_smoke1/last.pt",
+      "size_bytes": 374740731
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/checkpoints/step-000016.pt",
+      "size_bytes": 375029491
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/checkpoints/step-000032.pt",
+      "size_bytes": 375029491
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/checkpoints/step-000048.pt",
+      "size_bytes": 375029491
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/last.pt",
+      "size_bytes": 374740859
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_smoke1/last.pt",
+      "size_bytes": 374740731
+    },
+    {
+      "path": "generative_model/runs/midi_overfit1/train_pretrained_step1/last.pt",
+      "size_bytes": 374740667
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0128_bond2/checkpoints/step-000128.ckpt",
+      "size_bytes": 466876296
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0128_bond2/last.ckpt",
+      "size_bytes": 466862216
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0128_bond_profile01/last.ckpt",
+      "size_bytes": 466861641
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0128_ema99/checkpoints/step-000128.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0128_ema99/last.ckpt",
+      "size_bytes": 466862216
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0128_present_aux01/last.ckpt",
+      "size_bytes": 466861513
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0256_staged/checkpoints/step-000064.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0256_staged/checkpoints/step-000128.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0256_staged/checkpoints/step-000192.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0256_staged/checkpoints/step-000256.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_0256_staged/last.ckpt",
+      "size_bytes": 466862216
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_infra_0002/checkpoints/step-000001.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_infra_0002/checkpoints/step-000002.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_infra_0002/last.ckpt",
+      "size_bytes": 466862152
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_infra_resume_0003/checkpoints/step-000002.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_infra_resume_0003/checkpoints/step-000003.ckpt",
+      "size_bytes": 466876232
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit1/train_infra_resume_0003/last.ckpt",
+      "size_bytes": 466862216
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit32/train/last.ckpt",
+      "size_bytes": 466843977
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit32/train_0064/last.ckpt",
+      "size_bytes": 466843977
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit32/train_0256/last.ckpt",
+      "size_bytes": 466861065
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit32/train_0256_lr3e4/last.ckpt",
+      "size_bytes": 466861065
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit32/train_1024_lr3e4/last.ckpt",
+      "size_bytes": 466861065
+    },
+    {
+      "path": "generative_model/runs/semlaflow_overfit32/train_fixed_audit_0002/last.ckpt",
+      "size_bytes": 466861065
+    }
+  ]
+}

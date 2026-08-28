@@ -1,0 +1,42 @@
+{
+  "artifact_hashes": {
+    "last.pt": "19e979673c4cb2c1823b77d7f43064fc0b3e07157a1a3cd442557bb2578560d1",
+    "losses.npz": "54670714165e7102017228f97934a8eef525eff7359dbc868792bcf5ee55c7fe",
+    "report.json": "3c331fabe25042fe5cc0b1266d40f2a528fc85a90572db2a2126e476d8bb7c80"
+  },
+  "categorical_and_chemistry_gate": {
+    "all_audits_from_step_320_through_1024_passed": true,
+    "step_1024": {
+      "atom_correct": 10,
+      "bond_pair_correct": 100,
+      "connected": true,
+      "none_bond_correct": 72,
+      "present_bond_correct": 18,
+      "representation_status": "VALID",
+      "sanitize_valid": true,
+      "self_loop_correct": 10
+    }
+  },
+  "coordinate_gate": {
+    "limit_angstrom": 0.05,
+    "passed": false,
+    "remaining_mean_mse_factor_to_limit": 7.979592938449749,
+    "step_1024_mean_coordinate_loss": 0.0011681403266265988,
+    "step_1024_pair_distance_mae_angstrom": 0.07742120325565338,
+    "step_1024_rmsd_angstrom": 0.14210598170757294,
+    "step_512_mean_coordinate_loss": 0.03838479891419411,
+    "step_512_to_1024_mse_reduction_factor": 32.85974984276352,
+    "target_mean_coordinate_loss": 0.00014639096701260322
+  },
+  "decision": {
+    "advance_to_tier_4": false,
+    "resume_same_branch_to_step_1536": true,
+    "rule_after_step_1536": "If the 0.05-Angstrom gate still fails, stop automatic equal-weight extension and audit convergence before changing coordinate weight.",
+    "reason": "Only coordinate RMSD remains failing. Its deterministic MSE improved by 32.9x over the previous 512 steps, while approximately 8.0x remains to the frozen limit; all categorical and chemistry checks stayed exact."
+  },
+  "metrics_version": "uae3d-mean-reconstruction-v1.1",
+  "model_state_fingerprint": "53136780e0c1542ad06fe6e2041cc65b07936c60f6b95607a8ca58ca53d14a3a",
+  "schema_version": "1.0",
+  "status": "PASS_U2_NEAR_COORDINATE_GATE_EXTEND_TO_1536",
+  "strict_u2_gate_passed": false
+}

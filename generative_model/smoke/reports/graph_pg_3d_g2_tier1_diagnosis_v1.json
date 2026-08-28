@@ -1,0 +1,59 @@
+{
+  "bounded_next_action": {
+    "action": "continue the identical checkpoint to step 2048 under a new pre-registered protocol",
+    "stop_rule": "If the unchanged Gate still fails at step 2048, stop extending this architecture and test a larger-receptive-field graph denoiser.",
+    "unchanged": [
+      "model",
+      "objective weights",
+      "training noise schedule",
+      "validation seeds",
+      "symmetry analyzer",
+      "quality thresholds"
+    ],
+    "why": "separate insufficient optimization budget from architectural capacity"
+  },
+  "diagnosis": {
+    "capacity_risk": "The molecule has graph diameter 14 while the denoiser has four sparse-bond message-passing layers, so a receptive-field bottleneck remains plausible.",
+    "gate_interpretation": "The original G2 tier-1 remains failed. Improvement counts are directional evidence only and are not a pass.",
+    "primary": "The 512-step budget is insufficient for the fixed quality thresholds; the run does not show an engineering, symmetry, collision, or graph-integrity failure."
+  },
+  "observations": {
+    "evaluation_steps": [
+      0,
+      128,
+      256,
+      384,
+      512
+    ],
+    "final_projected_collision_free_cases": 8,
+    "final_projected_improved_cases": 8,
+    "final_projected_pg_compatible_cases": 8,
+    "final_raw_improved_cases": 8,
+    "mean_projected_rmsd_angstrom": [
+      0.1666580922797578,
+      0.1546492647976614,
+      0.1512177257980054,
+      0.145654377330134,
+      0.14660011889557029
+    ],
+    "mean_raw_rmsd_angstrom": [
+      0.24780816992110755,
+      0.22328224506360195,
+      0.21883273952545154,
+      0.21346232226031825,
+      0.211298374440279
+    ],
+    "only_failed_checks": [
+      "mean_projected_coordinate_rmsd_angstrom_max",
+      "mean_raw_coordinate_rmsd_angstrom_max"
+    ],
+    "projected_improved_through_step384": true,
+    "projected_reduction_fraction_step0_to_512": 0.12035403207734756,
+    "raw_improved_at_every_checkpoint": true,
+    "raw_reduction_fraction_step0_to_512": 0.1473308789312792
+  },
+  "schema_version": "graph-pg-3d-g2-tier1-diagnosis-v1",
+  "source_report": "/home/tianyajun/MARL_for_COFs/generative_model/runs/graph_pg_3d_g2/tier1_mol2162_0512/report.json",
+  "source_report_sha256": "37b7847c37760b12bef04280fcf31c5a06bcfc433290fbb600db0e8589dc1eab",
+  "status": "G2_TIER1_DIRECTIONAL_SIGNAL_POSITIVE_BUT_QUALITY_GATE_FAILED"
+}

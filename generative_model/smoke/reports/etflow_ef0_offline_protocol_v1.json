@@ -1,0 +1,50 @@
+{
+  "decision": {
+    "fail_action": "repair bridge only; do not download or evaluate checkpoint",
+    "pass_action": "run EF0-B official package/checkpoint preflight in isolated env_etflow",
+    "pass_status": "PASS_ETFLOW_EF0A_OFFLINE_BRIDGE_AWAIT_OFFICIAL_PREFLIGHT"
+  },
+  "gate_thresholds": {
+    "maximum_operation_error_angstrom": 1e-05
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "environment": {
+      "numpy": "1.26.2",
+      "python": "3.11.15"
+    },
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_symmetry.py": "323af1e8c6be4cabc2ad472cc753e60240b2bcb54c590cec76e3652b8bea7cac",
+      "generative_model/models/graph_pg_3d_projection.py": "5420fd170eac1efd13380f3f242e546f4bfeac359836570df6aaab4cb8ddd1c4",
+      "generative_model/optimization/etkdg_orbit_initializer.py": "e64ed195f7ffe89ba89677ea44dbbe6660627b6f139627c5e3a89a05d20fedf0",
+      "generative_model/smoke/run_etflow_ef0_offline.py": "588dd470abb79c37abbe0e307a0970b4b43e599744f23917760f77ab2bdd0110",
+      "generative_model/symmetry/graph_action.py": "9517d125bbdb897d5ef6d8e4c7ebf97051131a8946e473b670ccb21fb49864fe"
+    }
+  },
+  "not_claimed": [
+    "ET-Flow package import",
+    "checkpoint compatibility",
+    "conformer quality",
+    "point-group-conditioned generation",
+    "training or fine-tuning"
+  ],
+  "package": "generative_model/data/processed/v2",
+  "panel": {
+    "molecule_count": 4,
+    "package_indices": [
+      45,
+      81,
+      1684,
+      2378
+    ],
+    "selection": "fixed C2/C3 bridge panel including both Sn-containing development molecules"
+  },
+  "protocol_fingerprint": "88a8e48edb3e854e49346790aeab073b98cf40af333653cd0cb700aa67d4d97a",
+  "purpose": "Strict checkpoint-free atom/graph bridge and E3 projection engineering audit.",
+  "route": "EF0-A",
+  "schema_version": "etflow-ef0-offline-protocol-v1",
+  "simulation_seed": 20260824,
+  "status": "FROZEN_BEFORE_ETFLOW_EF0A_OFFLINE"
+}

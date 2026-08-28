@@ -1,0 +1,70 @@
+{
+  "artifacts": {
+    "last_pt_sha256": "99c4e819802fa2b5051ff08cdaf2996e4f744b7e7d6c891298133d2f49360c5d",
+    "losses_npz_sha256": "70c7847274370cf3593355d5fec59721aab07a388d5e7354278032bf2da6604a",
+    "report_json_sha256": "ef90d9f642027ce2da7285e5bda5417725231a4cdcc0f7f838afd4d532b3bda9"
+  },
+  "configuration": {
+    "augmentation": "off",
+    "batch_size": 1,
+    "learning_rate": 0.0001,
+    "max_steps": 1024,
+    "profile": "official",
+    "resume_step": 512,
+    "seed": 20260815,
+    "tier": 1,
+    "weight_decay": 0.00001
+  },
+  "decision": {
+    "advance_to_tier4": false,
+    "continue_same_objective_to_2048": false,
+    "next": "Implement separate all-atom exact-reconstruction auxiliaries: balanced none/present/self bond strata and deterministic z_mean coordinate reconstruction. Run short controlled branches before any longer training.",
+    "status": "STOP_UNMODIFIED_UAE_OBJECTIVE_AFTER_TIER1_1024"
+  },
+  "diagnosis": {
+    "bond_confusion_rows_target_cols_predicted": [
+      [52, 12, 4, 0, 0, 4],
+      [2, 10, 0, 0, 0, 2],
+      [0, 0, 4, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0],
+      [2, 0, 0, 0, 0, 8]
+    ],
+    "bond_class_order": ["none", "single", "double", "triple", "aromatic", "self"],
+    "bond_prediction_counts": [56, 22, 8, 0, 0, 14],
+    "bond_target_counts": [72, 14, 4, 0, 0, 10],
+    "coordinate_kabsch_rmsd_angstrom": 2.531310796737671,
+    "coordinate_predicted_radius_rms_angstrom": 1.3819013833999634,
+    "coordinate_target_radius_rms_angstrom": 2.1850662231445312,
+    "interpretation": "The official aggregate objective keeps decreasing, but exact reconstruction does not. Present-bond gains are offset by losses on none and invalid self predictions. Direct and aligned coordinate error worsen; posterior sampling does not recover the target geometry."
+  },
+  "elapsed_seconds_resume_512_to_1024": 77.91527562588453,
+  "final_metrics": {
+    "atom_accuracy": 1.0,
+    "atom_exact_molecules": 1,
+    "bond_exact_molecules": 0,
+    "bond_full_pair_accuracy": 0.74,
+    "connected_molecules": 0,
+    "coordinate_rmsd_max_angstrom": 2.533944845199585,
+    "none_bond_accuracy": 0.7222222222222222,
+    "pair_distance_mae_angstrom": 1.272789716720581,
+    "present_bond_accuracy": 0.7777777777777778,
+    "sanitize_valid_molecules": 0,
+    "self_loop_accuracy": 0.8
+  },
+  "gate": {
+    "atom_exact_all": true,
+    "bond_exact_all": false,
+    "connected_all": false,
+    "coordinate_rmsd_max": false,
+    "passed": false,
+    "sanitize_valid_all": false
+  },
+  "loss": {
+    "first": 6.334892272949219,
+    "last": 1.5708285570144653,
+    "minimum": 1.3929591178894043
+  },
+  "schema_version": "1.0",
+  "status": "FAIL_U2_TIER1_1024_GATE"
+}

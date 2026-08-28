@@ -1,0 +1,112 @@
+{
+  "environment": {
+    "device": "cpu",
+    "gpu": null,
+    "numpy": "1.26.2",
+    "python": "3.11.15",
+    "rdkit": "2024.03.5",
+    "torch": "2.5.0+cu121",
+    "torch_cuda": "12.1",
+    "torch_geometric": "2.6.1"
+  },
+  "input": {
+    "atoms": 10,
+    "canonical_pyg_roundtrip_exact": true,
+    "explicit_h": true,
+    "full_pair_edges": 100,
+    "molecule_id": "cof_000864",
+    "package_index": 864,
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "position_roundtrip_max_abs_angstrom": 1.1920928955078125e-07,
+    "position_std": 2.3859,
+    "split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+    "split_sha256": "59abc7d59b5f6f1f2ff07ef907ff6191458ca9f4c4ec4411f80ba78ef6c49c8d",
+    "target_pg": "C2",
+    "undirected_bonds": 9
+  },
+  "model": {
+    "class": "model.autoencoder.unified_autoencoder.UnifiedAutoEncoder",
+    "model_args": {
+      "align_prediction": false,
+      "atom_loss_weight": 1.0,
+      "bond_dist_loss_weight": 10.0,
+      "bond_loss_weight": 1.0,
+      "center_prediction": false,
+      "coordinate_loss_weight": 1.0,
+      "decoder_blocks": 4,
+      "decoder_hidden_dim": 64,
+      "decoder_n_heads": 8,
+      "dist_loss_weight": 1.0,
+      "dropout": 0.1,
+      "edge_dim": 4,
+      "encoder_blocks": 6,
+      "encoder_hidden_dim": 64,
+      "encoder_n_heads": 8,
+      "kld_weight": 1e-08,
+      "latent_dim": 16,
+      "n_atom_types": 16,
+      "n_bond_types": 4,
+      "node_dim": 58
+    },
+    "output_shapes": {
+      "atom_logits": [
+        10,
+        16
+      ],
+      "bond_logits": [
+        100,
+        6
+      ],
+      "coordinates": [
+        10,
+        3
+      ],
+      "z_log_var": [
+        10,
+        16
+      ],
+      "z_mean": [
+        10,
+        16
+      ]
+    },
+    "parameters": 642244,
+    "profile": "official",
+    "random_initialization": true
+  },
+  "numerics": {
+    "all_gradients_finite": true,
+    "losses": {
+      "KLD": 6.327095031738281,
+      "atom_loss": 2.7954444885253906,
+      "bond_distance_loss": 0.10018226504325867,
+      "bond_loss": 1.6959425210952759,
+      "coordinate_loss": 0.30324026942253113,
+      "distance_loss": 1.1752010583877563,
+      "loss": 6.971651077270508
+    },
+    "outputs_finite": true,
+    "parameter_tensors_with_gradient": 222,
+    "parameter_tensors_without_gradient": 0,
+    "parameters_without_gradient": [],
+    "permutation": {
+      "atom_logits_max_abs_error": 1.7881393432617188e-07,
+      "bond_logits_max_abs_error": 4.3213367462158203e-07,
+      "coordinates_max_abs_error": 2.086162567138672e-07,
+      "encoder_log_var_max_abs_error": 7.152557373046875e-07,
+      "encoder_mean_max_abs_error": 7.152557373046875e-07
+    },
+    "permutation_max_abs_error": 7.152557373046875e-07,
+    "permutation_tolerance": 1e-05,
+    "required_modules_have_gradients": true,
+    "se3_note": "UAE-3D learns SE(3) behavior through augmentation; random weights are not required to be rotation/translation equivariant. Audit after reconstruction training."
+  },
+  "official_source_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+  "peak_cuda_memory_bytes": 0,
+  "purpose": "UAE-3D random UnifiedAutoEncoder interface forward/backward gate",
+  "schema_version": "1.0",
+  "status": "PASS",
+  "timing_seconds": {
+    "forward_backward": 0.08294481784105301
+  }
+}

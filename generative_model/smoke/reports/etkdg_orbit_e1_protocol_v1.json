@@ -1,0 +1,223 @@
+{
+  "candidate_selection": {
+    "candidates_per_molecule": 4,
+    "reference_xyz_or_actual_pg_used": false,
+    "rule": "minimum final UFF+repulsion objective, then seed"
+  },
+  "decision": {
+    "fail_action": "retain evidence and localize failures without using test/Core-OOD",
+    "fail_status": "FAIL_ETKDG_ORBIT_E1_STOP_BEFORE_DATASET_SCALE",
+    "final_pass_status": "PASS_ETKDG_ORBIT_E1_ADVANCE_TO_DATASET_SCALE_C23",
+    "geometry_pass_status": "PASS_ETKDG_ORBIT_E1_GEOMETRY_AWAIT_POINT_GROUP_AUDIT",
+    "pass_action": "run a frozen dataset-scale C2/C3 audit before any learned conformer model"
+  },
+  "etkdg": {
+    "atom_order_contract": "build directly from canonical graph; no AddHs or SMILES reparse",
+    "enforce_chirality": true,
+    "explicit_h_graph": true,
+    "implementation": "RDKit ETKDGv3",
+    "maximum_iterations": 1000,
+    "seeds": [
+      2026082401,
+      2026082402,
+      2026082403,
+      2026082404
+    ],
+    "use_macrocycle_torsions": true,
+    "use_random_coordinates": false,
+    "use_small_ring_torsions": true
+  },
+  "gate_thresholds": {
+    "acceptable_gradient_norm_max": 1.0,
+    "acceptable_optimizer_termination_fraction_min": 0.75,
+    "analyzer_success_fraction_min": 1.0,
+    "bond_length_mae_to_reference_angstrom_max": 0.15,
+    "etkdg_candidate_success_fraction_min": 1.0,
+    "maximum_operation_error_angstrom": 1e-05,
+    "minimum_pair_distance_angstrom": 0.6,
+    "pg_compatible_fraction_min": 1.0
+  },
+  "identity": {
+    "cof_graphs_sha256": "d95f2b8ec003d93ad79afbd8aa7406a2515df50a0b701271139b8c38d936605d",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "environment": {
+      "numpy": "1.26.2",
+      "python": "3.11.15",
+      "rdkit": "2024.03.5"
+    },
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "parent_e0_point_group_sha256": "b71ca7c02fd543d5087d8b4904cf146f447846b2476f4a9107fd1473d85e03c4",
+    "source_sha256": {
+      "generative_model/optimization/etkdg_orbit_initializer.py": "e64ed195f7ffe89ba89677ea44dbbe6660627b6f139627c5e3a89a05d20fedf0",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c",
+      "generative_model/smoke/audit_etkdg_orbit_e0_point_groups.py": "4a591db374f08ab8273ba320b8292226b5c8bf64775c66e461462f1989701870",
+      "generative_model/smoke/audit_etkdg_orbit_e1_point_groups.py": "385bdaa5f43dbc585c7a4c6c36b4e0ca9d12f5cc99284641252184a5f3b3027c",
+      "generative_model/smoke/run_etkdg_orbit_e0.py": "6979a4374504626da719d3fbbfcd1858c5a110b2c459a4ebbfd9dbdf6d2db655",
+      "generative_model/smoke/run_etkdg_orbit_e1.py": "d58df4f4b1d9c4d6bd2119754269db428f95bbc587cd8cb48d2c682af2e52b26"
+    },
+    "split_iid_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1",
+    "symmetry_data_sha256": "0dbd4b0142a7eab361bcbf75a7a2b86d346a0294d9bcf41ff3bd5de58f4e6b3e",
+    "symmetry_protocol": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "optimizer": {
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 500,
+    "method": "L-BFGS-B",
+    "primary_force_field": "UFF",
+    "repulsion_cutoff_angstrom": 0.8,
+    "repulsion_force_constant_kcal_mol_angstrom2": 2000.0,
+    "source": "unchanged F0.2 orbit-constrained UFF+nonbonded repulsion backend"
+  },
+  "orientation_and_projection": {
+    "match_radius_of_gyration": true,
+    "orientation_candidates": "PCA frame x 24 proper signed axis permutations",
+    "orientation_selection": "minimum Reynolds projection RMSD, then orientation id",
+    "projection": "one Reynolds average with stored target operations/permutations",
+    "reference_alignment": false
+  },
+  "panel": {
+    "indices_by_target_pg": {
+      "C2": [
+        1610,
+        1751,
+        1551,
+        521,
+        239,
+        646,
+        2356,
+        979,
+        1985,
+        781,
+        1669,
+        846,
+        2162,
+        848,
+        2160,
+        1932,
+        2173,
+        200,
+        447,
+        2242,
+        2299,
+        2090,
+        881,
+        1942
+      ],
+      "C3": [
+        1153,
+        1122,
+        2436,
+        2505,
+        2516,
+        1320,
+        2465,
+        1402
+      ]
+    },
+    "molecule_count": 32,
+    "package_indices": [
+      1610,
+      1751,
+      1551,
+      521,
+      239,
+      646,
+      2356,
+      979,
+      1985,
+      781,
+      1669,
+      846,
+      2162,
+      848,
+      2160,
+      1932,
+      2173,
+      200,
+      447,
+      2242,
+      2299,
+      2090,
+      881,
+      1942,
+      1153,
+      1122,
+      2436,
+      2505,
+      2516,
+      1320,
+      2465,
+      1402
+    ],
+    "selection": "sort each PG by (atom_count, package_index), then centered equal-width quantiles floor((2j+1)N/(2q))",
+    "source_split": "IID validation",
+    "target_pg_quotas": {
+      "C2": 24,
+      "C3": 8
+    },
+    "target_pgs": [
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C2",
+      "C3",
+      "C3",
+      "C3",
+      "C3",
+      "C3",
+      "C3",
+      "C3",
+      "C3"
+    ]
+  },
+  "protocol_fingerprint": "4ff5d3176a6bd3d63bfc6f06354f90d9a2387814915a4177ae81973e618cc5e5",
+  "purpose": "Expanded cross-molecule validation of the E0 initial-conformer interface on 24 C2 and 8 C3 IID-validation molecules without algorithm or threshold changes.",
+  "reported_not_gated": [
+    "coordinate RMSD to the dataset conformer",
+    "PG exact-match fraction",
+    "selected seed and orientation"
+  ],
+  "schema_version": "etkdg-orbit-e1-protocol-v1",
+  "scope": {
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "element_fallback": false,
+    "implicit_h_added": false,
+    "known_graph": true,
+    "known_target_group_action": true,
+    "new_graph_generation_claimed": false,
+    "reference_xyz_used_for_initialization_or_selection": false,
+    "reference_xyz_used_for_posthoc_metrics_only": true,
+    "test_used": false
+  },
+  "status": "FROZEN_BEFORE_ETKDG_ORBIT_E1_EXECUTION"
+}

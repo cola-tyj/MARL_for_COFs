@@ -1,0 +1,289 @@
+{
+  "checkpoint": {
+    "model_state_fingerprint": "025c91c2164f2e611700dec4adba2828affc76c7684ff8a8230bce37aa299b8c",
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "step": 3008
+  },
+  "combined_recommended_gradient_l2_norm": 10.35122013092041,
+  "components": {
+    "balanced_bond_loss": {
+      "gradient_l2_norm": 4.0579514503479,
+      "loss": 0.2115505337715149
+    },
+    "hard_pair_ce_loss": {
+      "gradient_l2_norm": 6.970900058746338,
+      "loss": 0.4614553451538086
+    },
+    "hard_pair_margin_loss": {
+      "gradient_l2_norm": 16.41681671142578,
+      "loss": 0.27666160464286804
+    },
+    "hard_pair_none_ce_loss": {
+      "gradient_l2_norm": 33.356353759765625,
+      "loss": 0.5060482621192932
+    },
+    "hard_pair_none_margin_loss": {
+      "gradient_l2_norm": 54.18634033203125,
+      "loss": 0.3906381130218506
+    },
+    "hard_pair_present_ce_loss": {
+      "gradient_l2_norm": 29.18435287475586,
+      "loss": 0.4657748341560364
+    },
+    "hard_pair_present_margin_loss": {
+      "gradient_l2_norm": 59.48119354248047,
+      "loss": 0.22086259722709656
+    },
+    "hard_pair_self_ce_loss": {
+      "gradient_l2_norm": 37.2055778503418,
+      "loss": 0.41254299879074097
+    },
+    "hard_pair_self_margin_loss": {
+      "gradient_l2_norm": 70.91452026367188,
+      "loss": 0.2184840589761734
+    },
+    "mean_coordinate_loss": {
+      "gradient_l2_norm": 0.0,
+      "loss": 0.0006735035567544401
+    },
+    "official_stochastic_loss": {
+      "gradient_l2_norm": 1.622782588005066,
+      "loss": 0.31839001178741455
+    }
+  },
+  "conflict_gate": {
+    "conclusion": "Disable official/balanced gradients in the bond-head-only pilot; they oppose both hard components.",
+    "passed": true,
+    "threshold": -0.5,
+    "values": {
+      "balanced_vs_hard_ce": -0.5726449489593506,
+      "balanced_vs_hard_margin": -0.6638031005859375,
+      "official_vs_hard_ce": -0.7661136984825134,
+      "official_vs_hard_margin": -0.857121467590332
+    }
+  },
+  "environment": {
+    "device": "cpu",
+    "numpy": "1.26.2",
+    "python": "3.11.15",
+    "rdkit": "2024.03.5",
+    "torch": "2.5.0+cu121",
+    "torch_geometric": "2.6.1"
+  },
+  "gradient_cosines": {
+    "balanced_bond_loss": {
+      "balanced_bond_loss": 1.0,
+      "hard_pair_ce_loss": -0.5726449489593506,
+      "hard_pair_margin_loss": -0.6638031005859375,
+      "hard_pair_none_ce_loss": -0.9208521842956543,
+      "hard_pair_none_margin_loss": -0.8635976910591125,
+      "hard_pair_present_ce_loss": 0.009657289832830429,
+      "hard_pair_present_margin_loss": -0.20132455229759216,
+      "hard_pair_self_ce_loss": 0.4961319863796234,
+      "hard_pair_self_margin_loss": 0.36773326992988586,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": 0.8841285705566406
+    },
+    "hard_pair_ce_loss": {
+      "balanced_bond_loss": -0.5726449489593506,
+      "hard_pair_ce_loss": 1.0000001192092896,
+      "hard_pair_margin_loss": 0.9549838900566101,
+      "hard_pair_none_ce_loss": 0.8176305294036865,
+      "hard_pair_none_margin_loss": 0.8803139925003052,
+      "hard_pair_present_ce_loss": -0.6945745348930359,
+      "hard_pair_present_margin_loss": -0.5750339031219482,
+      "hard_pair_self_ce_loss": 0.37387505173683167,
+      "hard_pair_self_margin_loss": 0.4729086756706238,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": -0.7661136984825134
+    },
+    "hard_pair_margin_loss": {
+      "balanced_bond_loss": -0.6638031005859375,
+      "hard_pair_ce_loss": 0.9549838900566101,
+      "hard_pair_margin_loss": 0.9999998807907104,
+      "hard_pair_none_ce_loss": 0.8952078223228455,
+      "hard_pair_none_margin_loss": 0.9430007934570312,
+      "hard_pair_present_ce_loss": -0.6835047006607056,
+      "hard_pair_present_margin_loss": -0.5234717130661011,
+      "hard_pair_self_ce_loss": 0.27033746242523193,
+      "hard_pair_self_margin_loss": 0.41302403807640076,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": -0.857121467590332
+    },
+    "hard_pair_none_ce_loss": {
+      "balanced_bond_loss": -0.9208521842956543,
+      "hard_pair_ce_loss": 0.8176305294036865,
+      "hard_pair_margin_loss": 0.8952078223228455,
+      "hard_pair_none_ce_loss": 1.0000001192092896,
+      "hard_pair_none_margin_loss": 0.9900895357131958,
+      "hard_pair_present_ce_loss": -0.3721572756767273,
+      "hard_pair_present_margin_loss": -0.16438175737857819,
+      "hard_pair_self_ce_loss": -0.14504089951515198,
+      "hard_pair_self_margin_loss": 0.003069615224376321,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": -0.9414467811584473
+    },
+    "hard_pair_none_margin_loss": {
+      "balanced_bond_loss": -0.8635976910591125,
+      "hard_pair_ce_loss": 0.8803139925003052,
+      "hard_pair_margin_loss": 0.9430007934570312,
+      "hard_pair_none_ce_loss": 0.9900895357131958,
+      "hard_pair_none_margin_loss": 1.0000001192092896,
+      "hard_pair_present_ce_loss": -0.49065619707107544,
+      "hard_pair_present_margin_loss": -0.29548367857933044,
+      "hard_pair_self_ce_loss": -0.007970624603331089,
+      "hard_pair_self_margin_loss": 0.13865402340888977,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": -0.9255400896072388
+    },
+    "hard_pair_present_ce_loss": {
+      "balanced_bond_loss": 0.009657289832830429,
+      "hard_pair_ce_loss": -0.6945745348930359,
+      "hard_pair_margin_loss": -0.6835047006607056,
+      "hard_pair_none_ce_loss": -0.3721572756767273,
+      "hard_pair_none_margin_loss": -0.49065619707107544,
+      "hard_pair_present_ce_loss": 1.0,
+      "hard_pair_present_margin_loss": 0.972649097442627,
+      "hard_pair_self_ce_loss": -0.8411635160446167,
+      "hard_pair_self_margin_loss": -0.915614664554596,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": 0.2646275758743286
+    },
+    "hard_pair_present_margin_loss": {
+      "balanced_bond_loss": -0.20132455229759216,
+      "hard_pair_ce_loss": -0.5750339031219482,
+      "hard_pair_margin_loss": -0.5234717130661011,
+      "hard_pair_none_ce_loss": -0.16438175737857819,
+      "hard_pair_none_margin_loss": -0.29548367857933044,
+      "hard_pair_present_ce_loss": 0.972649097442627,
+      "hard_pair_present_margin_loss": 0.9999999403953552,
+      "hard_pair_self_ce_loss": -0.9387966394424438,
+      "hard_pair_self_margin_loss": -0.9765450954437256,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": 0.07052794098854065
+    },
+    "hard_pair_self_ce_loss": {
+      "balanced_bond_loss": 0.4961319863796234,
+      "hard_pair_ce_loss": 0.37387505173683167,
+      "hard_pair_margin_loss": 0.27033746242523193,
+      "hard_pair_none_ce_loss": -0.14504089951515198,
+      "hard_pair_none_margin_loss": -0.007970624603331089,
+      "hard_pair_present_ce_loss": -0.8411635160446167,
+      "hard_pair_present_margin_loss": -0.9387966394424438,
+      "hard_pair_self_ce_loss": 1.0000001192092896,
+      "hard_pair_self_margin_loss": 0.9812782406806946,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": 0.20584937930107117
+    },
+    "hard_pair_self_margin_loss": {
+      "balanced_bond_loss": 0.36773326992988586,
+      "hard_pair_ce_loss": 0.4729086756706238,
+      "hard_pair_margin_loss": 0.41302403807640076,
+      "hard_pair_none_ce_loss": 0.003069615224376321,
+      "hard_pair_none_margin_loss": 0.13865402340888977,
+      "hard_pair_present_ce_loss": -0.915614664554596,
+      "hard_pair_present_margin_loss": -0.9765450954437256,
+      "hard_pair_self_ce_loss": 0.9812782406806946,
+      "hard_pair_self_margin_loss": 1.000000238418579,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": 0.0527808740735054
+    },
+    "mean_coordinate_loss": {
+      "balanced_bond_loss": null,
+      "hard_pair_ce_loss": null,
+      "hard_pair_margin_loss": null,
+      "hard_pair_none_ce_loss": null,
+      "hard_pair_none_margin_loss": null,
+      "hard_pair_present_ce_loss": null,
+      "hard_pair_present_margin_loss": null,
+      "hard_pair_self_ce_loss": null,
+      "hard_pair_self_margin_loss": null,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": null
+    },
+    "official_stochastic_loss": {
+      "balanced_bond_loss": 0.8841285705566406,
+      "hard_pair_ce_loss": -0.7661136984825134,
+      "hard_pair_margin_loss": -0.857121467590332,
+      "hard_pair_none_ce_loss": -0.9414467811584473,
+      "hard_pair_none_margin_loss": -0.9255400896072388,
+      "hard_pair_present_ce_loss": 0.2646275758743286,
+      "hard_pair_present_margin_loss": 0.07052794098854065,
+      "hard_pair_self_ce_loss": 0.20584937930107117,
+      "hard_pair_self_margin_loss": 0.0527808740735054,
+      "mean_coordinate_loss": null,
+      "official_stochastic_loss": 1.0000001192092896
+    }
+  },
+  "hard_pair": {
+    "count": 326,
+    "margin_threshold": 0.5,
+    "none_count": 205,
+    "present_count": 64,
+    "self_count": 57
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "official_source_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+    "package_indices": [
+      864,
+      1135,
+      1114,
+      862
+    ],
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "position_std": 2.3859,
+    "profile": "official",
+    "seed": 20260817,
+    "split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+    "split_sha256": "59abc7d59b5f6f1f2ff07ef907ff6191458ca9f4c4ec4411f80ba78ef6c49c8d",
+    "tier": 4
+  },
+  "objective_version": "uae3d-exact-reconstruction-aux-v3-bond-head-hard-margin",
+  "purpose": "Calibrate v3 hard-pair component weights without optimizer.step().",
+  "recommended_weights": {
+    "balanced_bond_aux_weight": 0.0,
+    "gradient_surgery": "pcgrad-strata",
+    "hard_pair_ce_weight": 1.0,
+    "hard_pair_margin_weight": 0.2123097364513648,
+    "mean_coordinate_aux_weight": 0.0,
+    "official_loss_weight": 0.0,
+    "raw_hard_pair_margin_weight": 0.2123097364513648
+  },
+  "rejected_naive_balanced_reference_weights": {
+    "hard_pair_ce_weight": 0.2910636658214902,
+    "hard_pair_margin_weight": 0.12359130036225738,
+    "reason": "Gradient cosine audit shows systematic opposition."
+  },
+  "schema_version": "uae3d-hard-pair-gradient-calibration-v1",
+  "status": "PASS_CALIBRATION_RELEASE_PCGRAD_STRATA",
+  "strata_conflict_gate": {
+    "conclusion": "Apply deterministic fixed-order PCGrad across none/present/self hard task gradients before averaging.",
+    "requires_pcgrad": true,
+    "threshold": -0.5,
+    "values": {
+      "none_vs_present_ce": -0.3721572756767273,
+      "none_vs_present_margin": -0.29548367857933044,
+      "none_vs_self_ce": -0.14504089951515198,
+      "none_vs_self_margin": 0.13865402340888977,
+      "present_vs_self_ce": -0.8411635160446167,
+      "present_vs_self_margin": -0.9765450954437256
+    }
+  },
+  "trainable_scope": {
+    "all_model_parameters_unchanged": true,
+    "frozen_fingerprint_after": "aa8a6a9670971fa3efd83f560268ea615646a722bba8d2e43ceb1d2e1f5bad4b",
+    "frozen_fingerprint_before": "aa8a6a9670971fa3efd83f560268ea615646a722bba8d2e43ceb1d2e1f5bad4b",
+    "frozen_parameter_count": 637694,
+    "name": "bond-head",
+    "parameter_count": 4550,
+    "parameter_names": [
+      "decoder.bond_head.0.weight",
+      "decoder.bond_head.0.bias",
+      "decoder.bond_head.2.weight",
+      "decoder.bond_head.2.bias"
+    ]
+  },
+  "weight_rule": "Conflict gate requires all official/balanced vs hard cosines < -0.5. Use hard CE=1 and scale hard margin to 0.5x the hard-CE gradient norm, bounded to [0.1,10]. Dynamic margin<0.5 membership protects regressions."
+}

@@ -1,0 +1,86 @@
+{
+  "description": "Representative formal E2 known-graph/action to XYZ outputs",
+  "identity": {
+    "coordinates_sha256": "07689da73971b241df1b559ac51f433acb9e077bc4b0764f1703ece2ac000a07",
+    "geometry_report_sha256": "11c7dc116f03446513b7d4d0e5a6071b637eb2b7dcd18976c19e3bfdf9dbdf18",
+    "point_group_report_sha256": "11b68bab136cae8689661202e4e9d9cf42923007812ce7c04a28ec9b60c92b97"
+  },
+  "records": [
+    {
+      "actual_pg": "C2",
+      "atom_count": 50,
+      "contains_sn": false,
+      "label": "c2_exact",
+      "metadata_file": "01_c2_exact_cof_000045.json",
+      "metadata_sha256": "9df5ed1384f585d55cd81aaf1b52e66261ec6f1a194975be97a1486b96f5ebde",
+      "molecule_id": "cof_000045",
+      "package_index": 45,
+      "pg_compatible": true,
+      "pg_exact_match": true,
+      "target_pg": "C2",
+      "xyz_file": "01_c2_exact_cof_000045.xyz",
+      "xyz_sha256": "f78cd84885706741a7ac106e9605cecf045058b5dae8b0112ca4098efddc6ee8"
+    },
+    {
+      "actual_pg": "C2h",
+      "atom_count": 32,
+      "contains_sn": false,
+      "label": "c2_compatible_supergroup",
+      "metadata_file": "02_c2_compatible_supergroup_cof_000092.json",
+      "metadata_sha256": "83d512d8aae5d4b29a169ec3f3895cba08634f5fb45033c0a5bcf56027cef219",
+      "molecule_id": "cof_000092",
+      "package_index": 92,
+      "pg_compatible": true,
+      "pg_exact_match": false,
+      "target_pg": "C2",
+      "xyz_file": "02_c2_compatible_supergroup_cof_000092.xyz",
+      "xyz_sha256": "41bd5f7ddd1818f4d23db96178fc8a6691a5433a2478d3b6d8d1070461d7e2b6"
+    },
+    {
+      "actual_pg": "C3",
+      "atom_count": 33,
+      "contains_sn": false,
+      "label": "c3_exact",
+      "metadata_file": "03_c3_exact_cof_000081.json",
+      "metadata_sha256": "d50ba0d8332043cd9b673282aaa9ff4b1e8f36d8578821ed989752e3495bed0c",
+      "molecule_id": "cof_000081",
+      "package_index": 81,
+      "pg_compatible": true,
+      "pg_exact_match": true,
+      "target_pg": "C3",
+      "xyz_file": "03_c3_exact_cof_000081.xyz",
+      "xyz_sha256": "d1a1bf575bfdec2139df0ab56275f0b0289ac0cd7cf4733201cd4447b94b4fca"
+    },
+    {
+      "actual_pg": "C3h",
+      "atom_count": 21,
+      "contains_sn": false,
+      "label": "c3_compatible_supergroup",
+      "metadata_file": "04_c3_compatible_supergroup_cof_000065.json",
+      "metadata_sha256": "830be4e08fab9aeeb962be0dca0b6f70a94ef966408c0ea321a7744de35a79a5",
+      "molecule_id": "cof_000065",
+      "package_index": 65,
+      "pg_compatible": true,
+      "pg_exact_match": false,
+      "target_pg": "C3",
+      "xyz_file": "04_c3_compatible_supergroup_cof_000065.xyz",
+      "xyz_sha256": "fa928b540f8a35322f42ed1b20612e08c1663658637ac8ea5adee24b7346d875"
+    },
+    {
+      "actual_pg": "C2",
+      "atom_count": 42,
+      "contains_sn": true,
+      "label": "c2_sn_exact",
+      "metadata_file": "05_c2_sn_exact_cof_001684.json",
+      "metadata_sha256": "0bf6cee71f6cf339ddec222b0feded3d8997242b498ada18f29d2ca4f6dc2fdc",
+      "molecule_id": "cof_001684",
+      "package_index": 1684,
+      "pg_compatible": true,
+      "pg_exact_match": true,
+      "target_pg": "C2",
+      "xyz_file": "05_c2_sn_exact_cof_001684.xyz",
+      "xyz_sha256": "f41f81c815cbeaf232367d8bcf9a57d03447efe78e9ec137505c974fef938a07"
+    }
+  ],
+  "schema_version": "etkdg-orbit-e2-visual-examples-v1"
+}

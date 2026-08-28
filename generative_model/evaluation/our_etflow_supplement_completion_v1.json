@@ -1,0 +1,401 @@
+{
+  "audit_source_sha256": "81bf17ff4027d6612c20b50741f737253e5c7440230856538d86a0288699b6c2",
+  "interpretation": {
+    "claim_boundary": "The audit proves that every requested experiment and artifact was completed and locally reproducible. It does not convert negative scientific gates into PASS.",
+    "completion_is_not_scientific_perfection": true,
+    "negative_results_are_preserved": true
+  },
+  "passed": true,
+  "requirements": {
+    "complete_four_route_paired_ablation": {
+      "checks": {
+        "all_requested_metrics_present": true,
+        "balanced_four_point_groups": true,
+        "four_routes_exact": true,
+        "independent_point_group_audit_completed": true,
+        "paired_graph_seed_target_contract": true,
+        "paired_summary_completed": true,
+        "panel_count_32": true,
+        "protocol_hash_matches_report": true
+      },
+      "completed": true,
+      "evidence": [
+        {
+          "path": "generative_model/evaluation/our_etflow_ablation_protocol_v1.json",
+          "sha256": "f9ed9f7991dc5898e4bcd57632a47adc625715ee781fccc509debe9e4b819e9e"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_ablation_v1/report.json",
+          "sha256": "61b1d9043e81dd80034706914d4411f4cf2c80d72074a8c4e946f8c46eacc824"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_ablation_v1/point_group_report.json",
+          "sha256": "645b388fe5cdc051f0048000713a760b18c3a9120050b5728273286f0780917b"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_ablation_v1/paired_ablation_summary.json",
+          "sha256": "cfca3dce4f3be264080c0e4742a3854e83ae15c3530233366372d5f73dd4a1fa"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_ablation_v1/coordinates.npz",
+          "sha256": "9c1f8376d920ed177d813202ab6514f8a821149e9898388247d345caf10b6233"
+        }
+      ],
+      "panel": {
+        "count": 32,
+        "target_pg_counts": {
+          "C2": 8,
+          "C3": 8,
+          "D6h": 8,
+          "S4": 8
+        }
+      },
+      "scientific_outcome": {
+        "etflow_hard_projection": {
+          "collision_free_fraction": 0.84375,
+          "mean_bond_length_mae_angstrom": 0.11776521594427433,
+          "mean_candidate_kabsch_diversity_angstrom": 1.4657878938565645,
+          "median_runtime_seconds": 7.410296740010381,
+          "median_uff_energy_per_atom_kcal_mol": 13.411211546873147,
+          "pg_compatible_fraction": 0.9375
+        },
+        "etflow_hard_projection_f02": {
+          "collision_free_fraction": 1.0,
+          "mean_bond_length_mae_angstrom": 0.017703608224657726,
+          "mean_candidate_kabsch_diversity_angstrom": 1.51168764270304,
+          "median_runtime_seconds": 10.072645155712962,
+          "median_uff_energy_per_atom_kcal_mol": 1.6459729188476835,
+          "pg_compatible_fraction": 1.0
+        },
+        "etflow_raw": {
+          "collision_free_fraction": 1.0,
+          "mean_bond_length_mae_angstrom": 0.023492630421094052,
+          "mean_candidate_kabsch_diversity_angstrom": 2.3864332463874436,
+          "median_runtime_seconds": 6.905074840411544,
+          "median_uff_energy_per_atom_kcal_mol": 3.5696483510176877,
+          "pg_compatible_fraction": 0.1875
+        },
+        "etkdg_v3_best_of_n": {
+          "collision_free_fraction": 0.90625,
+          "mean_bond_length_mae_angstrom": 0.025751075216267218,
+          "mean_candidate_kabsch_diversity_angstrom": 1.592551447638108,
+          "median_runtime_seconds": 0.2670554481446743,
+          "median_uff_energy_per_atom_kcal_mol": 2.8749066462280357,
+          "pg_compatible_fraction": 0.28125
+        }
+      }
+    },
+    "external_nonoverlap_panel": {
+      "checks": {
+        "independent_point_group_audit_completed": true,
+        "nearest_cof_v2_tanimoto_strictly_below_one": true,
+        "paired_summary_completed": true,
+        "panel_count_12": true,
+        "protocol_hash_matches_report": true,
+        "strict_smiles_core_fingerprint_nonoverlap": true
+      },
+      "claim_boundary": "Strictly external to COF-v2 by canonical SMILES, Bemis-Murcko scaffold, and exact Morgan fingerprint; not proven unseen to official GEOM training.",
+      "completed": true,
+      "evidence": [
+        {
+          "path": "generative_model/evaluation/our_etflow_external_protocol_v1.json",
+          "sha256": "bd735a3ef33e8999b2b46b91eba75e8309132a9f50fb8ab0559420ff9a8e2762"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_external_v1/report.json",
+          "sha256": "a90c181c7caf1cf61184fed9e0462e62f6e88506573f45fe4b21c859539a579f"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_external_v1/point_group_report.json",
+          "sha256": "7033a8a57bc95d69321e2335b6d81f8c6f6fb025499189c70556bec2e6710ff8"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_external_v1/paired_ablation_summary.json",
+          "sha256": "58127dc3155496d62d4c9496500e59c75323fa9e4adc73046ba5e392456cd611"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_external_v1/coordinates.npz",
+          "sha256": "31330e695684d3340eff80686ad6ce2a8766dd3d706df1f25c0fd4fc4f150d0d"
+        }
+      ],
+      "panel": {
+        "count": 12,
+        "target_pg_counts": {
+          "C2": 4,
+          "C3": 4,
+          "D6h": 2,
+          "S4": 2
+        }
+      },
+      "scientific_outcome": {
+        "by_target_pg": {
+          "C2": {
+            "analyzer_success_fraction": 1.0,
+            "count": 4,
+            "pg_compatible_fraction": 1.0,
+            "pg_exact_match_fraction": 0.0
+          },
+          "C3": {
+            "analyzer_success_fraction": 1.0,
+            "count": 4,
+            "pg_compatible_fraction": 1.0,
+            "pg_exact_match_fraction": 0.25
+          },
+          "D6h": {
+            "analyzer_success_fraction": 1.0,
+            "count": 2,
+            "pg_compatible_fraction": 1.0,
+            "pg_exact_match_fraction": 1.0
+          },
+          "S4": {
+            "analyzer_success_fraction": 0.0,
+            "count": 2,
+            "pg_compatible_fraction": 0.0,
+            "pg_exact_match_fraction": 0.0
+          }
+        },
+        "full_route_collision_free_fraction": 0.8333333333333334,
+        "full_route_generation_fraction": 0.8333333333333334,
+        "full_route_pg_compatible_fraction": 0.8333333333333334,
+        "retained_negative_result": "S4 full route: 0/2 generated/compatible"
+      }
+    },
+    "final_statistics_and_visualization": {
+      "artifact_count": 30,
+      "checks": {
+        "artifact_count_30": true,
+        "artifact_hashes_match": true,
+        "input_hashes_match": true,
+        "manifest_status_pass": true,
+        "required_tables_and_figures_present": true,
+        "success_and_failure_xyz_present": true,
+        "xyz_example_count_12": true
+      },
+      "completed": true,
+      "determinism_evidence": "The builder was executed twice consecutively in env_cof; both runs produced the same manifest SHA-256 recorded below.",
+      "evidence": [
+        {
+          "path": "docs/presentation/generative_model_progress_20260821/assets/our_etflow_eval_v1/figure_manifest.json",
+          "sha256": "104f679c45cc7d08c163f26cb513821da4f888e96dd4fac5c6f896bc17d27145"
+        }
+      ],
+      "xyz_example_count": 12,
+      "xyz_roles": {
+        "failure_c2_c3_collapse": 3,
+        "failure_collision_after_hard_projection": 1,
+        "success_multi_pg_response": 3,
+        "success_same_graph_after_f02": 1,
+        "xtb_symmetry_breaking": 2,
+        "xtb_symmetry_retained": 2
+      }
+    },
+    "gfn2_xtb_physical_relaxation": {
+      "checks": {
+        "d6h_symmetry_breaking_case_preserved": true,
+        "expanded_four_point_groups_eight_each": true,
+        "independent_point_group_audit_completed": true,
+        "pilot_count_32": true,
+        "protocol_hash_matches_report": true,
+        "requested_pre_post_metrics_present": true,
+        "summary_gate_passed": true,
+        "unconstrained_relaxation": true
+      },
+      "completed": true,
+      "evidence": [
+        {
+          "path": "generative_model/evaluation/our_etflow_xtb_protocol_v1.json",
+          "sha256": "33fd9d65ee2cdbc88860bb8ed639011151a7db6cd63ca3c165113e2e9573fde9"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/relaxation_report.json",
+          "sha256": "e5dd255e4cba3f07286eec7125872df67dfd3b4a3b3d6a1a62ef5023fbd2167c"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/point_group_report.json",
+          "sha256": "f7b7bbe2578b82bc57d3956a8cce7f788fc4e3853afb2e5fefc468d914bc3d4f"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/summary.json",
+          "sha256": "72cdbba684038602c4ad791e89d61cb57550bc32d01a96a1590bc28222e91e6a"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_xtb_relaxation_v1/relaxed_coordinates.npz",
+          "sha256": "0f021158df49c265aa697e46ac69f2de4b0385dfcdc3f57778f39a81282281e7"
+        }
+      ],
+      "scientific_gate_passed": true,
+      "scientific_outcome": {
+        "by_target_pg": {
+          "C2": {
+            "after_compatible_fraction": 1.0,
+            "before_compatible_fraction": 1.0,
+            "count": 8
+          },
+          "C3": {
+            "after_compatible_fraction": 1.0,
+            "before_compatible_fraction": 1.0,
+            "count": 8
+          },
+          "D6h": {
+            "after_compatible_fraction": 0.875,
+            "before_compatible_fraction": 1.0,
+            "count": 8
+          },
+          "S4": {
+            "after_compatible_fraction": 1.0,
+            "before_compatible_fraction": 1.0,
+            "count": 8
+          }
+        },
+        "metrics": {
+          "all_successful_values_finite": true,
+          "calculation_success_count": 32,
+          "calculation_success_fraction_full_panel": 1.0,
+          "collision_free_after_fraction_full_panel": 1.0,
+          "energy_nonincreasing_fraction_among_success": 1.0,
+          "median_kabsch_rmsd_pre_to_post_angstrom": 0.07155140264180304,
+          "optimizer_converged_fraction_full_panel": 1.0,
+          "pg_compatible_after_fraction_full_panel": 0.96875,
+          "pg_compatible_before_fraction_full_panel": 1.0,
+          "pg_exact_match_after_fraction_full_panel": 0.625
+        },
+        "symmetry_breaking_failures": [
+          {
+            "actual_pg_after": "D3h",
+            "package_index": 858,
+            "target_pg": "D6h"
+          }
+        ]
+      }
+    },
+    "same_graph_target_pg_controllability": {
+      "checks": {
+        "all_requested_targets_compatible": true,
+        "all_targets_generated": true,
+        "negative_gate_preserved": true,
+        "pairwise_response_measured": true,
+        "protocol_hash_matches_report": true,
+        "same_graph_panel_count_8": true,
+        "shared_raw_exact_by_construction": true,
+        "targets_c2_c3_d6h": true
+      },
+      "completed": true,
+      "evidence": [
+        {
+          "path": "generative_model/evaluation/our_etflow_controllability_protocol_v1.json",
+          "sha256": "536b191315cf018e81e570cd261d875ec16715ccc231953e84071e5dd65e73c3"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_controllability_v1/report.json",
+          "sha256": "9ec6314e89192d38e1c1c58314f1dd52a1c25599cffe249565e147ca08f3ca61"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_controllability_v1/controllability_audit_v2.json",
+          "sha256": "52e812b23bddf309f888fc4cc7eb2f2e06f936ecbd13e2cfb7a09d1e65eb2eb7"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_controllability_v1/coordinates.npz",
+          "sha256": "535dd6a1ff1338e969e4a630b27e95deaed72e9babd859f7c9ea85916c9d071a"
+        }
+      ],
+      "scientific_gate_passed": false,
+      "scientific_outcome": {
+        "pairwise_response_summary": {
+          "C2_vs_C3": {
+            "count": 8,
+            "mean_kabsch_rmsd_angstrom": 0.7868504292669631,
+            "minimum_kabsch_rmsd_angstrom": 0.0002832200655393084,
+            "responsive_fraction": 0.625
+          },
+          "C2_vs_D6h": {
+            "count": 8,
+            "mean_kabsch_rmsd_angstrom": 0.9701390467830284,
+            "minimum_kabsch_rmsd_angstrom": 0.31305429676404734,
+            "responsive_fraction": 1.0
+          },
+          "C3_vs_D6h": {
+            "count": 8,
+            "mean_kabsch_rmsd_angstrom": 0.991643076237845,
+            "minimum_kabsch_rmsd_angstrom": 0.3120376504323658,
+            "responsive_fraction": 1.0
+          }
+        },
+        "retained_limitation": "C2_vs_C3 response is 5/8 (0.625), not 8/8.",
+        "target_summary": {
+          "C2": {
+            "analyzer_success_fraction": 1.0,
+            "count": 8,
+            "generation_success_fraction": 1.0,
+            "pg_compatible_fraction": 1.0,
+            "pg_exact_match_fraction": 0.0
+          },
+          "C3": {
+            "analyzer_success_fraction": 1.0,
+            "count": 8,
+            "generation_success_fraction": 1.0,
+            "pg_compatible_fraction": 1.0,
+            "pg_exact_match_fraction": 0.0
+          },
+          "D6h": {
+            "analyzer_success_fraction": 1.0,
+            "count": 8,
+            "generation_success_fraction": 1.0,
+            "pg_compatible_fraction": 1.0,
+            "pg_exact_match_fraction": 1.0
+          }
+        }
+      }
+    },
+    "unseen_graph_core_ood": {
+      "checks": {
+        "canonical_smiles_core_fingerprint_nonoverlap": true,
+        "core_ood_test_only": true,
+        "independent_point_group_audit_completed": true,
+        "nearest_train_tanimoto_strictly_below_one": true,
+        "paired_summary_completed": true,
+        "panel_count_32": true,
+        "protocol_hash_matches_report": true
+      },
+      "completed": true,
+      "evidence": [
+        {
+          "path": "generative_model/evaluation/our_etflow_core_ood_protocol_v1.json",
+          "sha256": "d274cb34839184ae5219041db3c4bb01ea1d1135bc6c9bf8d1eef09b8e529576"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_core_ood_v1/report.json",
+          "sha256": "c5b1c35e791d79057642933b36769514b69463899caba93d7747c1e9cd49cea8"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_core_ood_v1/point_group_report.json",
+          "sha256": "ba081d9d53cd1ce25082ccb47a5569a58fd3ee6cecf6a35f96b6421ab22b0f9d"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_core_ood_v1/paired_ablation_summary.json",
+          "sha256": "3dd4232c8c548265f2c3a805cd5d026834b99cc0946ed519e18115e6fadc623f"
+        },
+        {
+          "path": "generative_model/runs/our_etflow_core_ood_v1/coordinates.npz",
+          "sha256": "4778914b36761496fcb30f697df2030833c8f33a41b0e9f5d21eea64e6b272e1"
+        }
+      ],
+      "panel": {
+        "count": 32,
+        "maximum_nearest_train_tanimoto": 0.8235294117647058,
+        "target_pg_counts": {
+          "C2": 16,
+          "C3": 16
+        },
+        "unique_core_count": 10
+      },
+      "scientific_outcome": {
+        "full_route_collision_free_fraction": 1.0,
+        "full_route_generation_fraction": 1.0,
+        "full_route_mean_bond_mae_angstrom": 0.01304748558832723,
+        "full_route_pg_compatible_fraction": 1.0
+      }
+    }
+  },
+  "schema_version": "our-etflow-supplement-completion-v1",
+  "status": "PASS_OUR_ETFLOW_SUPPLEMENT_REQUIREMENTS_COMPLETED"
+}

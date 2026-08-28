@@ -1,0 +1,106 @@
+{
+  "final_step_64_stage_gate": {
+    "all_required": true,
+    "checks": {
+      "atom_exact_molecules_min": 4,
+      "bond_exact_molecules_min": 2,
+      "conditional_type_micro_accuracy_min": 0.95,
+      "connected_molecules_min": 2,
+      "coordinate_rmsd_max_angstrom_max": 0.14410921931266785,
+      "execution_and_gradients_finite": true,
+      "existence_threshold_exactly_zero": true,
+      "macro_molecule_balanced_existence_accuracy_min": 0.9,
+      "minimum_molecule_balanced_existence_accuracy_min": 0.75,
+      "none_accuracy_min": 0.9705320600272851,
+      "present_exact_type_accuracy_min": 0.9256756756756757,
+      "present_existence_recall_min": 0.9256756756756757,
+      "sanitize_valid_molecules_min": 2,
+      "source_model_fingerprint_unchanged": true,
+      "wrong_unique_pair_count_max": 118
+    },
+    "interpretation": "Passing releases only a bounded combined tier-4 bond/coordinate refinement design; it is not PASS_U2_TIER and does not release tier-32.",
+    "selection_policy": "step 64 only; intermediate checkpoints are diagnostic and cannot replace the frozen final endpoint"
+  },
+  "identity": {
+    "capacity_report_sha256": "bcf612791c64aea0000d26d422d0af4cb218dcce867988e304e9fa5a8defac16",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "engineering_report_sha256": "4ee0c602b5edf82106252622f2d6c517b5bad2abe23679071e16f2ad6df22a91",
+    "explicit_head_module_sha256": "b3f6651ce68d9859396c1e96305af5a0d00d4c3383b57e68f2527fc05209021b",
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "pilot_summarizer_sha256": "906aaa8bf84b547405ca9e2458d339ebca95af33c4589d5e5c45a86156dc4ea8",
+    "source_checkpoint": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "source_checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+    "split_sha256": "59abc7d59b5f6f1f2ff07ef907ff6191458ca9f4c4ec4411f80ba78ef6c49c8d",
+    "step2_audit_sha256": "74867dd0c2d9c81b330072134581e4bfdb3bdaf93838d9cdf697b3936fdb8c2e",
+    "tier4_package_indices": [
+      864,
+      1135,
+      1114,
+      862
+    ],
+    "trainer_sha256": "86c55a5df2e551a965c770eb3724bff0b2b7608cf7fcbdb22c40d9241fd2cf83"
+  },
+  "pre_run_baselines": {
+    "engineering_step2_diagnostic_only": {
+      "bond_exact_molecules": 0,
+      "conditional_type_micro_accuracy": 0.9594594594594594,
+      "macro_molecule_balanced_existence_accuracy": 0.6636821172038917,
+      "minimum_molecule_balanced_existence_accuracy": 0.6111111111111112,
+      "none_accuracy": 0.43983628922237383,
+      "present_existence_recall": 0.831081081081081,
+      "wrong_unique_pair_count": 2084
+    },
+    "legacy_hierarchical_recovery_floor": {
+      "bond_exact_molecules": 2,
+      "connected_molecules": 2,
+      "coordinate_rmsd_max_angstrom": 0.14410921931266785,
+      "none_accuracy": 0.9705320600272851,
+      "present_exact_type_accuracy": 0.9256756756756757,
+      "sanitize_valid_molecules": 2,
+      "wrong_unique_pair_count": 119
+    }
+  },
+  "protocol_fingerprint": "597da438c5b597f53596b6f2f835e25c7b5dd7e92c6bc3fdb25dc5106cecc9a4",
+  "purpose": "Bounded head-only tier-4 pilot after transferable feature signal and continuous/resume engineering equivalence were established.",
+  "run": {
+    "batch_size": 4,
+    "checkpoint_every": 8,
+    "deterministic": true,
+    "device": "cuda",
+    "engineering_step2_checkpoint_reused": false,
+    "existence_threshold": 0.0,
+    "gradient_clip": 1.0,
+    "initialization": "fresh explicit head from frozen step-3008 source",
+    "learning_rate": 0.0001,
+    "max_steps": 64,
+    "output_dir": "generative_model/runs/uae3d_overfit4/explicit_bond_head_0064_lr1em4",
+    "seed": 20260820,
+    "source_uae_frozen": true,
+    "threshold_scope": "fixed raw zero for the entire run",
+    "tier": 4,
+    "trainable_scope": "325 explicit bond-head parameters only",
+    "weight_decay": 0.0
+  },
+  "schema_version": "uae3d-explicit-bond-head-pilot-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "enter_tier32": false,
+    "old_hierarchical_branch_resumed": false,
+    "quality_stage": "tier-4 bond-only stage gate",
+    "test_used": false,
+    "universal_u2_gate": false,
+    "validation_used_for_posthoc_threshold_fit": false
+  },
+  "status": "FROZEN_NOT_RUN",
+  "stop_policy": {
+    "immediate_fail": [
+      "non-finite loss or gradient",
+      "source UAE fingerprint changes",
+      "checkpoint identity/schema mismatch",
+      "raw existence threshold differs from zero"
+    ],
+    "step64_fail": "stop this explicit-head-only branch; do not extend steps, tune a threshold, rank intermediate checkpoints, or enter tier-32",
+    "step64_pass": "freeze artifacts and design one pre-gated combined tier-4 refinement"
+  }
+}

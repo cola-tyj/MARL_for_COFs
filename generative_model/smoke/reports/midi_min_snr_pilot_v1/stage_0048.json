@@ -1,0 +1,91 @@
+{
+  "conclusion": "native generation remains stable, but fixed validation improvement is not broad",
+  "deterministic_validation": {
+    "case_win_fraction": 0.4375,
+    "case_wins": 14,
+    "checks": {
+      "case_win_fraction": false,
+      "mean_ratio": false,
+      "timestep_win_fraction": false
+    },
+    "component_means": {
+      "atom_cross_entropy": 0.4032921061551349,
+      "charge_cross_entropy": 0.0025808504077593497,
+      "edge_cross_entropy": 0.08586966542651453,
+      "position_mse": 2.3513885330758058
+    },
+    "mean_total_loss": 7.389802816091105,
+    "mean_total_loss_ratio_to_official": 0.9905040545127882,
+    "passed": false,
+    "timestep_total_loss_means": {
+      "1": 0.03676964342594147,
+      "100": 0.0333401239477098,
+      "200": 0.1228552358224988,
+      "25": 0.03379527200013399,
+      "300": 1.6047868728637695,
+      "400": 14.294111728668213,
+      "50": 0.031697405967861414,
+      "500": 42.961066246032715
+    },
+    "timestep_win_fraction": 0.5,
+    "timestep_wins": 4
+  },
+  "native_sampling": {
+    "checks": {
+      "collisions": true,
+      "connected": true,
+      "sanitize_valid": true
+    },
+    "collisions": 0,
+    "connected": 5,
+    "evaluation_fingerprint": "7fe7c1edd3964a0eae16b130f23bbc02b4d06d6af13145313ae1292dc2424fcd",
+    "evaluation_report_sha256": "ffce6402b17252245910298d2b6a6197c31388a27bb10e7a6225e22f7d5d4720",
+    "exact_train_smiles": 0,
+    "minimum_pair_distance_mean_angstrom": 0.9893473852679808,
+    "nearest_train_tanimoto_mean": 0.14911479145092427,
+    "passed": true,
+    "sampling_report_sha256": "5b45adfb88c36876788ba98abe7e8d476a1eb47cd8842285116a0c514c394ff4",
+    "sanitize_failure_counts": {},
+    "sanitize_valid": 5
+  },
+  "schema_version": "1.0",
+  "stage_gate_passed": false,
+  "status": "FAIL_MIN_SNR_STAGE_DETERMINISTIC_GATE",
+  "step": 48,
+  "training_segment": {
+    "begin_step": 33,
+    "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_min_snr_0064/checkpoints/step-000048.pt",
+    "checkpoint_sha256": "4d8a247126d1934e09c9f3252316d683b37231b24aea019bc5756751eba4f25a",
+    "end_step": 48,
+    "loss_maximum": 1.5653114318847656,
+    "loss_mean": 0.6827374925487675,
+    "loss_median": 0.6275873780250549,
+    "loss_minimum": 0.010907112620770931,
+    "position_loss_weighting": {
+      "optimized_loss_mean": 0.6827374925487675,
+      "position_mse_mean": 3.23404710018076,
+      "unweighted_base_loss_mean": 10.155063355283346,
+      "weight_maximum": 1.8805872175592304,
+      "weight_mean": 1.0164630796143714,
+      "weight_minimum": 7.122602311351794e-07
+    },
+    "timesteps": [
+      63,
+      131,
+      254,
+      425,
+      41,
+      220,
+      467,
+      351,
+      135,
+      494,
+      309,
+      13,
+      430,
+      197,
+      87,
+      368
+    ]
+  }
+}

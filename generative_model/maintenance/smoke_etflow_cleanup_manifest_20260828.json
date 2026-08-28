@@ -1,0 +1,1020 @@
+{
+  "candidate_count": 197,
+  "cleanup_script_sha256": "0b0180fee2f352433e2fcd05cbfc139322a72ebf3c032c3edb42896c14f7d193",
+  "policy": {
+    "etflow_v5_executable_closure_preserved": true,
+    "four_route_ablation_and_supplements_preserved": true,
+    "frozen_smoke_reports_preserved": true,
+    "legacy_minimal_entrypoints_preserved": true,
+    "official_etflow_checkpoint_preserved": true,
+    "rare_v2_evidence_files_preserved": [
+      "geometry_report.json",
+      "point_group_report.json",
+      "s4_inertia_boundary_diagnosis.json"
+    ]
+  },
+  "reclaimable_bytes": 309297989,
+  "retained_smoke_scripts": [
+    "__init__.py",
+    "audit_uae3d_bond_capacity.py",
+    "audit_uae3d_c23_reconstruction.py",
+    "audit_uae3d_gate_a.py",
+    "build_uae3d_c23_readonly_protocol.py",
+    "build_uae3d_gate_a_protocol.py",
+    "build_uae3d_split.py",
+    "finalize_uae3d_c23_readonly_audit.py",
+    "run_midi_forward.py",
+    "run_semlaflow_forward.py",
+    "run_uae3d_forward.py",
+    "train_uae3d_reconstruction.py"
+  ],
+  "schema_version": "smoke-etflow-cleanup-v1",
+  "status": "APPLIED",
+  "targets": [
+    {
+      "bytes": 9126,
+      "kind": "file",
+      "path": "generative_model/inference/audit_graph_action_extended.py"
+    },
+    {
+      "bytes": 5791,
+      "kind": "file",
+      "path": "generative_model/inference/build_etflow_e3f02_protocol.py"
+    },
+    {
+      "bytes": 6676,
+      "kind": "file",
+      "path": "generative_model/inference/build_etflow_e3f02_protocol_v2.py"
+    },
+    {
+      "bytes": 7295,
+      "kind": "file",
+      "path": "generative_model/inference/build_etflow_e3f02_rare_targets_protocol.py"
+    },
+    {
+      "bytes": 5485,
+      "kind": "file",
+      "path": "generative_model/inference/build_etflow_e3f02_rare_targets_protocol_v2.py"
+    },
+    {
+      "bytes": 4333,
+      "kind": "file",
+      "path": "generative_model/inference/build_graph_action_extended_protocol.py"
+    },
+    {
+      "bytes": 5265,
+      "kind": "file",
+      "path": "generative_model/inference/build_graph_action_extended_protocol_v2.py"
+    },
+    {
+      "bytes": 6156,
+      "kind": "file",
+      "path": "generative_model/inference/diagnose_d6h_action_candidates.py"
+    },
+    {
+      "bytes": 4299,
+      "kind": "file",
+      "path": "generative_model/inference/diagnose_etflow_e3f02_v2_failure.py"
+    },
+    {
+      "bytes": 4394,
+      "kind": "file",
+      "path": "generative_model/inference/diagnose_s4_action_candidates.py"
+    },
+    {
+      "bytes": 8792,
+      "kind": "file",
+      "path": "generative_model/inference/run_etflow_e3f02_rare_targets_v2.py"
+    },
+    {
+      "bytes": 10838,
+      "kind": "file",
+      "path": "generative_model/models/coordinate_flow.py"
+    },
+    {
+      "bytes": 8017,
+      "kind": "file",
+      "path": "generative_model/models/coordinate_flow_runtime.py"
+    },
+    {
+      "bytes": 18596,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_collision_aware.py"
+    },
+    {
+      "bytes": 17141,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_collision_aware_v2.py"
+    },
+    {
+      "bytes": 17752,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_conditioned.py"
+    },
+    {
+      "bytes": 9548,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_conditioned_v2.py"
+    },
+    {
+      "bytes": 15315,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_dual_basis_v1.py"
+    },
+    {
+      "bytes": 14306,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_dual_basis_v2.py"
+    },
+    {
+      "bytes": 8652,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_dual_basis_v3.py"
+    },
+    {
+      "bytes": 23862,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_operation_orbit_v1.py"
+    },
+    {
+      "bytes": 8160,
+      "kind": "file",
+      "path": "generative_model/models/etflow_pg_trajectory_risk_v1.py"
+    },
+    {
+      "bytes": 7108,
+      "kind": "file",
+      "path": "generative_model/models/graph_pg_3d_denoiser.py"
+    },
+    {
+      "bytes": 6818,
+      "kind": "file",
+      "path": "generative_model/models/graph_pg_3d_denoiser_full_pair.py"
+    },
+    {
+      "bytes": 8857,
+      "kind": "file",
+      "path": "generative_model/models/graph_pg_3d_denoiser_multichannel.py"
+    },
+    {
+      "bytes": 6700,
+      "kind": "file",
+      "path": "generative_model/models/graph_pg_3d_eqgat_backbone.py"
+    },
+    {
+      "bytes": 8038,
+      "kind": "file",
+      "path": "generative_model/models/graph_pg_3d_semla_backbone.py"
+    },
+    {
+      "bytes": 8237,
+      "kind": "file",
+      "path": "generative_model/models/graph_pg_3d_semla_flow.py"
+    },
+    {
+      "bytes": 8701,
+      "kind": "file",
+      "path": "generative_model/models/orbit_coordinate_denoiser.py"
+    },
+    {
+      "bytes": 546336,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_c7rs_balanced_a2_0256_v1"
+    },
+    {
+      "bytes": 121195,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_c7rs_raw_confirmation_v1"
+    },
+    {
+      "bytes": 56150,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_examples"
+    },
+    {
+      "bytes": 123654,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_iidtest_pilot8_v1"
+    },
+    {
+      "bytes": 1450887,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_rare_targets_v1"
+    },
+    {
+      "bytes": 24753,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_s4_diagnosis"
+    },
+    {
+      "bytes": 54396,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_v2_examples"
+    },
+    {
+      "bytes": 50827,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_v3_examples"
+    },
+    {
+      "bytes": 47028,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_v4_examples"
+    },
+    {
+      "bytes": 10609,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef0b_official"
+    },
+    {
+      "bytes": 2139126,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef1_zeroshot"
+    },
+    {
+      "bytes": 545244,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2a2_endpoint_interleaved_0256"
+    },
+    {
+      "bytes": 445463,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2a_adapter_0256"
+    },
+    {
+      "bytes": 105230,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2b_raw_sampling_v1"
+    },
+    {
+      "bytes": 346942,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2c2_overlap_v2_0256"
+    },
+    {
+      "bytes": 80858,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2c3_raw_sampling_v1"
+    },
+    {
+      "bytes": 80857,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2c4_repeat_v1"
+    },
+    {
+      "bytes": 191764,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2c6_disjoint_iidval64_v1"
+    },
+    {
+      "bytes": 662225,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2d2_operation_orbit_v2_0256"
+    },
+    {
+      "bytes": 948604,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_ef2d4_trajectory_cvar_v2_0064"
+    },
+    {
+      "bytes": 35534196,
+      "kind": "directory",
+      "path": "generative_model/runs/etkdg_orbit_e2"
+    },
+    {
+      "bytes": 235995326,
+      "kind": "directory",
+      "path": "generative_model/runs/graph_pg_3d"
+    },
+    {
+      "bytes": 18896643,
+      "kind": "directory",
+      "path": "generative_model/runs/graph_pg_3d_g2"
+    },
+    {
+      "bytes": 7417182,
+      "kind": "directory",
+      "path": "generative_model/runs/graph_pg_3d_g21"
+    },
+    {
+      "bytes": 4745,
+      "kind": "directory",
+      "path": "generative_model/runs/our_etflow_xtb_preflight1_v1"
+    },
+    {
+      "bytes": 12734,
+      "kind": "directory",
+      "path": "generative_model/runs/our_etflow_xtb_preflight1_v2"
+    },
+    {
+      "bytes": 10115,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_c7rs_point_groups.py"
+    },
+    {
+      "bytes": 6705,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef1_point_groups.py"
+    },
+    {
+      "bytes": 8958,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2_engineering.py"
+    },
+    {
+      "bytes": 10684,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2a2_engineering.py"
+    },
+    {
+      "bytes": 7813,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2a_checkpoints.py"
+    },
+    {
+      "bytes": 7179,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2b_point_groups.py"
+    },
+    {
+      "bytes": 10005,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2c2_overlap_direction.py"
+    },
+    {
+      "bytes": 6162,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2c2_training_result.py"
+    },
+    {
+      "bytes": 11519,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2c4_reproducibility.py"
+    },
+    {
+      "bytes": 11066,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2c5_dual_point_groups.py"
+    },
+    {
+      "bytes": 9219,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2c6_point_groups.py"
+    },
+    {
+      "bytes": 10697,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2c_collision_direction.py"
+    },
+    {
+      "bytes": 22062,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2d1_operation_orbit_engineering.py"
+    },
+    {
+      "bytes": 22965,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2d3_dual_basis_engineering.py"
+    },
+    {
+      "bytes": 2040,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2d3_dual_basis_engineering_v2.py"
+    },
+    {
+      "bytes": 2230,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etflow_ef2d3_dual_basis_engineering_v3.py"
+    },
+    {
+      "bytes": 6225,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etkdg_orbit_e0_point_groups.py"
+    },
+    {
+      "bytes": 1976,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etkdg_orbit_e1_point_groups.py"
+    },
+    {
+      "bytes": 1933,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etkdg_orbit_e1_resonance_point_groups.py"
+    },
+    {
+      "bytes": 10217,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_etkdg_orbit_e2_point_groups.py"
+    },
+    {
+      "bytes": 10204,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_graph_action_e3.py"
+    },
+    {
+      "bytes": 1755,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_graph_action_e3_3d_handoff.py"
+    },
+    {
+      "bytes": 4983,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_graph_pg_3d_coordinate_flow_f0.py"
+    },
+    {
+      "bytes": 4390,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_graph_pg_3d_coordinate_flow_fast32_engineering.py"
+    },
+    {
+      "bytes": 7424,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_graph_pg_3d_interface.py"
+    },
+    {
+      "bytes": 8534,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_orbit_coordinate_o0.py"
+    },
+    {
+      "bytes": 5717,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_orbit_coordinate_o1_engineering.py"
+    },
+    {
+      "bytes": 7419,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_orbit_force_field_coverage.py"
+    },
+    {
+      "bytes": 10184,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_orbit_force_field_f01_point_groups.py"
+    },
+    {
+      "bytes": 4437,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_orbit_force_field_f02_point_groups.py"
+    },
+    {
+      "bytes": 9854,
+      "kind": "file",
+      "path": "generative_model/smoke/audit_symmetry_by_construction_orbits.py"
+    },
+    {
+      "bytes": 9888,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_c7rs_balanced_a2_protocol.py"
+    },
+    {
+      "bytes": 10640,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_c7rs_raw_confirmation_protocol.py"
+    },
+    {
+      "bytes": 3008,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef0_official_protocol.py"
+    },
+    {
+      "bytes": 2983,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef0_offline_protocol.py"
+    },
+    {
+      "bytes": 7919,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef1_zeroshot_protocol.py"
+    },
+    {
+      "bytes": 9689,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2_protocol.py"
+    },
+    {
+      "bytes": 3697,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2_protocol_v2.py"
+    },
+    {
+      "bytes": 3939,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2a2_engineering_protocol.py"
+    },
+    {
+      "bytes": 8003,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2a2_training_protocol.py"
+    },
+    {
+      "bytes": 5633,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2a_training_protocol.py"
+    },
+    {
+      "bytes": 7652,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2b_raw_sampling_protocol.py"
+    },
+    {
+      "bytes": 4718,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c2_overlap_direction_protocol.py"
+    },
+    {
+      "bytes": 6808,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c2_training_protocol.py"
+    },
+    {
+      "bytes": 2930,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c2_training_protocol_v2.py"
+    },
+    {
+      "bytes": 4546,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c2_training_result_audit_protocol.py"
+    },
+    {
+      "bytes": 5588,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c3_raw_sampling_protocol.py"
+    },
+    {
+      "bytes": 5273,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c4_reproducibility_protocol.py"
+    },
+    {
+      "bytes": 4633,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c5_dual_point_group_protocol.py"
+    },
+    {
+      "bytes": 2778,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c5_dual_point_group_protocol_v2.py"
+    },
+    {
+      "bytes": 8723,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c6_disjoint_confirmation_protocol.py"
+    },
+    {
+      "bytes": 4568,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2c_collision_direction_protocol.py"
+    },
+    {
+      "bytes": 9917,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d1_operation_orbit_engineering_protocol.py"
+    },
+    {
+      "bytes": 10688,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d2_operation_orbit_training_protocol.py"
+    },
+    {
+      "bytes": 4795,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d2_operation_orbit_training_protocol_v2.py"
+    },
+    {
+      "bytes": 9999,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d3_dual_basis_engineering_protocol.py"
+    },
+    {
+      "bytes": 8012,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d3_dual_basis_engineering_protocol_v2.py"
+    },
+    {
+      "bytes": 8585,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d3_dual_basis_engineering_protocol_v3.py"
+    },
+    {
+      "bytes": 12455,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d4_trajectory_cvar_training_protocol.py"
+    },
+    {
+      "bytes": 3652,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etflow_ef2d4_trajectory_cvar_training_protocol_v2.py"
+    },
+    {
+      "bytes": 7357,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etkdg_orbit_e0_protocol.py"
+    },
+    {
+      "bytes": 8728,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etkdg_orbit_e1_protocol.py"
+    },
+    {
+      "bytes": 9701,
+      "kind": "file",
+      "path": "generative_model/smoke/build_etkdg_orbit_e2_protocol.py"
+    },
+    {
+      "bytes": 4333,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_action_e3_3d_handoff_protocol.py"
+    },
+    {
+      "bytes": 6955,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_action_e3_protocol.py"
+    },
+    {
+      "bytes": 11417,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_coordinate_flow_fast32_protocol.py"
+    },
+    {
+      "bytes": 3802,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_eqgat_fast32_protocol.py"
+    },
+    {
+      "bytes": 6505,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_g1_protocol.py"
+    },
+    {
+      "bytes": 3271,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_g21_tier1_protocol.py"
+    },
+    {
+      "bytes": 4995,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_g22_tier1_protocol.py"
+    },
+    {
+      "bytes": 3859,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_g2_tier1_continuation_protocol.py"
+    },
+    {
+      "bytes": 6050,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_g2_tier1_protocol.py"
+    },
+    {
+      "bytes": 8595,
+      "kind": "file",
+      "path": "generative_model/smoke/build_graph_pg_3d_semla_fast32_protocol.py"
+    },
+    {
+      "bytes": 8935,
+      "kind": "file",
+      "path": "generative_model/smoke/build_orbit_coordinate_o0_protocol.py"
+    },
+    {
+      "bytes": 7242,
+      "kind": "file",
+      "path": "generative_model/smoke/build_orbit_coordinate_o1_protocol.py"
+    },
+    {
+      "bytes": 3124,
+      "kind": "file",
+      "path": "generative_model/smoke/build_orbit_force_field_f01_protocol.py"
+    },
+    {
+      "bytes": 3552,
+      "kind": "file",
+      "path": "generative_model/smoke/build_orbit_force_field_f02_collision_protocol.py"
+    },
+    {
+      "bytes": 5560,
+      "kind": "file",
+      "path": "generative_model/smoke/build_orbit_force_field_f0_protocol.py"
+    },
+    {
+      "bytes": 7993,
+      "kind": "file",
+      "path": "generative_model/smoke/diagnose_graph_pg_3d_g1.py"
+    },
+    {
+      "bytes": 9773,
+      "kind": "file",
+      "path": "generative_model/smoke/export_orbit_force_field_f01_coordinates.py"
+    },
+    {
+      "bytes": 14235,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etflow_c7rs_raw_confirmation.py"
+    },
+    {
+      "bytes": 8437,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etflow_ef0_official.py"
+    },
+    {
+      "bytes": 6731,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etflow_ef0_offline.py"
+    },
+    {
+      "bytes": 18003,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etflow_ef1_zeroshot.py"
+    },
+    {
+      "bytes": 13996,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etflow_ef2b_raw_sampling.py"
+    },
+    {
+      "bytes": 14316,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etflow_ef2c3_raw_sampling.py"
+    },
+    {
+      "bytes": 12956,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etflow_ef2c6_disjoint_confirmation.py"
+    },
+    {
+      "bytes": 12501,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etkdg_orbit_e0.py"
+    },
+    {
+      "bytes": 1717,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etkdg_orbit_e1.py"
+    },
+    {
+      "bytes": 12179,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etkdg_orbit_e1_resonance.py"
+    },
+    {
+      "bytes": 18118,
+      "kind": "file",
+      "path": "generative_model/smoke/run_etkdg_orbit_e2.py"
+    },
+    {
+      "bytes": 11131,
+      "kind": "file",
+      "path": "generative_model/smoke/run_graph_action_e3_3d_handoff.py"
+    },
+    {
+      "bytes": 10547,
+      "kind": "file",
+      "path": "generative_model/smoke/run_graph_action_e3_recovery.py"
+    },
+    {
+      "bytes": 15626,
+      "kind": "file",
+      "path": "generative_model/smoke/run_graph_pg_3d_g1_projection.py"
+    },
+    {
+      "bytes": 13785,
+      "kind": "file",
+      "path": "generative_model/smoke/run_orbit_force_field_f0.py"
+    },
+    {
+      "bytes": 7448,
+      "kind": "file",
+      "path": "generative_model/smoke/run_orbit_force_field_f02_collision_repair.py"
+    },
+    {
+      "bytes": 6999,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_etflow_c7rs_raw_failure.py"
+    },
+    {
+      "bytes": 7357,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_etflow_ef2a_failure.py"
+    },
+    {
+      "bytes": 4354,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_etflow_ef2c5_failure.py"
+    },
+    {
+      "bytes": 5612,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_etflow_ef2c6_failure.py"
+    },
+    {
+      "bytes": 4349,
+      "kind": "file",
+      "path": "generative_model/smoke/summarize_graph_pg_3d_g2_tier1.py"
+    },
+    {
+      "bytes": 16359,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_c7rs_balanced_a2.py"
+    },
+    {
+      "bytes": 13624,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2a2_adapter.py"
+    },
+    {
+      "bytes": 16801,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2a_adapter.py"
+    },
+    {
+      "bytes": 19661,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2c2_overlap_adapter.py"
+    },
+    {
+      "bytes": 11402,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2c2_overlap_adapter_v2.py"
+    },
+    {
+      "bytes": 31086,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2d2_operation_orbit.py"
+    },
+    {
+      "bytes": 2510,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2d2_operation_orbit_v2.py"
+    },
+    {
+      "bytes": 31778,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2d4_trajectory_cvar.py"
+    },
+    {
+      "bytes": 3693,
+      "kind": "file",
+      "path": "generative_model/smoke/train_etflow_ef2d4_trajectory_cvar_v2.py"
+    },
+    {
+      "bytes": 28005,
+      "kind": "file",
+      "path": "generative_model/smoke/train_graph_pg_3d_coordinate_flow_fast32.py"
+    },
+    {
+      "bytes": 33476,
+      "kind": "file",
+      "path": "generative_model/smoke/train_graph_pg_3d_g2_tier1.py"
+    },
+    {
+      "bytes": 12175,
+      "kind": "file",
+      "path": "generative_model/smoke/train_graph_pg_3d_g2_tier1_continuation.py"
+    },
+    {
+      "bytes": 24342,
+      "kind": "file",
+      "path": "generative_model/smoke/train_graph_pg_3d_semla_fast32.py"
+    },
+    {
+      "bytes": 23596,
+      "kind": "file",
+      "path": "generative_model/smoke/train_orbit_coordinate_o1.py"
+    },
+    {
+      "bytes": 5454,
+      "kind": "file",
+      "path": "generative_model/tests/test_coordinate_flow.py"
+    },
+    {
+      "bytes": 5808,
+      "kind": "file",
+      "path": "generative_model/tests/test_coordinate_flow_fast32_protocol.py"
+    },
+    {
+      "bytes": 4573,
+      "kind": "file",
+      "path": "generative_model/tests/test_coordinate_flow_runtime.py"
+    },
+    {
+      "bytes": 1809,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_ef2d4_execution_fix_v2.py"
+    },
+    {
+      "bytes": 6089,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_collision_aware.py"
+    },
+    {
+      "bytes": 5117,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_collision_aware_v2.py"
+    },
+    {
+      "bytes": 8283,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_conditioned.py"
+    },
+    {
+      "bytes": 5392,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_conditioned_v2.py"
+    },
+    {
+      "bytes": 9557,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_dual_basis_v1.py"
+    },
+    {
+      "bytes": 2109,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_dual_basis_v2.py"
+    },
+    {
+      "bytes": 2582,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_dual_basis_v3.py"
+    },
+    {
+      "bytes": 9310,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_operation_orbit_v1.py"
+    },
+    {
+      "bytes": 2603,
+      "kind": "file",
+      "path": "generative_model/tests/test_etflow_pg_trajectory_risk_v1.py"
+    },
+    {
+      "bytes": 3499,
+      "kind": "file",
+      "path": "generative_model/tests/test_graph_pg_3d_denoiser.py"
+    },
+    {
+      "bytes": 3363,
+      "kind": "file",
+      "path": "generative_model/tests/test_graph_pg_3d_denoiser_full_pair.py"
+    },
+    {
+      "bytes": 3452,
+      "kind": "file",
+      "path": "generative_model/tests/test_graph_pg_3d_denoiser_multichannel.py"
+    },
+    {
+      "bytes": 2565,
+      "kind": "file",
+      "path": "generative_model/tests/test_graph_pg_3d_eqgat_backbone.py"
+    },
+    {
+      "bytes": 3573,
+      "kind": "file",
+      "path": "generative_model/tests/test_graph_pg_3d_semla_backbone.py"
+    },
+    {
+      "bytes": 6897,
+      "kind": "file",
+      "path": "generative_model/tests/test_graph_pg_3d_semla_flow.py"
+    },
+    {
+      "bytes": 6424,
+      "kind": "file",
+      "path": "generative_model/tests/test_orbit_coordinate_denoiser.py"
+    },
+    {
+      "bytes": 3724,
+      "kind": "file",
+      "path": "generative_model/tests/test_orbit_coordinate_o1_protocol.py"
+    },
+    {
+      "bytes": 5028,
+      "kind": "file",
+      "path": "generative_model/tests/test_orbit_force_field_coverage.py"
+    },
+    {
+      "bytes": 2677,
+      "kind": "file",
+      "path": "generative_model/tests/test_orbit_force_field_f01_point_group_artifacts.py"
+    },
+    {
+      "bytes": 5250,
+      "kind": "file",
+      "path": "generative_model/tests/test_orbit_force_field_f02_collision_repair.py"
+    },
+    {
+      "bytes": 12310,
+      "kind": "file",
+      "path": "generative_model/runs/etflow_e3f02_rare_targets_v2/console.log"
+    },
+    {
+      "bytes": 1929339,
+      "kind": "directory",
+      "path": "generative_model/runs/etflow_e3f02_rare_targets_v2/molecules"
+    },
+    {
+      "bytes": 6928,
+      "kind": "file",
+      "path": "generative_model/runs/etflow_e3f02_rare_targets_v2/point_group_console.log"
+    }
+  ]
+}

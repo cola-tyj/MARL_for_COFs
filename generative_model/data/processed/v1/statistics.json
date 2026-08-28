@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "molecules": 2532,
+  "atoms": 91113,
+  "bonds": 96555,
+  "elements": {
+    "B": 74,
+    "Br": 181,
+    "C": 47128,
+    "Cl": 604,
+    "F": 1727,
+    "H": 28038,
+    "I": 187,
+    "N": 5231,
+    "O": 6253,
+    "P": 109,
+    "S": 1503,
+    "Si": 74,
+    "Sn": 4
+  },
+  "bond_types": {
+    "aromatic": 41372,
+    "double": 5003,
+    "single": 47338,
+    "triple": 2842
+  },
+  "formal_charges": {
+    "-1": 524,
+    "0": 90065,
+    "1": 524
+  },
+  "radical_electrons_per_atom": {
+    "0": 91008,
+    "1": 79,
+    "2": 26
+  },
+  "target_pg": {
+    "C2": 2019,
+    "C3": 461,
+    "D6h": 14,
+    "S4": 38
+  },
+  "point_group": {
+    "C2": 961,
+    "C2h": 522,
+    "C2v": 167,
+    "C3": 173,
+    "C3h": 164,
+    "C3v": 26,
+    "D2": 298,
+    "D2d": 22,
+    "D2h": 59,
+    "D3": 49,
+    "D3d": 3,
+    "D3h": 46,
+    "D6h": 14,
+    "S4": 28
+  },
+  "atom_count": {
+    "min": 9,
+    "median": 32.0,
+    "p95": 64.0,
+    "max": 105
+  },
+  "heavy_atom_count": {
+    "min": 8,
+    "median": 22.0,
+    "p95": 45.0,
+    "max": 77
+  },
+  "distance_to_centroid_angstrom": {
+    "mean": 5.023894309997559,
+    "p95": 10.375089454650874,
+    "max": 17.406633377075195
+  },
+  "splits": {
+    "iid": {
+      "train": {
+        "molecules": 2026,
+        "cores": 96,
+        "target_pg": {
+          "C2": 1615,
+          "C3": 369,
+          "D6h": 12,
+          "S4": 30
+        }
+      },
+      "val": {
+        "molecules": 253,
+        "cores": 71,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "D6h": 1,
+          "S4": 4
+        }
+      },
+      "test": {
+        "molecules": 253,
+        "cores": 68,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "D6h": 1,
+          "S4": 4
+        }
+      }
+    },
+    "core_ood": {
+      "train": {
+        "molecules": 2024,
+        "cores": 74,
+        "target_pg": {
+          "C2": 1615,
+          "C3": 369,
+          "D6h": 8,
+          "S4": 32
+        }
+      },
+      "val": {
+        "molecules": 250,
+        "cores": 11,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "S4": 2
+        }
+      },
+      "test": {
+        "molecules": 258,
+        "cores": 13,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "D6h": 6,
+          "S4": 4
+        }
+      }
+    }
+  }
+}

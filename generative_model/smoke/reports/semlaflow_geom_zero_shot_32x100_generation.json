@@ -1,0 +1,96 @@
+{
+  "assets": {
+    "checkpoint": {
+      "bytes": 466875784,
+      "google_drive_id": "1sQpxyyBkkK-pBbuMoo6x3JAkwu83JrPe",
+      "sha256": "1c159527816b02e7116b9a22394e8501aada7aa119382a64a9e178d641ba570d"
+    },
+    "test_smol": {
+      "bytes": 115650093,
+      "google_drive_id": "19l6cTzVjNDSUuY5ovSu4jvo4Es-LwHX7",
+      "sha256": "0906ea8d02d836821f72b85101d55d43daa5e47687b28d73cbf764745d09effc"
+    }
+  },
+  "environment": {
+    "gpu": "NVIDIA RTX A6000",
+    "lightning": "2.5.0.post0",
+    "python": "3.11.15",
+    "rdkit": "2024.03.5",
+    "torch": "2.5.0+cu121",
+    "torch_cuda": "12.1"
+  },
+  "model": {
+    "class": "MolecularCFM",
+    "generator_class": "SemlaGenerator",
+    "parameters": 46602814
+  },
+  "official_source": {
+    "commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283",
+    "repository": "https://github.com/rssrwn/semla-flow"
+  },
+  "output_files": {
+    "canonical_npz": {
+      "name": "samples_canonical.npz",
+      "sha256": "f9a202a281278556267d1a7585f4128041212eaa3ca701af16d79ee1544ad415"
+    },
+    "raw_smol": {
+      "name": "samples.smol",
+      "sha256": "d7f734870adec35c92a3d801a3a04d1dc1365f7bd43e09689265742a933bcf36"
+    },
+    "valid_sdf": {
+      "name": "samples.sdf",
+      "sha256": "6523ffe0c48489335147cffa1672313b99024c27e607c76311c6e5368d0fab1a"
+    }
+  },
+  "outputs": {
+    "atom_count": {
+      "max": 67,
+      "median": 42.0,
+      "min": 22
+    },
+    "bond_count": {
+      "max": 69,
+      "median": 43.5,
+      "min": 23
+    },
+    "connected_rate_among_valid": 1.0,
+    "connected_valid_molecules": 32,
+    "finite_coordinate_molecules": 32,
+    "raw_molecules": 32,
+    "rdkit_sanitize_valid_molecules": 32,
+    "rdkit_sanitize_valid_rate": 1.0,
+    "representation_audit": {
+      "asymmetric_off_diagonal_pairs": 0,
+      "diagonal_non_none_pairs": 0,
+      "special_token_atoms": 0,
+      "special_token_counts": {}
+    },
+    "requested_molecules": 32,
+    "sdf_written": 32
+  },
+  "peak_cuda_memory_bytes": 1139108864,
+  "reproducibility": {
+    "canonical_arrays_exact_on_second_a6000_run": true,
+    "canonical_npz_repeat_sha256": "f9a202a281278556267d1a7585f4128041212eaa3ca701af16d79ee1544ad415",
+    "coordinate_max_abs_difference_angstrom": 0.0,
+    "sdf_repeat_sha256": "6523ffe0c48489335147cffa1672313b99024c27e607c76311c6e5368d0fab1a",
+    "smol_pickle_byte_stable": false,
+    "smol_pickle_note": "PyTorch tensor pickle/storage metadata differs; canonical arrays and SDF are exact"
+  },
+  "sampling": {
+    "batch_cost": 4096,
+    "dataset": "geom-drugs",
+    "dataset_split": "test",
+    "integration_steps": 100,
+    "n_molecules": 32,
+    "ode_sampling_strategy": "log",
+    "seed": 12345
+  },
+  "schema_version": "1.0",
+  "status": "PASS",
+  "timing_seconds": {
+    "generation": 51.40996614471078,
+    "load": 19.676413223147392,
+    "per_molecule": 1.6065614420222118
+  }
+}

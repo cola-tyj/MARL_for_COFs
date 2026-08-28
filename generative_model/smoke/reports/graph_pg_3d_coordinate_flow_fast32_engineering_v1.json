@@ -1,0 +1,51 @@
+{
+  "checks": {
+    "environment_matches_protocol": true,
+    "expected_test_count_7": true,
+    "formal_training_not_started": true,
+    "frozen_protocol_status": true,
+    "sn_engineering_iid_train_only": true,
+    "test_and_core_ood_not_used": true,
+    "train_panel_32": true,
+    "unit_test_process_passed": true,
+    "validation_panel_8": true
+  },
+  "decision": {
+    "next_if_pass": "run the frozen 1024-step Fast-32 protocol on one CUDA GPU",
+    "quality_claim": "none until the frozen trainer emits the final report"
+  },
+  "execution_environment": {
+    "conda_environment": "env_cof",
+    "numpy": "1.26.4",
+    "pymatgen": "2025.3.10",
+    "python": "3.10.16",
+    "scipy": "1.15.2",
+    "torch": "1.13.1",
+    "torch_cuda_build": "11.7"
+  },
+  "protocol": {
+    "fingerprint": "3abb4235f5fa178b12605c085e2d79656373881d4a6b9d9b29fd646f21c95184",
+    "path": "generative_model/smoke/reports/graph_pg_3d_coordinate_flow_fast32_protocol_v1.json",
+    "sha256": "791443909591b08246a5f755269ed09638bf5a4a891350788829cd942fa26545"
+  },
+  "schema_version": "graph-pg-3d-coordinate-flow-fast32-engineering-audit-v1",
+  "scope": {
+    "core_ood_used": false,
+    "formal_training_run": false,
+    "quality_gate_evaluated": false,
+    "test_used": false
+  },
+  "status": "PASS_COORDINATE_FLOW_FAST32_ENGINEERING_PROTOCOL_FROZEN",
+  "test_summary": {
+    "modules": [
+      "generative_model.tests.test_coordinate_flow_runtime",
+      "generative_model.tests.test_coordinate_flow_fast32_protocol"
+    ],
+    "return_code": 0,
+    "test_source_sha256": {
+      "generative_model/tests/test_coordinate_flow_fast32_protocol.py": "3d404ceca936c44ed7418b1fee1008058874ea116815a4aefb5971a3f71ba084",
+      "generative_model/tests/test_coordinate_flow_runtime.py": "a4c9945fea9012d158215b1f0d5ff665bd08cd12c9daf843a3325f2ef1072e32"
+    },
+    "tests_run": 7
+  }
+}

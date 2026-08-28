@@ -1,0 +1,289 @@
+{
+  "schema_version": "2.0-validation-1.0",
+  "status": "PASS",
+  "counts": {
+    "molecules": 2532,
+    "atoms": 91113,
+    "bonds": 96555
+  },
+  "point_group_recalculation": {
+    "analyzer_vs_legacy_matches": 2513,
+    "analyzer_vs_legacy_rate": 0.9924960505529226,
+    "validated_actual_vs_legacy_matches": 2219,
+    "validated_actual_vs_legacy_rate": 0.8763823064770933,
+    "target_exact_matches": 1456,
+    "target_exact_rate": 0.5750394944707741,
+    "target_compatible": 2532,
+    "target_compatible_rate": 1.0
+  },
+  "target_pg_distribution": {
+    "C2": 2019,
+    "C3": 461,
+    "D6h": 14,
+    "S4": 38
+  },
+  "analyzer_pg_distribution": {
+    "C2": 964,
+    "C2h": 518,
+    "C2v": 167,
+    "C3": 173,
+    "C3h": 164,
+    "C3v": 26,
+    "D2": 300,
+    "D2d": 22,
+    "D2h": 58,
+    "D3": 48,
+    "D3d": 3,
+    "D3h": 47,
+    "D6h": 14,
+    "S4": 28
+  },
+  "actual_pg_distribution": {
+    "C2": 1241,
+    "C2h": 543,
+    "C2v": 167,
+    "C3": 173,
+    "C3h": 164,
+    "C3v": 26,
+    "D2": 24,
+    "D2d": 21,
+    "D2h": 33,
+    "D3": 51,
+    "D3h": 47,
+    "D6h": 14,
+    "S4": 28
+  },
+  "target_actual_compatible_distribution": {
+    "C2|C2|compatible=True": 1241,
+    "C2|C2h|compatible=True": 543,
+    "C2|C2v|compatible=True": 167,
+    "C2|D2|compatible=True": 24,
+    "C2|D2d|compatible=True": 11,
+    "C2|D2h|compatible=True": 33,
+    "C3|C3|compatible=True": 173,
+    "C3|C3h|compatible=True": 164,
+    "C3|C3v|compatible=True": 26,
+    "C3|D3|compatible=True": 51,
+    "C3|D3h|compatible=True": 47,
+    "D6h|D6h|compatible=True": 14,
+    "S4|D2d|compatible=True": 10,
+    "S4|S4|compatible=True": 28
+  },
+  "actual_orbit_size_distribution_by_point_group": {
+    "C2": {
+      "1": 724,
+      "2": 23020
+    },
+    "C2h": {
+      "2": 6837,
+      "4": 385
+    },
+    "C2v": {
+      "1": 176,
+      "2": 1883,
+      "4": 163
+    },
+    "C3": {
+      "1": 9,
+      "3": 2719
+    },
+    "C3h": {
+      "3": 1988,
+      "6": 75
+    },
+    "C3v": {
+      "3": 221,
+      "6": 36
+    },
+    "D2": {
+      "2": 130,
+      "4": 167
+    },
+    "D2d": {
+      "1": 10,
+      "2": 57,
+      "4": 86,
+      "8": 43
+    },
+    "D2h": {
+      "2": 126,
+      "4": 108
+    },
+    "D3": {
+      "1": 8,
+      "3": 383,
+      "6": 295
+    },
+    "D3h": {
+      "3": 283,
+      "6": 69
+    },
+    "D6h": {
+      "6": 66,
+      "12": 51
+    },
+    "S4": {
+      "1": 28,
+      "4": 358
+    }
+  },
+  "symmetry_error_angstrom": {
+    "actual_operation_rms": {
+      "count": 8827,
+      "mean": 0.0096455401964205,
+      "median": 2.1516441847779788e-05,
+      "p95": 0.0680507034063339,
+      "max": 0.21932457387447357
+    },
+    "actual_operation_max_atom": {
+      "count": 8827,
+      "mean": 0.02185782374232672,
+      "median": 4.7558871301589534e-05,
+      "p95": 0.16090932339429848,
+      "max": 0.5351341366767883
+    },
+    "target_operation_rms": {
+      "count": 5909,
+      "mean": 0.00901227001719219,
+      "median": 7.626490514667239e-06,
+      "p95": 0.06555851548910141,
+      "max": 0.21932457387447357
+    },
+    "target_operation_max_atom": {
+      "count": 5909,
+      "mean": 0.020178154528532586,
+      "median": 1.6331905499100685e-05,
+      "p95": 0.15197063088417034,
+      "max": 0.49663567543029785
+    }
+  },
+  "elements": {
+    "B": 74,
+    "Br": 181,
+    "C": 47128,
+    "Cl": 604,
+    "F": 1727,
+    "H": 28038,
+    "I": 187,
+    "N": 5231,
+    "O": 6253,
+    "P": 109,
+    "S": 1503,
+    "Si": 74,
+    "Sn": 4
+  },
+  "sn": {
+    "molecules": 2,
+    "atoms": 4,
+    "records": [
+      {
+        "package_index": 1684,
+        "molecule_id": "cof_001684",
+        "smiles": "[CH3][Sn]([CH3])([CH3])[c]1cc2cc3o[c]([Sn]([CH3])([CH3])[CH3])cc3cc2o1",
+        "sn_atoms": 2
+      },
+      {
+        "package_index": 2378,
+        "molecule_id": "cof_002378",
+        "smiles": "[CH3][Sn]([CH3])([CH3])[c]1cc2s[c]([Sn]([CH3])([CH3])[CH3])cc2s1",
+        "sn_atoms": 2
+      }
+    ],
+    "uae_official_vocab_compatible": false,
+    "fallback_mapping_used": false
+  },
+  "splits": {
+    "iid": {
+      "train": {
+        "molecules": 2026,
+        "cores": 96,
+        "target_pg": {
+          "C2": 1615,
+          "C3": 369,
+          "D6h": 12,
+          "S4": 30
+        }
+      },
+      "val": {
+        "molecules": 253,
+        "cores": 71,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "D6h": 1,
+          "S4": 4
+        }
+      },
+      "test": {
+        "molecules": 253,
+        "cores": 68,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "D6h": 1,
+          "S4": 4
+        }
+      }
+    },
+    "core_ood": {
+      "train": {
+        "molecules": 2024,
+        "cores": 74,
+        "target_pg": {
+          "C2": 1615,
+          "C3": 369,
+          "D6h": 8,
+          "S4": 32
+        }
+      },
+      "val": {
+        "molecules": 250,
+        "cores": 11,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "S4": 2
+        }
+      },
+      "test": {
+        "molecules": 258,
+        "cores": 13,
+        "target_pg": {
+          "C2": 202,
+          "C3": 46,
+          "D6h": 6,
+          "S4": 4
+        }
+      }
+    }
+  },
+  "core_ood_d6h": "low-support/exploratory; excluded from primary quantitative conclusions",
+  "train_test_max_morgan_tanimoto": {
+    "core_ood": {
+      "count": 258,
+      "mean": 0.6760237230944277,
+      "median": 0.6530100334448161,
+      "p95": 1.0,
+      "max": 1.0,
+      "equal_1_count": 57,
+      "ge_0_9_count": 57,
+      "ge_0_8_count": 68
+    },
+    "iid": {
+      "count": 253,
+      "mean": 0.6907066592137661,
+      "median": 0.6666666666666666,
+      "p95": 1.0,
+      "max": 1.0,
+      "equal_1_count": 21,
+      "ge_0_9_count": 39,
+      "ge_0_8_count": 61
+    }
+  },
+  "hashes": {
+    "cof_graphs.npz": "d95f2b8ec003d93ad79afbd8aa7406a2515df50a0b701271139b8c38d936605d",
+    "symmetry_data.npz": "0dbd4b0142a7eab361bcbf75a7a2b86d346a0294d9bcf41ff3bd5de58f4e6b3e",
+    "rdkit_features.npz": "b36b3b55c9550d0f9abd13b1ba4b957575d206783a82a67dd31e99c6a3591c8a",
+    "manifest.json": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511"
+  }
+}

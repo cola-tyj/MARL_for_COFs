@@ -1,0 +1,133 @@
+{
+  "decision": {
+    "fail_action": "diagnose one bounded F1 short-range barrier branch; do not resume O1 or weaken symmetry",
+    "fail_status": "FAIL_ORBIT_FORCE_FIELD_F0",
+    "pass_action": "freeze graph/SMILES-to-initial-conformer interface before any conditional model training",
+    "pass_status": "PASS_ORBIT_FORCE_FIELD_F0_ADVANCE_TO_INITIAL_CONFORMER_INTERFACE"
+  },
+  "gate_thresholds": {
+    "bond_mae_improved_fraction_min": 0.75,
+    "bond_mae_ratio_max": 0.85,
+    "collision_free_fraction_min": 0.75,
+    "each_sigma_bond_mae_ratio_max": 1.0,
+    "finite_execution_fraction_min": 1.0,
+    "maximum_operation_error_angstrom": 1e-05,
+    "optimizer_success_fraction_min": 0.75,
+    "strict_conversion_fraction_min": 1.0,
+    "uff_energy_nonincrease_fraction_min": 0.95,
+    "uff_setup_fraction_min": 1.0
+  },
+  "identity": {
+    "coverage_report_sha256": "b9a5043c26a93e98460579fe01ff76b5020c0107e43100a2f0cea5d9de2dae90",
+    "coverage_source_sha256": {
+      "generative_model/optimization/force_field_support.py": "5343e67b1a7ee8ca103833b139609ebf1bcbf21d8adf860d7826386145cd9295",
+      "generative_model/smoke/audit_orbit_force_field_coverage.py": "0c48fb95421c7996e57f503072fe6d30283bdc5ae8d3dc0ba81cce733b6481da"
+    },
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "o1_protocol_sha256": "d7d94fb4be1a4fa8e3b91faa424cbde0c48245634ac086f0f585295263f497ea"
+  },
+  "input_generation": {
+    "gate_cases": 48,
+    "noise_sigmas_angstrom": [
+      0.15,
+      0.5,
+      1.0
+    ],
+    "perturbation": "deterministic exact-symmetry orbit-space Gaussian noise",
+    "reference": "nearest hard-symmetry target derived from canonical v2 coordinates",
+    "seeds": [
+      20261101,
+      20261102
+    ]
+  },
+  "optimizer": {
+    "expansion": "stored target O(3) operations and permutations followed by Reynolds projection",
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 200,
+    "method": "L-BFGS-B",
+    "parameterization": "one 3D coordinate per stored target atomic orbit",
+    "primary_force_field": "UFF",
+    "secondary_diagnostic": "MMFF94s where parameters exist",
+    "short_range_barrier": "none in F0; freeze a separate F1 only if collision Gate fails"
+  },
+  "panels": {
+    "core_ood_used": false,
+    "development_package_indices": [
+      1430,
+      242,
+      461,
+      613,
+      443,
+      2060,
+      1541,
+      2344,
+      2107,
+      1726,
+      193,
+      1554,
+      1880,
+      961,
+      2119,
+      1907,
+      2270,
+      1668,
+      468,
+      1026,
+      825,
+      686,
+      1599,
+      1812,
+      1229,
+      1259,
+      1152,
+      80,
+      76,
+      1288,
+      1144,
+      1360
+    ],
+    "development_target_pg": {
+      "C2": 24,
+      "C3": 8
+    },
+    "gate_package_indices": [
+      575,
+      1074,
+      845,
+      1490,
+      1080,
+      334,
+      1254,
+      1215
+    ],
+    "gate_target_pg": {
+      "C2": 6,
+      "C3": 2
+    },
+    "test_used": false
+  },
+  "protocol_fingerprint": "51136582265d5d2b80202cefae56e52a4cc885da27dfdd4f8df5cbdbd2831500",
+  "purpose": "A single bounded non-learning Gate for recovery of chemically plausible coordinates while exact C2/C3 symmetry is maintained at every objective evaluation.",
+  "reported_not_gated": [
+    "coordinate_rmsd_to_reference",
+    "all_pair_distance_mae_to_reference",
+    "MMFF94s energy/setup",
+    "actual point-group analyzer result"
+  ],
+  "schema_version": "orbit-force-field-f0-protocol-v1",
+  "scope": {
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "element_fallback": false,
+    "element_vocab_size": 13,
+    "explicit_h": true,
+    "known_graph": true,
+    "known_group_action": true,
+    "learned_checkpoint_used": false,
+    "new_graph_generation_claimed": false,
+    "test_used": false
+  },
+  "status": "FROZEN_BEFORE_ORBIT_FORCE_FIELD_F0_IMPLEMENTATION"
+}

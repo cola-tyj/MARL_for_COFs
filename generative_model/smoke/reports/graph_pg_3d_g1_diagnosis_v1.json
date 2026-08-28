@@ -1,0 +1,96 @@
+{
+  "decision": {
+    "advance_to_g2_architecture_design": true,
+    "change_frozen_symmetry_analyzer_protocol": false,
+    "claim_g1_quality_pass": false,
+    "g2_required_capability": "graph-conditioned coordinate denoising/generation must remove symmetric-subspace noise before the frozen hard projection and analyzer evaluation",
+    "reuse_hard_projection_as_constraint_or_postprocess": true
+  },
+  "evidence": {
+    "analyzer_failures": [
+      {
+        "diagnostic_only_tolerance_sweep": [
+          {
+            "actual_pg": "S4",
+            "analyzer_pg": "S4",
+            "pg_compatible": true,
+            "pg_exact_match": true,
+            "success": true,
+            "tolerance_angstrom": 0.05
+          },
+          {
+            "actual_pg": "S4",
+            "analyzer_pg": "S4",
+            "pg_compatible": true,
+            "pg_exact_match": true,
+            "success": true,
+            "tolerance_angstrom": 0.1
+          },
+          {
+            "actual_pg": "S4",
+            "analyzer_pg": "S4",
+            "pg_compatible": true,
+            "pg_exact_match": true,
+            "success": true,
+            "tolerance_angstrom": 0.2
+          },
+          {
+            "error": "ValueError: 候选操作中不存在完整 S4 目标子群",
+            "success": false,
+            "tolerance_angstrom": 0.3
+          },
+          {
+            "error": "ValueError: 候选操作中不存在完整 S4 目标子群",
+            "success": false,
+            "tolerance_angstrom": 0.4
+          },
+          {
+            "actual_pg": "D2d",
+            "analyzer_pg": "D2d",
+            "pg_compatible": true,
+            "pg_exact_match": false,
+            "success": true,
+            "tolerance_angstrom": 0.5
+          }
+        ],
+        "frozen_gate_error": "ValueError: 候选操作中不存在完整 S4 目标子群",
+        "package_index": 1113,
+        "target_pg": "S4"
+      }
+    ],
+    "analyzer_interpretation": "The failed S4 sample satisfies stored target operations to sub-microangstrom error, but the frozen pymatgen tolerance 0.3 path classifies a different candidate group. The diagnostic sweep is not a replacement evaluation protocol.",
+    "maximum_projected_atom_symmetry_error_angstrom": 3.445058244157378e-07,
+    "maximum_projected_operation_rms_angstrom": 1.8470243268083821e-07,
+    "maximum_target_to_hard_projection_bias_angstrom": 0.07890102445212865,
+    "mean_target_projection_bias_by_pg_angstrom": {
+      "C2": 0.004225237292806344,
+      "C3": 0.01933525448292192,
+      "D6h": 7.812419254696141e-06,
+      "S4": 0.022964547464480914
+    },
+    "mean_target_to_hard_projection_bias_angstrom": 0.007512174431519356,
+    "projection_engineering_checks": {
+      "all_outputs_centered": true,
+      "all_outputs_finite": true,
+      "bond_length_mae_improved_molecules_min": true,
+      "collision_free_molecules_min": true,
+      "coordinate_rmsd_improved_molecules_min": true,
+      "known_graph_fingerprint_unchanged": true,
+      "maximum_projected_atom_symmetry_error_angstrom_max": true,
+      "maximum_projected_operation_rms_angstrom_max": true
+    },
+    "residual_projected_rmsd_interpretation": "One Reynolds projection removes symmetry-breaking noise but cannot remove noise components already inside the target-group invariant subspace.",
+    "tier32_bond_length_mae_improved_molecules": 32,
+    "tier32_collision_free_molecules": 32,
+    "tier32_coordinate_rmsd_improved_molecules": 32
+  },
+  "gate_decision_unchanged": "FAIL_GRAPH_PG_3D_G1_HARD_PROJECTION",
+  "identity": {
+    "coordinate_artifact_sha256": "4dfc7a81ecb0189ece42878b759879ae73186f5aa1126eb98c6289a868f8d5f8",
+    "gate_report": "/home/tianyajun/MARL_for_COFs/generative_model/smoke/reports/graph_pg_3d_g1_v1.json",
+    "gate_report_sha256": "c48b780d930a0a2bf14122c4f3e8ecdd58a24c9d51a40e0504cbf9b5f337bf3f"
+  },
+  "purpose": "Post-gate diagnosis only; no threshold, checkpoint or model selection is changed.",
+  "schema_version": "graph-pg-3d-g1-diagnosis-v1",
+  "status": "HARD_PROJECTION_VALID_AS_CONSTRAINT_NOT_SUFFICIENT_AS_COORDINATE_GENERATOR"
+}

@@ -1,0 +1,62 @@
+{
+  "acceptance": {
+    "max_equivariance_error": 0.0001
+  },
+  "atoms": 87,
+  "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+  "device": "cuda:0",
+  "environment": {
+    "python": "3.10.19",
+    "torch": "2.0.1",
+    "torch_cuda": "11.8"
+  },
+  "finite_gradients": true,
+  "gradient_norm": 1.796811819076538,
+  "loss": 0.14679370820522308,
+  "model": {
+    "architecture": "SemlaGenerator/EquiInvDynamics-mini",
+    "parameters": 61395,
+    "random_seed": 20260811
+  },
+  "molecule_id": "cof_002408",
+  "outputs": {
+    "atom_logits": [
+      1,
+      87,
+      18
+    ],
+    "bond_logits": [
+      1,
+      87,
+      87,
+      5
+    ],
+    "charge_logits": [
+      1,
+      87,
+      7
+    ],
+    "coords": [
+      1,
+      87,
+      3
+    ]
+  },
+  "package_index": 2408,
+  "permutation_errors": {
+    "atom_logits_max_abs": 1.9371509552001953e-07,
+    "bond_logits_max_abs": 3.5762786865234375e-07,
+    "charge_logits_max_abs": 2.086162567138672e-07,
+    "coords_max_abs": 2.2351741790771484e-07
+  },
+  "rotation_errors": {
+    "atom_logits_max_abs": 2.0116567611694336e-07,
+    "bond_logits_max_abs": 3.5762786865234375e-07,
+    "charge_logits_max_abs": 1.7136335372924805e-07,
+    "coords_max_abs": 2.2351741790771484e-07
+  },
+  "schema_version": "1.0",
+  "smoke_split_fingerprint": "9b434a3d5392e551e4425c6b1eaf45829f10dfa987bf92eacc780fdcbea22c21",
+  "source_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283",
+  "status": "PASS"
+}

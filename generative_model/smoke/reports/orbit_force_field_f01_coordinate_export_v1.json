@@ -1,0 +1,90 @@
+{
+  "arrays": {
+    "atom_offsets": {
+      "dtype": "int64",
+      "shape": [
+        49
+      ]
+    },
+    "final_uff_energies_kcal_mol": {
+      "dtype": "float64",
+      "shape": [
+        48
+      ]
+    },
+    "maximum_operation_errors_angstrom": {
+      "dtype": "float64",
+      "shape": [
+        48
+      ]
+    },
+    "molecule_ids": {
+      "dtype": "<U32",
+      "shape": [
+        48
+      ]
+    },
+    "package_indices": {
+      "dtype": "int64",
+      "shape": [
+        48
+      ]
+    },
+    "positions": {
+      "dtype": "float64",
+      "shape": [
+        1446,
+        3
+      ]
+    },
+    "seeds": {
+      "dtype": "int64",
+      "shape": [
+        48
+      ]
+    },
+    "sigmas_angstrom": {
+      "dtype": "float64",
+      "shape": [
+        48
+      ]
+    },
+    "target_pg_indices": {
+      "dtype": "int16",
+      "shape": [
+        48
+      ]
+    }
+  },
+  "case_order": "gate_package_indices outer, noise_sigmas middle, seeds inner",
+  "coordinate_npz_sha256": "75339909c735859a429b277171d866a12a6076fa345a88e2dbf4de0b49c3f7f0",
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "environment": {
+      "numpy": "1.26.2",
+      "python": "3.11.15",
+      "rdkit": "2024.03.5"
+    },
+    "exporter_source_sha256": "7883a6fa312fd92ebbee4b792326887f7792abee74b7d274d628231b094bf50c",
+    "formal_report_sha256": "40c377768be937211187db30f3348ab3342da5125b6cb7b7a5670fe55e43e35b",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "optimizer_source_sha256": "874220352454b664a2a4110c3dd6db39077262e69dc43c3fb284fa2cdfc9c621",
+    "protocol_sha256": "609a649c2324a52a07ba4590ce7e1a3a0fb4a0ecd5cf610a4bb00cab9155788d"
+  },
+  "maximum_reproduction_metric_absolute_differences": {
+    "final_bond_mae_angstrom": 0.0,
+    "final_coordinate_rmsd_angstrom": 0.0,
+    "final_energy_kcal_mol": 0.0,
+    "maximum_operation_error_angstrom": 0.0,
+    "minimum_pair_distance_angstrom": 0.0
+  },
+  "schema_version": "orbit-force-field-f01-coordinate-export-v1",
+  "scope": {
+    "cases": 48,
+    "core_ood_used": false,
+    "formal_gate_rerun": false,
+    "purpose": "coordinate artifact reproduction for independent non-Gate point-group audit",
+    "test_used": false
+  },
+  "status": "PASS_F01_COORDINATE_EXPORT_REPRODUCED"
+}

@@ -1,0 +1,314 @@
+{
+  "decision_scope": {
+    "core_ood_used": false,
+    "dataset_level_finetuning_authorized": false,
+    "gate_b_reopened": false,
+    "possible_use_if_strong": "coordinate representation initialization evidence only",
+    "target_pg_conditioning_claimed": false,
+    "test_used": false,
+    "uae_branch_reopened": false
+  },
+  "descriptive_evidence_thresholds": {
+    "partial_joint_success_molecules_min": 8,
+    "strong_atom_exact_molecules_min": 30,
+    "strong_bond_exact_molecules_min": 24,
+    "strong_joint_success_molecules_min": 24,
+    "strong_pg_compatible_molecules_min": 27,
+    "strong_sanitize_connected_molecules_min": 24
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "gate_a_protocol_sha256": "3ed89801cb77bfce59bcd27f47869febeda919b803b88c961f006ce9dd4b22f0",
+    "gate_a_report_sha256": "fd094d08cf8fe0ae629a8a312a2c8b0430fd27a65e4861b6a8c57d0321d45e25",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "metadata_sha256": "d14a4ac4722b95e4be147843af75264a3d7809b0fcd85b85ee2821c05f0a6b02",
+    "symmetry_analyzer": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "joint_success_definition": {
+    "atom_exact": true,
+    "bond_exact": true,
+    "connected": true,
+    "coordinate_rmsd_angstrom_max": 0.15,
+    "minimum_pair_distance_angstrom_min": 0.6,
+    "pg_compatible": true,
+    "sanitize_valid": true
+  },
+  "metrics": [
+    "atom/bond/categorical exact",
+    "sanitize/connected",
+    "coordinate RMSD",
+    "minimum pair distance",
+    "actual PG exact/compatible",
+    "joint molecule success",
+    "per-PG and per-size-bin summaries"
+  ],
+  "panel": {
+    "molecule_count": 30,
+    "records": [
+      {
+        "atom_count": 12,
+        "molecule_id": "cof_002376",
+        "package_index": 2376,
+        "size_bin": "small_le_16",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 16,
+        "molecule_id": "cof_002350",
+        "package_index": 2350,
+        "size_bin": "small_le_16",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 20,
+        "molecule_id": "cof_000351",
+        "package_index": 351,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 20,
+        "molecule_id": "cof_001790",
+        "package_index": 1790,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 22,
+        "molecule_id": "cof_001720",
+        "package_index": 1720,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 24,
+        "molecule_id": "cof_000317",
+        "package_index": 317,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 24,
+        "molecule_id": "cof_001471",
+        "package_index": 1471,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 26,
+        "molecule_id": "cof_000362",
+        "package_index": 362,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 26,
+        "molecule_id": "cof_001594",
+        "package_index": 1594,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 28,
+        "molecule_id": "cof_000332",
+        "package_index": 332,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 28,
+        "molecule_id": "cof_001440",
+        "package_index": 1440,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 30,
+        "molecule_id": "cof_000250",
+        "package_index": 250,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 30,
+        "molecule_id": "cof_001906",
+        "package_index": 1906,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 32,
+        "molecule_id": "cof_000763",
+        "package_index": 763,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 32,
+        "molecule_id": "cof_001745",
+        "package_index": 1745,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 34,
+        "molecule_id": "cof_000850",
+        "package_index": 850,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 34,
+        "molecule_id": "cof_002224",
+        "package_index": 2224,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 36,
+        "molecule_id": "cof_002308",
+        "package_index": 2308,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 38,
+        "molecule_id": "cof_002212",
+        "package_index": 2212,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 40,
+        "molecule_id": "cof_001960",
+        "package_index": 1960,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 42,
+        "molecule_id": "cof_002299",
+        "package_index": 2299,
+        "size_bin": "large_gt_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 48,
+        "molecule_id": "cof_002109",
+        "package_index": 2109,
+        "size_bin": "large_gt_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 52,
+        "molecule_id": "cof_002209",
+        "package_index": 2209,
+        "size_bin": "large_gt_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 78,
+        "molecule_id": "cof_002333",
+        "package_index": 2333,
+        "size_bin": "large_gt_40",
+        "split_iid": "val",
+        "target_pg": "C2"
+      },
+      {
+        "atom_count": 12,
+        "molecule_id": "cof_001145",
+        "package_index": 1145,
+        "size_bin": "small_le_16",
+        "split_iid": "val",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 24,
+        "molecule_id": "cof_001122",
+        "package_index": 1122,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 33,
+        "molecule_id": "cof_000081",
+        "package_index": 81,
+        "size_bin": "medium_17_40",
+        "split_iid": "val",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 45,
+        "molecule_id": "cof_002523",
+        "package_index": 2523,
+        "size_bin": "large_gt_40",
+        "split_iid": "val",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 51,
+        "molecule_id": "cof_001407",
+        "package_index": 1407,
+        "size_bin": "large_gt_40",
+        "split_iid": "val",
+        "target_pg": "C3"
+      },
+      {
+        "atom_count": 75,
+        "molecule_id": "cof_002458",
+        "package_index": 2458,
+        "size_bin": "large_gt_40",
+        "split_iid": "val",
+        "target_pg": "C3"
+      }
+    ],
+    "role": "read-only IID-validation diagnostic; never used for threshold or weight fitting",
+    "target_pg_counts": {
+      "C2": 24,
+      "C3": 6
+    }
+  },
+  "protocol_fingerprint": "3e6a9a29706488a32206fd5d954e31dc0277797395fc7ef89dcf8f9681de3673",
+  "purpose": "Measure frozen step-3008 UAE reconstruction and reconstructed-coordinate symmetry on the existing IID-validation C2/C3 subset while separating size effects.",
+  "schema_version": "uae3d-c23-readonly-protocol-v1",
+  "source": {
+    "checkpoint": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "checkpoint_step": 3008,
+    "decode": "official encoder z_mean and official six-class argmax decoder",
+    "weights_updated": false
+  },
+  "status": "FROZEN_BEFORE_UAE_C23_READONLY_AUDIT"
+}

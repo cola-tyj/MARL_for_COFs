@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "protocol_and_source_hashes": true,
+    "resume_model_exact": true,
+    "resume_optimizer_exact": true,
+    "resume_step2_record_exact": true,
+    "sn_strict_forward_finite": true,
+    "test_and_core_ood_not_used": true,
+    "two_training_steps_finite": true,
+    "unit_tests_3_of_3": true
+  },
+  "identity": {
+    "protocol_fingerprint": "1a9bd750b5f5876516a53ee0dd50b91a94dce07b6cd2d0ef82974f4222e631e8",
+    "protocol_sha256": "d7d94fb4be1a4fa8e3b91faa424cbde0c48245634ac086f0f585295263f497ea"
+  },
+  "metrics": {
+    "final_state_fingerprint": "51af3cb92c14853371707687431ba2772f95ae18e97d7b7e8bb3c451d575db79",
+    "sn_atoms": 42,
+    "step1_loss": 0.07639547437429428,
+    "step2_loss": 0.8973963856697083
+  },
+  "next": "run exactly one 512-step CUDA O1 quality experiment",
+  "passed": true,
+  "schema_version": "orbit-coordinate-o1-engineering-report-v1",
+  "scope": {
+    "core_ood_used": false,
+    "quality_training_run": false,
+    "test_used": false
+  },
+  "status": "PASS_ORBIT_COORDINATE_O1_ENGINEERING_PROTOCOL_FROZEN",
+  "unit_test_command": "/home/tianyajun/anaconda3/envs/env_cof/bin/python -m unittest generative_model.tests.test_orbit_coordinate_o1_protocol -v"
+}

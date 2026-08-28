@@ -1,0 +1,16 @@
+{
+  "hybridization": [
+    "SP",
+    "SP2",
+    "SP3",
+    "UNSPECIFIED"
+  ],
+  "chirality": [
+    "CHI_UNSPECIFIED"
+  ],
+  "bond_stereo": [
+    "STEREOE",
+    "STEREONONE"
+  ],
+  "ground_truth_boundary": "all arrays here are deterministic RDKit derivatives; atomic number, formal charge, sparse bond graph, and XYZ remain canonical"
+}

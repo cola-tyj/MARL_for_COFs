@@ -27,10 +27,32 @@ logger = logging.getLogger(__name__)
 # 常量
 # =============================================================================
 
-# 原子类型词汇表（按常见度排序，0=pad, 1=H, 2=C, 3=N, 4=O, 5=F, 6=B, ...）
+# 原子类型词汇表。Si/Sn 追加在末尾，保持已有元素的 token ID 不变。
 ATOM_VOCAB = {"<pad>": 0, "H": 1, "C": 2, "N": 3, "O": 4, "F": 5,
-              "B": 6, "P": 7, "S": 8, "Cl": 9, "Br": 10, "I": 11}
+              "B": 6, "P": 7, "S": 8, "Cl": 9, "Br": 10, "I": 11,
+              "Si": 12, "Sn": 13}
 ATOM_VOCAB_SIZE = len(ATOM_VOCAB)
+
+# 标准原子量，用于计算质心/惯性张量。必须覆盖词表中的全部非 padding 元素。
+ATOMIC_MASSES = {
+    "H": 1.008,
+    "B": 10.81,
+    "C": 12.011,
+    "N": 14.007,
+    "O": 15.999,
+    "F": 18.998403163,
+    "Si": 28.085,
+    "P": 30.973761998,
+    "S": 32.06,
+    "Cl": 35.45,
+    "Br": 79.904,
+    "Sn": 118.710,
+    "I": 126.90447,
+}
+SUPPORTED_ELEMENTS = frozenset(ATOM_VOCAB) - {"<pad>"}
+
+if set(ATOMIC_MASSES) != SUPPORTED_ELEMENTS:
+    raise RuntimeError("ATOM_VOCAB 与 ATOMIC_MASSES 的元素集合不一致")
 
 # 键类型词汇表
 BOND_VOCAB = {"<pad>": 0, "NONE": 1, "SINGLE": 2, "DOUBLE": 3,
@@ -40,6 +62,16 @@ BOND_VOCAB = {"<pad>": 0, "NONE": 1, "SINGLE": 2, "DOUBLE": 3,
 # =============================================================================
 # 辅助函数
 # =============================================================================
+
+def validate_atom_symbols(symbols: List[str]) -> None:
+    """确保所有元素都有独立表示，禁止未知元素静默回退为 C。"""
+    unknown = sorted(set(symbols) - SUPPORTED_ELEMENTS)
+    if unknown:
+        raise ValueError(
+            "不支持的元素符号: " + ", ".join(unknown)
+            + "。请先扩展 ATOM_VOCAB 和 ATOMIC_MASSES。"
+        )
+
 
 def parse_xyz(filepath: str) -> Tuple[List[str], np.ndarray]:
     """
@@ -65,8 +97,9 @@ def atoms_to_tensor(
     symbols: List[str], coords: np.ndarray
 ) -> Tuple[torch.Tensor, torch.Tensor]:
     """原子符号 + 坐标 → token_ids + coord tensor"""
+    validate_atom_symbols(symbols)
     token_ids = torch.tensor(
-        [ATOM_VOCAB.get(s, ATOM_VOCAB["C"]) for s in symbols],
+        [ATOM_VOCAB[s] for s in symbols],
         dtype=torch.long,
     )
     coord_tensor = torch.from_numpy(coords).float()
@@ -104,6 +137,7 @@ def compute_symmetry_attention_mask(
         mask: (N, N) float tensor, mask[i,j]=1 表示 j 可被 i attend
     """
     n = len(symbols)
+    validate_atom_symbols(symbols)
 
     # 无旋转对称 → 全通掩码（标准自回归）
     if rotation_order <= 1:
@@ -115,11 +149,7 @@ def compute_symmetry_attention_mask(
     # ── 2. 惯性张量 & 主旋转轴 ──
     # 惯性张量 I_ab = Σ m_i (|r|²δ_ab - r_a r_b)
     # 最大本征值对应 z 轴（分子最长轴），通常即旋转轴方向
-    masses = np.array([
-        1.008 if s == "H" else 12.01 if s == "C" else 14.01 if s == "N"
-        else 16.00 if s == "O" else 10.81 if s == "B" else 12.01
-        for s in symbols
-    ])
+    masses = np.array([ATOMIC_MASSES[s] for s in symbols])
     I = np.zeros((3, 3))
     for i in range(n):
         r = centered[i]

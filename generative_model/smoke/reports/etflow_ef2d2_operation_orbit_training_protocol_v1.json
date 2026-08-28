@@ -1,0 +1,2087 @@
+{
+  "checkpoint_selection": {
+    "eligible": "all frozen selection-panel checks pass",
+    "final_pass_requires_disjoint_confirmation": true,
+    "ordering": [
+      "lowest C3 short-rollout mean-operation ratio",
+      "lowest overall short-rollout mean-operation ratio",
+      "lowest one-step worst-operation ratio",
+      "earliest optimizer step"
+    ]
+  },
+  "decision": {
+    "fail_action": "preserve the result; diagnose per-operation/per-orbit and collision tails without using IID-test or Core-OOD",
+    "fail_status": "FAIL_ETFLOW_EF2D2_OPERATION_ORBIT_TRAINING_STOP_BRANCH",
+    "pass_action": "freeze selected checkpoint and run a disjoint C2/C3 raw ODE plus independent point-group audit before any larger training",
+    "pass_status": "PASS_ETFLOW_EF2D2_ENDPOINT_AND_SHORT_ROLLOUT_AWAIT_RAW_ODE"
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "engineering_protocol_sha256": "092774634330d522399dee74b9f4d8b786beae12223ae130e24a6f9a54d33124",
+    "engineering_report_sha256": "8c6e2ff5d6c185005ea490e83012526aceb176c23bd063cb448e748dc524e785",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "official_checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "official_model_name": "drugs-o3",
+    "parent_a2_checkpoint": "generative_model/runs/etflow_ef2a2_endpoint_interleaved_0256/checkpoints/step-000256.pt",
+    "parent_a2_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "source_sha256": {
+      "generative_model/models/etflow_pg_operation_orbit_v1.py": "ce18e71f0100d241b8930bc8245d888ef4693e378edc7730a2745d69ea360204",
+      "generative_model/smoke/build_etflow_ef2d2_operation_orbit_training_protocol.py": "bc8fbd8d5e0e28629700e94942f32475778183445268b57b5c451e74a08ea5c6",
+      "generative_model/smoke/train_etflow_ef2d2_operation_orbit.py": "51b927a950c77983d9d1febe411b9986dfba6987e22b5e3fcf82569eaa358eba",
+      "generative_model/tests/test_etflow_pg_operation_orbit_v1.py": "0c762fb3ebb0b3086332d148097e7db0167ceb1487be010984ebbe6dacfec672"
+    }
+  },
+  "loss": {
+    "bond_length_weight": 0.25,
+    "flow_matching_weight": 1.0,
+    "mean_operation_weight": 0.25,
+    "molecule_balanced": true,
+    "nonbonded_collision_weight": 0.25,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "orbit_balanced_weight": 0.5,
+    "worst_operation_weight": 0.5
+  },
+  "model": {
+    "atom_wise_gate": true,
+    "hard_projection_in_forward": false,
+    "hidden_dim": 64,
+    "maximum_endpoint_displacement_angstrom": 0.05,
+    "minimum_remaining_time": 0.05,
+    "operation_aggregation": "shared score and softmax across all nonidentity operations",
+    "orbit_features": "label-invariant mean/max pooling and atom broadcast",
+    "parent": "frozen selected EF2-A2 step-256 adapter",
+    "parent_frozen": true,
+    "zero_increment_initialized": true
+  },
+  "panel": {
+    "checkpoint_selection_package_indices_by_pg": {
+      "C2": [
+        2072,
+        457,
+        960,
+        1572,
+        607,
+        2283,
+        806,
+        2235,
+        1565,
+        436,
+        1675,
+        939,
+        1991,
+        119,
+        637,
+        2256
+      ],
+      "C3": [
+        1140,
+        1412,
+        2459,
+        1236,
+        1336,
+        1220,
+        2418,
+        64,
+        1128,
+        1389,
+        1151,
+        1399,
+        2425,
+        1322,
+        1206,
+        1418
+      ]
+    },
+    "development_holdout_excluded_from_training": true,
+    "development_holdout_package_indices_by_pg": {
+      "C2": [
+        2072,
+        457,
+        960,
+        1572,
+        607,
+        2283,
+        806,
+        2235,
+        1565,
+        436,
+        1675,
+        939,
+        1991,
+        119,
+        637,
+        2256,
+        1491,
+        206,
+        2357,
+        770,
+        1026,
+        242,
+        1761,
+        2085,
+        2025,
+        505,
+        2131,
+        1936,
+        673,
+        1783,
+        470,
+        1536
+      ],
+      "C3": [
+        1140,
+        1412,
+        2459,
+        1236,
+        1336,
+        1220,
+        2418,
+        64,
+        1128,
+        1389,
+        1151,
+        1399,
+        2425,
+        1322,
+        1206,
+        1418,
+        2451,
+        1368,
+        2518,
+        1403,
+        2390,
+        1301,
+        1275,
+        1207,
+        2491,
+        2415,
+        1270,
+        1149,
+        1259,
+        1400,
+        2391,
+        1171
+      ]
+    },
+    "iid_test_used": false,
+    "iid_validation_used": false,
+    "paired_train_records": [
+      {
+        "c2_package_index": 1684,
+        "c3_package_index": 1295,
+        "step": 1
+      },
+      {
+        "c2_package_index": 2378,
+        "c3_package_index": 1369,
+        "step": 2
+      },
+      {
+        "c2_package_index": 1101,
+        "c3_package_index": 1205,
+        "step": 3
+      },
+      {
+        "c2_package_index": 934,
+        "c3_package_index": 67,
+        "step": 4
+      },
+      {
+        "c2_package_index": 1606,
+        "c3_package_index": 2479,
+        "step": 5
+      },
+      {
+        "c2_package_index": 698,
+        "c3_package_index": 1317,
+        "step": 6
+      },
+      {
+        "c2_package_index": 840,
+        "c3_package_index": 2455,
+        "step": 7
+      },
+      {
+        "c2_package_index": 901,
+        "c3_package_index": 1173,
+        "step": 8
+      },
+      {
+        "c2_package_index": 41,
+        "c3_package_index": 2396,
+        "step": 9
+      },
+      {
+        "c2_package_index": 383,
+        "c3_package_index": 1366,
+        "step": 10
+      },
+      {
+        "c2_package_index": 485,
+        "c3_package_index": 1265,
+        "step": 11
+      },
+      {
+        "c2_package_index": 635,
+        "c3_package_index": 2474,
+        "step": 12
+      },
+      {
+        "c2_package_index": 2045,
+        "c3_package_index": 1307,
+        "step": 13
+      },
+      {
+        "c2_package_index": 2200,
+        "c3_package_index": 1304,
+        "step": 14
+      },
+      {
+        "c2_package_index": 2270,
+        "c3_package_index": 2471,
+        "step": 15
+      },
+      {
+        "c2_package_index": 953,
+        "c3_package_index": 1286,
+        "step": 16
+      },
+      {
+        "c2_package_index": 1062,
+        "c3_package_index": 1126,
+        "step": 17
+      },
+      {
+        "c2_package_index": 257,
+        "c3_package_index": 1157,
+        "step": 18
+      },
+      {
+        "c2_package_index": 1619,
+        "c3_package_index": 1316,
+        "step": 19
+      },
+      {
+        "c2_package_index": 2334,
+        "c3_package_index": 1255,
+        "step": 20
+      },
+      {
+        "c2_package_index": 458,
+        "c3_package_index": 1334,
+        "step": 21
+      },
+      {
+        "c2_package_index": 104,
+        "c3_package_index": 1293,
+        "step": 22
+      },
+      {
+        "c2_package_index": 1455,
+        "c3_package_index": 2403,
+        "step": 23
+      },
+      {
+        "c2_package_index": 89,
+        "c3_package_index": 1289,
+        "step": 24
+      },
+      {
+        "c2_package_index": 303,
+        "c3_package_index": 2446,
+        "step": 25
+      },
+      {
+        "c2_package_index": 608,
+        "c3_package_index": 1234,
+        "step": 26
+      },
+      {
+        "c2_package_index": 477,
+        "c3_package_index": 1390,
+        "step": 27
+      },
+      {
+        "c2_package_index": 1812,
+        "c3_package_index": 1240,
+        "step": 28
+      },
+      {
+        "c2_package_index": 1760,
+        "c3_package_index": 1313,
+        "step": 29
+      },
+      {
+        "c2_package_index": 1538,
+        "c3_package_index": 2441,
+        "step": 30
+      },
+      {
+        "c2_package_index": 1581,
+        "c3_package_index": 66,
+        "step": 31
+      },
+      {
+        "c2_package_index": 1940,
+        "c3_package_index": 61,
+        "step": 32
+      },
+      {
+        "c2_package_index": 2294,
+        "c3_package_index": 2431,
+        "step": 33
+      },
+      {
+        "c2_package_index": 760,
+        "c3_package_index": 73,
+        "step": 34
+      },
+      {
+        "c2_package_index": 2293,
+        "c3_package_index": 2428,
+        "step": 35
+      },
+      {
+        "c2_package_index": 1961,
+        "c3_package_index": 1221,
+        "step": 36
+      },
+      {
+        "c2_package_index": 884,
+        "c3_package_index": 1306,
+        "step": 37
+      },
+      {
+        "c2_package_index": 2213,
+        "c3_package_index": 1311,
+        "step": 38
+      },
+      {
+        "c2_package_index": 1569,
+        "c3_package_index": 1201,
+        "step": 39
+      },
+      {
+        "c2_package_index": 1469,
+        "c3_package_index": 1291,
+        "step": 40
+      },
+      {
+        "c2_package_index": 1634,
+        "c3_package_index": 2386,
+        "step": 41
+      },
+      {
+        "c2_package_index": 199,
+        "c3_package_index": 1276,
+        "step": 42
+      },
+      {
+        "c2_package_index": 2306,
+        "c3_package_index": 2488,
+        "step": 43
+      },
+      {
+        "c2_package_index": 1988,
+        "c3_package_index": 2387,
+        "step": 44
+      },
+      {
+        "c2_package_index": 591,
+        "c3_package_index": 1346,
+        "step": 45
+      },
+      {
+        "c2_package_index": 900,
+        "c3_package_index": 1148,
+        "step": 46
+      },
+      {
+        "c2_package_index": 132,
+        "c3_package_index": 1130,
+        "step": 47
+      },
+      {
+        "c2_package_index": 951,
+        "c3_package_index": 1216,
+        "step": 48
+      },
+      {
+        "c2_package_index": 797,
+        "c3_package_index": 2509,
+        "step": 49
+      },
+      {
+        "c2_package_index": 1788,
+        "c3_package_index": 1227,
+        "step": 50
+      },
+      {
+        "c2_package_index": 1515,
+        "c3_package_index": 1239,
+        "step": 51
+      },
+      {
+        "c2_package_index": 90,
+        "c3_package_index": 1172,
+        "step": 52
+      },
+      {
+        "c2_package_index": 222,
+        "c3_package_index": 1408,
+        "step": 53
+      },
+      {
+        "c2_package_index": 328,
+        "c3_package_index": 2454,
+        "step": 54
+      },
+      {
+        "c2_package_index": 1678,
+        "c3_package_index": 2440,
+        "step": 55
+      },
+      {
+        "c2_package_index": 879,
+        "c3_package_index": 2402,
+        "step": 56
+      },
+      {
+        "c2_package_index": 382,
+        "c3_package_index": 2399,
+        "step": 57
+      },
+      {
+        "c2_package_index": 2247,
+        "c3_package_index": 1413,
+        "step": 58
+      },
+      {
+        "c2_package_index": 1646,
+        "c3_package_index": 2519,
+        "step": 59
+      },
+      {
+        "c2_package_index": 467,
+        "c3_package_index": 1186,
+        "step": 60
+      },
+      {
+        "c2_package_index": 1438,
+        "c3_package_index": 82,
+        "step": 61
+      },
+      {
+        "c2_package_index": 2156,
+        "c3_package_index": 1280,
+        "step": 62
+      },
+      {
+        "c2_package_index": 385,
+        "c3_package_index": 1404,
+        "step": 63
+      },
+      {
+        "c2_package_index": 543,
+        "c3_package_index": 2517,
+        "step": 64
+      },
+      {
+        "c2_package_index": 112,
+        "c3_package_index": 2452,
+        "step": 65
+      },
+      {
+        "c2_package_index": 1754,
+        "c3_package_index": 1312,
+        "step": 66
+      },
+      {
+        "c2_package_index": 1736,
+        "c3_package_index": 1212,
+        "step": 67
+      },
+      {
+        "c2_package_index": 491,
+        "c3_package_index": 2411,
+        "step": 68
+      },
+      {
+        "c2_package_index": 24,
+        "c3_package_index": 2498,
+        "step": 69
+      },
+      {
+        "c2_package_index": 530,
+        "c3_package_index": 1134,
+        "step": 70
+      },
+      {
+        "c2_package_index": 1892,
+        "c3_package_index": 1348,
+        "step": 71
+      },
+      {
+        "c2_package_index": 1432,
+        "c3_package_index": 1235,
+        "step": 72
+      },
+      {
+        "c2_package_index": 1986,
+        "c3_package_index": 1395,
+        "step": 73
+      },
+      {
+        "c2_package_index": 1845,
+        "c3_package_index": 1264,
+        "step": 74
+      },
+      {
+        "c2_package_index": 1826,
+        "c3_package_index": 1156,
+        "step": 75
+      },
+      {
+        "c2_package_index": 281,
+        "c3_package_index": 80,
+        "step": 76
+      },
+      {
+        "c2_package_index": 1725,
+        "c3_package_index": 1328,
+        "step": 77
+      },
+      {
+        "c2_package_index": 2371,
+        "c3_package_index": 1169,
+        "step": 78
+      },
+      {
+        "c2_package_index": 25,
+        "c3_package_index": 1251,
+        "step": 79
+      },
+      {
+        "c2_package_index": 983,
+        "c3_package_index": 68,
+        "step": 80
+      },
+      {
+        "c2_package_index": 2055,
+        "c3_package_index": 69,
+        "step": 81
+      },
+      {
+        "c2_package_index": 254,
+        "c3_package_index": 2493,
+        "step": 82
+      },
+      {
+        "c2_package_index": 948,
+        "c3_package_index": 1277,
+        "step": 83
+      },
+      {
+        "c2_package_index": 955,
+        "c3_package_index": 1324,
+        "step": 84
+      },
+      {
+        "c2_package_index": 1584,
+        "c3_package_index": 2496,
+        "step": 85
+      },
+      {
+        "c2_package_index": 609,
+        "c3_package_index": 71,
+        "step": 86
+      },
+      {
+        "c2_package_index": 2053,
+        "c3_package_index": 1394,
+        "step": 87
+      },
+      {
+        "c2_package_index": 1763,
+        "c3_package_index": 2449,
+        "step": 88
+      },
+      {
+        "c2_package_index": 2300,
+        "c3_package_index": 1355,
+        "step": 89
+      },
+      {
+        "c2_package_index": 1807,
+        "c3_package_index": 1416,
+        "step": 90
+      },
+      {
+        "c2_package_index": 1502,
+        "c3_package_index": 1219,
+        "step": 91
+      },
+      {
+        "c2_package_index": 1037,
+        "c3_package_index": 1152,
+        "step": 92
+      },
+      {
+        "c2_package_index": 1998,
+        "c3_package_index": 1362,
+        "step": 93
+      },
+      {
+        "c2_package_index": 8,
+        "c3_package_index": 2499,
+        "step": 94
+      },
+      {
+        "c2_package_index": 1457,
+        "c3_package_index": 1193,
+        "step": 95
+      },
+      {
+        "c2_package_index": 2354,
+        "c3_package_index": 2478,
+        "step": 96
+      },
+      {
+        "c2_package_index": 180,
+        "c3_package_index": 1142,
+        "step": 97
+      },
+      {
+        "c2_package_index": 2199,
+        "c3_package_index": 1272,
+        "step": 98
+      },
+      {
+        "c2_package_index": 1824,
+        "c3_package_index": 79,
+        "step": 99
+      },
+      {
+        "c2_package_index": 192,
+        "c3_package_index": 1381,
+        "step": 100
+      },
+      {
+        "c2_package_index": 856,
+        "c3_package_index": 1250,
+        "step": 101
+      },
+      {
+        "c2_package_index": 616,
+        "c3_package_index": 1342,
+        "step": 102
+      },
+      {
+        "c2_package_index": 1981,
+        "c3_package_index": 1164,
+        "step": 103
+      },
+      {
+        "c2_package_index": 727,
+        "c3_package_index": 1135,
+        "step": 104
+      },
+      {
+        "c2_package_index": 28,
+        "c3_package_index": 1393,
+        "step": 105
+      },
+      {
+        "c2_package_index": 553,
+        "c3_package_index": 2394,
+        "step": 106
+      },
+      {
+        "c2_package_index": 804,
+        "c3_package_index": 1168,
+        "step": 107
+      },
+      {
+        "c2_package_index": 2292,
+        "c3_package_index": 1257,
+        "step": 108
+      },
+      {
+        "c2_package_index": 585,
+        "c3_package_index": 2406,
+        "step": 109
+      },
+      {
+        "c2_package_index": 1582,
+        "c3_package_index": 62,
+        "step": 110
+      },
+      {
+        "c2_package_index": 693,
+        "c3_package_index": 2427,
+        "step": 111
+      },
+      {
+        "c2_package_index": 1,
+        "c3_package_index": 1319,
+        "step": 112
+      },
+      {
+        "c2_package_index": 490,
+        "c3_package_index": 1282,
+        "step": 113
+      },
+      {
+        "c2_package_index": 2016,
+        "c3_package_index": 2484,
+        "step": 114
+      },
+      {
+        "c2_package_index": 2041,
+        "c3_package_index": 1354,
+        "step": 115
+      },
+      {
+        "c2_package_index": 1624,
+        "c3_package_index": 1365,
+        "step": 116
+      },
+      {
+        "c2_package_index": 1439,
+        "c3_package_index": 2487,
+        "step": 117
+      },
+      {
+        "c2_package_index": 396,
+        "c3_package_index": 1405,
+        "step": 118
+      },
+      {
+        "c2_package_index": 1879,
+        "c3_package_index": 1196,
+        "step": 119
+      },
+      {
+        "c2_package_index": 874,
+        "c3_package_index": 1327,
+        "step": 120
+      },
+      {
+        "c2_package_index": 1979,
+        "c3_package_index": 1198,
+        "step": 121
+      },
+      {
+        "c2_package_index": 1475,
+        "c3_package_index": 1247,
+        "step": 122
+      },
+      {
+        "c2_package_index": 714,
+        "c3_package_index": 1385,
+        "step": 123
+      },
+      {
+        "c2_package_index": 564,
+        "c3_package_index": 2389,
+        "step": 124
+      },
+      {
+        "c2_package_index": 1693,
+        "c3_package_index": 2483,
+        "step": 125
+      },
+      {
+        "c2_package_index": 1939,
+        "c3_package_index": 1183,
+        "step": 126
+      },
+      {
+        "c2_package_index": 2078,
+        "c3_package_index": 1406,
+        "step": 127
+      },
+      {
+        "c2_package_index": 851,
+        "c3_package_index": 1124,
+        "step": 128
+      },
+      {
+        "c2_package_index": 2157,
+        "c3_package_index": 1237,
+        "step": 129
+      },
+      {
+        "c2_package_index": 346,
+        "c3_package_index": 1184,
+        "step": 130
+      },
+      {
+        "c2_package_index": 466,
+        "c3_package_index": 1349,
+        "step": 131
+      },
+      {
+        "c2_package_index": 1846,
+        "c3_package_index": 72,
+        "step": 132
+      },
+      {
+        "c2_package_index": 94,
+        "c3_package_index": 1229,
+        "step": 133
+      },
+      {
+        "c2_package_index": 624,
+        "c3_package_index": 1159,
+        "step": 134
+      },
+      {
+        "c2_package_index": 538,
+        "c3_package_index": 2401,
+        "step": 135
+      },
+      {
+        "c2_package_index": 722,
+        "c3_package_index": 1359,
+        "step": 136
+      },
+      {
+        "c2_package_index": 248,
+        "c3_package_index": 1204,
+        "step": 137
+      },
+      {
+        "c2_package_index": 1708,
+        "c3_package_index": 1176,
+        "step": 138
+      },
+      {
+        "c2_package_index": 102,
+        "c3_package_index": 1371,
+        "step": 139
+      },
+      {
+        "c2_package_index": 899,
+        "c3_package_index": 1143,
+        "step": 140
+      },
+      {
+        "c2_package_index": 1666,
+        "c3_package_index": 1315,
+        "step": 141
+      },
+      {
+        "c2_package_index": 2191,
+        "c3_package_index": 1175,
+        "step": 142
+      },
+      {
+        "c2_package_index": 1498,
+        "c3_package_index": 2447,
+        "step": 143
+      },
+      {
+        "c2_package_index": 497,
+        "c3_package_index": 2426,
+        "step": 144
+      },
+      {
+        "c2_package_index": 1758,
+        "c3_package_index": 1303,
+        "step": 145
+      },
+      {
+        "c2_package_index": 450,
+        "c3_package_index": 1375,
+        "step": 146
+      },
+      {
+        "c2_package_index": 1937,
+        "c3_package_index": 1363,
+        "step": 147
+      },
+      {
+        "c2_package_index": 756,
+        "c3_package_index": 1314,
+        "step": 148
+      },
+      {
+        "c2_package_index": 1677,
+        "c3_package_index": 1350,
+        "step": 149
+      },
+      {
+        "c2_package_index": 325,
+        "c3_package_index": 1194,
+        "step": 150
+      },
+      {
+        "c2_package_index": 270,
+        "c3_package_index": 1279,
+        "step": 151
+      },
+      {
+        "c2_package_index": 970,
+        "c3_package_index": 1382,
+        "step": 152
+      },
+      {
+        "c2_package_index": 106,
+        "c3_package_index": 1367,
+        "step": 153
+      },
+      {
+        "c2_package_index": 256,
+        "c3_package_index": 2438,
+        "step": 154
+      },
+      {
+        "c2_package_index": 178,
+        "c3_package_index": 1398,
+        "step": 155
+      },
+      {
+        "c2_package_index": 548,
+        "c3_package_index": 2507,
+        "step": 156
+      },
+      {
+        "c2_package_index": 1944,
+        "c3_package_index": 2489,
+        "step": 157
+      },
+      {
+        "c2_package_index": 455,
+        "c3_package_index": 1222,
+        "step": 158
+      },
+      {
+        "c2_package_index": 627,
+        "c3_package_index": 1339,
+        "step": 159
+      },
+      {
+        "c2_package_index": 957,
+        "c3_package_index": 1208,
+        "step": 160
+      },
+      {
+        "c2_package_index": 2380,
+        "c3_package_index": 1351,
+        "step": 161
+      },
+      {
+        "c2_package_index": 1794,
+        "c3_package_index": 2423,
+        "step": 162
+      },
+      {
+        "c2_package_index": 377,
+        "c3_package_index": 1165,
+        "step": 163
+      },
+      {
+        "c2_package_index": 2112,
+        "c3_package_index": 1243,
+        "step": 164
+      },
+      {
+        "c2_package_index": 678,
+        "c3_package_index": 1294,
+        "step": 165
+      },
+      {
+        "c2_package_index": 1925,
+        "c3_package_index": 2511,
+        "step": 166
+      },
+      {
+        "c2_package_index": 541,
+        "c3_package_index": 2384,
+        "step": 167
+      },
+      {
+        "c2_package_index": 1707,
+        "c3_package_index": 1417,
+        "step": 168
+      },
+      {
+        "c2_package_index": 1827,
+        "c3_package_index": 1267,
+        "step": 169
+      },
+      {
+        "c2_package_index": 1692,
+        "c3_package_index": 2443,
+        "step": 170
+      },
+      {
+        "c2_package_index": 699,
+        "c3_package_index": 1224,
+        "step": 171
+      },
+      {
+        "c2_package_index": 531,
+        "c3_package_index": 1332,
+        "step": 172
+      },
+      {
+        "c2_package_index": 855,
+        "c3_package_index": 2508,
+        "step": 173
+      },
+      {
+        "c2_package_index": 584,
+        "c3_package_index": 1269,
+        "step": 174
+      },
+      {
+        "c2_package_index": 1948,
+        "c3_package_index": 84,
+        "step": 175
+      },
+      {
+        "c2_package_index": 273,
+        "c3_package_index": 1123,
+        "step": 176
+      },
+      {
+        "c2_package_index": 650,
+        "c3_package_index": 2490,
+        "step": 177
+      },
+      {
+        "c2_package_index": 2122,
+        "c3_package_index": 2467,
+        "step": 178
+      },
+      {
+        "c2_package_index": 566,
+        "c3_package_index": 85,
+        "step": 179
+      },
+      {
+        "c2_package_index": 468,
+        "c3_package_index": 2472,
+        "step": 180
+      },
+      {
+        "c2_package_index": 2322,
+        "c3_package_index": 1190,
+        "step": 181
+      },
+      {
+        "c2_package_index": 304,
+        "c3_package_index": 1232,
+        "step": 182
+      },
+      {
+        "c2_package_index": 1700,
+        "c3_package_index": 2497,
+        "step": 183
+      },
+      {
+        "c2_package_index": 1025,
+        "c3_package_index": 2435,
+        "step": 184
+      },
+      {
+        "c2_package_index": 2246,
+        "c3_package_index": 1167,
+        "step": 185
+      },
+      {
+        "c2_package_index": 514,
+        "c3_package_index": 2473,
+        "step": 186
+      },
+      {
+        "c2_package_index": 2339,
+        "c3_package_index": 1261,
+        "step": 187
+      },
+      {
+        "c2_package_index": 1481,
+        "c3_package_index": 1386,
+        "step": 188
+      },
+      {
+        "c2_package_index": 762,
+        "c3_package_index": 2510,
+        "step": 189
+      },
+      {
+        "c2_package_index": 297,
+        "c3_package_index": 1256,
+        "step": 190
+      },
+      {
+        "c2_package_index": 372,
+        "c3_package_index": 1345,
+        "step": 191
+      },
+      {
+        "c2_package_index": 1561,
+        "c3_package_index": 1188,
+        "step": 192
+      },
+      {
+        "c2_package_index": 2115,
+        "c3_package_index": 1163,
+        "step": 193
+      },
+      {
+        "c2_package_index": 215,
+        "c3_package_index": 1340,
+        "step": 194
+      },
+      {
+        "c2_package_index": 1835,
+        "c3_package_index": 1333,
+        "step": 195
+      },
+      {
+        "c2_package_index": 430,
+        "c3_package_index": 83,
+        "step": 196
+      },
+      {
+        "c2_package_index": 986,
+        "c3_package_index": 1370,
+        "step": 197
+      },
+      {
+        "c2_package_index": 1535,
+        "c3_package_index": 1374,
+        "step": 198
+      },
+      {
+        "c2_package_index": 810,
+        "c3_package_index": 1337,
+        "step": 199
+      },
+      {
+        "c2_package_index": 679,
+        "c3_package_index": 2442,
+        "step": 200
+      },
+      {
+        "c2_package_index": 228,
+        "c3_package_index": 1344,
+        "step": 201
+      },
+      {
+        "c2_package_index": 601,
+        "c3_package_index": 2480,
+        "step": 202
+      },
+      {
+        "c2_package_index": 1750,
+        "c3_package_index": 1209,
+        "step": 203
+      },
+      {
+        "c2_package_index": 99,
+        "c3_package_index": 2457,
+        "step": 204
+      },
+      {
+        "c2_package_index": 2080,
+        "c3_package_index": 2445,
+        "step": 205
+      },
+      {
+        "c2_package_index": 105,
+        "c3_package_index": 2466,
+        "step": 206
+      },
+      {
+        "c2_package_index": 1467,
+        "c3_package_index": 1139,
+        "step": 207
+      },
+      {
+        "c2_package_index": 2336,
+        "c3_package_index": 2492,
+        "step": 208
+      },
+      {
+        "c2_package_index": 2140,
+        "c3_package_index": 1144,
+        "step": 209
+      },
+      {
+        "c2_package_index": 279,
+        "c3_package_index": 1396,
+        "step": 210
+      },
+      {
+        "c2_package_index": 454,
+        "c3_package_index": 78,
+        "step": 211
+      },
+      {
+        "c2_package_index": 612,
+        "c3_package_index": 1177,
+        "step": 212
+      },
+      {
+        "c2_package_index": 764,
+        "c3_package_index": 2434,
+        "step": 213
+      },
+      {
+        "c2_package_index": 122,
+        "c3_package_index": 1180,
+        "step": 214
+      },
+      {
+        "c2_package_index": 776,
+        "c3_package_index": 1195,
+        "step": 215
+      },
+      {
+        "c2_package_index": 1909,
+        "c3_package_index": 1162,
+        "step": 216
+      },
+      {
+        "c2_package_index": 1896,
+        "c3_package_index": 2404,
+        "step": 217
+      },
+      {
+        "c2_package_index": 964,
+        "c3_package_index": 2522,
+        "step": 218
+      },
+      {
+        "c2_package_index": 1804,
+        "c3_package_index": 1298,
+        "step": 219
+      },
+      {
+        "c2_package_index": 427,
+        "c3_package_index": 1273,
+        "step": 220
+      },
+      {
+        "c2_package_index": 977,
+        "c3_package_index": 1154,
+        "step": 221
+      },
+      {
+        "c2_package_index": 2144,
+        "c3_package_index": 1245,
+        "step": 222
+      },
+      {
+        "c2_package_index": 2124,
+        "c3_package_index": 2412,
+        "step": 223
+      },
+      {
+        "c2_package_index": 380,
+        "c3_package_index": 1185,
+        "step": 224
+      },
+      {
+        "c2_package_index": 2188,
+        "c3_package_index": 2408,
+        "step": 225
+      },
+      {
+        "c2_package_index": 684,
+        "c3_package_index": 1146,
+        "step": 226
+      },
+      {
+        "c2_package_index": 732,
+        "c3_package_index": 1166,
+        "step": 227
+      },
+      {
+        "c2_package_index": 202,
+        "c3_package_index": 1335,
+        "step": 228
+      },
+      {
+        "c2_package_index": 1889,
+        "c3_package_index": 1360,
+        "step": 229
+      },
+      {
+        "c2_package_index": 29,
+        "c3_package_index": 2393,
+        "step": 230
+      },
+      {
+        "c2_package_index": 2126,
+        "c3_package_index": 1158,
+        "step": 231
+      },
+      {
+        "c2_package_index": 91,
+        "c3_package_index": 2520,
+        "step": 232
+      },
+      {
+        "c2_package_index": 812,
+        "c3_package_index": 1217,
+        "step": 233
+      },
+      {
+        "c2_package_index": 730,
+        "c3_package_index": 74,
+        "step": 234
+      },
+      {
+        "c2_package_index": 512,
+        "c3_package_index": 1210,
+        "step": 235
+      },
+      {
+        "c2_package_index": 1924,
+        "c3_package_index": 1415,
+        "step": 236
+      },
+      {
+        "c2_package_index": 2309,
+        "c3_package_index": 1125,
+        "step": 237
+      },
+      {
+        "c2_package_index": 2287,
+        "c3_package_index": 2462,
+        "step": 238
+      },
+      {
+        "c2_package_index": 432,
+        "c3_package_index": 2456,
+        "step": 239
+      },
+      {
+        "c2_package_index": 820,
+        "c3_package_index": 1202,
+        "step": 240
+      },
+      {
+        "c2_package_index": 2243,
+        "c3_package_index": 1325,
+        "step": 241
+      },
+      {
+        "c2_package_index": 571,
+        "c3_package_index": 1189,
+        "step": 242
+      },
+      {
+        "c2_package_index": 950,
+        "c3_package_index": 2421,
+        "step": 243
+      },
+      {
+        "c2_package_index": 689,
+        "c3_package_index": 1268,
+        "step": 244
+      },
+      {
+        "c2_package_index": 1712,
+        "c3_package_index": 1329,
+        "step": 245
+      },
+      {
+        "c2_package_index": 908,
+        "c3_package_index": 2494,
+        "step": 246
+      },
+      {
+        "c2_package_index": 1854,
+        "c3_package_index": 2469,
+        "step": 247
+      },
+      {
+        "c2_package_index": 162,
+        "c3_package_index": 1225,
+        "step": 248
+      },
+      {
+        "c2_package_index": 540,
+        "c3_package_index": 1253,
+        "step": 249
+      },
+      {
+        "c2_package_index": 156,
+        "c3_package_index": 2397,
+        "step": 250
+      },
+      {
+        "c2_package_index": 313,
+        "c3_package_index": 2521,
+        "step": 251
+      },
+      {
+        "c2_package_index": 2028,
+        "c3_package_index": 1137,
+        "step": 252
+      },
+      {
+        "c2_package_index": 189,
+        "c3_package_index": 2503,
+        "step": 253
+      },
+      {
+        "c2_package_index": 734,
+        "c3_package_index": 1338,
+        "step": 254
+      },
+      {
+        "c2_package_index": 2143,
+        "c3_package_index": 1308,
+        "step": 255
+      },
+      {
+        "c2_package_index": 364,
+        "c3_package_index": 2460,
+        "step": 256
+      }
+    ],
+    "post_selection_confirmation_package_indices_by_pg": {
+      "C2": [
+        1491,
+        206,
+        2357,
+        770,
+        1026,
+        242,
+        1761,
+        2085,
+        2025,
+        505,
+        2131,
+        1936,
+        673,
+        1783,
+        470,
+        1536
+      ],
+      "C3": [
+        2451,
+        1368,
+        2518,
+        1403,
+        2390,
+        1301,
+        1275,
+        1207,
+        2491,
+        2415,
+        1270,
+        1149,
+        1259,
+        1400,
+        2391,
+        1171
+      ]
+    },
+    "train_package_indices_by_pg": {
+      "C2": [
+        1684,
+        2378,
+        1101,
+        934,
+        1606,
+        698,
+        840,
+        901,
+        41,
+        383,
+        485,
+        635,
+        2045,
+        2200,
+        2270,
+        953,
+        1062,
+        257,
+        1619,
+        2334,
+        458,
+        104,
+        1455,
+        89,
+        303,
+        608,
+        477,
+        1812,
+        1760,
+        1538,
+        1581,
+        1940,
+        2294,
+        760,
+        2293,
+        1961,
+        884,
+        2213,
+        1569,
+        1469,
+        1634,
+        199,
+        2306,
+        1988,
+        591,
+        900,
+        132,
+        951,
+        797,
+        1788,
+        1515,
+        90,
+        222,
+        328,
+        1678,
+        879,
+        382,
+        2247,
+        1646,
+        467,
+        1438,
+        2156,
+        385,
+        543,
+        112,
+        1754,
+        1736,
+        491,
+        24,
+        530,
+        1892,
+        1432,
+        1986,
+        1845,
+        1826,
+        281,
+        1725,
+        2371,
+        25,
+        983,
+        2055,
+        254,
+        948,
+        955,
+        1584,
+        609,
+        2053,
+        1763,
+        2300,
+        1807,
+        1502,
+        1037,
+        1998,
+        8,
+        1457,
+        2354,
+        180,
+        2199,
+        1824,
+        192,
+        856,
+        616,
+        1981,
+        727,
+        28,
+        553,
+        804,
+        2292,
+        585,
+        1582,
+        693,
+        1,
+        490,
+        2016,
+        2041,
+        1624,
+        1439,
+        396,
+        1879,
+        874,
+        1979,
+        1475,
+        714,
+        564,
+        1693,
+        1939,
+        2078,
+        851,
+        2157,
+        346,
+        466,
+        1846,
+        94,
+        624,
+        538,
+        722,
+        248,
+        1708,
+        102,
+        899,
+        1666,
+        2191,
+        1498,
+        497,
+        1758,
+        450,
+        1937,
+        756,
+        1677,
+        325,
+        270,
+        970,
+        106,
+        256,
+        178,
+        548,
+        1944,
+        455,
+        627,
+        957,
+        2380,
+        1794,
+        377,
+        2112,
+        678,
+        1925,
+        541,
+        1707,
+        1827,
+        1692,
+        699,
+        531,
+        855,
+        584,
+        1948,
+        273,
+        650,
+        2122,
+        566,
+        468,
+        2322,
+        304,
+        1700,
+        1025,
+        2246,
+        514,
+        2339,
+        1481,
+        762,
+        297,
+        372,
+        1561,
+        2115,
+        215,
+        1835,
+        430,
+        986,
+        1535,
+        810,
+        679,
+        228,
+        601,
+        1750,
+        99,
+        2080,
+        105,
+        1467,
+        2336,
+        2140,
+        279,
+        454,
+        612,
+        764,
+        122,
+        776,
+        1909,
+        1896,
+        964,
+        1804,
+        427,
+        977,
+        2144,
+        2124,
+        380,
+        2188,
+        684,
+        732,
+        202,
+        1889,
+        29,
+        2126,
+        91,
+        812,
+        730,
+        512,
+        1924,
+        2309,
+        2287,
+        432,
+        820,
+        2243,
+        571,
+        950,
+        689,
+        1712,
+        908,
+        1854,
+        162,
+        540,
+        156,
+        313,
+        2028,
+        189,
+        734,
+        2143,
+        364
+      ],
+      "C3": [
+        1295,
+        1369,
+        1205,
+        67,
+        2479,
+        1317,
+        2455,
+        1173,
+        2396,
+        1366,
+        1265,
+        2474,
+        1307,
+        1304,
+        2471,
+        1286,
+        1126,
+        1157,
+        1316,
+        1255,
+        1334,
+        1293,
+        2403,
+        1289,
+        2446,
+        1234,
+        1390,
+        1240,
+        1313,
+        2441,
+        66,
+        61,
+        2431,
+        73,
+        2428,
+        1221,
+        1306,
+        1311,
+        1201,
+        1291,
+        2386,
+        1276,
+        2488,
+        2387,
+        1346,
+        1148,
+        1130,
+        1216,
+        2509,
+        1227,
+        1239,
+        1172,
+        1408,
+        2454,
+        2440,
+        2402,
+        2399,
+        1413,
+        2519,
+        1186,
+        82,
+        1280,
+        1404,
+        2517,
+        2452,
+        1312,
+        1212,
+        2411,
+        2498,
+        1134,
+        1348,
+        1235,
+        1395,
+        1264,
+        1156,
+        80,
+        1328,
+        1169,
+        1251,
+        68,
+        69,
+        2493,
+        1277,
+        1324,
+        2496,
+        71,
+        1394,
+        2449,
+        1355,
+        1416,
+        1219,
+        1152,
+        1362,
+        2499,
+        1193,
+        2478,
+        1142,
+        1272,
+        79,
+        1381,
+        1250,
+        1342,
+        1164,
+        1135,
+        1393,
+        2394,
+        1168,
+        1257,
+        2406,
+        62,
+        2427,
+        1319,
+        1282,
+        2484,
+        1354,
+        1365,
+        2487,
+        1405,
+        1196,
+        1327,
+        1198,
+        1247,
+        1385,
+        2389,
+        2483,
+        1183,
+        1406,
+        1124,
+        1237,
+        1184,
+        1349,
+        72,
+        1229,
+        1159,
+        2401,
+        1359,
+        1204,
+        1176,
+        1371,
+        1143,
+        1315,
+        1175,
+        2447,
+        2426,
+        1303,
+        1375,
+        1363,
+        1314,
+        1350,
+        1194,
+        1279,
+        1382,
+        1367,
+        2438,
+        1398,
+        2507,
+        2489,
+        1222,
+        1339,
+        1208,
+        1351,
+        2423,
+        1165,
+        1243,
+        1294,
+        2511,
+        2384,
+        1417,
+        1267,
+        2443,
+        1224,
+        1332,
+        2508,
+        1269,
+        84,
+        1123,
+        2490,
+        2467,
+        85,
+        2472,
+        1190,
+        1232,
+        2497,
+        2435,
+        1167,
+        2473,
+        1261,
+        1386,
+        2510,
+        1256,
+        1345,
+        1188,
+        1163,
+        1340,
+        1333,
+        83,
+        1370,
+        1374,
+        1337,
+        2442,
+        1344,
+        2480,
+        1209,
+        2457,
+        2445,
+        2466,
+        1139,
+        2492,
+        1144,
+        1396,
+        78,
+        1177,
+        2434,
+        1180,
+        1195,
+        1162,
+        2404,
+        2522,
+        1298,
+        1273,
+        1154,
+        1245,
+        2412,
+        1185,
+        2408,
+        1146,
+        1166,
+        1335,
+        1360,
+        2393,
+        1158,
+        2520,
+        1217,
+        74,
+        1210,
+        1415,
+        1125,
+        2462,
+        2456,
+        1202,
+        1325,
+        1189,
+        2421,
+        1268,
+        1329,
+        2494,
+        2469,
+        1225,
+        1253,
+        2397,
+        2521,
+        1137,
+        2503,
+        1338,
+        1308,
+        2460
+      ]
+    },
+    "train_sn_indices": [
+      1684,
+      2378
+    ],
+    "train_target_pg_counts": {
+      "C2": 256,
+      "C3": 256
+    },
+    "train_unique_molecule_count": 512
+  },
+  "protocol_fingerprint": "bbbc935d5dcce22b2925ec93e659b038319442f3cdebec28292e4c3111f0febd",
+  "purpose": "Train the bounded operation/orbit-aware residual head with exactly one C2 and one C3 molecule contributing equally to every optimizer update.",
+  "route": "ET-Flow/EF2-D2",
+  "schema_version": "etflow-ef2d2-operation-orbit-training-protocol-v1",
+  "scope": {
+    "adapter_only": true,
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_train_used": true,
+    "iid_validation_used": false,
+    "official_base_frozen": true,
+    "parent_a2_frozen": true,
+    "posthoc_force_field_used": false,
+    "quality_claim": false,
+    "raw_sampling_evaluated": false
+  },
+  "selection": {
+    "duplicates_allowed": false,
+    "method": "SHA-256 rank within IID-train/Target_PG after excluding EF2-D1 holdout",
+    "one_molecule_exposure_per_selected_record": true,
+    "pairing": "rank-matched C2/C3; equal mean loss per optimizer update",
+    "seed": 2026082633
+  },
+  "status": "FROZEN_AFTER_ENGINEERING_PASS_BEFORE_TRAINING",
+  "training": {
+    "checkpoint_every": 64,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 5e-05,
+    "molecule_exposures": 512,
+    "molecules_per_optimizer_step": 2,
+    "optimizer": "AdamW",
+    "optimizer_steps": 256,
+    "seed": 202608263300,
+    "short_rollout": {
+      "cadence_optimizer_steps": 4,
+      "start_time": 0.3,
+      "step_size": 0.1,
+      "steps": 2,
+      "terminal_endpoint_structural_weight": 0.25
+    },
+    "single_time_losses_each_step": true,
+    "target_pg_per_optimizer_step": [
+      "C2",
+      "C3"
+    ],
+    "weight_decay": 0.0
+  },
+  "validation": {
+    "base_seed": 202608263400,
+    "checkpoint_selection_uses_first_half_of_holdout": true,
+    "post_selection_confirmation_uses_second_half_once": true,
+    "short_rollout": {
+      "start_time": 0.2,
+      "step_size": 0.05,
+      "steps": 4
+    },
+    "single_time": 0.5,
+    "thresholds": {
+      "bond_loss_ratio_max": 1.1,
+      "flow_mse_ratio_max": 1.1,
+      "maximum_endpoint_delta_norm_angstrom": 0.050001,
+      "mean_operation_ratio_max": 0.995,
+      "nonbonded_collision_loss_ratio_max": 1.0,
+      "per_pg_operation_improved_fraction_min": 0.5,
+      "short_rollout_c3_mean_operation_ratio_max": 1.0,
+      "short_rollout_maximum_case_ratio_max": 1.5,
+      "short_rollout_mean_operation_ratio_max": 1.0,
+      "worst_operation_ratio_max": 1.0
+    }
+  }
+}

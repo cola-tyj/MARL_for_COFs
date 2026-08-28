@@ -1,0 +1,62 @@
+{
+  "artifact_hashes": {
+    "last.pt": "bb02e2f4f316c8fb41b13bf08897625217ca431cd4fefa30d8d71035abcdf726",
+    "losses.npz": "c2fa448c96c43362d34bae7ae58f322cfcd81fa4c28728e69108ed669a1d1aa0",
+    "report.json": "d40405049b33e96791d16fd6839b15abe962e55f439a5d25e968f26642e4d225"
+  },
+  "decision": {
+    "advance_to_tier_32": false,
+    "resume_same_branch_to_step_2048": true,
+    "reason": "Atom exact is stable at 4/4. Present-bond accuracy and all final-window balanced bond components continue improving, while coordinate error also decreases. Bond exact count remains 1/4 but the remaining categorical errors have not plateaued."
+  },
+  "objective_version": "uae3d-exact-reconstruction-aux-v2-molecule-balanced",
+  "schema_version": "1.0",
+  "step_1536": {
+    "atom_exact_molecules": 4,
+    "bond_exact_molecules": 1,
+    "bond_full_pair_accuracy": 0.9403811485964461,
+    "connected_molecules": 1,
+    "coordinate_rmsd_max_angstrom": 0.26997697353363037,
+    "coordinate_rmsd_mean_angstrom": 0.1797703169286251,
+    "none_bond_accuracy": 0.9557980900409276,
+    "present_bond_accuracy": 0.6081081081081081,
+    "sanitize_valid_molecules": 1,
+    "self_loop_accuracy": 0.8357142857142857
+  },
+  "step_1536_per_molecule": {
+    "862": {
+      "atom_correct": "72/72",
+      "bond_pair_correct": "4919/5184",
+      "present_bond_correct": "82/156",
+      "self_loop_correct": "57/72"
+    },
+    "864": {
+      "atom_correct": "10/10",
+      "bond_pair_correct": "100/100",
+      "connected": true,
+      "sanitize_valid": true
+    },
+    "1114": {
+      "atom_correct": "49/49",
+      "bond_pair_correct": "2207/2401",
+      "present_bond_correct": "62/104",
+      "self_loop_correct": "41/49"
+    },
+    "1135": {
+      "atom_correct": "9/9",
+      "bond_pair_correct": "77/81",
+      "none_bond_correct": "50/54",
+      "present_bond_correct": "18/18",
+      "self_loop_correct": "9/9"
+    }
+  },
+  "status": "PASS_TIER4_ATOM_EXACT_BOND_PROGRESS_EXTEND_TO_2048",
+  "strict_u2_gate_passed": false,
+  "tier": 4,
+  "training_window_means": {
+    "steps_1345_1408_balanced_bond_loss": 0.3569111009128392,
+    "steps_1409_1472_balanced_bond_loss": 0.34508948074653745,
+    "steps_1473_1536_balanced_bond_loss": 0.3319075773470104,
+    "steps_1473_1536_mean_coordinate_loss": 0.0024466267677780706
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "conclusion": "native generation remains stable, but fixed validation improvement is not broad across cases/timesteps",
+  "deterministic_validation": {
+    "case_win_fraction": 0.46875,
+    "case_wins": 15,
+    "checks": {
+      "case_win_fraction": false,
+      "mean_ratio": false,
+      "timestep_win_fraction": false
+    },
+    "component_means": {
+      "atom_cross_entropy": 0.40646181445936236,
+      "charge_cross_entropy": 0.002524272613618983,
+      "edge_cross_entropy": 0.08618395453690653,
+      "position_mse": 2.3611276876181364
+    },
+    "mean_total_loss": 7.420859895210015,
+    "mean_total_loss_ratio_to_official": 0.9946668398474146,
+    "passed": false,
+    "timestep_total_loss_means": {
+      "1": 0.010680734412744641,
+      "100": 0.013532090466469526,
+      "200": 0.1317107379436493,
+      "25": 0.010467377724125981,
+      "300": 1.7872170209884644,
+      "400": 14.441213846206665,
+      "50": 0.01067067333497107,
+      "500": 42.96138668060303
+    },
+    "timestep_win_fraction": 0.5,
+    "timestep_wins": 4
+  },
+  "native_sampling": {
+    "checks": {
+      "collisions": true,
+      "connected": true,
+      "sanitize_valid": true
+    },
+    "collisions": 0,
+    "connected": 4,
+    "evaluation_fingerprint": "ce4eedd005624cfabb44cef2f010de751269c5e2270b64e2cad50cfa20ecd276",
+    "evaluation_report_sha256": "df66dc2a84d3faaf62fc24d9dfcbb7effc2440f8fe43a13da42f58f129de4771",
+    "exact_train_smiles": 0,
+    "minimum_pair_distance_mean_angstrom": 0.9771740533123104,
+    "nearest_train_tanimoto_mean": 0.13113581992801016,
+    "passed": true,
+    "sampling_report_sha256": "c0af5827c0d66858b29d390e283bd0c67e068823a3357230cc19a4e3c28198a3",
+    "sanitize_failure_counts": {
+      "SANITIZE_KEKULIZE": 1
+    },
+    "sanitize_valid": 4
+  },
+  "schema_version": "1.0",
+  "stage_gate_passed": false,
+  "status": "FAIL_TIMESTEP_STRATIFIED_STAGE_DETERMINISTIC_GATE",
+  "step": 16,
+  "training_segment": {
+    "begin_step": 1,
+    "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/checkpoints/step-000016.pt",
+    "checkpoint_sha256": "d202ca8392f6f433e5bd3a53c77a3f133b447567f2c69f234318d699c18630f0",
+    "end_step": 16,
+    "loss_maximum": 42.82408905029297,
+    "loss_mean": 9.255976402782835,
+    "loss_median": 0.8808612525463104,
+    "loss_minimum": 0.010970929637551308,
+    "timesteps": [
+      49,
+      151,
+      401,
+      460,
+      191,
+      281,
+      348,
+      115,
+      282,
+      97,
+      18,
+      370,
+      437,
+      143,
+      480,
+      238
+    ]
+  }
+}

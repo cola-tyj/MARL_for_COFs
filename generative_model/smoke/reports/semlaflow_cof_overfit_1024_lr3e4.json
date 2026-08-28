@@ -1,0 +1,72 @@
+{
+  "artifacts": {
+    "checkpoint_sha256": "f9d43a693a4a428a484af66dfb47f3ded78713166a6c5da8d4b7ebba6b38ddbf",
+    "data_manifest_sha256": "3e0fd9d26d474395c1bf67f6b6e1b645093b420112f7e9864f3e3221e8f8e674",
+    "ema_50_evaluation_report_sha256": "c1f86ede5a164e63ae57bf6ee7bda2f19fe21af831faba1ddf65b2a2f3d4ee02",
+    "ema_50_sampling_report_sha256": "beb6410b01a1c536d83642585b6427ea121876195c1e33186caea86eb7186772",
+    "ema_100_evaluation_report_sha256": "1ad873e8a4db090060467ff8f0d5223084e6e841aaf45622e6194161030888c3",
+    "ema_100_sampling_report_sha256": "cfa71dbd14c9e65d3cd0c7be1f1b45ee0a52da589fcaf2bbdce801e57e6454dd",
+    "raw_50_evaluation_report_sha256": "85c69041264ca4df3fddf32c1003ed04296e3728d62b071b9256cea10d12e9e4",
+    "raw_50_sampling_report_sha256": "129c50b4bbc3fd74feac90e0c6357ce2a6bf1fce7d5cb9bd9740bba2234ab5e3",
+    "raw_100_evaluation_report_sha256": "80f736c7ed8673f1aa3467b5bef29a2271c5fea66480f7fc51ee556b3a9f8b5b",
+    "raw_100_sampling_report_sha256": "6cec94bf6f8fe950ac8508ffc4a0c56e6d2e3d27466a68b2c6387779e0c812cd",
+    "training_report_sha256": "7a2fbb9fd6d479a74d37d612c95732a5cef74945d0a55c9e3e39e2110c9f3368"
+  },
+  "conclusion": "training_stable_objective_improved_but_raw_chemistry_degraded_overfit_gate_not_passed",
+  "experiment": {
+    "batch_size": 4,
+    "learning_rate": 0.0003,
+    "molecules": 32,
+    "seed": 20260812,
+    "training_steps": 1024
+  },
+  "fixed_loss_audit": {
+    "after": 0.7350249662995338,
+    "after_over_before_ratio": 0.8392562761521137,
+    "before": 0.8758051469922066
+  },
+  "sampling": {
+    "ema_100_steps": {
+      "collision_rate": 0.03125,
+      "exact_training_smiles_matches": 0,
+      "nearest_train_tanimoto_max": 0.28205128205128205,
+      "nearest_train_tanimoto_mean": 0.17014536978928893,
+      "rdkit_sanitize_valid": 26,
+      "samples": 32
+    },
+    "ema_50_steps": {
+      "collision_rate": 0.0625,
+      "exact_training_smiles_matches": 0,
+      "nearest_train_tanimoto_max": 0.2708333333333333,
+      "nearest_train_tanimoto_mean": 0.1780381829661677,
+      "rdkit_sanitize_valid": 29,
+      "samples": 32
+    },
+    "raw_100_steps": {
+      "collision_rate": 0.125,
+      "exact_training_smiles_matches": 0,
+      "nearest_train_tanimoto_max": 0.45454545454545453,
+      "nearest_train_tanimoto_mean": 0.1997496621059966,
+      "rdkit_sanitize_valid": 21,
+      "samples": 32
+    },
+    "raw_50_steps": {
+      "collision_rate": 0.15625,
+      "exact_training_smiles_matches": 0,
+      "nearest_train_tanimoto_max": 0.3157894736842105,
+      "nearest_train_tanimoto_mean": 0.20807492832859326,
+      "rdkit_sanitize_valid": 16,
+      "samples": 32
+    }
+  },
+  "schema_version": "1.0",
+  "status": "INCOMPLETE",
+  "training": {
+    "all_gradients_finite": true,
+    "last_over_first_window_ratio": 0.6428913104622996,
+    "minimum_observed_stochastic_loss": 0.003017616458237171,
+    "peak_cuda_memory_bytes": 2872919552,
+    "seconds": 417.78515023738146,
+    "strict_official_checkpoint_reload": true
+  }
+}

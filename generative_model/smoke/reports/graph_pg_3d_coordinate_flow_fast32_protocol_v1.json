@@ -1,0 +1,230 @@
+{
+  "decision": {
+    "endpoint_fail_action": "stop learned endpoint-flow branch and move to symmetry-by-construction baseline",
+    "endpoint_fail_status": "FAIL_COORDINATE_FLOW_FAST32_STOP_ENDPOINT_BRANCH",
+    "pass_action": "prepare 2026 IID-train / 253 IID-validation training command",
+    "pass_status": "PASS_COORDINATE_FLOW_FAST32_ADVANCE_TO_IID_TRAIN",
+    "sampling_fail_action": "allow one bounded integrator repair only; do not retrain endpoint",
+    "sampling_fail_status": "FAIL_COORDINATE_FLOW_FAST32_ALLOW_ONE_INTEGRATOR_REPAIR"
+  },
+  "flow": {
+    "coordinate_convention": "Angstrom, centroid-zero, explicit H",
+    "path": "x_t=(1-t)*x0+t*x1",
+    "prediction_target": "centered endpoint x1",
+    "prior_seed": 20260822,
+    "prior_std_angstrom": 3.3742073179010283,
+    "prior_std_derivation": "population std of x/y/z components over 2026 IID-train molecules only",
+    "sampling_prior": "centered Gaussian, unaligned and target-independent",
+    "training_prior": "centered Gaussian, fixed-node SO(3) Kabsch-aligned to target",
+    "training_time_distribution": "uniform",
+    "training_time_max": 0.99,
+    "training_time_min": 0.0,
+    "velocity": "(predicted_x1-x_t)/(1-t)"
+  },
+  "gate_thresholds": {
+    "correct_pg_better_than_swapped_fraction_min": 0.625,
+    "correct_to_swapped_symmetry_ratio_max": 0.95,
+    "pg_effect_kabsch_rmsd_min": 0.001,
+    "raw_analyzer_success_fraction_min": 0.9,
+    "raw_pg_compatible_fraction_min": 0.25,
+    "recovery_each_time_ratio_max": 0.95,
+    "recovery_improved_fraction_min": 0.75,
+    "recovery_mean_rmsd_ratio_max": 0.9,
+    "sampling_collision_free_fraction_min": 0.75,
+    "sampling_pair_distance_mae_ratio_max": 0.9,
+    "sampling_symmetry_improved_fraction_min": 0.625,
+    "training_loss_window_ratio_max": 0.7
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "execution_environment": {
+      "conda_environment": "env_cof",
+      "numpy": "1.26.4",
+      "pymatgen": "2025.3.10",
+      "python": "3.10.16",
+      "scipy": "1.15.2",
+      "torch": "1.13.1",
+      "torch_cuda_build": "11.7"
+    },
+    "f0_report_sha256": "c44a0adec079c98f8c175cea007e76ff3b0c74ca974705967ac3b2975675b95d",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "source_panel_protocol_sha256": "adb08827627001856845ae1617aa7e65c2451366f540e565196a4e96c5d925a6",
+    "source_sha256": {
+      "generative_model/external/semla-flow/semlaflow/models/fm.py": "6c04ac907a70dd7a61f6065b85abbbf87aa8eb0e9192a7c8fe84ae08958a699e",
+      "generative_model/external/semla-flow/semlaflow/models/semla.py": "957443cd392513d1e8f25b8ece07e01ee510e7481f11fabba363536d4ff6ad72",
+      "generative_model/models/coordinate_flow.py": "7fd0782f5c3f7106654d3c8bd3bde5a01ed86cc8e043ca8b16506a004c9bfb6b",
+      "generative_model/models/coordinate_flow_runtime.py": "172c3dd6facf1c93fc36a41a1e844324e62690e327e651608daef6a7ec9efda5",
+      "generative_model/models/graph_pg_3d_semla_flow.py": "60dda1aec4465c7efcb1f922c90ed140ae3d3670173827f3498878506d087266",
+      "generative_model/smoke/train_graph_pg_3d_coordinate_flow_fast32.py": "58f0db3ecab1a29958dfbba2a88c2b6c84745cd93e7144313809a2830b551162"
+    },
+    "split_iid_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1",
+    "upstream_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283"
+  },
+  "model": {
+    "configuration": {
+      "atom_vocab_size": 13,
+      "bond_vocab_size": 5,
+      "coordinate_std_angstrom": 2.407038688659668,
+      "d_edge": 32,
+      "d_message": 48,
+      "d_model": 96,
+      "known_graph_only": true,
+      "n_attn_heads": 8,
+      "n_coord_sets": 4,
+      "n_layers": 6,
+      "parameter_count": 778880,
+      "pg_vocab_size": 4,
+      "prediction_target": "centered coordinate endpoint x1",
+      "schema_version": "graph-pg-3d-semla-coordinate-endpoint-flow-v1",
+      "time_conditioning": "explicit [t,t^2,sin(pi*t),cos(pi*t)] embedding",
+      "upstream": "SemlaFlow EquiInvDynamics",
+      "upstream_commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283"
+    },
+    "constructor": {
+      "atom_vocab_size": 13,
+      "bond_vocab_size": 5,
+      "coordinate_std_angstrom": 2.407038688659668,
+      "d_edge": 32,
+      "d_message": 48,
+      "d_model": 96,
+      "n_attn_heads": 8,
+      "n_coord_sets": 4,
+      "n_layers": 6,
+      "pg_vocab_size": 4
+    }
+  },
+  "objective": {
+    "all_pair_distance_mse_weight": 0.1,
+    "bond_length_mse_weight": 0.25,
+    "coordinate_mse_weight": 1.0,
+    "soft_symmetry_mse_weight": 0.05
+  },
+  "panels": {
+    "sn_engineering_package_index": 1684,
+    "sn_engineering_split": "iid_train_only_not_added_to_fast32_quality_panel",
+    "source_panel_protocol": "generative_model/smoke/reports/graph_pg_3d_semla_fast32_protocol_v2.json",
+    "train_audit": {
+      "atom_count_max": 63,
+      "atom_count_min": 12,
+      "molecules": 32,
+      "sn_containing_molecules": 0,
+      "target_pg": {
+        "C2": 24,
+        "C3": 8
+      }
+    },
+    "train_package_indices": [
+      1430,
+      242,
+      461,
+      613,
+      443,
+      2060,
+      1541,
+      2344,
+      2107,
+      1726,
+      193,
+      1554,
+      1880,
+      961,
+      2119,
+      1907,
+      2270,
+      1668,
+      468,
+      1026,
+      825,
+      686,
+      1599,
+      1812,
+      1229,
+      1259,
+      1152,
+      80,
+      76,
+      1288,
+      1144,
+      1360
+    ],
+    "validation_audit": {
+      "atom_count_max": 60,
+      "atom_count_min": 15,
+      "molecules": 8,
+      "sn_containing_molecules": 0,
+      "target_pg": {
+        "C2": 6,
+        "C3": 2
+      }
+    },
+    "validation_package_indices": [
+      575,
+      1074,
+      845,
+      1490,
+      1080,
+      334,
+      1254,
+      1215
+    ]
+  },
+  "protocol_fingerprint": "3abb4235f5fa178b12605c085e2d79656373881d4a6b9d9b29fd646f21c95184",
+  "purpose": "Dataset-level Fast-32 gate for immutable graph + Target_PG conditioned all-atom coordinate endpoint flow, with separate interpolation-recovery and true-prior sampling evidence.",
+  "report_schema_version": "graph-pg-3d-coordinate-flow-fast32-report-v1",
+  "schema_version": "graph-pg-3d-coordinate-flow-fast32-protocol-v1",
+  "scope": {
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "explicit_h": true,
+    "new_molecule_generation_claimed": false,
+    "single_reference_rmsd_0p05_is_gate": false,
+    "test_used": false
+  },
+  "status": "FROZEN_BEFORE_COORDINATE_FLOW_FAST32_TRAINING",
+  "training": {
+    "batch_seed": 20260823,
+    "batch_size_molecules": 4,
+    "checkpoint_every": 256,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0002,
+    "max_steps": 1024,
+    "model_seed": 20260821,
+    "optimizer": "AdamW",
+    "weight_decay": 1e-06
+  },
+  "validation": {
+    "evaluate_steps": [
+      0,
+      256,
+      512,
+      1024
+    ],
+    "integration": {
+      "epsilon": 0.001,
+      "method": "euler",
+      "steps": 16,
+      "terminal_time": 0.99
+    },
+    "no_pg_control": "not used in v1 because the frozen vocabulary has no trained null-PG token",
+    "pg_control": "same prior, correct C2/C3 index versus swapped C3/C2 index",
+    "recovery_times": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "reference_alignment": "Kabsch alignment is used only for reference-based sampling metrics/projection; raw analyzer and collision metrics use unaligned model output",
+    "seeds": [
+      20261001,
+      20261002
+    ],
+    "symmetry_analyzer": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  }
+}

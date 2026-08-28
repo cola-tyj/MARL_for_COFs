@@ -1,0 +1,27 @@
+{
+  "artifact_hashes": {
+    "last.pt": "4802b9ca682dfb1eb843d1e3028633f5a8b4717c817838795ce9560cb5cec190",
+    "losses.npz": "bc306aff0ceef79983ec5d58d9ce8a3c4a78963e6bc2ed4503e7dc0003c2c9d0",
+    "report.json": "f3af20862a9453a32f29d37c2eaa43bfab9efa99d377c97d8d7c8b76238aebaf"
+  },
+  "checks": {
+    "cuda_full_batch_forward_backward": true,
+    "data_model_split_identity_strict": true,
+    "frozen_source_indices_are_target_subset": true,
+    "losses_and_gradients_finite": true,
+    "reverse_or_non_nested_expansion_rejected": true,
+    "targeted_tests_passed": 14
+  },
+  "initialization": {
+    "mode": "model_only_tier_expansion",
+    "source_checkpoint_sha256": "32a190dd1dd690b2dfe1265783acd42f5ff8f30c6ec73c139361fd2790e3ed69",
+    "source_indices": [864],
+    "source_step": 64,
+    "source_tier": 1,
+    "target_indices": [864, 1135, 1114, 862],
+    "target_tier": 4
+  },
+  "objective_version": "uae3d-exact-reconstruction-aux-v2-molecule-balanced",
+  "schema_version": "1.0",
+  "status": "PASS_TIER4_EXPANSION_ENGINEERING_READY_FOR_0512_CALIBRATION"
+}

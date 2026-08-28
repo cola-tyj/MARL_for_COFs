@@ -1,0 +1,199 @@
+{
+  "decision": {
+    "fail_action": "stop this denoiser; do not extend steps or lower thresholds",
+    "fail_status": "FAIL_ORBIT_COORDINATE_O1_STOP_DENOISER",
+    "pass_action": "freeze a separate orbit-space prior/iterative-sampling Gate; do not start full IID training yet",
+    "pass_status": "PASS_ORBIT_COORDINATE_O1_ADVANCE_TO_ORBIT_SAMPLER"
+  },
+  "gate_thresholds": {
+    "collision_free_fraction_min": 0.75,
+    "maximum_operation_error_angstrom": 1e-05,
+    "training_loss_window_ratio_max": 0.7,
+    "validation_bond_mae_ratio_max": 0.85,
+    "validation_coordinate_improved_fraction_min": 0.75,
+    "validation_coordinate_rmsd_ratio_max": 0.85,
+    "validation_each_sigma_rmsd_ratio_max": 0.95
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "environment": {
+      "conda": "anaconda3",
+      "numpy": "1.26.4",
+      "python": "3.10.16",
+      "torch": "1.13.1",
+      "torch_cuda_build": "11.7"
+    },
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "o0_protocol_sha256": "fd1916dd9e5ceb415e790c53be0a0db1606a48d963b3d04fee4e6fc958217816",
+    "o0_report_sha256": "12c58d54562b0abdacd5834ab2156aee8dd3b3464d703158b69d0550480c0b2e",
+    "source_sha256": {
+      "generative_model/models/graph_pg_3d_denoiser_multichannel.py": "83b87991617adff306a2b9ed18ce718392ff6bc9281d88d0cdc6f38fce39fc63",
+      "generative_model/models/orbit_coordinate_denoiser.py": "9c2de5ba8abd5c18857414f7c62b1ef9e5e78dcdcd44d9353e8e56d6dc37e301",
+      "generative_model/models/symmetry_by_construction.py": "0ba4cdb17ab3f73d3d19cdbd76f4970422b4f88f1f0a3a6a6b8a96632ce9996a",
+      "generative_model/smoke/audit_orbit_coordinate_o1_engineering.py": "0a9716249627c1f8cd6bd92f3476b83f84249b058a1db36c544591f4d764a614",
+      "generative_model/smoke/train_orbit_coordinate_o1.py": "3ce9aa6ae769cd3f1add609786b2c07e296e4f5b1e7ec943f47cd520ae9e4572",
+      "generative_model/tests/test_orbit_coordinate_o1_protocol.py": "bc9349db571da9935878b97458ec3b3ba06f973487c49e294bc659a9a49b4f02"
+    },
+    "split_iid_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1"
+  },
+  "model": {
+    "configuration": {
+      "base": {
+        "atom_vocab_size": 13,
+        "bond_vocab_size": 5,
+        "channel_normalization": "independent mean aggregation per destination atom",
+        "coordinate_scale": 0.1,
+        "global_scale_ratio": 0.25,
+        "hidden_dim": 96,
+        "known_graph_only": true,
+        "layer_count": 6,
+        "local_cutoff_angstrom": 4.5,
+        "local_scale_ratio": 0.5,
+        "message_channels": [
+          "bonded",
+          "local_nonbonded",
+          "global_nonbonded"
+        ],
+        "parameter_count": 1145970,
+        "pg_vocab_size": 4,
+        "schema_version": "graph-pg-3d-egnn-multichannel-denoiser-v1"
+      },
+      "canonical_graph_mutation": false,
+      "hard_expansion": "stored target O(3) operations and permutation indices",
+      "known_group_action_required": true,
+      "output_parameterization": "one pooled representative coordinate per target orbit",
+      "parameter_count": 1145970,
+      "schema_version": "graph-pg-3d-orbit-hard-denoiser-v1"
+    },
+    "constructor": {
+      "atom_vocab_size": 13,
+      "bond_vocab_size": 5,
+      "coordinate_scale": 0.1,
+      "global_scale_ratio": 0.25,
+      "hidden_dim": 96,
+      "layer_count": 6,
+      "local_cutoff_angstrom": 4.5,
+      "local_scale_ratio": 0.5,
+      "pg_vocab_size": 4
+    }
+  },
+  "objective": {
+    "all_pair_distance_mse_weight": 0.1,
+    "bond_length_mse_weight": 0.25,
+    "coordinate_mse_weight": 1.0,
+    "molecule_balanced": true,
+    "soft_symmetry_loss": false
+  },
+  "panels": {
+    "core_ood_used": false,
+    "sn_engineering_package_index": 1684,
+    "test_used": false,
+    "train_package_indices": [
+      1430,
+      242,
+      461,
+      613,
+      443,
+      2060,
+      1541,
+      2344,
+      2107,
+      1726,
+      193,
+      1554,
+      1880,
+      961,
+      2119,
+      1907,
+      2270,
+      1668,
+      468,
+      1026,
+      825,
+      686,
+      1599,
+      1812,
+      1229,
+      1259,
+      1152,
+      80,
+      76,
+      1288,
+      1144,
+      1360
+    ],
+    "train_target_pg": {
+      "C2": 24,
+      "C3": 8
+    },
+    "validation_package_indices": [
+      575,
+      1074,
+      845,
+      1490,
+      1080,
+      334,
+      1254,
+      1215
+    ],
+    "validation_target_pg": {
+      "C2": 6,
+      "C3": 2
+    }
+  },
+  "protocol_fingerprint": "1a9bd750b5f5876516a53ee0dd50b91a94dce07b6cd2d0ef82974f4222e631e8",
+  "purpose": "The single bounded 512-step C2/C3 quality Gate for recovery from exact-symmetry orbit-space perturbations; this is not a prior-sampling Gate.",
+  "report_schema_version": "orbit-coordinate-o1-report-v1",
+  "schema_version": "orbit-coordinate-o1-protocol-v1",
+  "scope": {
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "element_vocab_size": 13,
+    "explicit_h": true,
+    "known_graph": true,
+    "known_group_action": true,
+    "new_graph_generation_claimed": false,
+    "prior_generation_claimed": false,
+    "test_used": false
+  },
+  "status": "FROZEN_BEFORE_ORBIT_COORDINATE_O1_TRAINING",
+  "training": {
+    "batch_schedule": "SHA256 rank without replacement as a pure function of step",
+    "batch_seed": 20260824,
+    "batch_size_molecules": 4,
+    "checkpoint_every": 128,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.0002,
+    "loss_window_steps": 64,
+    "max_steps": 512,
+    "model_seed": 20260822,
+    "noise_seed_base": 20261200,
+    "noise_sigmas_angstrom": [
+      0.15,
+      0.5,
+      1.0
+    ],
+    "optimizer": "AdamW",
+    "weight_decay": 1e-06
+  },
+  "validation": {
+    "cases": 48,
+    "evaluate_steps": [
+      0,
+      128,
+      256,
+      512
+    ],
+    "noise_sigmas_angstrom": [
+      0.15,
+      0.5,
+      1.0
+    ],
+    "pg_token_control": "C2/C3 token swap is reported as a diagnostic but is not a Gate because stored operations/permutations already explicitly encode the target group action",
+    "reference": "nearest hard-symmetry target derived from canonical v2 coordinates",
+    "seeds": [
+      20261101,
+      20261102
+    ]
+  }
+}

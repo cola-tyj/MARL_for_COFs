@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "selected_primary": "uae3d",
+  "sources": [
+    {
+      "commit": "3f43103d3af138b86dbe9f29fe8085e83f9a6283",
+      "directory": "semla-flow",
+      "id": "semlaflow",
+      "repository": "https://github.com/rssrwn/semla-flow"
+    },
+    {
+      "commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+      "directory": "UAE-3D",
+      "id": "uae3d",
+      "repository": "https://github.com/lyc0930/UAE-3D"
+    },
+    {
+      "commit": "775b731c38967a1e49615b2ad70ac6b5db24909a",
+      "directory": "midi",
+      "id": "midi",
+      "repository": "https://github.com/cvignac/MiDi"
+    }
+  ]
+}

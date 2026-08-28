@@ -1,0 +1,113 @@
+{
+  "decision": {
+    "access_iid_test": false,
+    "next_branch": "operation/orbit-aware conditioner with bounded rollout-stable correction",
+    "required_changes": [
+      "per-operation and orbit-pooled/broadcast features rather than only graph aggregates",
+      "non-identity and worst-operation/orbit-balanced symmetry objective",
+      "multi-time or short-rollout stability loss with an explicit correction cap",
+      "C2/C3-balanced batches retained as a supporting, not sufficient, intervention"
+    ],
+    "retrain_overlap_head_now": false
+  },
+  "formal_status_preserved": "FAIL_ETFLOW_C7RS_RAW_C3_CONFIRMATION_STOP_RESAMPLING_ONLY",
+  "identity": {
+    "coordinates_sha256": "3f5a1050cc309346867ea49fa05b875cfeb0ee2c56a668572ec585d39d891fcf",
+    "geometry_report_sha256": "06e9a55c06094c27bc064ecf537a7b4311978708e8936ef4fcfb408b0e6f4634",
+    "point_group_report_sha256": "0a3717e7a58f619d994414d15331f70d403b1cebc4f4b7092d572526472247f9",
+    "protocol_sha256": "cfbb99164725d7d56ba8f43e5e441926ed103391ed6e6d05cab7ff5c7c2a21d9",
+    "source_sha256": "1e22030f2a1cbc6c215db7f19729651ab1d651082877fd67f7838427e41aca40"
+  },
+  "interpretation": {
+    "likely_mechanism_inference": "The graph-shared scalar gate is trained on independent random times and endpoint loss, but is not constrained for rollout stability or worst-operation/orbit-local response. Repeated ODE application can therefore amplify rare residuals and trade C2 against C3.",
+    "not_supported": [
+      "C7-RS is ready for collision-aware overlap-head retraining.",
+      "C3 raw actual-PG generalization has passed.",
+      "The failure can be repaired by extending the same training or tuning the Gate on this panel."
+    ],
+    "supported": [
+      "Balanced resampling improves the typical continuous C3 response: 14/17 C3 operation RMS values improve and the median ratio is below one.",
+      "The improvement is not robust: three C3 cases regress, including one catastrophic trajectory/geometry outlier.",
+      "All 17 C2 operation RMS values regress, showing a C2 tradeoff despite nominal 1:1 exposure.",
+      "Fixed-time endpoint validation is insufficient to select a stable full-ODE conditioner."
+    ]
+  },
+  "schema_version": "etflow-c7rs-raw-failure-diagnosis-v1",
+  "status": "DIAGNOSED_C7RS_RESAMPLING_TYPICAL_C3_GAIN_WITH_TRAJECTORY_TAIL_FAILURE",
+  "summary": {
+    "by_target_pg": {
+      "C2": {
+        "candidate_median_operation_rms_angstrom": 0.03116080332750349,
+        "count": 17,
+        "maximum_operation_rms_ratio_to_parent": 2.3277248382466325,
+        "median_operation_rms_ratio_to_parent": 1.2052744298114775,
+        "operation_rms_improved_count": 0,
+        "operation_rms_improved_fraction": 0.0,
+        "parent_median_operation_rms_angstrom": 0.02548535753608803
+      },
+      "C3": {
+        "candidate_median_operation_rms_angstrom": 0.030367783887070825,
+        "count": 17,
+        "maximum_operation_rms_ratio_to_parent": 57.166974324558446,
+        "median_operation_rms_ratio_to_parent": 0.7790896121440235,
+        "operation_rms_improved_count": 14,
+        "operation_rms_improved_fraction": 0.8235294117647058,
+        "parent_median_operation_rms_angstrom": 0.04079854920647617
+      }
+    },
+    "c3_compatible_regressions": 0,
+    "c3_compatible_repairs": 1,
+    "candidate_bond_quality_fraction": 0.7941176470588235,
+    "candidate_c2_compatible_count": 14,
+    "candidate_c3_compatible_count": 13,
+    "candidate_collision_free_fraction": 0.8529411764705882,
+    "candidate_pg_compatible_count": 27,
+    "parent_c3_compatible_count": 12,
+    "worst_cases": [
+      {
+        "candidate_bond_mae_angstrom": 27.802837461002614,
+        "candidate_minimum_pair_distance_angstrom": 1.1975482211298127,
+        "candidate_operation_rms_angstrom": 18.843801643238894,
+        "candidate_pg_compatible": false,
+        "operation_rms_ratio_to_parent": 57.166974324558446,
+        "package_index": 2461,
+        "parent_operation_rms_angstrom": 0.3296274092845204,
+        "parent_pg_compatible": false,
+        "target_pg": "C3"
+      },
+      {
+        "candidate_bond_mae_angstrom": 0.4212050299777108,
+        "candidate_minimum_pair_distance_angstrom": 0.29287008799615677,
+        "candidate_operation_rms_angstrom": 0.6287298308759044,
+        "candidate_pg_compatible": false,
+        "operation_rms_ratio_to_parent": 6.283074639829564,
+        "package_index": 2465,
+        "parent_operation_rms_angstrom": 0.10006722296282629,
+        "parent_pg_compatible": false,
+        "target_pg": "C3"
+      },
+      {
+        "candidate_bond_mae_angstrom": 0.7907068874790774,
+        "candidate_minimum_pair_distance_angstrom": 0.29093161588535654,
+        "candidate_operation_rms_angstrom": 0.14170985974699957,
+        "candidate_pg_compatible": false,
+        "operation_rms_ratio_to_parent": 2.1090417893083457,
+        "package_index": 1296,
+        "parent_operation_rms_angstrom": 0.06719158456953711,
+        "parent_pg_compatible": false,
+        "target_pg": "C3"
+      },
+      {
+        "candidate_bond_mae_angstrom": 0.6635989851932348,
+        "candidate_minimum_pair_distance_angstrom": 0.29025856642484754,
+        "candidate_operation_rms_angstrom": 0.12421443000394039,
+        "candidate_pg_compatible": false,
+        "operation_rms_ratio_to_parent": 2.3277248382466325,
+        "package_index": 114,
+        "parent_operation_rms_angstrom": 0.053363021248467396,
+        "parent_pg_compatible": true,
+        "target_pg": "C2"
+      }
+    ]
+  }
+}

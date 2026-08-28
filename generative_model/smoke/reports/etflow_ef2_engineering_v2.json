@@ -1,0 +1,108 @@
+{
+  "checks": {
+    "both_c2_c3_present": true,
+    "both_sn_molecules_preserved": true,
+    "conditioner_gradients_finite": true,
+    "conditioner_gradients_nonzero": true,
+    "coordinate_assignment_never_used": true,
+    "element_fallback_never_used": true,
+    "hard_projection_never_used": true,
+    "official_checkpoint_unchanged": true,
+    "panel_complete": true,
+    "zero_initialized_wrapper_exact": true
+  },
+  "identity": {
+    "base_state_sha256_after": "ad1807d360c5ac2c045164ab5ddbfd26fb721c7d8836db0d615794e16f9cb9dc",
+    "base_state_sha256_before": "ad1807d360c5ac2c045164ab5ddbfd26fb721c7d8836db0d615794e16f9cb9dc",
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "protocol_fingerprint": "36720df03faa14e64746fd4d35ade4302b55b122f5f92152364e96c47a22685c",
+    "protocol_sha256": "3c76ae4c709ee540eab15d7df3782fe34d35b88d689c42413e40eec74e7fa712"
+  },
+  "metrics": {
+    "maximum_zero_initialization_error": 0.0,
+    "minimum_conditioner_gradient_norm": 0.0005850623128935695,
+    "molecule_count": 4,
+    "sn_molecule_count": 2
+  },
+  "passed": true,
+  "records": [
+    {
+      "atom_count": 50,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.0005850623128935695,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.0009951087413355708,
+      "hard_projection_used": false,
+      "molecule_id": "cof_000045",
+      "package_index": 45,
+      "sn_count": 0,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C2",
+      "zero_initialization_max_abs_error": 0.0
+    },
+    {
+      "atom_count": 33,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.0010886196978390217,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.0003859847201965749,
+      "hard_projection_used": false,
+      "molecule_id": "cof_000081",
+      "package_index": 81,
+      "sn_count": 0,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C3",
+      "zero_initialization_max_abs_error": 0.0
+    },
+    {
+      "atom_count": 42,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.00376915093511343,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.019643623381853104,
+      "hard_projection_used": false,
+      "molecule_id": "cof_001684",
+      "package_index": 1684,
+      "sn_count": 2,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C2",
+      "zero_initialization_max_abs_error": 0.0
+    },
+    {
+      "atom_count": 36,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.0037762485444545746,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.030155817046761513,
+      "hard_projection_used": false,
+      "molecule_id": "cof_002378",
+      "package_index": 2378,
+      "sn_count": 2,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C2",
+      "zero_initialization_max_abs_error": 0.0
+    }
+  ],
+  "schema_version": "etflow-ef2-engineering-gate-v2",
+  "scope": {
+    "annotation_action_used_as_training_supervision_only": true,
+    "graph_recovered_action_required_at_inference": true,
+    "hard_projection_used": false,
+    "quality_claim": false,
+    "raw_sampling_evaluated": false,
+    "training_started": false
+  },
+  "status": "PASS_ETFLOW_EF2_ENGINEERING_FREEZE_BOUNDED_TRAINING"
+}

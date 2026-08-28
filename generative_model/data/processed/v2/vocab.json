@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "atom_symbols": [
+    "H",
+    "C",
+    "N",
+    "O",
+    "F",
+    "B",
+    "P",
+    "S",
+    "Cl",
+    "Br",
+    "I",
+    "Si",
+    "Sn"
+  ],
+  "atom_to_index": {
+    "H": 0,
+    "C": 1,
+    "N": 2,
+    "O": 3,
+    "F": 4,
+    "B": 5,
+    "P": 6,
+    "S": 7,
+    "Cl": 8,
+    "Br": 9,
+    "I": 10,
+    "Si": 11,
+    "Sn": 12
+  },
+  "atomic_numbers": {
+    "H": 1,
+    "C": 6,
+    "N": 7,
+    "O": 8,
+    "F": 9,
+    "B": 5,
+    "P": 15,
+    "S": 16,
+    "Cl": 17,
+    "Br": 35,
+    "I": 53,
+    "Si": 14,
+    "Sn": 50
+  },
+  "bond_type_names": [
+    "none",
+    "single",
+    "double",
+    "triple",
+    "aromatic"
+  ],
+  "bond_type_to_index": {
+    "none": 0,
+    "single": 1,
+    "double": 2,
+    "triple": 3,
+    "aromatic": 4
+  },
+  "conventions": {
+    "atom_index_base": 0,
+    "undirected_bonds_stored_once": true,
+    "positions": "angstrom, per-molecule centroid removed"
+  }
+}

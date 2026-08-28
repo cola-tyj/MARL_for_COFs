@@ -1,0 +1,88 @@
+{
+  "schema_version": "uae3d-stage-conclusion-v1",
+  "created_on": "2026-08-17",
+  "status": "FAIL_HARD_PAIR_V3_PCGRAD_PRESENT_COLLAPSE_STOP_ARCHITECTURE_AUDIT",
+  "experiment": "hard_pair_v3_pcgrad_0032",
+  "source": {
+    "checkpoint": "generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "package_indices": [864, 1135, 1114, 862]
+  },
+  "artifacts": {
+    "report.json": "e4d18139b14abe478ab98078d4a52a318338059c85956751839107620b122127",
+    "losses.npz": "1c03a2e9b9570708e42f917b0eab5aac4740125cc449ea0104e5b6c8cc49e1fb",
+    "last.pt": "e7b612030d9f9efaa248bb20180f4528872099cb095e63082c2992922e0cd55e"
+  },
+  "optimization_integrity": {
+    "all_losses_and_gradients_finite": true,
+    "gradient_surgery": "pcgrad-strata",
+    "trainable_scope": "bond-head",
+    "trainable_parameter_count": 4550,
+    "frozen_parameter_count": 637694,
+    "frozen_parameters_unchanged": true,
+    "pcgrad_conflict_pairs_each_step": 3,
+    "loss_first": 0.5201933979988098,
+    "loss_minimum": 0.4988340437412262,
+    "loss_last": 0.5074121356010437
+  },
+  "frozen_gate": {
+    "thresholds": {
+      "hard_pair_count_less_than": 326,
+      "none_bond_accuracy_at_least": 0.9620736698499318,
+      "present_bond_accuracy_at_least": 0.8513513513513513,
+      "self_loop_accuracy_at_least": 0.8714285714285714,
+      "atom_exact_molecules": 4,
+      "small_exact_molecule_package_indices": [864, 1135],
+      "coordinate_rmsd_max_no_regression_from_angstrom": 0.14410918951034546
+    },
+    "checks": {
+      "hard_pair_count": true,
+      "none_bond_accuracy": true,
+      "present_bond_accuracy": false,
+      "self_loop_accuracy": true,
+      "atom_exact_all": true,
+      "small_exact_molecules_preserved": true,
+      "coordinate_rmsd_no_regression": true
+    },
+    "passed": false
+  },
+  "trajectory": {
+    "step_0": {
+      "hard_pair_count": 326,
+      "hard_pair_count_by_stratum": {"none": 205, "present": 64, "self": 57},
+      "bond_full_pair_accuracy": 0.9562194179757919,
+      "none_bond_accuracy": 0.9620736698499318,
+      "present_bond_accuracy": 0.8513513513513513,
+      "self_loop_accuracy": 0.8714285714285714,
+      "bond_exact_molecules": 2,
+      "coordinate_rmsd_max_angstrom": 0.14410918951034546
+    },
+    "step_32": {
+      "hard_pair_count": 232,
+      "hard_pair_count_by_stratum": {"none": 120, "present": 92, "self": 20},
+      "bond_full_pair_accuracy": 0.9705124903425186,
+      "none_bond_accuracy": 0.9866302864938609,
+      "present_bond_accuracy": 0.5743243243243243,
+      "self_loop_accuracy": 0.9642857142857143,
+      "bond_exact_molecules": 2,
+      "coordinate_rmsd_max_angstrom": 0.14410918951034546
+    }
+  },
+  "interpretation": {
+    "generic_trainer_gate": "PENDING_MORE_TRAINING",
+    "project_gate": "FAIL",
+    "primary_failure": "present-bond accuracy collapsed while none and self strata improved",
+    "evidence": "present hard pairs increased from 64 to 92 and present accuracy fell by 0.277027027027027 while total accuracy rose",
+    "decision": "Do not extend this branch and do not enter tier-32. Stop loss-only tuning on the shared six-class bond head."
+  },
+  "next_architecture_audit": {
+    "name": "constrained-hierarchical-bond-decoder",
+    "requirements": [
+      "Fix diagonal entries to the self token rather than predicting them.",
+      "Forbid the self token on off-diagonal pairs by construction.",
+      "Predict off-diagonal bond existence as none versus present.",
+      "Predict single/double/triple/aromatic type conditionally for present pairs.",
+      "Initialize or distill from the selected step-3008 checkpoint and rerun engineering tests before formal training."
+    ]
+  }
+}

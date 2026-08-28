@@ -1,0 +1,123 @@
+{
+  "decision": {
+    "fail_action": "stop scalar conditioner; do not access IID-test or add hard projection",
+    "final_pass_status": "PASS_ETFLOW_EF2B_RAW_PG_RESPONSE_ADVANCE_TO_IID_TEST",
+    "geometry_pass_status": "PASS_ETFLOW_EF2B_GEOMETRY_AWAIT_POINT_GROUP_AUDIT"
+  },
+  "gate_thresholds": {
+    "alternate_mean_operation_rms_ratio_max": 0.5,
+    "alternate_symmetry_improved_fraction_min": 0.75,
+    "bond_length_mae_to_reference_angstrom_max": 0.15,
+    "bond_quality_fraction_min": 0.9,
+    "collision_free_fraction_min": 0.9,
+    "mean_operation_rms_ratio_max": 0.25,
+    "minimum_pair_distance_angstrom": 0.6,
+    "pg_effect_kabsch_rmsd_min": 0.05,
+    "symmetry_improved_fraction_min": 0.9
+  },
+  "identity": {
+    "a2_protocol_sha256": "eaf696764009ee46aa827dbd03a061f930c4d1c0825b73d79fc9d2a235ceb256",
+    "a2_report_sha256": "e293895f5047239b5661e3ac554601acf6f0a343ed271a00b5eeef9bf9f5d2e2",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "official_checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "official_model_name": "drugs-o3",
+    "selected_checkpoint": "generative_model/runs/etflow_ef2a2_endpoint_interleaved_0256/checkpoints/step-000256.pt",
+    "selected_checkpoint_sha256": "bee44230ab167def820d6147fad4140487de923c57a7eddf7cafc7703ee9f335",
+    "source_sha256": {
+      "generative_model/conformer/etflow_pg_sampler.py": "995317306edec3379eccaaa88c9d78f1268f7f3eee5defd247c31b5271cd5c79",
+      "generative_model/data/etflow_pg_inference.py": "a285d33d42100627431c17c8308749c66fc358dca072e4ee6ebba2971c3f61fb",
+      "generative_model/models/etflow_pg_conditioned_v2.py": "ef21d929b8effc7d6173fd865f76cd06505c3064f56cac285ddfae6d0da285c6",
+      "generative_model/smoke/audit_etflow_ef2b_point_groups.py": "baf9a5ce3924ff638d538c70ef9928bdbd480647a6cc45d240b1be1b099864ee",
+      "generative_model/smoke/build_etflow_ef2b_raw_sampling_protocol.py": "dedaaba1fdc6fa65c32f3950b3d5445de49a8b9fbd2c8d8379639c0e78e7b40a",
+      "generative_model/smoke/run_etflow_ef2b_raw_sampling.py": "15bab45557c6179e3e768c725db0bfca9bff07206d8813a04017a4356a947c0b"
+    },
+    "symmetry_protocol": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "panel": {
+    "alternate_action_counts": {
+      "C2_to_C3": 4,
+      "C3_to_C2": 4
+    },
+    "alternate_action_package_indices": [
+      1669,
+      1611,
+      2209,
+      2265,
+      1129,
+      1388,
+      2495,
+      1133
+    ],
+    "molecule_count": 16,
+    "package_indices": [
+      1669,
+      1611,
+      2209,
+      2265,
+      547,
+      1522,
+      1552,
+      1663,
+      1080,
+      2359,
+      296,
+      2242,
+      1129,
+      1388,
+      2495,
+      1133
+    ],
+    "source_split": "IID-validation only",
+    "target_pg_counts": {
+      "C2": 12,
+      "C3": 4
+    }
+  },
+  "point_group_gate_thresholds": {
+    "alternate_analyzer_success_fraction_min": 0.75,
+    "alternate_pg_compatible_fraction_min": 0.5,
+    "correct_analyzer_success_fraction_min": 0.9,
+    "correct_compatible_gain_over_base_min": 0.25,
+    "correct_pg_compatible_fraction_min": 0.75
+  },
+  "protocol_fingerprint": "a07d11c1360d430fd7d69ab8696e30ff45d74b3d9cc2e5b95e1b93e989547c3e",
+  "purpose": "Test raw full-trajectory PG response without hard projection on held-out IID-validation.",
+  "route": "EF2-B",
+  "sampling": {
+    "base_seed": 2026082900,
+    "branches": [
+      "official_base_action_ablation",
+      "correct_action",
+      "alternate_action_when_available"
+    ],
+    "candidates_per_molecule": 2,
+    "n_timesteps": 50,
+    "paired_shared_prior": true,
+    "sampler": "official Euler ODE replicated around frozen wrapper",
+    "seed_offsets": [
+      0,
+      100000
+    ]
+  },
+  "schema_version": "etflow-ef2b-raw-sampling-protocol-v1",
+  "scope": {
+    "graph_recovered_action": true,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_validation_used": true,
+    "official_base_frozen": true,
+    "quality_claim": false,
+    "reference_xyz_used_for_posthoc_geometry_only": true,
+    "reference_xyz_used_for_sampling": false,
+    "stored_action_used": false
+  },
+  "status": "FROZEN_BEFORE_RAW_ODE_SAMPLING"
+}

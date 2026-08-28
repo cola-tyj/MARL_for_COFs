@@ -1,0 +1,108 @@
+{
+  "checks": {
+    "both_c2_c3_present": true,
+    "both_sn_molecules_preserved": true,
+    "conditioner_gradients_finite": true,
+    "conditioner_gradients_nonzero": true,
+    "coordinate_assignment_never_used": true,
+    "element_fallback_never_used": true,
+    "hard_projection_never_used": true,
+    "official_checkpoint_unchanged": true,
+    "panel_complete": true,
+    "zero_initialized_wrapper_exact": false
+  },
+  "identity": {
+    "base_state_sha256_after": "ad1807d360c5ac2c045164ab5ddbfd26fb721c7d8836db0d615794e16f9cb9dc",
+    "base_state_sha256_before": "ad1807d360c5ac2c045164ab5ddbfd26fb721c7d8836db0d615794e16f9cb9dc",
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "protocol_fingerprint": "020216bf0228a57cded97256319dd1b73b70d5f5233b4ff417bde4a7f871f6a1",
+    "protocol_sha256": "20ca081e4308c34cd84b93ca935e25cee2673fe32d4733b9cc7feedab6fe36ab"
+  },
+  "metrics": {
+    "maximum_zero_initialization_error": 2.1830201148986816e-06,
+    "minimum_conditioner_gradient_norm": 0.0005627220962196589,
+    "molecule_count": 4,
+    "sn_molecule_count": 2
+  },
+  "passed": false,
+  "records": [
+    {
+      "atom_count": 50,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.0005627220962196589,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.0009951102547347546,
+      "hard_projection_used": false,
+      "molecule_id": "cof_000045",
+      "package_index": 45,
+      "sn_count": 0,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C2",
+      "zero_initialization_max_abs_error": 9.834766387939453e-07
+    },
+    {
+      "atom_count": 33,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.001085299882106483,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.0003859889693558216,
+      "hard_projection_used": false,
+      "molecule_id": "cof_000081",
+      "package_index": 81,
+      "sn_count": 0,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C3",
+      "zero_initialization_max_abs_error": 1.6391277313232422e-06
+    },
+    {
+      "atom_count": 42,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.0036325976252555847,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.019643636420369148,
+      "hard_projection_used": false,
+      "molecule_id": "cof_001684",
+      "package_index": 1684,
+      "sn_count": 2,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C2",
+      "zero_initialization_max_abs_error": 2.1830201148986816e-06
+    },
+    {
+      "atom_count": 36,
+      "conditioner_gradient_finite": true,
+      "conditioner_gradient_norm": 0.003641378367319703,
+      "coordinate_atom_assignment_used": false,
+      "element_fallback_used": false,
+      "endpoint_symmetry_mse": 0.03015584498643875,
+      "hard_projection_used": false,
+      "molecule_id": "cof_002378",
+      "package_index": 2378,
+      "sn_count": 2,
+      "sn_preserved": true,
+      "stored_action_used_as_supervision": true,
+      "stored_action_used_at_inference": false,
+      "target_pg": "C2",
+      "zero_initialization_max_abs_error": 1.5497207641601562e-06
+    }
+  ],
+  "schema_version": "etflow-ef2-engineering-gate-v1",
+  "scope": {
+    "annotation_action_used_as_training_supervision_only": true,
+    "graph_recovered_action_required_at_inference": true,
+    "hard_projection_used": false,
+    "quality_claim": false,
+    "raw_sampling_evaluated": false,
+    "training_started": false
+  },
+  "status": "FAIL_ETFLOW_EF2_ENGINEERING_STOP_AND_DIAGNOSE"
+}

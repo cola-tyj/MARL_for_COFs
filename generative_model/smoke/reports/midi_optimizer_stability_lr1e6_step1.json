@@ -1,0 +1,118 @@
+{
+  "comparison": {
+    "lr1e6_step1": {
+      "collisions": 0,
+      "connected": 4,
+      "exact_train_smiles": 0,
+      "minimum_pair_distance_mean_angstrom": 0.9731608449798506,
+      "parameter_update": {
+        "changed_fraction": 0.6706461102724101,
+        "changed_parameter_count": 16143091,
+        "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_smoke1/last.pt",
+        "checkpoint_sha256": "58d033ab65c230fa77ddc9ac2fb5a8beaf85920f2e179fb82c1bf5a4078356dd",
+        "delta_l2": 0.003900798572622422,
+        "floating_parameter_count": 24070953,
+        "maximum_absolute_delta": 1.0132789611816406e-06,
+        "relative_l2": 1.3236179240004239e-05,
+        "weight_l2": 294.7072944458837
+      },
+      "sanitize_failure_counts": {
+        "SANITIZE_KEKULIZE": 1
+      },
+      "sanitize_valid": 4
+    },
+    "lr2e4_step1": {
+      "collisions": 5,
+      "connected": 0,
+      "evaluation_report_sha256": "b308e7c9405366aa0dc6b49310bb96f6502f79799a2d7ab335dcdafba5cdefb8",
+      "exact_train_smiles": 0,
+      "minimum_pair_distance_mean_angstrom": 0.03045094837145456,
+      "parameter_update": {
+        "changed_fraction": 0.672944980616264,
+        "changed_parameter_count": 16198427,
+        "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_smoke1/last.pt",
+        "checkpoint_sha256": "107e925b76d0747057d7175ba7005125805d93a1fd4c4ce23a9ba12b5b2aa243",
+        "delta_l2": 0.7803975070701699,
+        "floating_parameter_count": 24070953,
+        "maximum_absolute_delta": 0.00020003318786621094,
+        "relative_l2": 0.0026480427250282134,
+        "weight_l2": 294.7072944458837
+      },
+      "sampling_report_sha256": "de019325cb3bf982c647c22ac86cbe209b51a890424810760f647116e41ccf5a",
+      "sanitize_valid": 0
+    },
+    "zero_step_official_fixed32": {
+      "collisions": 0,
+      "connected": 4,
+      "samples": 5,
+      "sanitize_valid": 4
+    }
+  },
+  "decision": {
+    "conclusion": "reducing the only changed variable, learning rate, prevents the immediate first-step collapse while preserving the official fixed-32 native baseline",
+    "next_action": "freeze and run a low-lr multi-step tier-1 pilot with early checkpoints; require both a non-increasing loss trend and repeated native sampling preservation",
+    "prohibited_action": "do not advance directly to tier-4, full-dataset fine-tuning, or PG conditioning"
+  },
+  "gate": {
+    "advance_to_low_lr_multistep_tier1_pilot": true,
+    "advance_to_tier4": false,
+    "checks": {
+      "collisions": true,
+      "connected": true,
+      "loss_all_finite": true,
+      "parameter_delta_within_limit": true,
+      "sanitize_valid": true,
+      "training_completed": true
+    },
+    "passed": true
+  },
+  "parameter_update": {
+    "changed_fraction": 0.6706461102724101,
+    "changed_parameter_count": 16143091,
+    "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_smoke1/last.pt",
+    "checkpoint_sha256": "58d033ab65c230fa77ddc9ac2fb5a8beaf85920f2e179fb82c1bf5a4078356dd",
+    "delta_l2": 0.003900798572622422,
+    "floating_parameter_count": 24070953,
+    "maximum_absolute_delta": 1.0132789611816406e-06,
+    "relative_l2": 1.3236179240004239e-05,
+    "weight_l2": 294.7072944458837
+  },
+  "protocol": {
+    "criteria": {
+      "pass_only_if_all": {
+        "collision_count_max_of_5": 1,
+        "completed_training_steps": 1,
+        "connected_min_of_5": 3,
+        "loss_all_finite": true,
+        "maximum_absolute_parameter_delta_max": 1.1e-06,
+        "sanitize_valid_min_of_5": 3
+      },
+      "purpose": "preservation gate; exact target reconstruction is not required after one step"
+    },
+    "path": "generative_model/configs/midi/cof_transfer_optimizer_stability_lr1e6_v1.json",
+    "sha256": "ea400f4d7a4fcc189a65b14daf4000b4531d3fa19a79fcc956f0fead257587a5",
+    "single_changed_variable": "train.lr: 0.0002 -> 0.000001"
+  },
+  "sampling": {
+    "collisions": 0,
+    "connected": 4,
+    "evaluation_fingerprint": "187d69e725e49cbb6b76b0534ccbd4dea3311f02e171c19cdc3e1a151b5af88c",
+    "evaluation_report_sha256": "0e54fb8e62d52f0bc80509dded6b60efed3b43338f9a7e48be5109c8319e855d",
+    "exact_train_smiles": 0,
+    "minimum_pair_distance_mean_angstrom": 0.9731608449798506,
+    "samples": 5,
+    "sampling_report_sha256": "da871340fef6a75cf8d42fe04c1f8f4f6f24095f3a715eee05393d1870b48ecf",
+    "sanitize_failure_counts": {
+      "SANITIZE_KEKULIZE": 1
+    },
+    "sanitize_valid": 4
+  },
+  "schema_version": "1.0",
+  "status": "PASS_OPTIMIZER_STABILITY_LR1E6_STEP1",
+  "training": {
+    "all_finite": true,
+    "loss": 0.02372678741812706,
+    "report_sha256": "09c2b668465c5983c0f8fcfab72be57a8fa5de3a57cab700f91dd85d8c26dd7c",
+    "steps": 1
+  }
+}

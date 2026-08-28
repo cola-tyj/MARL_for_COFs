@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "canonical_graph_unchanged": true,
+    "deterministic_repeat_exact": true,
+    "full_configuration_matches": true,
+    "maximum_operation_error_le_1e_5": true,
+    "protocol_fingerprint_and_source_hashes": true,
+    "real_c2_c3_forward_backward_finite": true,
+    "strict_sn_forward_no_fallback": true,
+    "test_and_core_ood_not_used": true,
+    "unit_tests_5_of_5": true
+  },
+  "identity": {
+    "model_state_unchanged_by_repeat": true,
+    "protocol_fingerprint": "cf669f7e3b14bab6a3a939bbc2eedcc281f7c38a762f989fe5908345d9d39fdd",
+    "protocol_sha256": "fd1916dd9e5ceb415e790c53be0a0db1606a48d963b3d04fee4e6fc958217816"
+  },
+  "metrics": {
+    "c2_c3_output_atoms": 46,
+    "engineering_loss": 0.6995474696159363,
+    "maximum_operation_error_angstrom": 6.034640955676919e-07,
+    "parameter_count": 1145970,
+    "sn_output_atoms": 42
+  },
+  "next": "implement trainer, freeze O1 source hashes and run one 512-step C2/C3 denoising Gate",
+  "panel": {
+    "c2_package_index": 1430,
+    "c3_package_index": 1229,
+    "core_ood_used": false,
+    "sn_package_index": 1684,
+    "test_used": false
+  },
+  "passed": true,
+  "schema_version": "orbit-coordinate-o0-engineering-report-v1",
+  "scope": {
+    "model_quality_claimed": false,
+    "model_trained": false,
+    "prior_generation_claimed": false
+  },
+  "status": "PASS_ORBIT_COORDINATE_O0_FREEZE_O1",
+  "unit_test_command": "/home/tianyajun/anaconda3/envs/env_cof/bin/python -m unittest generative_model.tests.test_orbit_coordinate_denoiser -v"
+}

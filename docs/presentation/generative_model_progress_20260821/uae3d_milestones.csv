@@ -1,0 +1,13 @@
+stage,step,atom_exact,bond_exact,sanitize_connected,coordinate_rmsd_max_angstrom,decision
+tier1-coordinate-refine,128,1/1,1/1,1/1,0.048132,PASS tier1
+tier4-main,512,3/4,0/4,0/4,1.846279,extend with directional signal
+tier4-main,1024,3/4,1/4,1/4,0.425029,first exact molecule
+tier4-main,1536,4/4,1/4,1/4,0.269977,atom exact and bond progress
+tier4-main,2048,4/4,1/4,1/4,0.206050,bond CE continues
+tier4-main,2560,4/4,2/4,2/4,0.165751,two exact molecules
+tier4-main,3072,4/4,2/4,2/4,0.142200,stop main branch
+bond-refine,512,4/4,2/4,2/4,0.204420,stop due exact plateau and coordinate regression
+hard-pair-PCGrad,32,4/4,2/4,2/4,0.144109,stop due present collapse
+hierarchical-v4,16,4/4,2/4,2/4,0.144109,stop raw gate due threshold drift
+explicit-head,64,4/4,0/4,0/4,0.144109,stop head-only branch
+Gate-A-read-only,0,N/A,0/4,N/A,N/A,"FAIL_GATE_A_STOP_UAE_BRANCH; no Gate B"

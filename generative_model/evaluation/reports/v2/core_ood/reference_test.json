@@ -1,0 +1,473 @@
+{
+  "config": {
+    "centering_tolerance_angstrom": 2e-05,
+    "collision_distance_angstrom": 0.6,
+    "coordinate_unit": "angstrom",
+    "fingerprint_bits": 2048,
+    "fingerprint_include_chirality": false,
+    "fingerprint_radius": 2,
+    "mmff_max_iterations": 200,
+    "mmff_variant": "MMFF94s",
+    "run_mmff": true,
+    "run_symmetry": true,
+    "symmetry_eigen_tolerance": 0.01,
+    "symmetry_matrix_tolerance": 0.1,
+    "symmetry_tolerance_angstrom": 0.3
+  },
+  "failures": {
+    "counts": {},
+    "records": []
+  },
+  "metric_suite_version": "p1.0",
+  "metrics": {
+    "chemistry": {
+      "rdkit_sanitize_valid_molecules": 258,
+      "rdkit_sanitize_valid_rate": 1.0,
+      "sanitize_failure_counts": {}
+    },
+    "graph": {
+      "component_count": {
+        "count": 258,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "p95": 1.0
+      },
+      "connected_molecules": 258,
+      "connected_rate": 1.0
+    },
+    "numerical": {
+      "centered_molecules": 258,
+      "centered_rate": 1.0,
+      "collision_molecules": 0,
+      "collision_rate": 0.0,
+      "finite_coordinate_molecules": 258,
+      "finite_coordinate_rate": 1.0,
+      "max_radius_angstrom": {
+        "count": 258,
+        "max": 16.24797293625861,
+        "mean": 8.025175712443243,
+        "median": 7.543937160727343,
+        "min": 2.9994937488583684,
+        "p95": 13.65403554584388
+      },
+      "min_interatomic_distance_angstrom": {
+        "count": 258,
+        "max": 1.1820461704973255,
+        "mean": 1.0636241415065564,
+        "median": 1.0835822646058,
+        "min": 0.9710558250260438,
+        "p95": 1.0885890531773152
+      }
+    },
+    "provided_conditions": {
+      "actual_pg_counts": {
+        "C2": 148,
+        "C2h": 13,
+        "C2v": 33,
+        "C3": 9,
+        "C3h": 23,
+        "C3v": 3,
+        "D2": 8,
+        "D3": 1,
+        "D3h": 10,
+        "D6h": 6,
+        "S4": 4
+      },
+      "pg_compatible_counts": {
+        "true": 258
+      },
+      "target_pg_counts": {
+        "C2": 202,
+        "C3": 46,
+        "D6h": 6,
+        "S4": 4
+      }
+    },
+    "size": {
+      "atom_count": {
+        "count": 258,
+        "max": 101.0,
+        "mean": 36.457364341085274,
+        "median": 32.0,
+        "min": 12.0,
+        "p95": 68.14999999999998
+      },
+      "bond_count": {
+        "count": 258,
+        "max": 108.0,
+        "mean": 38.434108527131784,
+        "median": 33.0,
+        "min": 12.0,
+        "p95": 73.29999999999995
+      }
+    },
+    "symmetry": {
+      "actual_label_comparison_molecules": 258,
+      "actual_label_match_rate": 1.0,
+      "actual_max_atom_error_angstrom": {
+        "count": 258,
+        "max": 0.4465865970875249,
+        "mean": 0.033879723304415146,
+        "median": 0.00015695098319857436,
+        "min": 2.0594916249306093e-06,
+        "p95": 0.20219680357778613
+      },
+      "actual_max_operation_rms_angstrom": {
+        "count": 258,
+        "max": 0.17049003222462075,
+        "mean": 0.016412966183698707,
+        "median": 7.267080532262444e-05,
+        "min": 1.0013957001178351e-06,
+        "p95": 0.10525025561959504
+      },
+      "actual_mean_operation_rms_angstrom": {
+        "count": 258,
+        "max": 0.09577207297112034,
+        "mean": 0.008806369971749859,
+        "median": 3.796269028973638e-05,
+        "min": 5.721099173805631e-07,
+        "p95": 0.053020571056524614
+      },
+      "actual_pg_counts": {
+        "C2": 148,
+        "C2h": 13,
+        "C2v": 33,
+        "C3": 9,
+        "C3h": 23,
+        "C3v": 3,
+        "D2": 8,
+        "D3": 1,
+        "D3h": 10,
+        "D6h": 6,
+        "S4": 4
+      },
+      "analyzed_molecules": 258,
+      "analyzed_rate": 1.0,
+      "analyzer_pg_counts": {
+        "C2": 121,
+        "C2h": 12,
+        "C2v": 33,
+        "C3": 9,
+        "C3h": 23,
+        "C3v": 3,
+        "D2": 35,
+        "D2h": 1,
+        "D3": 1,
+        "D3h": 10,
+        "D6h": 6,
+        "S4": 4
+      },
+      "by_target_pg": {
+        "C2": {
+          "actual_max_operation_rms_angstrom": {
+            "count": 202,
+            "max": 0.17049003222462075,
+            "mean": 0.014207999056947937,
+            "median": 6.401506412780679e-05,
+            "min": 1.0013957001178351e-06,
+            "p95": 0.0883178662240137
+          },
+          "actual_mean_operation_rms_angstrom": {
+            "count": 202,
+            "max": 0.08708017108759644,
+            "mean": 0.007189509811604683,
+            "median": 3.262197340022735e-05,
+            "min": 5.721099173805631e-07,
+            "p95": 0.04415893311200685
+          },
+          "analyzed_molecules": 202,
+          "orbit_size": {
+            "count": 3577,
+            "max": 4.0,
+            "mean": 1.954151523623148,
+            "median": 2.0,
+            "min": 1.0,
+            "p95": 2.0
+          },
+          "target_compatible_rate": 1.0,
+          "target_exact_rate": 0.7326732673267327
+        },
+        "C3": {
+          "actual_max_operation_rms_angstrom": {
+            "count": 46,
+            "max": 0.11962289398968459,
+            "mean": 0.006006398306099919,
+            "median": 7.186429620300523e-05,
+            "min": 2.228593170923066e-06,
+            "p95": 0.028317604684229107
+          },
+          "actual_mean_operation_rms_angstrom": {
+            "count": 46,
+            "max": 0.07974859599312305,
+            "mean": 0.003916570329986977,
+            "median": 4.830635440036147e-05,
+            "min": 1.5688839327887697e-06,
+            "p95": 0.0188784031228194
+          },
+          "analyzed_molecules": 46,
+          "orbit_size": {
+            "count": 515,
+            "max": 6.0,
+            "mean": 3.0757281553398057,
+            "median": 3.0,
+            "min": 3.0,
+            "p95": 3.0
+          },
+          "target_compatible_rate": 1.0,
+          "target_exact_rate": 0.1956521739130435
+        },
+        "D6h": {
+          "actual_max_operation_rms_angstrom": {
+            "count": 6,
+            "max": 0.16297749973242454,
+            "mean": 0.10257005019817746,
+            "median": 0.09163002252801128,
+            "min": 0.06166710346679671,
+            "p95": 0.157434445140677
+          },
+          "actual_mean_operation_rms_angstrom": {
+            "count": 6,
+            "max": 0.08792007929234176,
+            "mean": 0.05666795856585787,
+            "median": 0.05021849395144744,
+            "min": 0.03429200411068698,
+            "p95": 0.08646792351316196
+          },
+          "analyzed_molecules": 6,
+          "orbit_size": {
+            "count": 53,
+            "max": 12.0,
+            "mean": 8.830188679245284,
+            "median": 6.0,
+            "min": 6.0,
+            "p95": 12.0
+          },
+          "target_compatible_rate": 1.0,
+          "target_exact_rate": 1.0
+        },
+        "S4": {
+          "actual_max_operation_rms_angstrom": {
+            "count": 4,
+            "max": 0.14922536267295486,
+            "mean": 0.11820371065528051,
+            "median": 0.12194373926188004,
+            "min": 0.0797020014244071,
+            "p95": 0.1473353816303252
+          },
+          "actual_mean_operation_rms_angstrom": {
+            "count": 4,
+            "max": 0.09577207297112034,
+            "mean": 0.0748981210481923,
+            "median": 0.07588349075971229,
+            "min": 0.052053429702224256,
+            "p95": 0.09400558041607313
+          },
+          "analyzed_molecules": 4,
+          "orbit_size": {
+            "count": 94,
+            "max": 4.0,
+            "mean": 3.872340425531915,
+            "median": 4.0,
+            "min": 1.0,
+            "p95": 4.0
+          },
+          "target_compatible_rate": 1.0,
+          "target_exact_rate": 1.0
+        }
+      },
+      "conditioned_molecules": 258,
+      "failure_counts": {},
+      "orbit_size": {
+        "count": 4239,
+        "max": 12.0,
+        "mean": 2.2189195564991744,
+        "median": 2.0,
+        "min": 1.0,
+        "p95": 4.0
+      },
+      "target_compatible_rate": 1.0,
+      "target_exact_rate": 0.6472868217054264
+    },
+    "three_dimensional": {
+      "bond_angle_degrees": {
+        "count": 15392,
+        "max": 179.99999564659151,
+        "mean": 121.07311813270475,
+        "median": 120.0522697689861,
+        "min": 92.2535590686886,
+        "p95": 129.2697349718045
+      },
+      "bond_length_angstrom": {
+        "count": 9916,
+        "max": 2.0798857343991064,
+        "mean": 1.3037891236954289,
+        "median": 1.39443231901196,
+        "min": 0.9710558250260438,
+        "p95": 1.4823757614855948
+      },
+      "bond_length_by_type_angstrom": {
+        "aromatic": {
+          "count": 4290,
+          "max": 1.7245135670851248,
+          "mean": 1.3993000333752719,
+          "median": 1.3991143947804585,
+          "min": 1.3244901356983179,
+          "p95": 1.4149848533906877
+        },
+        "double": {
+          "count": 405,
+          "max": 1.803590511180125,
+          "mean": 1.2788240852575548,
+          "median": 1.2350205773633474,
+          "min": 1.14070563591741,
+          "p95": 1.4968185509875471
+        },
+        "single": {
+          "count": 4919,
+          "max": 2.0798857343991064,
+          "mean": 1.2295172898740427,
+          "median": 1.088905365091588,
+          "min": 0.9710558250260438,
+          "p95": 1.5411275170340493
+        },
+        "triple": {
+          "count": 302,
+          "max": 1.2059051264565173,
+          "mean": 1.1902533243848707,
+          "median": 1.201022597470056,
+          "min": 1.1571183686926683,
+          "p95": 1.2017908160996946
+        }
+      },
+      "degenerate_angle_count": 0,
+      "min_nonbonded_distance_angstrom": {
+        "count": 258,
+        "max": 2.3525340182116214,
+        "mean": 2.005854768383933,
+        "median": 2.0647653691864543,
+        "min": 1.6443372636072888,
+        "p95": 2.1950274973100057
+      },
+      "mmff": {
+        "centered_rms_displacement_angstrom": {
+          "count": 250,
+          "max": 0.8205348102724327,
+          "mean": 0.04939292714006319,
+          "median": 7.498370050199282e-07,
+          "min": 0.0,
+          "p95": 0.26290175634536544
+        },
+        "converged_rate_among_parameterized": 0.924,
+        "energy_change_kcal_mol": {
+          "count": 250,
+          "max": 0.0,
+          "mean": -0.2760890098685715,
+          "median": -5.823045157171691e-09,
+          "min": -8.755888252102565,
+          "p95": 0.0
+        },
+        "final_energy_kcal_mol": {
+          "count": 250,
+          "max": 381.48894569859385,
+          "mean": 53.4905687027757,
+          "median": 45.52610410157865,
+          "min": -197.07250726961303,
+          "p95": 172.8745682041841
+        },
+        "initial_energy_kcal_mol": {
+          "count": 250,
+          "max": 381.4964215325274,
+          "mean": 53.766657712644275,
+          "median": 45.530672434504424,
+          "min": -197.0321180956338,
+          "p95": 172.87543578858825
+        },
+        "parameterized_molecules": 250,
+        "requested_molecules": 258,
+        "status_counts": {
+          "converged": 231,
+          "not_converged": 19,
+          "unsupported_parameters": 8
+        }
+      },
+      "nonbonded_collision_molecules": 0,
+      "nonbonded_collision_rate": 0.0
+    },
+    "two_dimensional": {
+      "bond_type_counts": {
+        "aromatic": 4290,
+        "double": 405,
+        "single": 4919,
+        "triple": 302
+      },
+      "element_counts": {
+        "B": 23,
+        "Br": 20,
+        "C": 4949,
+        "Cl": 72,
+        "F": 106,
+        "H": 3099,
+        "I": 25,
+        "N": 420,
+        "O": 603,
+        "P": 13,
+        "S": 70,
+        "Si": 6
+      },
+      "nearest_train_tanimoto": {
+        "count": 258,
+        "max": 1.0,
+        "mean": 0.6760237230944277,
+        "median": 0.6530100334448161,
+        "min": 0.12121212121212122,
+        "p95": 1.0
+      },
+      "novel_molecules": 258,
+      "novelty_rate": 1.0,
+      "ring_count": {
+        "count": 258,
+        "max": 8.0,
+        "mean": 2.9767441860465116,
+        "median": 2.0,
+        "min": 1.0,
+        "p95": 7.0
+      },
+      "unique_canonical_smiles": 258,
+      "uniqueness_rate": 1.0
+    }
+  },
+  "provenance": {
+    "coordinate_unit": "angstrom",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "package_path": "generative_model/data/processed/v2",
+    "package_schema_version": "2.0",
+    "source_fingerprint": "eb82702c39eba7dd84766bca5df0cd5b96b94e1326818d2d82511cc932c7e585",
+    "source_type": "canonical_dataset",
+    "split": "test",
+    "split_file_sha256": "3592b4f638b421780a954586a72a34a84c0c5e059fac0d7a596d246a6d656425",
+    "split_scheme": "core_ood"
+  },
+  "reference": {
+    "fingerprint": {
+      "bits": 2048,
+      "explicit_h": false,
+      "include_chirality": false,
+      "radius": 2,
+      "type": "Morgan"
+    },
+    "molecule_count": 2024,
+    "source_fingerprint": "1b67084a65892a128e190ccf874db8619270e3b467c15c6b762fb5a488041434",
+    "unique_canonical_smiles": 2024
+  },
+  "report_fingerprint": "57e1c1b72f3890f6609a2ad8d6a60ca449cbe3ac8c0dd5639ec51bbd7de587dc",
+  "report_type": "reference_dataset",
+  "schema_version": "1.1",
+  "summary": {
+    "evaluated_molecules": 258,
+    "failed_molecules": 0,
+    "input_molecules": 258,
+    "status": "PASS"
+  }
+}

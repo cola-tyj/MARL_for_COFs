@@ -1,0 +1,113 @@
+{
+  "artifacts": {
+    "checkpoint_bytes_expected_identical": false,
+    "checkpoint_equivalence_basis": "head/optimizer/RNG/history exact equality; torch.save container bytes are not used as the determinism criterion",
+    "direct_checkpoint": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_explicit_engineering/direct_0002/last.pt",
+      "sha256": "9389a0cd5d4de3ce35fb49a5f2aabf7bb84360fd306ec34a7e4e9f619880aad4"
+    },
+    "direct_report": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_explicit_engineering/direct_0002/report.json",
+      "sha256": "de1f3c12a2306d5997773358b473732d007174d4b9142e9d20c110f80d507a57"
+    },
+    "resumed_checkpoint": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_explicit_engineering/resume_0002/last.pt",
+      "sha256": "36c63d9e5be4d6553afc52a7c84cc4f1da13d9ca9ef11e7b6b9f525e921b0a8c"
+    },
+    "resumed_report": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_explicit_engineering/resume_0002/report.json",
+      "sha256": "b40e4d75d5e97c9a47e40cb9a90f61b1ca3c64ef0d87b3507bdae8a7fb322f8a"
+    }
+  },
+  "checks": {
+    "all_losses_and_gradients_finite": true,
+    "both_finished_step_two": true,
+    "direct_started_at_zero": true,
+    "engineering_not_mislabeled_as_quality_pass": true,
+    "evaluation_history_identical": true,
+    "final_evaluation_identical": true,
+    "head_state_identical": true,
+    "identity_identical": true,
+    "loss_history_identical": true,
+    "new_checkpoint_schema_isolated": true,
+    "optimizer_state_identical": true,
+    "resumed_started_at_one": true,
+    "rng_states_identical": true,
+    "source_model_frozen_direct": true,
+    "source_model_frozen_resumed": true
+  },
+  "identity": {
+    "cublas_workspace_config": ":4096:8",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "deterministic": true,
+    "existence_threshold": 0.0,
+    "gradient_clip": 1.0,
+    "initialization": {
+      "conditional_type_initialization": "exact copy of legacy rows 1:5",
+      "existence_initialization": "zeros; no exact linear mapping from max(type)-none",
+      "legacy_none_row_copied": false,
+      "legacy_self_row_copied": false,
+      "schema_version": "uae3d-explicit-bond-head-v1",
+      "silent_fallback": false
+    },
+    "learning_rate": 0.0001,
+    "objective": "molecule-balanced unique-pair existence BCE + conditional type CE",
+    "official_source_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+    "package_indices": [
+      864,
+      1135,
+      1114,
+      862
+    ],
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "position_std": 2.3859,
+    "profile": "official",
+    "schema_version": "uae3d-explicit-bond-head-v1",
+    "seed": 20260820,
+    "source_checkpoint_path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "source_checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "source_checkpoint_step": 3008,
+    "source_model_state_fingerprint": "025c91c2164f2e611700dec4adba2828affc76c7684ff8a8230bce37aa299b8c",
+    "split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+    "split_sha256": "59abc7d59b5f6f1f2ff07ef907ff6191458ca9f4c4ec4411f80ba78ef6c49c8d",
+    "tier": 4,
+    "trainable_parameter_names": [
+      "explicit_bond_head.existence_head.weight",
+      "explicit_bond_head.existence_head.bias",
+      "explicit_bond_head.conditional_type_head.weight",
+      "explicit_bond_head.conditional_type_head.bias"
+    ],
+    "weight_decay": 0.0
+  },
+  "protocol": {
+    "core_ood_used": false,
+    "device": "cpu",
+    "direct_schedule": "steps 1,2 in one invocation",
+    "existence_threshold": 0.0,
+    "explicit_head_parameter_count": 325,
+    "resumed_schedule": "step 1, save, reload, step 2",
+    "source_model_trainable": false,
+    "test_used": false
+  },
+  "purpose": "Verify frozen-source training, checkpoint isolation, deterministic continuous-vs-resumed equivalence, and strict evaluation wiring.",
+  "quality_scope": {
+    "engineering_only": true,
+    "enter_tier32": false,
+    "resume_old_hierarchical_branch": false,
+    "tier4_quality_gate_passed": false
+  },
+  "result": {
+    "bond_exact_molecules": 0,
+    "connected_molecules": 0,
+    "explicit_head_state_fingerprint": "aa56cbf4750cc019d4d1ba21aee1a1e42f16d0f03475525ac1cd02ab318f18b0",
+    "interpretation": "Two steps validate execution and exact resume only; 0/4 bond exact does not pass or reject the future bounded tier-4 pilot.",
+    "loss_first": 0.37374213337898254,
+    "loss_last": 0.37182629108428955,
+    "losses_npz_sha256": "93e5a2afcf45c8c6e17275f25b507c06fef193d13df9a39dafefebd52674bd11",
+    "none_bond_accuracy": 0.43983628922237383,
+    "present_bond_accuracy": 0.7905405405405406,
+    "sanitize_valid_molecules": 0
+  },
+  "schema_version": "uae3d-explicit-bond-head-engineering-summary-v1",
+  "status": "PASS_EXPLICIT_BOND_HEAD_ENGINEERING"
+}

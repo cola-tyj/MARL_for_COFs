@@ -1,0 +1,1499 @@
+{
+  "candidates": [
+    {
+      "bond_tail": {
+        "molecule_count": 4,
+        "pair_semantics": "upper_triangle_off_diagonal_plus_diagonal_self",
+        "records": [
+          {
+            "atom_count": 10,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_000864",
+            "molecule_index": 0,
+            "package_index": 864,
+            "strata": {
+              "none": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 36,
+                  "maximum": 0.02934209071099758,
+                  "mean": 0.004518410153081397,
+                  "minimum": -0.0,
+                  "quantiles": {
+                    "q00": 0.0,
+                    "q100": 0.02934209071099758,
+                    "q50": 0.00038812862476333976,
+                    "q90": 0.01381860626861453,
+                    "q95": 0.01577872666530311,
+                    "q99": 0.026556935254484403
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.02934209071099758,
+                    "top_05pct_mean": 0.025363297201693058,
+                    "top_10pct_mean": 0.019623930333182216
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 36,
+                "target_logit_margin": {
+                  "count": 36,
+                  "maximum": 24.06838035583496,
+                  "mean": 9.514804654651218,
+                  "minimum": 3.514069080352783,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 3.514069080352783,
+                    "q01": 3.626181626319885,
+                    "q05": 4.159817337989807,
+                    "q10": 4.289092779159546,
+                    "q100": 24.06838035583496,
+                    "q25": 5.017671227455139,
+                    "q50": 7.861402988433838
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "present": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 9,
+                  "maximum": 0.02293255925178528,
+                  "mean": 0.007212589889402605,
+                  "minimum": 0.0008386432309634984,
+                  "quantiles": {
+                    "q00": 0.0008386432309634984,
+                    "q100": 0.02293255925178528,
+                    "q50": 0.005717352963984013,
+                    "q90": 0.015336354076862338,
+                    "q95": 0.019134456664323802,
+                    "q99": 0.022172938734292984
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.02293255925178528,
+                    "top_05pct_mean": 0.02293255925178528,
+                    "top_10pct_mean": 0.02293255925178528
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 9,
+                "target_logit_margin": {
+                  "count": 9,
+                  "maximum": 7.083820343017578,
+                  "mean": 5.5349875291188555,
+                  "minimum": 3.8671467304229736,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 3.8671467304229736,
+                    "q01": 3.926308126449585,
+                    "q05": 4.16295371055603,
+                    "q10": 4.458760690689087,
+                    "q100": 7.083820343017578,
+                    "q25": 4.6503119468688965,
+                    "q50": 5.249622344970703
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "self": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 10,
+                  "maximum": 0.014752820134162903,
+                  "mean": 0.005629077977937413,
+                  "minimum": 3.433168603805825e-05,
+                  "quantiles": {
+                    "q00": 3.433168603805825e-05,
+                    "q100": 0.014752820134162903,
+                    "q50": 0.0045198420993983746,
+                    "q90": 0.012771615665405987,
+                    "q95": 0.013762217899784443,
+                    "q99": 0.014554699687287212
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.014752820134162903,
+                    "top_05pct_mean": 0.014752820134162903,
+                    "top_10pct_mean": 0.014752820134162903
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 10,
+                "target_logit_margin": {
+                  "count": 10,
+                  "maximum": 10.280654907226562,
+                  "mean": 5.997574090957642,
+                  "minimum": 4.208939075469971,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 4.208939075469971,
+                    "q01": 4.264753956794738,
+                    "q05": 4.488013482093811,
+                    "q10": 4.7670878887176515,
+                    "q100": 10.280654907226562,
+                    "q25": 4.967876315116882,
+                    "q50": 5.397027492523193
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              }
+            },
+            "unique_pair_count": 55,
+            "wrong_unique_pair_count": 0
+          },
+          {
+            "atom_count": 9,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_001135",
+            "molecule_index": 1,
+            "package_index": 1135,
+            "strata": {
+              "none": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 27,
+                  "maximum": 0.09215822070837021,
+                  "mean": 0.020130896374182698,
+                  "minimum": 7.152555099310121e-07,
+                  "quantiles": {
+                    "q00": 7.152555099310121e-07,
+                    "q100": 0.09215822070837021,
+                    "q50": 0.00901296827942133,
+                    "q90": 0.045417483150959025,
+                    "q95": 0.06299976184964179,
+                    "q99": 0.08626712962985035
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.09215822070837021,
+                    "top_05pct_mean": 0.0808291994035244,
+                    "top_10pct_mean": 0.06983017424742381
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 27,
+                "target_logit_margin": {
+                  "count": 27,
+                  "maximum": 14.213643074035645,
+                  "mean": 5.770280802691424,
+                  "minimum": 2.3382997512817383,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 2.3382997512817383,
+                    "q01": 2.4253509140014646,
+                    "q05": 2.7761955738067625,
+                    "q10": 3.070743370056152,
+                    "q100": 14.213643074035645,
+                    "q25": 3.339855670928955,
+                    "q50": 4.704599857330322
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "present": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 9,
+                  "maximum": 0.06004686653614044,
+                  "mean": 0.024163700433240995,
+                  "minimum": 0.007918750867247581,
+                  "quantiles": {
+                    "q00": 0.007918750867247581,
+                    "q100": 0.06004686653614044,
+                    "q50": 0.019686665385961533,
+                    "q90": 0.048301735520362855,
+                    "q95": 0.054174301028251645,
+                    "q99": 0.05887235343456268
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.06004686653614044,
+                    "top_05pct_mean": 0.06004686653614044,
+                    "top_10pct_mean": 0.06004686653614044
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 9,
+                "target_logit_margin": {
+                  "count": 9,
+                  "maximum": 4.853470802307129,
+                  "mean": 4.004676553938124,
+                  "minimum": 2.782611846923828,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 2.782611846923828,
+                    "q01": 2.806742744445801,
+                    "q05": 2.9032663345336913,
+                    "q10": 3.0239208221435545,
+                    "q100": 4.853470802307129,
+                    "q25": 3.538217544555664,
+                    "q50": 4.142974853515625
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "self": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 9,
+                  "maximum": 0.054170574992895126,
+                  "mean": 0.015478995990835957,
+                  "minimum": 0.002362200990319252,
+                  "quantiles": {
+                    "q00": 0.002362200990319252,
+                    "q100": 0.054170574992895126,
+                    "q50": 0.008462167344987392,
+                    "q90": 0.035102910548448565,
+                    "q95": 0.04463674277067184,
+                    "q99": 0.05226380854845047
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.054170574992895126,
+                    "top_05pct_mean": 0.054170574992895126,
+                    "top_10pct_mean": 0.054170574992895126
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 9,
+                "target_logit_margin": {
+                  "count": 9,
+                  "maximum": 6.046985149383545,
+                  "mean": 4.68632443745931,
+                  "minimum": 3.00881290435791,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 3.00881290435791,
+                    "q01": 3.0899846267700197,
+                    "q05": 3.414671516418457,
+                    "q10": 3.820530128479004,
+                    "q100": 6.046985149383545,
+                    "q25": 4.43356466293335,
+                    "q50": 4.77781343460083
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              }
+            },
+            "unique_pair_count": 45,
+            "wrong_unique_pair_count": 0
+          },
+          {
+            "atom_count": 49,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_001114",
+            "molecule_index": 2,
+            "package_index": 1114,
+            "strata": {
+              "none": {
+                "accuracy": 0.9555160142348754,
+                "cross_entropy": {
+                  "count": 1124,
+                  "maximum": 1.8545012474060059,
+                  "mean": 0.10827592633782009,
+                  "minimum": -0.0,
+                  "quantiles": {
+                    "q00": 0.0,
+                    "q100": 1.8545012474060059,
+                    "q50": 0.0013828249066136777,
+                    "q90": 0.36955756545066865,
+                    "q95": 0.7501717686653134,
+                    "q99": 1.3877749943733209
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.5717674096425374,
+                    "top_05pct_mean": 1.1433923171277631,
+                    "top_10pct_mean": 0.8461322765962213
+                  },
+                  "wrong_pair_mean": 1.1785966312885285
+                },
+                "pair_count_unique": 1124,
+                "target_logit_margin": {
+                  "count": 1124,
+                  "maximum": 23.1732234954834,
+                  "mean": 6.937810626212388,
+                  "minimum": -1.5318512916564941,
+                  "nonpositive_count": 50,
+                  "quantiles": {
+                    "q00": -1.5318512916564941,
+                    "q01": -0.8901635271310806,
+                    "q05": 0.20148385763168342,
+                    "q10": 1.0885677337646489,
+                    "q100": 23.1732234954834,
+                    "q25": 3.4437977075576782,
+                    "q50": 6.652542352676392
+                  }
+                },
+                "wrong_pair_count_unique": 50
+              },
+              "present": {
+                "accuracy": 0.9038461538461539,
+                "cross_entropy": {
+                  "count": 52,
+                  "maximum": 1.598111867904663,
+                  "mean": 0.5348987317142578,
+                  "minimum": 0.04349846392869949,
+                  "quantiles": {
+                    "q00": 0.04349846392869949,
+                    "q100": 1.598111867904663,
+                    "q50": 0.56498584151268,
+                    "q90": 0.8968209147453308,
+                    "q95": 0.9735608011484143,
+                    "q99": 1.3060192918777478
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.598111867904663,
+                    "top_05pct_mean": 1.214343547821045,
+                    "top_10pct_mean": 1.0646938780943553
+                  },
+                  "wrong_pair_mean": 1.0904439449310304
+                },
+                "pair_count_unique": 52,
+                "target_logit_margin": {
+                  "count": 52,
+                  "maximum": 3.124669075012207,
+                  "mean": 0.9153005005075381,
+                  "minimum": -0.9215087890625,
+                  "nonpositive_count": 5,
+                  "quantiles": {
+                    "q00": -0.9215087890625,
+                    "q01": -0.6338733434677124,
+                    "q05": -0.10901192426681514,
+                    "q10": 0.08689064681530002,
+                    "q100": 3.124669075012207,
+                    "q25": 0.29978493601083755,
+                    "q50": 0.8142160177230835
+                  }
+                },
+                "wrong_pair_count_unique": 5
+              },
+              "self": {
+                "accuracy": 0.8367346938775511,
+                "cross_entropy": {
+                  "count": 49,
+                  "maximum": 1.4618644714355469,
+                  "mean": 0.49625895925018254,
+                  "minimum": 0.01741827093064785,
+                  "quantiles": {
+                    "q00": 0.01741827093064785,
+                    "q100": 1.4618644714355469,
+                    "q50": 0.565360963344574,
+                    "q90": 0.8731300115585328,
+                    "q95": 0.9189671874046325,
+                    "q99": 1.2962196540832507
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.4618644714355469,
+                    "top_05pct_mean": 1.169573724269867,
+                    "top_10pct_mean": 1.0613155126571656
+                  },
+                  "wrong_pair_mean": 0.9429199695587158
+                },
+                "pair_count_unique": 49,
+                "target_logit_margin": {
+                  "count": 49,
+                  "maximum": 4.080489158630371,
+                  "mean": 1.0539977857652976,
+                  "minimum": -1.0955449342727661,
+                  "nonpositive_count": 8,
+                  "quantiles": {
+                    "q00": -1.0955449342727661,
+                    "q01": -0.6796988534927368,
+                    "q05": -0.18135280609130858,
+                    "q10": -0.08156116008758543,
+                    "q100": 4.080489158630371,
+                    "q25": 0.09124612808227539,
+                    "q50": 0.7755147218704224
+                  }
+                },
+                "wrong_pair_count_unique": 8
+              }
+            },
+            "unique_pair_count": 1225,
+            "wrong_unique_pair_count": 63
+          },
+          {
+            "atom_count": 72,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_000862",
+            "molecule_index": 3,
+            "package_index": 862,
+            "strata": {
+              "none": {
+                "accuracy": 0.9640839386602098,
+                "cross_entropy": {
+                  "count": 2478,
+                  "maximum": 1.9792689085006714,
+                  "mean": 0.08822887557949911,
+                  "minimum": -0.0,
+                  "quantiles": {
+                    "q00": 0.0,
+                    "q100": 1.9792689085006714,
+                    "q50": 0.0009827551548369229,
+                    "q90": 0.22704235911369333,
+                    "q95": 0.6001242250204087,
+                    "q99": 1.3271977734565734
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.5998716068267822,
+                    "top_05pct_mean": 1.0646307963517405,
+                    "top_10pct_mean": 0.7161184523494974
+                  },
+                  "wrong_pair_mean": 1.1984035881717554
+                },
+                "pair_count_unique": 2478,
+                "target_logit_margin": {
+                  "count": 2478,
+                  "maximum": 24.26715850830078,
+                  "mean": 7.50331876039072,
+                  "minimum": -1.8002793788909912,
+                  "nonpositive_count": 89,
+                  "quantiles": {
+                    "q00": -1.8002793788909912,
+                    "q01": -0.8325694513320923,
+                    "q05": 0.5056943655014039,
+                    "q10": 1.5686358213424685,
+                    "q100": 24.26715850830078,
+                    "q25": 3.550806403160095,
+                    "q50": 7.023386478424072
+                  }
+                },
+                "wrong_pair_count_unique": 89
+              },
+              "present": {
+                "accuracy": 0.782051282051282,
+                "cross_entropy": {
+                  "count": 78,
+                  "maximum": 2.290431022644043,
+                  "mean": 0.715693936133996,
+                  "minimum": 0.08855580538511276,
+                  "quantiles": {
+                    "q00": 0.08855580538511276,
+                    "q100": 2.290431022644043,
+                    "q50": 0.6686287522315979,
+                    "q90": 1.3418696761131284,
+                    "q95": 1.7922752082347868,
+                    "q99": 2.1623390388488777
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 2.290431022644043,
+                    "top_05pct_mean": 2.0426910519599915,
+                    "top_10pct_mean": 1.8114615678787231
+                  },
+                  "wrong_pair_mean": 1.3934995532035828
+                },
+                "pair_count_unique": 78,
+                "target_logit_margin": {
+                  "count": 78,
+                  "maximum": 2.8029284477233887,
+                  "mean": 0.5327021481517034,
+                  "minimum": -1.4271148443222046,
+                  "nonpositive_count": 17,
+                  "quantiles": {
+                    "q00": -1.4271148443222046,
+                    "q01": -1.2782260143756867,
+                    "q05": -0.6710298985242844,
+                    "q10": -0.3715642809867859,
+                    "q100": 2.8029284477233887,
+                    "q25": 0.01882745325565338,
+                    "q50": 0.3959169387817383
+                  }
+                },
+                "wrong_pair_count_unique": 17
+              },
+              "self": {
+                "accuracy": 0.8611111111111112,
+                "cross_entropy": {
+                  "count": 72,
+                  "maximum": 1.4393541812896729,
+                  "mean": 0.5181161406863894,
+                  "minimum": 0.03415027633309364,
+                  "quantiles": {
+                    "q00": 0.03415027633309364,
+                    "q100": 1.4393541812896729,
+                    "q50": 0.5995145738124847,
+                    "q90": 0.8909808337688446,
+                    "q95": 1.061153304576874,
+                    "q99": 1.4224768221378328
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.4393541812896729,
+                    "top_05pct_mean": 1.3232284784317017,
+                    "top_10pct_mean": 1.1583430394530296
+                  },
+                  "wrong_pair_mean": 1.0652409374713898
+                },
+                "pair_count_unique": 72,
+                "target_logit_margin": {
+                  "count": 72,
+                  "maximum": 3.3599987030029297,
+                  "mean": 0.9609593546224965,
+                  "minimum": -1.0191295146942139,
+                  "nonpositive_count": 10,
+                  "quantiles": {
+                    "q00": -1.0191295146942139,
+                    "q01": -0.8425932097434997,
+                    "q05": -0.3190793693065643,
+                    "q10": -0.09460163116455077,
+                    "q100": 3.3599987030029297,
+                    "q25": 0.18545540422201157,
+                    "q50": 0.5467132776975632
+                  }
+                },
+                "wrong_pair_count_unique": 10
+              }
+            },
+            "unique_pair_count": 2628,
+            "wrong_unique_pair_count": 116
+          }
+        ],
+        "schema_version": "uae3d-hard-pair-tail-v1",
+        "strata": {
+          "none": {
+            "accuracy": 0.9620736698499318,
+            "molecule_macro_cross_entropy_mean": 0.05528852711114582,
+            "molecule_macro_top_fraction_means": {
+              "top_01pct_mean": 0.8232848319721718,
+              "top_05pct_mean": 0.5785539025211803,
+              "top_10pct_mean": 0.4129262083815812
+            },
+            "pair_count_unique": 3665,
+            "wrong_pair_count_unique": 139
+          },
+          "present": {
+            "accuracy": 0.8513513513513513,
+            "molecule_macro_cross_entropy_mean": 0.3204922395427243,
+            "molecule_macro_top_fraction_means": {
+              "top_01pct_mean": 0.9928805790841579,
+              "top_05pct_mean": 0.8350035063922405,
+              "top_10pct_mean": 0.7397837179402511
+            },
+            "pair_count_unique": 148,
+            "wrong_pair_count_unique": 22
+          },
+          "self": {
+            "accuracy": 0.8714285714285714,
+            "molecule_macro_cross_entropy_mean": 0.25887079347633635,
+            "molecule_macro_top_fraction_means": {
+              "top_01pct_mean": 0.7425355119630694,
+              "top_05pct_mean": 0.6404313994571567,
+              "top_10pct_mean": 0.5721454868093133
+            },
+            "pair_count_unique": 140,
+            "wrong_pair_count_unique": 18
+          }
+        },
+        "symmetry_tolerance": 1e-06,
+        "unique_pair_accuracy": 0.9547179357450037,
+        "unique_pair_count": 3953,
+        "wrong_unique_pair_count": 179
+      },
+      "checkpoint_path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+      "checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+      "checkpoint_step": 3008,
+      "model_state_fingerprint": "025c91c2164f2e611700dec4adba2828affc76c7684ff8a8230bce37aa299b8c",
+      "name": "base_step3008",
+      "reconstruction": {
+        "atom_accuracy": 1.0,
+        "atom_exact_molecules": 4,
+        "bond_exact_molecules": 2,
+        "bond_full_pair_accuracy": 0.9562194179757919,
+        "bond_representation_valid_molecules": 2,
+        "categorical_exact_molecules": 2,
+        "connected_molecules": 2,
+        "coordinate_rmsd_max_angstrom": 0.14410921931266785,
+        "coordinate_rmsd_mean_angstrom": 0.10145324096083641,
+        "decode_mode": "encoder_z_mean_no_sampling",
+        "molecule_count": 4,
+        "none_bond_accuracy": 0.9620736698499318,
+        "off_diagonal_accuracy": 0.957776029373197,
+        "pair_distance_mae_mean_angstrom": 0.07370831444859505,
+        "present_bond_accuracy": 0.8513513513513513,
+        "records": [
+          {
+            "atom_correct": 10,
+            "atom_exact": true,
+            "atoms": 10,
+            "bond_exact": true,
+            "bond_pair_correct": 100,
+            "bond_pair_total": 100,
+            "bond_representation_status": "VALID",
+            "bond_representation_valid": true,
+            "bond_symmetric": true,
+            "categorical_exact": true,
+            "connected": true,
+            "coordinate_rmsd_angstrom": 0.071866974234581,
+            "molecule_id": "cof_000864",
+            "none_bond_correct": 72,
+            "none_bond_total": 72,
+            "off_diagonal_correct": 90,
+            "off_diagonal_no_self_loop": true,
+            "off_diagonal_total": 90,
+            "package_index": 864,
+            "pair_distance_mae_angstrom": 0.06026691943407059,
+            "present_bond_correct": 18,
+            "present_bond_total": 18,
+            "sanitize_valid": true,
+            "self_loop_correct": 10,
+            "self_loop_exact": true,
+            "self_loop_total": 10,
+            "status": "VALID"
+          },
+          {
+            "atom_correct": 9,
+            "atom_exact": true,
+            "atoms": 9,
+            "bond_exact": true,
+            "bond_pair_correct": 81,
+            "bond_pair_total": 81,
+            "bond_representation_status": "VALID",
+            "bond_representation_valid": true,
+            "bond_symmetric": true,
+            "categorical_exact": true,
+            "connected": true,
+            "coordinate_rmsd_angstrom": 0.06285719573497772,
+            "molecule_id": "cof_001135",
+            "none_bond_correct": 54,
+            "none_bond_total": 54,
+            "off_diagonal_correct": 72,
+            "off_diagonal_no_self_loop": true,
+            "off_diagonal_total": 72,
+            "package_index": 1135,
+            "pair_distance_mae_angstrom": 0.044926658272743225,
+            "present_bond_correct": 18,
+            "present_bond_total": 18,
+            "sanitize_valid": true,
+            "self_loop_correct": 9,
+            "self_loop_exact": true,
+            "self_loop_total": 9,
+            "status": "VALID"
+          },
+          {
+            "atom_correct": 49,
+            "atom_exact": true,
+            "atoms": 49,
+            "bond_exact": false,
+            "bond_pair_correct": 2283,
+            "bond_pair_total": 2401,
+            "bond_representation_status": "SELF_LOOP_OFF_DIAGONAL",
+            "bond_representation_valid": false,
+            "bond_symmetric": true,
+            "categorical_exact": false,
+            "connected": false,
+            "coordinate_rmsd_angstrom": 0.14410921931266785,
+            "molecule_id": "cof_001114",
+            "none_bond_correct": 2148,
+            "none_bond_total": 2248,
+            "off_diagonal_correct": 2242,
+            "off_diagonal_no_self_loop": false,
+            "off_diagonal_total": 2352,
+            "package_index": 1114,
+            "pair_distance_mae_angstrom": 0.10475174337625504,
+            "present_bond_correct": 94,
+            "present_bond_total": 104,
+            "sanitize_valid": false,
+            "self_loop_correct": 41,
+            "self_loop_exact": false,
+            "self_loop_total": 49,
+            "status": "SELF_LOOP_OFF_DIAGONAL"
+          },
+          {
+            "atom_correct": 72,
+            "atom_exact": true,
+            "atoms": 72,
+            "bond_exact": false,
+            "bond_pair_correct": 4962,
+            "bond_pair_total": 5184,
+            "bond_representation_status": "SELF_LOOP_OFF_DIAGONAL",
+            "bond_representation_valid": false,
+            "bond_symmetric": true,
+            "categorical_exact": false,
+            "connected": false,
+            "coordinate_rmsd_angstrom": 0.12697957456111908,
+            "molecule_id": "cof_000862",
+            "none_bond_correct": 4778,
+            "none_bond_total": 4956,
+            "off_diagonal_correct": 4900,
+            "off_diagonal_no_self_loop": false,
+            "off_diagonal_total": 5112,
+            "package_index": 862,
+            "pair_distance_mae_angstrom": 0.08488793671131134,
+            "present_bond_correct": 122,
+            "present_bond_total": 156,
+            "sanitize_valid": false,
+            "self_loop_correct": 62,
+            "self_loop_exact": false,
+            "self_loop_total": 72,
+            "status": "SELF_LOOP_OFF_DIAGONAL"
+          }
+        ],
+        "sanitize_valid_molecules": 2,
+        "schema_version": "uae3d-mean-reconstruction-v1.1",
+        "self_loop_accuracy": 0.8714285714285714,
+        "self_loop_exact_molecules": 2
+      }
+    },
+    {
+      "bond_tail": {
+        "molecule_count": 4,
+        "pair_semantics": "upper_triangle_off_diagonal_plus_diagonal_self",
+        "records": [
+          {
+            "atom_count": 10,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_000864",
+            "molecule_index": 0,
+            "package_index": 864,
+            "strata": {
+              "none": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 36,
+                  "maximum": 0.010001190938055515,
+                  "mean": 0.0014843591704407385,
+                  "minimum": -0.0,
+                  "quantiles": {
+                    "q00": 0.0,
+                    "q100": 0.010001190938055515,
+                    "q50": 0.0001344533866358688,
+                    "q90": 0.0055338500533252954,
+                    "q95": 0.0068857487058267,
+                    "q99": 0.0097227465827018
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.010001190938055515,
+                    "top_05pct_mean": 0.009603413287550211,
+                    "top_10pct_mean": 0.007729998207651079
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 36,
+                "target_logit_margin": {
+                  "count": 36,
+                  "maximum": 32.08208084106445,
+                  "mean": 11.803082492616442,
+                  "minimum": 4.600045204162598,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 4.600045204162598,
+                    "q01": 4.629202246665955,
+                    "q05": 4.991628408432007,
+                    "q10": 5.19421648979187,
+                    "q100": 32.08208084106445,
+                    "q25": 6.33603835105896,
+                    "q50": 9.430133819580078
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "present": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 9,
+                  "maximum": 0.004771632142364979,
+                  "mean": 0.001713799687826799,
+                  "minimum": 0.00021646064124070108,
+                  "quantiles": {
+                    "q00": 0.00021646064124070108,
+                    "q100": 0.004771632142364979,
+                    "q50": 0.0010386077919974923,
+                    "q90": 0.0038981413468718532,
+                    "q95": 0.004334886744618415,
+                    "q99": 0.004684283062815666
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.004771632142364979,
+                    "top_05pct_mean": 0.004771632142364979,
+                    "top_10pct_mean": 0.004771632142364979
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 9,
+                "target_logit_margin": {
+                  "count": 9,
+                  "maximum": 8.500840187072754,
+                  "mean": 7.078227308061388,
+                  "minimum": 5.481811046600342,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 5.481811046600342,
+                    "q01": 5.516307964324951,
+                    "q05": 5.654295635223389,
+                    "q10": 5.826780223846436,
+                    "q100": 8.500840187072754,
+                    "q25": 5.93684720993042,
+                    "q50": 7.497376441955566
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "self": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 10,
+                  "maximum": 0.0027032282669097185,
+                  "mean": 0.0012301309002623385,
+                  "minimum": 2.264974000354414e-06,
+                  "quantiles": {
+                    "q00": 2.264974000354414e-06,
+                    "q100": 0.0027032282669097185,
+                    "q50": 0.001069917343556881,
+                    "q90": 0.002490168670192361,
+                    "q95": 0.0025966984685510393,
+                    "q99": 0.0026819223072379827
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.0027032282669097185,
+                    "top_05pct_mean": 0.0027032282669097185,
+                    "top_10pct_mean": 0.0027032282669097185
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 10,
+                "target_logit_margin": {
+                  "count": 10,
+                  "maximum": 13.020147323608398,
+                  "mean": 7.689974021911621,
+                  "minimum": 6.010879993438721,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 6.010879993438721,
+                    "q01": 6.010899004936218,
+                    "q05": 6.010975050926208,
+                    "q10": 6.011070108413696,
+                    "q100": 13.020147323608398,
+                    "q25": 6.311963319778442,
+                    "q50": 6.848010063171387
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              }
+            },
+            "unique_pair_count": 55,
+            "wrong_unique_pair_count": 0
+          },
+          {
+            "atom_count": 9,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_001135",
+            "molecule_index": 1,
+            "package_index": 1135,
+            "strata": {
+              "none": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 27,
+                  "maximum": 0.024124875664711,
+                  "mean": 0.005990580906612835,
+                  "minimum": -0.0,
+                  "quantiles": {
+                    "q00": 0.0,
+                    "q100": 0.024124875664711,
+                    "q50": 0.0033024793956428766,
+                    "q90": 0.017225636169314388,
+                    "q95": 0.01919211149215698,
+                    "q99": 0.022978872656822198
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.024124875664711,
+                    "top_05pct_mean": 0.021921023726463318,
+                    "top_10pct_mean": 0.02060300608476003
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 27,
+                "target_logit_margin": {
+                  "count": 27,
+                  "maximum": 18.728981018066406,
+                  "mean": 7.3619485784459995,
+                  "minimum": 3.736802101135254,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 3.736802101135254,
+                    "q01": 3.7835289096832274,
+                    "q05": 3.945292329788208,
+                    "q10": 4.054237365722656,
+                    "q100": 18.728981018066406,
+                    "q25": 4.64761209487915,
+                    "q50": 5.780989646911621
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "present": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 9,
+                  "maximum": 0.01453795563429594,
+                  "mean": 0.005095328042645835,
+                  "minimum": 0.0008880723617039621,
+                  "quantiles": {
+                    "q00": 0.0008880723617039621,
+                    "q100": 0.01453795563429594,
+                    "q50": 0.004041955806314945,
+                    "q90": 0.010459174774587155,
+                    "q95": 0.012498565204441545,
+                    "q99": 0.014130077548325062
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.01453795563429594,
+                    "top_05pct_mean": 0.01453795563429594,
+                    "top_10pct_mean": 0.01453795563429594
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 9,
+                "target_logit_margin": {
+                  "count": 9,
+                  "maximum": 7.034600257873535,
+                  "mean": 5.636783070034451,
+                  "minimum": 4.223729133605957,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 4.223729133605957,
+                    "q01": 4.259269599914551,
+                    "q05": 4.401431465148926,
+                    "q10": 4.579133796691894,
+                    "q100": 7.034600257873535,
+                    "q25": 5.482184410095215,
+                    "q50": 5.52496337890625
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              },
+              "self": {
+                "accuracy": 1.0,
+                "cross_entropy": {
+                  "count": 9,
+                  "maximum": 0.008528360165655613,
+                  "mean": 0.0026374843695925344,
+                  "minimum": 0.0003216941258870065,
+                  "quantiles": {
+                    "q00": 0.0003216941258870065,
+                    "q100": 0.008528360165655613,
+                    "q50": 0.001278298324905336,
+                    "q90": 0.006443203426897527,
+                    "q95": 0.0074857817962765685,
+                    "q99": 0.008319844491779804
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.008528360165655613,
+                    "top_05pct_mean": 0.008528360165655613,
+                    "top_10pct_mean": 0.008528360165655613
+                  },
+                  "wrong_pair_mean": null
+                },
+                "pair_count_unique": 9,
+                "target_logit_margin": {
+                  "count": 9,
+                  "maximum": 8.04176139831543,
+                  "mean": 6.558872699737549,
+                  "minimum": 5.387678623199463,
+                  "nonpositive_count": 0,
+                  "quantiles": {
+                    "q00": 5.387678623199463,
+                    "q01": 5.389285869598389,
+                    "q05": 5.395714855194091,
+                    "q10": 5.403751087188721,
+                    "q100": 8.04176139831543,
+                    "q25": 5.93263053894043,
+                    "q50": 6.7595534324646
+                  }
+                },
+                "wrong_pair_count_unique": 0
+              }
+            },
+            "unique_pair_count": 45,
+            "wrong_unique_pair_count": 0
+          },
+          {
+            "atom_count": 49,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_001114",
+            "molecule_index": 2,
+            "package_index": 1114,
+            "strata": {
+              "none": {
+                "accuracy": 0.947508896797153,
+                "cross_entropy": {
+                  "count": 1124,
+                  "maximum": 2.5632705688476562,
+                  "mean": 0.1184704717943734,
+                  "minimum": -0.0,
+                  "quantiles": {
+                    "q00": 0.0,
+                    "q100": 2.5632705688476562,
+                    "q50": 0.00017212340026162565,
+                    "q90": 0.33229365348815937,
+                    "q95": 0.8284117817878716,
+                    "q99": 1.850573427677154
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 2.151053031285604,
+                    "top_05pct_mean": 1.488261930775224,
+                    "top_10pct_mean": 1.0288934069397175
+                  },
+                  "wrong_pair_mean": 1.4476415504843503
+                },
+                "pair_count_unique": 1124,
+                "target_logit_margin": {
+                  "count": 1124,
+                  "maximum": 30.326534271240234,
+                  "mean": 9.086571028939982,
+                  "minimum": -2.231072425842285,
+                  "nonpositive_count": 59,
+                  "quantiles": {
+                    "q00": -2.231072425842285,
+                    "q01": -1.5850776600837708,
+                    "q05": -0.09154742956161471,
+                    "q10": 1.1680085420608521,
+                    "q100": 30.326534271240234,
+                    "q25": 4.170308470726013,
+                    "q50": 8.715475082397461
+                  }
+                },
+                "wrong_pair_count_unique": 59
+              },
+              "present": {
+                "accuracy": 0.9230769230769231,
+                "cross_entropy": {
+                  "count": 52,
+                  "maximum": 1.1697075366973877,
+                  "mean": 0.3635178599685717,
+                  "minimum": 0.01307815033942461,
+                  "quantiles": {
+                    "q00": 0.01307815033942461,
+                    "q100": 1.1697075366973877,
+                    "q50": 0.36616796255111694,
+                    "q90": 0.7343910574913024,
+                    "q95": 0.872200784087181,
+                    "q99": 1.0881076753139498
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.1697075366973877,
+                    "top_05pct_mean": 1.02128932873408,
+                    "top_10pct_mean": 0.9076783160368601
+                  },
+                  "wrong_pair_mean": 0.9815111309289932
+                },
+                "pair_count_unique": 52,
+                "target_logit_margin": {
+                  "count": 52,
+                  "maximum": 4.333693504333496,
+                  "mean": 1.5318236167614276,
+                  "minimum": -0.5569820404052734,
+                  "nonpositive_count": 4,
+                  "quantiles": {
+                    "q00": -0.5569820404052734,
+                    "q01": -0.5319830298423767,
+                    "q05": -0.1958643317222595,
+                    "q10": 0.09286515712738046,
+                    "q100": 4.333693504333496,
+                    "q25": 0.585029125213623,
+                    "q50": 1.3154062032699585
+                  }
+                },
+                "wrong_pair_count_unique": 4
+              },
+              "self": {
+                "accuracy": 0.9795918367346939,
+                "cross_entropy": {
+                  "count": 49,
+                  "maximum": 0.9876965284347534,
+                  "mean": 0.31186447804793715,
+                  "minimum": 0.007459169719368219,
+                  "quantiles": {
+                    "q00": 0.007459169719368219,
+                    "q100": 0.9876965284347534,
+                    "q50": 0.32467448711395264,
+                    "q90": 0.6205164551734925,
+                    "q95": 0.6483375310897825,
+                    "q99": 0.8596249532699575
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 0.9876965284347534,
+                    "top_05pct_mean": 0.7892655928929647,
+                    "top_10pct_mean": 0.7259719371795654
+                  },
+                  "wrong_pair_mean": 0.9876965284347534
+                },
+                "pair_count_unique": 49,
+                "target_logit_margin": {
+                  "count": 49,
+                  "maximum": 5.437315940856934,
+                  "mean": 1.7806703320571355,
+                  "minimum": -0.4924449920654297,
+                  "nonpositive_count": 1,
+                  "quantiles": {
+                    "q00": -0.4924449920654297,
+                    "q01": -0.1833640480041504,
+                    "q05": 0.17847389578819275,
+                    "q10": 0.28425321578979496,
+                    "q100": 5.437315940856934,
+                    "q25": 0.514045238494873,
+                    "q50": 1.237792730331421
+                  }
+                },
+                "wrong_pair_count_unique": 1
+              }
+            },
+            "unique_pair_count": 1225,
+            "wrong_unique_pair_count": 64
+          },
+          {
+            "atom_count": 72,
+            "bond_logit_symmetry_max_abs": 0.0,
+            "molecule_id": "cof_000862",
+            "molecule_index": 3,
+            "package_index": 862,
+            "strata": {
+              "none": {
+                "accuracy": 0.9422921711057304,
+                "cross_entropy": {
+                  "count": 2478,
+                  "maximum": 3.098705291748047,
+                  "mean": 0.12519339863331141,
+                  "minimum": -0.0,
+                  "quantiles": {
+                    "q00": 0.0,
+                    "q100": 3.098705291748047,
+                    "q50": 0.00016497205069754273,
+                    "q90": 0.266622564196587,
+                    "q95": 0.889782574772836,
+                    "q99": 2.0682137560844422
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 2.574528007507324,
+                    "top_05pct_mean": 1.6708423879838759,
+                    "top_10pct_mean": 1.099674966907309
+                  },
+                  "wrong_pair_mean": 1.5523056225343184
+                },
+                "pair_count_unique": 2478,
+                "target_logit_margin": {
+                  "count": 2478,
+                  "maximum": 32.06602478027344,
+                  "mean": 9.337218064186407,
+                  "minimum": -2.8769121170043945,
+                  "nonpositive_count": 143,
+                  "quantiles": {
+                    "q00": -2.8769121170043945,
+                    "q01": -1.745560450553894,
+                    "q05": -0.21083080619573585,
+                    "q10": 1.278880023956299,
+                    "q100": 32.06602478027344,
+                    "q25": 3.9598530530929565,
+                    "q50": 8.759208679199219
+                  }
+                },
+                "wrong_pair_count_unique": 143
+              },
+              "present": {
+                "accuracy": 0.8589743589743589,
+                "cross_entropy": {
+                  "count": 78,
+                  "maximum": 1.8861591815948486,
+                  "mean": 0.4854353490548256,
+                  "minimum": 0.02539108693599701,
+                  "quantiles": {
+                    "q00": 0.02539108693599701,
+                    "q100": 1.8861591815948486,
+                    "q50": 0.45413219928741455,
+                    "q90": 0.9828648626804352,
+                    "q95": 1.3987689733505249,
+                    "q99": 1.6164216995239271
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.8861591815948486,
+                    "top_05pct_mean": 1.5763687491416931,
+                    "top_10pct_mean": 1.3821550011634827
+                  },
+                  "wrong_pair_mean": 1.2295564358884639
+                },
+                "pair_count_unique": 78,
+                "target_logit_margin": {
+                  "count": 78,
+                  "maximum": 4.060701370239258,
+                  "mean": 1.2460816838802435,
+                  "minimum": -1.3186163902282715,
+                  "nonpositive_count": 11,
+                  "quantiles": {
+                    "q00": -1.3186163902282715,
+                    "q01": -0.8771013116836548,
+                    "q05": -0.39093016386032103,
+                    "q10": -0.08651577234268187,
+                    "q100": 4.060701370239258,
+                    "q25": 0.25005435943603516,
+                    "q50": 0.7634784281253815
+                  }
+                },
+                "wrong_pair_count_unique": 11
+              },
+              "self": {
+                "accuracy": 0.9583333333333334,
+                "cross_entropy": {
+                  "count": 72,
+                  "maximum": 1.058298110961914,
+                  "mean": 0.3412689866640398,
+                  "minimum": 0.007352436427026987,
+                  "quantiles": {
+                    "q00": 0.007352436427026987,
+                    "q100": 1.058298110961914,
+                    "q50": 0.4067133814096451,
+                    "q90": 0.6870367050170898,
+                    "q95": 0.7933156579732895,
+                    "q99": 1.0246394574642184
+                  },
+                  "top_fraction_means": {
+                    "top_01pct_mean": 1.058298110961914,
+                    "top_05pct_mean": 0.9327308684587479,
+                    "top_10pct_mean": 0.8250064551830292
+                  },
+                  "wrong_pair_mean": 0.8987743854522705
+                },
+                "pair_count_unique": 72,
+                "target_logit_margin": {
+                  "count": 72,
+                  "maximum": 4.909050464630127,
+                  "mean": 1.7238063679801092,
+                  "minimum": -0.5996663570404053,
+                  "nonpositive_count": 3,
+                  "quantiles": {
+                    "q00": -0.5996663570404053,
+                    "q01": -0.28855857849121097,
+                    "q05": 0.07483427822589876,
+                    "q10": 0.20790015757083902,
+                    "q100": 4.909050464630127,
+                    "q25": 0.46220462769269943,
+                    "q50": 0.8330931663513184
+                  }
+                },
+                "wrong_pair_count_unique": 3
+              }
+            },
+            "unique_pair_count": 2628,
+            "wrong_unique_pair_count": 157
+          }
+        ],
+        "schema_version": "uae3d-hard-pair-tail-v1",
+        "strata": {
+          "none": {
+            "accuracy": 0.9448840381991814,
+            "molecule_macro_cross_entropy_mean": 0.0627847026261846,
+            "molecule_macro_top_fraction_means": {
+              "top_01pct_mean": 1.1899267763489236,
+              "top_05pct_mean": 0.7976571889432784,
+              "top_10pct_mean": 0.5392253445348594
+            },
+            "pair_count_unique": 3665,
+            "wrong_pair_count_unique": 202
+          },
+          "present": {
+            "accuracy": 0.8986486486486487,
+            "molecule_macro_cross_entropy_mean": 0.2139405841884675,
+            "molecule_macro_top_fraction_means": {
+              "top_01pct_mean": 0.7687940765172243,
+              "top_05pct_mean": 0.6542419164131086,
+              "top_10pct_mean": 0.5772857262442509
+            },
+            "pair_count_unique": 148,
+            "wrong_pair_count_unique": 15
+          },
+          "self": {
+            "accuracy": 0.9714285714285714,
+            "molecule_macro_cross_entropy_mean": 0.16425026999545794,
+            "molecule_macro_top_fraction_means": {
+              "top_01pct_mean": 0.5143065569573082,
+              "top_05pct_mean": 0.4333070124460695,
+              "top_10pct_mean": 0.39055249519879
+            },
+            "pair_count_unique": 140,
+            "wrong_pair_count_unique": 4
+          }
+        },
+        "symmetry_tolerance": 1e-06,
+        "unique_pair_accuracy": 0.9440930938527701,
+        "unique_pair_count": 3953,
+        "wrong_unique_pair_count": 221
+      },
+      "checkpoint_path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/bond_refine_w10_coord10_lr1em5_0256/last.pt",
+      "checkpoint_sha256": "342cd2c3b8967b9f673f7cabd8721b9f8d4ec0ece72e542febf1c539f83928f8",
+      "checkpoint_step": 512,
+      "model_state_fingerprint": "72926ae5524eb068c15001a323e84da1a74746239beb9ab38eea36849b66b4fd",
+      "name": "bond_refine_step512",
+      "reconstruction": {
+        "atom_accuracy": 1.0,
+        "atom_exact_molecules": 4,
+        "bond_exact_molecules": 2,
+        "bond_full_pair_accuracy": 0.9436003090394025,
+        "bond_representation_valid_molecules": 2,
+        "categorical_exact_molecules": 2,
+        "connected_molecules": 2,
+        "coordinate_rmsd_max_angstrom": 0.20442040264606476,
+        "coordinate_rmsd_mean_angstrom": 0.11860098782926798,
+        "decode_mode": "encoder_z_mean_no_sampling",
+        "molecule_count": 4,
+        "none_bond_accuracy": 0.9448840381991814,
+        "off_diagonal_accuracy": 0.943089430894309,
+        "pair_distance_mae_mean_angstrom": 0.08098546415567398,
+        "present_bond_accuracy": 0.8986486486486487,
+        "records": [
+          {
+            "atom_correct": 10,
+            "atom_exact": true,
+            "atoms": 10,
+            "bond_exact": true,
+            "bond_pair_correct": 100,
+            "bond_pair_total": 100,
+            "bond_representation_status": "VALID",
+            "bond_representation_valid": true,
+            "bond_symmetric": true,
+            "categorical_exact": true,
+            "connected": true,
+            "coordinate_rmsd_angstrom": 0.05400986596941948,
+            "molecule_id": "cof_000864",
+            "none_bond_correct": 72,
+            "none_bond_total": 72,
+            "off_diagonal_correct": 90,
+            "off_diagonal_no_self_loop": true,
+            "off_diagonal_total": 90,
+            "package_index": 864,
+            "pair_distance_mae_angstrom": 0.03989645466208458,
+            "present_bond_correct": 18,
+            "present_bond_total": 18,
+            "sanitize_valid": true,
+            "self_loop_correct": 10,
+            "self_loop_exact": true,
+            "self_loop_total": 10,
+            "status": "VALID"
+          },
+          {
+            "atom_correct": 9,
+            "atom_exact": true,
+            "atoms": 9,
+            "bond_exact": true,
+            "bond_pair_correct": 81,
+            "bond_pair_total": 81,
+            "bond_representation_status": "VALID",
+            "bond_representation_valid": true,
+            "bond_symmetric": true,
+            "categorical_exact": true,
+            "connected": true,
+            "coordinate_rmsd_angstrom": 0.062037087976932526,
+            "molecule_id": "cof_001135",
+            "none_bond_correct": 54,
+            "none_bond_total": 54,
+            "off_diagonal_correct": 72,
+            "off_diagonal_no_self_loop": true,
+            "off_diagonal_total": 72,
+            "package_index": 1135,
+            "pair_distance_mae_angstrom": 0.043015871196985245,
+            "present_bond_correct": 18,
+            "present_bond_total": 18,
+            "sanitize_valid": true,
+            "self_loop_correct": 9,
+            "self_loop_exact": true,
+            "self_loop_total": 9,
+            "status": "VALID"
+          },
+          {
+            "atom_correct": 49,
+            "atom_exact": true,
+            "atoms": 49,
+            "bond_exact": false,
+            "bond_pair_correct": 2274,
+            "bond_pair_total": 2401,
+            "bond_representation_status": "SELF_LOOP_OFF_DIAGONAL",
+            "bond_representation_valid": false,
+            "bond_symmetric": true,
+            "categorical_exact": false,
+            "connected": false,
+            "coordinate_rmsd_angstrom": 0.20442040264606476,
+            "molecule_id": "cof_001114",
+            "none_bond_correct": 2130,
+            "none_bond_total": 2248,
+            "off_diagonal_correct": 2226,
+            "off_diagonal_no_self_loop": false,
+            "off_diagonal_total": 2352,
+            "package_index": 1114,
+            "pair_distance_mae_angstrom": 0.13843536376953125,
+            "present_bond_correct": 96,
+            "present_bond_total": 104,
+            "sanitize_valid": false,
+            "self_loop_correct": 48,
+            "self_loop_exact": false,
+            "self_loop_total": 49,
+            "status": "SELF_LOOP_OFF_DIAGONAL"
+          },
+          {
+            "atom_correct": 72,
+            "atom_exact": true,
+            "atoms": 72,
+            "bond_exact": false,
+            "bond_pair_correct": 4873,
+            "bond_pair_total": 5184,
+            "bond_representation_status": "SELF_LOOP_OFF_DIAGONAL",
+            "bond_representation_valid": false,
+            "bond_symmetric": true,
+            "categorical_exact": false,
+            "connected": false,
+            "coordinate_rmsd_angstrom": 0.15393659472465515,
+            "molecule_id": "cof_000862",
+            "none_bond_correct": 4670,
+            "none_bond_total": 4956,
+            "off_diagonal_correct": 4804,
+            "off_diagonal_no_self_loop": false,
+            "off_diagonal_total": 5112,
+            "package_index": 862,
+            "pair_distance_mae_angstrom": 0.10259416699409485,
+            "present_bond_correct": 134,
+            "present_bond_total": 156,
+            "sanitize_valid": false,
+            "self_loop_correct": 69,
+            "self_loop_exact": false,
+            "self_loop_total": 72,
+            "status": "SELF_LOOP_OFF_DIAGONAL"
+          }
+        ],
+        "sanitize_valid_molecules": 2,
+        "schema_version": "uae3d-mean-reconstruction-v1.1",
+        "self_loop_accuracy": 0.9714285714285714,
+        "self_loop_exact_molecules": 2
+      }
+    }
+  ],
+  "environment": {
+    "device": "cpu",
+    "numpy": "1.26.2",
+    "python": "3.11.15",
+    "rdkit": "2024.03.5",
+    "torch": "2.5.0+cu121",
+    "torch_geometric": "2.6.1"
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "official_source_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+    "package_indices": [
+      864,
+      1135,
+      1114,
+      862
+    ],
+    "package_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "position_std": 2.3859,
+    "profile": "official",
+    "split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+    "split_sha256": "59abc7d59b5f6f1f2ff07ef907ff6191458ca9f4c4ec4411f80ba78ef6c49c8d",
+    "symmetry_tolerance": 1e-06,
+    "tier": 4
+  },
+  "purpose": "Select a frozen initialization before hard-pair/top-k training.",
+  "recommended_initialization": {
+    "checkpoint_path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "name": "base_step3008",
+    "reason": "Fewest wrong unique bond pairs; coordinate RMSD is the secondary criterion."
+  },
+  "schema_version": "uae3d-hard-pair-checkpoint-audit-v1",
+  "selection_rule": [
+    "minimum_wrong_unique_pair_count",
+    "minimum_coordinate_rmsd_max_angstrom",
+    "candidate_name_lexicographic_tiebreak"
+  ],
+  "status": "PASS_AUDIT"
+}

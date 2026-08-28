@@ -1,0 +1,37 @@
+{
+  "environment": {
+    "cuda_visible_devices": "4",
+    "device": "cuda:0",
+    "gpu": "NVIDIA RTX A6000",
+    "python": "3.11.15",
+    "torch": "2.5.0+cu121"
+  },
+  "gate_conclusion": "PASS_U2_ENGINEERING_READY_FOR_TIER1_CALIBRATION",
+  "model_state_fingerprint": "752ddca7fc3d1469c085bf12f8413ee8cd50c73b5bf9ee50ab72054f5d9ecd02",
+  "resume_audit": {
+    "loss_history_exact_match": true,
+    "model_state_exact_match": true,
+    "note": "torch checkpoint container hashes may differ; sorted tensor name/dtype/shape/bytes fingerprints are identical",
+    "resume_route": "step 1 checkpoint -> step 2",
+    "uninterrupted_route": "step 1 -> step 2"
+  },
+  "schema_version": "1.0",
+  "status": "PASS",
+  "tier": 1,
+  "training": {
+    "augmentation": "off",
+    "batch_size": 1,
+    "final_atom_accuracy": 0.2,
+    "final_bond_full_pair_accuracy": 0.72,
+    "final_coordinate_rmsd_max_angstrom": 2.2722976207733154,
+    "final_loss": 6.533658504486084,
+    "first_loss": 6.334892272949219,
+    "learning_rate": 0.0001,
+    "max_steps": 2,
+    "profile": "official",
+    "seed": 20260815,
+    "weight_decay": 0.00001
+  },
+  "interpretation": "This is an engineering forward/backward/checkpoint/resume smoke only. Two steps are not a molecular reconstruction result and the U2 quality gate remains pending.",
+  "upstream_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09"
+}

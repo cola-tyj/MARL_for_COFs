@@ -1,0 +1,102 @@
+{
+  "candidate_selection": "minimum final UFF+repulsion objective among strict geometry-passing candidates, then candidate id; reference-free",
+  "etflow": {
+    "candidate_count": 4,
+    "model_name": "drugs-o3",
+    "n_timesteps": 50,
+    "role": "learned initial-conformer prior only",
+    "sampler_type": "ODE",
+    "target_pg_conditioned_inside_backbone": false
+  },
+  "gate_thresholds": {
+    "acceptable_gradient_norm_max": 1.0,
+    "maximum_operation_error_angstrom": 1e-05,
+    "minimum_pair_distance_angstrom": 0.6
+  },
+  "identity": {
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "source_sha256": {
+      "generative_model/conformer/etflow_bridge.py": "085a0e6c47b6a80bdc0482817d84ebb3fd8c218940e1f61ae204f798af70f662",
+      "generative_model/conformer/etflow_ef1_projection.py": "a80dfe1ec17469f802c29384b8e991bd3cff7ad1ab4c2fb45611af24f052421c",
+      "generative_model/inference/audit_etflow_e3f02_point_group.py": "02af21f6703b9bef901be545a9ffc7c93005fb187411f1f5c920da41f17eccbb",
+      "generative_model/inference/build_etflow_e3f02_protocol_v2.py": "8a620a6b2da3dfdfca131a6cfc7e166023fdf4e20d308cc07c4d418ca9e1fb02",
+      "generative_model/inference/generate_etflow_symmetric_xyz.py": "8c445c441ec1cf807941a3387dbca9265b079038a0c1ac1ccb92a2a7347b71a1",
+      "generative_model/inference/generate_etflow_symmetric_xyz_v2.py": "b049f4790f0aa66ba1ce85cf026c2bea71db0369d4e0c3f11faefe44083fbcbd",
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c",
+      "generative_model/symmetry/graph_action.py": "9517d125bbdb897d5ef6d8e4c7ebf97051131a8946e473b670ccb21fb49864fe",
+      "generative_model/symmetry/graph_action_extended.py": "bf314e8c8da9b9ac31a7d9475421d035682e94b1c93d695423167c7bfdf97fc9",
+      "generative_model/tests/test_etflow_e3f02_inference_v2.py": "5e55b9379bdb594befe8262885522592f9334989f1b64eae6166ca43f2a59853"
+    },
+    "symmetry_protocol": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "input_contract": {
+    "element_fallback": false,
+    "graph": "canonical v2 explicit-H typed molecular graph",
+    "graph_action": "coordinate-free; stored permutations/orbits forbidden",
+    "strict_failure": true,
+    "target_pg": "requested C2/C3/S4/D6h"
+  },
+  "optimizer": {
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 500,
+    "method": "L-BFGS-B",
+    "orbit_subspace_constrained": true,
+    "primary_force_field": "UFF",
+    "repulsion_cutoff_angstrom": 0.8,
+    "repulsion_force_constant_kcal_mol_angstrom2": 2000.0
+  },
+  "output_contract": {
+    "final_xyz": "F0.2 orbit-constrained UFF+repulsion coordinates",
+    "independent_point_group_audit_required": true,
+    "projected_xyz": "E3 hard-projected coordinates",
+    "raw_xyz": "official ET-Flow coordinates before Target_PG enforcement"
+  },
+  "prerequisite_evidence": {
+    "c23_geometry_report_sha256": "5c0efdedfef123cfcf93846a15c440a9a571c19978761c8d589f28149111e587",
+    "c23_geometry_success_fraction": 1.0,
+    "c23_pg_compatible_fraction": 1.0,
+    "c23_point_group_report_sha256": "6dcada7369e3d3b61db249310d9385cb944f7ce6790beee3404585edb32adf0a",
+    "extended_action_protocol_sha256": "3cf89ca1fa026ccf0eda9b90f1bee043615bffea8bfed336ea03e0570b4b8ac9",
+    "extended_action_report_sha256": "efdd6e3e35bb73a294f23db2fa855b10e32a7837b9e5611dbfd9f082a8cf1700",
+    "extended_action_success_fraction": 1.0,
+    "v1_protocol_sha256": "4bd299e594600553f052bdd893e9062e2f73cf212eb51718118604a7d48aeb0d"
+  },
+  "projection": {
+    "d6h_planarity": "horizontal reflection with identity atom permutation",
+    "hard_symmetry_projection": true,
+    "match_radius_of_gyration": true,
+    "method": "24-orientation search + one Reynolds/orbit projection"
+  },
+  "protocol_fingerprint": "4c8ed922fcf4f3b5566452d971ab9fee2c4e7bbbff00e06399ac81a9ce316548",
+  "route": "ET-Flow learned prior + graph-only E3 action/projection + F0.2 refinement",
+  "schema_version": "etflow-e3f02-inference-protocol-v2",
+  "scope": {
+    "etflow_used_as_initial_conformer_prior": true,
+    "etkdg_used": false,
+    "hard_symmetry_projection_used": true,
+    "known_canonical_graph": true,
+    "orbit_constrained_force_field_used": true,
+    "raw_learned_target_pg_claim": false,
+    "reference_xyz_used": false,
+    "requested_target_pg": true,
+    "stored_symmetry_action_used": false
+  },
+  "status": "FROZEN_ALL_CANONICAL_TARGET_PGS_KNOWN_GRAPH_TO_XYZ",
+  "supported_target_pgs": [
+    "C2",
+    "C3",
+    "S4",
+    "D6h"
+  ]
+}

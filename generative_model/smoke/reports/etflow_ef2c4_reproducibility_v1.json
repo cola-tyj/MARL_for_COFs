@@ -1,0 +1,414 @@
+{
+  "checks": {
+    "candidate_collision_failure_set_stable": true,
+    "candidate_collision_fraction_stable": true,
+    "candidate_interrun_kabsch": true,
+    "candidate_interrun_pair_distance": true,
+    "identity_checkpoint_match": true,
+    "ordered_panel_and_seed_exact": true,
+    "original_ef2c3_status_preserved": true,
+    "parent_interrun_kabsch": true,
+    "parent_interrun_pair_distance": true,
+    "repeat0_scientific_gate": true,
+    "repeat1_scientific_gate": true
+  },
+  "claim_boundary": {
+    "does_not_authorize_iid_test_or_core_ood": true,
+    "does_not_relax_ef2c3_parent_reproduction_threshold": true,
+    "does_not_revise_ef2c3_status": true,
+    "pass_means": "two-run numerical evidence only; next step is independent dual-run PG audit"
+  },
+  "identity": {
+    "protocol_sha256": "bf56f5c38eb6f8ee095c01912b5d83ea49252bd7df24ef460848b398c580d377",
+    "repeat0_coordinates_sha256": "2adbb61332c031a5a1623a2edd6870adf73e1296447224d9cba2471ea6a7c0c9",
+    "repeat0_report_sha256": "362173ccf1384747d585a5b5831aef9b875c57cdc2ad64a47feeb8816c4c7a40",
+    "repeat1_coordinates_sha256": "a961d9ef491f8ae83f4e82607321b8b3edf0dbf1ed3b0fd10ca6a24180849a0b",
+    "repeat1_report_sha256": "34950018e7e92ce72b0fece8ab9eb699c60df3e7efdee07b608b5213f77768fa"
+  },
+  "metrics": {
+    "candidate_collision_failure_set_symmetric_difference": 0,
+    "candidate_collision_free_fraction_abs_difference": 0.0,
+    "candidate_count": 32,
+    "candidate_interrun_max_abs_difference_angstrom": 0.0002040863037109375,
+    "candidate_interrun_max_kabsch_rmsd_angstrom": 9.328838211548895e-05,
+    "candidate_interrun_max_pair_distance_mae_angstrom": 2.1740118661369984e-05,
+    "parent_interrun_max_abs_difference_angstrom": 0.008315324783325195,
+    "parent_interrun_max_kabsch_rmsd_angstrom": 0.004803756632704268,
+    "parent_interrun_max_pair_distance_mae_angstrom": 0.0017926724272596247,
+    "repeat0_candidate_collision_failures": [
+      [
+        1522,
+        2026084422
+      ],
+      [
+        2265,
+        2026185165
+      ]
+    ],
+    "repeat0_candidate_collision_free_fraction": 0.9375,
+    "repeat1_candidate_collision_failures": [
+      [
+        1522,
+        2026084422
+      ],
+      [
+        2265,
+        2026185165
+      ]
+    ],
+    "repeat1_candidate_collision_free_fraction": 0.9375
+  },
+  "passed": true,
+  "per_run_scientific_checks": {
+    "repeat0": {
+      "bond_quality": true,
+      "candidate_collision_free_fraction": true,
+      "candidate_collision_free_gain": true,
+      "candidate_count": true,
+      "overlap_loss_ratio": true,
+      "provenance_checks": true,
+      "symmetry_non_degradation": true
+    },
+    "repeat1": {
+      "bond_quality": true,
+      "candidate_collision_free_fraction": true,
+      "candidate_collision_free_gain": true,
+      "candidate_count": true,
+      "overlap_loss_ratio": true,
+      "provenance_checks": true,
+      "symmetry_non_degradation": true
+    }
+  },
+  "records": [
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.5792104993622654e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.3373391980298842e-07,
+      "package_index": 1669,
+      "parent_kabsch_rmsd_angstrom": 3.287535976132633e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 1.8384257591748675e-07,
+      "seed": 2026084569
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.9127265402220384e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.9630066799336836e-07,
+      "package_index": 1669,
+      "parent_kabsch_rmsd_angstrom": 2.308672403439934e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 1.5267258435552377e-07,
+      "seed": 2026184569
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 5.29920802465032e-07,
+      "candidate_max_abs_difference_angstrom": 1.1920928955078125e-06,
+      "candidate_pair_distance_mae_angstrom": 3.3682152637292383e-07,
+      "package_index": 1611,
+      "parent_kabsch_rmsd_angstrom": 6.61886435305144e-07,
+      "parent_max_abs_difference_angstrom": 1.6689300537109375e-06,
+      "parent_pair_distance_mae_angstrom": 3.2108553263310585e-07,
+      "seed": 2026084511
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 1.083075295102048e-06,
+      "candidate_max_abs_difference_angstrom": 1.9073486328125e-06,
+      "candidate_pair_distance_mae_angstrom": 5.546721113318778e-07,
+      "package_index": 1611,
+      "parent_kabsch_rmsd_angstrom": 0.004803756632704268,
+      "parent_max_abs_difference_angstrom": 0.008315324783325195,
+      "parent_pair_distance_mae_angstrom": 0.0017926724272596247,
+      "seed": 2026184511
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 4.200730952920722e-07,
+      "candidate_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "candidate_pair_distance_mae_angstrom": 2.988524973217384e-07,
+      "package_index": 2209,
+      "parent_kabsch_rmsd_angstrom": 3.013322017844397e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 1.8933199707591266e-07,
+      "seed": 2026085109
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 3.161839000848358e-07,
+      "candidate_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "candidate_pair_distance_mae_angstrom": 1.6475465739163047e-07,
+      "package_index": 2209,
+      "parent_kabsch_rmsd_angstrom": 4.053663569086379e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 2.0662454794612075e-07,
+      "seed": 2026185109
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 4.058166801819398e-06,
+      "candidate_max_abs_difference_angstrom": 1.430511474609375e-05,
+      "candidate_pair_distance_mae_angstrom": 1.6237813743981445e-06,
+      "package_index": 2265,
+      "parent_kabsch_rmsd_angstrom": 2.813826439216895e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 2.149545736199408e-07,
+      "seed": 2026085165
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 4.443820855730222e-07,
+      "candidate_max_abs_difference_angstrom": 1.341104507446289e-06,
+      "candidate_pair_distance_mae_angstrom": 2.281117566557821e-07,
+      "package_index": 2265,
+      "parent_kabsch_rmsd_angstrom": 6.189368540310793e-07,
+      "parent_max_abs_difference_angstrom": 1.9073486328125e-06,
+      "parent_pair_distance_mae_angstrom": 1.6892760563220261e-07,
+      "seed": 2026185165
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.514853093439715e-07,
+      "candidate_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "candidate_pair_distance_mae_angstrom": 1.475251237672752e-07,
+      "package_index": 547,
+      "parent_kabsch_rmsd_angstrom": 0.00015367376714615138,
+      "parent_max_abs_difference_angstrom": 0.000416487455368042,
+      "parent_pair_distance_mae_angstrom": 4.399742845784089e-05,
+      "seed": 2026083447
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 9.328838211548895e-05,
+      "candidate_max_abs_difference_angstrom": 0.0002040863037109375,
+      "candidate_pair_distance_mae_angstrom": 2.1740118661369984e-05,
+      "package_index": 547,
+      "parent_kabsch_rmsd_angstrom": 3.696836224698156e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 1.9353356277798729e-07,
+      "seed": 2026183447
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 4.062291696493437e-07,
+      "candidate_max_abs_difference_angstrom": 1.430511474609375e-06,
+      "candidate_pair_distance_mae_angstrom": 2.0703411343295246e-07,
+      "package_index": 1522,
+      "parent_kabsch_rmsd_angstrom": 3.6741943704532776e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 2.2227490072924444e-07,
+      "seed": 2026084422
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.2853742594427745e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.4029647990710182e-07,
+      "package_index": 1522,
+      "parent_kabsch_rmsd_angstrom": 4.909617972130986e-07,
+      "parent_max_abs_difference_angstrom": 1.6689300537109375e-06,
+      "parent_pair_distance_mae_angstrom": 2.4923850048505467e-07,
+      "seed": 2026184422
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 3.3387228801529847e-07,
+      "candidate_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "candidate_pair_distance_mae_angstrom": 2.950955437082866e-07,
+      "package_index": 1552,
+      "parent_kabsch_rmsd_angstrom": 2.96109725632656e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 2.3564899864755496e-07,
+      "seed": 2026084452
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.3081710122154868e-07,
+      "candidate_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "candidate_pair_distance_mae_angstrom": 1.5284223619957332e-07,
+      "package_index": 1552,
+      "parent_kabsch_rmsd_angstrom": 2.1919053226997864e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 1.6264439680983382e-07,
+      "seed": 2026184452
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.0588513913295428e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.454637761232592e-07,
+      "package_index": 1663,
+      "parent_kabsch_rmsd_angstrom": 2.7356751478274306e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 1.7713684999220136e-07,
+      "seed": 2026084563
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 1.9085918107661908e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.4215378859338246e-07,
+      "package_index": 1663,
+      "parent_kabsch_rmsd_angstrom": 2.2334491077355486e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 1.9356985636871552e-07,
+      "seed": 2026184563
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 1.2855176481645002e-07,
+      "candidate_max_abs_difference_angstrom": 2.384185791015625e-07,
+      "candidate_pair_distance_mae_angstrom": 8.915410426050349e-08,
+      "package_index": 1080,
+      "parent_kabsch_rmsd_angstrom": 1.564052993056335e-07,
+      "parent_max_abs_difference_angstrom": 2.384185791015625e-07,
+      "parent_pair_distance_mae_angstrom": 1.045471535497346e-07,
+      "seed": 2026083980
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 3.0760680926020826e-07,
+      "candidate_max_abs_difference_angstrom": 5.066394805908203e-07,
+      "candidate_pair_distance_mae_angstrom": 1.7688366916444555e-07,
+      "package_index": 1080,
+      "parent_kabsch_rmsd_angstrom": 2.985453433252852e-07,
+      "parent_max_abs_difference_angstrom": 5.364418029785156e-07,
+      "parent_pair_distance_mae_angstrom": 1.8243607832492724e-07,
+      "seed": 2026183980
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 9.93663350109183e-07,
+      "candidate_max_abs_difference_angstrom": 1.430511474609375e-06,
+      "candidate_pair_distance_mae_angstrom": 4.474867395645792e-07,
+      "package_index": 2359,
+      "parent_kabsch_rmsd_angstrom": 1.5593731173858983e-06,
+      "parent_max_abs_difference_angstrom": 3.0994415283203125e-06,
+      "parent_pair_distance_mae_angstrom": 5.821353394220222e-07,
+      "seed": 2026085259
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.887272923944939e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.9419024904116604e-07,
+      "package_index": 2359,
+      "parent_kabsch_rmsd_angstrom": 0.00012925527516200375,
+      "parent_max_abs_difference_angstrom": 0.00028634071350097656,
+      "parent_pair_distance_mae_angstrom": 6.98376991963434e-05,
+      "seed": 2026185259
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 5.324079857936728e-07,
+      "candidate_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "candidate_pair_distance_mae_angstrom": 2.4119329630330963e-07,
+      "package_index": 296,
+      "parent_kabsch_rmsd_angstrom": 7.492860141122355e-07,
+      "parent_max_abs_difference_angstrom": 1.430511474609375e-06,
+      "parent_pair_distance_mae_angstrom": 4.134089995866218e-07,
+      "seed": 2026083196
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.4629043971847925e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.586369018436433e-07,
+      "package_index": 296,
+      "parent_kabsch_rmsd_angstrom": 3.2031809289866597e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 2.369331801959837e-07,
+      "seed": 2026183196
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 6.265554516659352e-07,
+      "candidate_max_abs_difference_angstrom": 2.384185791015625e-06,
+      "candidate_pair_distance_mae_angstrom": 2.552013868359847e-07,
+      "package_index": 2242,
+      "parent_kabsch_rmsd_angstrom": 5.521950962133669e-07,
+      "parent_max_abs_difference_angstrom": 1.1920928955078125e-06,
+      "parent_pair_distance_mae_angstrom": 2.58524348460936e-07,
+      "seed": 2026085142
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 7.640748981580057e-07,
+      "candidate_max_abs_difference_angstrom": 2.678483724594116e-06,
+      "candidate_pair_distance_mae_angstrom": 2.5850512625149933e-07,
+      "package_index": 2242,
+      "parent_kabsch_rmsd_angstrom": 1.1314061326126702e-06,
+      "parent_max_abs_difference_angstrom": 3.516674041748047e-06,
+      "parent_pair_distance_mae_angstrom": 3.561977665126422e-07,
+      "seed": 2026185142
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 7.1117652271439384e-06,
+      "candidate_max_abs_difference_angstrom": 1.055002212524414e-05,
+      "candidate_pair_distance_mae_angstrom": 1.3734373157352276e-06,
+      "package_index": 1129,
+      "parent_kabsch_rmsd_angstrom": 1.4600229529556849e-06,
+      "parent_max_abs_difference_angstrom": 2.343207597732544e-06,
+      "parent_pair_distance_mae_angstrom": 3.8766551683592593e-07,
+      "seed": 2026084029
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 1.4212464191929447e-07,
+      "candidate_max_abs_difference_angstrom": 2.384185791015625e-07,
+      "candidate_pair_distance_mae_angstrom": 1.0590374408219512e-07,
+      "package_index": 1129,
+      "parent_kabsch_rmsd_angstrom": 1.3659277809855027e-07,
+      "parent_max_abs_difference_angstrom": 2.384185791015625e-07,
+      "parent_pair_distance_mae_angstrom": 1.1273216670635934e-07,
+      "seed": 2026184029
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.45223439068423e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.4521858315356064e-07,
+      "package_index": 1388,
+      "parent_kabsch_rmsd_angstrom": 3.523803895895675e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 2.3288240200424214e-07,
+      "seed": 2026084288
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 4.701185652699756e-07,
+      "candidate_max_abs_difference_angstrom": 1.1920928955078125e-06,
+      "candidate_pair_distance_mae_angstrom": 2.507046687947149e-07,
+      "package_index": 1388,
+      "parent_kabsch_rmsd_angstrom": 4.479368123193152e-07,
+      "parent_max_abs_difference_angstrom": 9.5367431640625e-07,
+      "parent_pair_distance_mae_angstrom": 3.065704494771804e-07,
+      "seed": 2026184288
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 1.701982375020991e-07,
+      "candidate_max_abs_difference_angstrom": 2.384185791015625e-07,
+      "candidate_pair_distance_mae_angstrom": 9.796425777894347e-08,
+      "package_index": 2495,
+      "parent_kabsch_rmsd_angstrom": 1.6746900422563961e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 1.1739610874544071e-07,
+      "seed": 2026085395
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 1.498003428124318e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.0217032907451498e-07,
+      "package_index": 2495,
+      "parent_kabsch_rmsd_angstrom": 2.5265501471571055e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 1.301978947553934e-07,
+      "seed": 2026185395
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 2.0947574504587522e-07,
+      "candidate_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "candidate_pair_distance_mae_angstrom": 1.456779470155661e-07,
+      "package_index": 1133,
+      "parent_kabsch_rmsd_angstrom": 1.5667615915043659e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 1.2677133808526729e-07,
+      "seed": 2026084033
+    },
+    {
+      "candidate_kabsch_rmsd_angstrom": 7.638136809878047e-07,
+      "candidate_max_abs_difference_angstrom": 1.430511474609375e-06,
+      "candidate_pair_distance_mae_angstrom": 3.741569933501687e-07,
+      "package_index": 1133,
+      "parent_kabsch_rmsd_angstrom": 1.8807777700517062e-07,
+      "parent_max_abs_difference_angstrom": 4.76837158203125e-07,
+      "parent_pair_distance_mae_angstrom": 1.4075243786355455e-07,
+      "seed": 2026184033
+    }
+  ],
+  "schema_version": "etflow-ef2c4-reproducibility-v1",
+  "scope": {
+    "core_ood_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_validation_reused": true,
+    "posthoc_force_field_used": false,
+    "quality_claim": false
+  },
+  "status": "PASS_ETFLOW_EF2C4_NUMERICAL_REPLICATION_ADVANCE_TO_DUAL_POINT_GROUP_AUDIT"
+}

@@ -1,0 +1,132 @@
+{
+  "decision": {
+    "advance_to_full_dataset": false,
+    "fail_status": "FAIL_GRAPH_PG_3D_G2_TIER1_CONTINUATION_STOP_ARCHITECTURE",
+    "on_failure": "do not train this architecture longer; pre-register a larger-receptive-field G2 model",
+    "pass_if": "all original G2 tier-1 Gate checks are true at step 2048",
+    "pass_status": "PASS_GRAPH_PG_3D_G2_TIER1_CONTINUATION_ADVANCE_TO_TIER4"
+  },
+  "fixed_validation": {
+    "evaluate_steps": [
+      512,
+      768,
+      1024,
+      1280,
+      1536,
+      1792,
+      2048
+    ],
+    "hard_projected_output_evaluated": true,
+    "noise_sigma_angstrom": 0.15,
+    "raw_output_evaluated": true,
+    "seeds": [
+      20260901,
+      20260902,
+      20260903,
+      20260904,
+      20260905,
+      20260906,
+      20260907,
+      20260908
+    ],
+    "symmetry_analyzer": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "gate_thresholds_final_step": {
+    "maximum_projected_atom_symmetry_error_angstrom_max": 0.0001,
+    "maximum_projected_operation_rms_angstrom_max": 1e-05,
+    "mean_projected_coordinate_rmsd_angstrom_max": 0.05,
+    "mean_raw_coordinate_rmsd_angstrom_max": 0.08,
+    "projected_collision_free_cases_min": 8,
+    "projected_pg_compatible_cases_min": 8,
+    "projected_rmsd_improved_cases_min": 8,
+    "raw_rmsd_improved_cases_min": 8,
+    "validation_cases": 8
+  },
+  "identity": {
+    "base_protocol_sha256": "3f5971e3336b313a15dd2967fa005738c233084a1468a3862aa9481508092aea",
+    "base_report_sha256": "37b7847c37760b12bef04280fcf31c5a06bcfc433290fbb600db0e8589dc1eab",
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "diagnosis_sha256": "8ce05e16aba7a66e117322ebe475fbf1e349313543efee2d79ff395edab6d7ba",
+    "g1_protocol_sha256": "3550ab5fff77924a126c132d7e2bd59bd016cae068720c0a168921d94cde5ce8",
+    "manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+    "model_source_sha256": "c89ed25bb64ecb19fefc9f8b86f87067f8c3ab32ce38de6959a2f6b070bcf385",
+    "projection_source_sha256": "5420fd170eac1efd13380f3f242e546f4bfeac359836570df6aaab4cb8ddd1c4",
+    "source_checkpoint_path": "/home/tianyajun/MARL_for_COFs/generative_model/runs/graph_pg_3d_g2/tier1_mol2162_0512/last.pt",
+    "source_checkpoint_sha256": "4beb41d750eb4bef65ae76c3517c935468b87e314e38b3584269e11762765cd2",
+    "source_model_state_fingerprint": "918110c7365679a82307ad21f7cc84b245a8362b58328efc490d7950b4a0f522"
+  },
+  "model": {
+    "atom_vocab_size": 13,
+    "bond_vocab_size": 5,
+    "coordinate_scale": 0.1,
+    "coordinate_update": "relative vector times learned invariant scalar",
+    "hidden_dim": 64,
+    "layer_count": 4,
+    "message_edges": "canonical sparse bonds duplicated in both directions",
+    "parameter_count": 146884,
+    "pg_vocab_size": 4,
+    "schema_version": "graph-pg-3d-egnn-denoiser-v1"
+  },
+  "objective": {
+    "bond_length_mse": "mean_(i,j in known bonds) (d_pred-d_target)^2",
+    "bond_length_mse_weight": 0.25,
+    "coordinate_mse": "mean_i ||pred_i-target_i||^2",
+    "coordinate_mse_weight": 1.0,
+    "soft_symmetry_mse": "mean_(g,i) ||pred@R_g.T-pred[perm_g]||^2",
+    "soft_target_symmetry_mse_weight": 0.1
+  },
+  "package_indices": [
+    2162
+  ],
+  "protocol_fingerprint": "eb875926d2e3bfc5a4d44913a8ae02508ca775b1dd845d4a004be09e37882e03",
+  "purpose": "Distinguish optimization-budget insufficiency from the four-layer sparse receptive-field bottleneck.",
+  "required_invariants": {
+    "all_losses_and_gradients_finite": true,
+    "all_outputs_centered_tolerance_angstrom": 1e-06,
+    "checkpoint_resume_exact": true,
+    "core_ood_used": false,
+    "known_graph_fingerprint_unchanged": true,
+    "test_used": false
+  },
+  "schema_version": "graph-pg-3d-g2-tier1-continuation-protocol-v1",
+  "status": "FROZEN_BEFORE_G2_TIER1_CONTINUATION",
+  "task": {
+    "bond_prediction": false,
+    "claim_unconditional_generation": false,
+    "hard_projection": "evaluation only after raw denoiser output",
+    "input": "immutable sparse atom/bond graph + noisy centered coordinates + noise sigma + Target_PG",
+    "output": "centered clean all-atom Cartesian coordinates in angstrom",
+    "target_coordinates_used_as_training_supervision": true
+  },
+  "tier": 1,
+  "training": {
+    "batch_size_molecules": 1,
+    "checkpoint_every": 256,
+    "continuation_steps": 1536,
+    "gradient_clip_norm": 1.0,
+    "learning_rate": 0.001,
+    "max_steps": 2048,
+    "model_seed": 20260821,
+    "noise_seed_base": 20260821,
+    "noise_seed_formula": "base + 1000003*step + package_index",
+    "optimizer": "Adam",
+    "sigma_schedule": "cyclic by (step-1) mod 5",
+    "source_step": 512,
+    "training_noise_sigmas_angstrom": [
+      0.05,
+      0.1,
+      0.15,
+      0.2,
+      0.3
+    ],
+    "weight_decay": 1e-06
+  }
+}

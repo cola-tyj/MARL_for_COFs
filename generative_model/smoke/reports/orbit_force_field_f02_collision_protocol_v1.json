@@ -1,0 +1,90 @@
+{
+  "cases": [
+    {
+      "case_index": 20,
+      "package_index": 1490,
+      "seed": 20261101,
+      "sigma_angstrom": 0.5
+    },
+    {
+      "case_index": 21,
+      "package_index": 1490,
+      "seed": 20261102,
+      "sigma_angstrom": 0.5
+    },
+    {
+      "case_index": 22,
+      "package_index": 1490,
+      "seed": 20261101,
+      "sigma_angstrom": 1.0
+    },
+    {
+      "case_index": 23,
+      "package_index": 1490,
+      "seed": 20261102,
+      "sigma_angstrom": 1.0
+    }
+  ],
+  "decision": {
+    "fail_status": "FAIL_F02_COLLISION_REPAIR_STOP_BEFORE_ETKDG",
+    "pass_status": "PASS_F02_COLLISION_REPAIR_ADVANCE_TO_ETKDG"
+  },
+  "gate_thresholds": {
+    "acceptable_gradient_norm_max": 1.0,
+    "acceptable_optimizer_termination_fraction_min": 0.75,
+    "analyzer_success_fraction_min": 1.0,
+    "final_bond_mae_angstrom_max": 0.1,
+    "maximum_operation_error_angstrom": 1e-05,
+    "minimum_pair_distance_angstrom": 0.6,
+    "pg_compatible_fraction_min": 1.0
+  },
+  "identity": {
+    "environment": {
+      "numpy": "1.26.2",
+      "python": "3.11.15",
+      "rdkit": "2024.03.5"
+    },
+    "parent_f01_protocol_sha256": "609a649c2324a52a07ba4590ce7e1a3a0fb4a0ecd5cf610a4bb00cab9155788d",
+    "parent_f01_report_sha256": "40c377768be937211187db30f3348ab3342da5125b6cb7b7a5670fe55e43e35b",
+    "parent_pg_audit_sha256": "027a7ee03fdadf8d89062253f2839c5ddc88bde99cb8f4d51b7d04314db0fcc5",
+    "source_sha256": {
+      "generative_model/optimization/orbit_force_field_repulsion.py": "5fd7b0397925033977d102b569c9099dfe4aede41d1ed27699612b901935ad4c",
+      "generative_model/smoke/audit_orbit_force_field_f02_point_groups.py": "97b85842500aa1c557310bb65d80d73c97af993c1c3a08b27f9996f2270a5ba3",
+      "generative_model/smoke/run_orbit_force_field_f02_collision_repair.py": "1200750a394928fd7b9228be5374c1ca87a6a12ac47e8dcaaaff2c300f8e36e2"
+    }
+  },
+  "optimizer": {
+    "function_tolerance": 1e-09,
+    "gradient_tolerance": 1e-05,
+    "maximum_iterations": 500,
+    "method": "L-BFGS-B",
+    "primary_force_field": "UFF",
+    "repulsion": "0.5*k*(cutoff-r)^2 for nonbonded r<cutoff",
+    "repulsion_cutoff_angstrom": 0.8,
+    "repulsion_force_constant_kcal_mol_angstrom2": 2000.0
+  },
+  "protocol_fingerprint": "154bce8e58c5556ced1618cafee5ce2713472299c1be24c4ff970b9e45629473",
+  "purpose": "The sole bounded repair of the four F0.1 collision/C1 cases before ETKDG.",
+  "repair_boundary": {
+    "further_force_constant_or_cutoff_search_allowed": false,
+    "only_branch": true,
+    "unchanged": [
+      "four fixed cases",
+      "initial orbit noise",
+      "stored group action",
+      "UFF objective",
+      "500 iteration budget",
+      "test/Core-OOD sealed"
+    ]
+  },
+  "schema_version": "orbit-force-field-f02-collision-protocol-v1",
+  "scope": {
+    "canonical_graph_mutation": false,
+    "core_ood_used": false,
+    "element_fallback": false,
+    "formal_f01_status_mutated": false,
+    "orbit_action_mutation": false,
+    "test_used": false
+  },
+  "status": "FROZEN_BEFORE_F02_COLLISION_REPAIR"
+}

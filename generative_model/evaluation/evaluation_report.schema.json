@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marl-for-cofs.local/schema/evaluation-report-1.1.json",
+  "title": "MARL_for_COFs molecular generation evaluation report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "metric_suite_version",
+    "report_type",
+    "provenance",
+    "reference",
+    "config",
+    "summary",
+    "metrics",
+    "failures",
+    "report_fingerprint"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.1"},
+    "metric_suite_version": {"const": "p1.0"},
+    "report_type": {"type": "string", "minLength": 1},
+    "provenance": {
+      "type": "object",
+      "required": ["source_type", "source_fingerprint", "coordinate_unit"],
+      "properties": {
+        "source_type": {"type": "string", "minLength": 1},
+        "source_fingerprint": {"$ref": "#/$defs/sha256"},
+        "coordinate_unit": {"const": "angstrom"}
+      },
+      "additionalProperties": true
+    },
+    "reference": {
+      "anyOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_fingerprint", "molecule_count", "unique_canonical_smiles", "fingerprint"],
+          "properties": {
+            "source_fingerprint": {"$ref": "#/$defs/sha256"},
+            "molecule_count": {"type": "integer", "minimum": 0},
+            "unique_canonical_smiles": {"type": "integer", "minimum": 0},
+            "fingerprint": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["type", "radius", "bits", "include_chirality", "explicit_h"],
+              "properties": {
+                "type": {"const": "Morgan"},
+                "radius": {"type": "integer", "minimum": 1},
+                "bits": {"type": "integer", "minimum": 1},
+                "include_chirality": {"type": "boolean"},
+                "explicit_h": {"const": false}
+              }
+            }
+          }
+        }
+      ]
+    },
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coordinate_unit", "collision_distance_angstrom", "centering_tolerance_angstrom",
+        "fingerprint_radius", "fingerprint_bits", "fingerprint_include_chirality",
+        "run_mmff", "mmff_variant", "mmff_max_iterations", "run_symmetry",
+        "symmetry_tolerance_angstrom", "symmetry_eigen_tolerance", "symmetry_matrix_tolerance"
+      ],
+      "properties": {
+        "coordinate_unit": {"const": "angstrom"},
+        "collision_distance_angstrom": {"type": "number", "exclusiveMinimum": 0},
+        "centering_tolerance_angstrom": {"type": "number", "minimum": 0},
+        "fingerprint_radius": {"type": "integer", "minimum": 1},
+        "fingerprint_bits": {"type": "integer", "minimum": 1},
+        "fingerprint_include_chirality": {"type": "boolean"},
+        "run_mmff": {"type": "boolean"},
+        "mmff_variant": {"enum": ["MMFF94", "MMFF94s"]},
+        "mmff_max_iterations": {"type": "integer", "minimum": 1},
+        "run_symmetry": {"type": "boolean"},
+        "symmetry_tolerance_angstrom": {"type": "number", "exclusiveMinimum": 0},
+        "symmetry_eigen_tolerance": {"type": "number", "exclusiveMinimum": 0},
+        "symmetry_matrix_tolerance": {"type": "number", "exclusiveMinimum": 0}
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "input_molecules", "evaluated_molecules", "failed_molecules"],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL"]},
+        "input_molecules": {"type": "integer", "minimum": 0},
+        "evaluated_molecules": {"type": "integer", "minimum": 0},
+        "failed_molecules": {"type": "integer", "minimum": 0}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "size", "numerical", "graph", "chemistry", "two_dimensional",
+        "three_dimensional", "symmetry", "provided_conditions"
+      ],
+      "properties": {
+        "size": {"$ref": "#/$defs/sizeMetrics"},
+        "numerical": {"$ref": "#/$defs/numericalMetrics"},
+        "graph": {"$ref": "#/$defs/graphMetrics"},
+        "chemistry": {"$ref": "#/$defs/chemistryMetrics"},
+        "two_dimensional": {"$ref": "#/$defs/twoDimensionalMetrics"},
+        "three_dimensional": {"$ref": "#/$defs/threeDimensionalMetrics"},
+        "symmetry": {"$ref": "#/$defs/symmetryMetrics"},
+        "provided_conditions": {"$ref": "#/$defs/providedConditions"}
+      }
+    },
+    "failures": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["counts", "records"],
+      "properties": {
+        "counts": {"$ref": "#/$defs/counts"},
+        "records": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sample_index", "molecule_id", "reason", "message"],
+            "properties": {
+              "sample_index": {"type": "integer", "minimum": 0},
+              "molecule_id": {"type": ["string", "null"]},
+              "reason": {"type": "string", "minLength": 1},
+              "message": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "report_fingerprint": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "nullableInteger": {"type": ["integer", "null"], "minimum": 0},
+    "counts": {"type": "object", "additionalProperties": {"type": "integer", "minimum": 0}},
+    "distribution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["count", "min", "max", "mean", "median", "p95"],
+      "properties": {
+        "count": {"type": "integer", "minimum": 0},
+        "min": {"type": ["number", "null"]},
+        "max": {"type": ["number", "null"]},
+        "mean": {"type": ["number", "null"]},
+        "median": {"type": ["number", "null"]},
+        "p95": {"type": ["number", "null"]}
+      }
+    },
+    "sizeMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["atom_count", "bond_count"],
+      "properties": {
+        "atom_count": {"$ref": "#/$defs/distribution"},
+        "bond_count": {"$ref": "#/$defs/distribution"}
+      }
+    },
+    "numericalMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "finite_coordinate_molecules", "finite_coordinate_rate", "centered_molecules",
+        "centered_rate", "collision_molecules", "collision_rate", "max_radius_angstrom",
+        "min_interatomic_distance_angstrom"
+      ],
+      "properties": {
+        "finite_coordinate_molecules": {"type": "integer", "minimum": 0},
+        "finite_coordinate_rate": {"$ref": "#/$defs/rate"},
+        "centered_molecules": {"type": "integer", "minimum": 0},
+        "centered_rate": {"$ref": "#/$defs/rate"},
+        "collision_molecules": {"type": "integer", "minimum": 0},
+        "collision_rate": {"$ref": "#/$defs/rate"},
+        "max_radius_angstrom": {"$ref": "#/$defs/distribution"},
+        "min_interatomic_distance_angstrom": {"$ref": "#/$defs/distribution"}
+      }
+    },
+    "graphMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["connected_molecules", "connected_rate", "component_count"],
+      "properties": {
+        "connected_molecules": {"type": "integer", "minimum": 0},
+        "connected_rate": {"$ref": "#/$defs/rate"},
+        "component_count": {"$ref": "#/$defs/distribution"}
+      }
+    },
+    "chemistryMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["rdkit_sanitize_valid_molecules", "rdkit_sanitize_valid_rate", "sanitize_failure_counts"],
+      "properties": {
+        "rdkit_sanitize_valid_molecules": {"type": "integer", "minimum": 0},
+        "rdkit_sanitize_valid_rate": {"$ref": "#/$defs/rate"},
+        "sanitize_failure_counts": {"$ref": "#/$defs/counts"}
+      }
+    },
+    "twoDimensionalMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "element_counts", "bond_type_counts", "ring_count", "unique_canonical_smiles",
+        "uniqueness_rate", "novel_molecules", "novelty_rate", "nearest_train_tanimoto"
+      ],
+      "properties": {
+        "element_counts": {"$ref": "#/$defs/counts"},
+        "bond_type_counts": {"$ref": "#/$defs/counts"},
+        "ring_count": {"$ref": "#/$defs/distribution"},
+        "unique_canonical_smiles": {"type": "integer", "minimum": 0},
+        "uniqueness_rate": {"$ref": "#/$defs/rate"},
+        "novel_molecules": {"$ref": "#/$defs/nullableInteger"},
+        "novelty_rate": {"$ref": "#/$defs/rate"},
+        "nearest_train_tanimoto": {"$ref": "#/$defs/distribution"}
+      }
+    },
+    "mmffMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "requested_molecules", "parameterized_molecules", "status_counts",
+        "converged_rate_among_parameterized",
+        "initial_energy_kcal_mol", "final_energy_kcal_mol", "energy_change_kcal_mol",
+        "centered_rms_displacement_angstrom"
+      ],
+      "properties": {
+        "requested_molecules": {"type": "integer", "minimum": 0},
+        "parameterized_molecules": {"type": "integer", "minimum": 0},
+        "status_counts": {"$ref": "#/$defs/counts"},
+        "converged_rate_among_parameterized": {"$ref": "#/$defs/rate"},
+        "initial_energy_kcal_mol": {"$ref": "#/$defs/distribution"},
+        "final_energy_kcal_mol": {"$ref": "#/$defs/distribution"},
+        "energy_change_kcal_mol": {"$ref": "#/$defs/distribution"},
+        "centered_rms_displacement_angstrom": {"$ref": "#/$defs/distribution"}
+      }
+    },
+    "threeDimensionalMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "bond_length_angstrom", "bond_length_by_type_angstrom", "bond_angle_degrees",
+        "degenerate_angle_count", "min_nonbonded_distance_angstrom",
+        "nonbonded_collision_molecules", "nonbonded_collision_rate", "mmff"
+      ],
+      "properties": {
+        "bond_length_angstrom": {"$ref": "#/$defs/distribution"},
+        "bond_length_by_type_angstrom": {
+          "type": "object", "additionalProperties": {"$ref": "#/$defs/distribution"}
+        },
+        "bond_angle_degrees": {"$ref": "#/$defs/distribution"},
+        "degenerate_angle_count": {"type": "integer", "minimum": 0},
+        "min_nonbonded_distance_angstrom": {"$ref": "#/$defs/distribution"},
+        "nonbonded_collision_molecules": {"type": "integer", "minimum": 0},
+        "nonbonded_collision_rate": {"$ref": "#/$defs/rate"},
+        "mmff": {"$ref": "#/$defs/mmffMetrics"}
+      }
+    },
+    "symmetryMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "analyzed_molecules", "analyzed_rate", "failure_counts", "analyzer_pg_counts",
+        "actual_pg_counts", "actual_label_comparison_molecules", "actual_label_match_rate",
+        "conditioned_molecules", "target_exact_rate", "target_compatible_rate",
+        "actual_mean_operation_rms_angstrom", "actual_max_operation_rms_angstrom",
+        "actual_max_atom_error_angstrom", "orbit_size", "by_target_pg"
+      ],
+      "properties": {
+        "analyzed_molecules": {"type": "integer", "minimum": 0},
+        "analyzed_rate": {"$ref": "#/$defs/rate"},
+        "failure_counts": {"$ref": "#/$defs/counts"},
+        "analyzer_pg_counts": {"$ref": "#/$defs/counts"},
+        "actual_pg_counts": {"$ref": "#/$defs/counts"},
+        "actual_label_comparison_molecules": {"type": "integer", "minimum": 0},
+        "actual_label_match_rate": {"$ref": "#/$defs/rate"},
+        "conditioned_molecules": {"type": "integer", "minimum": 0},
+        "target_exact_rate": {"$ref": "#/$defs/rate"},
+        "target_compatible_rate": {"$ref": "#/$defs/rate"},
+        "actual_mean_operation_rms_angstrom": {"$ref": "#/$defs/distribution"},
+        "actual_max_operation_rms_angstrom": {"$ref": "#/$defs/distribution"},
+        "actual_max_atom_error_angstrom": {"$ref": "#/$defs/distribution"},
+        "orbit_size": {"$ref": "#/$defs/distribution"},
+        "by_target_pg": {
+          "type": "object",
+          "additionalProperties": {"$ref": "#/$defs/pointGroupSymmetryMetrics"}
+        }
+      }
+    },
+    "pointGroupSymmetryMetrics": {
+      "type": "object", "additionalProperties": false,
+      "required": [
+        "analyzed_molecules", "target_exact_rate", "target_compatible_rate",
+        "actual_mean_operation_rms_angstrom", "actual_max_operation_rms_angstrom", "orbit_size"
+      ],
+      "properties": {
+        "analyzed_molecules": {"type": "integer", "minimum": 0},
+        "target_exact_rate": {"$ref": "#/$defs/rate"},
+        "target_compatible_rate": {"$ref": "#/$defs/rate"},
+        "actual_mean_operation_rms_angstrom": {"$ref": "#/$defs/distribution"},
+        "actual_max_operation_rms_angstrom": {"$ref": "#/$defs/distribution"},
+        "orbit_size": {"$ref": "#/$defs/distribution"}
+      }
+    },
+    "providedConditions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["target_pg_counts", "actual_pg_counts", "pg_compatible_counts"],
+      "properties": {
+        "target_pg_counts": {"$ref": "#/$defs/counts"},
+        "actual_pg_counts": {"$ref": "#/$defs/counts"},
+        "pg_compatible_counts": {"$ref": "#/$defs/counts"}
+      }
+    }
+  }
+}

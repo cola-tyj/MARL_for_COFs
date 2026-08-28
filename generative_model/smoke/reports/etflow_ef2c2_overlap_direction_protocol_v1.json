@@ -1,0 +1,63 @@
+{
+  "decision": {
+    "fail_action": "stop analytic overlap-head route before GPU training",
+    "fail_status": "FAIL_ETFLOW_EF2C2_DIRECTION_STOP_BEFORE_TRAINING",
+    "pass_action": "freeze bounded A2-parent overlap-head training",
+    "pass_status": "PASS_ETFLOW_EF2C2_DIRECTION_FREEZE_TRAINING_BRANCH"
+  },
+  "diagnosis": {
+    "ef2b_failed_all_pair_cases": 6,
+    "reason_for_redesign": "EF2-B minimum_pair_distance mixed bonded and nonbonded pairs; nonbonded-only v1 was scientifically incomplete.",
+    "short_canonical_bond_cases": 3,
+    "true_nonbonded_collision_cases": 3
+  },
+  "direction": {
+    "coordinate_projection": false,
+    "fields_combined_before_reynolds_average": true,
+    "force_field": false,
+    "maximum_atom_displacement_angstrom": 0.4,
+    "minimum_bond_distance_angstrom": 0.6,
+    "nonbonded_cutoff_angstrom": 0.8,
+    "parameter_search_after_v1_diagnosis": false,
+    "step_fraction": 1.0
+  },
+  "gate_thresholds": {
+    "bond_length_mae_to_reference_angstrom_max": 0.15,
+    "failed_all_pair_minimum_distance_improved_fraction_min": 1.0,
+    "maximum_symmetry_error_increase_angstrom": 1e-05,
+    "post_direction_all_pair_collision_free_fraction_min": 0.9,
+    "post_direction_bond_quality_fraction_min": 0.9
+  },
+  "identity": {
+    "ef2b_coordinates_sha256": "e579589c8f6669f7e466683c65eb0174c4af8d6d753555e2b36ffe059425b94b",
+    "ef2b_report_sha256": "50b02e46636883d19e2d3a6be3cc9e769b9b2c6310da80fb0b804ae305403ded",
+    "parent_v1_protocol_sha256": "367bfe2791d64f2f65e9ce6793d5c1c0683792fad2d6d524d14972ebc4fcc4bc",
+    "parent_v1_report_sha256": "008f97a465cc80f58f7b1946e3eed761d8b24ababe8114af2a4e1e9437b402fa",
+    "source_sha256": {
+      "generative_model/models/etflow_pg_collision_aware_v2.py": "6e632d3c2964924b800fb3ba79666f97780afad0cd2e455b1224e74405f43cff",
+      "generative_model/smoke/audit_etflow_ef2c2_overlap_direction.py": "4fc9a2d09a6d2db4e4941a123ef0c3931d7f8f848029d44a812a54c72bcf58d4",
+      "generative_model/smoke/build_etflow_ef2c2_overlap_direction_protocol.py": "e6f40394d901661dd1a848f55763ecfeb9bdf38e8b1b629bd32e6834bf5e78dd",
+      "generative_model/tests/test_etflow_pg_collision_aware_v2.py": "4f37ceab1dbb4b4df654cf886e70c3a2a9cb0bf3a13251a3bf1a9cb6bdf077e0"
+    }
+  },
+  "panel": {
+    "candidate_count": 32,
+    "failed_all_pair_case_count": 6,
+    "source": "all 32 frozen EF2-B IID-validation correct-action endpoints"
+  },
+  "protocol_fingerprint": "7327064b0e0110e27dbb63dd873faaa7adc05a5447803a73121ff9d207e6db9c",
+  "purpose": "Test a separated nonbonded-collision plus canonical-short-bond PG-compatible direction on all frozen EF2-B raw endpoints.",
+  "route": "EF2-C2",
+  "schema_version": "etflow-ef2c2-overlap-direction-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "engineering_direction_only": true,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_validation_reused": true,
+    "parent_outputs_mutated": false,
+    "posthoc_force_field_used": false,
+    "quality_claim": false
+  },
+  "status": "FROZEN_BEFORE_OVERLAP_DIRECTION_DIAGNOSTIC"
+}

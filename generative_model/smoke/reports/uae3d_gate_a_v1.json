@@ -1,0 +1,3649 @@
+{
+  "checks": {
+    "all_probe_outputs_finite": true,
+    "iid_transfer_macro_balanced_min": false,
+    "iid_transfer_minimum_balanced_min": true,
+    "iid_transfer_none_accuracy_min": true,
+    "iid_transfer_present_recall_min": true,
+    "iid_transfer_roc_auc_min": false,
+    "nonlinear_macro_gain_over_linear_min": false,
+    "source_model_fingerprint_unchanged": true,
+    "tier4_existence_exact_molecules_min": false
+  },
+  "decision": {
+    "gate_b_is_mainline_prerequisite": false,
+    "resume_old_uae_local_head_branch": false,
+    "run_optional_gate_b": false,
+    "start_graph_plus_target_pg_to_3d_regardless": true
+  },
+  "environment": {
+    "device": "cpu",
+    "numpy": "1.26.2",
+    "python": "3.11.15",
+    "rdkit": "2024.03.5",
+    "seed": 20260821,
+    "torch": "2.5.0+cu121",
+    "torch_geometric": "2.6.1",
+    "torch_threads": 1
+  },
+  "identity": {
+    "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+    "fit_feature_table_fingerprint": "0a301bf29819a2dad3800a023fa03745d729aea8daf84b25b0893d09a3397287",
+    "official_source_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+    "source_checkpoint": "/home/tianyajun/MARL_for_COFs/generative_model/runs/uae3d_overfit4/from_tier1_w10_lr3em5_0512/checkpoints/step-003008.pt",
+    "source_checkpoint_sha256": "575dfb9de9ce1fb7ce7825bb947f105dc8dca7cb8c01909a57e662585c13a11a",
+    "source_checkpoint_step": 3008,
+    "source_model_state_fingerprint": "025c91c2164f2e611700dec4adba2828affc76c7684ff8a8230bce37aa299b8c",
+    "tier4_feature_table_fingerprint": "835f4b117a7ffab7e9a1239635f98282972acce150b2ec7aa4f94d93de629f8d",
+    "transfer_feature_table_fingerprint": "f5357c91e606319fccb30f3ce795e485c54db7973b18112e1f2900f1880fbddc"
+  },
+  "passed": false,
+  "protocol": {
+    "core_ood_used": false,
+    "fingerprint": "f56cdb8064f7096c51f09ea27553c5ff96cbfb963ca00b56d6cab9eefde1544b",
+    "gate_thresholds": {
+      "iid_transfer_macro_balanced_min": 0.82,
+      "iid_transfer_minimum_balanced_min": 0.65,
+      "iid_transfer_none_accuracy_min": 0.75,
+      "iid_transfer_present_recall_min": 0.75,
+      "iid_transfer_roc_auc_min": 0.9,
+      "nonlinear_macro_gain_over_linear_min": 0.01,
+      "tier4_existence_exact_molecules_min": 4
+    },
+    "panels": {
+      "iid_probe_fit": {
+        "molecule_count": 128,
+        "role": "fit probe and one global threshold"
+      },
+      "iid_validation_transfer": {
+        "molecule_count": 32,
+        "role": "apply fitted probe and threshold unchanged"
+      },
+      "tier4_oracle": {
+        "molecule_count": 4,
+        "role": "same-panel memorization/capacity upper bound only"
+      }
+    },
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/smoke/reports/uae3d_gate_a_protocol_v1.json",
+    "probe": {
+      "baseline": "float64 L2 logistic linear readout",
+      "feature": "64-d decoder post-GELU hidden pair feature",
+      "fit_sampling": "per molecule all present unique pairs plus an equal deterministic evenly-spaced sample of none pairs",
+      "l2": 0.01,
+      "nonlinear": {
+        "frequency_std": 0.125,
+        "kind": "64 fixed random Fourier features concatenated with the 64 standardized inputs; only an L2 logistic readout is fitted",
+        "random_feature_dim": 64,
+        "seed": 20260821
+      },
+      "optimizer": "deterministic float64 Newton/IRLS",
+      "threshold": "one deterministic global threshold selected on the fit panel and applied unchanged to the evaluation panel"
+    },
+    "sha256": "3ed89801cb77bfce59bcd27f47869febeda919b803b88c961f006ce9dd4b22f0",
+    "test_used": false,
+    "uae3d_weights_updated": false
+  },
+  "purpose": "Final read-only diagnosis of whether frozen step-3008 post-GELU pair features support a small transferable nonlinear bond-existence readout.",
+  "results": {
+    "all_probe_outputs_finite": true,
+    "iid_transfer": {
+      "linear": {
+        "evaluation_at_unchanged_threshold": {
+          "existence_accuracy": 0.7358611276976883,
+          "existence_error_count": 6193,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.8004059803510315,
+          "minimum_molecule_balanced_existence_accuracy": 0.6808823529411765,
+          "molecule_count": 32,
+          "none_accuracy": 0.7262713007508655,
+          "pair_count_unique": 23446,
+          "present_existence_recall": 0.9128630705394191,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.6959361393323658,
+              "existence_error_count": 23,
+              "none_correct": 33,
+              "none_total": 53,
+              "package_index": 2376,
+              "pair_count_unique": 66,
+              "present_existence_correct": 10,
+              "present_total": 13
+            },
+            {
+              "balanced_existence_accuracy": 0.7027412906910337,
+              "existence_error_count": 41,
+              "none_correct": 66,
+              "none_total": 103,
+              "package_index": 2350,
+              "pair_count_unique": 120,
+              "present_existence_correct": 13,
+              "present_total": 17
+            },
+            {
+              "balanced_existence_accuracy": 0.7323529411764705,
+              "existence_error_count": 76,
+              "none_correct": 96,
+              "none_total": 170,
+              "package_index": 351,
+              "pair_count_unique": 190,
+              "present_existence_correct": 18,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.6808823529411765,
+              "existence_error_count": 56,
+              "none_correct": 121,
+              "none_total": 170,
+              "package_index": 1790,
+              "pair_count_unique": 190,
+              "present_existence_correct": 13,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.794987922705314,
+              "existence_error_count": 62,
+              "none_correct": 148,
+              "none_total": 207,
+              "package_index": 1720,
+              "pair_count_unique": 231,
+              "present_existence_correct": 21,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8207171314741036,
+              "existence_error_count": 90,
+              "none_correct": 161,
+              "none_total": 251,
+              "package_index": 317,
+              "pair_count_unique": 276,
+              "present_existence_correct": 25,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8206374501992032,
+              "existence_error_count": 81,
+              "none_correct": 171,
+              "none_total": 251,
+              "package_index": 1471,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8043478260869565,
+              "existence_error_count": 96,
+              "none_correct": 205,
+              "none_total": 299,
+              "package_index": 362,
+              "pair_count_unique": 325,
+              "present_existence_correct": 24,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.7548100048100048,
+              "existence_error_count": 88,
+              "none_correct": 215,
+              "none_total": 297,
+              "package_index": 1594,
+              "pair_count_unique": 325,
+              "present_existence_correct": 22,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.7661298290682739,
+              "existence_error_count": 86,
+              "none_correct": 270,
+              "none_total": 349,
+              "package_index": 332,
+              "pair_count_unique": 378,
+              "present_existence_correct": 22,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.859500049402233,
+              "existence_error_count": 76,
+              "none_correct": 275,
+              "none_total": 349,
+              "package_index": 1440,
+              "pair_count_unique": 378,
+              "present_existence_correct": 27,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.809366017246886,
+              "existence_error_count": 142,
+              "none_correct": 263,
+              "none_total": 404,
+              "package_index": 250,
+              "pair_count_unique": 435,
+              "present_existence_correct": 30,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.8258374689826302,
+              "existence_error_count": 94,
+              "none_correct": 313,
+              "none_total": 403,
+              "package_index": 1906,
+              "pair_count_unique": 435,
+              "present_existence_correct": 28,
+              "present_total": 32
+            },
+            {
+              "balanced_existence_accuracy": 0.8520518358531317,
+              "existence_error_count": 137,
+              "none_correct": 326,
+              "none_total": 463,
+              "package_index": 763,
+              "pair_count_unique": 496,
+              "present_existence_correct": 33,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.7918258212375859,
+              "existence_error_count": 142,
+              "none_correct": 324,
+              "none_total": 462,
+              "package_index": 1745,
+              "pair_count_unique": 496,
+              "present_existence_correct": 30,
+              "present_total": 34
+            },
+            {
+              "balanced_existence_accuracy": 0.8126833242802824,
+              "existence_error_count": 169,
+              "none_correct": 359,
+              "none_total": 526,
+              "package_index": 850,
+              "pair_count_unique": 561,
+              "present_existence_correct": 33,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8444656488549618,
+              "existence_error_count": 163,
+              "none_correct": 361,
+              "none_total": 524,
+              "package_index": 2224,
+              "pair_count_unique": 561,
+              "present_existence_correct": 37,
+              "present_total": 37
+            },
+            {
+              "balanced_existence_accuracy": 0.8056987908961594,
+              "existence_error_count": 128,
+              "none_correct": 471,
+              "none_total": 592,
+              "package_index": 2308,
+              "pair_count_unique": 630,
+              "present_existence_correct": 31,
+              "present_total": 38
+            },
+            {
+              "balanced_existence_accuracy": 0.8540085476383464,
+              "existence_error_count": 163,
+              "none_correct": 501,
+              "none_total": 662,
+              "package_index": 2212,
+              "pair_count_unique": 703,
+              "present_existence_correct": 39,
+              "present_total": 41
+            },
+            {
+              "balanced_existence_accuracy": 0.8099773242630386,
+              "existence_error_count": 218,
+              "none_correct": 521,
+              "none_total": 735,
+              "package_index": 1960,
+              "pair_count_unique": 780,
+              "present_existence_correct": 41,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8386846405228758,
+              "existence_error_count": 229,
+              "none_correct": 589,
+              "none_total": 816,
+              "package_index": 2299,
+              "pair_count_unique": 861,
+              "present_existence_correct": 43,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8162878455462922,
+              "existence_error_count": 260,
+              "none_correct": 822,
+              "none_total": 1075,
+              "package_index": 2109,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 46,
+              "present_total": 53
+            },
+            {
+              "balanced_existence_accuracy": 0.8245406660860188,
+              "existence_error_count": 339,
+              "none_correct": 935,
+              "none_total": 1269,
+              "package_index": 2209,
+              "pair_count_unique": 1326,
+              "present_existence_correct": 52,
+              "present_total": 57
+            },
+            {
+              "balanced_existence_accuracy": 0.8438677629325111,
+              "existence_error_count": 844,
+              "none_correct": 2077,
+              "none_total": 2919,
+              "package_index": 2333,
+              "pair_count_unique": 3003,
+              "present_existence_correct": 82,
+              "present_total": 84
+            },
+            {
+              "balanced_existence_accuracy": 0.6898148148148148,
+              "existence_error_count": 23,
+              "none_correct": 34,
+              "none_total": 54,
+              "package_index": 1145,
+              "pair_count_unique": 66,
+              "present_existence_correct": 9,
+              "present_total": 12
+            },
+            {
+              "balanced_existence_accuracy": 0.691468253968254,
+              "existence_error_count": 70,
+              "none_correct": 191,
+              "none_total": 252,
+              "package_index": 1122,
+              "pair_count_unique": 276,
+              "present_existence_correct": 15,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8181818181818182,
+              "existence_error_count": 138,
+              "none_correct": 360,
+              "none_total": 495,
+              "package_index": 81,
+              "pair_count_unique": 528,
+              "present_existence_correct": 30,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8643179405520169,
+              "existence_error_count": 237,
+              "none_correct": 706,
+              "none_total": 942,
+              "package_index": 2523,
+              "pair_count_unique": 990,
+              "present_existence_correct": 47,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.826007826007826,
+              "existence_error_count": 252,
+              "none_correct": 977,
+              "none_total": 1221,
+              "package_index": 1407,
+              "pair_count_unique": 1275,
+              "present_existence_correct": 46,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.8302194176358987,
+              "existence_error_count": 818,
+              "none_correct": 1879,
+              "none_total": 2694,
+              "package_index": 2458,
+              "pair_count_unique": 2775,
+              "present_existence_correct": 78,
+              "present_total": 81
+            },
+            {
+              "balanced_existence_accuracy": 0.8822916666666667,
+              "existence_error_count": 337,
+              "none_correct": 1200,
+              "none_total": 1536,
+              "package_index": 1113,
+              "pair_count_unique": 1596,
+              "present_existence_correct": 59,
+              "present_total": 60
+            },
+            {
+              "balanced_existence_accuracy": 0.8483510011778563,
+              "existence_error_count": 515,
+              "none_correct": 1183,
+              "none_total": 1698,
+              "package_index": 2529,
+              "pair_count_unique": 1770,
+              "present_existence_correct": 72,
+              "present_total": 72
+            }
+          ],
+          "threshold": -0.2508005965230932
+        },
+        "evaluation_roc_auc_all_pairs": 0.8879613946132531,
+        "fit_balanced_pair_count": 10252,
+        "fit_roc_auc_all_pairs": 0.8840531898355576,
+        "fit_selected": {
+          "existence_accuracy": 0.7372890857110825,
+          "existence_error_count": 28119,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.8087755499772903,
+          "minimum_molecule_balanced_existence_accuracy": 0.6388888888888888,
+          "molecule_count": 128,
+          "none_accuracy": 0.7290791694469522,
+          "pair_count_unique": 107034,
+          "present_existence_recall": 0.9005072181037846,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.6388888888888888,
+              "existence_error_count": 14,
+              "none_correct": 26,
+              "none_total": 36,
+              "package_index": 885,
+              "pair_count_unique": 45,
+              "present_existence_correct": 5,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.7115384615384616,
+              "existence_error_count": 30,
+              "none_correct": 51,
+              "none_total": 78,
+              "package_index": 892,
+              "pair_count_unique": 91,
+              "present_existence_correct": 10,
+              "present_total": 13
+            },
+            {
+              "balanced_existence_accuracy": 0.7333333333333333,
+              "existence_error_count": 44,
+              "none_correct": 63,
+              "none_total": 105,
+              "package_index": 883,
+              "pair_count_unique": 120,
+              "present_existence_correct": 13,
+              "present_total": 15
+            },
+            {
+              "balanced_existence_accuracy": 0.7668269230769231,
+              "existence_error_count": 21,
+              "none_correct": 88,
+              "none_total": 104,
+              "package_index": 1768,
+              "pair_count_unique": 120,
+              "present_existence_correct": 11,
+              "present_total": 16
+            },
+            {
+              "balanced_existence_accuracy": 0.7939905734485467,
+              "existence_error_count": 31,
+              "none_correct": 107,
+              "none_total": 134,
+              "package_index": 653,
+              "pair_count_unique": 153,
+              "present_existence_correct": 15,
+              "present_total": 19
+            },
+            {
+              "balanced_existence_accuracy": 0.7037037037037037,
+              "existence_error_count": 54,
+              "none_correct": 85,
+              "none_total": 135,
+              "package_index": 1066,
+              "pair_count_unique": 153,
+              "present_existence_correct": 14,
+              "present_total": 18
+            },
+            {
+              "balanced_existence_accuracy": 0.7129629629629629,
+              "existence_error_count": 45,
+              "none_correct": 95,
+              "none_total": 135,
+              "package_index": 1814,
+              "pair_count_unique": 153,
+              "present_existence_correct": 13,
+              "present_total": 18
+            },
+            {
+              "balanced_existence_accuracy": 0.7897999436460975,
+              "existence_error_count": 64,
+              "none_correct": 106,
+              "none_total": 169,
+              "package_index": 307,
+              "pair_count_unique": 190,
+              "present_existence_correct": 20,
+              "present_total": 21
+            },
+            {
+              "balanced_existence_accuracy": 0.8147058823529412,
+              "existence_error_count": 48,
+              "none_correct": 124,
+              "none_total": 170,
+              "package_index": 712,
+              "pair_count_unique": 190,
+              "present_existence_correct": 18,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.8224852071005917,
+              "existence_error_count": 60,
+              "none_correct": 109,
+              "none_total": 169,
+              "package_index": 1450,
+              "pair_count_unique": 190,
+              "present_existence_correct": 21,
+              "present_total": 21
+            },
+            {
+              "balanced_existence_accuracy": 0.8735294117647059,
+              "existence_error_count": 28,
+              "none_correct": 144,
+              "none_total": 170,
+              "package_index": 1784,
+              "pair_count_unique": 190,
+              "present_existence_correct": 18,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.7107023411371237,
+              "existence_error_count": 56,
+              "none_correct": 160,
+              "none_total": 208,
+              "package_index": 152,
+              "pair_count_unique": 231,
+              "present_existence_correct": 15,
+              "present_total": 23
+            },
+            {
+              "balanced_existence_accuracy": 0.8241626794258373,
+              "existence_error_count": 65,
+              "none_correct": 145,
+              "none_total": 209,
+              "package_index": 434,
+              "pair_count_unique": 231,
+              "present_existence_correct": 21,
+              "present_total": 22
+            },
+            {
+              "balanced_existence_accuracy": 0.8074162679425837,
+              "existence_error_count": 55,
+              "none_correct": 157,
+              "none_total": 209,
+              "package_index": 707,
+              "pair_count_unique": 231,
+              "present_existence_correct": 19,
+              "present_total": 22
+            },
+            {
+              "balanced_existence_accuracy": 0.7978678929765887,
+              "existence_error_count": 68,
+              "none_correct": 142,
+              "none_total": 208,
+              "package_index": 1015,
+              "pair_count_unique": 231,
+              "present_existence_correct": 21,
+              "present_total": 23
+            },
+            {
+              "balanced_existence_accuracy": 0.7548309178743962,
+              "existence_error_count": 71,
+              "none_correct": 140,
+              "none_total": 207,
+              "package_index": 1606,
+              "pair_count_unique": 231,
+              "present_existence_correct": 20,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8528708133971292,
+              "existence_error_count": 53,
+              "none_correct": 157,
+              "none_total": 209,
+              "package_index": 1801,
+              "pair_count_unique": 231,
+              "present_existence_correct": 21,
+              "present_total": 22
+            },
+            {
+              "balanced_existence_accuracy": 0.8385657370517928,
+              "existence_error_count": 72,
+              "none_correct": 180,
+              "none_total": 251,
+              "package_index": 105,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8353174603174603,
+              "existence_error_count": 83,
+              "none_correct": 169,
+              "none_total": 252,
+              "package_index": 380,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.7863745019920318,
+              "existence_error_count": 53,
+              "none_correct": 204,
+              "none_total": 251,
+              "package_index": 644,
+              "pair_count_unique": 276,
+              "present_existence_correct": 19,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.850597609561753,
+              "existence_error_count": 75,
+              "none_correct": 176,
+              "none_total": 251,
+              "package_index": 767,
+              "pair_count_unique": 276,
+              "present_existence_correct": 25,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8386454183266933,
+              "existence_error_count": 81,
+              "none_correct": 170,
+              "none_total": 251,
+              "package_index": 1444,
+              "pair_count_unique": 276,
+              "present_existence_correct": 25,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8075384615384615,
+              "existence_error_count": 79,
+              "none_correct": 173,
+              "none_total": 250,
+              "package_index": 1635,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.8043076923076923,
+              "existence_error_count": 72,
+              "none_correct": 181,
+              "none_total": 250,
+              "package_index": 1753,
+              "pair_count_unique": 276,
+              "present_existence_correct": 23,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.7483665338645419,
+              "existence_error_count": 54,
+              "none_correct": 205,
+              "none_total": 251,
+              "package_index": 2098,
+              "pair_count_unique": 276,
+              "present_existence_correct": 17,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8254412130251056,
+              "existence_error_count": 94,
+              "none_correct": 205,
+              "none_total": 298,
+              "package_index": 225,
+              "pair_count_unique": 325,
+              "present_existence_correct": 26,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.7993311036789298,
+              "existence_error_count": 99,
+              "none_correct": 202,
+              "none_total": 299,
+              "package_index": 399,
+              "pair_count_unique": 325,
+              "present_existence_correct": 24,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.8327759197324415,
+              "existence_error_count": 100,
+              "none_correct": 199,
+              "none_total": 299,
+              "package_index": 635,
+              "pair_count_unique": 325,
+              "present_existence_correct": 26,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.8389261744966443,
+              "existence_error_count": 96,
+              "none_correct": 202,
+              "none_total": 298,
+              "package_index": 957,
+              "pair_count_unique": 325,
+              "present_existence_correct": 27,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.8153119562515536,
+              "existence_error_count": 90,
+              "none_correct": 210,
+              "none_total": 298,
+              "package_index": 1489,
+              "pair_count_unique": 325,
+              "present_existence_correct": 25,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.82996632996633,
+              "existence_error_count": 101,
+              "none_correct": 196,
+              "none_total": 297,
+              "package_index": 1721,
+              "pair_count_unique": 325,
+              "present_existence_correct": 28,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.8218494468494468,
+              "existence_error_count": 77,
+              "none_correct": 223,
+              "none_total": 297,
+              "package_index": 1862,
+              "pair_count_unique": 325,
+              "present_existence_correct": 25,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.7979448671079933,
+              "existence_error_count": 130,
+              "none_correct": 220,
+              "none_total": 349,
+              "package_index": 100,
+              "pair_count_unique": 378,
+              "present_existence_correct": 28,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.8008595988538681,
+              "existence_error_count": 139,
+              "none_correct": 210,
+              "none_total": 349,
+              "package_index": 277,
+              "pair_count_unique": 378,
+              "present_existence_correct": 29,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.8085714285714286,
+              "existence_error_count": 88,
+              "none_correct": 266,
+              "none_total": 350,
+              "package_index": 457,
+              "pair_count_unique": 378,
+              "present_existence_correct": 24,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.8581661891117478,
+              "existence_error_count": 99,
+              "none_correct": 250,
+              "none_total": 349,
+              "package_index": 772,
+              "pair_count_unique": 378,
+              "present_existence_correct": 29,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.7863353423574746,
+              "existence_error_count": 105,
+              "none_correct": 248,
+              "none_total": 349,
+              "package_index": 1027,
+              "pair_count_unique": 378,
+              "present_existence_correct": 25,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.8066091954022988,
+              "existence_error_count": 124,
+              "none_correct": 225,
+              "none_total": 348,
+              "package_index": 1620,
+              "pair_count_unique": 378,
+              "present_existence_correct": 29,
+              "present_total": 30
+            },
+            {
+              "balanced_existence_accuracy": 0.7971264367816092,
+              "existence_error_count": 67,
+              "none_correct": 288,
+              "none_total": 348,
+              "package_index": 1889,
+              "pair_count_unique": 378,
+              "present_existence_correct": 23,
+              "present_total": 30
+            },
+            {
+              "balanced_existence_accuracy": 0.8300176629171702,
+              "existence_error_count": 67,
+              "none_correct": 285,
+              "none_total": 347,
+              "package_index": 2191,
+              "pair_count_unique": 378,
+              "present_existence_correct": 26,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.8452171830086235,
+              "existence_error_count": 101,
+              "none_correct": 305,
+              "none_total": 404,
+              "package_index": 204,
+              "pair_count_unique": 435,
+              "present_existence_correct": 29,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.8124224565756824,
+              "existence_error_count": 128,
+              "none_correct": 277,
+              "none_total": 403,
+              "package_index": 495,
+              "pair_count_unique": 435,
+              "present_existence_correct": 30,
+              "present_total": 32
+            },
+            {
+              "balanced_existence_accuracy": 0.7781858831044395,
+              "existence_error_count": 95,
+              "none_correct": 316,
+              "none_total": 404,
+              "package_index": 764,
+              "pair_count_unique": 435,
+              "present_existence_correct": 24,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.7832162248482912,
+              "existence_error_count": 115,
+              "none_correct": 294,
+              "none_total": 404,
+              "package_index": 927,
+              "pair_count_unique": 435,
+              "present_existence_correct": 26,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.7608173076923077,
+              "existence_error_count": 158,
+              "none_correct": 248,
+              "none_total": 403,
+              "package_index": 1541,
+              "pair_count_unique": 435,
+              "present_existence_correct": 29,
+              "present_total": 32
+            },
+            {
+              "balanced_existence_accuracy": 0.8357078245137947,
+              "existence_error_count": 65,
+              "none_correct": 343,
+              "none_total": 402,
+              "package_index": 1965,
+              "pair_count_unique": 435,
+              "present_existence_correct": 27,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8390999547715966,
+              "existence_error_count": 107,
+              "none_correct": 297,
+              "none_total": 402,
+              "package_index": 2215,
+              "pair_count_unique": 435,
+              "present_existence_correct": 31,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8108187708619674,
+              "existence_error_count": 97,
+              "none_correct": 372,
+              "none_total": 463,
+              "package_index": 252,
+              "pair_count_unique": 496,
+              "present_existence_correct": 27,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8125795772854596,
+              "existence_error_count": 148,
+              "none_correct": 316,
+              "none_total": 462,
+              "package_index": 499,
+              "pair_count_unique": 496,
+              "present_existence_correct": 32,
+              "present_total": 34
+            },
+            {
+              "balanced_existence_accuracy": 0.8066627397080961,
+              "existence_error_count": 166,
+              "none_correct": 298,
+              "none_total": 463,
+              "package_index": 813,
+              "pair_count_unique": 496,
+              "present_existence_correct": 32,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8413547237076648,
+              "existence_error_count": 134,
+              "none_correct": 329,
+              "none_total": 462,
+              "package_index": 1495,
+              "pair_count_unique": 496,
+              "present_existence_correct": 33,
+              "present_total": 34
+            },
+            {
+              "balanced_existence_accuracy": 0.7692903625658506,
+              "existence_error_count": 91,
+              "none_correct": 380,
+              "none_total": 461,
+              "package_index": 1973,
+              "pair_count_unique": 496,
+              "present_existence_correct": 25,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8206693523396343,
+              "existence_error_count": 141,
+              "none_correct": 322,
+              "none_total": 461,
+              "package_index": 2144,
+              "pair_count_unique": 496,
+              "present_existence_correct": 33,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8297935904399782,
+              "existence_error_count": 151,
+              "none_correct": 377,
+              "none_total": 526,
+              "package_index": 12,
+              "pair_count_unique": 561,
+              "present_existence_correct": 33,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8428571428571429,
+              "existence_error_count": 165,
+              "none_correct": 360,
+              "none_total": 525,
+              "package_index": 496,
+              "pair_count_unique": 561,
+              "present_existence_correct": 36,
+              "present_total": 36
+            },
+            {
+              "balanced_existence_accuracy": 0.7776190476190477,
+              "existence_error_count": 152,
+              "none_correct": 379,
+              "none_total": 525,
+              "package_index": 967,
+              "pair_count_unique": 561,
+              "present_existence_correct": 30,
+              "present_total": 36
+            },
+            {
+              "balanced_existence_accuracy": 0.8423015873015873,
+              "existence_error_count": 152,
+              "none_correct": 374,
+              "none_total": 525,
+              "package_index": 1870,
+              "pair_count_unique": 561,
+              "present_existence_correct": 35,
+              "present_total": 36
+            },
+            {
+              "balanced_existence_accuracy": 0.8298432019806066,
+              "existence_error_count": 152,
+              "none_correct": 374,
+              "none_total": 524,
+              "package_index": 2213,
+              "pair_count_unique": 561,
+              "present_existence_correct": 35,
+              "present_total": 37
+            },
+            {
+              "balanced_existence_accuracy": 0.8254409552891846,
+              "existence_error_count": 192,
+              "none_correct": 402,
+              "none_total": 593,
+              "package_index": 102,
+              "pair_count_unique": 630,
+              "present_existence_correct": 36,
+              "present_total": 37
+            },
+            {
+              "balanced_existence_accuracy": 0.8170785917496444,
+              "existence_error_count": 202,
+              "none_correct": 391,
+              "none_total": 592,
+              "package_index": 498,
+              "pair_count_unique": 630,
+              "present_existence_correct": 37,
+              "present_total": 38
+            },
+            {
+              "balanced_existence_accuracy": 0.8432610241820768,
+              "existence_error_count": 171,
+              "none_correct": 422,
+              "none_total": 592,
+              "package_index": 1518,
+              "pair_count_unique": 630,
+              "present_existence_correct": 37,
+              "present_total": 38
+            },
+            {
+              "balanced_existence_accuracy": 0.7989406779661017,
+              "existence_error_count": 141,
+              "none_correct": 456,
+              "none_total": 590,
+              "package_index": 2012,
+              "pair_count_unique": 630,
+              "present_existence_correct": 33,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8389951841728491,
+              "existence_error_count": 162,
+              "none_correct": 431,
+              "none_total": 591,
+              "package_index": 2282,
+              "pair_count_unique": 630,
+              "present_existence_correct": 37,
+              "present_total": 39
+            },
+            {
+              "balanced_existence_accuracy": 0.8540158371040724,
+              "existence_error_count": 178,
+              "none_correct": 486,
+              "none_total": 663,
+              "package_index": 21,
+              "pair_count_unique": 703,
+              "present_existence_correct": 39,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.7884049773755656,
+              "existence_error_count": 265,
+              "none_correct": 399,
+              "none_total": 663,
+              "package_index": 553,
+              "pair_count_unique": 703,
+              "present_existence_correct": 39,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8403280542986425,
+              "existence_error_count": 165,
+              "none_correct": 501,
+              "none_total": 663,
+              "package_index": 1787,
+              "pair_count_unique": 703,
+              "present_existence_correct": 37,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8506231539514444,
+              "existence_error_count": 168,
+              "none_correct": 495,
+              "none_total": 661,
+              "package_index": 2026,
+              "pair_count_unique": 703,
+              "present_existence_correct": 40,
+              "present_total": 42
+            },
+            {
+              "balanced_existence_accuracy": 0.8275735023211259,
+              "existence_error_count": 198,
+              "none_correct": 466,
+              "none_total": 662,
+              "package_index": 2273,
+              "pair_count_unique": 703,
+              "present_existence_correct": 39,
+              "present_total": 41
+            },
+            {
+              "balanced_existence_accuracy": 0.8538400607280768,
+              "existence_error_count": 199,
+              "none_correct": 541,
+              "none_total": 739,
+              "package_index": 187,
+              "pair_count_unique": 780,
+              "present_existence_correct": 40,
+              "present_total": 41
+            },
+            {
+              "balanced_existence_accuracy": 0.8405405405405405,
+              "existence_error_count": 201,
+              "none_correct": 541,
+              "none_total": 740,
+              "package_index": 737,
+              "pair_count_unique": 780,
+              "present_existence_correct": 38,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8120181405895691,
+              "existence_error_count": 215,
+              "none_correct": 524,
+              "none_total": 735,
+              "package_index": 1933,
+              "pair_count_unique": 780,
+              "present_existence_correct": 41,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8203639179248935,
+              "existence_error_count": 232,
+              "none_correct": 508,
+              "none_total": 738,
+              "package_index": 2315,
+              "pair_count_unique": 780,
+              "present_existence_correct": 40,
+              "present_total": 42
+            },
+            {
+              "balanced_existence_accuracy": 0.7298611111111111,
+              "existence_error_count": 201,
+              "none_correct": 629,
+              "none_total": 816,
+              "package_index": 522,
+              "pair_count_unique": 861,
+              "present_existence_correct": 31,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.7825980392156863,
+              "existence_error_count": 252,
+              "none_correct": 570,
+              "none_total": 816,
+              "package_index": 991,
+              "pair_count_unique": 861,
+              "present_existence_correct": 39,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8100898692810458,
+              "existence_error_count": 190,
+              "none_correct": 633,
+              "none_total": 816,
+              "package_index": 2072,
+              "pair_count_unique": 861,
+              "present_existence_correct": 38,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8323077651291032,
+              "existence_error_count": 229,
+              "none_correct": 674,
+              "none_total": 899,
+              "package_index": 331,
+              "pair_count_unique": 946,
+              "present_existence_correct": 43,
+              "present_total": 47
+            },
+            {
+              "balanced_existence_accuracy": 0.816280193236715,
+              "existence_error_count": 275,
+              "none_correct": 628,
+              "none_total": 900,
+              "package_index": 567,
+              "pair_count_unique": 946,
+              "present_existence_correct": 43,
+              "present_total": 46
+            },
+            {
+              "balanced_existence_accuracy": 0.816351150705271,
+              "existence_error_count": 259,
+              "none_correct": 643,
+              "none_total": 898,
+              "package_index": 1652,
+              "pair_count_unique": 946,
+              "present_existence_correct": 44,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.7723848159953637,
+              "existence_error_count": 315,
+              "none_correct": 678,
+              "none_total": 986,
+              "package_index": 42,
+              "pair_count_unique": 1035,
+              "present_existence_correct": 42,
+              "present_total": 49
+            },
+            {
+              "balanced_existence_accuracy": 0.809903748733536,
+              "existence_error_count": 297,
+              "none_correct": 694,
+              "none_total": 987,
+              "package_index": 556,
+              "pair_count_unique": 1035,
+              "present_existence_correct": 44,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.7841624365482234,
+              "existence_error_count": 313,
+              "none_correct": 678,
+              "none_total": 985,
+              "package_index": 1589,
+              "pair_count_unique": 1035,
+              "present_existence_correct": 44,
+              "present_total": 50
+            },
+            {
+              "balanced_existence_accuracy": 0.8397912496425508,
+              "existence_error_count": 266,
+              "none_correct": 814,
+              "none_total": 1076,
+              "package_index": 22,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 48,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.7124638156098094,
+              "existence_error_count": 217,
+              "none_correct": 880,
+              "none_total": 1077,
+              "package_index": 747,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 31,
+              "present_total": 51
+            },
+            {
+              "balanced_existence_accuracy": 0.8573420074349443,
+              "existence_error_count": 307,
+              "none_correct": 769,
+              "none_total": 1076,
+              "package_index": 1893,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 52,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.8237571640157125,
+              "existence_error_count": 392,
+              "none_correct": 781,
+              "none_total": 1172,
+              "package_index": 765,
+              "pair_count_unique": 1225,
+              "present_existence_correct": 52,
+              "present_total": 53
+            },
+            {
+              "balanced_existence_accuracy": 0.7908313908313909,
+              "existence_error_count": 307,
+              "none_correct": 872,
+              "none_total": 1170,
+              "package_index": 2268,
+              "pair_count_unique": 1225,
+              "present_existence_correct": 46,
+              "present_total": 55
+            },
+            {
+              "balanced_existence_accuracy": 0.8293932230102443,
+              "existence_error_count": 433,
+              "none_correct": 836,
+              "none_total": 1269,
+              "package_index": 2194,
+              "pair_count_unique": 1326,
+              "present_existence_correct": 57,
+              "present_total": 57
+            },
+            {
+              "balanced_existence_accuracy": 0.8107403872717683,
+              "existence_error_count": 361,
+              "none_correct": 1019,
+              "none_total": 1373,
+              "package_index": 1063,
+              "pair_count_unique": 1431,
+              "present_existence_correct": 51,
+              "present_total": 58
+            },
+            {
+              "balanced_existence_accuracy": 0.7727477477477478,
+              "existence_error_count": 365,
+              "none_correct": 1128,
+              "none_total": 1480,
+              "package_index": 1060,
+              "pair_count_unique": 1540,
+              "present_existence_correct": 47,
+              "present_total": 60
+            },
+            {
+              "balanced_existence_accuracy": 0.7865828092243187,
+              "existence_error_count": 509,
+              "none_correct": 1088,
+              "none_total": 1590,
+              "package_index": 655,
+              "pair_count_unique": 1653,
+              "present_existence_correct": 56,
+              "present_total": 63
+            },
+            {
+              "balanced_existence_accuracy": 0.798849537559215,
+              "existence_error_count": 585,
+              "none_correct": 1124,
+              "none_total": 1705,
+              "package_index": 652,
+              "pair_count_unique": 1770,
+              "present_existence_correct": 61,
+              "present_total": 65
+            },
+            {
+              "balanced_existence_accuracy": 0.7838456143951834,
+              "existence_error_count": 597,
+              "none_correct": 1237,
+              "none_total": 1827,
+              "package_index": 28,
+              "pair_count_unique": 1891,
+              "present_existence_correct": 57,
+              "present_total": 64
+            },
+            {
+              "balanced_existence_accuracy": 0.7648224941042402,
+              "existence_error_count": 507,
+              "none_correct": 1393,
+              "none_total": 1886,
+              "package_index": 612,
+              "pair_count_unique": 1953,
+              "present_existence_correct": 53,
+              "present_total": 67
+            },
+            {
+              "balanced_existence_accuracy": 0.8136824806117321,
+              "existence_error_count": 660,
+              "none_correct": 1418,
+              "none_total": 2074,
+              "package_index": 229,
+              "pair_count_unique": 2145,
+              "present_existence_correct": 67,
+              "present_total": 71
+            },
+            {
+              "balanced_existence_accuracy": 0.8008412770464518,
+              "existence_error_count": 764,
+              "none_correct": 1443,
+              "none_total": 2203,
+              "package_index": 2239,
+              "pair_count_unique": 2278,
+              "present_existence_correct": 71,
+              "present_total": 75
+            },
+            {
+              "balanced_existence_accuracy": 0.72504141407021,
+              "existence_error_count": 605,
+              "none_correct": 2191,
+              "none_total": 2768,
+              "package_index": 2306,
+              "pair_count_unique": 2850,
+              "present_existence_correct": 54,
+              "present_total": 82
+            },
+            {
+              "balanced_existence_accuracy": 0.7037037037037037,
+              "existence_error_count": 10,
+              "none_correct": 20,
+              "none_total": 27,
+              "package_index": 1148,
+              "pair_count_unique": 36,
+              "present_existence_correct": 6,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.7444444444444445,
+              "existence_error_count": 36,
+              "none_correct": 56,
+              "none_total": 90,
+              "package_index": 1222,
+              "pair_count_unique": 105,
+              "present_existence_correct": 13,
+              "present_total": 15
+            },
+            {
+              "balanced_existence_accuracy": 0.7481481481481481,
+              "existence_error_count": 29,
+              "none_correct": 112,
+              "none_total": 135,
+              "package_index": 2402,
+              "pair_count_unique": 153,
+              "present_existence_correct": 12,
+              "present_total": 18
+            },
+            {
+              "balanced_existence_accuracy": 0.7936507936507936,
+              "existence_error_count": 70,
+              "none_correct": 120,
+              "none_total": 189,
+              "package_index": 1225,
+              "pair_count_unique": 210,
+              "present_existence_correct": 20,
+              "present_total": 21
+            },
+            {
+              "balanced_existence_accuracy": 0.876984126984127,
+              "existence_error_count": 62,
+              "none_correct": 190,
+              "none_total": 252,
+              "package_index": 1188,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8117283950617284,
+              "existence_error_count": 89,
+              "none_correct": 238,
+              "none_total": 324,
+              "package_index": 1131,
+              "pair_count_unique": 351,
+              "present_existence_correct": 24,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.8580246913580247,
+              "existence_error_count": 90,
+              "none_correct": 317,
+              "none_total": 405,
+              "package_index": 1197,
+              "pair_count_unique": 435,
+              "present_existence_correct": 28,
+              "present_total": 30
+            },
+            {
+              "balanced_existence_accuracy": 0.8303030303030303,
+              "existence_error_count": 140,
+              "none_correct": 357,
+              "none_total": 495,
+              "package_index": 1128,
+              "pair_count_unique": 528,
+              "present_existence_correct": 31,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8369126643238318,
+              "existence_error_count": 122,
+              "none_correct": 474,
+              "none_total": 591,
+              "package_index": 2453,
+              "pair_count_unique": 630,
+              "present_existence_correct": 34,
+              "present_total": 39
+            },
+            {
+              "balanced_existence_accuracy": 0.7898860398860399,
+              "existence_error_count": 176,
+              "none_correct": 533,
+              "none_total": 702,
+              "package_index": 1271,
+              "pair_count_unique": 741,
+              "present_existence_correct": 32,
+              "present_total": 39
+            },
+            {
+              "balanced_existence_accuracy": 0.8633578431372549,
+              "existence_error_count": 223,
+              "none_correct": 593,
+              "none_total": 816,
+              "package_index": 1256,
+              "pair_count_unique": 861,
+              "present_existence_correct": 45,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8825722632226323,
+              "existence_error_count": 175,
+              "none_correct": 639,
+              "none_total": 813,
+              "package_index": 2476,
+              "pair_count_unique": 861,
+              "present_existence_correct": 47,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8148221868365181,
+              "existence_error_count": 293,
+              "none_correct": 652,
+              "none_total": 942,
+              "package_index": 1181,
+              "pair_count_unique": 990,
+              "present_existence_correct": 45,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8152866242038217,
+              "existence_error_count": 199,
+              "none_correct": 751,
+              "none_total": 942,
+              "package_index": 1396,
+              "pair_count_unique": 990,
+              "present_existence_correct": 40,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8118055555555556,
+              "existence_error_count": 342,
+              "none_correct": 741,
+              "none_total": 1080,
+              "package_index": 1288,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 45,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8067613067613068,
+              "existence_error_count": 299,
+              "none_correct": 930,
+              "none_total": 1221,
+              "package_index": 59,
+              "pair_count_unique": 1275,
+              "present_existence_correct": 46,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.79995904995905,
+              "existence_error_count": 294,
+              "none_correct": 936,
+              "none_total": 1221,
+              "package_index": 1295,
+              "pair_count_unique": 1275,
+              "present_existence_correct": 45,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.8698462613556953,
+              "existence_error_count": 286,
+              "none_correct": 988,
+              "none_total": 1272,
+              "package_index": 2500,
+              "pair_count_unique": 1326,
+              "present_existence_correct": 52,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.7895694476365587,
+              "existence_error_count": 301,
+              "none_correct": 1085,
+              "none_total": 1374,
+              "package_index": 2452,
+              "pair_count_unique": 1431,
+              "present_existence_correct": 45,
+              "present_total": 57
+            },
+            {
+              "balanced_existence_accuracy": 0.8315104166666667,
+              "existence_error_count": 370,
+              "none_correct": 1172,
+              "none_total": 1536,
+              "package_index": 1409,
+              "pair_count_unique": 1596,
+              "present_existence_correct": 54,
+              "present_total": 60
+            },
+            {
+              "balanced_existence_accuracy": 0.8562609618757501,
+              "existence_error_count": 489,
+              "none_correct": 1397,
+              "none_total": 1884,
+              "package_index": 2510,
+              "pair_count_unique": 1953,
+              "present_existence_correct": 67,
+              "present_total": 69
+            },
+            {
+              "balanced_existence_accuracy": 0.8078630409138884,
+              "existence_error_count": 583,
+              "none_correct": 1907,
+              "none_total": 2478,
+              "package_index": 1309,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 66,
+              "present_total": 78
+            },
+            {
+              "balanced_existence_accuracy": 0.838426957023839,
+              "existence_error_count": 677,
+              "none_correct": 2023,
+              "none_total": 2694,
+              "package_index": 1415,
+              "pair_count_unique": 2775,
+              "present_existence_correct": 75,
+              "present_total": 81
+            },
+            {
+              "balanced_existence_accuracy": 0.8206232853223594,
+              "existence_error_count": 901,
+              "none_correct": 2755,
+              "none_total": 3645,
+              "package_index": 2408,
+              "pair_count_unique": 3741,
+              "present_existence_correct": 85,
+              "present_total": 96
+            },
+            {
+              "balanced_existence_accuracy": 0.8802631578947369,
+              "existence_error_count": 37,
+              "none_correct": 154,
+              "none_total": 190,
+              "package_index": 48,
+              "pair_count_unique": 210,
+              "present_existence_correct": 19,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.8073248407643312,
+              "existence_error_count": 363,
+              "none_correct": 579,
+              "none_total": 942,
+              "package_index": 1112,
+              "pair_count_unique": 990,
+              "present_existence_correct": 48,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8534552625891506,
+              "existence_error_count": 184,
+              "none_correct": 1147,
+              "none_total": 1322,
+              "package_index": 1410,
+              "pair_count_unique": 1378,
+              "present_existence_correct": 47,
+              "present_total": 56
+            },
+            {
+              "balanced_existence_accuracy": 0.8636872910952231,
+              "existence_error_count": 1034,
+              "none_correct": 3915,
+              "none_total": 4942,
+              "package_index": 1421,
+              "pair_count_unique": 5050,
+              "present_existence_correct": 101,
+              "present_total": 108
+            },
+            {
+              "balanced_existence_accuracy": 0.8380447585394581,
+              "existence_error_count": 550,
+              "none_correct": 1148,
+              "none_total": 1698,
+              "package_index": 2527,
+              "pair_count_unique": 1770,
+              "present_existence_correct": 72,
+              "present_total": 72
+            },
+            {
+              "balanced_existence_accuracy": 0.8362978829080524,
+              "existence_error_count": 719,
+              "none_correct": 1762,
+              "none_total": 2478,
+              "package_index": 858,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 75,
+              "present_total": 78
+            },
+            {
+              "balanced_existence_accuracy": 0.8193770226537217,
+              "existence_error_count": 694,
+              "none_correct": 1785,
+              "none_total": 2472,
+              "package_index": 2526,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 77,
+              "present_total": 84
+            },
+            {
+              "balanced_existence_accuracy": 0.839253165771297,
+              "existence_error_count": 1217,
+              "none_correct": 2693,
+              "none_total": 3909,
+              "package_index": 859,
+              "pair_count_unique": 4005,
+              "present_existence_correct": 95,
+              "present_total": 96
+            }
+          ],
+          "threshold": -0.2508005965230932
+        },
+        "nonlinear_map": null,
+        "optimizer": {
+          "algorithm": "deterministic float64 Newton/IRLS logistic regression",
+          "converged": true,
+          "iterations": 8,
+          "l2": 0.01
+        },
+        "probe": "linear logistic readout",
+        "probe_fingerprint": "583b2e6b5581d524b13aa003cfb51d2ccb8eb43b35dd56a7fc5e034ed90e28ba",
+        "selected_global_threshold_on_fit": -0.2508005965230932,
+        "uae3d_weights_updated": false
+      },
+      "nonlinear": {
+        "evaluation_at_unchanged_threshold": {
+          "existence_accuracy": 0.7656743154482641,
+          "existence_error_count": 5494,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.8093387200915473,
+          "minimum_molecule_balanced_existence_accuracy": 0.6795634920634921,
+          "molecule_count": 32,
+          "none_accuracy": 0.7593183759723034,
+          "pair_count_unique": 23446,
+          "present_existence_recall": 0.8829875518672199,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.772133526850508,
+              "existence_error_count": 18,
+              "none_correct": 37,
+              "none_total": 53,
+              "package_index": 2376,
+              "pair_count_unique": 66,
+              "present_existence_correct": 11,
+              "present_total": 13
+            },
+            {
+              "balanced_existence_accuracy": 0.7612792689891491,
+              "existence_error_count": 34,
+              "none_correct": 72,
+              "none_total": 103,
+              "package_index": 2350,
+              "pair_count_unique": 120,
+              "present_existence_correct": 14,
+              "present_total": 17
+            },
+            {
+              "balanced_existence_accuracy": 0.7838235294117647,
+              "existence_error_count": 66,
+              "none_correct": 105,
+              "none_total": 170,
+              "package_index": 351,
+              "pair_count_unique": 190,
+              "present_existence_correct": 19,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.7294117647058823,
+              "existence_error_count": 47,
+              "none_correct": 129,
+              "none_total": 170,
+              "package_index": 1790,
+              "pair_count_unique": 190,
+              "present_existence_correct": 14,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.8200483091787439,
+              "existence_error_count": 44,
+              "none_correct": 167,
+              "none_total": 207,
+              "package_index": 1720,
+              "pair_count_unique": 231,
+              "present_existence_correct": 20,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8266135458167331,
+              "existence_error_count": 78,
+              "none_correct": 174,
+              "none_total": 251,
+              "package_index": 317,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8424701195219123,
+              "existence_error_count": 61,
+              "none_correct": 192,
+              "none_total": 251,
+              "package_index": 1471,
+              "pair_count_unique": 276,
+              "present_existence_correct": 23,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.822742474916388,
+              "existence_error_count": 85,
+              "none_correct": 216,
+              "none_total": 299,
+              "package_index": 362,
+              "pair_count_unique": 325,
+              "present_existence_correct": 24,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.7275132275132276,
+              "existence_error_count": 85,
+              "none_correct": 220,
+              "none_total": 297,
+              "package_index": 1594,
+              "pair_count_unique": 325,
+              "present_existence_correct": 20,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.7833218061456377,
+              "existence_error_count": 74,
+              "none_correct": 282,
+              "none_total": 349,
+              "package_index": 332,
+              "pair_count_unique": 378,
+              "present_existence_correct": 22,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.8393933405789942,
+              "existence_error_count": 79,
+              "none_correct": 273,
+              "none_total": 349,
+              "package_index": 1440,
+              "pair_count_unique": 378,
+              "present_existence_correct": 26,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.8129990418396679,
+              "existence_error_count": 115,
+              "none_correct": 292,
+              "none_total": 404,
+              "package_index": 250,
+              "pair_count_unique": 435,
+              "present_existence_correct": 28,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.8144385856079405,
+              "existence_error_count": 80,
+              "none_correct": 329,
+              "none_total": 403,
+              "package_index": 1906,
+              "pair_count_unique": 435,
+              "present_existence_correct": 26,
+              "present_total": 32
+            },
+            {
+              "balanced_existence_accuracy": 0.8487793703776425,
+              "existence_error_count": 127,
+              "none_correct": 337,
+              "none_total": 463,
+              "package_index": 763,
+              "pair_count_unique": 496,
+              "present_existence_correct": 32,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8026483320600968,
+              "existence_error_count": 132,
+              "none_correct": 334,
+              "none_total": 462,
+              "package_index": 1745,
+              "pair_count_unique": 496,
+              "present_existence_correct": 30,
+              "present_total": 34
+            },
+            {
+              "balanced_existence_accuracy": 0.8431015752308528,
+              "existence_error_count": 137,
+              "none_correct": 391,
+              "none_total": 526,
+              "package_index": 850,
+              "pair_count_unique": 561,
+              "present_existence_correct": 33,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8567154941200743,
+              "existence_error_count": 137,
+              "none_correct": 388,
+              "none_total": 524,
+              "package_index": 2224,
+              "pair_count_unique": 561,
+              "present_existence_correct": 36,
+              "present_total": 37
+            },
+            {
+              "balanced_existence_accuracy": 0.7568012091038406,
+              "existence_error_count": 113,
+              "none_correct": 491,
+              "none_total": 592,
+              "package_index": 2308,
+              "pair_count_unique": 630,
+              "present_existence_correct": 26,
+              "present_total": 38
+            },
+            {
+              "balanced_existence_accuracy": 0.8326394517721613,
+              "existence_error_count": 161,
+              "none_correct": 505,
+              "none_total": 662,
+              "package_index": 2212,
+              "pair_count_unique": 703,
+              "present_existence_correct": 37,
+              "present_total": 41
+            },
+            {
+              "balanced_existence_accuracy": 0.8131519274376418,
+              "existence_error_count": 198,
+              "none_correct": 542,
+              "none_total": 735,
+              "package_index": 1960,
+              "pair_count_unique": 780,
+              "present_existence_correct": 40,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.832312091503268,
+              "existence_error_count": 188,
+              "none_correct": 633,
+              "none_total": 816,
+              "package_index": 2299,
+              "pair_count_unique": 861,
+              "present_existence_correct": 40,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8203422553751646,
+              "existence_error_count": 232,
+              "none_correct": 851,
+              "none_total": 1075,
+              "package_index": 2109,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 45,
+              "present_total": 53
+            },
+            {
+              "balanced_existence_accuracy": 0.827879391149268,
+              "existence_error_count": 288,
+              "none_correct": 988,
+              "none_total": 1269,
+              "package_index": 2209,
+              "pair_count_unique": 1326,
+              "present_existence_correct": 50,
+              "present_total": 57
+            },
+            {
+              "balanced_existence_accuracy": 0.828622816032888,
+              "existence_error_count": 798,
+              "none_correct": 2127,
+              "none_total": 2919,
+              "package_index": 2333,
+              "pair_count_unique": 3003,
+              "present_existence_correct": 78,
+              "present_total": 84
+            },
+            {
+              "balanced_existence_accuracy": 0.7314814814814815,
+              "existence_error_count": 22,
+              "none_correct": 34,
+              "none_total": 54,
+              "package_index": 1145,
+              "pair_count_unique": 66,
+              "present_existence_correct": 10,
+              "present_total": 12
+            },
+            {
+              "balanced_existence_accuracy": 0.6795634920634921,
+              "existence_error_count": 57,
+              "none_correct": 206,
+              "none_total": 252,
+              "package_index": 1122,
+              "pair_count_unique": 276,
+              "present_existence_correct": 13,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8191919191919191,
+              "existence_error_count": 123,
+              "none_correct": 376,
+              "none_total": 495,
+              "package_index": 81,
+              "pair_count_unique": 528,
+              "present_existence_correct": 29,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8710854564755839,
+              "existence_error_count": 187,
+              "none_correct": 758,
+              "none_total": 942,
+              "package_index": 2523,
+              "pair_count_unique": 990,
+              "present_existence_correct": 45,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8148603148603148,
+              "existence_error_count": 236,
+              "none_correct": 995,
+              "none_total": 1221,
+              "package_index": 1407,
+              "pair_count_unique": 1275,
+              "present_existence_correct": 44,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.8288239984602271,
+              "existence_error_count": 761,
+              "none_correct": 1938,
+              "none_total": 2694,
+              "package_index": 2458,
+              "pair_count_unique": 2775,
+              "present_existence_correct": 76,
+              "present_total": 81
+            },
+            {
+              "balanced_existence_accuracy": 0.8998697916666667,
+              "existence_error_count": 283,
+              "none_correct": 1254,
+              "none_total": 1536,
+              "package_index": 1113,
+              "pair_count_unique": 1596,
+              "present_existence_correct": 59,
+              "present_total": 60
+            },
+            {
+              "balanced_existence_accuracy": 0.8547801334903808,
+              "existence_error_count": 448,
+              "none_correct": 1252,
+              "none_total": 1698,
+              "package_index": 2529,
+              "pair_count_unique": 1770,
+              "present_existence_correct": 70,
+              "present_total": 72
+            }
+          ],
+          "threshold": -0.021385023969358485
+        },
+        "evaluation_roc_auc_all_pairs": 0.8897699493720338,
+        "fit_balanced_pair_count": 10252,
+        "fit_roc_auc_all_pairs": 0.8907529989141553,
+        "fit_selected": {
+          "existence_accuracy": 0.7697180335220584,
+          "existence_error_count": 24648,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.8164242113726538,
+          "minimum_molecule_balanced_existence_accuracy": 0.6282051282051282,
+          "molecule_count": 128,
+          "none_accuracy": 0.764100953801468,
+          "pair_count_unique": 107034,
+          "present_existence_recall": 0.8813889972688256,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.7083333333333334,
+              "existence_error_count": 12,
+              "none_correct": 27,
+              "none_total": 36,
+              "package_index": 885,
+              "pair_count_unique": 45,
+              "present_existence_correct": 6,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.6282051282051282,
+              "existence_error_count": 28,
+              "none_correct": 56,
+              "none_total": 78,
+              "package_index": 892,
+              "pair_count_unique": 91,
+              "present_existence_correct": 7,
+              "present_total": 13
+            },
+            {
+              "balanced_existence_accuracy": 0.819047619047619,
+              "existence_error_count": 32,
+              "none_correct": 74,
+              "none_total": 105,
+              "package_index": 883,
+              "pair_count_unique": 120,
+              "present_existence_correct": 14,
+              "present_total": 15
+            },
+            {
+              "balanced_existence_accuracy": 0.8197115384615384,
+              "existence_error_count": 21,
+              "none_correct": 86,
+              "none_total": 104,
+              "package_index": 1768,
+              "pair_count_unique": 120,
+              "present_existence_correct": 13,
+              "present_total": 16
+            },
+            {
+              "balanced_existence_accuracy": 0.7676747839748626,
+              "existence_error_count": 32,
+              "none_correct": 107,
+              "none_total": 134,
+              "package_index": 653,
+              "pair_count_unique": 153,
+              "present_existence_correct": 14,
+              "present_total": 19
+            },
+            {
+              "balanced_existence_accuracy": 0.7703703703703704,
+              "existence_error_count": 49,
+              "none_correct": 88,
+              "none_total": 135,
+              "package_index": 1066,
+              "pair_count_unique": 153,
+              "present_existence_correct": 16,
+              "present_total": 18
+            },
+            {
+              "balanced_existence_accuracy": 0.8111111111111111,
+              "existence_error_count": 38,
+              "none_correct": 99,
+              "none_total": 135,
+              "package_index": 1814,
+              "pair_count_unique": 153,
+              "present_existence_correct": 16,
+              "present_total": 18
+            },
+            {
+              "balanced_existence_accuracy": 0.7421808960270498,
+              "existence_error_count": 66,
+              "none_correct": 106,
+              "none_total": 169,
+              "package_index": 307,
+              "pair_count_unique": 190,
+              "present_existence_correct": 18,
+              "present_total": 21
+            },
+            {
+              "balanced_existence_accuracy": 0.8647058823529412,
+              "existence_error_count": 46,
+              "none_correct": 124,
+              "none_total": 170,
+              "package_index": 712,
+              "pair_count_unique": 190,
+              "present_existence_correct": 20,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.8284023668639053,
+              "existence_error_count": 58,
+              "none_correct": 111,
+              "none_total": 169,
+              "package_index": 1450,
+              "pair_count_unique": 190,
+              "present_existence_correct": 21,
+              "present_total": 21
+            },
+            {
+              "balanced_existence_accuracy": 0.8852941176470588,
+              "existence_error_count": 24,
+              "none_correct": 148,
+              "none_total": 170,
+              "package_index": 1784,
+              "pair_count_unique": 190,
+              "present_existence_correct": 18,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.7396530100334449,
+              "existence_error_count": 52,
+              "none_correct": 163,
+              "none_total": 208,
+              "package_index": 152,
+              "pair_count_unique": 231,
+              "present_existence_correct": 16,
+              "present_total": 23
+            },
+            {
+              "balanced_existence_accuracy": 0.8385167464114832,
+              "existence_error_count": 59,
+              "none_correct": 151,
+              "none_total": 209,
+              "package_index": 434,
+              "pair_count_unique": 231,
+              "present_existence_correct": 21,
+              "present_total": 22
+            },
+            {
+              "balanced_existence_accuracy": 0.8325358851674641,
+              "existence_error_count": 53,
+              "none_correct": 158,
+              "none_total": 209,
+              "package_index": 707,
+              "pair_count_unique": 231,
+              "present_existence_correct": 20,
+              "present_total": 22
+            },
+            {
+              "balanced_existence_accuracy": 0.7905518394648829,
+              "existence_error_count": 63,
+              "none_correct": 148,
+              "none_total": 208,
+              "package_index": 1015,
+              "pair_count_unique": 231,
+              "present_existence_correct": 20,
+              "present_total": 23
+            },
+            {
+              "balanced_existence_accuracy": 0.7765700483091788,
+              "existence_error_count": 62,
+              "none_correct": 149,
+              "none_total": 207,
+              "package_index": 1606,
+              "pair_count_unique": 231,
+              "present_existence_correct": 20,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8528708133971292,
+              "existence_error_count": 53,
+              "none_correct": 157,
+              "none_total": 209,
+              "package_index": 1801,
+              "pair_count_unique": 231,
+              "present_existence_correct": 21,
+              "present_total": 22
+            },
+            {
+              "balanced_existence_accuracy": 0.7985657370517928,
+              "existence_error_count": 74,
+              "none_correct": 180,
+              "none_total": 251,
+              "package_index": 105,
+              "pair_count_unique": 276,
+              "present_existence_correct": 22,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8412698412698413,
+              "existence_error_count": 80,
+              "none_correct": 172,
+              "none_total": 252,
+              "package_index": 380,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.7782470119521913,
+              "existence_error_count": 39,
+              "none_correct": 220,
+              "none_total": 251,
+              "package_index": 644,
+              "pair_count_unique": 276,
+              "present_existence_correct": 17,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8665338645418327,
+              "existence_error_count": 67,
+              "none_correct": 184,
+              "none_total": 251,
+              "package_index": 767,
+              "pair_count_unique": 276,
+              "present_existence_correct": 25,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.832589641434263,
+              "existence_error_count": 75,
+              "none_correct": 177,
+              "none_total": 251,
+              "package_index": 1444,
+              "pair_count_unique": 276,
+              "present_existence_correct": 24,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.7990769230769231,
+              "existence_error_count": 66,
+              "none_correct": 188,
+              "none_total": 250,
+              "package_index": 1635,
+              "pair_count_unique": 276,
+              "present_existence_correct": 22,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.7798461538461539,
+              "existence_error_count": 67,
+              "none_correct": 188,
+              "none_total": 250,
+              "package_index": 1753,
+              "pair_count_unique": 276,
+              "present_existence_correct": 21,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.772191235059761,
+              "existence_error_count": 33,
+              "none_correct": 227,
+              "none_total": 251,
+              "package_index": 2098,
+              "pair_count_unique": 276,
+              "present_existence_correct": 16,
+              "present_total": 25
+            },
+            {
+              "balanced_existence_accuracy": 0.8455754412130251,
+              "existence_error_count": 82,
+              "none_correct": 217,
+              "none_total": 298,
+              "package_index": 225,
+              "pair_count_unique": 325,
+              "present_existence_correct": 26,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.8336120401337793,
+              "existence_error_count": 89,
+              "none_correct": 211,
+              "none_total": 299,
+              "package_index": 399,
+              "pair_count_unique": 325,
+              "present_existence_correct": 25,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.8444816053511706,
+              "existence_error_count": 93,
+              "none_correct": 206,
+              "none_total": 299,
+              "package_index": 635,
+              "pair_count_unique": 325,
+              "present_existence_correct": 26,
+              "present_total": 26
+            },
+            {
+              "balanced_existence_accuracy": 0.8523489932885906,
+              "existence_error_count": 88,
+              "none_correct": 210,
+              "none_total": 298,
+              "package_index": 957,
+              "pair_count_unique": 325,
+              "present_existence_correct": 27,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.8152498135719612,
+              "existence_error_count": 80,
+              "none_correct": 221,
+              "none_total": 298,
+              "package_index": 1489,
+              "pair_count_unique": 325,
+              "present_existence_correct": 24,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.827922077922078,
+              "existence_error_count": 83,
+              "none_correct": 216,
+              "none_total": 297,
+              "package_index": 1721,
+              "pair_count_unique": 325,
+              "present_existence_correct": 26,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.8225108225108225,
+              "existence_error_count": 67,
+              "none_correct": 234,
+              "none_total": 297,
+              "package_index": 1862,
+              "pair_count_unique": 325,
+              "present_existence_correct": 24,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.8280308269933802,
+              "existence_error_count": 109,
+              "none_correct": 241,
+              "none_total": 349,
+              "package_index": 100,
+              "pair_count_unique": 378,
+              "present_existence_correct": 28,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.8166189111747851,
+              "existence_error_count": 128,
+              "none_correct": 221,
+              "none_total": 349,
+              "package_index": 277,
+              "pair_count_unique": 378,
+              "present_existence_correct": 29,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.6714285714285714,
+              "existence_error_count": 92,
+              "none_correct": 270,
+              "none_total": 350,
+              "package_index": 457,
+              "pair_count_unique": 378,
+              "present_existence_correct": 16,
+              "present_total": 28
+            },
+            {
+              "balanced_existence_accuracy": 0.843740737081316,
+              "existence_error_count": 87,
+              "none_correct": 264,
+              "none_total": 349,
+              "package_index": 772,
+              "pair_count_unique": 378,
+              "present_existence_correct": 27,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.7403418634522281,
+              "existence_error_count": 104,
+              "none_correct": 252,
+              "none_total": 349,
+              "package_index": 1027,
+              "pair_count_unique": 378,
+              "present_existence_correct": 22,
+              "present_total": 29
+            },
+            {
+              "balanced_existence_accuracy": 0.7905172413793103,
+              "existence_error_count": 114,
+              "none_correct": 237,
+              "none_total": 348,
+              "package_index": 1620,
+              "pair_count_unique": 378,
+              "present_existence_correct": 27,
+              "present_total": 30
+            },
+            {
+              "balanced_existence_accuracy": 0.796264367816092,
+              "existence_error_count": 57,
+              "none_correct": 299,
+              "none_total": 348,
+              "package_index": 1889,
+              "pair_count_unique": 378,
+              "present_existence_correct": 22,
+              "present_total": 30
+            },
+            {
+              "balanced_existence_accuracy": 0.809286975922655,
+              "existence_error_count": 61,
+              "none_correct": 293,
+              "none_total": 347,
+              "package_index": 2191,
+              "pair_count_unique": 378,
+              "present_existence_correct": 24,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.8724848291280741,
+              "existence_error_count": 91,
+              "none_correct": 314,
+              "none_total": 404,
+              "package_index": 204,
+              "pair_count_unique": 435,
+              "present_existence_correct": 30,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.8196339950372209,
+              "existence_error_count": 99,
+              "none_correct": 308,
+              "none_total": 403,
+              "package_index": 495,
+              "pair_count_unique": 435,
+              "present_existence_correct": 28,
+              "present_total": 32
+            },
+            {
+              "balanced_existence_accuracy": 0.7682050463110828,
+              "existence_error_count": 79,
+              "none_correct": 334,
+              "none_total": 404,
+              "package_index": 764,
+              "pair_count_unique": 435,
+              "present_existence_correct": 22,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.8067310763334398,
+              "existence_error_count": 96,
+              "none_correct": 313,
+              "none_total": 404,
+              "package_index": 927,
+              "pair_count_unique": 435,
+              "present_existence_correct": 26,
+              "present_total": 31
+            },
+            {
+              "balanced_existence_accuracy": 0.7843905086848635,
+              "existence_error_count": 139,
+              "none_correct": 267,
+              "none_total": 403,
+              "package_index": 1541,
+              "pair_count_unique": 435,
+              "present_existence_correct": 29,
+              "present_total": 32
+            },
+            {
+              "balanced_existence_accuracy": 0.7408412483039348,
+              "existence_error_count": 63,
+              "none_correct": 352,
+              "none_total": 402,
+              "package_index": 1965,
+              "pair_count_unique": 435,
+              "present_existence_correct": 20,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8604703753957486,
+              "existence_error_count": 101,
+              "none_correct": 302,
+              "none_total": 402,
+              "package_index": 2215,
+              "pair_count_unique": 435,
+              "present_existence_correct": 32,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8595130571372472,
+              "existence_error_count": 91,
+              "none_correct": 375,
+              "none_total": 463,
+              "package_index": 252,
+              "pair_count_unique": 496,
+              "present_existence_correct": 30,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.829895594601477,
+              "existence_error_count": 132,
+              "none_correct": 332,
+              "none_total": 462,
+              "package_index": 499,
+              "pair_count_unique": 496,
+              "present_existence_correct": 32,
+              "present_total": 34
+            },
+            {
+              "balanced_existence_accuracy": 0.7990051704954513,
+              "existence_error_count": 134,
+              "none_correct": 333,
+              "none_total": 463,
+              "package_index": 813,
+              "pair_count_unique": 496,
+              "present_existence_correct": 29,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.818436465495289,
+              "existence_error_count": 130,
+              "none_correct": 335,
+              "none_total": 462,
+              "package_index": 1495,
+              "pair_count_unique": 496,
+              "present_existence_correct": 31,
+              "present_total": 34
+            },
+            {
+              "balanced_existence_accuracy": 0.7922528664394174,
+              "existence_error_count": 82,
+              "none_correct": 388,
+              "none_total": 461,
+              "package_index": 1973,
+              "pair_count_unique": 496,
+              "present_existence_correct": 26,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8105361016423923,
+              "existence_error_count": 126,
+              "none_correct": 339,
+              "none_total": 461,
+              "package_index": 2144,
+              "pair_count_unique": 496,
+              "present_existence_correct": 31,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8249864204236828,
+              "existence_error_count": 128,
+              "none_correct": 402,
+              "none_total": 526,
+              "package_index": 12,
+              "pair_count_unique": 561,
+              "present_existence_correct": 31,
+              "present_total": 35
+            },
+            {
+              "balanced_existence_accuracy": 0.8417460317460318,
+              "existence_error_count": 139,
+              "none_correct": 388,
+              "none_total": 525,
+              "package_index": 496,
+              "pair_count_unique": 561,
+              "present_existence_correct": 34,
+              "present_total": 36
+            },
+            {
+              "balanced_existence_accuracy": 0.7415079365079366,
+              "existence_error_count": 122,
+              "none_correct": 414,
+              "none_total": 525,
+              "package_index": 967,
+              "pair_count_unique": 561,
+              "present_existence_correct": 25,
+              "present_total": 36
+            },
+            {
+              "balanced_existence_accuracy": 0.8537301587301588,
+              "existence_error_count": 140,
+              "none_correct": 386,
+              "none_total": 525,
+              "package_index": 1870,
+              "pair_count_unique": 561,
+              "present_existence_correct": 35,
+              "present_total": 36
+            },
+            {
+              "balanced_existence_accuracy": 0.8422477821332783,
+              "existence_error_count": 139,
+              "none_correct": 387,
+              "none_total": 524,
+              "package_index": 2213,
+              "pair_count_unique": 561,
+              "present_existence_correct": 35,
+              "present_total": 37
+            },
+            {
+              "balanced_existence_accuracy": 0.830499977211613,
+              "existence_error_count": 186,
+              "none_correct": 408,
+              "none_total": 593,
+              "package_index": 102,
+              "pair_count_unique": 630,
+              "present_existence_correct": 36,
+              "present_total": 37
+            },
+            {
+              "balanced_existence_accuracy": 0.8297475106685633,
+              "existence_error_count": 187,
+              "none_correct": 406,
+              "none_total": 592,
+              "package_index": 498,
+              "pair_count_unique": 630,
+              "present_existence_correct": 37,
+              "present_total": 38
+            },
+            {
+              "balanced_existence_accuracy": 0.8554409672830725,
+              "existence_error_count": 142,
+              "none_correct": 452,
+              "none_total": 592,
+              "package_index": 1518,
+              "pair_count_unique": 630,
+              "present_existence_correct": 36,
+              "present_total": 38
+            },
+            {
+              "balanced_existence_accuracy": 0.8324152542372881,
+              "existence_error_count": 129,
+              "none_correct": 466,
+              "none_total": 590,
+              "package_index": 2012,
+              "pair_count_unique": 630,
+              "present_existence_correct": 35,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8336587270597423,
+              "existence_error_count": 140,
+              "none_correct": 455,
+              "none_total": 591,
+              "package_index": 2282,
+              "pair_count_unique": 630,
+              "present_existence_correct": 35,
+              "present_total": 39
+            },
+            {
+              "balanced_existence_accuracy": 0.856919306184012,
+              "existence_error_count": 143,
+              "none_correct": 523,
+              "none_total": 663,
+              "package_index": 21,
+              "pair_count_unique": 703,
+              "present_existence_correct": 37,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.7882918552036199,
+              "existence_error_count": 234,
+              "none_correct": 432,
+              "none_total": 663,
+              "package_index": 553,
+              "pair_count_unique": 703,
+              "present_existence_correct": 37,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8781485671191553,
+              "existence_error_count": 146,
+              "none_correct": 518,
+              "none_total": 663,
+              "package_index": 1787,
+              "pair_count_unique": 703,
+              "present_existence_correct": 39,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8381600749225561,
+              "existence_error_count": 155,
+              "none_correct": 510,
+              "none_total": 661,
+              "package_index": 2026,
+              "pair_count_unique": 703,
+              "present_existence_correct": 38,
+              "present_total": 42
+            },
+            {
+              "balanced_existence_accuracy": 0.826707685505858,
+              "existence_error_count": 184,
+              "none_correct": 481,
+              "none_total": 662,
+              "package_index": 2273,
+              "pair_count_unique": 703,
+              "present_existence_correct": 38,
+              "present_total": 41
+            },
+            {
+              "balanced_existence_accuracy": 0.8429981187497937,
+              "existence_error_count": 198,
+              "none_correct": 543,
+              "none_total": 739,
+              "package_index": 187,
+              "pair_count_unique": 780,
+              "present_existence_correct": 39,
+              "present_total": 41
+            },
+            {
+              "balanced_existence_accuracy": 0.8432432432432433,
+              "existence_error_count": 162,
+              "none_correct": 582,
+              "none_total": 740,
+              "package_index": 737,
+              "pair_count_unique": 780,
+              "present_existence_correct": 36,
+              "present_total": 40
+            },
+            {
+              "balanced_existence_accuracy": 0.8,
+              "existence_error_count": 202,
+              "none_correct": 539,
+              "none_total": 735,
+              "package_index": 1933,
+              "pair_count_unique": 780,
+              "present_existence_correct": 39,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8305265195509098,
+              "existence_error_count": 217,
+              "none_correct": 523,
+              "none_total": 738,
+              "package_index": 2315,
+              "pair_count_unique": 780,
+              "present_existence_correct": 40,
+              "present_total": 42
+            },
+            {
+              "balanced_existence_accuracy": 0.7915441176470588,
+              "existence_error_count": 186,
+              "none_correct": 639,
+              "none_total": 816,
+              "package_index": 522,
+              "pair_count_unique": 861,
+              "present_existence_correct": 36,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.7874183006535947,
+              "existence_error_count": 227,
+              "none_correct": 596,
+              "none_total": 816,
+              "package_index": 991,
+              "pair_count_unique": 861,
+              "present_existence_correct": 38,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8267156862745098,
+              "existence_error_count": 180,
+              "none_correct": 642,
+              "none_total": 816,
+              "package_index": 2072,
+              "pair_count_unique": 861,
+              "present_existence_correct": 39,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8142262087899084,
+              "existence_error_count": 189,
+              "none_correct": 718,
+              "none_total": 899,
+              "package_index": 331,
+              "pair_count_unique": 946,
+              "present_existence_correct": 39,
+              "present_total": 47
+            },
+            {
+              "balanced_existence_accuracy": 0.8404830917874396,
+              "existence_error_count": 250,
+              "none_correct": 652,
+              "none_total": 900,
+              "package_index": 567,
+              "pair_count_unique": 946,
+              "present_existence_correct": 44,
+              "present_total": 46
+            },
+            {
+              "balanced_existence_accuracy": 0.8215246844840386,
+              "existence_error_count": 232,
+              "none_correct": 671,
+              "none_total": 898,
+              "package_index": 1652,
+              "pair_count_unique": 946,
+              "present_existence_correct": 43,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.7727056339777291,
+              "existence_error_count": 257,
+              "none_correct": 739,
+              "none_total": 986,
+              "package_index": 42,
+              "pair_count_unique": 1035,
+              "present_existence_correct": 39,
+              "present_total": 49
+            },
+            {
+              "balanced_existence_accuracy": 0.8093338399189463,
+              "existence_error_count": 259,
+              "none_correct": 734,
+              "none_total": 987,
+              "package_index": 556,
+              "pair_count_unique": 1035,
+              "present_existence_correct": 42,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.7588832487309645,
+              "existence_error_count": 288,
+              "none_correct": 707,
+              "none_total": 985,
+              "package_index": 1589,
+              "pair_count_unique": 1035,
+              "present_existence_correct": 40,
+              "present_total": 50
+            },
+            {
+              "balanced_existence_accuracy": 0.8585215899342293,
+              "existence_error_count": 206,
+              "none_correct": 875,
+              "none_total": 1076,
+              "package_index": 22,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 47,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.7049811568081271,
+              "existence_error_count": 213,
+              "none_correct": 885,
+              "none_total": 1077,
+              "package_index": 747,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 30,
+              "present_total": 51
+            },
+            {
+              "balanced_existence_accuracy": 0.8568415784958536,
+              "existence_error_count": 249,
+              "none_correct": 830,
+              "none_total": 1076,
+              "package_index": 1893,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 49,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.8013796767338528,
+              "existence_error_count": 360,
+              "none_correct": 817,
+              "none_total": 1172,
+              "package_index": 765,
+              "pair_count_unique": 1225,
+              "present_existence_correct": 48,
+              "present_total": 53
+            },
+            {
+              "balanced_existence_accuracy": 0.7715617715617715,
+              "existence_error_count": 271,
+              "none_correct": 912,
+              "none_total": 1170,
+              "package_index": 2268,
+              "pair_count_unique": 1225,
+              "present_existence_correct": 42,
+              "present_total": 55
+            },
+            {
+              "balanced_existence_accuracy": 0.8628841607565012,
+              "existence_error_count": 348,
+              "none_correct": 921,
+              "none_total": 1269,
+              "package_index": 2194,
+              "pair_count_unique": 1326,
+              "present_existence_correct": 57,
+              "present_total": 57
+            },
+            {
+              "balanced_existence_accuracy": 0.8404827083908883,
+              "existence_error_count": 302,
+              "none_correct": 1077,
+              "none_total": 1373,
+              "package_index": 1063,
+              "pair_count_unique": 1431,
+              "present_existence_correct": 52,
+              "present_total": 58
+            },
+            {
+              "balanced_existence_accuracy": 0.7825450450450451,
+              "existence_error_count": 336,
+              "none_correct": 1157,
+              "none_total": 1480,
+              "package_index": 1060,
+              "pair_count_unique": 1540,
+              "present_existence_correct": 47,
+              "present_total": 60
+            },
+            {
+              "balanced_existence_accuracy": 0.7880053908355795,
+              "existence_error_count": 456,
+              "none_correct": 1143,
+              "none_total": 1590,
+              "package_index": 655,
+              "pair_count_unique": 1653,
+              "present_existence_correct": 54,
+              "present_total": 63
+            },
+            {
+              "balanced_existence_accuracy": 0.8196029776674938,
+              "existence_error_count": 489,
+              "none_correct": 1221,
+              "none_total": 1705,
+              "package_index": 652,
+              "pair_count_unique": 1770,
+              "present_existence_correct": 60,
+              "present_total": 65
+            },
+            {
+              "balanced_existence_accuracy": 0.8287792487684729,
+              "existence_error_count": 543,
+              "none_correct": 1287,
+              "none_total": 1827,
+              "package_index": 28,
+              "pair_count_unique": 1891,
+              "present_existence_correct": 61,
+              "present_total": 64
+            },
+            {
+              "balanced_existence_accuracy": 0.7663340244693816,
+              "existence_error_count": 447,
+              "none_correct": 1455,
+              "none_total": 1886,
+              "package_index": 612,
+              "pair_count_unique": 1953,
+              "present_existence_correct": 51,
+              "present_total": 67
+            },
+            {
+              "balanced_existence_accuracy": 0.8160423485949448,
+              "existence_error_count": 622,
+              "none_correct": 1457,
+              "none_total": 2074,
+              "package_index": 229,
+              "pair_count_unique": 2145,
+              "present_existence_correct": 66,
+              "present_total": 71
+            },
+            {
+              "balanced_existence_accuracy": 0.8033681343622333,
+              "existence_error_count": 611,
+              "none_correct": 1601,
+              "none_total": 2203,
+              "package_index": 2239,
+              "pair_count_unique": 2278,
+              "present_existence_correct": 66,
+              "present_total": 75
+            },
+            {
+              "balanced_existence_accuracy": 0.7499735654870999,
+              "existence_error_count": 598,
+              "none_correct": 2194,
+              "none_total": 2768,
+              "package_index": 2306,
+              "pair_count_unique": 2850,
+              "present_existence_correct": 58,
+              "present_total": 82
+            },
+            {
+              "balanced_existence_accuracy": 0.8333333333333334,
+              "existence_error_count": 7,
+              "none_correct": 21,
+              "none_total": 27,
+              "package_index": 1148,
+              "pair_count_unique": 36,
+              "present_existence_correct": 8,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.7722222222222223,
+              "existence_error_count": 31,
+              "none_correct": 61,
+              "none_total": 90,
+              "package_index": 1222,
+              "pair_count_unique": 105,
+              "present_existence_correct": 13,
+              "present_total": 15
+            },
+            {
+              "balanced_existence_accuracy": 0.7907407407407407,
+              "existence_error_count": 24,
+              "none_correct": 116,
+              "none_total": 135,
+              "package_index": 2402,
+              "pair_count_unique": 153,
+              "present_existence_correct": 13,
+              "present_total": 18
+            },
+            {
+              "balanced_existence_accuracy": 0.8174603174603174,
+              "existence_error_count": 61,
+              "none_correct": 129,
+              "none_total": 189,
+              "package_index": 1225,
+              "pair_count_unique": 210,
+              "present_existence_correct": 20,
+              "present_total": 21
+            },
+            {
+              "balanced_existence_accuracy": 0.8720238095238095,
+              "existence_error_count": 55,
+              "none_correct": 198,
+              "none_total": 252,
+              "package_index": 1188,
+              "pair_count_unique": 276,
+              "present_existence_correct": 23,
+              "present_total": 24
+            },
+            {
+              "balanced_existence_accuracy": 0.8209876543209876,
+              "existence_error_count": 83,
+              "none_correct": 244,
+              "none_total": 324,
+              "package_index": 1131,
+              "pair_count_unique": 351,
+              "present_existence_correct": 24,
+              "present_total": 27
+            },
+            {
+              "balanced_existence_accuracy": 0.8654320987654321,
+              "existence_error_count": 84,
+              "none_correct": 323,
+              "none_total": 405,
+              "package_index": 1197,
+              "pair_count_unique": 435,
+              "present_existence_correct": 28,
+              "present_total": 30
+            },
+            {
+              "balanced_existence_accuracy": 0.8434343434343434,
+              "existence_error_count": 127,
+              "none_correct": 370,
+              "none_total": 495,
+              "package_index": 1128,
+              "pair_count_unique": 528,
+              "present_existence_correct": 31,
+              "present_total": 33
+            },
+            {
+              "balanced_existence_accuracy": 0.8625536899648575,
+              "existence_error_count": 120,
+              "none_correct": 474,
+              "none_total": 591,
+              "package_index": 2453,
+              "pair_count_unique": 630,
+              "present_existence_correct": 36,
+              "present_total": 39
+            },
+            {
+              "balanced_existence_accuracy": 0.7962962962962963,
+              "existence_error_count": 167,
+              "none_correct": 542,
+              "none_total": 702,
+              "package_index": 1271,
+              "pair_count_unique": 741,
+              "present_existence_correct": 32,
+              "present_total": 39
+            },
+            {
+              "balanced_existence_accuracy": 0.8483251633986928,
+              "existence_error_count": 179,
+              "none_correct": 641,
+              "none_total": 816,
+              "package_index": 1256,
+              "pair_count_unique": 861,
+              "present_existence_correct": 41,
+              "present_total": 45
+            },
+            {
+              "balanced_existence_accuracy": 0.8917973554735548,
+              "existence_error_count": 160,
+              "none_correct": 654,
+              "none_total": 813,
+              "package_index": 2476,
+              "pair_count_unique": 861,
+              "present_existence_correct": 47,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8221204883227177,
+              "existence_error_count": 242,
+              "none_correct": 705,
+              "none_total": 942,
+              "package_index": 1181,
+              "pair_count_unique": 990,
+              "present_existence_correct": 43,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.792728237791932,
+              "existence_error_count": 167,
+              "none_correct": 787,
+              "none_total": 942,
+              "package_index": 1396,
+              "pair_count_unique": 990,
+              "present_existence_correct": 36,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8344907407407407,
+              "existence_error_count": 293,
+              "none_correct": 790,
+              "none_total": 1080,
+              "package_index": 1288,
+              "pair_count_unique": 1128,
+              "present_existence_correct": 45,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8314223314223315,
+              "existence_error_count": 282,
+              "none_correct": 945,
+              "none_total": 1221,
+              "package_index": 59,
+              "pair_count_unique": 1275,
+              "present_existence_correct": 48,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.8133133133133134,
+              "existence_error_count": 283,
+              "none_correct": 946,
+              "none_total": 1221,
+              "package_index": 1295,
+              "pair_count_unique": 1275,
+              "present_existence_correct": 46,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.8808525506638715,
+              "existence_error_count": 258,
+              "none_correct": 1016,
+              "none_total": 1272,
+              "package_index": 2500,
+              "pair_count_unique": 1326,
+              "present_existence_correct": 52,
+              "present_total": 54
+            },
+            {
+              "balanced_existence_accuracy": 0.7708955795602543,
+              "existence_error_count": 283,
+              "none_correct": 1106,
+              "none_total": 1374,
+              "package_index": 2452,
+              "pair_count_unique": 1431,
+              "present_existence_correct": 42,
+              "present_total": 57
+            },
+            {
+              "balanced_existence_accuracy": 0.8416015625,
+              "existence_error_count": 339,
+              "none_correct": 1203,
+              "none_total": 1536,
+              "package_index": 1409,
+              "pair_count_unique": 1596,
+              "present_existence_correct": 54,
+              "present_total": 60
+            },
+            {
+              "balanced_existence_accuracy": 0.8804924766915905,
+              "existence_error_count": 424,
+              "none_correct": 1461,
+              "none_total": 1884,
+              "package_index": 2510,
+              "pair_count_unique": 1953,
+              "present_existence_correct": 68,
+              "present_total": 69
+            },
+            {
+              "balanced_existence_accuracy": 0.7925125721735892,
+              "existence_error_count": 536,
+              "none_correct": 1958,
+              "none_total": 2478,
+              "package_index": 1309,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 62,
+              "present_total": 78
+            },
+            {
+              "balanced_existence_accuracy": 0.8402348153647337,
+              "existence_error_count": 635,
+              "none_correct": 2066,
+              "none_total": 2694,
+              "package_index": 1415,
+              "pair_count_unique": 2775,
+              "present_existence_correct": 74,
+              "present_total": 81
+            },
+            {
+              "balanced_existence_accuracy": 0.8309199245541838,
+              "existence_error_count": 752,
+              "none_correct": 2906,
+              "none_total": 3645,
+              "package_index": 2408,
+              "pair_count_unique": 3741,
+              "present_existence_correct": 83,
+              "present_total": 96
+            },
+            {
+              "balanced_existence_accuracy": 0.8289473684210527,
+              "existence_error_count": 31,
+              "none_correct": 163,
+              "none_total": 190,
+              "package_index": 48,
+              "pair_count_unique": 210,
+              "present_existence_correct": 16,
+              "present_total": 20
+            },
+            {
+              "balanced_existence_accuracy": 0.8381104033970276,
+              "existence_error_count": 305,
+              "none_correct": 637,
+              "none_total": 942,
+              "package_index": 1112,
+              "pair_count_unique": 990,
+              "present_existence_correct": 48,
+              "present_total": 48
+            },
+            {
+              "balanced_existence_accuracy": 0.8661659822779338,
+              "existence_error_count": 173,
+              "none_correct": 1157,
+              "none_total": 1322,
+              "package_index": 1410,
+              "pair_count_unique": 1378,
+              "present_existence_correct": 48,
+              "present_total": 56
+            },
+            {
+              "balanced_existence_accuracy": 0.8695029003102658,
+              "existence_error_count": 887,
+              "none_correct": 4064,
+              "none_total": 4942,
+              "package_index": 1421,
+              "pair_count_unique": 5050,
+              "present_existence_correct": 99,
+              "present_total": 108
+            },
+            {
+              "balanced_existence_accuracy": 0.8468296034550451,
+              "existence_error_count": 475,
+              "none_correct": 1225,
+              "none_total": 1698,
+              "package_index": 2527,
+              "pair_count_unique": 1770,
+              "present_existence_correct": 70,
+              "present_total": 72
+            },
+            {
+              "balanced_existence_accuracy": 0.8615198360961073,
+              "existence_error_count": 594,
+              "none_correct": 1887,
+              "none_total": 2478,
+              "package_index": 858,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 75,
+              "present_total": 78
+            },
+            {
+              "balanced_existence_accuracy": 0.8622572815533981,
+              "existence_error_count": 482,
+              "none_correct": 1997,
+              "none_total": 2472,
+              "package_index": 2526,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 77,
+              "present_total": 84
+            },
+            {
+              "balanced_existence_accuracy": 0.8732772128421591,
+              "existence_error_count": 951,
+              "none_correct": 2959,
+              "none_total": 3909,
+              "package_index": 859,
+              "pair_count_unique": 4005,
+              "present_existence_correct": 95,
+              "present_total": 96
+            }
+          ],
+          "threshold": -0.021385023969358485
+        },
+        "nonlinear_map": {
+          "fingerprint": "03fcc50016b6d506375e8bdc1dc6c20f2f6b16a5a776c9017cfba0f9efe7c6f5",
+          "frequency_std": 0.125,
+          "input_dim": 64,
+          "kind": "fixed random Fourier features concatenated with standardized input",
+          "output_dim": 128,
+          "random_feature_dim": 64,
+          "seed": 20260821
+        },
+        "optimizer": {
+          "algorithm": "deterministic float64 Newton/IRLS logistic regression",
+          "converged": true,
+          "iterations": 9,
+          "l2": 0.01
+        },
+        "probe": "frozen random-Fourier nonlinear map + logistic readout",
+        "probe_fingerprint": "b97e4afdf19fd827d44a7a89f89eda0a3860d2da31c5b991c3b742b483237676",
+        "selected_global_threshold_on_fit": -0.021385023969358485,
+        "uae3d_weights_updated": false
+      }
+    },
+    "source_model_unchanged": true,
+    "tier4_oracle": {
+      "linear": {
+        "evaluation_at_unchanged_threshold": {
+          "existence_accuracy": 0.9548911618148439,
+          "existence_error_count": 172,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.9497827344727037,
+          "minimum_molecule_balanced_existence_accuracy": 0.8888888888888888,
+          "molecule_count": 4,
+          "none_accuracy": 0.9533424283765348,
+          "pair_count_unique": 3813,
+          "present_existence_recall": 0.9932432432432432,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.9583333333333334,
+              "existence_error_count": 3,
+              "none_correct": 33,
+              "none_total": 36,
+              "package_index": 864,
+              "pair_count_unique": 45,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.8888888888888888,
+              "existence_error_count": 6,
+              "none_correct": 21,
+              "none_total": 27,
+              "package_index": 1135,
+              "pair_count_unique": 36,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.983540925266904,
+              "existence_error_count": 37,
+              "none_correct": 1087,
+              "none_total": 1124,
+              "package_index": 1114,
+              "pair_count_unique": 1176,
+              "present_existence_correct": 52,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.9683677904016887,
+              "existence_error_count": 126,
+              "none_correct": 2353,
+              "none_total": 2478,
+              "package_index": 862,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 77,
+              "present_total": 78
+            }
+          ],
+          "threshold": 1.3714157236944864
+        },
+        "evaluation_roc_auc_all_pairs": 0.986132517237565,
+        "fit_balanced_pair_count": 296,
+        "fit_roc_auc_all_pairs": 0.986132517237565,
+        "fit_selected": {
+          "existence_accuracy": 0.9548911618148439,
+          "existence_error_count": 172,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.9497827344727037,
+          "minimum_molecule_balanced_existence_accuracy": 0.8888888888888888,
+          "molecule_count": 4,
+          "none_accuracy": 0.9533424283765348,
+          "pair_count_unique": 3813,
+          "present_existence_recall": 0.9932432432432432,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.9583333333333334,
+              "existence_error_count": 3,
+              "none_correct": 33,
+              "none_total": 36,
+              "package_index": 864,
+              "pair_count_unique": 45,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.8888888888888888,
+              "existence_error_count": 6,
+              "none_correct": 21,
+              "none_total": 27,
+              "package_index": 1135,
+              "pair_count_unique": 36,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.983540925266904,
+              "existence_error_count": 37,
+              "none_correct": 1087,
+              "none_total": 1124,
+              "package_index": 1114,
+              "pair_count_unique": 1176,
+              "present_existence_correct": 52,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.9683677904016887,
+              "existence_error_count": 126,
+              "none_correct": 2353,
+              "none_total": 2478,
+              "package_index": 862,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 77,
+              "present_total": 78
+            }
+          ],
+          "threshold": 1.3714157236944864
+        },
+        "nonlinear_map": null,
+        "optimizer": {
+          "algorithm": "deterministic float64 Newton/IRLS logistic regression",
+          "converged": true,
+          "iterations": 15,
+          "l2": 0.01
+        },
+        "probe": "linear logistic readout",
+        "probe_fingerprint": "ed3f14fa4bbbd1acb74f20eec1de7c9506ba8315e15c851b842e1ede1ae7c169",
+        "selected_global_threshold_on_fit": 1.3714157236944864,
+        "uae3d_weights_updated": false
+      },
+      "nonlinear": {
+        "evaluation_at_unchanged_threshold": {
+          "existence_accuracy": 0.937844217151849,
+          "existence_error_count": 237,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.9544770472845899,
+          "minimum_molecule_balanced_existence_accuracy": 0.9074074074074074,
+          "molecule_count": 4,
+          "none_accuracy": 0.9353342428376534,
+          "pair_count_unique": 3813,
+          "present_existence_recall": 1.0,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.9722222222222222,
+              "existence_error_count": 2,
+              "none_correct": 34,
+              "none_total": 36,
+              "package_index": 864,
+              "pair_count_unique": 45,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.9074074074074074,
+              "existence_error_count": 5,
+              "none_correct": 22,
+              "none_total": 27,
+              "package_index": 1135,
+              "pair_count_unique": 36,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.9719750889679716,
+              "existence_error_count": 63,
+              "none_correct": 1061,
+              "none_total": 1124,
+              "package_index": 1114,
+              "pair_count_unique": 1176,
+              "present_existence_correct": 52,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.9663034705407587,
+              "existence_error_count": 167,
+              "none_correct": 2311,
+              "none_total": 2478,
+              "package_index": 862,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 78,
+              "present_total": 78
+            }
+          ],
+          "threshold": 2.0834560020882984
+        },
+        "evaluation_roc_auc_all_pairs": 0.9742727038088566,
+        "fit_balanced_pair_count": 296,
+        "fit_roc_auc_all_pairs": 0.9742727038088566,
+        "fit_selected": {
+          "existence_accuracy": 0.937844217151849,
+          "existence_error_count": 237,
+          "existence_exact_molecules": 0,
+          "macro_molecule_balanced_existence_accuracy": 0.9544770472845899,
+          "minimum_molecule_balanced_existence_accuracy": 0.9074074074074074,
+          "molecule_count": 4,
+          "none_accuracy": 0.9353342428376534,
+          "pair_count_unique": 3813,
+          "present_existence_recall": 1.0,
+          "records": [
+            {
+              "balanced_existence_accuracy": 0.9722222222222222,
+              "existence_error_count": 2,
+              "none_correct": 34,
+              "none_total": 36,
+              "package_index": 864,
+              "pair_count_unique": 45,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.9074074074074074,
+              "existence_error_count": 5,
+              "none_correct": 22,
+              "none_total": 27,
+              "package_index": 1135,
+              "pair_count_unique": 36,
+              "present_existence_correct": 9,
+              "present_total": 9
+            },
+            {
+              "balanced_existence_accuracy": 0.9719750889679716,
+              "existence_error_count": 63,
+              "none_correct": 1061,
+              "none_total": 1124,
+              "package_index": 1114,
+              "pair_count_unique": 1176,
+              "present_existence_correct": 52,
+              "present_total": 52
+            },
+            {
+              "balanced_existence_accuracy": 0.9663034705407587,
+              "existence_error_count": 167,
+              "none_correct": 2311,
+              "none_total": 2478,
+              "package_index": 862,
+              "pair_count_unique": 2556,
+              "present_existence_correct": 78,
+              "present_total": 78
+            }
+          ],
+          "threshold": 2.0834560020882984
+        },
+        "nonlinear_map": {
+          "fingerprint": "9398bddebd5c59d23b401234397774175bc9e8eec80fd1003f89e995325d471c",
+          "frequency_std": 0.125,
+          "input_dim": 64,
+          "kind": "fixed random Fourier features concatenated with standardized input",
+          "output_dim": 128,
+          "random_feature_dim": 64,
+          "seed": 20260821
+        },
+        "optimizer": {
+          "algorithm": "deterministic float64 Newton/IRLS logistic regression",
+          "converged": true,
+          "iterations": 16,
+          "l2": 0.01
+        },
+        "probe": "frozen random-Fourier nonlinear map + logistic readout",
+        "probe_fingerprint": "a4fb7675ddbe1f032128daa44245622af457ff996f1ff6c9c9c7e682c4a32b23",
+        "selected_global_threshold_on_fit": 2.0834560020882984,
+        "uae3d_weights_updated": false
+      }
+    }
+  },
+  "schema_version": "uae3d-gate-a-report-v1",
+  "status": "FAIL_GATE_A_STOP_UAE_BRANCH"
+}

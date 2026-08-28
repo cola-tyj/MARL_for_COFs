@@ -1,0 +1,33 @@
+{
+  "artifacts": {
+    "last.pt": "455f6abfa50a85d0f28fc69ac6f5dd0e996d2e4abb75a7af83d0f823c8af82a0",
+    "losses.npz": "be18025b204fab1d0f2e1c44bae6dbcdd5ba79fae3d8ad12bb2647629caa3b2c",
+    "report.json": "afc1515e5f251612fd4e781ad3e852c0109bc8ec7497638919f786ffbb478254"
+  },
+  "checks": {
+    "auxiliary_gradients_finite": true,
+    "checkpoint_initial_metrics_reproduced": true,
+    "model_only_branch_initialization": true,
+    "optimizer_reinitialized": true,
+    "resume_after_step_2": true,
+    "strict_strata_counts": {
+      "none": 72,
+      "present": 18,
+      "self": 10
+    },
+    "targeted_tests_passed": 9
+  },
+  "engineering_run": {
+    "balanced_bond_aux_weight": 1.0,
+    "initial_checkpoint_sha256": "99c4e819802fa2b5051ff08cdaf2996e4f744b7e7d6c891298133d2f49360c5d",
+    "initial_checkpoint_step": 1024,
+    "initial_coordinate_rmsd_angstrom": 2.533944845199585,
+    "local_steps": 3,
+    "mean_coordinate_aux_weight": 1.0,
+    "output": "generative_model/runs/uae3d_engineering/exact_aux_init_0002",
+    "source_model_state_fingerprint": "8e4ef6c611a90770957ec333f2eb163993c81edc440f915c482da46ef7cb9bc9"
+  },
+  "objective_version": "uae3d-exact-reconstruction-aux-v1",
+  "schema_version": "1.0",
+  "status": "PASS_U2_EXACT_AUX_ENGINEERING_READY_FOR_CONTROLLED_PILOTS"
+}

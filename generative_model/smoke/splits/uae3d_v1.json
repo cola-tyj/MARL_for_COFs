@@ -1,0 +1,249 @@
+{
+  "compatible_counts": {
+    "by_target_pg_full": {
+      "C2": 1789,
+      "C3": 406,
+      "D6h": 11,
+      "S4": 36
+    },
+    "by_target_pg_iid_train": {
+      "C2": 1426,
+      "C3": 321,
+      "D6h": 9,
+      "S4": 28
+    },
+    "full_dataset": 2242,
+    "iid_train": 1784
+  },
+  "compatible_policy": {
+    "allowed_tokens": [
+      "H",
+      "B",
+      "C",
+      "N",
+      "O",
+      "F",
+      "Al",
+      "Si",
+      "P",
+      "S",
+      "Cl",
+      "As",
+      "Br",
+      "I",
+      "Hg",
+      "Bi"
+    ],
+    "explicit_h": true,
+    "formal_charges": 0,
+    "official_output_heads": [
+      "atom_types",
+      "bond_types",
+      "coordinates"
+    ],
+    "radical_electrons": 0,
+    "sn_policy": "excluded; never remap to C or Si"
+  },
+  "dataset_fingerprint": "38fa3bbfe2f1abf4f1dc97bfa9eda84bba0fe21333af8f11c81dd89c99959e1c",
+  "indices_by_target_pg": {
+    "C2": [
+      864,
+      679,
+      738,
+      621,
+      2085,
+      997,
+      185,
+      1480,
+      277,
+      1666,
+      537,
+      2106,
+      959,
+      384,
+      608,
+      2278,
+      2030,
+      1945,
+      2318,
+      251,
+      1491,
+      844,
+      18,
+      2306
+    ],
+    "C3": [
+      1135,
+      2394,
+      1277,
+      1252,
+      1175,
+      2408
+    ],
+    "D6h": [
+      862
+    ],
+    "S4": [
+      1114
+    ]
+  },
+  "model_family": "UAE-3D",
+  "molecule_ids": [
+    "cof_000864",
+    "cof_000679",
+    "cof_000738",
+    "cof_000621",
+    "cof_002085",
+    "cof_000997",
+    "cof_000185",
+    "cof_001480",
+    "cof_000277",
+    "cof_001666",
+    "cof_000537",
+    "cof_002106",
+    "cof_000959",
+    "cof_000384",
+    "cof_000608",
+    "cof_002278",
+    "cof_002030",
+    "cof_001945",
+    "cof_002318",
+    "cof_000251",
+    "cof_001491",
+    "cof_000844",
+    "cof_000018",
+    "cof_002306",
+    "cof_001135",
+    "cof_002394",
+    "cof_001277",
+    "cof_001252",
+    "cof_001175",
+    "cof_002408",
+    "cof_001114",
+    "cof_000862"
+  ],
+  "official_commit": "4327dd5d8233c74e0f045be481f24d0f1d4c0c09",
+  "official_repository": "https://github.com/lyc0930/UAE-3D",
+  "ordered_indices": [
+    864,
+    679,
+    738,
+    621,
+    2085,
+    997,
+    185,
+    1480,
+    277,
+    1666,
+    537,
+    2106,
+    959,
+    384,
+    608,
+    2278,
+    2030,
+    1945,
+    2318,
+    251,
+    1491,
+    844,
+    18,
+    2306,
+    1135,
+    2394,
+    1277,
+    1252,
+    1175,
+    2408,
+    1114,
+    862
+  ],
+  "schema_version": "1.0",
+  "selection_algorithm": "filter official UAE GEOM atom vocabulary, formal_charges=0 and radical_electrons=0; fixed Target_PG quotas; within each PG sort by (Num_Atoms, Package_Index) and select evenly spaced ranks",
+  "source_split": "iid/train",
+  "source_split_sha256": "ee3cb5d6b001876912197fbb6fef1ebdf2d4571c575a08282937e6f67086a6d1",
+  "split_fingerprint": "fd2ee44586b527852c244af6d0ddcb0aaf80d4e0d9f661b8a74d9f32af1d66d6",
+  "statistics": {
+    "atom_count": {
+      "max": 87,
+      "median": 34.5,
+      "min": 9
+    },
+    "element_counts": {
+      "Br": 8,
+      "C": 614,
+      "Cl": 6,
+      "F": 6,
+      "H": 413,
+      "I": 6,
+      "N": 57,
+      "O": 82,
+      "S": 18,
+      "Si": 2
+    },
+    "molecules": 32,
+    "target_pg_counts": {
+      "C2": 24,
+      "C3": 6,
+      "D6h": 1,
+      "S4": 1
+    }
+  },
+  "stress_indices": {
+    "max_full_dataset": 2485,
+    "max_full_dataset_atoms": 105,
+    "max_iid_train": 1421,
+    "max_iid_train_atoms": 101
+  },
+  "target_quotas": {
+    "C2": 24,
+    "C3": 6,
+    "D6h": 1,
+    "S4": 1
+  },
+  "tier_indices": {
+    "1": [
+      864
+    ],
+    "32": [
+      864,
+      679,
+      738,
+      621,
+      2085,
+      997,
+      185,
+      1480,
+      277,
+      1666,
+      537,
+      2106,
+      959,
+      384,
+      608,
+      2278,
+      2030,
+      1945,
+      2318,
+      251,
+      1491,
+      844,
+      18,
+      2306,
+      1135,
+      2394,
+      1277,
+      1252,
+      1175,
+      2408,
+      1114,
+      862
+    ],
+    "4": [
+      864,
+      1135,
+      1114,
+      862
+    ]
+  }
+}

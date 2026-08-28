@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "point_groups": [
+    "C2",
+    "C2h",
+    "C2v",
+    "C3",
+    "C3h",
+    "C3v",
+    "D2",
+    "D2d",
+    "D2h",
+    "D3",
+    "D3d",
+    "D3h",
+    "D6h",
+    "S4"
+  ],
+  "point_group_to_index": {
+    "C2": 0,
+    "C2h": 1,
+    "C2v": 2,
+    "C3": 3,
+    "C3h": 4,
+    "C3v": 5,
+    "D2": 6,
+    "D2d": 7,
+    "D2h": 8,
+    "D3": 9,
+    "D3d": 10,
+    "D3h": 11,
+    "D6h": 12,
+    "S4": 13
+  },
+  "permutation_convention": "permutation_index[source_atom] = target_atom, local 0-based indices",
+  "operation_equation": "positions @ R.T ~= positions[permutation_index]",
+  "orbit_convention": "local contiguous orbit ids ordered by smallest atom index"
+}

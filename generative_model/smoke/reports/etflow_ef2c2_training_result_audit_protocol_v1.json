@@ -1,0 +1,66 @@
+{
+  "bug": {
+    "checkpoint_changed": false,
+    "correct_positive_semantics": {
+      "iid_test_not_used": true,
+      "v1_failed_checkpoint_not_reused": true
+    },
+    "expression": "all(structural_checks.values())",
+    "negative_flags_in_original_report": {
+      "iid_test_used": false,
+      "v1_failed_checkpoint_reused": false
+    },
+    "scientific_metrics_changed": false,
+    "training_changed": false
+  },
+  "decision": {
+    "fail_action": "stop without retraining or accessing IID-test",
+    "fail_status": "FAIL_ETFLOW_EF2C2_RESULT_AUDIT_STOP_BRANCH",
+    "pass_action": "freeze one paired A2-versus-EF2-C2 raw ODE validation Gate",
+    "pass_status": "PASS_ETFLOW_EF2C2_TRAINING_ADVANCE_TO_RAW_ODE_GATE_AFTER_REPORT_LOGIC_AUDIT"
+  },
+  "identity": {
+    "artifact_sha256": {
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/checkpoints/step-000064.pt": "afcb9943b0475de79fe121d4d1c0e4169c6ca2dd909feb231e07e32cb83d6501",
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/checkpoints/step-000128.pt": "e9e678836f4e06066cb4ad1887aa4f1f8f88c2922eab48502ad4a4e39369a798",
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/checkpoints/step-000192.pt": "9f9588ffdb74725718d321d75a6005e4c551df198a0e97ecf47a2e1eb476a52e",
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/checkpoints/step-000256.pt": "e09a15a1a028b0ccd0e6b62f0b244b99adbf60bf2de815f349145c51c39babc1",
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/console.log": "987b9f11d59c3b90a3ce43af4e09c2a167c2c90ea5bec5ac8a8ab7bd5a8991d3",
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/last.pt": "fab0bf0471d7119a93bded7aafd67bd0cc614d4697af4f4e2a3e41b72d0ae926",
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/losses.npz": "4592b329dbf5a5a77a04442c366a315f3a7076416d8fb54fde11d0f78f538070",
+      "generative_model/runs/etflow_ef2c2_overlap_v2_0256/report.json": "415f8354d3a34f0e4a71f7fe0596d0eac859152f1394feed49eb90c69c80a1c4"
+    },
+    "source_sha256": {
+      "generative_model/smoke/audit_etflow_ef2c2_training_result.py": "9d0b341eeec75a54dd23a5e70eb757ec38689f1cabc286a653dac3703f40a2c6",
+      "generative_model/smoke/build_etflow_ef2c2_training_result_audit_protocol.py": "afd5ef0691390d32b30d3bcf4244f954c38e850a8ffe8f219ec60018d0161749"
+    },
+    "training_protocol_v2_sha256": "075352be70bc4209e9fb19f6aaa95eeea2330ddfd94587b00b41997d12834805"
+  },
+  "protocol_fingerprint": "2a3af82e4e34b01edde97be4968e66f28fdf61a1e38c396a136f01143b292344",
+  "purpose": "Correct only the polarity of two negatively named provenance flags after completed training; do not retrain, change metrics, or overwrite report.json.",
+  "required_checks": {
+    "a2_parent_state_unchanged": true,
+    "all_positive_original_structural_checks_true": true,
+    "checkpoint_steps_exact": [
+      64,
+      128,
+      192,
+      256
+    ],
+    "iid_test_not_used": true,
+    "last_and_step256_conditioner_state_identical": true,
+    "losses_256_steps_and_finite": true,
+    "original_final_gate_checks_all_true": true,
+    "v1_failed_checkpoint_not_reused": true
+  },
+  "schema_version": "etflow-ef2c2-training-result-audit-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "iid_test_used": false,
+    "metrics_or_thresholds_changed": false,
+    "read_only_existing_artifacts": true,
+    "report_overwritten": false,
+    "training_rerun": false
+  },
+  "status": "FROZEN_AFTER_BOOLEAN_POLARITY_REPORT_BUG"
+}

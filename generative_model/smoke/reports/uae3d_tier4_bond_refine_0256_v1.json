@@ -1,0 +1,65 @@
+{
+  "artifact_hashes": {
+    "last.pt": "b2d06c16b20068c061b50bc7cc2f4a5544705338da08e4f86daee8a2e480c7e7",
+    "losses.npz": "ffac69ee9059bd9972594d0aa3db6f04a63562392395777c22a4eac6cca4520e",
+    "report.json": "f81496bea0744a8f32534fcdf0a3f6470a619d948fce7e83b9f0d2e7f23d2794"
+  },
+  "decision": {
+    "advance_to_tier_32": false,
+    "resume_same_refinement_to_step_512": true,
+    "reason": "All three balanced bond strata improve monotonically and present/self argmax accuracy improves, while whole-molecule bond exact remains 2/4. Permit one bounded extension with the same optimizer and objective; coordinate regression is deferred because topology remains the active bottleneck.",
+    "stop_rule_at_step_512": "If bond_exact_molecules remains below 3/4, stop extending the weight-10 branch and audit a hard-pair/top-k bond objective. Tier-32 remains forbidden regardless of continuous-loss improvement."
+  },
+  "initial_step_0": {
+    "atom_exact_molecules": 4,
+    "bond_exact_molecules": 2,
+    "bond_full_pair_accuracy": 0.9232552150399176,
+    "connected_molecules": 2,
+    "coordinate_rmsd_max_angstrom": 0.14219971001148224,
+    "none_bond_accuracy": 0.9298772169167804,
+    "present_bond_accuracy": 0.7432432432432432,
+    "sanitize_valid_molecules": 2,
+    "self_loop_accuracy": 0.9571428571428572
+  },
+  "model_state_fingerprint": "de51b3a6cf312fa1b26b24adc2413c7e11c36b09bead1454be0676b7555d28e0",
+  "objective": {
+    "balanced_bond_aux_weight": 10.0,
+    "learning_rate": 1e-05,
+    "mean_coordinate_aux_weight": 10.0,
+    "optimizer": "AdamW",
+    "optimizer_state_at_start": "fresh",
+    "version": "uae3d-exact-reconstruction-aux-v2-molecule-balanced"
+  },
+  "schema_version": "1.0",
+  "source": {
+    "checkpoint_sha256": "8ca18d056f5706167752700ddaa9ad7aeefdffeb681352d5f6553edfac2ae191",
+    "source_model_state_fingerprint": "0563fb2dbda2f824643a3c56d990a8eba7cb8ac6676cb816647ada3aaee536ee",
+    "source_step": 3072,
+    "source_tier": 4
+  },
+  "status": "TIER4_BOND_REFINEMENT_TREND_EXTEND_TO_512",
+  "step_256": {
+    "atom_exact_molecules": 4,
+    "bond_exact_molecules": 2,
+    "bond_full_pair_accuracy": 0.9304661344321401,
+    "connected_molecules": 2,
+    "coordinate_rmsd_max_angstrom": 0.1756763756275177,
+    "none_bond_accuracy": 0.9331514324693042,
+    "present_bond_accuracy": 0.8445945945945946,
+    "sanitize_valid_molecules": 2,
+    "self_loop_accuracy": 0.9714285714285714
+  },
+  "strict_u2_gate_passed": false,
+  "tier": 4,
+  "training_window_means": {
+    "steps_1_64_balanced_bond_loss": 0.18792505818419158,
+    "steps_65_128_balanced_bond_loss": 0.1791162013541907,
+    "steps_129_192_balanced_bond_loss": 0.17274600849486887,
+    "steps_193_256_balanced_bond_loss": 0.16735484916716814,
+    "steps_193_256_mean_coordinate_loss": 0.0008272718514490407,
+    "steps_193_256_none_stratum_loss": 0.08041349309496582,
+    "steps_193_256_present_stratum_loss": 0.24833608930930495,
+    "steps_193_256_self_stratum_loss": 0.17331495438702404,
+    "steps_193_256_total_loss": 2.0020200312137604
+  }
+}

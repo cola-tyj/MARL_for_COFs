@@ -22,7 +22,7 @@ from rdkit.Chem import AllChem, rdMolDescriptors
 
 from config import (
     BROKEN_SYMMETRY_TAGS,
-    PG_EQUIVALENCE,
+    PG_ALLOWED_ACTUAL,
     EmbeddingConfig,
     RelaxConfig,
     SymmetryConfig,
@@ -589,8 +589,7 @@ class SymmetryScreener:
         评分体系（按匹配质量降序）：
           3.0 : 精确匹配 (target == actual，如 C3 → C3)
           2.0 : 等价类内匹配 (如 C3v → C3，同一旋转轴的不同派生群)
-          1.0 : 超群匹配 (如 D3h → C3，实际对称性比目标更高)
-          0.5 : 数值匹配 (虽不在等价类但旋转轴阶数一致，如 C6 → C3 的目标)
+          0.5 : 数值匹配（仅用于没有合格构象时的候选排序）
           0.0 : 无匹配（点群完全不同但非破缺）
          -1.0 : 对称破缺 (C1, Cs, Ci — 无旋转轴，结构已塌陷)
         """
@@ -601,13 +600,9 @@ class SymmetryScreener:
         if actual_pg == target_pg:
             return 3.0
         # 目标等价类 — 良好
-        allowed = PG_EQUIVALENCE.get(target_pg, {target_pg})
+        allowed = PG_ALLOWED_ACTUAL.get(target_pg, {target_pg})
         if actual_pg in allowed:
             return 2.0
-        # 实际点群的超群包含目标 — 可接受（更高对称性）
-        allowed_higher = PG_EQUIVALENCE.get(actual_pg, set())
-        if target_pg in allowed_higher:
-            return 1.0
         # 弱匹配：提取 Schoenflies 符号中的数字，比较旋转轴阶数
         # 例如：C6 有 6 阶轴 → 对目标 C3（3 阶轴）有一定匹配度
         import re
@@ -624,13 +619,8 @@ class SymmetryScreener:
             return False
         if actual_pg == target_pg:
             return True
-        allowed = PG_EQUIVALENCE.get(target_pg, {target_pg})
-        if actual_pg in allowed:
-            return True
-        allowed_higher = PG_EQUIVALENCE.get(actual_pg, set())
-        if target_pg in allowed_higher:
-            return True
-        return False
+        allowed = PG_ALLOWED_ACTUAL.get(target_pg, {target_pg})
+        return actual_pg in allowed
 
 
 # =============================================================================

@@ -1,0 +1,1423 @@
+{
+  "checks": {
+    "all_records_audited": true,
+    "candidate_actual_pg_interrun_agreement": true,
+    "candidate_compatible_label_interrun_agreement": true,
+    "ef2c3_formal_fail_preserved": true,
+    "repeat0_candidate_analyzer_success": true,
+    "repeat0_candidate_c2_compatible": true,
+    "repeat0_candidate_c3_compatible": true,
+    "repeat0_candidate_compatible": true,
+    "repeat0_candidate_noninferior_to_parent": true,
+    "repeat0_parent_analyzer_success": false,
+    "repeat1_candidate_analyzer_success": true,
+    "repeat1_candidate_c2_compatible": true,
+    "repeat1_candidate_c3_compatible": true,
+    "repeat1_candidate_compatible": true,
+    "repeat1_candidate_noninferior_to_parent": true,
+    "repeat1_parent_analyzer_success": false,
+    "repeat_archives_geometry_scientific_checks_passed": true
+  },
+  "claim_boundary": {
+    "ef2c3_formal_fail_preserved": true,
+    "hard_projection_used": false,
+    "pass_is_small_panel_validation_only": true,
+    "point_group_tolerance_not_tuned": true,
+    "posthoc_force_field_used": false
+  },
+  "identity": {
+    "auditor_source_sha256": "199dd74048b97576f032735801fd04e4608a83f18df402c11e3d3b4053e19989",
+    "protocol_sha256": "171ac076a6091956652834bab6c44cb0645fc0306c24ff1b4d4447a4b71a54ba",
+    "repeat0_coordinates_sha256": "2adbb61332c031a5a1623a2edd6870adf73e1296447224d9cba2471ea6a7c0c9",
+    "repeat1_coordinates_sha256": "a961d9ef491f8ae83f4e82607321b8b3edf0dbf1ed3b0fd10ca6a24180849a0b",
+    "symmetry_protocol": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "metrics": {
+    "candidate_actual_pg_interrun_agreement_fraction": 0.96875,
+    "candidate_compatible_label_interrun_agreement_fraction": 1.0,
+    "repeat0_candidate": {
+      "actual_pg_counts": {
+        "C2": 21,
+        "C2h": 2,
+        "C3": 5,
+        "C3h": 1,
+        "D3": 2
+      },
+      "analyzer_success_fraction": 0.96875,
+      "pg_compatible_fraction": 0.96875,
+      "pg_exact_match_fraction": 0.8125
+    },
+    "repeat0_candidate_c2_compatible_fraction": 0.9583333333333334,
+    "repeat0_candidate_c3_compatible_fraction": 1.0,
+    "repeat0_parent": {
+      "actual_pg_counts": {
+        "C2": 18,
+        "C2h": 2,
+        "C3": 4,
+        "C3h": 2,
+        "D3": 2
+      },
+      "analyzer_success_fraction": 0.875,
+      "pg_compatible_fraction": 0.875,
+      "pg_exact_match_fraction": 0.6875
+    },
+    "repeat1_candidate": {
+      "actual_pg_counts": {
+        "C2": 21,
+        "C2h": 2,
+        "C3": 5,
+        "C3h": 1,
+        "D3": 2
+      },
+      "analyzer_success_fraction": 0.96875,
+      "pg_compatible_fraction": 0.96875,
+      "pg_exact_match_fraction": 0.8125
+    },
+    "repeat1_candidate_c2_compatible_fraction": 0.9583333333333334,
+    "repeat1_candidate_c3_compatible_fraction": 1.0,
+    "repeat1_parent": {
+      "actual_pg_counts": {
+        "C2": 18,
+        "C2h": 2,
+        "C3": 4,
+        "C3h": 2,
+        "D3": 2
+      },
+      "analyzer_success_fraction": 0.875,
+      "pg_compatible_fraction": 0.875,
+      "pg_exact_match_fraction": 0.6875
+    }
+  },
+  "passed": false,
+  "records": [
+    {
+      "package_index": 1669,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026084569,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1669,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026184569,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1611,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026084511,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1611,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026184511,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2209,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026085109,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2209,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026185109,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2265,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026085165,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2265,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026185165,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 547,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026083447,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 547,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026183447,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1522,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026084422,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1522,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026184422,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1552,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026084452,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1552,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026184452,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1663,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026084563,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1663,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "C2h",
+          "analyzer_pg": "C2h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026184563,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1080,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026083980,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1080,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026183980,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2359,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026085259,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2359,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026185259,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 296,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": null,
+          "analyzer_pg": null,
+          "analyzer_success": false,
+          "failure": "ValueError: 候选操作中不存在完整 C2 目标子群",
+          "pg_compatible": false,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026083196,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 296,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "D2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026183196,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2242,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026085142,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 2242,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C2",
+          "analyzer_pg": "C2",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026185142,
+      "target_pg": "C2"
+    },
+    {
+      "package_index": 1129,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3h",
+          "analyzer_pg": "C3h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3h",
+          "analyzer_pg": "C3h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026084029,
+      "target_pg": "C3"
+    },
+    {
+      "package_index": 1129,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C3h",
+          "analyzer_pg": "C3h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "C3h",
+          "analyzer_pg": "C3h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C3h",
+          "analyzer_pg": "C3h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "C3h",
+          "analyzer_pg": "C3h",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026184029,
+      "target_pg": "C3"
+    },
+    {
+      "package_index": 1388,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026084288,
+      "target_pg": "C3"
+    },
+    {
+      "package_index": 1388,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026184288,
+      "target_pg": "C3"
+    },
+    {
+      "package_index": 2495,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026085395,
+      "target_pg": "C3"
+    },
+    {
+      "package_index": 2495,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        },
+        "parent": {
+          "actual_pg": "D3",
+          "analyzer_pg": "D3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": false
+        }
+      },
+      "seed": 2026185395,
+      "target_pg": "C3"
+    },
+    {
+      "package_index": 1133,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026084033,
+      "target_pg": "C3"
+    },
+    {
+      "package_index": 1133,
+      "repeat0": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "repeat1": {
+        "candidate": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        },
+        "parent": {
+          "actual_pg": "C3",
+          "analyzer_pg": "C3",
+          "analyzer_success": true,
+          "failure": null,
+          "pg_compatible": true,
+          "pg_exact_match": true
+        }
+      },
+      "seed": 2026184033,
+      "target_pg": "C3"
+    }
+  ],
+  "schema_version": "etflow-ef2c5-dual-point-group-v2",
+  "scope": {
+    "core_ood_used": false,
+    "iid_test_used": false,
+    "iid_validation_reused": true,
+    "quality_claim": false,
+    "reference_xyz_used": false
+  },
+  "status": "FAIL_ETFLOW_EF2C5_DUAL_POINT_GROUP_AUDIT_STOP_LEARNED_OVERLAP_BRANCH"
+}

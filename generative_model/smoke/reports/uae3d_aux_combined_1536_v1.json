@@ -1,0 +1,50 @@
+{
+  "artifact_hashes": {
+    "best_step_1344.pt": "230a9c82216288f7b46a6a885192604009c31561f3dd513260737f9a52b39393",
+    "last.pt": "bce2f33c238d760bce6c3f3ca14cf61118062bcaa5289285c51917a560bdcfaf",
+    "losses.npz": "aeda6b992442787b35a2a41add7db0a937dbc979749b1bddfec23f8fbec0653f",
+    "report.json": "293f78bdee565f8101b6445fe255a9cb9302a3bf39250b883c8e56d852047ac6"
+  },
+  "best_audit": {
+    "bond_exact": true,
+    "connected": true,
+    "coordinate_rmsd_angstrom": 0.08016666769981384,
+    "mean_coordinate_loss": 0.00036798135261051357,
+    "pair_distance_mae_angstrom": 0.04938868433237076,
+    "sanitize_valid": true,
+    "step": 1344
+  },
+  "decision": {
+    "advance_to_tier_4": false,
+    "continue_equal_weight_training": false,
+    "coordinate_refinement_pilot": {
+      "balanced_bond_aux_weight": 1.0,
+      "checkpoint_every": 32,
+      "learning_rate": 0.00003,
+      "local_steps": 128,
+      "mean_coordinate_aux_weight": 10.0,
+      "optimizer": "fresh AdamW",
+      "source": "checkpoints/step-001344.pt"
+    },
+    "reason": "The best RMSD occurred at step 1344 and later audits fluctuated above it. Equal-weight automatic extension is stopped; a short model-only coordinate-refinement branch is isolated from the best checkpoint."
+  },
+  "final_step_1536": {
+    "atom_exact": true,
+    "bond_exact": true,
+    "connected": true,
+    "coordinate_rmsd_angstrom": 0.08797787129878998,
+    "mean_coordinate_loss": 0.0004995474591851234,
+    "pair_distance_mae_angstrom": 0.06899000704288483,
+    "sanitize_valid": true
+  },
+  "gate": {
+    "coordinate_rmsd_limit_angstrom": 0.05,
+    "passed": false,
+    "target_mean_coordinate_loss": 0.00014639096701260322
+  },
+  "metrics_version": "uae3d-mean-reconstruction-v1.1",
+  "model_state_fingerprint": "4dc0735032030b6ba65aa32afd44c34988362f0a8cf45746c0e2a4dada1ce28e",
+  "schema_version": "1.0",
+  "status": "STOP_EQUAL_WEIGHT_AT_COORDINATE_PLATEAU_START_REFINEMENT_0128",
+  "strict_u2_gate_passed": false
+}

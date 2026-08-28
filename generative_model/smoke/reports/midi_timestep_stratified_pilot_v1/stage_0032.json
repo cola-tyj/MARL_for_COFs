@@ -1,0 +1,83 @@
+{
+  "conclusion": "native generation remains stable, but fixed validation improvement is not broad across cases/timesteps",
+  "deterministic_validation": {
+    "case_win_fraction": 0.46875,
+    "case_wins": 15,
+    "checks": {
+      "case_win_fraction": false,
+      "mean_ratio": false,
+      "timestep_win_fraction": false
+    },
+    "component_means": {
+      "atom_cross_entropy": 0.4053135457465942,
+      "charge_cross_entropy": 0.0025579216318147857,
+      "edge_cross_entropy": 0.08609074028537123,
+      "position_mse": 2.3516793423332274
+    },
+    "mean_total_loss": 7.3919029326643795,
+    "mean_total_loss_ratio_to_official": 0.9907855470008217,
+    "passed": false,
+    "timestep_total_loss_means": {
+      "1": 0.019947940483689308,
+      "100": 0.020374187733978033,
+      "200": 0.12544397171586752,
+      "25": 0.01863832026720047,
+      "300": 1.6885440945625305,
+      "400": 14.28293776512146,
+      "50": 0.01800581393763423,
+      "500": 42.961331367492676
+    },
+    "timestep_win_fraction": 0.5,
+    "timestep_wins": 4
+  },
+  "native_sampling": {
+    "checks": {
+      "collisions": true,
+      "connected": true,
+      "sanitize_valid": true
+    },
+    "collisions": 0,
+    "connected": 4,
+    "evaluation_fingerprint": "30ad62297f1b6374b09488eb33f1ee5c7f2600ff6be0f32b96005e32f5e7b71c",
+    "evaluation_report_sha256": "b6e7e1289c4f6182ec4ce8723714054ec53b7d2996b84eeb7aeba1b6e298eced",
+    "exact_train_smiles": 0,
+    "minimum_pair_distance_mean_angstrom": 0.9761465529932514,
+    "nearest_train_tanimoto_mean": 0.14449198927574144,
+    "passed": true,
+    "sampling_report_sha256": "d78173bc6857a33e740c209973a5b288edee534783fdbfd74bd56b1a77dcbbd3",
+    "sanitize_failure_counts": {},
+    "sanitize_valid": 5
+  },
+  "schema_version": "1.0",
+  "stage_gate_passed": false,
+  "status": "FAIL_TIMESTEP_STRATIFIED_STAGE_DETERMINISTIC_GATE",
+  "step": 32,
+  "training_segment": {
+    "begin_step": 17,
+    "checkpoint_path": "generative_model/runs/midi_overfit1/train_pretrained_geomstats_lr1e6_stratified_0064/checkpoints/step-000032.pt",
+    "checkpoint_sha256": "1cca9af82dc2dec37af179f8d566048fbdf5f06ec7874dfaffe21e8c7f709e42",
+    "end_step": 32,
+    "loss_maximum": 42.433631896972656,
+    "loss_mean": 7.6261198240099475,
+    "loss_median": 0.4353534057736397,
+    "loss_minimum": 0.01030745916068554,
+    "timesteps": [
+      138,
+      25,
+      273,
+      459,
+      333,
+      410,
+      194,
+      109,
+      447,
+      45,
+      170,
+      316,
+      116,
+      256,
+      207,
+      396
+    ]
+  }
+}
