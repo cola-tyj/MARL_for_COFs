@@ -8,6 +8,8 @@
   报错、测试、训练或环境变化时更新。
 - [our_ET_Flow.md](our_ET_Flow.md)：当前 ET-Flow backbone、adapter 训练历史、实际启用的
   graph action / hard projection / F0.2、Gate、输入输出和代码文件地图。
+- [硕士开题报告资料包](硕士开题报告资料_20260828/README.md)：独立整理的数据集构建、
+  our_ET_Flow 方法与实验、文献综述、PG-OrbitFlow 后续模型、实验 Gate、PPT 页纲和冻结数字索引。
 - [UAE3D_Gate与指标定义.md](UAE3D_Gate与指标定义.md)：UAE-3D 确定性重构指标的
   计算口径、通用严格 Gate、分阶段 Gate 与状态字段语义。
 - [数据集构建完整流程.md](数据集构建完整流程.md)：当前数据构建方法与依据 `final_dataset.csv` 重算的统计。

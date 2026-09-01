@@ -1,0 +1,381 @@
+{
+  "checks": {
+    "all_group_sizes_supported": true,
+    "boh2_package39_branch_groups_recovered": true,
+    "coordinates_not_used_to_build_factorization": true,
+    "molecule_count_exact": true,
+    "original_prediction_gate_repasses": false
+  },
+  "identity": {
+    "implementation_sha256": "170ed39e3fd3321e4f9eb3eb5aff2b36c44d046bb8c67b690bbcd98da2ea24c5",
+    "m3_checkpoint_sha256": "243f684cc24061d10fa53734304e991128c7fd2e158a8e6d8330b9edc85cc1ab",
+    "m3_protocol_sha256": "c36d00d9ab9e8f1c9eb76bf738be1d9c24d09b4c630b5a5a59292898e7652109"
+  },
+  "passed": false,
+  "prediction_gate": {
+    "checks": {
+      "angle_orbit_mae_max_degrees": true,
+      "bond_orbit_mae_max_angstrom": true,
+      "c2_and_c3_each_pass": false,
+      "nonplanar_torsion_orbit_circular_mae_max_degrees": false,
+      "torsion_orbit_circular_mae_max_degrees": false
+    },
+    "strata": {
+      "C2": {
+        "passed": false,
+        "values": {
+          "angle_orbit_mae_max_degrees": 1.00052011013031,
+          "bond_orbit_mae_max_angstrom": 0.002910188166424632,
+          "nonplanar_torsion_orbit_circular_mae_max_degrees": 62.434262860970954,
+          "torsion_orbit_circular_mae_max_degrees": 14.814259635008787
+        }
+      },
+      "C3": {
+        "passed": true,
+        "values": {
+          "angle_orbit_mae_max_degrees": 1.5975068807601929,
+          "bond_orbit_mae_max_angstrom": 0.002010515658184886,
+          "nonplanar_torsion_orbit_circular_mae_max_degrees": 0.5262554905408408,
+          "torsion_orbit_circular_mae_max_degrees": 0.43213913706199064
+        }
+      }
+    },
+    "thresholds": {
+      "angle_orbit_mae_max_degrees": 5.0,
+      "bond_orbit_mae_max_angstrom": 0.03,
+      "c2_and_c3_each_pass": true,
+      "nonplanar_torsion_orbit_circular_mae_max_degrees": 2.0,
+      "torsion_orbit_circular_mae_max_degrees": 2.0
+    },
+    "values": {
+      "angle_orbit_mae_max_degrees": 1.5975068807601929,
+      "bond_orbit_mae_max_angstrom": 0.002910188166424632,
+      "nonplanar_torsion_orbit_circular_mae_max_degrees": 62.434262860970954,
+      "torsion_orbit_circular_mae_max_degrees": 14.814259635008787
+    }
+  },
+  "records": [
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 864,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 7,
+      "branch_swap_witness_count": 0,
+      "group_count": 7,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 1045,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 879,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 2,
+      "branch_swap_witness_count": 2,
+      "group_count": 2,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 892,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 6,
+      "anchored_witness_count": 6,
+      "branch_swap_witness_count": 6,
+      "group_count": 2,
+      "induced_generator_count": 4,
+      "maximum_group_size": 3,
+      "package_index": 875,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 4,
+      "anchored_witness_count": 13,
+      "branch_swap_witness_count": 2,
+      "group_count": 8,
+      "induced_generator_count": 4,
+      "maximum_group_size": 4,
+      "package_index": 1075,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 4,
+      "anchored_witness_count": 13,
+      "branch_swap_witness_count": 2,
+      "group_count": 8,
+      "induced_generator_count": 4,
+      "maximum_group_size": 4,
+      "package_index": 1768,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 6,
+      "branch_swap_witness_count": 0,
+      "group_count": 6,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 406,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1135,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 2391,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1222,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1124,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 6,
+      "anchored_witness_count": 6,
+      "branch_swap_witness_count": 9,
+      "group_count": 2,
+      "induced_generator_count": 3,
+      "maximum_group_size": 3,
+      "package_index": 1143,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 2389,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 6,
+      "anchored_witness_count": 6,
+      "branch_swap_witness_count": 9,
+      "group_count": 2,
+      "induced_generator_count": 4,
+      "maximum_group_size": 3,
+      "package_index": 2403,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 62,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 4,
+      "branch_swap_witness_count": 2,
+      "group_count": 4,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 39,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 2,
+      "branch_swap_witness_count": 2,
+      "group_count": 2,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 163,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 6,
+      "branch_swap_witness_count": 0,
+      "group_count": 6,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 419,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 2,
+      "branch_swap_witness_count": 2,
+      "group_count": 2,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 668,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 7,
+      "branch_swap_witness_count": 2,
+      "group_count": 7,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 1054,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 2,
+      "branch_swap_witness_count": 2,
+      "group_count": 2,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 1554,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 12,
+      "anchored_witness_count": 22,
+      "branch_swap_witness_count": 6,
+      "group_count": 8,
+      "induced_generator_count": 9,
+      "maximum_group_size": 6,
+      "package_index": 1786,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 6,
+      "anchored_witness_count": 6,
+      "branch_swap_witness_count": 6,
+      "group_count": 2,
+      "induced_generator_count": 4,
+      "maximum_group_size": 3,
+      "package_index": 2353,
+      "target_pg": "C2"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1134,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1158,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 3,
+      "branch_swap_witness_count": 3,
+      "group_count": 3,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 1164,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 6,
+      "anchored_witness_count": 6,
+      "branch_swap_witness_count": 9,
+      "group_count": 2,
+      "induced_generator_count": 3,
+      "maximum_group_size": 3,
+      "package_index": 1166,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1216,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1218,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 1,
+      "anchored_witness_count": 0,
+      "branch_swap_witness_count": 0,
+      "group_count": 0,
+      "induced_generator_count": 1,
+      "maximum_group_size": 1,
+      "package_index": 1226,
+      "target_pg": "C3"
+    },
+    {
+      "allowed_torsion_permutation_count": 2,
+      "anchored_witness_count": 2,
+      "branch_swap_witness_count": 3,
+      "group_count": 2,
+      "induced_generator_count": 2,
+      "maximum_group_size": 2,
+      "package_index": 2398,
+      "target_pg": "C3"
+    }
+  ],
+  "schema_version": "pg-orbitflow-factorized-automorphism-audit-v1",
+  "status": "FAIL_FACTORIZED_AUTOMORPHISM_STOP_DATASET_BRANCH"
+}

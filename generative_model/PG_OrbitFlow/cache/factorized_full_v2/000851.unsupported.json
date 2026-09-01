@@ -1,0 +1,9 @@
+{
+  "error_type": "RuntimeError",
+  "molecule_id": "cof_000851",
+  "num_atoms": 50,
+  "package_index": 851,
+  "reason": "factorized automorphism group exceeds 6 slots",
+  "split": "train",
+  "target_pg": "C2"
+}

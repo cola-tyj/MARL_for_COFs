@@ -1,0 +1,114 @@
+{
+  "artifacts": {
+    "console.log": "11e76569392b5a64ce63fe58a13488a367e513630a191877db6a74be4dcb0dbe",
+    "last.pt": "b0f6fb7ee3440d7ccf294fadf193accaa097109669dead772e7340964ce22d09",
+    "local_recovery_coordinates.npz": "119b854255ba11cbaef1bdac355bafd747a6a1e6d89553e6473b764a780306c4",
+    "losses.npz": "00a980687a332ad3583bf2189996d37cf0707fc7f8397271f781ce980015f664",
+    "manifest.json": "e4247d562dbb40754575193f77709442d7cd97786419b3d38ec7f9a33d1cc5c8",
+    "raw_coordinates.npz": "c04b3940b983b284cb2707faadee353be3943dce468cb93540466abdd520fe61",
+    "report.json": "feaa9be2ee34a5a2a7e5da89dcb5c2f506d3ad39f72753cbacfcf13f65898d22",
+    "step-000001.pt": "8d84696e01f1ca19029428ac6631c7633f22d576fd828f93be20b40c77ff287f",
+    "step-000256.pt": "0abe8c6db0da105f14bf0ee3ebd26b24c6d00a3d4230165925b9ed867a23f504",
+    "step-000512.pt": "254b26b14f060e2af05fb4ece14a9683055639356f3d7861c035f4d766c1db47",
+    "step-000768.pt": "724416f0b6762a923334ae749bf83b760ef734858ac09069a168c57ce1c45e2f",
+    "step-001024.pt": "34dc030504fa9bd0180d03ab7455ef949c1b6ade4a966b6392a5816e028be342"
+  },
+  "chirality_gate_interpretation": "non-informative on this panel because active_chirality_case_count=0",
+  "decision": "stop Cartesian backbone and implement internal-coordinate decoder",
+  "failed_local_checks": [
+    "bond_length_mae_mean_max_angstrom"
+  ],
+  "formal_run": "c0_local_recovery_v2_pg_balanced",
+  "local_gate": {
+    "checks": {
+      "angle_mae_mean_max_degrees": true,
+      "bond_length_mae_mean_max_angstrom": false,
+      "chirality_preserved_fraction_min": true,
+      "collision_free_fraction_min": true,
+      "endpoint_rmsd_mean_max_angstrom": true,
+      "max_operation_atom_error_max_angstrom": true,
+      "posthoc_hard_projection_never_used": true
+    },
+    "passed": false,
+    "thresholds": {
+      "angle_mae_mean_max_degrees": 5.0,
+      "bond_length_mae_mean_max_angstrom": 0.03,
+      "chirality_preserved_fraction_min": 1.0,
+      "collision_free_fraction_min": 1.0,
+      "endpoint_rmsd_mean_max_angstrom": 0.1,
+      "max_operation_atom_error_max_angstrom": 0.0001
+    },
+    "values": {
+      "angle_mae_mean_degrees": 3.7310161869972944,
+      "bond_length_mae_mean_angstrom": 0.04369064205093309,
+      "chirality_preserved_fraction": 1.0,
+      "collision_free_fraction": 1.0,
+      "endpoint_rmsd_mean_angstrom": 0.08568284998182207,
+      "max_operation_atom_error_angstrom": 5.564337836135892e-07
+    }
+  },
+  "next_route": "fixed-graph bond/angle/torsion internal-coordinate decoder",
+  "original_tier4_gate_unchanged": {
+    "checks": {
+      "all_losses_gradients_finite": true,
+      "fixed_time_endpoint_rmsd_mean_max_angstrom": false,
+      "posthoc_hard_projection_never_used": true,
+      "raw_bond_length_mae_mean_max_angstrom": false,
+      "raw_collision_free_fraction_min": true,
+      "raw_kabsch_rmsd_mean_max_angstrom": false,
+      "raw_max_operation_atom_error_max_angstrom": true,
+      "raw_pair_distance_mae_mean_max_angstrom": false,
+      "training_loss_window_ratio_max": true
+    },
+    "passed": false,
+    "thresholds": {
+      "fixed_time_endpoint_rmsd_mean_max_angstrom": 0.75,
+      "raw_bond_length_mae_mean_max_angstrom": 0.2,
+      "raw_collision_free_fraction_min": 0.75,
+      "raw_kabsch_rmsd_mean_max_angstrom": 1.0,
+      "raw_max_operation_atom_error_max_angstrom": 0.0001,
+      "raw_pair_distance_mae_mean_max_angstrom": 0.6,
+      "training_loss_window_ratio_max": 0.5
+    },
+    "values": {
+      "fixed_time_endpoint_rmsd_mean_angstrom": 0.9492298915982247,
+      "raw_bond_length_mae_mean_angstrom": 0.6667703589352334,
+      "raw_collision_free_fraction": 1.0,
+      "raw_kabsch_rmsd_mean_angstrom": 1.832840487080804,
+      "raw_max_operation_atom_error_angstrom": 3.494151390048714e-06,
+      "raw_pair_distance_mae_mean_angstrom": 1.0993452731616014,
+      "training_loss_window_ratio": 0.45602698125207564
+    }
+  },
+  "passed": false,
+  "protocol": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/c0_local_recovery_v2_pg_balanced.json",
+    "sha256": "1a25c0939b0e3d4f5becb8173ef2d47923f0b955894f116a392f816236903aa1"
+  },
+  "reproducibility_report_sha256": "47fda19d08fccdf7ed3311f515253a229f94e71dffae55625ae11d7cc3120e25",
+  "schema_version": "pg-orbitflow-c0-local-recovery-summary-v1",
+  "status": "FAIL_C0_LOCAL_RECOVERY_STOP_CARTESIAN_BACKBONE",
+  "tier16_started": false,
+  "tier32_started": false,
+  "training": {
+    "all_losses_gradients_finite": true,
+    "batch_size_molecules": 4,
+    "curriculum_exposures": {
+      "C2_harmonic": 204,
+      "C2_large": 409,
+      "C2_medium": 615,
+      "C2_small": 820,
+      "C3_harmonic": 204,
+      "C3_large": 409,
+      "C3_medium": 615,
+      "C3_small": 820
+    },
+    "device": "cuda",
+    "molecule_count": 4,
+    "molecule_exposures": 4096,
+    "optimizer_steps": 1024,
+    "parameter_count": 740424,
+    "short_rollout_steps": 4
+  },
+  "v1_execution_diagnosis_sha256": "3f8c72c6cc6b6f02d80df9db5520f7dfe7478f242c446bc5c2a732ca2885bcee"
+}

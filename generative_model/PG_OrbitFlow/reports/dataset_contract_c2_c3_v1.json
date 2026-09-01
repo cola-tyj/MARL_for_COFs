@@ -1,0 +1,57 @@
+{
+  "canonical_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+  "combined": {
+    "invalid_group_action_count": 0,
+    "maximum_target_projection_rmsd_angstrom": 0.0982739481808307,
+    "mean_target_projection_rmsd_angstrom": 0.006938190061904713,
+    "molecule_count": 2232,
+    "sn_molecule_count": 2,
+    "topology_action_mismatch_count": 0,
+    "typed_action_mismatch_event_count": 500,
+    "unknown_element_fallback_count": 0
+  },
+  "notes": {
+    "core_arm_atom_labels": "not present in canonical v2; no atom-level core/arm labels were guessed",
+    "test_and_core_ood_used": false,
+    "typed_bond_semantics": "Kekule single/double assignments can change under an otherwise exact topological action; exact histograms are retained and model bond-order features are group-averaged."
+  },
+  "package_dir": "/home/tianyajun/MARL_for_COFs/generative_model/data/processed/v2",
+  "point_groups": [
+    "C2",
+    "C3"
+  ],
+  "schema_version": "pg-orbitflow-dataset-audit-v1",
+  "splits": {
+    "train": {
+      "atom_count": 71306,
+      "bond_count": 75521,
+      "maximum_target_projection_rmsd_angstrom": 0.0982739481808307,
+      "mean_coordinate_dof_ratio": 0.4698342355482007,
+      "molecule_count": 1984,
+      "point_group_counts": {
+        "C2": 1615,
+        "C3": 369
+      },
+      "quotient_edge_count": 35514,
+      "quotient_node_count": 33502,
+      "sn_molecule_count": 2,
+      "typed_action_mismatch_molecule_count": 93
+    },
+    "val": {
+      "atom_count": 8311,
+      "bond_count": 8799,
+      "maximum_target_projection_rmsd_angstrom": 0.0953489509772769,
+      "mean_coordinate_dof_ratio": 0.4714234147515341,
+      "molecule_count": 248,
+      "point_group_counts": {
+        "C2": 202,
+        "C3": 46
+      },
+      "quotient_edge_count": 4157,
+      "quotient_node_count": 3918,
+      "sn_molecule_count": 0,
+      "typed_action_mismatch_molecule_count": 8
+    }
+  },
+  "status": "PASS_PG_ORBITFLOW_DATA_CONTRACT_C2_C3"
+}

@@ -1,0 +1,9 @@
+{
+  "error_type": "RuntimeError",
+  "molecule_id": "cof_001496",
+  "num_atoms": 48,
+  "package_index": 1496,
+  "reason": "factorized anchored witness attempts exceeded frozen cap",
+  "split": "val",
+  "target_pg": "C2"
+}

@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "all_added_have_active_chirality": true,
+    "all_added_have_nonplanar_torsion": true,
+    "atom_count_max_21": true,
+    "c2_c3_balanced": true,
+    "iid_train_only": true,
+    "m2_tier4_nested": true,
+    "molecule_count_exact": true,
+    "no_exact_head_feature_target_conflicts": false,
+    "no_undefined_circular_targets": true
+  },
+  "decision": "revise panel selection before any Tier-16 training",
+  "panel": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m2_tier16_panel_v1.json",
+    "sha256": "0e788cdc6290f4500d4aeb02b698ed5e943d083342eb2e132ffe7f6f86a7547e"
+  },
+  "passed": false,
+  "population": {
+    "C2_active_chirality_molecules": 765,
+    "C2_molecules": 1615,
+    "C2_nonplanar_molecules": 1256,
+    "C2_undefined_torsion_molecules": 22,
+    "C3_active_chirality_molecules": 97,
+    "C3_molecules": 369,
+    "C3_nonplanar_molecules": 260
+  },
+  "schema_version": "pg-orbitflow-m2-tier16-panel-audit-v1",
+  "selected_summary": {
+    "added_active_chirality_molecule_count": 12,
+    "added_molecule_count": 12,
+    "added_nonplanar_molecule_count": 12,
+    "exact_feature_conflict_count": 34,
+    "max_atom_count": 21,
+    "point_group_counts": {
+      "C2": 8,
+      "C3": 8
+    },
+    "selected_active_chirality_count": 47,
+    "selected_nonplanar_torsion_orbit_count": 78
+  },
+  "status": "FAIL_M2_TIER16_PANEL_AUDIT",
+  "undefined_torsion_package_indices": [
+    205,
+    213,
+    566,
+    570,
+    572,
+    580,
+    581,
+    588,
+    747,
+    751,
+    761,
+    768,
+    783,
+    827,
+    969,
+    972,
+    974,
+    977,
+    1817,
+    2221,
+    2239,
+    2317
+  ],
+  "undefined_torsion_record_count": 22
+}

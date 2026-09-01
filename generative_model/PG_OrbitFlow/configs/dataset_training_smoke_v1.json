@@ -1,0 +1,810 @@
+{
+  "canonical_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+  "data": {
+    "point_groups": [
+      "C2",
+      "C3"
+    ],
+    "selection": "smoke: first 32/8 records per PG after package-index sorting, N<=30; full: every strictly supported record in the frozen split",
+    "split_scheme": "iid",
+    "train_records": [
+      {
+        "molecule_id": "cof_000003",
+        "num_atoms": 26,
+        "package_index": 3,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000017",
+        "num_atoms": 30,
+        "package_index": 17,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000024",
+        "num_atoms": 26,
+        "package_index": 24,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000034",
+        "num_atoms": 30,
+        "package_index": 34,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000039",
+        "num_atoms": 18,
+        "package_index": 39,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000041",
+        "num_atoms": 28,
+        "package_index": 41,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000043",
+        "num_atoms": 28,
+        "package_index": 43,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000050",
+        "num_atoms": 20,
+        "package_index": 50,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000086",
+        "num_atoms": 24,
+        "package_index": 86,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000088",
+        "num_atoms": 30,
+        "package_index": 88,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000094",
+        "num_atoms": 30,
+        "package_index": 94,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000096",
+        "num_atoms": 30,
+        "package_index": 96,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000097",
+        "num_atoms": 28,
+        "package_index": 97,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000098",
+        "num_atoms": 26,
+        "package_index": 98,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000100",
+        "num_atoms": 28,
+        "package_index": 100,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000101",
+        "num_atoms": 30,
+        "package_index": 101,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000105",
+        "num_atoms": 24,
+        "package_index": 105,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000106",
+        "num_atoms": 28,
+        "package_index": 106,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000107",
+        "num_atoms": 28,
+        "package_index": 107,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000108",
+        "num_atoms": 28,
+        "package_index": 108,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000111",
+        "num_atoms": 30,
+        "package_index": 111,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000113",
+        "num_atoms": 28,
+        "package_index": 113,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000115",
+        "num_atoms": 28,
+        "package_index": 115,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000116",
+        "num_atoms": 26,
+        "package_index": 116,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000120",
+        "num_atoms": 30,
+        "package_index": 120,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000121",
+        "num_atoms": 30,
+        "package_index": 121,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000126",
+        "num_atoms": 28,
+        "package_index": 126,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000127",
+        "num_atoms": 30,
+        "package_index": 127,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000130",
+        "num_atoms": 26,
+        "package_index": 130,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000132",
+        "num_atoms": 22,
+        "package_index": 132,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000133",
+        "num_atoms": 26,
+        "package_index": 133,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000138",
+        "num_atoms": 24,
+        "package_index": 138,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000062",
+        "num_atoms": 21,
+        "package_index": 62,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000067",
+        "num_atoms": 15,
+        "package_index": 67,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000068",
+        "num_atoms": 24,
+        "package_index": 68,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000073",
+        "num_atoms": 21,
+        "package_index": 73,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000074",
+        "num_atoms": 27,
+        "package_index": 74,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000076",
+        "num_atoms": 27,
+        "package_index": 76,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000077",
+        "num_atoms": 24,
+        "package_index": 77,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000078",
+        "num_atoms": 24,
+        "package_index": 78,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000079",
+        "num_atoms": 30,
+        "package_index": 79,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_000080",
+        "num_atoms": 30,
+        "package_index": 80,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001123",
+        "num_atoms": 21,
+        "package_index": 1123,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001124",
+        "num_atoms": 18,
+        "package_index": 1124,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001125",
+        "num_atoms": 21,
+        "package_index": 1125,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001126",
+        "num_atoms": 27,
+        "package_index": 1126,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001127",
+        "num_atoms": 24,
+        "package_index": 1127,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001131",
+        "num_atoms": 27,
+        "package_index": 1131,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001134",
+        "num_atoms": 21,
+        "package_index": 1134,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001135",
+        "num_atoms": 9,
+        "package_index": 1135,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001136",
+        "num_atoms": 18,
+        "package_index": 1136,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001137",
+        "num_atoms": 24,
+        "package_index": 1137,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001140",
+        "num_atoms": 21,
+        "package_index": 1140,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001142",
+        "num_atoms": 18,
+        "package_index": 1142,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001143",
+        "num_atoms": 18,
+        "package_index": 1143,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001147",
+        "num_atoms": 15,
+        "package_index": 1147,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001148",
+        "num_atoms": 9,
+        "package_index": 1148,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001150",
+        "num_atoms": 9,
+        "package_index": 1150,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001151",
+        "num_atoms": 15,
+        "package_index": 1151,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001154",
+        "num_atoms": 15,
+        "package_index": 1154,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001156",
+        "num_atoms": 15,
+        "package_index": 1156,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001158",
+        "num_atoms": 18,
+        "package_index": 1158,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001159",
+        "num_atoms": 15,
+        "package_index": 1159,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001163",
+        "num_atoms": 27,
+        "package_index": 1163,
+        "target_pg": "C3"
+      }
+    ],
+    "train_split": "train",
+    "train_supported_count": 1963,
+    "train_total_c2_c3": 1984,
+    "train_unsupported": [
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000205",
+        "num_atoms": 30,
+        "package_index": 205,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000213",
+        "num_atoms": 44,
+        "package_index": 213,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000566",
+        "num_atoms": 36,
+        "package_index": 566,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000570",
+        "num_atoms": 60,
+        "package_index": 570,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000572",
+        "num_atoms": 44,
+        "package_index": 572,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000580",
+        "num_atoms": 36,
+        "package_index": 580,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000581",
+        "num_atoms": 56,
+        "package_index": 581,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000588",
+        "num_atoms": 60,
+        "package_index": 588,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000747",
+        "num_atoms": 48,
+        "package_index": 747,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000751",
+        "num_atoms": 32,
+        "package_index": 751,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000761",
+        "num_atoms": 66,
+        "package_index": 761,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000768",
+        "num_atoms": 44,
+        "package_index": 768,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000827",
+        "num_atoms": 46,
+        "package_index": 827,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000969",
+        "num_atoms": 58,
+        "package_index": 969,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000972",
+        "num_atoms": 56,
+        "package_index": 972,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000974",
+        "num_atoms": 54,
+        "package_index": 974,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000977",
+        "num_atoms": 38,
+        "package_index": 977,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_001817",
+        "num_atoms": 54,
+        "package_index": 1817,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_002221",
+        "num_atoms": 34,
+        "package_index": 2221,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_002239",
+        "num_atoms": 68,
+        "package_index": 2239,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_002317",
+        "num_atoms": 38,
+        "package_index": 2317,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      }
+    ],
+    "validation_records": [
+      {
+        "molecule_id": "cof_000137",
+        "num_atoms": 24,
+        "package_index": 137,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000158",
+        "num_atoms": 16,
+        "package_index": 158,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000174",
+        "num_atoms": 18,
+        "package_index": 174,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000183",
+        "num_atoms": 18,
+        "package_index": 183,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000239",
+        "num_atoms": 24,
+        "package_index": 239,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000241",
+        "num_atoms": 30,
+        "package_index": 241,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000247",
+        "num_atoms": 24,
+        "package_index": 247,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000250",
+        "num_atoms": 30,
+        "package_index": 250,
+        "target_pg": "C2"
+      },
+      {
+        "molecule_id": "cof_000065",
+        "num_atoms": 21,
+        "package_index": 65,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001122",
+        "num_atoms": 24,
+        "package_index": 1122,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001129",
+        "num_atoms": 15,
+        "package_index": 1129,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001133",
+        "num_atoms": 30,
+        "package_index": 1133,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001145",
+        "num_atoms": 12,
+        "package_index": 1145,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001153",
+        "num_atoms": 15,
+        "package_index": 1153,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001199",
+        "num_atoms": 21,
+        "package_index": 1199,
+        "target_pg": "C3"
+      },
+      {
+        "molecule_id": "cof_001215",
+        "num_atoms": 15,
+        "package_index": 1215,
+        "target_pg": "C3"
+      }
+    ],
+    "validation_split": "val",
+    "validation_supported_count": 245,
+    "validation_total_c2_c3": 248,
+    "validation_unsupported": [
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000577",
+        "num_atoms": 58,
+        "package_index": 577,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000748",
+        "num_atoms": 68,
+        "package_index": 748,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      },
+      {
+        "error_type": "ValueError",
+        "molecule_id": "cof_000971",
+        "num_atoms": 36,
+        "package_index": 971,
+        "reason": "torsion orbit has an undefined circular mean",
+        "target_pg": "C2"
+      }
+    ]
+  },
+  "global_shape_contract": {
+    "atom_order_invariant": true,
+    "fingerprint": "normalized counted WL radius 0..4, SHA-256 folded to 512 bits",
+    "minimum_graph_distance": 4,
+    "quantile_count": 16,
+    "target_coordinates_used_only_for_training": true
+  },
+  "implementation": {
+    "factorized_automorphism": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/factorized_automorphism.py",
+      "sha256": "7d73fd6264a7dfc3474609dd1112722db211e00cee83c135dacd812fb41381f1"
+    },
+    "geometry": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/geometry.py",
+      "sha256": "cbbb5fa2990ce894c4453ec2729109b2566ecb36236c8f59d25ae0e9a884ef2c"
+    },
+    "ic_model": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/orbit_ic_model.py",
+      "sha256": "4137ac217b512b6b8b0c7ae6ce0a12f5e3f38bae9030e2aa609239da436a8b66"
+    },
+    "model": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/global_shape_fingerprint_model.py",
+      "sha256": "58016d5c23c695083293c54bc5fae021353a823467be9b37353cd22d0712ad88"
+    },
+    "runner": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/dataset_training.py",
+      "sha256": "d7c8eb43ab7213fda3523108abcae23b1c03de5ab359589e7dd2e1debe111716"
+    },
+    "shape_contract": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/global_shape_model.py",
+      "sha256": "3ef639b6dc5f987deb8686e9caa1f8f77bce6390c613dd8c78759fc4772d929a"
+    }
+  },
+  "mode": "smoke",
+  "model": {
+    "edge_feature_dim": 5,
+    "geometry_group_phase": true,
+    "global_shape_quantile_count": 16,
+    "hidden_dim": 96,
+    "layers": 4,
+    "node_feature_dim": 29,
+    "parameter_count_expected": 670104,
+    "predict_torsion": true,
+    "trainable_parameter_count_expected": 619894,
+    "wl_fingerprint_bits": 512,
+    "wl_fingerprint_radius": 4
+  },
+  "model_initialization": {
+    "legacy_local_rotor_head_frozen": true,
+    "m3_checkpoint_loaded": false,
+    "trainable_parameter_count": 369510,
+    "type": "fresh deterministic random initialization"
+  },
+  "package_dir": "/home/tianyajun/MARL_for_COFs/generative_model/data/processed/v2",
+  "parent_evidence": {
+    "factorized_audit": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/reports/factorized_automorphism_m3_audit_v5.json",
+      "sha256": "d82c526e3a90618470748ed2f13918c443543561198f5fe90c694ebb5fbe3bca"
+    },
+    "m3_protocol": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m3p6_shape_decoder_v2.json",
+      "sha256": "c36d00d9ab9e8f1c9eb76bf738be1d9c24d09b4c630b5a5a59292898e7652109"
+    },
+    "m3_report": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p6_shape_decoder_v2/report.json",
+      "sha256": "08cfa3129bcb37659fe46c643cc08cebe62b3390c0e1dda5d30d8ffd3a203319"
+    },
+    "m4_unseen_failure": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m4_unseen_prediction_v1/report.json",
+      "sha256": "0ac91a16c789bc921d9ba359d6a904bbb1f196b293e76407cb54df57bc536f50"
+    }
+  },
+  "schema_version": "pg-orbitflow-dataset-training-protocol-v1",
+  "scope": {
+    "core_ood_used": false,
+    "f0p2_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "quality_claim": false,
+    "target_cartesian_model_input_used": false,
+    "validation_used_for_training_or_model_selection": false
+  },
+  "seed": 20263101,
+  "smoke_gate": {
+    "all_losses_and_gradients_finite": true,
+    "c2_c3_present_in_every_batch": true,
+    "checkpoint_reload_prediction_max_abs_difference": 0.0,
+    "train_validation_overlap_count": 0,
+    "training_loss_last32_over_first32_max": 1.0,
+    "unsupported_records_explicit": true,
+    "validation_used_for_gradient_updates": false
+  },
+  "training": {
+    "batch_size_molecules": 8,
+    "checkpoint_every": 64,
+    "gradient_clip_norm": 5.0,
+    "learning_rate": 0.001,
+    "loss_weights": {
+      "angle_cosine_mse": 2.0,
+      "bond_mse": 10.0,
+      "global_shape_mse": 1.0,
+      "torsion_circular": 2.0,
+      "worst_molecule_nonplanar": 1.0,
+      "worst_molecule_torsion": 1.0
+    },
+    "optimizer_steps": 256,
+    "point_group_composition_per_batch": {
+      "C2": 4,
+      "C3": 4
+    },
+    "torsion_assignment": "one global action-augmented graph-isomorphism witness permutation; finite torsion-permutation closure capped at 10000",
+    "weight_decay": 0.0
+  }
+}

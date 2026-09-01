@@ -1,0 +1,22 @@
+step=1/2048 loss=0.764618 bond=0.00631745A angle=1.54522deg torsion=54.8003deg nonplanar=90.8304deg gate=FAIL
+step=512/2048 loss=0.0361693 bond=0.00631745A angle=1.54522deg torsion=11.7128deg nonplanar=19.018deg gate=FAIL
+step=1024/2048 loss=0.000132963 bond=0.00631745A angle=1.54522deg torsion=1.33792deg nonplanar=1.25999deg gate=PASS
+step=1536/2048 loss=0.000192916 bond=0.00631745A angle=1.54522deg torsion=1.1798deg nonplanar=1.46292deg gate=PASS
+step=2048/2048 loss=0.000138213 bond=0.00631745A angle=1.54522deg torsion=1.32879deg nonplanar=1.35911deg gate=PASS
+reconstruct package_index=864 PG=C2 torsion=0.446089 nonplanar=0 rmsd=0.0130315A
+reconstruct package_index=1045 PG=C2 torsion=0.324586 nonplanar=0 rmsd=0.0100618A
+reconstruct package_index=879 PG=C2 torsion=0.371307 nonplanar=0.41554 rmsd=0.0266573A
+reconstruct package_index=892 PG=C2 torsion=42.5575 nonplanar=105.359 rmsd=0.83685A
+reconstruct package_index=875 PG=C2 torsion=51.7374 nonplanar=53.2563 rmsd=1.1559A
+reconstruct package_index=1075 PG=C2 torsion=17.1988 nonplanar=27.9939 rmsd=0.331367A
+reconstruct package_index=1768 PG=C2 torsion=0.715049 nonplanar=0.881604 rmsd=0.0124291A
+reconstruct package_index=406 PG=C2 torsion=0.623861 nonplanar=0.427387 rmsd=0.0202707A
+reconstruct package_index=1135 PG=C3 torsion=0.10448 nonplanar=0 rmsd=0.00905521A
+reconstruct package_index=2391 PG=C3 torsion=0.175148 nonplanar=0 rmsd=0.00637153A
+reconstruct package_index=1222 PG=C3 torsion=0.461922 nonplanar=0.42688 rmsd=0.0079845A
+reconstruct package_index=1124 PG=C3 torsion=0.521021 nonplanar=0.409332 rmsd=0.0289414A
+reconstruct package_index=1143 PG=C3 torsion=47.2517 nonplanar=59.7225 rmsd=1.07303A
+reconstruct package_index=2389 PG=C3 torsion=0.496519 nonplanar=0.51899 rmsd=0.0761474A
+reconstruct package_index=2403 PG=C3 torsion=2.48625 nonplanar=2.11081 rmsd=0.0839666A
+reconstruct package_index=62 PG=C3 torsion=0.458411 nonplanar=0.672019 rmsd=0.0488857A
+FAIL_M2P2_RECONSTRUCTION_GATE report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m2p2_local_rotor_set_tier16_v3/report.json

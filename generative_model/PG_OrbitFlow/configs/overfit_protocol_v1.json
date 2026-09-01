@@ -1,0 +1,618 @@
+{
+  "canonical_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+  "data": {
+    "coordinate_scale_angstrom": 3.0,
+    "core_ood_used": false,
+    "nested_panels": true,
+    "point_groups": [
+      "C2",
+      "C3"
+    ],
+    "split": "iid_train_only",
+    "test_used": false,
+    "validation_used": false
+  },
+  "model": {
+    "hidden_dim": 128,
+    "layers": 6,
+    "parameter_count_expected": 740424,
+    "radial_dim": 16,
+    "radial_max": 6.0
+  },
+  "objective": {
+    "bond_weight": 0.25,
+    "overlap_weight": 0.1,
+    "symmetry_weight": 1.0
+  },
+  "package_dir": "/home/tianyajun/MARL_for_COFs/generative_model/data/processed/v2",
+  "progression": {
+    "optimizer_reinitialized_each_tier": true,
+    "order": [
+      4,
+      16,
+      32
+    ],
+    "stop_on_failure": true,
+    "tier_16_initialization": "tier_4_last_model_state",
+    "tier_32_initialization": "tier_16_last_model_state",
+    "tier_4_initialization": "random"
+  },
+  "schema_version": "pg-orbitflow-overfit-protocol-v1",
+  "scientific_question": "Can the native group-constrained vector field memorize and raw-sample nested C2/C3 panels before any external pretraining?",
+  "seed": 20260828,
+  "tiers": {
+    "16": {
+      "evaluation": {
+        "flow_times": [
+          0.1,
+          0.25,
+          0.5,
+          0.75,
+          0.9
+        ],
+        "raw_ode_method": "heun",
+        "raw_ode_steps": 50,
+        "raw_seeds_per_molecule": 2
+      },
+      "gate": {
+        "fixed_time_endpoint_rmsd_mean_max_angstrom": 0.9,
+        "raw_bond_length_mae_mean_max_angstrom": 0.23,
+        "raw_collision_free_fraction_min": 0.75,
+        "raw_kabsch_rmsd_mean_max_angstrom": 1.2,
+        "raw_max_operation_atom_error_max_angstrom": 0.0001,
+        "raw_pair_distance_mae_mean_max_angstrom": 0.7,
+        "training_loss_window_ratio_max": 0.6
+      },
+      "molecule_count": 16,
+      "records": [
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "oxamide_C2",
+          "molecule_id": "cof_000864",
+          "num_atoms": 10,
+          "package_index": 864,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "tetrafluorobenzene_C4",
+          "molecule_id": "cof_001045",
+          "num_atoms": 12,
+          "package_index": 1045,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BENZ_L2",
+          "molecule_id": "cof_001794",
+          "num_atoms": 12,
+          "package_index": 1794,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_TTPH_L2",
+          "molecule_id": "cof_002354",
+          "num_atoms": 12,
+          "package_index": 2354,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "bifuran_C2",
+          "molecule_id": "cof_000156",
+          "num_atoms": 16,
+          "package_index": 156,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "bithiophene_C2",
+          "molecule_id": "cof_000637",
+          "num_atoms": 16,
+          "package_index": 637,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "diethynylbenzene_C2",
+          "molecule_id": "cof_000698",
+          "num_atoms": 16,
+          "package_index": 698,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BBTZ_L2",
+          "molecule_id": "cof_001581",
+          "num_atoms": 16,
+          "package_index": 1581,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triazine_C3",
+          "molecule_id": "cof_001135",
+          "num_atoms": 9,
+          "package_index": 1135,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BENZ_T3",
+          "molecule_id": "cof_002391",
+          "num_atoms": 12,
+          "package_index": 2391,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triethynyltriazine_C3",
+          "molecule_id": "cof_001202",
+          "num_atoms": 15,
+          "package_index": 1202,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "I_direct",
+          "contains_sn": false,
+          "core": "trihydroxybenzene_C3",
+          "molecule_id": "cof_001222",
+          "num_atoms": 15,
+          "package_index": 1222,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "CN_direct",
+          "contains_sn": false,
+          "core": "triaminotriazine_C3",
+          "molecule_id": "cof_001124",
+          "num_atoms": 18,
+          "package_index": 1124,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triethynylbenzene_C3",
+          "molecule_id": "cof_001183",
+          "num_atoms": 18,
+          "package_index": 1183,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "ethynyl_direct",
+          "contains_sn": false,
+          "core": "pb_BRZN_T3",
+          "molecule_id": "cof_002402",
+          "num_atoms": 18,
+          "package_index": 2402,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "trimesic_ester_C3",
+          "molecule_id": "cof_001236",
+          "num_atoms": 21,
+          "package_index": 1236,
+          "target_pg": "C3"
+        }
+      ],
+      "training": {
+        "additional_optimizer_steps": 2048,
+        "batch_size_molecules": 4,
+        "checkpoint_every": 256,
+        "gradient_clip_norm": 5.0,
+        "learning_rate": 0.0003,
+        "point_group_balanced_exposure": true,
+        "weight_decay": 1e-06
+      }
+    },
+    "32": {
+      "evaluation": {
+        "flow_times": [
+          0.1,
+          0.25,
+          0.5,
+          0.75,
+          0.9
+        ],
+        "raw_ode_method": "heun",
+        "raw_ode_steps": 50,
+        "raw_seeds_per_molecule": 2
+      },
+      "gate": {
+        "fixed_time_endpoint_rmsd_mean_max_angstrom": 1.0,
+        "raw_bond_length_mae_mean_max_angstrom": 0.25,
+        "raw_collision_free_fraction_min": 0.7,
+        "raw_kabsch_rmsd_mean_max_angstrom": 1.3,
+        "raw_max_operation_atom_error_max_angstrom": 0.0001,
+        "raw_pair_distance_mae_mean_max_angstrom": 0.75,
+        "training_loss_window_ratio_max": 0.65
+      },
+      "molecule_count": 32,
+      "records": [
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "oxamide_C2",
+          "molecule_id": "cof_000864",
+          "num_atoms": 10,
+          "package_index": 864,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "tetrafluorobenzene_C4",
+          "molecule_id": "cof_001045",
+          "num_atoms": 12,
+          "package_index": 1045,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BENZ_L2",
+          "molecule_id": "cof_001794",
+          "num_atoms": 12,
+          "package_index": 1794,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_TTPH_L2",
+          "molecule_id": "cof_002354",
+          "num_atoms": 12,
+          "package_index": 2354,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "bifuran_C2",
+          "molecule_id": "cof_000156",
+          "num_atoms": 16,
+          "package_index": 156,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "bithiophene_C2",
+          "molecule_id": "cof_000637",
+          "num_atoms": 16,
+          "package_index": 637,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "diethynylbenzene_C2",
+          "molecule_id": "cof_000698",
+          "num_atoms": 16,
+          "package_index": 698,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BBTZ_L2",
+          "molecule_id": "cof_001581",
+          "num_atoms": 16,
+          "package_index": 1581,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "bis_benzoate_C2",
+          "molecule_id": "cof_000406",
+          "num_atoms": 18,
+          "package_index": 406,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pyrazine_phenyl_C2",
+          "molecule_id": "cof_001000",
+          "num_atoms": 18,
+          "package_index": 1000,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BDFN_L2",
+          "molecule_id": "cof_001653",
+          "num_atoms": 18,
+          "package_index": 1653,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "pb_BDTP_L2",
+          "molecule_id": "cof_001750",
+          "num_atoms": 18,
+          "package_index": 1750,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "pb_NAPT_L2",
+          "molecule_id": "cof_002101",
+          "num_atoms": 18,
+          "package_index": 2101,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "bipyridine_C2",
+          "molecule_id": "cof_000307",
+          "num_atoms": 20,
+          "package_index": 307,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "bis_benzamide_C2",
+          "molecule_id": "cof_000374",
+          "num_atoms": 20,
+          "package_index": 374,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_3BPD_L2",
+          "molecule_id": "cof_001450",
+          "num_atoms": 20,
+          "package_index": 1450,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triazine_C3",
+          "molecule_id": "cof_001135",
+          "num_atoms": 9,
+          "package_index": 1135,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BENZ_T3",
+          "molecule_id": "cof_002391",
+          "num_atoms": 12,
+          "package_index": 2391,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triethynyltriazine_C3",
+          "molecule_id": "cof_001202",
+          "num_atoms": 15,
+          "package_index": 1202,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "I_direct",
+          "contains_sn": false,
+          "core": "trihydroxybenzene_C3",
+          "molecule_id": "cof_001222",
+          "num_atoms": 15,
+          "package_index": 1222,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "CN_direct",
+          "contains_sn": false,
+          "core": "triaminotriazine_C3",
+          "molecule_id": "cof_001124",
+          "num_atoms": 18,
+          "package_index": 1124,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triethynylbenzene_C3",
+          "molecule_id": "cof_001183",
+          "num_atoms": 18,
+          "package_index": 1183,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "ethynyl_direct",
+          "contains_sn": false,
+          "core": "pb_BRZN_T3",
+          "molecule_id": "cof_002402",
+          "num_atoms": 18,
+          "package_index": 2402,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "trimesic_ester_C3",
+          "molecule_id": "cof_001236",
+          "num_atoms": 21,
+          "package_index": 1236,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BTTP_T3",
+          "molecule_id": "cof_002420",
+          "num_atoms": 21,
+          "package_index": 2420,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "N3_direct",
+          "contains_sn": false,
+          "core": "trimesic_tris_amide_C3",
+          "molecule_id": "cof_000080",
+          "num_atoms": 30,
+          "package_index": 80,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "pb_TPNY_T3",
+          "molecule_id": "cof_002518",
+          "num_atoms": 30,
+          "package_index": 2518,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "I_direct",
+          "contains_sn": false,
+          "core": "triazine__oxamide",
+          "molecule_id": "cof_001264",
+          "num_atoms": 33,
+          "package_index": 1264,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "pb_TPAM_T3",
+          "molecule_id": "cof_002501",
+          "num_atoms": 34,
+          "package_index": 2501,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_DBA1_T3",
+          "molecule_id": "cof_002447",
+          "num_atoms": 36,
+          "package_index": 2447,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triazine_triphenyl_C3",
+          "molecule_id": "cof_001168",
+          "num_atoms": 39,
+          "package_index": 1168,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "triethynyltriazine__oxamide",
+          "molecule_id": "cof_001276",
+          "num_atoms": 39,
+          "package_index": 1276,
+          "target_pg": "C3"
+        }
+      ],
+      "training": {
+        "additional_optimizer_steps": 4096,
+        "batch_size_molecules": 4,
+        "checkpoint_every": 256,
+        "gradient_clip_norm": 5.0,
+        "learning_rate": 0.0003,
+        "point_group_balanced_exposure": true,
+        "weight_decay": 1e-06
+      }
+    },
+    "4": {
+      "evaluation": {
+        "flow_times": [
+          0.1,
+          0.25,
+          0.5,
+          0.75,
+          0.9
+        ],
+        "raw_ode_method": "heun",
+        "raw_ode_steps": 50,
+        "raw_seeds_per_molecule": 2
+      },
+      "gate": {
+        "fixed_time_endpoint_rmsd_mean_max_angstrom": 0.75,
+        "raw_bond_length_mae_mean_max_angstrom": 0.2,
+        "raw_collision_free_fraction_min": 0.75,
+        "raw_kabsch_rmsd_mean_max_angstrom": 1.0,
+        "raw_max_operation_atom_error_max_angstrom": 0.0001,
+        "raw_pair_distance_mae_mean_max_angstrom": 0.6,
+        "training_loss_window_ratio_max": 0.5
+      },
+      "molecule_count": 4,
+      "records": [
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "oxamide_C2",
+          "molecule_id": "cof_000864",
+          "num_atoms": 10,
+          "package_index": 864,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "tetrafluorobenzene_C4",
+          "molecule_id": "cof_001045",
+          "num_atoms": 12,
+          "package_index": 1045,
+          "target_pg": "C2"
+        },
+        {
+          "arm": "Br_direct",
+          "contains_sn": false,
+          "core": "triazine_C3",
+          "molecule_id": "cof_001135",
+          "num_atoms": 9,
+          "package_index": 1135,
+          "target_pg": "C3"
+        },
+        {
+          "arm": "Cl_direct",
+          "contains_sn": false,
+          "core": "pb_BENZ_T3",
+          "molecule_id": "cof_002391",
+          "num_atoms": 12,
+          "package_index": 2391,
+          "target_pg": "C3"
+        }
+      ],
+      "training": {
+        "additional_optimizer_steps": 1024,
+        "batch_size_molecules": 4,
+        "checkpoint_every": 256,
+        "gradient_clip_norm": 5.0,
+        "learning_rate": 0.0003,
+        "point_group_balanced_exposure": true,
+        "weight_decay": 1e-06
+      }
+    }
+  }
+}

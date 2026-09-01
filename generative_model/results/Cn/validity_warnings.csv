@@ -1,0 +1,5 @@
+molecule_id,source_group,smiles,actual_pg,failed_checks,minimum_pair_distance_angstrom,minimum_bond_covalent_radius_ratio,maximum_bond_covalent_radius_ratio,uff_relaxation_kabsch_rmsd_angstrom
+mol_019_C3k2,C3k2,C12C3C1n1n2n13,C3,bond_ratio_screen,0.9023811245260345,0.5936717924513385,1.0742876964793786,1.5884275155896495e-16
+mol_002_C3k3,C3k3,C1=C2C3C=C4C1C3=CC24,C3,bond_ratio_screen,0.8476516924372384,0.8240716994854406,1.4340905196386866,3.6648341325893738e-06
+mol_043_C3k3,C3k3,OC12C3C4(O)C1C3(O)C24,C3v,bond_ratio_screen,0.9940856408732806,0.6971984297700565,1.3626527846254675,4.009839289350361e-06
+mol_066_C3k3,C3k3,C12C3C14C1C5C21C1C4C351,C3,no_active_f02_repulsion_pairs;unconstrained_uff_stability_rmsd,0.7614427424623859,0.8061446476433013,1.1856469739128805,1.3299448681189578

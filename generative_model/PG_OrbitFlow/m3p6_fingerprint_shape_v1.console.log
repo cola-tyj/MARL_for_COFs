@@ -1,0 +1,6 @@
+step=1/2048 loss=54.3512 shape_mae_max=5.45796A
+step=512/2048 loss=0.0101802 shape_mae_max=0.0687383A
+step=1024/2048 loss=0.00111447 shape_mae_max=0.0418312A
+step=1536/2048 loss=0.00587198 shape_mae_max=0.0365146A
+step=2048/2048 loss=0.000107546 shape_mae_max=0.00469512A
+PASS_M3P6_FINGERPRINT_SHAPE_GATE_ADVANCE_TO_SELECTION_AUDIT shape_mae_max=0.00469512A report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p6_fingerprint_shape_v1/report.json

@@ -1,0 +1,54 @@
+{
+  "checks": {
+    "angle_gate_remains_passed": true,
+    "bond_gate_remains_passed": true,
+    "failures_are_sparse": true,
+    "m3p2_improved_over_m3p1": true,
+    "m3p2_status_is_prediction_failure": true,
+    "nonplanar_gate_is_only_secondary_failure": true,
+    "one_c2_and_one_c3_failure": true,
+    "torsion_gate_is_only_primary_failure": true
+  },
+  "decision": {
+    "change": "add worst molecule-level torsion and nonplanar circular losses to the existing full-panel mean loss",
+    "unchanged": [
+      "panel",
+      "original prediction and reconstruction Gate",
+      "frozen graph features, bond head, and angle head",
+      "decoder"
+    ]
+  },
+  "failing_molecules": [
+    {
+      "nonplanar_mae_degrees": 0.0034873275661059474,
+      "package_index": 163,
+      "reasons": [
+        "torsion"
+      ],
+      "target_pg": "C2",
+      "torsion_mae_degrees": 6.965569609946198
+    },
+    {
+      "nonplanar_mae_degrees": 2.543247333818348,
+      "package_index": 1216,
+      "reasons": [
+        "nonplanar_torsion"
+      ],
+      "target_pg": "C3",
+      "torsion_mae_degrees": 1.0694790689542595
+    }
+  ],
+  "identity": {
+    "auditor_sha256": "6a85c29622fc053706dba5b936b286a03d6735b7172afef0c678dd52154cbf61",
+    "m3p1_report_sha256": "262edfa8aa5e37287b13fcb3cea87d7458bb5a368111036a29a3d2ea8924a2cb",
+    "m3p2_report_sha256": "7e5790e44693725c88988e6ecea0ff92a1de5c91e4f98f486eb82e8a19fccf0f"
+  },
+  "metrics": {
+    "m3p1_torsion_max_degrees": 24.001423904806288,
+    "m3p2_nonplanar_max_degrees": 2.543247333818348,
+    "m3p2_torsion_max_degrees": 6.965569609946198
+  },
+  "passed": true,
+  "schema_version": "pg-orbitflow-m3p3-worst-molecule-readiness-v1",
+  "status": "PASS_M3P3_WORST_MOLECULE_REFINEMENT_GATE"
+}

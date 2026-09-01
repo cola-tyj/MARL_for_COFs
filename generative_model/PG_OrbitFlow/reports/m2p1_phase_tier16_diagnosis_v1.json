@@ -1,0 +1,1097 @@
+{
+  "evidence_based_interpretation": [
+    "bond and angle heads passed while torsion failed on only six molecules",
+    "nearly every failed torsion orbit belongs to a repeated-prediction group",
+    "the corresponding final-checkpoint torsion-head input rows are exactly identical",
+    "the repeated groups differ by equal-element terminal atoms around the same rotor",
+    "the current atom-labelled per-orbit torsion objective is therefore not permutation-safe for local exchangeable substituents"
+  ],
+  "excluded_explanations": [
+    "global inability to learn bond lengths",
+    "global inability to learn bond angles",
+    "failure on all non-planar molecules"
+  ],
+  "identity": {
+    "checkpoint_sha256": "983fdb288f383a6f8b52eb8ee3524b56ecc8e8ef543b53548b8e624be59ec8e4",
+    "formal_report_sha256": "858b486c04f9ebb2018c50722330d96c32addb1f5ab87d788a7b2afe4240bcbd",
+    "predictions_sha256": "3d59217e18083403a8903bdd86941dfe9ace205cebb426887305dd56d82c924a",
+    "protocol_sha256": "3a88b0eef28e27e104db031e2ce8e7c98b32211186bb5335fbcc3d436f6390b8"
+  },
+  "molecules": [
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_000864",
+      "package_index": 864,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 0.5801098054671832,
+      "torsion_max_error_degrees": 1.0457715420446094,
+      "torsion_orbit_count": 7
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_001045",
+      "package_index": 1045,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 0.4478069157676398,
+      "torsion_max_error_degrees": 1.1372699953584455,
+      "torsion_orbit_count": 14
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_000879",
+      "package_index": 879,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 0.5560020376439301,
+      "torsion_max_error_degrees": 1.3851651872731905,
+      "torsion_orbit_count": 9
+    },
+    {
+      "collapsed_prediction_groups": [
+        {
+          "error_degrees": [
+            55.33176400617632,
+            56.227915296251474
+          ],
+          "failed_orbit_ids": [
+            4,
+            5
+          ],
+          "orbit_ids": [
+            4,
+            5
+          ],
+          "prediction_degrees": [
+            -156.66479365876012
+          ],
+          "representative_elements": [
+            [
+              "C",
+              "N",
+              "N",
+              "H"
+            ],
+            [
+              "C",
+              "N",
+              "N",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              2,
+              1,
+              0,
+              8
+            ],
+            [
+              2,
+              1,
+              0,
+              9
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            148.00344233506354,
+            -100.43687836250865
+          ]
+        },
+        {
+          "error_degrees": [
+            55.40977628068565,
+            56.149903842597375
+          ],
+          "failed_orbit_ids": [
+            9,
+            10
+          ],
+          "orbit_ids": [
+            9,
+            10
+          ],
+          "prediction_degrees": [
+            15.750691169764819
+          ],
+          "representative_elements": [
+            [
+              "H",
+              "N",
+              "N",
+              "H"
+            ],
+            [
+              "H",
+              "N",
+              "N",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              8,
+              0,
+              1,
+              10
+            ],
+            [
+              9,
+              0,
+              1,
+              10
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            -39.659085110920834,
+            71.9005950123622
+          ]
+        }
+      ],
+      "failed_orbit_count": 4,
+      "failed_orbit_ids": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "identical_torsion_head_input_groups": [
+        [
+          4,
+          5
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "molecule_id": "cof_000892",
+      "package_index": 892,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 20.546207237868774,
+      "torsion_max_error_degrees": 56.227915296251474,
+      "torsion_orbit_count": 11
+    },
+    {
+      "collapsed_prediction_groups": [
+        {
+          "error_degrees": [
+            106.7164592652743,
+            130.53563143099797,
+            11.403027566127095
+          ],
+          "failed_orbit_ids": [
+            4,
+            5,
+            6
+          ],
+          "orbit_ids": [
+            4,
+            5,
+            6
+          ],
+          "prediction_degrees": [
+            11.610236497387092
+          ],
+          "representative_elements": [
+            [
+              "C",
+              "N",
+              "C",
+              "F"
+            ],
+            [
+              "C",
+              "N",
+              "C",
+              "F"
+            ],
+            [
+              "C",
+              "N",
+              "C",
+              "F"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              1,
+              2,
+              3,
+              6
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            118.32669576266139,
+            -118.92539493361087,
+            0.2072089312599983
+          ]
+        },
+        {
+          "error_degrees": [
+            104.68146077313594,
+            132.5706272297978,
+            13.438024131442205
+          ],
+          "failed_orbit_ids": [
+            10,
+            11,
+            12
+          ],
+          "orbit_ids": [
+            10,
+            11,
+            12
+          ],
+          "prediction_degrees": [
+            165.4275760165712
+          ],
+          "representative_elements": [
+            [
+              "F",
+              "C",
+              "N",
+              "H"
+            ],
+            [
+              "F",
+              "C",
+              "N",
+              "H"
+            ],
+            [
+              "F",
+              "C",
+              "N",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              4,
+              3,
+              2,
+              14
+            ],
+            [
+              5,
+              3,
+              2,
+              14
+            ],
+            [
+              6,
+              3,
+              2,
+              14
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            -89.89096321029282,
+            32.856948786773465,
+            151.98955188512903
+          ]
+        }
+      ],
+      "failed_orbit_count": 6,
+      "failed_orbit_ids": [
+        4,
+        5,
+        6,
+        10,
+        11,
+        12
+      ],
+      "identical_torsion_head_input_groups": [
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "molecule_id": "cof_000875",
+      "package_index": 875,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 38.62442981241914,
+      "torsion_max_error_degrees": 132.5706272297978,
+      "torsion_orbit_count": 13
+    },
+    {
+      "collapsed_prediction_groups": [
+        {
+          "error_degrees": [
+            67.29318139124382,
+            65.15770395831166
+          ],
+          "failed_orbit_ids": [
+            8,
+            9
+          ],
+          "orbit_ids": [
+            8,
+            9
+          ],
+          "prediction_degrees": [
+            83.8325978877746
+          ],
+          "representative_elements": [
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ],
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              2,
+              1,
+              0,
+              12
+            ],
+            [
+              2,
+              1,
+              0,
+              13
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            151.1257792790184,
+            18.674893929462936
+          ]
+        },
+        {
+          "error_degrees": [
+            65.44290165711271,
+            67.00798553882566
+          ],
+          "failed_orbit_ids": [
+            15,
+            16
+          ],
+          "orbit_ids": [
+            15,
+            16
+          ],
+          "prediction_degrees": [
+            -84.11757365248323
+          ],
+          "representative_elements": [
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ],
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              8,
+              6,
+              7,
+              14
+            ],
+            [
+              8,
+              6,
+              7,
+              15
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            -18.67467199537053,
+            -151.1255591913089
+          ]
+        }
+      ],
+      "failed_orbit_count": 4,
+      "failed_orbit_ids": [
+        8,
+        9,
+        15,
+        16
+      ],
+      "identical_torsion_head_input_groups": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "molecule_id": "cof_001075",
+      "package_index": 1075,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 15.315155442905759,
+      "torsion_max_error_degrees": 67.29318139124382,
+      "torsion_orbit_count": 18
+    },
+    {
+      "collapsed_prediction_groups": [
+        {
+          "error_degrees": [
+            63.81478443726928,
+            66.40039315961097
+          ],
+          "failed_orbit_ids": [
+            8,
+            9
+          ],
+          "orbit_ids": [
+            8,
+            9
+          ],
+          "prediction_degrees": [
+            83.71853879122227
+          ],
+          "representative_elements": [
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ],
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              2,
+              1,
+              0,
+              8
+            ],
+            [
+              2,
+              1,
+              0,
+              9
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            19.903754353952987,
+            150.11893195083323
+          ]
+        },
+        {
+          "error_degrees": [
+            64.56971896781278,
+            65.64545826460927
+          ],
+          "failed_orbit_ids": [
+            14,
+            15
+          ],
+          "orbit_ids": [
+            14,
+            15
+          ],
+          "prediction_degrees": [
+            -84.47352409031274
+          ],
+          "representative_elements": [
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ],
+            [
+              "C",
+              "C",
+              "N",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              6,
+              4,
+              5,
+              12
+            ],
+            [
+              6,
+              4,
+              5,
+              13
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            -19.903805122499957,
+            -150.118982354922
+          ]
+        },
+        {
+          "error_degrees": [
+            3.103223078735266,
+            1.573971854667302
+          ],
+          "failed_orbit_ids": [
+            16
+          ],
+          "orbit_ids": [
+            16,
+            17
+          ],
+          "prediction_degrees": [
+            179.23533934272385
+          ],
+          "representative_elements": [
+            [
+              "H",
+              "C",
+              "C",
+              "H"
+            ],
+            [
+              "H",
+              "C",
+              "C",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              10,
+              2,
+              3,
+              11
+            ],
+            [
+              14,
+              6,
+              7,
+              15
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": false,
+          "target_degrees": [
+            -177.6614375785409,
+            177.66136748805653
+          ]
+        }
+      ],
+      "failed_orbit_count": 5,
+      "failed_orbit_ids": [
+        8,
+        9,
+        14,
+        15,
+        16
+      ],
+      "identical_torsion_head_input_groups": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "molecule_id": "cof_001768",
+      "package_index": 1768,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 15.064597155312974,
+      "torsion_max_error_degrees": 66.40039315961097,
+      "torsion_orbit_count": 18
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_000406",
+      "package_index": 406,
+      "target_pg": "C2",
+      "torsion_mae_degrees": 0.9051519127813122,
+      "torsion_max_error_degrees": 1.9737165629098334,
+      "torsion_orbit_count": 16
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_001135",
+      "package_index": 1135,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 0.1531714489279057,
+      "torsion_max_error_degrees": 0.21834430148981393,
+      "torsion_orbit_count": 4
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_002391",
+      "package_index": 2391,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 0.2608297731904986,
+      "torsion_max_error_degrees": 1.0162151353810052,
+      "torsion_orbit_count": 8
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_001222",
+      "package_index": 1222,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 0.4561258621288358,
+      "torsion_max_error_degrees": 0.8652232921752632,
+      "torsion_orbit_count": 10
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_001124",
+      "package_index": 1124,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 0.3817569331435218,
+      "torsion_max_error_degrees": 1.6159602469179843,
+      "torsion_orbit_count": 10
+    },
+    {
+      "collapsed_prediction_groups": [
+        {
+          "error_degrees": [
+            118.95904583843716,
+            121.02033950074802,
+            1.0269959848818824
+          ],
+          "failed_orbit_ids": [
+            0,
+            4
+          ],
+          "orbit_ids": [
+            0,
+            4,
+            6
+          ],
+          "prediction_degrees": [
+            89.60171179794006
+          ],
+          "representative_elements": [
+            [
+              "F",
+              "C",
+              "C",
+              "N"
+            ],
+            [
+              "F",
+              "C",
+              "C",
+              "N"
+            ],
+            [
+              "F",
+              "C",
+              "C",
+              "N"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              1,
+              4,
+              5
+            ],
+            [
+              3,
+              1,
+              4,
+              5
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            -29.357334040497097,
+            -149.3779487013119,
+            90.62870778282195
+          ]
+        },
+        {
+          "error_degrees": [
+            145.2367551481215,
+            94.74263111433207,
+            25.250712977510037
+          ],
+          "failed_orbit_ids": [
+            1,
+            5,
+            7
+          ],
+          "orbit_ids": [
+            1,
+            5,
+            7
+          ],
+          "prediction_degrees": [
+            -66.35159175767168
+          ],
+          "representative_elements": [
+            [
+              "F",
+              "C",
+              "C",
+              "N"
+            ],
+            [
+              "F",
+              "C",
+              "C",
+              "N"
+            ],
+            [
+              "F",
+              "C",
+              "C",
+              "N"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              0,
+              1,
+              4,
+              17
+            ],
+            [
+              2,
+              1,
+              4,
+              17
+            ],
+            [
+              3,
+              1,
+              4,
+              17
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            148.41165309420683,
+            28.391039356660382,
+            -91.60230473518173
+          ]
+        }
+      ],
+      "failed_orbit_count": 5,
+      "failed_orbit_ids": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ],
+      "identical_torsion_head_input_groups": [
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          5,
+          7
+        ]
+      ],
+      "molecule_id": "cof_001143",
+      "package_index": 1143,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 50.92569597915974,
+      "torsion_max_error_degrees": 145.2367551481215,
+      "torsion_orbit_count": 10
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_002389",
+      "package_index": 2389,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 0.6222403256601465,
+      "torsion_max_error_degrees": 1.2479004383862835,
+      "torsion_orbit_count": 11
+    },
+    {
+      "collapsed_prediction_groups": [
+        {
+          "error_degrees": [
+            69.78042729510426,
+            47.8528794011904,
+            169.03607683174954
+          ],
+          "failed_orbit_ids": [
+            6,
+            7,
+            8
+          ],
+          "orbit_ids": [
+            6,
+            7,
+            8
+          ],
+          "prediction_degrees": [
+            74.13043379525703
+          ],
+          "representative_elements": [
+            [
+              "B",
+              "N",
+              "C",
+              "H"
+            ],
+            [
+              "B",
+              "N",
+              "C",
+              "H"
+            ],
+            [
+              "B",
+              "N",
+              "C",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              2,
+              1,
+              0,
+              9
+            ],
+            [
+              2,
+              1,
+              0,
+              10
+            ],
+            [
+              2,
+              1,
+              0,
+              11
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            4.35000650015277,
+            121.98331319644744,
+            -116.83348937299345
+          ]
+        },
+        {
+          "error_degrees": [
+            68.03081459712226,
+            170.78568905620563,
+            49.60249116866831
+          ],
+          "failed_orbit_ids": [
+            10,
+            11,
+            12
+          ],
+          "orbit_ids": [
+            10,
+            11,
+            12
+          ],
+          "prediction_degrees": [
+            -53.94879534559462
+          ],
+          "representative_elements": [
+            [
+              "B",
+              "N",
+              "C",
+              "H"
+            ],
+            [
+              "B",
+              "N",
+              "C",
+              "H"
+            ],
+            [
+              "B",
+              "N",
+              "C",
+              "H"
+            ]
+          ],
+          "representative_tuples": [
+            [
+              2,
+              3,
+              4,
+              13
+            ],
+            [
+              2,
+              3,
+              4,
+              14
+            ],
+            [
+              2,
+              3,
+              4,
+              15
+            ]
+          ],
+          "same_rotor_equal_element_terminal_substitution": true,
+          "target_degrees": [
+            -121.97960994271689,
+            116.836893710611,
+            -4.346304176926307
+          ]
+        }
+      ],
+      "failed_orbit_count": 7,
+      "failed_orbit_ids": [
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ],
+      "identical_torsion_head_input_groups": [
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "molecule_id": "cof_002403",
+      "package_index": 2403,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 41.75773920402623,
+      "torsion_max_error_degrees": 170.78568905620563,
+      "torsion_orbit_count": 14
+    },
+    {
+      "collapsed_prediction_groups": [],
+      "failed_orbit_count": 0,
+      "failed_orbit_ids": [],
+      "identical_torsion_head_input_groups": [],
+      "molecule_id": "cof_000062",
+      "package_index": 62,
+      "target_pg": "C3",
+      "torsion_mae_degrees": 0.19929770194525773,
+      "torsion_max_error_degrees": 0.509732595994712,
+      "torsion_orbit_count": 11
+    }
+  ],
+  "next_experiment_constraint": "replace atom-labelled local-rotor torsion supervision with a permutation-invariant set/rotor representation; do not merely extend M2.1 steps or relax the 2-degree Gate",
+  "schema_version": "pg-orbitflow-m2p1-torsion-diagnosis-v1",
+  "scope": {
+    "decoder_run": false,
+    "gate_changed": false,
+    "read_only": true,
+    "training_performed": false
+  },
+  "status": "DIAGNOSED_M2P1_LOCAL_EXCHANGEABLE_TORSION_COLLAPSE",
+  "summary": {
+    "cpu_recomputed_prediction_max_abs_difference": 6.258487701416016e-07,
+    "equal_element_terminal_group_coverage_fraction": 0.9354838709677419,
+    "failed_molecule_count": 6,
+    "failed_orbits_in_equal_element_terminal_substitution_groups": 29,
+    "failed_orbits_in_identical_head_input_groups": 30,
+    "failed_orbits_in_same_prediction_groups": 30,
+    "failed_torsion_orbit_count": 31,
+    "identical_head_input_group_coverage_fraction": 0.967741935483871,
+    "molecule_count": 16,
+    "passed_molecule_count": 10,
+    "same_prediction_group_coverage_fraction": 0.967741935483871,
+    "torsion_orbit_count": 184
+  },
+  "thresholds": {
+    "identical_head_input_absolute_tolerance": 0.0,
+    "same_prediction_tolerance_degrees": 0.001,
+    "torsion_gate_degrees": 2.0
+  }
+}

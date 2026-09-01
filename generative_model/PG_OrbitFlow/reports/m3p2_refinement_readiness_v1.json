@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "exposure_budget_preserved": true,
+    "m3p1_angle_gate_passed": true,
+    "m3p1_bond_gate_passed": true,
+    "m3p1_torsion_gate_failed": true,
+    "no_exact_ungrouped_torsion_input_conflicts": true,
+    "panel_size_exact": true
+  },
+  "exact_ungrouped_conflicts": [],
+  "identity": {
+    "auditor_sha256": "7fedb2805f2415fed01d0999bb926e86d1d03b30c18f43fec2ed2d2e6e62bb6f",
+    "checkpoint_sha256": "3cc11de97ec7879564b3ee348aedad36a3cf3f5434a1320e2bcbe630267bcb03",
+    "protocol_sha256": "0e421950783dbda306f2d0979d94a413506a9e976f0845eeec5093ef483dad90",
+    "report_sha256": "262edfa8aa5e37287b13fcb3cea87d7458bb5a368111036a29a3d2ea8924a2cb"
+  },
+  "passed": true,
+  "refinement": {
+    "molecule_exposures_each": 512,
+    "parent_batch_size": 4,
+    "parent_optimizer_steps": 4096,
+    "refinement_batch_size": 32,
+    "refinement_optimizer_steps": 512,
+    "total_molecule_exposures": 16384,
+    "trainable_modules": [
+      "parent.base.torsion_head",
+      "automorphism_head"
+    ]
+  },
+  "schema_version": "pg-orbitflow-m3p2-refinement-readiness-v1",
+  "status": "PASS_M3P2_FULL_BATCH_REFINEMENT_GATE"
+}

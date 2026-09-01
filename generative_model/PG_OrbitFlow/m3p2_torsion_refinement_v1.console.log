@@ -1,0 +1,6 @@
+step=1/512 loss=0.0110236 bond=0.00291019A angle=1.59751deg torsion=24.4078deg nonplanar=10.1042deg gate=FAIL
+step=128/512 loss=0.00544512 bond=0.00291019A angle=1.59751deg torsion=15.567deg nonplanar=0.16777deg gate=FAIL
+step=256/512 loss=0.0053172 bond=0.00291019A angle=1.59751deg torsion=15.3923deg nonplanar=0.984597deg gate=FAIL
+step=384/512 loss=0.00276956 bond=0.00291019A angle=1.59751deg torsion=8.82782deg nonplanar=0.262183deg gate=FAIL
+step=512/512 loss=0.00231925 bond=0.00291019A angle=1.59751deg torsion=6.96557deg nonplanar=2.54325deg gate=FAIL
+FAIL_M3P2_PREDICTION_GATE_STOP_BEFORE_DECODER report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p2_torsion_refinement_v1/report.json

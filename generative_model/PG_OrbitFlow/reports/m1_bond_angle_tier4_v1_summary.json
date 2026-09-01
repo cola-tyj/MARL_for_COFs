@@ -1,0 +1,257 @@
+{
+  "claim_scope": "Tier-4 learned bond/angle orbit memorization with oracle torsions",
+  "evaluation_artifacts": {
+    "console.log": "747f1175ed2159ae23e8e889ca688411f18eed15c9c1bd69255798b360c6532e",
+    "coordinates.npz": "7be209c60f2505e4e65a0e8bbfe1abc47746d922f9a373876f98744a1580626c",
+    "manifest.json": "92c7427f64f70da724a13cb0375eeda65870e5a3265a8d703a240886bf8ee7ae",
+    "predictions.npz": "624662d6dd93b0819c2936fbc2bcee0506f9db70273ee5971022ed6c66caa3a9",
+    "report.json": "958e0a66a51630c2fad5262bcd021feec9eceae16820447160762c15b77b5e7b"
+  },
+  "execution_revision": {
+    "failed_console_log_sha256": "de1bf294dd4981cf6b0aca3293a7a14efcfd87fe988d68f7c812d495d135bf9d",
+    "failure_signature": "completed training; CUDA float64 small-tensor decoder was manually interrupted for excessive runtime",
+    "scientific_protocol_changed": false,
+    "sole_change": "evaluate the frozen step-1024 checkpoint on CPU",
+    "training_restarted": false
+  },
+  "interpretation": "The quotient encoder can memorize bond/angle orbits on Tier-4, and the M0 solver remains accurate without oracle local-pair distances. Oracle torsions still prevent a claim of fully learned 2D-to-3D generation.",
+  "isolation": {
+    "iid_train_only": true,
+    "iid_validation_test_or_core_ood_used": false,
+    "mds_nerf_etkdg_or_external_checkpoint_used": false,
+    "oracle_bond_or_angle_used_by_decoder": false,
+    "oracle_local_pair_used_by_decoder": false,
+    "oracle_torsion_used_by_decoder": true,
+    "posthoc_hard_projection_or_f02_used": false,
+    "target_cartesian_coordinate_loss_used": false,
+    "target_cartesian_model_input_used": false
+  },
+  "next_step": "M2 learned torsion-orbit sin/cos head with ring/chirality gate",
+  "passed": true,
+  "prediction_gate": {
+    "checks": {
+      "angle_orbit_mae_max_degrees": true,
+      "bond_orbit_mae_max_angstrom": true
+    },
+    "passed": true,
+    "thresholds": {
+      "angle_orbit_mae_max_degrees": 5.0,
+      "bond_orbit_mae_max_angstrom": 0.03
+    },
+    "values": {
+      "angle_orbit_mae_max_degrees": 0.002275211503729224,
+      "bond_orbit_mae_max_angstrom": 1.0728836059570312e-06
+    }
+  },
+  "prediction_records": [
+    {
+      "angle_orbit_count": 6,
+      "angle_orbit_mae_degrees": 6.944025517441332e-05,
+      "bond_orbit_count": 5,
+      "bond_orbit_mae_angstrom": 2.384185791015625e-07,
+      "package_index": 864,
+      "target_pg": "C2"
+    },
+    {
+      "angle_orbit_count": 9,
+      "angle_orbit_mae_degrees": 0.002275211503729224,
+      "bond_orbit_count": 7,
+      "bond_orbit_mae_angstrom": 1.0728836059570312e-06,
+      "package_index": 1045,
+      "target_pg": "C2"
+    },
+    {
+      "angle_orbit_count": 4,
+      "angle_orbit_mae_degrees": 4.439622716745362e-05,
+      "bond_orbit_count": 3,
+      "bond_orbit_mae_angstrom": 5.960464477539062e-07,
+      "package_index": 1135,
+      "target_pg": "C3"
+    },
+    {
+      "angle_orbit_count": 6,
+      "angle_orbit_mae_degrees": 0.00018669181736186147,
+      "bond_orbit_count": 4,
+      "bond_orbit_mae_angstrom": 1.1920928955078125e-07,
+      "package_index": 2391,
+      "target_pg": "C3"
+    }
+  ],
+  "protocol": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m1_bond_angle_tier4_v1.json",
+    "sha256": "8ac8442f2d7f6803567fdce667087e9a4808f35899b205b6cc83a859c6b5654d"
+  },
+  "reconstruction_gate": {
+    "checks": {
+      "angle_mae": true,
+      "bond_mae": true,
+      "collision_free": true,
+      "finite": true,
+      "group_action": true,
+      "kabsch_rmsd": true,
+      "oracle_local_pair_never_used": true,
+      "ring_closure": true,
+      "target_cartesian_model_input_never_used": true,
+      "torsion_mae": true
+    },
+    "passed": true,
+    "thresholds": {
+      "all_values_finite": true,
+      "angle_mae_max_degrees": 5.0,
+      "bond_mae_max_angstrom": 0.03,
+      "collision_free_fraction_min": 1.0,
+      "kabsch_rmsd_max_angstrom": 0.2,
+      "max_operation_atom_error_max_angstrom": 1e-06,
+      "ring_closure_mae_max_angstrom": 0.03,
+      "torsion_circular_mae_max_degrees": 2.0
+    },
+    "values": {
+      "all_values_finite": true,
+      "angle_mae_max_degrees": 0.002451494377453923,
+      "bond_mae_max_angstrom": 9.670069250714934e-07,
+      "collision_free_fraction": 1.0,
+      "kabsch_rmsd_max_angstrom": 4.194916277252977e-05,
+      "max_operation_atom_error_angstrom": 1.953468067325158e-07,
+      "ring_closure_mae_max_angstrom": 1.703743404838735e-06,
+      "torsion_circular_mae_max_degrees": 2.386981455970064e-06
+    }
+  },
+  "reconstruction_records": [
+    {
+      "angle_mae_degrees": 6.713428054087131e-05,
+      "bond_mae_angstrom": 2.2835174867057933e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 1.7138775167796023e-06,
+      "max_atom_error_angstrom": 7.54427503784247e-08,
+      "max_operation_rms_angstrom": 4.2868873298618144e-08,
+      "mean_operation_rms_angstrom": 2.1434436649309072e-08,
+      "minimum_covalent_radius_ratio": 1.456287297320346,
+      "minimum_nonbonded_distance_angstrom": 2.854323102747878,
+      "package_index": 864,
+      "pair_distance_mae_angstrom": 1.1994986140301874e-06,
+      "ring_closure_mae_angstrom": 0.0,
+      "selected_energy": 1.8450037763053094e-13,
+      "selected_start_index": 13,
+      "target_pg": "C2",
+      "torsion_circular_mae_degrees": 3.427092096640654e-07
+    },
+    {
+      "angle_mae_degrees": 0.002451494377453923,
+      "bond_mae_angstrom": 9.670069250714934e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 4.194916277252977e-05,
+      "max_atom_error_angstrom": 1.953468067325158e-07,
+      "max_operation_rms_angstrom": 8.079878156615539e-08,
+      "mean_operation_rms_angstrom": 4.0399390783077693e-08,
+      "minimum_covalent_radius_ratio": 1.4589141686447828,
+      "minimum_nonbonded_distance_angstrom": 2.859471770543774,
+      "package_index": 1045,
+      "pair_distance_mae_angstrom": 3.548820690916591e-05,
+      "ring_closure_mae_angstrom": 1.703743404838735e-06,
+      "selected_energy": 1.6776335349144903e-09,
+      "selected_start_index": 6,
+      "target_pg": "C2",
+      "torsion_circular_mae_degrees": 2.386981455970064e-06
+    },
+    {
+      "angle_mae_degrees": 3.723167115347202e-05,
+      "bond_mae_angstrom": 6.327331553023107e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 6.539636567189586e-07,
+      "max_atom_error_angstrom": 1.1062261958993246e-07,
+      "max_operation_rms_angstrom": 5.511323601178608e-08,
+      "mean_operation_rms_angstrom": 2.9646728573616803e-08,
+      "minimum_covalent_radius_ratio": 1.4494721993067041,
+      "minimum_nonbonded_distance_angstrom": 2.7684919006758046,
+      "package_index": 1135,
+      "pair_distance_mae_angstrom": 5.423379325569183e-07,
+      "ring_closure_mae_angstrom": 8.867739241062248e-07,
+      "selected_energy": 8.626013154064462e-13,
+      "selected_start_index": 12,
+      "target_pg": "C3",
+      "torsion_circular_mae_degrees": 1.0873025280602656e-06
+    },
+    {
+      "angle_mae_degrees": 0.00019575738822927147,
+      "bond_mae_angstrom": 1.0689169020287419e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 2.088675773992888e-06,
+      "max_atom_error_angstrom": 1.5940986837178885e-07,
+      "max_operation_rms_angstrom": 7.677603683076892e-08,
+      "mean_operation_rms_angstrom": 5.088757281643902e-08,
+      "minimum_covalent_radius_ratio": 1.5152065978237539,
+      "minimum_nonbonded_distance_angstrom": 2.697067744126282,
+      "package_index": 2391,
+      "pair_distance_mae_angstrom": 1.717927610009413e-06,
+      "ring_closure_mae_angstrom": 9.351139377648347e-08,
+      "selected_energy": 1.2898910404952506e-11,
+      "selected_start_index": 0,
+      "target_pg": "C3",
+      "torsion_circular_mae_degrees": 1.1135679505365573e-06
+    }
+  ],
+  "reproducibility_report_sha256": "55cd7be0d0f25c7306424009d8d2d0273417983604516e980d5eea04de9663a2",
+  "schema_version": "pg-orbitflow-m1-summary-v1",
+  "status": "PASS_M1_ADVANCE_TO_M2_TORSION_HEAD",
+  "training": {
+    "batch_size_molecules": 4,
+    "checkpoints": {
+      "last.pt": "8e33da636224a403580c66506226664ff0e2f9c7161dea115b80000484e0b7bd",
+      "step-000001.pt": "4665d68cf810b59fa1581509b6b9f5e3fb10bd73836c96f302e5c7f09642ed15",
+      "step-000256.pt": "4d494d24934e8e7fcbb3f040b914c5a2643e2cf28287eaefb6f141356ecaa076",
+      "step-000512.pt": "cfdd149048f9f5c571aa26d045d08a813f8facc9a21ebf8705b20aa88343dc98",
+      "step-000768.pt": "5734d1c81e0b849dccb607b0a4c9d61afefa39c713d81cee58202c376857cfcc",
+      "step-001024.pt": "0cae9da5185dddbc883b40b704da4f151638aaefb2b58216f0bcd20b5841d0a0"
+    },
+    "console_sha256": "de1bf294dd4981cf6b0aca3293a7a14efcfd87fe988d68f7c812d495d135bf9d",
+    "final_checkpoint_sha256": "8e33da636224a403580c66506226664ff0e2f9c7161dea115b80000484e0b7bd",
+    "full_loss_array_unavailable_reason": "The v1 runner originally persisted losses after decoder evaluation; CUDA decoder was interrupted after training. The runner is fixed for future runs, while the five predeclared console milestones and all checkpoints are retained.",
+    "milestones": [
+      {
+        "angle_orbit_mae_degrees": 11.1817,
+        "bond_orbit_mae_angstrom": 0.25792,
+        "loss": 1.20187,
+        "step": 1
+      },
+      {
+        "angle_orbit_mae_degrees": 0.120725,
+        "bond_orbit_mae_angstrom": 3.31886e-05,
+        "loss": 2.37323e-05,
+        "step": 256
+      },
+      {
+        "angle_orbit_mae_degrees": 0.0243534,
+        "bond_orbit_mae_angstrom": 1.3938e-05,
+        "loss": 1.63e-06,
+        "step": 512
+      },
+      {
+        "angle_orbit_mae_degrees": 0.0264866,
+        "bond_orbit_mae_angstrom": 0.000657059,
+        "loss": 6.46685e-06,
+        "step": 768
+      },
+      {
+        "angle_orbit_mae_degrees": 0.000648678,
+        "bond_orbit_mae_angstrom": 6.1336e-07,
+        "loss": 1.38684e-09,
+        "step": 1024
+      }
+    ],
+    "molecule_count": 4,
+    "optimizer_steps": 1024,
+    "parameter_count": 266402,
+    "point_group_panel": {
+      "C2": 2,
+      "C3": 2
+    }
+  }
+}

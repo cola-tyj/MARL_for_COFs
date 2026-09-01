@@ -1,0 +1,278 @@
+{
+  "artifacts": {
+    "coordinates.npz": "316488d161933b8f6e897f7464b19d737b201020bbbcbbda5dbf292b390754e4",
+    "last.pt": "aac3fe61f2b5bfdea099cd1d4b69308b33ac8f8ddb6e7f80e5cb390d355eb995",
+    "losses.npz": "337e5b1d38e880892b67bcfdc6be06092be09e888c800580f5f1fc1190617088",
+    "manifest.json": "84fdd493ca5f88a82d1d9589813ff1c793b47ae689022dffc217e49847d8830e",
+    "report.json": "f57eb55f5859ef5735f4fa15dd38ac8dda859565c72929dac6a913bc6c177677",
+    "step-000001.pt": "384fca10f5b067544baabc4608f423e4e560868a73dd967d3cc813367ee5fed3",
+    "step-000256.pt": "d0be1ebbca35f30d37ef12a14a1a1ec5fb5c539ed2babc0b40714ffe1b75f5d7",
+    "step-000512.pt": "19654c3d4bb8470258669872baf14772f554b74478e721c95f65a90afdf0c46a",
+    "step-000768.pt": "33a6119a8bd2234ed1e255b8c80b3ee840662f0c451b629c58b79d83ab088174",
+    "step-001024.pt": "2f30232da0c03792fd173f900879e25817024dbb4b3348e023f70c071bb61df9"
+  },
+  "claim_limit": "The frozen Tier-4 panel contains only planar 0/pi torsions; a pass validates the all-learned interface but not non-planar torsion generalization.",
+  "claim_scope": "Tier-4 all-learned bond/angle/planar-torsion orbit memorization",
+  "interpretation": "M2 closes the graph-to-orbit-IC-to-symmetric-3D interface on the frozen four-molecule memorization panel without oracle decoder geometry. The panel torsions are all planar, so the next permitted action is a Tier-16 panel audit containing non-planar/chiral support, not a generalization claim.",
+  "isolation": {
+    "iid_train_only": true,
+    "iid_validation_test_or_core_ood_used": false,
+    "mds_nerf_etkdg_or_external_checkpoint_used": false,
+    "oracle_internal_coordinates_used_by_decoder": false,
+    "oracle_local_pair_or_chirality_used_by_decoder": false,
+    "posthoc_hard_projection_or_f02_used": false,
+    "target_cartesian_coordinate_loss_used": false,
+    "target_cartesian_model_input_used": false
+  },
+  "next_step": "audit and freeze Tier-16 composition, prioritizing non-planar torsion and chiral support before training/evaluation",
+  "passed": true,
+  "prediction_gate": {
+    "checks": {
+      "angle_orbit_mae_max_degrees": true,
+      "bond_orbit_mae_max_angstrom": true,
+      "torsion_orbit_circular_mae_max_degrees": true
+    },
+    "passed": true,
+    "thresholds": {
+      "angle_orbit_mae_max_degrees": 5.0,
+      "bond_orbit_mae_max_angstrom": 0.03,
+      "torsion_orbit_circular_mae_max_degrees": 2.0
+    },
+    "values": {
+      "angle_orbit_mae_max_degrees": 8.044444984989241e-05,
+      "bond_orbit_mae_max_angstrom": 6.755192885066208e-07,
+      "torsion_orbit_circular_mae_max_degrees": 0.0019519076884867183
+    }
+  },
+  "prediction_records": [
+    {
+      "angle_orbit_count": 6,
+      "angle_orbit_mae_degrees": 1.0245283192489296e-05,
+      "bond_orbit_count": 5,
+      "bond_orbit_mae_angstrom": 2.8610230629055877e-07,
+      "package_index": 864,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 3.349502291513254e-05,
+      "torsion_orbit_count": 7
+    },
+    {
+      "angle_orbit_count": 9,
+      "angle_orbit_mae_degrees": 8.044444984989241e-05,
+      "bond_orbit_count": 7,
+      "bond_orbit_mae_angstrom": 3.405979782655777e-07,
+      "package_index": 1045,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 0.0019519076884867183,
+      "torsion_orbit_count": 14
+    },
+    {
+      "angle_orbit_count": 4,
+      "angle_orbit_mae_degrees": 1.707547198748216e-05,
+      "bond_orbit_count": 3,
+      "bond_orbit_mae_angstrom": 6.755192885066208e-07,
+      "package_index": 1135,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 0.0005506811943757373,
+      "torsion_orbit_count": 4
+    },
+    {
+      "angle_orbit_count": 6,
+      "angle_orbit_mae_degrees": 2.0490566384978592e-05,
+      "bond_orbit_count": 4,
+      "bond_orbit_mae_angstrom": 2.086162567138672e-07,
+      "package_index": 2391,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 0.00012591927104835837,
+      "torsion_orbit_count": 8
+    }
+  ],
+  "protocol": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m2_torsion_tier4_v1.json",
+    "sha256": "014b436c7618a570e1ef2a5aa4c99ddcd60686213bb87615fd40e546a816a3fa"
+  },
+  "reconstruction_gate": {
+    "checks": {
+      "angle_mae": true,
+      "bond_mae": true,
+      "collision_free": true,
+      "finite": true,
+      "group_action": true,
+      "kabsch_rmsd": true,
+      "oracle_internal_coordinates_never_used": true,
+      "ring_closure": true,
+      "target_cartesian_model_input_never_used": true,
+      "torsion_mae": true
+    },
+    "passed": true,
+    "thresholds": {
+      "all_values_finite": true,
+      "angle_mae_max_degrees": 5.0,
+      "bond_mae_max_angstrom": 0.03,
+      "collision_free_fraction_min": 1.0,
+      "kabsch_rmsd_max_angstrom": 0.2,
+      "max_operation_atom_error_max_angstrom": 1e-06,
+      "ring_closure_mae_max_angstrom": 0.03,
+      "torsion_circular_mae_max_degrees": 2.0
+    },
+    "values": {
+      "all_values_finite": true,
+      "angle_mae_max_degrees": 0.00011556823015251032,
+      "bond_mae_max_angstrom": 7.058089920914451e-07,
+      "collision_free_fraction": 1.0,
+      "kabsch_rmsd_max_angstrom": 3.7352742083278535e-06,
+      "max_operation_atom_error_angstrom": 1.93592524352751e-07,
+      "ring_closure_mae_max_angstrom": 8.906505509775897e-07,
+      "torsion_circular_mae_max_degrees": 0.000550377118943185
+    }
+  },
+  "reconstruction_records": [
+    {
+      "all_starts_finite": true,
+      "angle_mae_degrees": 2.7118984511086123e-06,
+      "bond_mae_angstrom": 3.007951813799931e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 1.0085877777506965e-06,
+      "max_atom_error_angstrom": 1.0211592133755542e-07,
+      "max_operation_rms_angstrom": 5.585554477005699e-08,
+      "mean_operation_rms_angstrom": 2.7927772385028495e-08,
+      "minimum_covalent_radius_ratio": 1.4562875863528992,
+      "minimum_nonbonded_distance_angstrom": 2.8543236692516825,
+      "package_index": 864,
+      "pair_distance_mae_angstrom": 5.90922324218547e-07,
+      "ring_closure_mae_angstrom": 0.0,
+      "selected_energy": 3.3422179370792535e-14,
+      "selected_start_index": 10,
+      "target_pg": "C2",
+      "torsion_circular_mae_degrees": 3.231592158703768e-05
+    },
+    {
+      "all_starts_finite": true,
+      "angle_mae_degrees": 0.00011556823015251032,
+      "bond_mae_angstrom": 3.7088265723387675e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 3.2298418002636953e-06,
+      "max_atom_error_angstrom": 1.93592524352751e-07,
+      "max_operation_rms_angstrom": 8.109075444319093e-08,
+      "mean_operation_rms_angstrom": 4.054537722159547e-08,
+      "minimum_covalent_radius_ratio": 1.4589336768181163,
+      "minimum_nonbonded_distance_angstrom": 2.8595100065635077,
+      "package_index": 1045,
+      "pair_distance_mae_angstrom": 1.7519546482436255e-06,
+      "ring_closure_mae_angstrom": 3.318980116665908e-07,
+      "selected_energy": 2.2610076423727305e-12,
+      "selected_start_index": 12,
+      "target_pg": "C2",
+      "torsion_circular_mae_degrees": 0.0001052255433966118
+    },
+    {
+      "all_starts_finite": true,
+      "angle_mae_degrees": 1.5195060122439018e-05,
+      "bond_mae_angstrom": 7.058089920914451e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 3.7352742083278535e-06,
+      "max_atom_error_angstrom": 1.0806998894162797e-07,
+      "max_operation_rms_angstrom": 6.489091900066829e-08,
+      "mean_operation_rms_angstrom": 4.168063515013192e-08,
+      "minimum_covalent_radius_ratio": 1.4494722853914073,
+      "minimum_nonbonded_distance_angstrom": 2.768492065097588,
+      "package_index": 1135,
+      "pair_distance_mae_angstrom": 6.000798474545574e-07,
+      "ring_closure_mae_angstrom": 8.906505509775897e-07,
+      "selected_energy": 2.0389515458916235e-14,
+      "selected_start_index": 12,
+      "target_pg": "C3",
+      "torsion_circular_mae_degrees": 0.000550377118943185
+    },
+    {
+      "all_starts_finite": true,
+      "angle_mae_degrees": 2.1105039774382713e-05,
+      "bond_mae_angstrom": 1.9327364266426747e-07,
+      "collision_free": true,
+      "collision_threshold_ratio": 0.6,
+      "finite_start_count": 16,
+      "kabsch_rmsd_angstrom": 1.3362838746497742e-06,
+      "max_atom_error_angstrom": 1.435981764606717e-07,
+      "max_operation_rms_angstrom": 8.601339179842259e-08,
+      "mean_operation_rms_angstrom": 5.281922199373201e-08,
+      "minimum_covalent_radius_ratio": 1.515205859336032,
+      "minimum_nonbonded_distance_angstrom": 2.697066429618137,
+      "package_index": 2391,
+      "pair_distance_mae_angstrom": 3.729863164419865e-07,
+      "ring_closure_mae_angstrom": 9.207519295154991e-08,
+      "selected_energy": 1.1966162277842259e-13,
+      "selected_start_index": 13,
+      "target_pg": "C3",
+      "torsion_circular_mae_degrees": 6.132051991142576e-05
+    }
+  ],
+  "reproducibility": {
+    "first_cpu_attempt_explanation": "CPU inference changed prediction metrics at about 1e-6 and therefore the terminal optimizer coordinates. Reproduction with the original CUDA prediction device was exact at the metric level and passed the frozen coordinate tolerances; no scientific setting changed.",
+    "sha256": "3a7a3f103d0b336154ade46204d9a14635abae778c3bda4adec251a50f5a0b0c",
+    "status": "PASS_M2_REPRODUCIBILITY"
+  },
+  "schema_version": "pg-orbitflow-m2-summary-v1",
+  "status": "PASS_M2_ALL_LEARNED_IC_ADVANCE_TO_TIER16_PANEL_AUDIT",
+  "training": {
+    "all_finite": true,
+    "batch_size_molecules": 4,
+    "decoder_device": "cpu",
+    "final_checkpoint_sha256": "aac3fe61f2b5bfdea099cd1d4b69308b33ac8f8ddb6e7f80e5cb390d355eb995",
+    "milestones": [
+      {
+        "angle_orbit_mae_degrees": 0.000644694,
+        "bond_orbit_mae_angstrom": 4.83294e-07,
+        "loss": 2.06774,
+        "step": 1,
+        "torsion_orbit_circular_mae_degrees": 93.0416
+      },
+      {
+        "angle_orbit_mae_degrees": 0.000968606,
+        "bond_orbit_mae_angstrom": 9.66234e-07,
+        "loss": 5.01109e-07,
+        "step": 256,
+        "torsion_orbit_circular_mae_degrees": 0.0230356
+      },
+      {
+        "angle_orbit_mae_degrees": 0.000251294,
+        "bond_orbit_mae_angstrom": 5.9335e-07,
+        "loss": 2.56278e-08,
+        "step": 512,
+        "torsion_orbit_circular_mae_degrees": 0.00404856
+      },
+      {
+        "angle_orbit_mae_degrees": 0.00180208,
+        "bond_orbit_mae_angstrom": 1.52936e-06,
+        "loss": 1.01161e-08,
+        "step": 768,
+        "torsion_orbit_circular_mae_degrees": 0.00245719
+      },
+      {
+        "angle_orbit_mae_degrees": 2.97398e-05,
+        "bond_orbit_mae_angstrom": 3.09164e-07,
+        "loss": 2.90209e-12,
+        "step": 1024,
+        "torsion_orbit_circular_mae_degrees": 0.000668772
+      }
+    ],
+    "molecule_count": 4,
+    "parameter_count": 313540,
+    "point_group_panel": {
+      "C2": 2,
+      "C3": 2
+    },
+    "steps": 1024,
+    "torsion_orbit_counts": {
+      "1045": 14,
+      "1135": 4,
+      "2391": 8,
+      "864": 7
+    },
+    "training_device": "cuda"
+  }
+}

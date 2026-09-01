@@ -1,0 +1,42 @@
+{
+  "coordinate_kabsch_tolerance_angstrom": 1e-07,
+  "coordinate_max_abs_tolerance_angstrom": 5e-07,
+  "passed": true,
+  "prediction_array_comparison": "exact",
+  "records": [
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.377997939875031e-08,
+      "coordinate_max_abs_difference_angstrom": 1.0522622151398764e-07,
+      "package_index": 864,
+      "passed": true,
+      "prediction_arrays_exact": true,
+      "selected_start_index": 13
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.280552894851136e-08,
+      "coordinate_max_abs_difference_angstrom": 8.045269028755797e-08,
+      "package_index": 1045,
+      "passed": true,
+      "prediction_arrays_exact": true,
+      "selected_start_index": 6
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 4.5004851827284236e-08,
+      "coordinate_max_abs_difference_angstrom": 1.1086915341351755e-07,
+      "package_index": 1135,
+      "passed": true,
+      "prediction_arrays_exact": true,
+      "selected_start_index": 12
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.123745910919902e-08,
+      "coordinate_max_abs_difference_angstrom": 1.1747559991448497e-07,
+      "package_index": 2391,
+      "passed": true,
+      "prediction_arrays_exact": true,
+      "selected_start_index": 0
+    }
+  ],
+  "schema_version": "pg-orbitflow-m1-reproducibility-v1",
+  "status": "PASS_M1_REPRODUCIBILITY"
+}

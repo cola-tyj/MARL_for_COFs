@@ -1,0 +1,16 @@
+{
+  "candidate_metric_max_abs_difference": 0.0,
+  "coordinate_max_abs_difference_angstrom": 0.0,
+  "identity": {
+    "auditor_sha256": "0eb2983c90dbc3091c4475ebf588e5ebf983d935bd46d90ebbcfa01ad46cdaa1",
+    "m2_predictions_sha256": "eb0e7fdc349f7d9e0e93ea798996244303018ea6476e2578fa3257737b03add0",
+    "m2_protocol_sha256": "b10e5788077ee0137c98750b711346c057b8477c5e805b83b136200bca0386a9",
+    "m3_runner_sha256": "5ca6f425758c99bf5a6cc059e669bae06d4d898e3c407bb3867bae09b7bca736"
+  },
+  "package_index": 864,
+  "passed": true,
+  "schema_version": "pg-orbitflow-m3-decoder-parallelism-audit-v1",
+  "start_index": 0,
+  "status": "PASS_M3_DECODER_PARALLELISM",
+  "tolerance": 1e-12
+}

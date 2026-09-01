@@ -1,0 +1,9 @@
+{
+  "error_type": "RuntimeError",
+  "molecule_id": "cof_001375",
+  "num_atoms": 48,
+  "package_index": 1375,
+  "reason": "anchored graph witness exceeded 5s frozen limit",
+  "split": "train",
+  "target_pg": "C3"
+}

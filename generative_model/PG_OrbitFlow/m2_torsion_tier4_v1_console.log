@@ -1,0 +1,10 @@
+step=1/1024 loss=2.06774 bond=4.83294e-07A angle=0.000644694deg torsion=93.0416deg
+step=256/1024 loss=5.01109e-07 bond=9.66234e-07A angle=0.000968606deg torsion=0.0230356deg
+step=512/1024 loss=2.56278e-08 bond=5.9335e-07A angle=0.000251294deg torsion=0.00404856deg
+step=768/1024 loss=1.01161e-08 bond=1.52936e-06A angle=0.00180208deg torsion=0.00245719deg
+step=1024/1024 loss=2.90209e-12 bond=3.09164e-07A angle=2.97398e-05deg torsion=0.000668772deg
+reconstruct package_index=864 PG=C2 bond=3.00795e-07A angle=2.7119e-06deg torsion=3.23159e-05deg rmsd=1.00859e-06A
+reconstruct package_index=1045 PG=C2 bond=3.70883e-07A angle=0.000115568deg torsion=0.000105226deg rmsd=3.22984e-06A
+reconstruct package_index=1135 PG=C3 bond=7.05809e-07A angle=1.51951e-05deg torsion=0.000550377deg rmsd=3.73527e-06A
+reconstruct package_index=2391 PG=C3 bond=1.93274e-07A angle=2.1105e-05deg torsion=6.13205e-05deg rmsd=1.33628e-06A
+PASS_M2_ALL_LEARNED_IC_ADVANCE_TO_TIER16_PANEL_AUDIT report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m2_torsion_tier4_v1/report.json

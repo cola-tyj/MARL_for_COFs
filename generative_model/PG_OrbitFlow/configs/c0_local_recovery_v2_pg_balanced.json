@@ -1,0 +1,189 @@
+{
+  "base_h1_protocol": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/overfit_protocol_h1_harmonic.json",
+    "sha256": "c02b3a1b11949b2cb4306f81c7d2ecfbe27da1c95381eab2a909a4581c53c8f4"
+  },
+  "canonical_manifest_sha256": "f06154c52918397e2ffee38e32ebc289d45d930e0aac159594041ebff5ca9511",
+  "curriculum": {
+    "balance_scope": "independent 10-slot cursor within each point group",
+    "harmonic_prior_fraction": 0.1,
+    "large_sigma_angstrom": [
+      0.4,
+      0.98
+    ],
+    "local_time_definition": "clip(1-sigma_angstrom,0.02,0.95)",
+    "medium_sigma_angstrom": [
+      0.15,
+      0.4
+    ],
+    "noise_projection": "Reynolds projection before training; not posthoc output projection",
+    "period_exposures": 10,
+    "point_group_curriculum_independent": true,
+    "slots": [
+      "small",
+      "small",
+      "small",
+      "small",
+      "medium",
+      "medium",
+      "medium",
+      "large",
+      "large",
+      "harmonic"
+    ],
+    "small_sigma_angstrom": [
+      0.05,
+      0.15
+    ]
+  },
+  "data": {
+    "coordinate_scale_angstrom": 3.0,
+    "core_ood_used": false,
+    "nested_panels": true,
+    "point_groups": [
+      "C2",
+      "C3"
+    ],
+    "split": "iid_train_only",
+    "test_used": false,
+    "validation_used": false
+  },
+  "execution_revision": {
+    "reason": "v1 used one global slot cursor correlated with alternating C2/C3 exposure, assigning every harmonic slot to C3",
+    "scientific_objective_changed": false,
+    "sole_change": "advance the same frozen 10-slot curriculum independently within C2 and C3",
+    "supersedes_protocol": "c0_local_recovery_v1.json"
+  },
+  "local_evaluation": {
+    "seeds_per_molecule": 8,
+    "sigma_angstrom": 0.1
+  },
+  "local_gate": {
+    "angle_mae_mean_max_degrees": 5.0,
+    "bond_length_mae_mean_max_angstrom": 0.03,
+    "chirality_preserved_fraction_min": 1.0,
+    "collision_free_fraction_min": 1.0,
+    "endpoint_rmsd_mean_max_angstrom": 0.1,
+    "max_operation_atom_error_max_angstrom": 0.0001
+  },
+  "model": {
+    "hidden_dim": 128,
+    "layers": 6,
+    "parameter_count_expected": 740424,
+    "radial_dim": 16,
+    "radial_max": 6.0
+  },
+  "objective": {
+    "angle_weight": 0.5,
+    "bond_weight": 1.0,
+    "chirality_weight": 0.25,
+    "early_local_boost": 2.0,
+    "endpoint_weight": 0.0,
+    "flow_weight": 1.0,
+    "local_pair_weight": 0.25,
+    "overlap_weight": 0.1,
+    "ring_weight": 0.5,
+    "short_rollout_weight": 0.25,
+    "symmetry_weight": 1.0,
+    "torsion_weight": 0.25
+  },
+  "original_tier4_evaluation": {
+    "flow_times": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ],
+    "raw_ode_method": "heun",
+    "raw_ode_steps": 50,
+    "raw_seeds_per_molecule": 2
+  },
+  "original_tier4_gate": {
+    "fixed_time_endpoint_rmsd_mean_max_angstrom": 0.75,
+    "raw_bond_length_mae_mean_max_angstrom": 0.2,
+    "raw_collision_free_fraction_min": 0.75,
+    "raw_kabsch_rmsd_mean_max_angstrom": 1.0,
+    "raw_max_operation_atom_error_max_angstrom": 0.0001,
+    "raw_pair_distance_mae_mean_max_angstrom": 0.6,
+    "training_loss_window_ratio_max": 0.5
+  },
+  "package_dir": "/home/tianyajun/MARL_for_COFs/generative_model/data/processed/v2",
+  "panel": {
+    "molecule_count": 4,
+    "records": [
+      {
+        "arm": "Br_direct",
+        "contains_sn": false,
+        "core": "oxamide_C2",
+        "molecule_id": "cof_000864",
+        "num_atoms": 10,
+        "package_index": 864,
+        "target_pg": "C2"
+      },
+      {
+        "arm": "Br_direct",
+        "contains_sn": false,
+        "core": "tetrafluorobenzene_C4",
+        "molecule_id": "cof_001045",
+        "num_atoms": 12,
+        "package_index": 1045,
+        "target_pg": "C2"
+      },
+      {
+        "arm": "Br_direct",
+        "contains_sn": false,
+        "core": "triazine_C3",
+        "molecule_id": "cof_001135",
+        "num_atoms": 9,
+        "package_index": 1135,
+        "target_pg": "C3"
+      },
+      {
+        "arm": "Cl_direct",
+        "contains_sn": false,
+        "core": "pb_BENZ_T3",
+        "molecule_id": "cof_002391",
+        "num_atoms": 12,
+        "package_index": 2391,
+        "target_pg": "C3"
+      }
+    ]
+  },
+  "prior": {
+    "coordinate_scale_angstrom": 3.0,
+    "harmonic_alpha": 1.0,
+    "per_sample_rms_normalization": false,
+    "type": "graph_harmonic"
+  },
+  "progression": {
+    "if_local_fails": "stop Cartesian backbone and implement internal-coordinate decoder",
+    "if_local_passes": "advance to a separately frozen full-prior curriculum gate",
+    "local_gate_controls_next_step": true,
+    "original_raw_gate_changed": false,
+    "tier16_or_tier32_allowed": false
+  },
+  "schema_version": "pg-orbitflow-c0-protocol-v2",
+  "scientific_question": "Can the unchanged Cartesian PG-OrbitFlow backbone first learn strict local chemical-geometry recovery under a multi-noise curriculum?",
+  "seed": 20260828,
+  "training": {
+    "additional_optimizer_steps": 1024,
+    "batch_size_molecules": 4,
+    "checkpoint_every": 256,
+    "gradient_clip_norm": 5.0,
+    "learning_rate": 0.0003,
+    "optimizer_steps": 1024,
+    "point_group_balanced_exposure": true,
+    "short_rollout_steps": 4,
+    "weight_decay": 1e-06
+  },
+  "transport": {
+    "alignment_group": "SO(2) centralizer of the supplied Cn action",
+    "c2_candidate_count": 48,
+    "c3_candidate_count": 24,
+    "centralizer_phase_count": 24,
+    "posterior_density": "not_applicable",
+    "target_phase_aligned_to_prior": true,
+    "type": "cn_phase_aligned"
+  }
+}

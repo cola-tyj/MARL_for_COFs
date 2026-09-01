@@ -1,0 +1,36 @@
+{
+  "checkpoint_sha256": "b0f6fb7ee3440d7ccf294fadf193accaa097109669dead772e7340964ce22d09",
+  "checks": {
+    "local": {
+      "array_exact_checks": {
+        "atom_offsets": true,
+        "coordinates": true,
+        "package_indices": true,
+        "seeds": true
+      },
+      "array_sha256_repeat_1": "bfc0c30c569e4450332066c5e9bc48153c2b8a9be3a71c8214a6f98345f51c95",
+      "array_sha256_repeat_2": "bfc0c30c569e4450332066c5e9bc48153c2b8a9be3a71c8214a6f98345f51c95",
+      "metrics_exact": true,
+      "passed": true
+    },
+    "raw": {
+      "array_exact_checks": {
+        "atom_offsets": true,
+        "coordinates": true,
+        "package_indices": true,
+        "seeds": true
+      },
+      "array_sha256_repeat_1": "4c97d414b68f53545f78dda4f2053a263cbdf45a219cdd819a446a9ee82b2691",
+      "array_sha256_repeat_2": "4c97d414b68f53545f78dda4f2053a263cbdf45a219cdd819a446a9ee82b2691",
+      "metrics_exact": true,
+      "passed": true
+    }
+  },
+  "deterministic_algorithms": true,
+  "device": "cuda",
+  "passed": true,
+  "protocol_sha256": "1a25c0939b0e3d4f5becb8173ef2d47923f0b955894f116a392f816236903aa1",
+  "same_process": true,
+  "schema_version": "pg-orbitflow-c0-reproducibility-v1",
+  "status": "PASS_C0_REPRODUCIBILITY"
+}

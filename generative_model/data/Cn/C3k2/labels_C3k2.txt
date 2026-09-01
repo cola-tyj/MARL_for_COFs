@@ -1,0 +1,26 @@
+# C3k2  N=6  C3 symmetry  (state_proj, multi-seed, InChIKey dedup)
+# 累积 295, 去重后 24
+idx_001	-	3	2	N=C1C(=N)C1=N
+idx_002	-	3	2	CC1C(C)C1C
+idx_003	-	3	2	c1ccccc1
+idx_004	-	3	2	c1ncncn1
+idx_005	-	3	2	C12C3C1C1C2C31
+idx_006	-	3	2	OC1C(O)C1O
+idx_007	-	3	2	C1CCCCC1
+idx_008	-	3	2	C12C3C4C1C3C24
+idx_009	-	3	2	C=C1C(=C)C1=C
+idx_010	-	3	2	C1OCOCO1
+idx_011	-	3	2	C1C23CC24CC134
+idx_012	-	3	2	c12c3c4c1c3c24
+idx_013	-	3	2	On1n(O)n1O
+idx_014	-	3	2	Cn1n(C)n1C
+idx_015	-	3	2	C1NCNCN1
+idx_016	-	3	2	O=C1C(=O)C1=O
+idx_017	-	3	2	NC1C(N)C1N
+idx_018	-	3	2	Nn1n(N)n1N
+idx_019	-	3	2	C12C3C1n1n2n13
+idx_020	-	3	2	N1ONONO1
+idx_021	-	3	2	C12N3C4N1C3N24
+idx_022	-	3	2	O1C23OC24OC134
+idx_023	-	3	2	c12c3c1c1c2c31
+idx_024	-	3	2	C123C45C16C21C34C561

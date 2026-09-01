@@ -1,0 +1,52 @@
+{
+  "deterministic_algorithms": true,
+  "device": "cuda",
+  "passed": true,
+  "records": {
+    "h1_harmonic": {
+      "array_exact_checks": {
+        "atom_offsets": true,
+        "coordinates": true,
+        "package_indices": true,
+        "seeds": true
+      },
+      "checkpoint_sha256": "e1d857e647d68c5f7a5735ac742d1cff0385d44bc28ff683e865e4b6bf8af2b0",
+      "metrics_exact": true,
+      "passed": true,
+      "protocol_sha256": "c02b3a1b11949b2cb4306f81c7d2ecfbe27da1c95381eab2a909a4581c53c8f4",
+      "raw_array_sha256_repeat_1": "fe8fb97243a0f827fe4149745d1aea090267ba8b78eec400235584e9876bdc8f",
+      "raw_array_sha256_repeat_2": "fe8fb97243a0f827fe4149745d1aea090267ba8b78eec400235584e9876bdc8f"
+    },
+    "h2_centralizer": {
+      "array_exact_checks": {
+        "atom_offsets": true,
+        "coordinates": true,
+        "package_indices": true,
+        "seeds": true
+      },
+      "checkpoint_sha256": "b9fc9295b7bbc8064204218d15c26038295f7730ecbfd5cd23d3ed87946c1340",
+      "metrics_exact": true,
+      "passed": true,
+      "protocol_sha256": "9c85f41087069432d98089d34f0ead2d01c39f7b27658c8a57a59fe38838b2c0",
+      "raw_array_sha256_repeat_1": "5c12f707fe6f72d624ee3304d1d3760366a8c4912bad7c8419fbd0ea69dbbd7c",
+      "raw_array_sha256_repeat_2": "5c12f707fe6f72d624ee3304d1d3760366a8c4912bad7c8419fbd0ea69dbbd7c"
+    },
+    "h3_endpoint": {
+      "array_exact_checks": {
+        "atom_offsets": true,
+        "coordinates": true,
+        "package_indices": true,
+        "seeds": true
+      },
+      "checkpoint_sha256": "307368783baa30b37673f3fc33eb8ddc7d97450ba95dee739e5082646ebe3a2b",
+      "metrics_exact": true,
+      "passed": true,
+      "protocol_sha256": "48822dfacc3a04801bb5e6945b22664efe1cfdd31d7a20ca90ce42cb7573f251",
+      "raw_array_sha256_repeat_1": "604027d1e0ffcfa5efca21e32d484bf6ca8776860b690a6994cb24a82934eee7",
+      "raw_array_sha256_repeat_2": "604027d1e0ffcfa5efca21e32d484bf6ca8776860b690a6994cb24a82934eee7"
+    }
+  },
+  "same_process": true,
+  "schema_version": "pg-orbitflow-h1-h3-raw-reproducibility-v1",
+  "status": "PASS_H1_H3_RAW_REPRODUCIBILITY"
+}

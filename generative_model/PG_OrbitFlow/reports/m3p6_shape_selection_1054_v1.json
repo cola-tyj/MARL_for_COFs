@@ -1,0 +1,134 @@
+{
+  "checks": {
+    "candidate_count_exact": true,
+    "selected_candidate_passes_original_geometry_gate": true,
+    "selection_uses_no_target_coordinates": true,
+    "shape_weight_positive": true
+  },
+  "identity": {
+    "auditor_sha256": "b977aec7462cb5d84403e51f3546d3e8be41d22cd43c78ffef9d472587986a35",
+    "candidate_coordinates_sha256": "939dddce20ec1dbee513a115d7019403b07a6bc8a2e4dcac536e82516dd0fecf",
+    "candidate_report_sha256": "4aa8f9eac839c704468f0e45cbb75407f4d85481eee865fec15987eb89663376",
+    "predictions_sha256": "8c6e77f32acf1175936c6f9b70670f3947d81bce7aae2c9f3c2302a2b15fa739",
+    "protocol_sha256": "5441bcf03c808ecd74f41ee072083a0490caa4156c538c802f698d67f6038a90"
+  },
+  "passed": true,
+  "records": [
+    {
+      "combined_score": 0.003751385082035701,
+      "decoder_energy": 0.001093937826770699,
+      "passes_individual_geometry_gate": true,
+      "shape_mse": 0.0002657447255265002,
+      "start": 0
+    },
+    {
+      "combined_score": 0.0057938204340050575,
+      "decoder_energy": 1.9496939350338356e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005774323494654719,
+      "start": 1
+    },
+    {
+      "combined_score": 0.005799310426584034,
+      "decoder_energy": 1.9496939346347947e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005779813487237686,
+      "start": 2
+    },
+    {
+      "combined_score": 0.005802454119636334,
+      "decoder_energy": 1.949693934950193e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005782957180286832,
+      "start": 3
+    },
+    {
+      "combined_score": 0.006043943908614032,
+      "decoder_energy": 1.950929333312876e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0006024434615280903,
+      "start": 4
+    },
+    {
+      "combined_score": 0.005795302142482029,
+      "decoder_energy": 1.949693941799493e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005775805203064035,
+      "start": 5
+    },
+    {
+      "combined_score": 0.005798599714150535,
+      "decoder_energy": 1.9496939357761102e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005779102774792775,
+      "start": 6
+    },
+    {
+      "combined_score": 0.005794729012400248,
+      "decoder_energy": 1.949693935573824e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.000577523207304451,
+      "start": 7
+    },
+    {
+      "combined_score": 0.0057938178476918505,
+      "decoder_energy": 1.9496939349515464e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005774320908342335,
+      "start": 8
+    },
+    {
+      "combined_score": 0.004124532915508379,
+      "decoder_energy": 1.9618263077627937e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0004104914652430751,
+      "start": 9
+    },
+    {
+      "combined_score": 0.533757178478485,
+      "decoder_energy": 0.021621747559948574,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.051213543091853636,
+      "start": 10
+    },
+    {
+      "combined_score": 0.005801858125725555,
+      "decoder_energy": 1.9496939353685004e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.000578236118637187,
+      "start": 11
+    },
+    {
+      "combined_score": 0.00579467591737201,
+      "decoder_energy": 1.949693934920213e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005775178978022807,
+      "start": 12
+    },
+    {
+      "combined_score": 0.005795670687044661,
+      "decoder_energy": 1.9496939500816815e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005776173747543844,
+      "start": 13
+    },
+    {
+      "combined_score": 0.005802521282749628,
+      "decoder_energy": 1.949693935420939e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005783024343395418,
+      "start": 14
+    },
+    {
+      "combined_score": 0.005793933184171017,
+      "decoder_energy": 1.949693934758437e-05,
+      "passes_individual_geometry_gate": false,
+      "shape_mse": 0.0005774436244823433,
+      "start": 15
+    }
+  ],
+  "schema_version": "pg-orbitflow-m3p6-shape-selection-audit-v1",
+  "selected_start": 0,
+  "shape_weight": 10.0,
+  "status": "PASS_M3P6_SHAPE_SELECTION_ADVANCE_TO_TIER32_DECODER"
+}

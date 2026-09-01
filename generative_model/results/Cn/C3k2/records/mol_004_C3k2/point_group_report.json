@@ -1,0 +1,51 @@
+{
+  "actual_pg": "D3h",
+  "analyzer_pg": "D3h",
+  "checks": {
+    "analyzer_success": true,
+    "maximum_operation_error": true,
+    "minimum_pair_distance": true,
+    "requested_pg_compatible": true,
+    "source_geometry_gate_passed": true
+  },
+  "identity": {
+    "auditor_source_sha256": "02af21f6703b9bef901be545a9ffc7c93005fb187411f1f5c920da41f17eccbb",
+    "coordinates_sha256": "393b5c2fac675e2ccbe98f0780d73cc5ff08a07099b46a08ab704a4b22f56a0e",
+    "protocol_sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2",
+    "source_report_sha256": "2485f103f24d9148c06f51bdb2ff7dee389e9c07d616194dc5d5ec5e176c40a0",
+    "symmetry_protocol": {
+      "analyzer": "pymatgen.symmetry.analyzer.PointGroupAnalyzer",
+      "assignment": "scipy.optimize.linear_sum_assignment, element-blocked",
+      "assignment_metric": "Euclidean distance in centroid-centered Cartesian coordinates",
+      "eigen_tolerance": 0.01,
+      "matrix_tolerance": 0.1,
+      "operation_acceptance": "operation RMS assigned distance <= tolerance_angstrom",
+      "tolerance_angstrom": 0.3
+    }
+  },
+  "maximum_operation_error_angstrom": 1.5100665727558131e-15,
+  "mean_operation_rms_error_angstrom": 4.770395057552677e-16,
+  "minimum_pair_distance_angstrom": 1.0813353977807911,
+  "molecule_id": "mol_004_C3k2",
+  "package_index": 3,
+  "passed": true,
+  "pg_compatible": true,
+  "pg_exact_match": false,
+  "requested_target_pg": "C3",
+  "schema_version": "etflow-e3f02-independent-point-group-audit-v1",
+  "scope": {
+    "etflow_used_as_initial_conformer_prior": true,
+    "etkdg_used": false,
+    "external_cn_input": true,
+    "hard_symmetry_projection_used": true,
+    "implicit_h_expanded_before_inference": true,
+    "known_canonical_graph": true,
+    "orbit_constrained_force_field_used": true,
+    "raw_learned_target_pg_claim": false,
+    "reference_3d_used": false,
+    "reference_xyz_used": false,
+    "requested_target_pg": true,
+    "stored_symmetry_action_used": false
+  },
+  "status": "PASS_ETFLOW_E3F02_KNOWN_GRAPH_TARGET_PG_TO_XYZ"
+}

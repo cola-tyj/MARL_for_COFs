@@ -1,0 +1,37 @@
+{
+  "schema_version": "pg-orbitflow-config-v1",
+  "seed": 20260828,
+  "data": {
+    "package_dir": "generative_model/data/processed/v2",
+    "split_scheme": "iid",
+    "point_groups": ["C2", "C3"],
+    "max_train_samples": 8,
+    "max_validation_samples": 4,
+    "coordinate_scale_angstrom": 3.0
+  },
+  "model": {
+    "hidden_dim": 32,
+    "layers": 2,
+    "radial_dim": 8,
+    "radial_max": 6.0
+  },
+  "training": {
+    "device": "cpu",
+    "max_steps": 2,
+    "batch_size": 2,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.000001,
+    "gradient_clip_norm": 5.0,
+    "checkpoint_every": 1
+  },
+  "objective": {
+    "bond_weight": 0.25,
+    "overlap_weight": 0.1,
+    "symmetry_weight": 1.0
+  },
+  "evaluation": {
+    "flow_times": [0.25, 0.5, 0.75],
+    "ode_steps": 4,
+    "ode_method": "heun"
+  }
+}

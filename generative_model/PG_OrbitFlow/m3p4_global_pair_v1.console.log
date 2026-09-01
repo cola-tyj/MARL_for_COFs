@@ -1,0 +1,6 @@
+step=1/1024 loss=54.7977 pair_mae_max=5.51353A
+step=256/1024 loss=2.83403 pair_mae_max=1.15306A
+step=512/1024 loss=1.25179 pair_mae_max=0.729383A
+step=768/1024 loss=0.770586 pair_mae_max=0.583582A
+step=1024/1024 loss=0.71322 pair_mae_max=0.529856A
+FAIL_M3P4_GLOBAL_PAIR_GATE_STOP_BEFORE_DECODER report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p4_global_pair_v1/report.json

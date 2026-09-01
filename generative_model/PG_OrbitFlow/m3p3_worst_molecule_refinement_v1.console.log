@@ -1,0 +1,6 @@
+step=1/512 loss=0.0672224 torsion=8.7385deg nonplanar=12.7711deg gate=FAIL
+step=128/512 loss=0.000517466 torsion=0.94159deg nonplanar=0.80132deg gate=PASS
+step=256/512 loss=0.00080268 torsion=0.944703deg nonplanar=1.38294deg gate=PASS
+step=384/512 loss=0.000830397 torsion=0.59405deg nonplanar=1.18224deg gate=PASS
+step=512/512 loss=0.000149153 torsion=0.432139deg nonplanar=0.526255deg gate=PASS
+PASS_M3P3_PREDICTION_GATE_ADVANCE_TO_DECODER report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p3_worst_molecule_refinement_v1/report.json

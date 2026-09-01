@@ -1,0 +1,31 @@
+{
+  "schema_version": "pg-orbitflow-overfit-failure-summary-v1",
+  "status": "FAIL_PG_ORBITFLOW_OVERFIT_TIER_4_STOP_AND_DIAGNOSE",
+  "protocol_sha256": "ad83bd265375db095761eb6a21e0aeae17d0e87ca2022025c84b2e543a85cd34",
+  "single_failed_branch": "independent linear coupling between a random symmetric prior and a fixed-phase target",
+  "passed_checks": {
+    "all_losses_gradients_finite": true,
+    "posthoc_hard_projection_never_used": true,
+    "raw_collision_free_fraction_min": true,
+    "raw_max_operation_atom_error_max_angstrom": true
+  },
+  "failed_metrics": {
+    "training_loss_window_ratio": 0.6657556325676279,
+    "fixed_time_endpoint_rmsd_mean_angstrom": 1.563295367360115,
+    "raw_kabsch_rmsd_mean_angstrom": 1.8067199373326284,
+    "raw_pair_distance_mae_mean_angstrom": 0.9731301532977428,
+    "raw_bond_length_mae_mean_angstrom": 1.008062207991275
+  },
+  "passed_metrics": {
+    "raw_collision_free_fraction": 1.0,
+    "raw_max_operation_atom_error_angstrom": 2.3278576547199866e-06
+  },
+  "artifacts": {
+    "report_sha256": "135039ebe9c2670645c9b93d8fab7b62efeaf22c8ceef84e09ab34eee49cf92d",
+    "losses_sha256": "ad0272d26e75b7f09a6835fe220104a2c81c7168f832da1786bd82a410658be1",
+    "last_checkpoint_sha256": "ca09a9582dbf98419056aea7afca796760f47cfd5e7af4d2dce77510de5193ee",
+    "raw_coordinates_sha256": "2f4ea166584c23ed88c92662639cccf4518c7359852dad912ef074149f317033"
+  },
+  "next_action": "single-variable Cn centralizer phase-aligned transport; all panel/model/loss/budget/gate settings remain frozen",
+  "quality_claim": false
+}

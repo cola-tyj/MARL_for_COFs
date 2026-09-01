@@ -1,0 +1,246 @@
+[11:15:51] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:15:51] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+2026-08-28 11:15:57.374 | INFO     | etflow.utils:instantiate_model:137 - Loading BaseFlow with args: {'network_type': 'TorchMDDynamics', 'hidden_channels': 160, 'num_layers': 20, 'num_rbf': 64, 'rbf_type': 'expnorm', 'trainable_rbf': True, 'activation': 'silu', 'neighbor_embedding': True, 'cutoff_lower': 0.0, 'cutoff_upper': 10.0, 'max_z': 100, 'node_attr_dim': 10, 'edge_attr_dim': 1, 'attn_activation': 'silu', 'num_heads': 8, 'distance_influence': 'both', 'reduce_op': 'sum', 'qk_norm': True, 'so3_equivariant': False, 'clip_during_norm': True, 'parity_switch': 'post_hoc', 'output_layer_norm': False, 'sigma': 0.1, 'prior_type': 'harmonic', 'interpolation_type': 'linear', 'optimizer_type': 'AdamW', 'lr': 0.0008, 'weight_decay': 1e-08, 'lr_scheduler_type': 'CosineAnnealingWarmupRestarts', 'first_cycle_steps': 375000, 'cycle_mult': 1.0, 'max_lr': 0.0005, 'min_lr': 1e-08, 'warmup_steps': 0, 'gamma': 0.05, 'last_epoch': -1, 'lr_scheduler_monitor': 'val/loss', 'lr_scheduler_interval': 'step', 'lr_scheduler_frequency': 1}
+/home/tianyajun/anaconda3/envs/env_etflow/lib/python3.11/site-packages/etflow/models/model.py:214: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(checkpoint_path, map_location=device)
+Seed set to 2026082902
+/home/tianyajun/anaconda3/envs/env_etflow/lib/python3.11/site-packages/etflow/commons/utils.py:177: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:651.)
+  bgraph_adj = torch.sparse.LongTensor(edge_index, edge_type, torch.Size([N, N]))
+Seed set to 2026082903
+Seed set to 2026082904
+Seed set to 2026082905
+Seed set to 2026082906
+Seed set to 2026082907
+Seed set to 2026082908
+Seed set to 2026082909
+Seed set to 2026082910
+Seed set to 2026082911
+Seed set to 2026082912
+Seed set to 2026082913
+Seed set to 2026082914
+Seed set to 2026082915
+Seed set to 2026082916
+Seed set to 2026082917
+Seed set to 2026082918
+Seed set to 2026082919
+Seed set to 2026082920
+Seed set to 2026082921
+Seed set to 2026082922
+Seed set to 2026082923
+[11:18:40] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:40] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:40] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:40] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+Seed set to 2026082924
+[11:18:40] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:46] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:46] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:46] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:46] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:46] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:46] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:47] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+[11:18:47] WARNING: could not find number of expected rings. Switching to an approximate ring finding algorithm.
+Seed set to 2026082925
+Seed set to 2026082926
+Seed set to 2026082927
+Seed set to 2026082928
+Seed set to 2026082929
+Seed set to 2026082930
+Seed set to 2026082931
+Seed set to 2026082932
+Seed set to 2026082933
+Seed set to 2026082934
+Seed set to 2026082935
+Seed set to 2026082936
+Seed set to 2026082937
+Seed set to 2026082938
+Seed set to 2026082939
+Seed set to 2026082940
+Seed set to 2026082941
+Seed set to 2026082942
+Seed set to 2026082943
+Seed set to 2026082944
+Seed set to 2026082945
+Seed set to 2026082946
+Seed set to 2026082947
+/home/tianyajun/anaconda3/envs/env_etflow/lib/python3.11/site-packages/etflow/networks/torchmd_net/utils.py:307: UserWarning: Skipping gradients for 1 atoms due to vector features being zero. This is likely due to atoms being outside the cutoff radius of any other atom. These atoms will not interact with any other atom unless you change the cutoff.
+  warnings.warn(
+Seed set to 2026082948
+Seed set to 2026082949
+Seed set to 2026082950
+Seed set to 2026082951
+Seed set to 2026082952
+Seed set to 2026082953
+Seed set to 2026082954
+Seed set to 2026082955
+Seed set to 2026082956
+Seed set to 2026082957
+Seed set to 2026082958
+Seed set to 2026082959
+Seed set to 2026082960
+Seed set to 2026082961
+Loading drugs-o3 from config
+Checkpoint found at /home/tianyajun/MARL_for_COFs/generative_model/checkpoints/etflow/drugs-o3.ckpt
+Device cuda not found. Using cuda instead
+{"completed": 1, "total": 98, "molecule_id": "mol_001_C3k2", "status": "RESUMED"}
+{"completed": 2, "total": 98, "molecule_id": "mol_002_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 3, "total": 98, "molecule_id": "mol_003_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 4, "total": 98, "molecule_id": "mol_004_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 5, "total": 98, "molecule_id": "mol_005_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 6, "total": 98, "molecule_id": "mol_006_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 7, "total": 98, "molecule_id": "mol_007_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 8, "total": 98, "molecule_id": "mol_008_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 9, "total": 98, "molecule_id": "mol_009_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 10, "total": 98, "molecule_id": "mol_010_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 11, "total": 98, "molecule_id": "mol_011_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 12, "total": 98, "molecule_id": "mol_012_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 13, "total": 98, "molecule_id": "mol_013_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 14, "total": 98, "molecule_id": "mol_014_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 15, "total": 98, "molecule_id": "mol_015_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 16, "total": 98, "molecule_id": "mol_016_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 17, "total": 98, "molecule_id": "mol_017_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 18, "total": 98, "molecule_id": "mol_018_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 19, "total": 98, "molecule_id": "mol_019_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 20, "total": 98, "molecule_id": "mol_020_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 21, "total": 98, "molecule_id": "mol_021_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 22, "total": 98, "molecule_id": "mol_022_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 23, "total": 98, "molecule_id": "mol_023_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 24, "total": 98, "molecule_id": "mol_024_C3k2", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 25, "total": 98, "molecule_id": "mol_001_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 26, "total": 98, "molecule_id": "mol_002_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 27, "total": 98, "molecule_id": "mol_003_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 28, "total": 98, "molecule_id": "mol_004_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 29, "total": 98, "molecule_id": "mol_005_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 30, "total": 98, "molecule_id": "mol_006_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 31, "total": 98, "molecule_id": "mol_007_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 32, "total": 98, "molecule_id": "mol_008_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 33, "total": 98, "molecule_id": "mol_009_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 34, "total": 98, "molecule_id": "mol_010_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 35, "total": 98, "molecule_id": "mol_011_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 36, "total": 98, "molecule_id": "mol_012_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 37, "total": 98, "molecule_id": "mol_013_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 38, "total": 98, "molecule_id": "mol_014_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 39, "total": 98, "molecule_id": "mol_015_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 40, "total": 98, "molecule_id": "mol_016_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 41, "total": 98, "molecule_id": "mol_017_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 42, "total": 98, "molecule_id": "mol_018_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 43, "total": 98, "molecule_id": "mol_019_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 44, "total": 98, "molecule_id": "mol_020_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 45, "total": 98, "molecule_id": "mol_021_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 46, "total": 98, "molecule_id": "mol_022_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 47, "total": 98, "molecule_id": "mol_023_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 48, "total": 98, "molecule_id": "mol_024_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 49, "total": 98, "molecule_id": "mol_025_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 50, "total": 98, "molecule_id": "mol_026_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 51, "total": 98, "molecule_id": "mol_027_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 52, "total": 98, "molecule_id": "mol_028_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 53, "total": 98, "molecule_id": "mol_029_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 54, "total": 98, "molecule_id": "mol_030_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 55, "total": 98, "molecule_id": "mol_031_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 56, "total": 98, "molecule_id": "mol_032_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 57, "total": 98, "molecule_id": "mol_033_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 58, "total": 98, "molecule_id": "mol_034_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 59, "total": 98, "molecule_id": "mol_035_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 60, "total": 98, "molecule_id": "mol_036_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 61, "total": 98, "molecule_id": "mol_037_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}Seed set to 2026082962
+Seed set to 2026082963
+Seed set to 2026082964
+Seed set to 2026082965
+Seed set to 2026082966
+Seed set to 2026082967
+Seed set to 2026082968
+Seed set to 2026082969
+Seed set to 2026082970
+Seed set to 2026082971
+Seed set to 2026082972
+Seed set to 2026082973
+Seed set to 2026082974
+Seed set to 2026082975
+Seed set to 2026082976
+Seed set to 2026082977
+Seed set to 2026082978
+Seed set to 2026082979
+Seed set to 2026082980
+Seed set to 2026082981
+Seed set to 2026082982
+Seed set to 2026082983
+Seed set to 2026082984
+Seed set to 2026082985
+Seed set to 2026082986
+Seed set to 2026082987
+Seed set to 2026082988
+Seed set to 2026082989
+Seed set to 2026082990
+Seed set to 2026082991
+Seed set to 2026082992
+Seed set to 2026082993
+Seed set to 2026082994
+Seed set to 2026082995
+Seed set to 2026082996
+Seed set to 2026082997
+Seed set to 2026082998
+
+{"completed": 62, "total": 98, "molecule_id": "mol_038_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 63, "total": 98, "molecule_id": "mol_039_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 64, "total": 98, "molecule_id": "mol_040_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 65, "total": 98, "molecule_id": "mol_041_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 66, "total": 98, "molecule_id": "mol_042_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 67, "total": 98, "molecule_id": "mol_043_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 68, "total": 98, "molecule_id": "mol_044_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 69, "total": 98, "molecule_id": "mol_045_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 70, "total": 98, "molecule_id": "mol_046_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 71, "total": 98, "molecule_id": "mol_047_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 72, "total": 98, "molecule_id": "mol_048_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 73, "total": 98, "molecule_id": "mol_049_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 74, "total": 98, "molecule_id": "mol_050_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 75, "total": 98, "molecule_id": "mol_051_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 76, "total": 98, "molecule_id": "mol_052_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 77, "total": 98, "molecule_id": "mol_053_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 78, "total": 98, "molecule_id": "mol_054_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 79, "total": 98, "molecule_id": "mol_055_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 80, "total": 98, "molecule_id": "mol_056_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 81, "total": 98, "molecule_id": "mol_057_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 82, "total": 98, "molecule_id": "mol_058_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 83, "total": 98, "molecule_id": "mol_059_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 84, "total": 98, "molecule_id": "mol_060_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 85, "total": 98, "molecule_id": "mol_061_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 86, "total": 98, "molecule_id": "mol_062_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 87, "total": 98, "molecule_id": "mol_063_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 88, "total": 98, "molecule_id": "mol_064_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 89, "total": 98, "molecule_id": "mol_065_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 90, "total": 98, "molecule_id": "mol_066_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 91, "total": 98, "molecule_id": "mol_067_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 92, "total": 98, "molecule_id": "mol_068_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 93, "total": 98, "molecule_id": "mol_069_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 94, "total": 98, "molecule_id": "mol_070_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 95, "total": 98, "molecule_id": "mol_071_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 96, "total": 98, "molecule_id": "mol_072_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 97, "total": 98, "molecule_id": "mol_073_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{"completed": 98, "total": 98, "molecule_id": "mol_074_C3k3", "status": "PASS_OUR_ETFLOW_CN_XYZ_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"}
+{
+  "completed_count": 98,
+  "failure_count": 0,
+  "failures": [],
+  "group_counts": {
+    "C3k2": 24,
+    "C3k3": 74
+  },
+  "identity": {
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "index_csv_sha256": "f9bae9c1533c70778340d6894bd2a249c0a165ddc1c79879929cc94f01f154e1",
+    "protocol_sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2"
+  },
+  "passed_generation": true,
+  "requested_count": 98,
+  "schema_version": "our-etflow-cn-batch-v1",
+  "scope": {
+    "etflow_v5_reused_unchanged": true,
+    "f02_used": true,
+    "hard_projection_used": true,
+    "input": "external Cn 2D heavy-atom graphs",
+    "reference_3d_used": false,
+    "target_pg": "C3"
+  },
+  "status": "PASS_OUR_ETFLOW_CN_BATCH_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"
+}

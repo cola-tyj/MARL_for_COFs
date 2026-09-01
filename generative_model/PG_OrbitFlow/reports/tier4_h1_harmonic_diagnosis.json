@@ -1,0 +1,402 @@
+{
+  "checkpoint_results": [
+    {
+      "by_flow_time": {
+        "0.1": {
+          "bond_length_mse": 0.20502663496881723,
+          "endpoint_auxiliary_mse": 0.15116629656404257,
+          "endpoint_rmsd_angstrom": 1.858755499124527,
+          "flow_mse": 0.18662505876272917,
+          "loss": 0.23788412753492594,
+          "overlap_loss": 2.4097642381093465e-05,
+          "symmetry_mse": 1.3085116111625957e-15
+        },
+        "0.25": {
+          "bond_length_mse": 0.11960442271083593,
+          "endpoint_auxiliary_mse": 0.16758161410689354,
+          "endpoint_rmsd_angstrom": 2.057935506105423,
+          "flow_mse": 0.29792286083102226,
+          "loss": 0.32782451435923576,
+          "overlap_loss": 5.516412599604337e-06,
+          "symmetry_mse": 1.0312545267644423e-15
+        },
+        "0.5": {
+          "bond_length_mse": 0.09996849205344915,
+          "endpoint_auxiliary_mse": 0.11815376300364733,
+          "endpoint_rmsd_angstrom": 1.718202531337738,
+          "flow_mse": 0.472615085542202,
+          "loss": 0.497694481164217,
+          "overlap_loss": 0.000872726843226701,
+          "symmetry_mse": 1.1420618813817024e-15
+        },
+        "0.75": {
+          "bond_length_mse": 0.02008507342543453,
+          "endpoint_auxiliary_mse": 0.023826719843782485,
+          "endpoint_rmsd_angstrom": 0.7679643929004669,
+          "flow_mse": 0.38122753612697124,
+          "loss": 0.3862488027662039,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 1.177843544158819e-15
+        },
+        "0.9": {
+          "bond_length_mse": 0.0026786232192534953,
+          "endpoint_auxiliary_mse": 0.003091821330599487,
+          "endpoint_rmsd_angstrom": 0.2781320847570896,
+          "flow_mse": 0.3091819901019335,
+          "loss": 0.30985164642333984,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 9.16651868973442e-16
+        }
+      },
+      "fixed_time_means": {
+        "bond_length_mse": 0.08947264927555806,
+        "endpoint_auxiliary_mse": 0.09276404296979308,
+        "endpoint_rmsd_angstrom": 1.3361980028450489,
+        "flow_mse": 0.32951450627297163,
+        "loss": 0.3519007144495845,
+        "overlap_loss": 0.00018046817964147976,
+        "symmetry_mse": 1.1152646864882003e-15
+      },
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/overfit_tier4_h1_harmonic/step-000001.pt",
+      "sha256": "08b0c4cd2cfadc1ed5b157e12ffb610016b62a8e80ac428028d36fc0840ebeb9",
+      "step": 1
+    },
+    {
+      "by_flow_time": {
+        "0.1": {
+          "bond_length_mse": 0.07568229222670197,
+          "endpoint_auxiliary_mse": 0.07175221387296915,
+          "endpoint_rmsd_angstrom": 1.3735310435295105,
+          "flow_mse": 0.0885829757899046,
+          "loss": 0.10758647229522467,
+          "overlap_loss": 0.0008292461643577553,
+          "symmetry_mse": 7.306292194847515e-16
+        },
+        "0.25": {
+          "bond_length_mse": 0.03529229713603854,
+          "endpoint_auxiliary_mse": 0.09134413115680218,
+          "endpoint_rmsd_angstrom": 1.556898832321167,
+          "flow_mse": 0.1623895727097988,
+          "loss": 0.17128102853894234,
+          "overlap_loss": 0.0006838604967924766,
+          "symmetry_mse": 8.870339855441561e-16
+        },
+        "0.5": {
+          "bond_length_mse": 0.04491626634262502,
+          "endpoint_auxiliary_mse": 0.0704625491052866,
+          "endpoint_rmsd_angstrom": 1.358249455690384,
+          "flow_mse": 0.2818502075970173,
+          "loss": 0.2932184934616089,
+          "overlap_loss": 0.0013921931771392337,
+          "symmetry_mse": 7.454367516836307e-16
+        },
+        "0.75": {
+          "bond_length_mse": 0.015872696647420526,
+          "endpoint_auxiliary_mse": 0.020334533182904124,
+          "endpoint_rmsd_angstrom": 0.7223747968673706,
+          "flow_mse": 0.3253525607287884,
+          "loss": 0.32932073995471,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 1.0646934949328006e-15
+        },
+        "0.9": {
+          "bond_length_mse": 0.0028068356041330844,
+          "endpoint_auxiliary_mse": 0.0030408904422074556,
+          "endpoint_rmsd_angstrom": 0.2790676951408386,
+          "flow_mse": 0.30408888682723045,
+          "loss": 0.30479059368371964,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 9.697772592645295e-16
+        }
+      },
+      "fixed_time_means": {
+        "bond_length_mse": 0.03491407759138383,
+        "endpoint_auxiliary_mse": 0.0513868635520339,
+        "endpoint_rmsd_angstrom": 1.0580243647098542,
+        "flow_mse": 0.2324528407305479,
+        "loss": 0.24123946558684112,
+        "overlap_loss": 0.0005810599676578931,
+        "symmetry_mse": 8.795141421819737e-16
+      },
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/overfit_tier4_h1_harmonic/step-000256.pt",
+      "sha256": "b3ba3f38fb405cbe4e7a3c4a83c158dc2eeb0ff25c24461324406485e0c2e174",
+      "step": 256
+    },
+    {
+      "by_flow_time": {
+        "0.1": {
+          "bond_length_mse": 0.04501328394690063,
+          "endpoint_auxiliary_mse": 0.051696693524718285,
+          "endpoint_rmsd_angstrom": 1.1434127688407898,
+          "flow_mse": 0.06382308388128877,
+          "loss": 0.07508386159315705,
+          "overlap_loss": 7.455857121385634e-05,
+          "symmetry_mse": 9.186710499359084e-16
+        },
+        "0.25": {
+          "bond_length_mse": 0.05328086391091347,
+          "endpoint_auxiliary_mse": 0.08752827625721693,
+          "endpoint_rmsd_angstrom": 1.5183533728122711,
+          "flow_mse": 0.15560582280158997,
+          "loss": 0.1689386423677206,
+          "overlap_loss": 0.00012600944319274276,
+          "symmetry_mse": 9.631690986393005e-16
+        },
+        "0.5": {
+          "bond_length_mse": 0.025488299317657948,
+          "endpoint_auxiliary_mse": 0.05148477107286453,
+          "endpoint_rmsd_angstrom": 1.166333794593811,
+          "flow_mse": 0.20593908987939358,
+          "loss": 0.21236201748251915,
+          "overlap_loss": 0.0005085504963062704,
+          "symmetry_mse": 8.824182780214408e-16
+        },
+        "0.75": {
+          "bond_length_mse": 0.019084850908257067,
+          "endpoint_auxiliary_mse": 0.018094022292643785,
+          "endpoint_rmsd_angstrom": 0.673871248960495,
+          "flow_mse": 0.28950435668230057,
+          "loss": 0.29427556693553925,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 9.134449228257984e-16
+        },
+        "0.9": {
+          "bond_length_mse": 0.003069147525820881,
+          "endpoint_auxiliary_mse": 0.002839975815732032,
+          "endpoint_rmsd_angstrom": 0.27054283022880554,
+          "flow_mse": 0.28399745747447014,
+          "loss": 0.28476474806666374,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 7.2384909793634015e-16
+        }
+      },
+      "fixed_time_means": {
+        "bond_length_mse": 0.029187289121909998,
+        "endpoint_auxiliary_mse": 0.04232874779263511,
+        "endpoint_rmsd_angstrom": 0.9545028030872345,
+        "flow_mse": 0.1997739621438086,
+        "loss": 0.20708496728911996,
+        "overlap_loss": 0.0001418237021425739,
+        "symmetry_mse": 8.803104894717576e-16
+      },
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/overfit_tier4_h1_harmonic/step-000512.pt",
+      "sha256": "5ca9d108e147f45e1543471c9a70ca5d32ee3d3ea05402a9208de9729b4998c2",
+      "step": 512
+    },
+    {
+      "by_flow_time": {
+        "0.1": {
+          "bond_length_mse": 0.03516144317109138,
+          "endpoint_auxiliary_mse": 0.040713453316129744,
+          "endpoint_rmsd_angstrom": 0.9939809590578079,
+          "flow_mse": 0.050263522658497095,
+          "loss": 0.059140621684491634,
+          "overlap_loss": 0.0008673823904246092,
+          "symmetry_mse": 2.2127770129458726e-15
+        },
+        "0.25": {
+          "bond_length_mse": 0.0361841362901032,
+          "endpoint_auxiliary_mse": 0.06513302680104971,
+          "endpoint_rmsd_angstrom": 1.3062927424907684,
+          "flow_mse": 0.1157920528203249,
+          "loss": 0.1248380895704031,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 1.2035517617315955e-15
+        },
+        "0.5": {
+          "bond_length_mse": 0.013510318356566131,
+          "endpoint_auxiliary_mse": 0.03775758482515812,
+          "endpoint_rmsd_angstrom": 0.9846972674131393,
+          "flow_mse": 0.15103033557534218,
+          "loss": 0.15443762205541134,
+          "overlap_loss": 0.0002970914065372199,
+          "symmetry_mse": 7.619820778529204e-16
+        },
+        "0.75": {
+          "bond_length_mse": 0.010384559514932334,
+          "endpoint_auxiliary_mse": 0.014313087507616729,
+          "endpoint_rmsd_angstrom": 0.5888060927391052,
+          "flow_mse": 0.22900941129773855,
+          "loss": 0.23160555306822062,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 7.435844362117733e-16
+        },
+        "0.9": {
+          "bond_length_mse": 0.002579615102149546,
+          "endpoint_auxiliary_mse": 0.0026228698261547834,
+          "endpoint_rmsd_angstrom": 0.258035346865654,
+          "flow_mse": 0.2622868437319994,
+          "loss": 0.2629317454993725,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 6.008011709366347e-16
+        }
+      },
+      "fixed_time_means": {
+        "bond_length_mse": 0.01956401448696852,
+        "endpoint_auxiliary_mse": 0.032108004455221814,
+        "endpoint_rmsd_angstrom": 0.826362481713295,
+        "flow_mse": 0.16167643321678044,
+        "loss": 0.16659072637557984,
+        "overlap_loss": 0.0002328947593923658,
+        "symmetry_mse": 1.1045392919357593e-15
+      },
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/overfit_tier4_h1_harmonic/step-000768.pt",
+      "sha256": "ec639ac83856c5a8c900efaf542e60fc9e1ace9d4b3327d217884fffbd57a66b",
+      "step": 768
+    },
+    {
+      "by_flow_time": {
+        "0.1": {
+          "bond_length_mse": 0.03998939221492037,
+          "endpoint_auxiliary_mse": 0.03966146195307374,
+          "endpoint_rmsd_angstrom": 0.9920054078102112,
+          "flow_mse": 0.04896476515568793,
+          "loss": 0.058999817818403244,
+          "overlap_loss": 0.0003770592270484485,
+          "symmetry_mse": 3.411822771156312e-15
+        },
+        "0.25": {
+          "bond_length_mse": 0.028991451486945152,
+          "endpoint_auxiliary_mse": 0.05481645092368126,
+          "endpoint_rmsd_angstrom": 1.1946202516555786,
+          "flow_mse": 0.09745147079229355,
+          "loss": 0.10469966940581799,
+          "overlap_loss": 3.380277803444187e-06,
+          "symmetry_mse": 1.8256246695959745e-15
+        },
+        "0.5": {
+          "bond_length_mse": 0.015741710551083088,
+          "endpoint_auxiliary_mse": 0.031516506569460034,
+          "endpoint_rmsd_angstrom": 0.8896122723817825,
+          "flow_mse": 0.12606601417064667,
+          "loss": 0.13000204786658287,
+          "overlap_loss": 6.066956302674953e-06,
+          "symmetry_mse": 9.388374221023756e-16
+        },
+        "0.75": {
+          "bond_length_mse": 0.007975020445883274,
+          "endpoint_auxiliary_mse": 0.013467355049215257,
+          "endpoint_rmsd_angstrom": 0.5727067440748215,
+          "flow_mse": 0.21547767706215382,
+          "loss": 0.21747143007814884,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 9.186291085701295e-16
+        },
+        "0.9": {
+          "bond_length_mse": 0.0016204841376747936,
+          "endpoint_auxiliary_mse": 0.0025075756129808724,
+          "endpoint_rmsd_angstrom": 0.252917867153883,
+          "flow_mse": 0.2507574278861284,
+          "loss": 0.25116254203021526,
+          "overlap_loss": 0.0,
+          "symmetry_mse": 7.799560508192077e-16
+        }
+      },
+      "fixed_time_means": {
+        "bond_length_mse": 0.018863611767301336,
+        "endpoint_auxiliary_mse": 0.028393870021682234,
+        "endpoint_rmsd_angstrom": 0.7803725086152553,
+        "flow_mse": 0.1477434710133821,
+        "loss": 0.15246710143983364,
+        "overlap_loss": 7.730129223091354e-05,
+        "symmetry_mse": 1.5749740044488e-15
+      },
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/overfit_tier4_h1_harmonic/step-001024.pt",
+      "sha256": "b6127bdb6ddc3590eacfe0f9738b6f6e790fe9fcfd3eb51ca4636fbd68f2d9b2",
+      "step": 1024
+    }
+  ],
+  "diagnostic_summary": {
+    "best_fixed_endpoint_checkpoint_step": 1024,
+    "best_fixed_endpoint_rmsd_angstrom": 0.7803725086152553,
+    "final_fixed_endpoint_rmsd_angstrom": 0.7803725086152553,
+    "weakest_final_checkpoint_endpoint_rmsd_angstrom": 1.1946202516555786,
+    "weakest_final_checkpoint_flow_time": 0.25
+  },
+  "final_checkpoint_step": 1024,
+  "integrator_step_sensitivity": {
+    "100": {
+      "by_point_group": {
+        "C2": {
+          "bond_length_mae_mean_angstrom": 0.4276590759610669,
+          "case_count": 4,
+          "collision_free_fraction": 1.0,
+          "kabsch_rmsd_mean_angstrom": 1.4369903391992271
+        },
+        "C3": {
+          "bond_length_mae_mean_angstrom": 0.6585895365121346,
+          "case_count": 4,
+          "collision_free_fraction": 1.0,
+          "kabsch_rmsd_mean_angstrom": 1.4702153676286858
+        }
+      },
+      "collision_free_fraction": 1.0,
+      "max_operation_atom_error_angstrom": 1.9203533608552548e-06,
+      "means": {
+        "bond_length_mae_angstrom": 0.5431243062366007,
+        "kabsch_rmsd_angstrom": 1.4536028534139565,
+        "mean_operation_rms_angstrom": 3.927656652318352e-07,
+        "pair_distance_mae_angstrom": 0.8537034773315525
+      }
+    },
+    "25": {
+      "by_point_group": {
+        "C2": {
+          "bond_length_mae_mean_angstrom": 0.4279607462036078,
+          "case_count": 4,
+          "collision_free_fraction": 1.0,
+          "kabsch_rmsd_mean_angstrom": 1.4373506915112197
+        },
+        "C3": {
+          "bond_length_mae_mean_angstrom": 0.6586438386531179,
+          "case_count": 4,
+          "collision_free_fraction": 1.0,
+          "kabsch_rmsd_mean_angstrom": 1.4704076363773764
+        }
+      },
+      "collision_free_fraction": 1.0,
+      "max_operation_atom_error_angstrom": 1.3998762547292272e-06,
+      "means": {
+        "bond_length_mae_angstrom": 0.5433022924283628,
+        "kabsch_rmsd_angstrom": 1.4538791639442983,
+        "mean_operation_rms_angstrom": 2.0114201686910133e-07,
+        "pair_distance_mae_angstrom": 0.8539872424641399
+      }
+    },
+    "50": {
+      "by_point_group": {
+        "C2": {
+          "bond_length_mae_mean_angstrom": 0.4277173660318879,
+          "case_count": 4,
+          "collision_free_fraction": 1.0,
+          "kabsch_rmsd_mean_angstrom": 1.4370607732536047
+        },
+        "C3": {
+          "bond_length_mae_mean_angstrom": 0.658599824727662,
+          "case_count": 4,
+          "collision_free_fraction": 1.0,
+          "kabsch_rmsd_mean_angstrom": 1.4702529308607037
+        }
+      },
+      "collision_free_fraction": 1.0,
+      "max_operation_atom_error_angstrom": 1.5203207055598756e-06,
+      "means": {
+        "bond_length_mae_angstrom": 0.5431585953797748,
+        "kabsch_rmsd_angstrom": 1.4536568520571542,
+        "mean_operation_rms_angstrom": 2.5067235539551904e-07,
+        "pair_distance_mae_angstrom": 0.8537595136436484
+      }
+    }
+  },
+  "posthoc_hard_projection_used": false,
+  "protocol": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/overfit_protocol_h1_harmonic.json",
+    "sha256": "c02b3a1b11949b2cb4306f81c7d2ecfbe27da1c95381eab2a909a4581c53c8f4"
+  },
+  "run_dir": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/overfit_tier4_h1_harmonic",
+  "schema_version": "pg-orbitflow-overfit-readonly-diagnosis-v1",
+  "scientific_gate_changed": false,
+  "status": "PASS_READONLY_DIAGNOSIS_COMPLETE",
+  "tier": 4,
+  "training_performed": false
+}

@@ -1,0 +1,67 @@
+{
+  "adjacent_diffs": {
+    "h0_to_h1": [
+      "prior.per_sample_rms_normalization",
+      "prior.type"
+    ],
+    "h1_to_h2": [
+      "transport.alignment_group",
+      "transport.posterior_density",
+      "transport.target_phase_aligned_to_prior",
+      "transport.type"
+    ],
+    "h2_to_h3": [
+      "objective.endpoint_weight"
+    ]
+  },
+  "checks": {
+    "h0_to_h1": true,
+    "h1_to_h2": true,
+    "h2_to_h3": true,
+    "same_data": true,
+    "same_model": true,
+    "same_seed": true,
+    "same_tiers_and_gates": true
+  },
+  "expected_adjacent_diffs": {
+    "h0_to_h1": [
+      "prior.per_sample_rms_normalization",
+      "prior.type"
+    ],
+    "h1_to_h2": [
+      "transport.alignment_group",
+      "transport.posterior_density",
+      "transport.target_phase_aligned_to_prior",
+      "transport.type"
+    ],
+    "h2_to_h3": [
+      "objective.endpoint_weight"
+    ]
+  },
+  "passed": true,
+  "protocols": {
+    "h0": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/overfit_protocol_h0_schema_baseline.json",
+      "sha256": "d81f09650c8ce55407a0a7f011964f0f7da9fe5ad82c24b691040ba0807378ad"
+    },
+    "h1": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/overfit_protocol_h1_harmonic.json",
+      "sha256": "c02b3a1b11949b2cb4306f81c7d2ecfbe27da1c95381eab2a909a4581c53c8f4"
+    },
+    "h2": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/overfit_protocol_h2_centralizer.json",
+      "sha256": "9c85f41087069432d98089d34f0ead2d01c39f7b27658c8a57a59fe38838b2c0"
+    },
+    "h3": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/overfit_protocol_h3_endpoint.json",
+      "sha256": "48822dfacc3a04801bb5e6945b22664efe1cfdd31d7a20ca90ce42cb7573f251"
+    }
+  },
+  "schema_version": "pg-orbitflow-h-protocol-audit-v1",
+  "scientific_variables": {
+    "h1": "projected Gaussian -> unnormalized graph-harmonic prior",
+    "h2": "single phase -> centralizer-averaged transport target",
+    "h3": "endpoint auxiliary weight 0.0 -> 1.0"
+  },
+  "status": "PASS_H1_H3_SINGLE_VARIABLE_PROTOCOL_AUDIT"
+}

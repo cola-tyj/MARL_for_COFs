@@ -1,0 +1,289 @@
+{
+  "checks": {
+    "all_group_sizes_supported": true,
+    "dominant_failure_coverage_min": true,
+    "graph_only_contract": true,
+    "groups_found": true,
+    "molecule_count_exact": true,
+    "xyz_or_target_not_used_for_grouping": true
+  },
+  "identity": {
+    "m2p1_diagnosis_sha256": "402188f7142f6e1925dc1bae8ac45f451564bebb13b769edc42960900a05b404",
+    "m2p1_protocol_sha256": "3a88b0eef28e27e104db031e2ce8e7c98b32211186bb5335fbcc3d436f6390b8"
+  },
+  "passed": true,
+  "records": [
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 864,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 1045,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 879,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "failed_orbit_count": 4,
+      "group_count": 2,
+      "group_sizes": [
+        2,
+        2
+      ],
+      "groups": [
+        [
+          4,
+          5
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "package_index": 892,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [
+        4,
+        5,
+        6,
+        10,
+        11,
+        12
+      ],
+      "failed_orbit_count": 6,
+      "group_count": 2,
+      "group_sizes": [
+        3,
+        3
+      ],
+      "groups": [
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "package_index": 875,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [
+        8,
+        9,
+        15,
+        16
+      ],
+      "failed_orbit_count": 4,
+      "group_count": 2,
+      "group_sizes": [
+        2,
+        2
+      ],
+      "groups": [
+        [
+          8,
+          9
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "package_index": 1075,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [
+        8,
+        9,
+        14,
+        15
+      ],
+      "failed_orbit_count": 5,
+      "group_count": 2,
+      "group_sizes": [
+        2,
+        2
+      ],
+      "groups": [
+        [
+          8,
+          9
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "package_index": 1768,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 406,
+      "target_pg": "C2"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 1135,
+      "target_pg": "C3"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 2391,
+      "target_pg": "C3"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 1222,
+      "target_pg": "C3"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 1124,
+      "target_pg": "C3"
+    },
+    {
+      "covered_failed_orbit_ids": [
+        0,
+        1,
+        4,
+        5,
+        7
+      ],
+      "failed_orbit_count": 5,
+      "group_count": 2,
+      "group_sizes": [
+        3,
+        3
+      ],
+      "groups": [
+        [
+          0,
+          4,
+          6
+        ],
+        [
+          1,
+          5,
+          7
+        ]
+      ],
+      "package_index": 1143,
+      "target_pg": "C3"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 2389,
+      "target_pg": "C3"
+    },
+    {
+      "covered_failed_orbit_ids": [
+        6,
+        7,
+        8,
+        10,
+        11,
+        12
+      ],
+      "failed_orbit_count": 7,
+      "group_count": 2,
+      "group_sizes": [
+        3,
+        3
+      ],
+      "groups": [
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          10,
+          11,
+          12
+        ]
+      ],
+      "package_index": 2403,
+      "target_pg": "C3"
+    },
+    {
+      "covered_failed_orbit_ids": [],
+      "failed_orbit_count": 0,
+      "group_count": 0,
+      "group_sizes": [],
+      "groups": [],
+      "package_index": 62,
+      "target_pg": "C3"
+    }
+  ],
+  "schema_version": "pg-orbitflow-m2p2-local-rotor-set-audit-v1",
+  "scope": {
+    "claim": "representation coverage only; not a model-quality pass",
+    "coordinates_used": false,
+    "targets_used_to_build_groups": false,
+    "training_performed": false
+  },
+  "status": "PASS_M2P2_LOCAL_ROTOR_SET_REPRESENTATION_GATE_A",
+  "summary": {
+    "covered_failed_torsion_orbit_count": 29,
+    "covered_failure_fraction": 0.9354838709677419,
+    "failed_torsion_orbit_count": 31,
+    "local_rotor_set_count": 12,
+    "molecule_count": 16
+  }
+}

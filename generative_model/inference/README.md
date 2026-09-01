@@ -13,6 +13,10 @@ CLI 入口为：
 python -m generative_model.inference.generate_etflow_symmetric_xyz_v5 --help
 ```
 
+外部 Cn 2D 图的批量入口为 `run_our_etflow_cn.py`，它只增加重原子图→显式 H 的严格适配层，
+随后直接调用冻结的 `run_prediction_v5`。独立点群审计入口为
+`audit_our_etflow_cn.py`，结果保存在 `generative_model/results/Cn`。
+
 ## 文件分组
 
 | 分组 | 文件 | 作用 |

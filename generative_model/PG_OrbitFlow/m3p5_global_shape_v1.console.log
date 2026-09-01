@@ -1,0 +1,6 @@
+step=1/2048 loss=53.9379 shape_mae_max=5.44387A
+step=512/2048 loss=0.245069 shape_mae_max=0.328143A
+step=1024/2048 loss=0.0749222 shape_mae_max=0.178848A
+step=1536/2048 loss=0.035461 shape_mae_max=0.12149A
+step=2048/2048 loss=0.0210703 shape_mae_max=0.0922519A
+FAIL_M3P5_GLOBAL_SHAPE_GATE_STOP_BRANCH report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p5_global_shape_v1/report.json

@@ -1,0 +1,1 @@
+FAIL_M3P5B_GLOBAL_SHAPE_GATE_STOP_BRANCH initial=0.0207482 final=0.0195442 shape_mae_max=0.0895776A report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p5b_shape_lbfgs_v1/report.json

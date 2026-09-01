@@ -1,0 +1,70 @@
+{
+  "checks": {
+    "all_added_have_active_chirality": true,
+    "all_added_have_nonplanar_torsion": true,
+    "atom_count_max_21": true,
+    "c2_c3_balanced": true,
+    "current_m2_aliasing_exposed": true,
+    "iid_train_only": true,
+    "m2_tier4_nested": true,
+    "molecule_count_exact": true,
+    "no_undefined_circular_targets": true,
+    "phase_aware_geometry_aliasing_resolved": true
+  },
+  "decision": "freeze a phase-aware M2.1 training/evaluation protocol for Tier-16; add an explicit chirality evaluation Gate before training",
+  "panel": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m2_tier16_panel_v2_phase_aware.json",
+    "sha256": "55c3cc73bcba057bb08804708134c86f09b21e1d0009b65676049dec2357dfb2"
+  },
+  "passed": true,
+  "population": {
+    "C2_active_chirality_molecules": 765,
+    "C2_molecules": 1615,
+    "C2_nonplanar_molecules": 1256,
+    "C2_undefined_torsion_molecules": 22,
+    "C3_active_chirality_molecules": 97,
+    "C3_molecules": 369,
+    "C3_nonplanar_molecules": 260
+  },
+  "schema_version": "pg-orbitflow-m2-tier16-panel-audit-v1",
+  "selected_summary": {
+    "added_active_chirality_molecule_count": 12,
+    "added_molecule_count": 12,
+    "added_nonplanar_molecule_count": 12,
+    "exact_feature_conflict_count": 34,
+    "max_atom_count": 21,
+    "phase_aware_geometry_feature_conflict_count": 0,
+    "point_group_counts": {
+      "C2": 8,
+      "C3": 8
+    },
+    "selected_active_chirality_count": 47,
+    "selected_nonplanar_torsion_orbit_count": 78
+  },
+  "status": "PASS_M2_TIER16_PANEL_AUDIT",
+  "undefined_torsion_package_indices": [
+    205,
+    213,
+    566,
+    570,
+    572,
+    580,
+    581,
+    588,
+    747,
+    751,
+    761,
+    768,
+    783,
+    827,
+    969,
+    972,
+    974,
+    977,
+    1817,
+    2221,
+    2239,
+    2317
+  ],
+  "undefined_torsion_record_count": 22
+}

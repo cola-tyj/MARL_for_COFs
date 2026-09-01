@@ -1,0 +1,103 @@
+{
+  "schema_version": "pg-orbitflow-overfit-tier4-conclusion-v1",
+  "status": "FAIL_TIER4_STOP_BEFORE_TIER16_DIAGNOSIS_COMPLETE",
+  "passed": false,
+  "decision": {
+    "advance_to_tier16": false,
+    "advance_to_tier32": false,
+    "run_full_c2_c3_training": false,
+    "use_external_pretraining_now": false,
+    "reason": "The four-molecule memorization/raw-generation gate still fails geometry despite exact raw group-action preservation. Scale-up would confound backbone capacity with data scale."
+  },
+  "panel": {
+    "molecule_count": 4,
+    "point_group_counts": {"C2": 2, "C3": 2},
+    "package_indices": [864, 1045, 1135, 2391],
+    "iid_train_only": true,
+    "iid_validation_used": false,
+    "iid_test_used": false,
+    "core_ood_used": false
+  },
+  "training": {
+    "random_initialization": true,
+    "optimizer_steps": 1024,
+    "batch_size_molecules": 4,
+    "molecule_exposures": 4096,
+    "c2_c3_exposure": "1:1",
+    "parameter_count": 740424,
+    "external_checkpoint_used": false,
+    "hard_projection_after_model_output": false,
+    "f02_used": false
+  },
+  "v1_independent_transport": {
+    "protocol_sha256": "ad83bd265375db095761eb6a21e0aeae17d0e87ca2022025c84b2e543a85cd34",
+    "report_sha256": "135039ebe9c2670645c9b93d8fab7b62efeaf22c8ceef84e09ab34eee49cf92d",
+    "gate_values": {
+      "training_loss_window_ratio": 0.6657556325676279,
+      "fixed_time_endpoint_rmsd_mean_angstrom": 1.563295367360115,
+      "raw_kabsch_rmsd_mean_angstrom": 1.8067199373326284,
+      "raw_pair_distance_mae_mean_angstrom": 0.9731301532977428,
+      "raw_bond_length_mae_mean_angstrom": 1.008062207991275,
+      "raw_collision_free_fraction": 1.0,
+      "raw_max_operation_atom_error_angstrom": 2.3278576547199866e-06
+    }
+  },
+  "v2_cn_phase_aligned_transport": {
+    "protocol_sha256": "3dae61795702ba826c9d36d86fe0a0b3eaf73ebde324f16011e8157aedce8e5e",
+    "report_sha256": "d68cbd6353b819ecced3e29fd7b20d764aad09b1cb75e71fe27ddd06cdab256a",
+    "last_checkpoint_sha256": "5a5e1d61144d0c11c39b754a377ee041527e149cef07c1813012d7eb57e8d5a3",
+    "gate_values": {
+      "training_loss_window_ratio": 0.47108798245264405,
+      "fixed_time_endpoint_rmsd_mean_angstrom": 0.8866621740162373,
+      "raw_kabsch_rmsd_mean_angstrom": 1.3947920950889912,
+      "raw_pair_distance_mae_mean_angstrom": 0.714443715145018,
+      "raw_bond_length_mae_mean_angstrom": 0.5745317381045537,
+      "raw_collision_free_fraction": 0.875,
+      "raw_max_operation_atom_error_angstrom": 1.3689166138273741e-06
+    },
+    "checks_passed": [
+      "all_losses_gradients_finite",
+      "training_loss_window_ratio",
+      "raw_collision_free_fraction",
+      "raw_max_operation_atom_error",
+      "posthoc_hard_projection_never_used"
+    ],
+    "checks_failed": [
+      "fixed_time_endpoint_rmsd",
+      "raw_kabsch_rmsd",
+      "raw_pair_distance_mae",
+      "raw_bond_length_mae"
+    ]
+  },
+  "readonly_diagnosis": {
+    "report_sha256": "be3d82f2dafe982517f18785b8a1a59f63983515df3887b5d74f6e22642b7ace",
+    "best_checkpoint_step": 1024,
+    "best_checkpoint_is_final": true,
+    "fixed_endpoint_rmsd_by_checkpoint_step_angstrom": {
+      "1": 1.5020897343754769,
+      "256": 1.1198496147990227,
+      "512": 0.9482054769992828,
+      "768": 0.8915946006774902,
+      "1024": 0.8866621680557728
+    },
+    "final_endpoint_rmsd_by_flow_time_angstrom": {
+      "0.1": 1.4633444100618362,
+      "0.25": 1.303281009197235,
+      "0.5": 0.9235900565981865,
+      "0.75": 0.5204726532101631,
+      "0.9": 0.22262271121144295
+    },
+    "raw_kabsch_rmsd_by_heun_steps_angstrom": {
+      "25": 1.3950502748721862,
+      "50": 1.3947920886293492,
+      "100": 1.394729014323111
+    },
+    "diagnosis": [
+      "Checkpoint selection is not the cause: the final checkpoint is the best fixed-input checkpoint.",
+      "ODE discretization is not the cause: 25, 50 and 100 Heun steps are numerically equivalent for the quality metrics.",
+      "The main residual is early-flow geometry recovery, especially near t=0.1.",
+      "Group-action preservation is already at numerical precision without output hard projection.",
+      "The current failure is vector-field/transport chemistry capacity, not failure to enforce C2/C3 symmetry."
+    ]
+  }
+}

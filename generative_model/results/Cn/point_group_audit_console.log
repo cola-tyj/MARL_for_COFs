@@ -1,0 +1,30 @@
+{"manifest": "/home/tianyajun/MARL_for_COFs/generative_model/results/Cn/manifest.json", "manifest_sha256": "ad48c437dd087c18a4a6561ae4630ce7bf8a83c96edc1feb333d331f03bfcec4"}
+{
+  "actual_pg_distribution": {
+    "C3": 32,
+    "C3h": 6,
+    "C3v": 39,
+    "D3": 7,
+    "D3d": 3,
+    "D3h": 9,
+    "D6h": 1,
+    "Oh": 1
+  },
+  "failure_count": 0,
+  "failures": [],
+  "identity": {
+    "point_group_index_sha256": "7616b078b14a72066a9cc01e0deccceb7ba2f2bd5a9afc4c32315a2100582055",
+    "protocol_sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2",
+    "source_batch_sha256": "a7c6539757fca3d45c3bd55d90dfcd72318de40f6bc83a55734047058b09aba9"
+  },
+  "maximum_operation_error_angstrom": 2.7200464103316335e-15,
+  "minimum_pair_distance_angstrom": 0.7614427424623859,
+  "molecule_count": 98,
+  "passed": true,
+  "passed_count": 98,
+  "pg_compatible_count": 98,
+  "pg_exact_match_count": 32,
+  "schema_version": "our-etflow-cn-independent-point-group-batch-audit-v1",
+  "status": "PASS_OUR_ETFLOW_CN_2D_GRAPH_TO_C3_XYZ",
+  "xyz_integrity_count": 98
+}

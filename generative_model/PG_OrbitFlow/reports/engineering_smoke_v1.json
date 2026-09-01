@@ -1,0 +1,34 @@
+{
+  "schema_version": "pg-orbitflow-engineering-smoke-summary-v1",
+  "status": "PASS_ENGINEERING_SMOKE_NOT_SCIENTIFIC_GATE",
+  "config": {
+    "train_panel_molecules": 8,
+    "validation_panel_molecules": 4,
+    "optimizer_steps": 2,
+    "batch_size_molecules": 2,
+    "molecule_exposures": 4,
+    "exposure_by_point_group": {"C2": 2, "C3": 2},
+    "parameter_count": 20160
+  },
+  "checks": {
+    "python_compile": true,
+    "unit_tests_5_of_5": true,
+    "forward_backward_finite": true,
+    "raw_ode_without_posthoc_projection": true,
+    "exact_resume_model_state": true,
+    "canonical_v2_read_only": true,
+    "historical_checkpoint_loaded": false
+  },
+  "metrics": {
+    "validation_max_raw_operation_atom_error_angstrom": 9.447732944797105e-07,
+    "raw_ode_max_operation_atom_error_angstrom": 5.953245271279539e-07,
+    "validation_endpoint_rmsd_angstrom": 3.311367670694987
+  },
+  "artifacts": {
+    "run_report_sha256": "8fb31ba484c02123b262ec6178bb7bbf71e07b381b8c01a45cdf6c9a85056631",
+    "last_checkpoint_sha256": "89d1770806a6d0b3d6303223934de34e076157a360199316f91fb7eb939a2779",
+    "losses_sha256": "e14fe41a5a55efcab2e6caafe2db6e6a4cc39594f9218841c8162142a4de0df5",
+    "raw_smoke_npz_sha256": "0471a7d0271e635a9ba70335f725cf11d7d6321c94c1ce6e76638799bf91b333"
+  },
+  "quality_claim": false
+}

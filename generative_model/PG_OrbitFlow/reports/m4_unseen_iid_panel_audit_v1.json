@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "atom_count_max_21": true,
+    "c2_c3_balanced": false,
+    "global_shape_graph_support_present": false,
+    "iid_validation_only": true,
+    "molecule_count_exact": false,
+    "selection_uses_no_coordinates_or_geometry_targets": true,
+    "zero_overlap_with_iid_train": true,
+    "zero_overlap_with_m3_panel": true
+  },
+  "decision": "stop before unseen evaluation",
+  "m3_parent": {
+    "protocol": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m3p6_shape_decoder_v2.json",
+      "sha256": "c36d00d9ab9e8f1c9eb76bf738be1d9c24d09b4c630b5a5a59292898e7652109"
+    },
+    "report": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p6_shape_decoder_v2/report.json",
+      "sha256": "08cfa3129bcb37659fe46c643cc08cebe62b3390c0e1dda5d30d8ffd3a203319"
+    },
+    "reproducibility": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/reports/m3_reproducibility_v1.json",
+      "sha256": "0f29102ba1b802e1106bc6d516f3c373b09717e836e3d44e61f45b9521705161"
+    }
+  },
+  "panel": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m4_unseen_iid_panel_v1.json",
+    "sha256": "d71402fdaa821a7b3babb6f629dc4dfde16ff825f5d6b84520e9eb6b60a9877d"
+  },
+  "passed": false,
+  "schema_version": "pg-orbitflow-m4-unseen-iid-panel-audit-v1",
+  "selection_summary": {
+    "active_chirality_count": 16,
+    "eligible_counts": {
+      "C2": 26,
+      "C3": 8
+    },
+    "max_atom_count": 21,
+    "nonplanar_torsion_orbit_count": 55,
+    "point_group_counts": {
+      "C2": 16,
+      "C3": 8
+    },
+    "rejected_counts": {
+      "atom_count_above_21": 214
+    },
+    "undefined_torsion_orbit_count": 0,
+    "validation_c2_c3_count": 248
+  },
+  "status": "FAIL_M4_UNSEEN_IID_PANEL_AUDIT"
+}

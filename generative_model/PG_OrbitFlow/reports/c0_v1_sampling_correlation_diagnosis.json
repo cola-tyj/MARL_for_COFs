@@ -1,0 +1,20 @@
+{
+  "artifact_policy": "retain v1 as an execution-bug audit; never use as parent",
+  "cause": "A global ten-slot curriculum cursor was correlated with deterministic C2/C3 alternation; every harmonic slot was assigned to C3.",
+  "checkpoint_written_before_diagnosis": true,
+  "formal_replacement": "c0_local_recovery_v2_pg_balanced",
+  "schema_version": "pg-orbitflow-c0-v1-execution-diagnosis-v1",
+  "scientific_conclusion_valid": false,
+  "sole_execution_fix": "Use independent deterministic ten-slot curriculum cursors for C2 and C3.",
+  "status": "INVALIDATE_C0_V1_SCIENTIFIC_CONCLUSION_RETAIN_EXECUTION_AUDIT",
+  "v1_curriculum_exposures": {
+    "C2_large": 409,
+    "C2_medium": 819,
+    "C2_small": 820,
+    "C3_harmonic": 409,
+    "C3_large": 409,
+    "C3_medium": 410,
+    "C3_small": 820
+  },
+  "v1_report_sha256": "264305470abd251d45f56d324e2e32fe5a5bf8b6eea063a41926c1a47cb19a1f"
+}

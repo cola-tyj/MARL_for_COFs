@@ -1,0 +1,315 @@
+{
+  "all_experiments_completed": true,
+  "decision": "stop Cartesian backbone; move to fixed-graph bond/angle/torsion manifold decomposition",
+  "frozen_comparison": {
+    "batch_size_molecules": 4,
+    "f02_used": false,
+    "independent_training_from_same_random_initialization": true,
+    "molecule_exposures": 4096,
+    "molecules": 4,
+    "optimizer_steps": 1024,
+    "point_group_panel": {
+      "C2": 2,
+      "C3": 2
+    },
+    "posthoc_hard_projection_used": false,
+    "raw_integrator": "50-step Heun",
+    "same_seed_model_panel_optimizer_and_gate": true,
+    "uniform_time_range": [
+      0.02,
+      0.98
+    ]
+  },
+  "protocol_audit_sha256": "9a79988be7ae44730c4d676e7116d2fbf55bc47a12b57e4af47766bcb8844401",
+  "raw_reproducibility_sha256": "80db881a6ead66fcb9b7c6eda350c5c47d55fb68a3abf1297c7a6d9b61d42cef",
+  "records": {
+    "h1_harmonic": {
+      "artifacts": {
+        "console.log": "9edde7df9f930f788cdd3c40e0cc0b450405bb0226abbfb50b7a27fa6dd25c69",
+        "last.pt": "e1d857e647d68c5f7a5735ac742d1cff0385d44bc28ff683e865e4b6bf8af2b0",
+        "losses.npz": "dfb7787b5dd793c1828ae59f8bd1e30820fd89528dc2f8964e9a772396f81a25",
+        "manifest.json": "8953a66b6cd49d9f1b6b87ebaaa20752ac6fd18d701712af6c7751a0087d1d2d",
+        "raw_coordinates.npz": "4dd82832dd7a6913943316096500829599b0eb11b157729bcd425ee60fd43131",
+        "report.json": "21fcfd456cff8e97d3019d318a5c151fda4b4aab681403a92979a96adef9cf5f",
+        "step-000001.pt": "08b0c4cd2cfadc1ed5b157e12ffb610016b62a8e80ac428028d36fc0840ebeb9",
+        "step-000256.pt": "b3ba3f38fb405cbe4e7a3c4a83c158dc2eeb0ff25c24461324406485e0c2e174",
+        "step-000512.pt": "5ca9d108e147f45e1543471c9a70ca5d32ee3d3ea05402a9208de9729b4998c2",
+        "step-000768.pt": "ec639ac83856c5a8c900efaf542e60fc9e1ace9d4b3327d217884fffbd57a66b",
+        "step-001024.pt": "b6127bdb6ddc3590eacfe0f9738b6f6e790fe9fcfd3eb51ca4636fbd68f2d9b2"
+      },
+      "data": {
+        "core_ood_used": false,
+        "exposure_by_point_group": {
+          "C2": 2048,
+          "C3": 2048
+        },
+        "iid_test_used": false,
+        "iid_validation_used": false,
+        "molecule_count": 4,
+        "molecule_exposures": 4096,
+        "package_indices": [
+          864,
+          1045,
+          1135,
+          2391
+        ],
+        "point_group_counts": {
+          "C2": 2,
+          "C3": 2
+        }
+      },
+      "diagnosis_sha256": "a59681b50202be6846ad03c30ca2541ccba122c7c5493934615a6967170e757a",
+      "diagnostic_summary": {
+        "best_fixed_endpoint_checkpoint_step": 1024,
+        "best_fixed_endpoint_rmsd_angstrom": 0.7803725086152553,
+        "final_fixed_endpoint_rmsd_angstrom": 0.7803725086152553,
+        "weakest_final_checkpoint_endpoint_rmsd_angstrom": 1.1946202516555786,
+        "weakest_final_checkpoint_flow_time": 0.25
+      },
+      "endpoint_weight": 0.0,
+      "failed_checks": [
+        "fixed_time_endpoint_rmsd_mean_max_angstrom",
+        "raw_bond_length_mae_mean_max_angstrom",
+        "raw_kabsch_rmsd_mean_max_angstrom",
+        "raw_pair_distance_mae_mean_max_angstrom",
+        "training_loss_window_ratio_max"
+      ],
+      "gate_thresholds": {
+        "fixed_time_endpoint_rmsd_mean_max_angstrom": 0.75,
+        "raw_bond_length_mae_mean_max_angstrom": 0.2,
+        "raw_collision_free_fraction_min": 0.75,
+        "raw_kabsch_rmsd_mean_max_angstrom": 1.0,
+        "raw_max_operation_atom_error_max_angstrom": 0.0001,
+        "raw_pair_distance_mae_mean_max_angstrom": 0.6,
+        "training_loss_window_ratio_max": 0.5
+      },
+      "gate_values": {
+        "fixed_time_endpoint_rmsd_mean_angstrom": 0.7803725086152553,
+        "raw_bond_length_mae_mean_angstrom": 0.5431585953797748,
+        "raw_collision_free_fraction": 1.0,
+        "raw_kabsch_rmsd_mean_angstrom": 1.4536568520571542,
+        "raw_max_operation_atom_error_angstrom": 1.5203207055598756e-06,
+        "raw_pair_distance_mae_mean_angstrom": 0.8537595136436484,
+        "training_loss_window_ratio": 0.5582626282831539
+      },
+      "passed": false,
+      "prior": {
+        "coordinate_scale_angstrom": 3.0,
+        "harmonic_alpha": 1.0,
+        "per_sample_rms_normalization": false,
+        "type": "graph_harmonic"
+      },
+      "status": "FAIL_PG_ORBITFLOW_OVERFIT_TIER_4_STOP_AND_DIAGNOSE",
+      "training": {
+        "additional_optimizer_steps": 1024,
+        "all_losses_gradients_finite": true,
+        "batch_size_molecules": 4,
+        "device": "cuda",
+        "parameter_count": 740424
+      },
+      "transport": {
+        "alignment_group": "SO(2) centralizer of the supplied Cn action",
+        "c2_candidate_count": 48,
+        "c3_candidate_count": 24,
+        "centralizer_phase_count": 24,
+        "posterior_density": "not_applicable",
+        "target_phase_aligned_to_prior": true,
+        "type": "cn_phase_aligned"
+      }
+    },
+    "h2_centralizer": {
+      "artifacts": {
+        "console.log": "a2d63acd12b952c96ef9753e156193a89633f722119d3573c6c80afd08cbe3fc",
+        "last.pt": "b9fc9295b7bbc8064204218d15c26038295f7730ecbfd5cd23d3ed87946c1340",
+        "losses.npz": "b4b6a470a7b8a5d300678d142ebb47d07c7f0060a35adf0f0eeff53ba1c1012b",
+        "manifest.json": "412a2b0b620aa12d5554f643e6f89470f23b31d17f6098217ae9448df5c284fa",
+        "raw_coordinates.npz": "5a72ec18dd887fb9a3dd64e1455d731b697fafa5cab13c81c36a58c66e5ce3dd",
+        "report.json": "383aed53060a007feb0ad8a0cd06e462497895f2dec36050f764a74a1520152e",
+        "step-000001.pt": "0356ba831ea4f9172924c15aa759faba297a6f9cfad3a74cac7e848b910795b4",
+        "step-000256.pt": "c49e81c0189f8c006e7403795a80c0119bf7429f4493f87f0342499fdcb6f8ce",
+        "step-000512.pt": "1f9cfcd7229d5441d33d2c9be5cce52225b783ac052dd164cd39007505da0ac2",
+        "step-000768.pt": "d189ad47614726a44ef6deb3edf6eaff94c2eb405d590a87321aae485c8cb444",
+        "step-001024.pt": "dcc742f332bd08cbc2383ac079fe5dd6173bac32db1960213c202267654bc2a9"
+      },
+      "data": {
+        "core_ood_used": false,
+        "exposure_by_point_group": {
+          "C2": 2048,
+          "C3": 2048
+        },
+        "iid_test_used": false,
+        "iid_validation_used": false,
+        "molecule_count": 4,
+        "molecule_exposures": 4096,
+        "package_indices": [
+          864,
+          1045,
+          1135,
+          2391
+        ],
+        "point_group_counts": {
+          "C2": 2,
+          "C3": 2
+        }
+      },
+      "diagnosis_sha256": "f7da5a0cd5e35ec4a5901e825631fb06fe0f47cdb69fe1905785082620ef7efb",
+      "diagnostic_summary": {
+        "best_fixed_endpoint_checkpoint_step": 1024,
+        "best_fixed_endpoint_rmsd_angstrom": 1.4280399270355701,
+        "final_fixed_endpoint_rmsd_angstrom": 1.4280399270355701,
+        "weakest_final_checkpoint_endpoint_rmsd_angstrom": 2.3047279715538025,
+        "weakest_final_checkpoint_flow_time": 0.25
+      },
+      "endpoint_weight": 0.0,
+      "failed_checks": [
+        "fixed_time_endpoint_rmsd_mean_max_angstrom",
+        "raw_bond_length_mae_mean_max_angstrom",
+        "raw_kabsch_rmsd_mean_max_angstrom",
+        "raw_pair_distance_mae_mean_max_angstrom",
+        "training_loss_window_ratio_max"
+      ],
+      "gate_thresholds": {
+        "fixed_time_endpoint_rmsd_mean_max_angstrom": 0.75,
+        "raw_bond_length_mae_mean_max_angstrom": 0.2,
+        "raw_collision_free_fraction_min": 0.75,
+        "raw_kabsch_rmsd_mean_max_angstrom": 1.0,
+        "raw_max_operation_atom_error_max_angstrom": 0.0001,
+        "raw_pair_distance_mae_mean_max_angstrom": 0.6,
+        "training_loss_window_ratio_max": 0.5
+      },
+      "gate_values": {
+        "fixed_time_endpoint_rmsd_mean_angstrom": 1.4280399270355701,
+        "raw_bond_length_mae_mean_angstrom": 0.595672181296386,
+        "raw_collision_free_fraction": 0.875,
+        "raw_kabsch_rmsd_mean_angstrom": 1.6555426233006476,
+        "raw_max_operation_atom_error_angstrom": 1.6396291879670557e-06,
+        "raw_pair_distance_mae_mean_angstrom": 0.9365981218535784,
+        "training_loss_window_ratio": 0.6266224019345543
+      },
+      "passed": false,
+      "prior": {
+        "coordinate_scale_angstrom": 3.0,
+        "harmonic_alpha": 1.0,
+        "per_sample_rms_normalization": false,
+        "type": "graph_harmonic"
+      },
+      "status": "FAIL_PG_ORBITFLOW_OVERFIT_TIER_4_STOP_AND_DIAGNOSE",
+      "training": {
+        "additional_optimizer_steps": 1024,
+        "all_losses_gradients_finite": true,
+        "batch_size_molecules": 4,
+        "device": "cuda",
+        "parameter_count": 740424
+      },
+      "transport": {
+        "alignment_group": "full SO(3) centralizer Haar quadrature",
+        "c2_candidate_count": 48,
+        "c3_candidate_count": 24,
+        "centralizer_phase_count": 24,
+        "posterior_density": "graph_laplacian_quadratic",
+        "target_phase_aligned_to_prior": false,
+        "type": "centralizer_averaged"
+      }
+    },
+    "h3_endpoint": {
+      "artifacts": {
+        "console.log": "a6fac677c88446c0cf4565d31681abd15fda0ae3537abe4e57fa9bf0414da199",
+        "last.pt": "307368783baa30b37673f3fc33eb8ddc7d97450ba95dee739e5082646ebe3a2b",
+        "losses.npz": "3b950910196d5d42b38a27e2815f13cdb0df8cb15b8894e346c498b3cd09f3fb",
+        "manifest.json": "3f042173239f026e96feb7927363540261463aab7172fe88ce0da4c00b96b054",
+        "raw_coordinates.npz": "ffa876d136a72c7ffa895029c5860916f638742e5a9c63ad7d8c9fd206fc2935",
+        "report.json": "1f79ff79dcb36a3decffeee9657e05e0442bc6bd3175c5cc069ea8ea217b5fbe",
+        "step-000001.pt": "3814522b4fa5458887d3c4de39df0ea55217c832926b3acd4507003d7f25dca6",
+        "step-000256.pt": "bb7dd49a70295af4c639f6db3285568237dc0de67e765c1fdac033919825c343",
+        "step-000512.pt": "972aa915f126477f0edda00c9bcbe08008d2c5d70908f7aedcc4de20d632abf8",
+        "step-000768.pt": "77788d16e4d4ee13b6455c6923e49c247b9a8e9d01e303ba69dc8ea9e8660afd",
+        "step-001024.pt": "648eebce83bbaf443f365714a6da2e58d6552dd55b0f15e8ae5f0abf85f67dff"
+      },
+      "data": {
+        "core_ood_used": false,
+        "exposure_by_point_group": {
+          "C2": 2048,
+          "C3": 2048
+        },
+        "iid_test_used": false,
+        "iid_validation_used": false,
+        "molecule_count": 4,
+        "molecule_exposures": 4096,
+        "package_indices": [
+          864,
+          1045,
+          1135,
+          2391
+        ],
+        "point_group_counts": {
+          "C2": 2,
+          "C3": 2
+        }
+      },
+      "diagnosis_sha256": "0606814353461b8fd84532c09ccb2e23f3b8e17a7b3221911a1a8b67efa1f620",
+      "diagnostic_summary": {
+        "best_fixed_endpoint_checkpoint_step": 1024,
+        "best_fixed_endpoint_rmsd_angstrom": 1.4113897517323495,
+        "final_fixed_endpoint_rmsd_angstrom": 1.4113897517323495,
+        "weakest_final_checkpoint_endpoint_rmsd_angstrom": 2.26569664478302,
+        "weakest_final_checkpoint_flow_time": 0.25
+      },
+      "endpoint_weight": 1.0,
+      "failed_checks": [
+        "fixed_time_endpoint_rmsd_mean_max_angstrom",
+        "raw_bond_length_mae_mean_max_angstrom",
+        "raw_kabsch_rmsd_mean_max_angstrom",
+        "raw_pair_distance_mae_mean_max_angstrom",
+        "training_loss_window_ratio_max"
+      ],
+      "gate_thresholds": {
+        "fixed_time_endpoint_rmsd_mean_max_angstrom": 0.75,
+        "raw_bond_length_mae_mean_max_angstrom": 0.2,
+        "raw_collision_free_fraction_min": 0.75,
+        "raw_kabsch_rmsd_mean_max_angstrom": 1.0,
+        "raw_max_operation_atom_error_max_angstrom": 0.0001,
+        "raw_pair_distance_mae_mean_max_angstrom": 0.6,
+        "training_loss_window_ratio_max": 0.5
+      },
+      "gate_values": {
+        "fixed_time_endpoint_rmsd_mean_angstrom": 1.4113897517323495,
+        "raw_bond_length_mae_mean_angstrom": 0.5742013586195136,
+        "raw_collision_free_fraction": 0.875,
+        "raw_kabsch_rmsd_mean_angstrom": 1.5526846147977893,
+        "raw_max_operation_atom_error_angstrom": 1.3209336722410659e-06,
+        "raw_pair_distance_mae_mean_angstrom": 0.8556786548792362,
+        "training_loss_window_ratio": 0.6005972637309305
+      },
+      "passed": false,
+      "prior": {
+        "coordinate_scale_angstrom": 3.0,
+        "harmonic_alpha": 1.0,
+        "per_sample_rms_normalization": false,
+        "type": "graph_harmonic"
+      },
+      "status": "FAIL_PG_ORBITFLOW_OVERFIT_TIER_4_STOP_AND_DIAGNOSE",
+      "training": {
+        "additional_optimizer_steps": 1024,
+        "all_losses_gradients_finite": true,
+        "batch_size_molecules": 4,
+        "device": "cuda",
+        "parameter_count": 740424
+      },
+      "transport": {
+        "alignment_group": "full SO(3) centralizer Haar quadrature",
+        "c2_candidate_count": 48,
+        "c3_candidate_count": 24,
+        "centralizer_phase_count": 24,
+        "posterior_density": "graph_laplacian_quadratic",
+        "target_phase_aligned_to_prior": false,
+        "type": "centralizer_averaged"
+      }
+    }
+  },
+  "schema_version": "pg-orbitflow-h1-h3-tier4-summary-v1",
+  "selected_tier4_parent": null,
+  "selection_policy": "first passing variant in H1 > H2 > H3 order",
+  "status": "FAIL_ALL_H1_H3_STOP_CARTESIAN_BACKBONE",
+  "tier16_started": false,
+  "tier32_started": false
+}

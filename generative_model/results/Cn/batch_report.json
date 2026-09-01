@@ -1,0 +1,26 @@
+{
+  "completed_count": 98,
+  "failure_count": 0,
+  "failures": [],
+  "group_counts": {
+    "C3k2": 24,
+    "C3k3": 74
+  },
+  "identity": {
+    "checkpoint_sha256": "a24ae9a1fed2708696929308ed1dc10ab167fd66a2d51c44a4afb6c11badccb2",
+    "index_csv_sha256": "f9bae9c1533c70778340d6894bd2a249c0a165ddc1c79879929cc94f01f154e1",
+    "protocol_sha256": "cfcb872cf4d8902f2ccdba1bd2738b6476eba27b7a7be9e5108e7e0d4a2678d2"
+  },
+  "passed_generation": true,
+  "requested_count": 98,
+  "schema_version": "our-etflow-cn-batch-v1",
+  "scope": {
+    "etflow_v5_reused_unchanged": true,
+    "f02_used": true,
+    "hard_projection_used": true,
+    "input": "external Cn 2D heavy-atom graphs",
+    "reference_3d_used": false,
+    "target_pg": "C3"
+  },
+  "status": "PASS_OUR_ETFLOW_CN_BATCH_AWAIT_INDEPENDENT_POINT_GROUP_AUDIT"
+}

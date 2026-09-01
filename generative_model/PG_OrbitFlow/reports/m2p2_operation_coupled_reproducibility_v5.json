@@ -1,0 +1,188 @@
+{
+  "identity": {
+    "auditor_sha256": "ae3dda8183abe4672813fdf9f9a729afb6923fcca60b29d87949138961b30a1a",
+    "checkpoint_sha256": "811d73f8e1026abe814d03cc903ce3f3809abfa09a2f6551e04a493ee25e81e1",
+    "matching_report_sha256": "948530dcccf2e4248ee704774fa7d54eb5c06f22634d108a39f4356d635cb825",
+    "protocol_sha256": "b10e5788077ee0137c98750b711346c057b8477c5e805b83b136200bca0386a9",
+    "source_coordinates_sha256": "ffa0124d17724dd038640be0038058044265f0dd56962e7610b72134a593ef26",
+    "source_report_sha256": "ccfaedb2ba017acbde0ead120a6dae386930f6d54557c890c6719b41f8e1e212"
+  },
+  "passed": true,
+  "prediction_device": "cuda",
+  "records": [
+    {
+      "coordinate_kabsch_rmsd_angstrom": 4.9981805348124564e-08,
+      "coordinate_max_abs_difference_angstrom": 6.63588819449501e-08,
+      "matched_kabsch_abs_difference_angstrom": 1.4430128404685494e-08,
+      "package_index": 864,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 10,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 4.317078168785562e-08,
+      "coordinate_max_abs_difference_angstrom": 7.160693371588422e-08,
+      "matched_kabsch_abs_difference_angstrom": 7.1964350450981485e-09,
+      "package_index": 1045,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 11,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 4.4324645390324876e-08,
+      "coordinate_max_abs_difference_angstrom": 1.0515670378907771e-07,
+      "matched_kabsch_abs_difference_angstrom": 2.8949510184894667e-09,
+      "package_index": 879,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 3,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.1958925447715935e-08,
+      "coordinate_max_abs_difference_angstrom": 1.0048355703062839e-07,
+      "matched_kabsch_abs_difference_angstrom": 2.68421222228421e-09,
+      "package_index": 892,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 5,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.079840230638084e-08,
+      "coordinate_max_abs_difference_angstrom": 1.0367552683021586e-07,
+      "matched_kabsch_abs_difference_angstrom": 1.2172200875709693e-08,
+      "package_index": 875,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 12,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.3152232381064585e-08,
+      "coordinate_max_abs_difference_angstrom": 1.0607464950851409e-07,
+      "matched_kabsch_abs_difference_angstrom": 1.2218299323685233e-08,
+      "package_index": 1075,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 3,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 6.588310299988047e-08,
+      "coordinate_max_abs_difference_angstrom": 1.1695035473380244e-07,
+      "matched_kabsch_abs_difference_angstrom": 3.505980714080259e-10,
+      "package_index": 1768,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 2,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.972216994181023e-08,
+      "coordinate_max_abs_difference_angstrom": 1.0622107993185637e-07,
+      "matched_kabsch_abs_difference_angstrom": 6.091224257626093e-09,
+      "package_index": 406,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 1,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 4.267471140159018e-08,
+      "coordinate_max_abs_difference_angstrom": 9.502944076089648e-08,
+      "matched_kabsch_abs_difference_angstrom": 1.5673175752031754e-08,
+      "package_index": 1135,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 3,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 4.992829326740582e-08,
+      "coordinate_max_abs_difference_angstrom": 1.1543615219267167e-07,
+      "matched_kabsch_abs_difference_angstrom": 1.1909388778971741e-09,
+      "package_index": 2391,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 14,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 6.619417541937994e-08,
+      "coordinate_max_abs_difference_angstrom": 1.0521299254051542e-07,
+      "matched_kabsch_abs_difference_angstrom": 8.145137307680184e-09,
+      "package_index": 1222,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 6,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 6.600696924679468e-08,
+      "coordinate_max_abs_difference_angstrom": 1.1371012398342373e-07,
+      "matched_kabsch_abs_difference_angstrom": 1.645720928283856e-08,
+      "package_index": 1124,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 11,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.8070923073643866e-08,
+      "coordinate_max_abs_difference_angstrom": 1.1494886376084423e-07,
+      "matched_kabsch_abs_difference_angstrom": 5.001280899835647e-09,
+      "package_index": 1143,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 12,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 7.045400372034444e-08,
+      "coordinate_max_abs_difference_angstrom": 1.1548997624899471e-07,
+      "matched_kabsch_abs_difference_angstrom": 2.085146418029371e-08,
+      "package_index": 2389,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 11,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 5.046214848009294e-08,
+      "coordinate_max_abs_difference_angstrom": 9.597019046125865e-08,
+      "matched_kabsch_abs_difference_angstrom": 2.113254175817314e-09,
+      "package_index": 2403,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 11,
+      "terminal_sibling_assignment_identical": true
+    },
+    {
+      "coordinate_kabsch_rmsd_angstrom": 7.817468457968799e-08,
+      "coordinate_max_abs_difference_angstrom": 1.6314791029259368e-07,
+      "matched_kabsch_abs_difference_angstrom": 2.248606717492052e-08,
+      "package_index": 62,
+      "passed": true,
+      "prediction_metric_max_abs_difference": 0.0,
+      "selected_start_index": 7,
+      "terminal_sibling_assignment_identical": true
+    }
+  ],
+  "schema_version": "pg-orbitflow-m2p2-reproducibility-v1",
+  "scope": {
+    "all_decoder_starts_recomputed": false,
+    "prediction_recomputed_from_checkpoint": true,
+    "selected_decoder_start_recomputed": true,
+    "terminal_sibling_matching_recomputed": true
+  },
+  "status": "PASS_M2P2_REPRODUCIBILITY",
+  "tolerances": {
+    "coordinate_kabsch_angstrom": 1e-07,
+    "coordinate_max_abs_angstrom": 5e-07,
+    "matched_kabsch_abs_angstrom": 5e-07,
+    "prediction_metric_max_abs": 5e-05
+  }
+}

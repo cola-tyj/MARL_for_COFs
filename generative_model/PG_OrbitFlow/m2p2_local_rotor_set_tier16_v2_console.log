@@ -1,0 +1,6 @@
+step=1/2048 loss=0.0720345 bond=0.00631745A angle=1.54522deg torsion=54.9191deg nonplanar=91.0285deg gate=FAIL
+step=512/2048 loss=4.34961e-05 bond=0.00631745A angle=1.54522deg torsion=55.712deg nonplanar=92.35deg gate=FAIL
+step=1024/2048 loss=0.265651 bond=0.00631745A angle=1.54522deg torsion=53.851deg nonplanar=89.2482deg gate=FAIL
+step=1536/2048 loss=0.0150766 bond=0.00631745A angle=1.54522deg torsion=26.2546deg nonplanar=43.2543deg gate=FAIL
+step=2048/2048 loss=0.0103307 bond=0.00631745A angle=1.54522deg torsion=25.0204deg nonplanar=41.1972deg gate=FAIL
+FAIL_M2P2_PREDICTION_GATE_STOP_BEFORE_DECODER report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m2p2_local_rotor_set_tier16_v2/report.json

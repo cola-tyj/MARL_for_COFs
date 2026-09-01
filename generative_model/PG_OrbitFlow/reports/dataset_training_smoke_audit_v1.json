@@ -1,0 +1,48 @@
+{
+  "artifacts": {
+    "last.pt": "ee63b5d74e74d4d48e26cbe38b9a57cc23d6079472f58084abb610afd76494f1",
+    "losses.npz": "874216fbb9f7eb1baeb0f5a3ab354eb30ad085875934eefff7874d5e78140e3c"
+  },
+  "checks": {
+    "all_losses_and_gradients_finite": true,
+    "c2_c3_present_in_every_batch": true,
+    "checkpoint_reload_prediction_max_abs_difference": true,
+    "train_validation_overlap_count": true,
+    "training_loss_last32_over_first32_max": true,
+    "unsupported_records_explicit": true,
+    "validation_used_for_gradient_updates": true
+  },
+  "execution_revision": {
+    "failure_class": "report-only boolean expectation bug",
+    "scientific_protocol_changed": false,
+    "sole_correction": "validation_used_for_gradient_updates is a forbidden actual state; the Gate passes when actual false equals protocol expected false",
+    "training_rerun": false
+  },
+  "passed": true,
+  "schema_version": "pg-orbitflow-dataset-training-smoke-audit-v1",
+  "scope": {
+    "core_ood_used": false,
+    "f0p2_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "quality_claim": false,
+    "target_cartesian_model_input_used": false,
+    "validation_used_for_training_or_model_selection": false
+  },
+  "source_run": {
+    "directory": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/dataset_training_smoke_v2",
+    "protocol_sha256": "99a93689391721930e2836de591ba4998292406cdf20f00e8942f83c5129e8fa",
+    "report_sha256": "1f7f5168a843de6d1b0c836401a0425beb5d063328a68b96d09ddbd3dba62cc7"
+  },
+  "status": "PASS_DATASET_TRAINER_SMOKE_READY_FOR_FULL_RUN",
+  "training": {
+    "cache_molecule_count": 80,
+    "checkpoint_reload_max_abs_difference": 0.0,
+    "first32_loss_mean": 15.38686591386795,
+    "last32_loss_mean": 2.659931294620037,
+    "loss_window_ratio": 0.17287024592985378,
+    "steps": 256,
+    "train_molecule_count": 64,
+    "validation_molecule_count": 16
+  }
+}

@@ -1,0 +1,10 @@
+step=1/4096 loss=0.144687 bond=0.0258836A angle=3.20608deg torsion=60.1138deg nonplanar=63.9393deg gate=FAIL
+step=512/4096 loss=0.0514853 bond=0.0147314A angle=2.03802deg torsion=20.9504deg nonplanar=60.6195deg gate=FAIL
+step=1024/4096 loss=0.405061 bond=0.0798609A angle=5.05483deg torsion=57.2576deg nonplanar=48.7123deg gate=FAIL
+step=1536/4096 loss=0.000959259 bond=0.00537939A angle=1.78002deg torsion=24.4501deg nonplanar=19.5375deg gate=FAIL
+step=2048/4096 loss=0.0470247 bond=0.00798053A angle=1.34467deg torsion=25.8043deg nonplanar=65.2703deg gate=FAIL
+step=2560/4096 loss=0.131056 bond=0.00436523A angle=1.05893deg torsion=24.0989deg nonplanar=6.24687deg gate=FAIL
+step=3072/4096 loss=0.000259434 bond=0.00196938A angle=1.03091deg torsion=23.8045deg nonplanar=0.991969deg gate=FAIL
+step=3584/4096 loss=0.00236781 bond=0.019835A angle=1.56734deg torsion=24.4669deg nonplanar=22.5081deg gate=FAIL
+step=4096/4096 loss=0.130814 bond=0.00291019A angle=1.59751deg torsion=24.0014deg nonplanar=2.31794deg gate=FAIL
+FAIL_M3P1_PREDICTION_GATE_STOP_BEFORE_DECODER report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m3p1_automorphism_tier32_v2/report.json

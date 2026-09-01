@@ -1,0 +1,22 @@
+step=1/2048 loss=0.750234 bond=0.00631745A angle=1.54522deg torsion=54.8297deg nonplanar=90.8794deg gate=FAIL
+step=512/2048 loss=0.136937 bond=0.00631745A angle=1.54522deg torsion=34.9857deg nonplanar=57.8061deg gate=FAIL
+step=1024/2048 loss=0.0579152 bond=0.00631745A angle=1.54522deg torsion=31.4659deg nonplanar=51.9397deg gate=FAIL
+step=1536/2048 loss=0.0695447 bond=0.00631745A angle=1.54522deg torsion=34.3807deg nonplanar=56.7977deg gate=FAIL
+step=2048/2048 loss=1.56573e-06 bond=0.00631745A angle=1.54522deg torsion=0.905152deg nonplanar=0.954429deg gate=PASS
+reconstruct package_index=864 PG=C2 torsion=0.446089 nonplanar=0 rmsd=0.0130315A
+reconstruct package_index=1045 PG=C2 torsion=0.324586 nonplanar=0 rmsd=0.0100618A
+reconstruct package_index=879 PG=C2 torsion=0.371307 nonplanar=0.41554 rmsd=0.0266573A
+reconstruct package_index=892 PG=C2 torsion=45.2222 nonplanar=112.562 rmsd=0.867864A
+reconstruct package_index=875 PG=C2 torsion=39.9578 nonplanar=32.7845 rmsd=1.09489A
+reconstruct package_index=1075 PG=C2 torsion=38.9098 nonplanar=71.4785 rmsd=0.807653A
+reconstruct package_index=1768 PG=C2 torsion=0.712765 nonplanar=0.870823 rmsd=0.0123533A
+reconstruct package_index=406 PG=C2 torsion=0.623861 nonplanar=0.427387 rmsd=0.0202707A
+reconstruct package_index=1135 PG=C3 torsion=0.10448 nonplanar=0 rmsd=0.00905521A
+reconstruct package_index=2391 PG=C3 torsion=0.175148 nonplanar=0 rmsd=0.00637153A
+reconstruct package_index=1222 PG=C3 torsion=0.461922 nonplanar=0.42688 rmsd=0.0079845A
+reconstruct package_index=1124 PG=C3 torsion=0.521021 nonplanar=0.409332 rmsd=0.0289414A
+reconstruct package_index=1143 PG=C3 torsion=48.3577 nonplanar=80.0936 rmsd=1.26589A
+reconstruct package_index=2389 PG=C3 torsion=0.496519 nonplanar=0.51899 rmsd=0.0761474A
+reconstruct package_index=2403 PG=C3 torsion=51.9751 nonplanar=41.1361 rmsd=1.16803A
+reconstruct package_index=62 PG=C3 torsion=0.458411 nonplanar=0.672019 rmsd=0.0488857A
+FAIL_M2P2_RECONSTRUCTION_GATE report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m2p2_coupled_terminal_tier16_v4/report.json

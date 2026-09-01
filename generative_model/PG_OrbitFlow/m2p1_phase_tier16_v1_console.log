@@ -1,0 +1,6 @@
+step=1/2048 loss=2.83543 bond_max=0.329052A angle_max=24.9725deg torsion_max=101.248deg nonplanar_max=110.043deg
+step=512/2048 loss=0.545954 bond_max=0.0300929A angle_max=4.15512deg torsion_max=61.7954deg nonplanar_max=90.7641deg
+step=1024/2048 loss=0.337299 bond_max=0.0113678A angle_max=2.66976deg torsion_max=54.9874deg nonplanar_max=89.9703deg
+step=1536/2048 loss=0.229783 bond_max=0.0315666A angle_max=1.51932deg torsion_max=51.4923deg nonplanar_max=84.9679deg
+step=2048/2048 loss=0.279051 bond_max=0.00631745A angle_max=1.54522deg torsion_max=50.9257deg nonplanar_max=84.3727deg
+FAIL_M2P1_PREDICTION_GATE_STOP_BEFORE_DECODER report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m2p1_phase_tier16_v1/report.json

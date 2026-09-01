@@ -1,0 +1,364 @@
+{"completed": 1, "total": 2208, "package_index": 0, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 7, "total": 2208, "package_index": 9, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 8, "total": 2208, "package_index": 10, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 11, "total": 2208, "package_index": 13, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 12, "total": 2208, "package_index": 14, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 13, "total": 2208, "package_index": 15, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 15, "total": 2208, "package_index": 18, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 16, "total": 2208, "package_index": 19, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 19, "total": 2208, "package_index": 22, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 25, "total": 2208, "package_index": 28, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 27, "total": 2208, "package_index": 30, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 42, "total": 2208, "package_index": 46, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 50, "total": 2208, "package_index": 67}
+{"completed": 52, "total": 2208, "package_index": 69, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 63, "total": 2208, "package_index": 82, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 75, "total": 2208, "package_index": 95}
+{"completed": 100, "total": 2208, "package_index": 122}
+{"completed": 102, "total": 2208, "package_index": 124, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 110, "total": 2208, "package_index": 136, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 119, "total": 2208, "package_index": 146, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 122, "total": 2208, "package_index": 149, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 125, "total": 2208, "package_index": 152}
+{"completed": 126, "total": 2208, "package_index": 154, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 134, "total": 2208, "package_index": 165, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 138, "total": 2208, "package_index": 171, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 150, "total": 2208, "package_index": 186}
+{"completed": 151, "total": 2208, "package_index": 187, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 162, "total": 2208, "package_index": 202, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 172, "total": 2208, "package_index": 214, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 175, "total": 2208, "package_index": 217}
+{"completed": 185, "total": 2208, "package_index": 229, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 191, "total": 2208, "package_index": 236, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 199, "total": 2208, "package_index": 251, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 200, "total": 2208, "package_index": 252}
+{"completed": 225, "total": 2208, "package_index": 281}
+{"completed": 239, "total": 2208, "package_index": 301, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 250, "total": 2208, "package_index": 313}
+{"completed": 269, "total": 2208, "package_index": 346, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 275, "total": 2208, "package_index": 355}
+{"completed": 281, "total": 2208, "package_index": 366, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 300, "total": 2208, "package_index": 386}
+{"completed": 301, "total": 2208, "package_index": 387, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 304, "total": 2208, "package_index": 391, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 312, "total": 2208, "package_index": 401, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 325, "total": 2208, "package_index": 417}
+{"completed": 328, "total": 2208, "package_index": 421, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 341, "total": 2208, "package_index": 436, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 346, "total": 2208, "package_index": 443, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 349, "total": 2208, "package_index": 448, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 350, "total": 2208, "package_index": 449}
+{"completed": 366, "total": 2208, "package_index": 466, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 371, "total": 2208, "package_index": 472, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 375, "total": 2208, "package_index": 476, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 378, "total": 2208, "package_index": 481, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 383, "total": 2208, "package_index": 486, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 387, "total": 2208, "package_index": 490, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 389, "total": 2208, "package_index": 492, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 396, "total": 2208, "package_index": 501, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 400, "total": 2208, "package_index": 505}
+{"completed": 403, "total": 2208, "package_index": 508, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 410, "total": 2208, "package_index": 516, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 421, "total": 2208, "package_index": 533, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 425, "total": 2208, "package_index": 537}
+{"completed": 447, "total": 2208, "package_index": 560, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 450, "total": 2208, "package_index": 563}
+{"completed": 469, "total": 2208, "package_index": 591, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 475, "total": 2208, "package_index": 598}
+{"completed": 500, "total": 2208, "package_index": 627}
+{"completed": 507, "total": 2208, "package_index": 634, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 519, "total": 2208, "package_index": 652, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 521, "total": 2208, "package_index": 655, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 524, "total": 2208, "package_index": 659, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 525, "total": 2208, "package_index": 660}
+{"completed": 534, "total": 2208, "package_index": 670, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 539, "total": 2208, "package_index": 676, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 544, "total": 2208, "package_index": 681, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 550, "total": 2208, "package_index": 687}
+{"completed": 553, "total": 2208, "package_index": 691, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 575, "total": 2208, "package_index": 715}
+{"completed": 594, "total": 2208, "package_index": 737, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 600, "total": 2208, "package_index": 743}
+{"completed": 609, "total": 2208, "package_index": 758, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 623, "total": 2208, "package_index": 776, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 625, "total": 2208, "package_index": 778}
+{"completed": 628, "total": 2208, "package_index": 783, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 639, "total": 2208, "package_index": 797, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 650, "total": 2208, "package_index": 811}
+{"completed": 675, "total": 2208, "package_index": 839}
+{"completed": 681, "total": 2208, "package_index": 851, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 700, "total": 2208, "package_index": 879}
+{"completed": 725, "total": 2208, "package_index": 914}
+{"completed": 734, "total": 2208, "package_index": 926, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 750, "total": 2208, "package_index": 947}
+{"completed": 751, "total": 2208, "package_index": 948, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 761, "total": 2208, "package_index": 960, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 775, "total": 2208, "package_index": 984}
+{"completed": 787, "total": 2208, "package_index": 998, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 800, "total": 2208, "package_index": 1013}
+{"completed": 809, "total": 2208, "package_index": 1026, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 816, "total": 2208, "package_index": 1037, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 825, "total": 2208, "package_index": 1052}
+{"completed": 833, "total": 2208, "package_index": 1060, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 836, "total": 2208, "package_index": 1063, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 840, "total": 2208, "package_index": 1067, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 850, "total": 2208, "package_index": 1081}
+{"completed": 855, "total": 2208, "package_index": 1087, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 862, "total": 2208, "package_index": 1095, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 873, "total": 2208, "package_index": 1128, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 875, "total": 2208, "package_index": 1131}
+{"completed": 898, "total": 2208, "package_index": 1162, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 900, "total": 2208, "package_index": 1164}
+{"completed": 903, "total": 2208, "package_index": 1167, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 905, "total": 2208, "package_index": 1169, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 910, "total": 2208, "package_index": 1175, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 913, "total": 2208, "package_index": 1180, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 925, "total": 2208, "package_index": 1194}
+{"completed": 928, "total": 2208, "package_index": 1197, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 933, "total": 2208, "package_index": 1203, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 941, "total": 2208, "package_index": 1212, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 948, "total": 2208, "package_index": 1221, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 950, "total": 2208, "package_index": 1224}
+{"completed": 958, "total": 2208, "package_index": 1233, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 960, "total": 2208, "package_index": 1235, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 969, "total": 2208, "package_index": 1246, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 971, "total": 2208, "package_index": 1250, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 975, "total": 2208, "package_index": 1255, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 977, "total": 2208, "package_index": 1257, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 980, "total": 2208, "package_index": 1261, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 996, "total": 2208, "package_index": 1280, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 998, "total": 2208, "package_index": 1282, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1000, "total": 2208, "package_index": 1286}
+{"completed": 1017, "total": 2208, "package_index": 1304, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1025, "total": 2208, "package_index": 1314, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1034, "total": 2208, "package_index": 1326, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1039, "total": 2208, "package_index": 1332, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1050, "total": 2208, "package_index": 1344}
+{"completed": 1054, "total": 2208, "package_index": 1349, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1062, "total": 2208, "package_index": 1360, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1070, "total": 2208, "package_index": 1369, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1072, "total": 2208, "package_index": 1371, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1074, "total": 2208, "package_index": 1375, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1075, "total": 2208, "package_index": 1378}
+{"completed": 1081, "total": 2208, "package_index": 1385, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1085, "total": 2208, "package_index": 1390, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1095, "total": 2208, "package_index": 1404, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1097, "total": 2208, "package_index": 1406, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1100, "total": 2208, "package_index": 1412}
+{"completed": 1109, "total": 2208, "package_index": 1424, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1111, "total": 2208, "package_index": 1427, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1125, "total": 2208, "package_index": 1445}
+{"completed": 1150, "total": 2208, "package_index": 1478}
+{"completed": 1151, "total": 2208, "package_index": 1479, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1154, "total": 2208, "package_index": 1482, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1155, "total": 2208, "package_index": 1483, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1161, "total": 2208, "package_index": 1491, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1162, "total": 2208, "package_index": 1493, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1164, "total": 2208, "package_index": 1498, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1166, "total": 2208, "package_index": 1502, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1168, "total": 2208, "package_index": 1504, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1172, "total": 2208, "package_index": 1510, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1175, "total": 2208, "package_index": 1514}
+{"completed": 1176, "total": 2208, "package_index": 1515, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1178, "total": 2208, "package_index": 1517, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1180, "total": 2208, "package_index": 1520, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1181, "total": 2208, "package_index": 1523, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1189, "total": 2208, "package_index": 1536, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1192, "total": 2208, "package_index": 1539, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1194, "total": 2208, "package_index": 1542, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1195, "total": 2208, "package_index": 1543, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1196, "total": 2208, "package_index": 1544, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1197, "total": 2208, "package_index": 1545, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1200, "total": 2208, "package_index": 1548}
+{"completed": 1202, "total": 2208, "package_index": 1553, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1205, "total": 2208, "package_index": 1556, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1208, "total": 2208, "package_index": 1560, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1225, "total": 2208, "package_index": 1583}
+{"completed": 1250, "total": 2208, "package_index": 1613}
+{"completed": 1251, "total": 2208, "package_index": 1615, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1252, "total": 2208, "package_index": 1616, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1253, "total": 2208, "package_index": 1617, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1260, "total": 2208, "package_index": 1625, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1261, "total": 2208, "package_index": 1628, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1265, "total": 2208, "package_index": 1632, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1275, "total": 2208, "package_index": 1643}
+{"completed": 1300, "total": 2208, "package_index": 1676}
+{"completed": 1307, "total": 2208, "package_index": 1683, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1308, "total": 2208, "package_index": 1684, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1311, "total": 2208, "package_index": 1687, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1312, "total": 2208, "package_index": 1688, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1313, "total": 2208, "package_index": 1689, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1314, "total": 2208, "package_index": 1690, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1321, "total": 2208, "package_index": 1698, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1323, "total": 2208, "package_index": 1701, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1324, "total": 2208, "package_index": 1705, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1325, "total": 2208, "package_index": 1707}
+{"completed": 1350, "total": 2208, "package_index": 1738}
+{"completed": 1359, "total": 2208, "package_index": 1752, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1362, "total": 2208, "package_index": 1755, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1363, "total": 2208, "package_index": 1756, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1364, "total": 2208, "package_index": 1758, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1370, "total": 2208, "package_index": 1767, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1373, "total": 2208, "package_index": 1770, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1375, "total": 2208, "package_index": 1773}
+{"completed": 1400, "total": 2208, "package_index": 1804}
+{"completed": 1407, "total": 2208, "package_index": 1813, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1410, "total": 2208, "package_index": 1816, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1412, "total": 2208, "package_index": 1819, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1418, "total": 2208, "package_index": 1827, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1420, "total": 2208, "package_index": 1830, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1425, "total": 2208, "package_index": 1838}
+{"completed": 1450, "total": 2208, "package_index": 1863}
+{"completed": 1454, "total": 2208, "package_index": 1867, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1455, "total": 2208, "package_index": 1868, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1475, "total": 2208, "package_index": 1889}
+{"completed": 1492, "total": 2208, "package_index": 1915, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1499, "total": 2208, "package_index": 1923, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1500, "total": 2208, "package_index": 1924}
+{"completed": 1501, "total": 2208, "package_index": 1925, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1505, "total": 2208, "package_index": 1929, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1507, "total": 2208, "package_index": 1931, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1513, "total": 2208, "package_index": 1938, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1515, "total": 2208, "package_index": 1940, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1525, "total": 2208, "package_index": 1954}
+{"completed": 1527, "total": 2208, "package_index": 1957, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1550, "total": 2208, "package_index": 1987}
+{"completed": 1564, "total": 2208, "package_index": 2006, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1565, "total": 2208, "package_index": 2007, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1569, "total": 2208, "package_index": 2013, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1570, "total": 2208, "package_index": 2014, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1572, "total": 2208, "package_index": 2016, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1575, "total": 2208, "package_index": 2021}
+{"completed": 1576, "total": 2208, "package_index": 2022, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1584, "total": 2208, "package_index": 2032, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1587, "total": 2208, "package_index": 2036, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1598, "total": 2208, "package_index": 2049, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1600, "total": 2208, "package_index": 2051}
+{"completed": 1605, "total": 2208, "package_index": 2056, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1606, "total": 2208, "package_index": 2057, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1607, "total": 2208, "package_index": 2058, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1608, "total": 2208, "package_index": 2059, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1609, "total": 2208, "package_index": 2060, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1610, "total": 2208, "package_index": 2061, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1611, "total": 2208, "package_index": 2062, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1612, "total": 2208, "package_index": 2064, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1613, "total": 2208, "package_index": 2065, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1614, "total": 2208, "package_index": 2067, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1619, "total": 2208, "package_index": 2073, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1625, "total": 2208, "package_index": 2080}
+{"completed": 1641, "total": 2208, "package_index": 2103, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1642, "total": 2208, "package_index": 2104, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1648, "total": 2208, "package_index": 2111, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1650, "total": 2208, "package_index": 2113, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1651, "total": 2208, "package_index": 2114, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1653, "total": 2208, "package_index": 2116, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1655, "total": 2208, "package_index": 2118, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1656, "total": 2208, "package_index": 2119, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1675, "total": 2208, "package_index": 2143}
+{"completed": 1680, "total": 2208, "package_index": 2148, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1683, "total": 2208, "package_index": 2151, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1684, "total": 2208, "package_index": 2154, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1685, "total": 2208, "package_index": 2155, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1700, "total": 2208, "package_index": 2177}
+{"completed": 1706, "total": 2208, "package_index": 2185, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1707, "total": 2208, "package_index": 2186, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1708, "total": 2208, "package_index": 2187, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1709, "total": 2208, "package_index": 2188, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1710, "total": 2208, "package_index": 2189, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1711, "total": 2208, "package_index": 2190, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1712, "total": 2208, "package_index": 2191, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1713, "total": 2208, "package_index": 2192, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1714, "total": 2208, "package_index": 2193, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1715, "total": 2208, "package_index": 2194, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1717, "total": 2208, "package_index": 2197, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1718, "total": 2208, "package_index": 2198, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1719, "total": 2208, "package_index": 2199, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1720, "total": 2208, "package_index": 2200, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1721, "total": 2208, "package_index": 2201, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1722, "total": 2208, "package_index": 2203, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1723, "total": 2208, "package_index": 2205, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1724, "total": 2208, "package_index": 2207, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1725, "total": 2208, "package_index": 2208, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1727, "total": 2208, "package_index": 2211, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1728, "total": 2208, "package_index": 2213, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1729, "total": 2208, "package_index": 2214, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1730, "total": 2208, "package_index": 2215, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1731, "total": 2208, "package_index": 2216, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1732, "total": 2208, "package_index": 2217, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1733, "total": 2208, "package_index": 2219, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1734, "total": 2208, "package_index": 2220, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1735, "total": 2208, "package_index": 2222, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1736, "total": 2208, "package_index": 2223, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1737, "total": 2208, "package_index": 2225, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1738, "total": 2208, "package_index": 2226, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1739, "total": 2208, "package_index": 2227, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1740, "total": 2208, "package_index": 2228, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1741, "total": 2208, "package_index": 2229, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1742, "total": 2208, "package_index": 2230, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1743, "total": 2208, "package_index": 2232, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1744, "total": 2208, "package_index": 2233, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1746, "total": 2208, "package_index": 2235, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1747, "total": 2208, "package_index": 2236, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1748, "total": 2208, "package_index": 2237, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1749, "total": 2208, "package_index": 2238, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1750, "total": 2208, "package_index": 2241, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1751, "total": 2208, "package_index": 2243, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1752, "total": 2208, "package_index": 2244, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1754, "total": 2208, "package_index": 2247, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1757, "total": 2208, "package_index": 2250, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1759, "total": 2208, "package_index": 2253, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1775, "total": 2208, "package_index": 2274}
+{"completed": 1790, "total": 2208, "package_index": 2291, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1793, "total": 2208, "package_index": 2294, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1794, "total": 2208, "package_index": 2295, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1800, "total": 2208, "package_index": 2303}
+{"completed": 1802, "total": 2208, "package_index": 2306, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1822, "total": 2208, "package_index": 2330, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1825, "total": 2208, "package_index": 2334, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1826, "total": 2208, "package_index": 2335, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1850, "total": 2208, "package_index": 2372}
+{"completed": 1852, "total": 2208, "package_index": 2378, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1853, "total": 2208, "package_index": 2380, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1862, "total": 2208, "package_index": 2393, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1873, "total": 2208, "package_index": 2408, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1875, "total": 2208, "package_index": 2412}
+{"completed": 1891, "total": 2208, "package_index": 2434, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 1892, "total": 2208, "package_index": 2435, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1900, "total": 2208, "package_index": 2444}
+{"completed": 1925, "total": 2208, "package_index": 2476}
+{"completed": 1940, "total": 2208, "package_index": 2493, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1942, "total": 2208, "package_index": 2496, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1946, "total": 2208, "package_index": 2500, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 1950, "total": 2208, "package_index": 2504}
+{"completed": 1954, "total": 2208, "package_index": 2510, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 1975, "total": 2208, "package_index": 183}
+{"completed": 2000, "total": 2208, "package_index": 389}
+{"completed": 2025, "total": 2208, "package_index": 745}
+{"completed": 2050, "total": 2208, "package_index": 1032}
+{"completed": 2059, "total": 2208, "package_index": 1133, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 2069, "total": 2208, "package_index": 1254, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 2075, "total": 2208, "package_index": 1343}
+{"completed": 2090, "total": 2208, "package_index": 1494, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2091, "total": 2208, "package_index": 1496, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2100, "total": 2208, "package_index": 1534}
+{"completed": 2110, "total": 2208, "package_index": 1611, "status": "explicit_unsupported", "reason": "factorized automorphism group exceeds 6 slots"}
+{"completed": 2122, "total": 2208, "package_index": 1757, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2125, "total": 2208, "package_index": 1790}
+{"completed": 2138, "total": 2208, "package_index": 1942, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2147, "total": 2208, "package_index": 2018, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2149, "total": 2208, "package_index": 2063, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2150, "total": 2208, "package_index": 2066, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2157, "total": 2208, "package_index": 2109, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2166, "total": 2208, "package_index": 2202, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2167, "total": 2208, "package_index": 2206, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2168, "total": 2208, "package_index": 2209, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2169, "total": 2208, "package_index": 2212, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2170, "total": 2208, "package_index": 2224, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2171, "total": 2208, "package_index": 2242, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2175, "total": 2208, "package_index": 2269}
+{"completed": 2178, "total": 2208, "package_index": 2333, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2189, "total": 2208, "package_index": 2379, "status": "explicit_unsupported", "reason": "factorized anchored witness attempts exceeded frozen cap"}
+{"completed": 2193, "total": 2208, "package_index": 2395, "status": "explicit_unsupported", "reason": "anchored graph witness exceeded 5s frozen limit"}
+{"completed": 2200, "total": 2208, "package_index": 2458}
+{"completed": 2208, "total": 2208, "package_index": 2523}
+PASS_FACTORIZED_CACHE_COMPLETE_WITH_EXPLICIT_UNSUPPORTED cached=1925 unsupported=283 manifest=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/cache/factorized_full_v2/manifest.json

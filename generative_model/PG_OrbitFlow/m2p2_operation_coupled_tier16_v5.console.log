@@ -1,0 +1,23 @@
+step=1/2048 loss=0.764618 bond=0.00631745A angle=1.54522deg torsion=54.7998deg nonplanar=90.8295deg gate=FAIL
+step=512/2048 loss=0.282432 bond=0.00631745A angle=1.54522deg torsion=32.5858deg nonplanar=53.8063deg gate=FAIL
+step=1024/2048 loss=0.0555643 bond=0.00631745A angle=1.54522deg torsion=19.1177deg nonplanar=31.3593deg gate=FAIL
+step=1536/2048 loss=9.10627e-09 bond=0.00631745A angle=1.54522deg torsion=0.905152deg nonplanar=0.954429deg gate=PASS
+step=2048/2048 loss=1.24176e-08 bond=0.00631745A angle=1.54522deg torsion=0.905152deg nonplanar=0.954429deg gate=PASS
+reconstruct package_index=864 PG=C2 torsion=0.446089 nonplanar=0 rmsd=0.0130315A
+reconstruct package_index=1045 PG=C2 torsion=0.324586 nonplanar=0 rmsd=0.0100618A
+reconstruct package_index=879 PG=C2 torsion=0.371307 nonplanar=0.41554 rmsd=0.0266573A
+reconstruct package_index=892 PG=C2 torsion=45.2218 nonplanar=112.561 rmsd=0.867862A
+reconstruct package_index=875 PG=C2 torsion=40.8245 nonplanar=44.4764 rmsd=1.10251A
+reconstruct package_index=1075 PG=C2 torsion=33.8107 nonplanar=67.1338 rmsd=0.85721A
+reconstruct package_index=1768 PG=C2 torsion=0.71363 nonplanar=0.871654 rmsd=0.0123626A
+reconstruct package_index=406 PG=C2 torsion=0.623861 nonplanar=0.427387 rmsd=0.0202707A
+reconstruct package_index=1135 PG=C3 torsion=0.10448 nonplanar=0 rmsd=0.00905521A
+reconstruct package_index=2391 PG=C3 torsion=0.175148 nonplanar=0 rmsd=0.00637153A
+reconstruct package_index=1222 PG=C3 torsion=0.461922 nonplanar=0.42688 rmsd=0.0079845A
+reconstruct package_index=1124 PG=C3 torsion=0.521021 nonplanar=0.409332 rmsd=0.0289414A
+reconstruct package_index=1143 PG=C3 torsion=72.3016 nonplanar=120 rmsd=1.54973A
+reconstruct package_index=2389 PG=C3 torsion=0.496519 nonplanar=0.51899 rmsd=0.0761474A
+reconstruct package_index=2403 PG=C3 torsion=0.681303 nonplanar=0.644634 rmsd=0.0221117A
+reconstruct package_index=62 PG=C3 torsion=0.458411 nonplanar=0.672019 rmsd=0.0488857A
+FAIL_M2P2_RECONSTRUCTION_GATE report=/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/m2p2_operation_coupled_tier16_v5/report.json
+

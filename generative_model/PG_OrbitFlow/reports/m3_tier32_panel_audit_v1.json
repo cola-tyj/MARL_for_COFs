@@ -1,0 +1,57 @@
+{
+  "checks": {
+    "added_c2_one_minimum_index_per_eligible_core": true,
+    "added_c3_is_complete_eligible_population": true,
+    "added_molecule_count_exact": true,
+    "all_added_have_active_chirality": true,
+    "all_added_have_nonplanar_torsion": true,
+    "atom_count_max_21": true,
+    "c2_c3_balanced": true,
+    "coordinates_not_used_for_panel_ranking": true,
+    "iid_train_only": true,
+    "m2_tier16_strictly_nested": true,
+    "molecule_count_exact": true,
+    "no_undefined_circular_targets": true,
+    "operation_coupled_contract_constructed": true
+  },
+  "decision": "freeze M3 Tier-32 training protocol",
+  "panel": {
+    "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m3_tier32_panel_v1.json",
+    "sha256": "f4a8f233b09a1909e6ac8b4ab7ecf0c45f9a4fde89cfa70d98c7e3237b85af4b"
+  },
+  "passed": true,
+  "schema_version": "pg-orbitflow-m3-tier32-panel-audit-v1",
+  "selected_summary": {
+    "active_chirality_count": 87,
+    "added_c2_core_count": 8,
+    "added_c2_package_indices": [
+      39,
+      163,
+      419,
+      668,
+      1054,
+      1554,
+      1786,
+      2353
+    ],
+    "added_c3_package_indices": [
+      1134,
+      1158,
+      1164,
+      1166,
+      1216,
+      1218,
+      1226,
+      2398
+    ],
+    "local_rotor_group_count": 30,
+    "max_atom_count": 21,
+    "nonplanar_torsion_orbit_count": 157,
+    "operation_coupled_component_count": 15,
+    "point_group_counts": {
+      "C2": 16,
+      "C3": 16
+    }
+  },
+  "status": "PASS_M3_TIER32_PANEL_AUDIT"
+}

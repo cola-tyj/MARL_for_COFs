@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/m3_tier32_training.py", line 266, in <module>
+    main()
+  File "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/m3_tier32_training.py", line 150, in main
+    schedule = _balanced_schedule(examples, steps=steps, seed=seed + 17)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/m2p1_phase_training.py", line 113, in _balanced_schedule
+    raise ValueError("M2.1 requires exactly eight C2 and eight C3 molecules")
+ValueError: M2.1 requires exactly eight C2 and eight C3 molecules
