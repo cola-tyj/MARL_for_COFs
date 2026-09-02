@@ -283,34 +283,34 @@ shape误差为`66.712° / 135.907° / 1.35308 Å`。因此停止在decoder之前
 | `orbit_kinematics.py` | stabilizer fixed-subspace 参数化与 differentiable exact group lifting |
 | `train.py` | 训练、验证、checkpoint、exact resume、manifest |
 | `overfit.py` | 冻结 4→16→32 nested overfit Gate；前一层失败即停止 |
-| `diagnose_overfit.py` | 失败后只读 checkpoint/time/ODE-step 诊断，不改 Gate |
-| `audit_h_protocols.py` | H0–H3 structured diff、冻结配置与 SHA-256 审计 |
-| `audit_h_reproducibility.py` | actual H1–H3 checkpoint 的 raw 双重复审计 |
-| `summarize_h_experiments.py` | H1–H3 结果、artifact hash 和分支决定汇总 |
-| `build_c0_protocol.py` | C0 multi-noise curriculum、局部 Gate 和执行修订冻结 |
+| `legacy/diagnose_overfit.py` | 失败后只读 checkpoint/time/ODE-step 诊断，不改 Gate |
+| `legacy/audit_h_protocols.py` | H0–H3 structured diff、冻结配置与 SHA-256 审计 |
+| `legacy/audit_h_reproducibility.py` | actual H1–H3 checkpoint 的 raw 双重复审计 |
+| `legacy/summarize_h_experiments.py` | H1–H3 结果、artifact hash 和分支决定汇总 |
+| `legacy/build_c0_protocol.py` | C0 multi-noise curriculum、局部 Gate 和执行修订冻结 |
 | `c0_local_recovery.py` | C0 训练、4-step rollout、local/original raw 双 Gate |
-| `audit_c0_reproducibility.py` | C0 formal checkpoint 的 local/raw 数组级重复审计 |
-| `summarize_c0_experiment.py` | C0-v1 调度错误与正式 C0-v2 结果汇总 |
-| `build_m0_protocol.py` | M0 oracle 重建协议和 Gate 冻结 |
+| `legacy/audit_c0_reproducibility.py` | C0 formal checkpoint 的 local/raw 数组级重复审计 |
+| `legacy/summarize_c0_experiment.py` | C0-v1 调度错误与正式 C0-v2 结果汇总 |
+| `legacy/build_m0_protocol.py` | M0 oracle 重建协议和 Gate 冻结 |
 | `m0_oracle_reconstruction.py` | oracle orbit-IC energy、确定性多起点求解和评估 |
-| `audit_m0_reproducibility.py` | M0 选中起点的独立重算审计 |
-| `summarize_m0_experiment.py` | M0 Gate、起点收敛率和 artifact hash 汇总 |
+| `legacy/audit_m0_reproducibility.py` | M0 选中起点的独立重算审计 |
+| `legacy/summarize_m0_experiment.py` | M0 Gate、起点收敛率和 artifact hash 汇总 |
 | `orbit_ic_model.py` | quotient multigraph encoder 与 bond/angle/torsion orbit heads |
-| `build_m1_protocol.py` | M1 模型、训练、预测/重建双 Gate 冻结 |
+| `legacy/build_m1_protocol.py` | M1 模型、训练、预测/重建双 Gate 冻结 |
 | `m1_bond_angle_training.py` | M1 训练及 learned-IC 多起点3D评估 |
-| `evaluate_m1_checkpoint.py` | 冻结 checkpoint 的 CPU decoder 评估入口 |
-| `audit_m1_reproducibility.py` | M1 prediction 与选中 decoder seed 重算审计 |
-| `summarize_m1_experiment.py` | M1 训练证据、执行修订和结果汇总 |
-| `build_m2_protocol.py` | M2 全学习 IC、oracle-free decoder 与双 Gate 冻结 |
+| `legacy/evaluate_m1_checkpoint.py` | 冻结 checkpoint 的 CPU decoder 评估入口 |
+| `legacy/audit_m1_reproducibility.py` | M1 prediction 与选中 decoder seed 重算审计 |
+| `legacy/summarize_m1_experiment.py` | M1 训练证据、执行修订和结果汇总 |
+| `legacy/build_m2_protocol.py` | M2 全学习 IC、oracle-free decoder 与双 Gate 冻结 |
 | `m2_torsion_training.py` | M1 权重迁移、torsion head 训练及 all-learned IC 重建 |
-| `audit_m2_reproducibility.py` | M2 prediction 与 selected decoder seed 独立复算 |
-| `summarize_m2_experiment.py` | M2 Gate、复现和 artifact hash 汇总 |
+| `legacy/audit_m2_reproducibility.py` | M2 prediction 与 selected decoder seed 独立复算 |
+| `legacy/summarize_m2_experiment.py` | M2 Gate、复现和 artifact hash 汇总 |
 | `audit_m2_tier16_panel.py` | 非平面/手性支持、quotient alias 与 phase-aware Tier-16 面板审计 |
-| `build_m2p1_protocol.py` | phase-aware Tier-16 权重迁移、训练预算与双 Gate 冻结 |
+| `legacy/build_m2p1_protocol.py` | phase-aware Tier-16 权重迁移、训练预算与双 Gate 冻结 |
 | `m2p1_phase_training.py` | M2.1 PG-balanced 训练及 prediction-before-decoder Gate |
-| `diagnose_m2p1_torsion.py` | M2.1 局部可交换末端 torsion 塌缩只读诊断 |
+| `legacy/diagnose_m2p1_torsion.py` | M2.1 局部可交换末端 torsion 塌缩只读诊断 |
 | `local_rotor.py` | graph-only local rotor set 合同和可微 circular assignment/loss |
-| `audit_m2p2_rotor_sets.py` | M2.2 表示覆盖 Gate A |
+| `legacy/audit_m2p2_rotor_sets.py` | M2.2 表示覆盖 Gate A |
 | `m3p3_worst_molecule_refinement.py` | M3 Gate-aligned worst-molecule torsion refinement |
 | `global_shape_fingerprint_model.py` | atom-order-invariant WL fingerprint + global-shape head |
 | `m3p6_fingerprint_shape_training.py` | M3.6 shape-head-only 训练与冻结 Gate |
@@ -322,7 +322,8 @@ shape误差为`66.712° / 135.907° / 1.35308 Å`。因此停止在decoder之前
 | `build_dataset_training_protocol.py` | 数据级 smoke/full 数据、训练、证据与 cache identity 冻结 |
 | `dataset_training.py` | PG-balanced 数据级训练、checkpoint history 和精确续训 |
 | `audit_dataset_training_smoke.py` | 256-step 工程 smoke 的独立报告语义审计 |
-| `audit_dataset.py` | C2/C3 数据合同审计 |
+| `audit_dataset_training_final.py` | 20,000-step冻结checkpoint的全部IID-validation独立复算与原Gate |
+| `legacy/` | 已结束阶段的builder/audit/diagnose/summarize入口；保留消融复现代码 |
 | `configs/` | 2-step smoke 与 Stage-1 配置 |
 | `tests/` | 群闭包、strict failure、quotient、等变/对称、真实 v2 测试 |
 
@@ -337,7 +338,7 @@ conda activate env_etflow
 python -m unittest discover \
   -s generative_model/PG_OrbitFlow/tests -v
 
-python -m generative_model.PG_OrbitFlow.audit_dataset \
+python -m generative_model.PG_OrbitFlow.legacy.audit_dataset \
   --package-dir generative_model/data/processed/v2 \
   --point-groups C2 C3 \
   --output generative_model/PG_OrbitFlow/reports/dataset_contract_c2_c3_v1.json
