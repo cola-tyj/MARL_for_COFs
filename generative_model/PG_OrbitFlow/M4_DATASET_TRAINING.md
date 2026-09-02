@@ -143,3 +143,10 @@ python -m generative_model.PG_OrbitFlow.dataset_training \
 
 全量训练完成仍只准入独立的 IID-validation raw prediction/decoder Gate；在该 Gate 通过前，不能使用
 IID-test/Core-OOD，也不能宣称模型已获得指定点群3D分子的泛化生成能力。
+
+## 6. 最终结果（2026-09-02）
+
+20,000-step训练已完成，执行状态为`PASS_DATASET_TRAINING_EXECUTION`。冻结checkpoint在全部225条
+IID-validation记录上的独立复算与训练report逐项一致，但原prediction/shape Gate失败，因此按规则
+停止在decoder之前，不查看IID-test/Core-OOD。详细结果与hash见
+[M5_DATASET_TRAINING_RESULTS.md](M5_DATASET_TRAINING_RESULTS.md)。

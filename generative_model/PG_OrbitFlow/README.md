@@ -254,7 +254,7 @@ torsion/nonplanar torsion/Kabsch 分别为 `0.003716 Å / 1.5325° / 1.7653° / 
 冻结模型，在未参与训练的 IID-validation graph 上做只读 Gate；详见
 [M3_TIER32_RESULTS.md](M3_TIER32_RESULTS.md)。
 
-### M4 unseen 与数据级训练——全量训练已就绪
+### M4/M5 unseen 与数据级训练——执行通过，unseen质量失败
 
 冻结 M3 在独立 IID-validation 新图上的只读预测没有通过，证明 Tier-32 结果主要是闭集容量验证，
 正式决策为进入 dataset-level training，而不是继续微调 M3。数据级 trainer 的256-step smoke 已
@@ -262,8 +262,11 @@ torsion/nonplanar torsion/Kabsch 分别为 `0.003716 Å / 1.5325° / 1.7653° / 
 loss 比为 `0.172870`，checkpoint 重载完全一致。全量合同为1,963条 train + 245条 validation，
 20,000 steps。v2 factorized cache 已完成：2,208条中1,925条成功、283条严格unsupported；final
 协议最终使用1,700条train和225条descriptive-only validation，逐文件hash、缓存回读及代表样本
-forward/backward均通过，当前可以启动长训练。详见
-[M4_DATASET_TRAINING.md](M4_DATASET_TRAINING.md)。
+forward/backward均通过。随后20,000-step训练完整结束，首末32步loss比为`0.0578163`，checkpoint
+重载差异为0；但全部225条IID-validation的冻结复算未通过原Gate：最大torsion/nonplanar torsion/
+shape误差为`66.712° / 135.907° / 1.35308 Å`。因此停止在decoder之前，不查看IID-test/Core-OOD，
+当前结果冻结为dataset-level baseline。详见[M4_DATASET_TRAINING.md](M4_DATASET_TRAINING.md)和
+[M5_DATASET_TRAINING_RESULTS.md](M5_DATASET_TRAINING_RESULTS.md)。
 
 ## 8. 文件索引
 

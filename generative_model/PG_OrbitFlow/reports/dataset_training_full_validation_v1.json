@@ -1,0 +1,2174 @@
+{
+  "decision": "stop before decoder; do not inspect IID-test/Core-OOD and diagnose train-to-validation generalization",
+  "execution_passed": true,
+  "identity": {
+    "auditor_sha256": "845bf49a901a3670d323fb412416f7c493e9c4c310ffe764755560d3e72b2108",
+    "checkpoint": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/dataset_training_full_v1/last.pt",
+      "sha256": "3c164537a2e1bdd3215129079f0b072f838c88bd8bc56b582aa23e572b306a57"
+    },
+    "frozen_gate_protocol": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m3p6_shape_decoder_v2.json",
+      "sha256": "c36d00d9ab9e8f1c9eb76bf738be1d9c24d09b4c630b5a5a59292898e7652109"
+    },
+    "frozen_shape_gate_protocol": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/m4_unseen_prediction_v1.json",
+      "sha256": "0024e1c72941c1667052a9cd9b6fec1d39bb49ff25bddd95517a3d8e774cb678"
+    },
+    "losses": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/dataset_training_full_v1/losses.npz",
+      "sha256": "4abeeaf35c1b3dcd22a227baf1292e9aefd1f28fdb9bd842c783f4b91a02a06a"
+    },
+    "training_protocol": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/configs/dataset_training_full_v1.json",
+      "sha256": "c94a1841a290a15b52f1a2f2268ac3ef832bd6b8da10d8cee093b1177ed22470"
+    },
+    "training_report": {
+      "path": "/home/tianyajun/MARL_for_COFs/generative_model/PG_OrbitFlow/runs/dataset_training_full_v1/report.json",
+      "sha256": "86c2b012361ecc1f0cb927da32c56d5eadc7623dbeea649ad891bdc47b4e6cfb"
+    }
+  },
+  "natural_validation_distribution": {
+    "angle_orbit_mae_degrees": {
+      "maximum": 3.7670319080352783,
+      "mean": 1.2000835552480487,
+      "median": 1.0949974060058594,
+      "p95": 2.162141990661621
+    },
+    "bond_orbit_mae_angstrom": {
+      "maximum": 0.039679333567619324,
+      "mean": 0.01041658815720843,
+      "median": 0.008803891018033028,
+      "p95": 0.0255258735269308
+    },
+    "global_shape_quantile_mae_angstrom": {
+      "maximum": 1.3530809879302979,
+      "mean": 0.25767994536293876,
+      "median": 0.20931436121463776,
+      "p95": 0.5233771920204161
+    },
+    "nonplanar_torsion_orbit_circular_mae_degrees": {
+      "maximum": 135.90688932040996,
+      "mean": 42.90316410320662,
+      "median": 43.83428779449553,
+      "p95": 98.24373456229554
+    },
+    "torsion_orbit_circular_mae_degrees": {
+      "maximum": 66.71200686345276,
+      "mean": 16.8747238189396,
+      "median": 15.773763575245269,
+      "p95": 32.249909742862535
+    }
+  },
+  "passed": false,
+  "prediction_gate": {
+    "checks": {
+      "angle_orbit_mae_max_degrees": true,
+      "bond_orbit_mae_max_angstrom": false,
+      "c2_and_c3_each_pass": false,
+      "nonplanar_torsion_orbit_circular_mae_max_degrees": false,
+      "torsion_orbit_circular_mae_max_degrees": false
+    },
+    "passed": false,
+    "strata": {
+      "C2": {
+        "passed": false,
+        "values": {
+          "angle_orbit_mae_max_degrees": 2.6265506744384766,
+          "bond_orbit_mae_max_angstrom": 0.039679333567619324,
+          "nonplanar_torsion_orbit_circular_mae_max_degrees": 135.90688932040996,
+          "torsion_orbit_circular_mae_max_degrees": 44.74991229697451
+        }
+      },
+      "C3": {
+        "passed": false,
+        "values": {
+          "angle_orbit_mae_max_degrees": 3.7670319080352783,
+          "bond_orbit_mae_max_angstrom": 0.03155367076396942,
+          "nonplanar_torsion_orbit_circular_mae_max_degrees": 134.66992847291607,
+          "torsion_orbit_circular_mae_max_degrees": 66.71200686345276
+        }
+      }
+    },
+    "thresholds": {
+      "angle_orbit_mae_max_degrees": 5.0,
+      "bond_orbit_mae_max_angstrom": 0.03,
+      "c2_and_c3_each_pass": true,
+      "nonplanar_torsion_orbit_circular_mae_max_degrees": 2.0,
+      "torsion_orbit_circular_mae_max_degrees": 2.0
+    },
+    "values": {
+      "angle_orbit_mae_max_degrees": 3.7670319080352783,
+      "bond_orbit_mae_max_angstrom": 0.039679333567619324,
+      "nonplanar_torsion_orbit_circular_mae_max_degrees": 135.90688932040996,
+      "torsion_orbit_circular_mae_max_degrees": 66.71200686345276
+    }
+  },
+  "quality_passed": false,
+  "records": [
+    {
+      "angle_orbit_mae_degrees": 0.7963386178016663,
+      "bond_orbit_mae_angstrom": 0.005188372451812029,
+      "global_shape_quantile_mae_angstrom": 0.4671817421913147,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 51.745595858909184,
+      "package_index": 45,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.377691414392853
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5692663192749023,
+      "bond_orbit_mae_angstrom": 0.00426819920539856,
+      "global_shape_quantile_mae_angstrom": 0.264668345451355,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 49.48922590208794,
+      "package_index": 47,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.953454556831208
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8042076826095581,
+      "bond_orbit_mae_angstrom": 0.007995128631591797,
+      "global_shape_quantile_mae_angstrom": 0.5566211938858032,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 109.0209603702253,
+      "package_index": 65,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 56.85123789960661
+    },
+    {
+      "angle_orbit_mae_degrees": 2.288865327835083,
+      "bond_orbit_mae_angstrom": 0.009635275229811668,
+      "global_shape_quantile_mae_angstrom": 0.31069421768188477,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 41.10031248627862,
+      "package_index": 81,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 20.25513490683427
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8219687938690186,
+      "bond_orbit_mae_angstrom": 0.006374148651957512,
+      "global_shape_quantile_mae_angstrom": 0.38261526823043823,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 45.77917265413104,
+      "package_index": 92,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.48015523756352
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6026487350463867,
+      "bond_orbit_mae_angstrom": 0.005130919162184,
+      "global_shape_quantile_mae_angstrom": 0.5928905010223389,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 53.42011169134145,
+      "package_index": 114,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.02667758129012
+    },
+    {
+      "angle_orbit_mae_degrees": 0.4236930012702942,
+      "bond_orbit_mae_angstrom": 0.0030972869135439396,
+      "global_shape_quantile_mae_angstrom": 0.15614992380142212,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 45.3023625690675,
+      "package_index": 128,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.13320903406787
+    },
+    {
+      "angle_orbit_mae_degrees": 2.5896003246307373,
+      "bond_orbit_mae_angstrom": 0.012208030559122562,
+      "global_shape_quantile_mae_angstrom": 0.2520686984062195,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 22.122715325154445,
+      "package_index": 137,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 6.01411561380577
+    },
+    {
+      "angle_orbit_mae_degrees": 2.167658567428589,
+      "bond_orbit_mae_angstrom": 0.007191783282905817,
+      "global_shape_quantile_mae_angstrom": 0.5071156024932861,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 157,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 8.344609444257094
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0599433183670044,
+      "bond_orbit_mae_angstrom": 0.008678210899233818,
+      "global_shape_quantile_mae_angstrom": 0.1563316434621811,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 158,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 26.85157617419992
+    },
+    {
+      "angle_orbit_mae_degrees": 2.3307764530181885,
+      "bond_orbit_mae_angstrom": 0.012831658124923706,
+      "global_shape_quantile_mae_angstrom": 0.16526241600513458,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 174,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 6.353113577251014
+    },
+    {
+      "angle_orbit_mae_degrees": 1.6311495304107666,
+      "bond_orbit_mae_angstrom": 0.014462828636169434,
+      "global_shape_quantile_mae_angstrom": 0.14880552887916565,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 183,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 33.234298850103
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7362584471702576,
+      "bond_orbit_mae_angstrom": 0.007027083542197943,
+      "global_shape_quantile_mae_angstrom": 0.44250351190567017,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 29.225874568431276,
+      "package_index": 200,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.018891764868735
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8122248649597168,
+      "bond_orbit_mae_angstrom": 0.006636573933064938,
+      "global_shape_quantile_mae_angstrom": 0.12388738989830017,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 114.65049781811615,
+      "package_index": 239,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.395813468483952
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1188809871673584,
+      "bond_orbit_mae_angstrom": 0.004192911088466644,
+      "global_shape_quantile_mae_angstrom": 0.08453169465065002,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 78.6082120030114,
+      "package_index": 241,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.11464816653689
+    },
+    {
+      "angle_orbit_mae_degrees": 0.4043349325656891,
+      "bond_orbit_mae_angstrom": 0.010554762557148933,
+      "global_shape_quantile_mae_angstrom": 0.2836105227470398,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 82.85122025240692,
+      "package_index": 247,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.336783264601854
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4185905456542969,
+      "bond_orbit_mae_angstrom": 0.029399104416370392,
+      "global_shape_quantile_mae_angstrom": 0.5583481788635254,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 85.08743823127035,
+      "package_index": 250,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 29.273994452934094
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1366217136383057,
+      "bond_orbit_mae_angstrom": 0.008771300315856934,
+      "global_shape_quantile_mae_angstrom": 0.31272345781326294,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 79.06778150523908,
+      "package_index": 262,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.146947739453214
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2172290086746216,
+      "bond_orbit_mae_angstrom": 0.012334935367107391,
+      "global_shape_quantile_mae_angstrom": 0.13901670277118683,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 126.88512132144486,
+      "package_index": 282,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.27640871606648
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2636553049087524,
+      "bond_orbit_mae_angstrom": 0.01652946136891842,
+      "global_shape_quantile_mae_angstrom": 0.1891488879919052,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 65.53443707496417,
+      "package_index": 296,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.143538777766516
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6658440232276917,
+      "bond_orbit_mae_angstrom": 0.0077614933252334595,
+      "global_shape_quantile_mae_angstrom": 0.30142635107040405,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 28.98205924341423,
+      "package_index": 308,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.373183627052956
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8775728940963745,
+      "bond_orbit_mae_angstrom": 0.007719691377133131,
+      "global_shape_quantile_mae_angstrom": 0.1896388828754425,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 94.9808915730078,
+      "package_index": 315,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 21.990238992988672
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9825165271759033,
+      "bond_orbit_mae_angstrom": 0.010248560458421707,
+      "global_shape_quantile_mae_angstrom": 0.41167500615119934,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 317,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 26.050287172383076
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2833999395370483,
+      "bond_orbit_mae_angstrom": 0.01136899832636118,
+      "global_shape_quantile_mae_angstrom": 0.11062002182006836,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 323,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 21.015304162850832
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9198496341705322,
+      "bond_orbit_mae_angstrom": 0.007343438919633627,
+      "global_shape_quantile_mae_angstrom": 0.15858200192451477,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 65.86882131488777,
+      "package_index": 329,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.919597443943985
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2047760486602783,
+      "bond_orbit_mae_angstrom": 0.004935788922011852,
+      "global_shape_quantile_mae_angstrom": 0.0941452831029892,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 332,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.384520678888364
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9598140716552734,
+      "bond_orbit_mae_angstrom": 0.014969146810472012,
+      "global_shape_quantile_mae_angstrom": 0.24623167514801025,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 334,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 27.329461610200404
+    },
+    {
+      "angle_orbit_mae_degrees": 1.7516148090362549,
+      "bond_orbit_mae_angstrom": 0.006249024532735348,
+      "global_shape_quantile_mae_angstrom": 0.14729590713977814,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 337,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.439019717075432
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6511597037315369,
+      "bond_orbit_mae_angstrom": 0.012222508899867535,
+      "global_shape_quantile_mae_angstrom": 0.23998986184597015,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 135.90688932040996,
+      "package_index": 343,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.865656594383896
+    },
+    {
+      "angle_orbit_mae_degrees": 1.8519710302352905,
+      "bond_orbit_mae_angstrom": 0.012843175791203976,
+      "global_shape_quantile_mae_angstrom": 0.316505491733551,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 351,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 4.634965814133927
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2134368419647217,
+      "bond_orbit_mae_angstrom": 0.009858965873718262,
+      "global_shape_quantile_mae_angstrom": 0.18053238093852997,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 354,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.05827362132757
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1787464618682861,
+      "bond_orbit_mae_angstrom": 0.010253643617033958,
+      "global_shape_quantile_mae_angstrom": 0.4345690906047821,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 47.64970725268376,
+      "package_index": 358,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.136822810738956
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8464727401733398,
+      "bond_orbit_mae_angstrom": 0.006713324226438999,
+      "global_shape_quantile_mae_angstrom": 0.7506890892982483,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 55.415415335778576,
+      "package_index": 361,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 24.97062121351405
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1319408416748047,
+      "bond_orbit_mae_angstrom": 0.009009361267089844,
+      "global_shape_quantile_mae_angstrom": 0.21006576716899872,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 38.68323888177922,
+      "package_index": 362,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.240560929308128
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3479247093200684,
+      "bond_orbit_mae_angstrom": 0.005563616752624512,
+      "global_shape_quantile_mae_angstrom": 0.2205476015806198,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 88.84829580068349,
+      "package_index": 365,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.09619536249231
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3572864532470703,
+      "bond_orbit_mae_angstrom": 0.017590701580047607,
+      "global_shape_quantile_mae_angstrom": 0.7899607419967651,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 376,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 4.149082568515561
+    },
+    {
+      "angle_orbit_mae_degrees": 1.7162320613861084,
+      "bond_orbit_mae_angstrom": 0.0068935249000787735,
+      "global_shape_quantile_mae_angstrom": 0.1942262351512909,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 389,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 5.739007994967157
+    },
+    {
+      "angle_orbit_mae_degrees": 1.6165028810501099,
+      "bond_orbit_mae_angstrom": 0.009895638562738895,
+      "global_shape_quantile_mae_angstrom": 0.15668150782585144,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 398,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 5.729746607129473
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3766474723815918,
+      "bond_orbit_mae_angstrom": 0.012387479655444622,
+      "global_shape_quantile_mae_angstrom": 0.6369293332099915,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 43.660704109839834,
+      "package_index": 409,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.137962752994948
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4426331520080566,
+      "bond_orbit_mae_angstrom": 0.009727871976792812,
+      "global_shape_quantile_mae_angstrom": 0.4699691832065582,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 62.927730274973925,
+      "package_index": 411,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.740483118697075
+    },
+    {
+      "angle_orbit_mae_degrees": 1.8271211385726929,
+      "bond_orbit_mae_angstrom": 0.009498908184468746,
+      "global_shape_quantile_mae_angstrom": 0.20671385526657104,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 33.18444150644397,
+      "package_index": 415,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.482471168727473
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8283125758171082,
+      "bond_orbit_mae_angstrom": 0.005732536315917969,
+      "global_shape_quantile_mae_angstrom": 0.15780802071094513,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 83.79948950020959,
+      "package_index": 418,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 20.075376153093995
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0283223390579224,
+      "bond_orbit_mae_angstrom": 0.00883366260677576,
+      "global_shape_quantile_mae_angstrom": 0.14545965194702148,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 89.79386078773493,
+      "package_index": 442,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.388826700010185
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5947418212890625,
+      "bond_orbit_mae_angstrom": 0.00963089894503355,
+      "global_shape_quantile_mae_angstrom": 0.2203313261270523,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 42.60888540282283,
+      "package_index": 444,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.515195369637269
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2973018884658813,
+      "bond_orbit_mae_angstrom": 0.007544463500380516,
+      "global_shape_quantile_mae_angstrom": 0.2494070827960968,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 90.63768167004353,
+      "package_index": 447,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.859508483391412
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3595582246780396,
+      "bond_orbit_mae_angstrom": 0.010320693254470825,
+      "global_shape_quantile_mae_angstrom": 0.2754030227661133,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 15.787345801665396,
+      "package_index": 459,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.599410213907198
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5737548470497131,
+      "bond_orbit_mae_angstrom": 0.005678574088960886,
+      "global_shape_quantile_mae_angstrom": 0.21588663756847382,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 478,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 3.228039105818286
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8139251470565796,
+      "bond_orbit_mae_angstrom": 0.01253664493560791,
+      "global_shape_quantile_mae_angstrom": 0.3238444924354553,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 24.7623739423958,
+      "package_index": 493,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 8.275853146482856
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6271704435348511,
+      "bond_orbit_mae_angstrom": 0.013306574895977974,
+      "global_shape_quantile_mae_angstrom": 0.14493587613105774,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 517,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.829239230810439
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6317876577377319,
+      "bond_orbit_mae_angstrom": 0.00733386492356658,
+      "global_shape_quantile_mae_angstrom": 0.1801072657108307,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 521,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 3.1091420145385453
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9583401083946228,
+      "bond_orbit_mae_angstrom": 0.01315266452729702,
+      "global_shape_quantile_mae_angstrom": 0.16990791261196136,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 51.92787979571489,
+      "package_index": 529,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 24.3173766091302
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8897679448127747,
+      "bond_orbit_mae_angstrom": 0.005218292120844126,
+      "global_shape_quantile_mae_angstrom": 0.11941252648830414,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 91.58127727289428,
+      "package_index": 547,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.431359082150037
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5980039834976196,
+      "bond_orbit_mae_angstrom": 0.004055722150951624,
+      "global_shape_quantile_mae_angstrom": 0.22363781929016113,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 78.2954128517685,
+      "package_index": 575,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.186120240843755
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9839327335357666,
+      "bond_orbit_mae_angstrom": 0.012963313609361649,
+      "global_shape_quantile_mae_angstrom": 0.3302949070930481,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 54.104113014596585,
+      "package_index": 646,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 24.950724290321457
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2963626384735107,
+      "bond_orbit_mae_angstrom": 0.013697400689125061,
+      "global_shape_quantile_mae_angstrom": 0.21542717516422272,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 64.84572956571371,
+      "package_index": 647,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 21.488885700446584
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9992056488990784,
+      "bond_orbit_mae_angstrom": 0.007769256830215454,
+      "global_shape_quantile_mae_angstrom": 0.3567515015602112,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 24.762130827315737,
+      "package_index": 648,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 24.529954930910847
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3345212936401367,
+      "bond_orbit_mae_angstrom": 0.0039997100830078125,
+      "global_shape_quantile_mae_angstrom": 0.25060325860977173,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 48.51078880057574,
+      "package_index": 654,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.645379267533485
+    },
+    {
+      "angle_orbit_mae_degrees": 1.547774076461792,
+      "bond_orbit_mae_angstrom": 0.01485336571931839,
+      "global_shape_quantile_mae_angstrom": 0.4904909133911133,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 55.922800799441674,
+      "package_index": 672,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 33.0378593940598
+    },
+    {
+      "angle_orbit_mae_degrees": 2.4513399600982666,
+      "bond_orbit_mae_angstrom": 0.03380243107676506,
+      "global_shape_quantile_mae_angstrom": 0.28524166345596313,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 56.39992649051594,
+      "package_index": 690,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 32.3473814517964
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0261019468307495,
+      "bond_orbit_mae_angstrom": 0.008628866635262966,
+      "global_shape_quantile_mae_angstrom": 0.43163272738456726,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 7.811397561856203,
+      "package_index": 719,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 2.3070044264715857
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9944934844970703,
+      "bond_orbit_mae_angstrom": 0.008187499828636646,
+      "global_shape_quantile_mae_angstrom": 0.20767810940742493,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 54.97825300019304,
+      "package_index": 720,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.226596809123231
+    },
+    {
+      "angle_orbit_mae_degrees": 1.093479037284851,
+      "bond_orbit_mae_angstrom": 0.005077017471194267,
+      "global_shape_quantile_mae_angstrom": 0.19485749304294586,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 77.06688518475225,
+      "package_index": 745,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.26975617758214
+    },
+    {
+      "angle_orbit_mae_degrees": 0.43024787306785583,
+      "bond_orbit_mae_angstrom": 0.00291325431317091,
+      "global_shape_quantile_mae_angstrom": 0.20200002193450928,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 61.924672315583834,
+      "package_index": 755,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.322387616216542
+    },
+    {
+      "angle_orbit_mae_degrees": 1.030617594718933,
+      "bond_orbit_mae_angstrom": 0.004062231630086899,
+      "global_shape_quantile_mae_angstrom": 0.18454298377037048,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 32.890351472217986,
+      "package_index": 763,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.657992851059255
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4351403713226318,
+      "bond_orbit_mae_angstrom": 0.010830710642039776,
+      "global_shape_quantile_mae_angstrom": 0.256405770778656,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 68.17488944764587,
+      "package_index": 781,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.852778238578379
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8085118532180786,
+      "bond_orbit_mae_angstrom": 0.01054255198687315,
+      "global_shape_quantile_mae_angstrom": 0.199617400765419,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 46.48195331495202,
+      "package_index": 792,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.981731144778449
+    },
+    {
+      "angle_orbit_mae_degrees": 1.490934133529663,
+      "bond_orbit_mae_angstrom": 0.0290302112698555,
+      "global_shape_quantile_mae_angstrom": 0.38548916578292847,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 54.27081623986908,
+      "package_index": 796,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.531379620411563
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4450819492340088,
+      "bond_orbit_mae_angstrom": 0.011702221818268299,
+      "global_shape_quantile_mae_angstrom": 0.28322482109069824,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 90.74913421615169,
+      "package_index": 845,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.882414134820323
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9177709221839905,
+      "bond_orbit_mae_angstrom": 0.012670166790485382,
+      "global_shape_quantile_mae_angstrom": 0.14768069982528687,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 59.38382159458628,
+      "package_index": 846,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.185750897759455
+    },
+    {
+      "angle_orbit_mae_degrees": 1.549523115158081,
+      "bond_orbit_mae_angstrom": 0.026433657854795456,
+      "global_shape_quantile_mae_angstrom": 0.24756170809268951,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 62.49765354064862,
+      "package_index": 848,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.994802168481687
+    },
+    {
+      "angle_orbit_mae_degrees": 1.50361967086792,
+      "bond_orbit_mae_angstrom": 0.03151192143559456,
+      "global_shape_quantile_mae_angstrom": 0.2841336727142334,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 52.44611937972506,
+      "package_index": 850,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.121686039171927
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8449282050132751,
+      "bond_orbit_mae_angstrom": 0.0027290922589600086,
+      "global_shape_quantile_mae_angstrom": 0.2442801147699356,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 33.36194519609656,
+      "package_index": 881,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 5.470050441567949
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1644264459609985,
+      "bond_orbit_mae_angstrom": 0.006354812532663345,
+      "global_shape_quantile_mae_angstrom": 0.10234053432941437,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 903,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.254318726432146
+    },
+    {
+      "angle_orbit_mae_degrees": 1.8351688385009766,
+      "bond_orbit_mae_angstrom": 0.011241316795349121,
+      "global_shape_quantile_mae_angstrom": 0.5249391794204712,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 45.909634237932025,
+      "package_index": 911,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 44.74991229697451
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5894941091537476,
+      "bond_orbit_mae_angstrom": 0.00638424651697278,
+      "global_shape_quantile_mae_angstrom": 0.2353353649377823,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 50.15932850585249,
+      "package_index": 924,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.339322001556598
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2401721477508545,
+      "bond_orbit_mae_angstrom": 0.005789442919194698,
+      "global_shape_quantile_mae_angstrom": 0.18039315938949585,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 67.8787302012129,
+      "package_index": 929,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.419527833284304
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2667382955551147,
+      "bond_orbit_mae_angstrom": 0.008586653508245945,
+      "global_shape_quantile_mae_angstrom": 0.23448306322097778,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 71.47527335470974,
+      "package_index": 942,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.23967696193911
+    },
+    {
+      "angle_orbit_mae_degrees": 2.0686299800872803,
+      "bond_orbit_mae_angstrom": 0.008494885638356209,
+      "global_shape_quantile_mae_angstrom": 0.2655033469200134,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 98.7514178260113,
+      "package_index": 956,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 31.860022907127096
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4587610960006714,
+      "bond_orbit_mae_angstrom": 0.006377748213708401,
+      "global_shape_quantile_mae_angstrom": 0.5171292424201965,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 79.79681083875326,
+      "package_index": 968,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 21.333707712157672
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8557640910148621,
+      "bond_orbit_mae_angstrom": 0.007669627666473389,
+      "global_shape_quantile_mae_angstrom": 0.18527713418006897,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 978,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.262245495762794
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6854690909385681,
+      "bond_orbit_mae_angstrom": 0.005868588108569384,
+      "global_shape_quantile_mae_angstrom": 0.1473088413476944,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 61.48477340116781,
+      "package_index": 979,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 22.129519442098204
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8785696029663086,
+      "bond_orbit_mae_angstrom": 0.007894669659435749,
+      "global_shape_quantile_mae_angstrom": 0.26705580949783325,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 996,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 20.43043475408929
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5770469903945923,
+      "bond_orbit_mae_angstrom": 0.007306181360036135,
+      "global_shape_quantile_mae_angstrom": 0.10940800607204437,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 107.53628995200634,
+      "package_index": 1008,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 38.894838249017496
+    },
+    {
+      "angle_orbit_mae_degrees": 0.804873526096344,
+      "bond_orbit_mae_angstrom": 0.00555431330576539,
+      "global_shape_quantile_mae_angstrom": 0.44052445888519287,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1012,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.823183989920361
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5362075567245483,
+      "bond_orbit_mae_angstrom": 0.009977590292692184,
+      "global_shape_quantile_mae_angstrom": 0.14914695918560028,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1022,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.42241586762268
+    },
+    {
+      "angle_orbit_mae_degrees": 0.582179069519043,
+      "bond_orbit_mae_angstrom": 0.004718635696917772,
+      "global_shape_quantile_mae_angstrom": 0.3866156041622162,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 53.44687871902247,
+      "package_index": 1031,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.610228440387052
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7101252675056458,
+      "bond_orbit_mae_angstrom": 0.005381155759096146,
+      "global_shape_quantile_mae_angstrom": 0.44004109501838684,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 85.77612112221388,
+      "package_index": 1032,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.35766105345844
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0989186763763428,
+      "bond_orbit_mae_angstrom": 0.004784656688570976,
+      "global_shape_quantile_mae_angstrom": 0.3206934630870819,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 53.48227136673238,
+      "package_index": 1051,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.508048141305006
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9589554071426392,
+      "bond_orbit_mae_angstrom": 0.010904192924499512,
+      "global_shape_quantile_mae_angstrom": 0.2077571600675583,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 51.8585819920839,
+      "package_index": 1074,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.007255498665668
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5164715647697449,
+      "bond_orbit_mae_angstrom": 0.004694493021816015,
+      "global_shape_quantile_mae_angstrom": 0.13088838756084442,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 44.71124024775643,
+      "package_index": 1076,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.059871601636763
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3427072763442993,
+      "bond_orbit_mae_angstrom": 0.003874455112963915,
+      "global_shape_quantile_mae_angstrom": 0.2380678355693817,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 25.260618923717512,
+      "package_index": 1080,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.007474870257072
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9375157356262207,
+      "bond_orbit_mae_angstrom": 0.006916855461895466,
+      "global_shape_quantile_mae_angstrom": 0.26528435945510864,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 65.52128895181028,
+      "package_index": 1083,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.465789850048765
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5242561101913452,
+      "bond_orbit_mae_angstrom": 0.005370879080146551,
+      "global_shape_quantile_mae_angstrom": 0.14013533294200897,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 49.0784370654629,
+      "package_index": 1099,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.746877868162182
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1257011890411377,
+      "bond_orbit_mae_angstrom": 0.030904650688171387,
+      "global_shape_quantile_mae_angstrom": 0.15388223528862,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 60.84076783340887,
+      "package_index": 1122,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 41.33289122002642
+    },
+    {
+      "angle_orbit_mae_degrees": 3.613280773162842,
+      "bond_orbit_mae_angstrom": 0.012719130143523216,
+      "global_shape_quantile_mae_angstrom": 0.3222270607948303,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 131.6638600932323,
+      "package_index": 1129,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 66.71200686345276
+    },
+    {
+      "angle_orbit_mae_degrees": 3.7670319080352783,
+      "bond_orbit_mae_angstrom": 0.011871248483657837,
+      "global_shape_quantile_mae_angstrom": 0.17853155732154846,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 77.09079131860533,
+      "package_index": 1145,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 26.31887461933229
+    },
+    {
+      "angle_orbit_mae_degrees": 2.14007568359375,
+      "bond_orbit_mae_angstrom": 0.01314244233071804,
+      "global_shape_quantile_mae_angstrom": 0.35117483139038086,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 33.5362888809254,
+      "package_index": 1153,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 25.52188771444679
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8099163770675659,
+      "bond_orbit_mae_angstrom": 0.00595913315191865,
+      "global_shape_quantile_mae_angstrom": 0.7565934658050537,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1161,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 12.18936490750866
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7375320196151733,
+      "bond_orbit_mae_angstrom": 0.004847140982747078,
+      "global_shape_quantile_mae_angstrom": 0.20931436121463776,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 44.28367809799437,
+      "package_index": 1170,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 16.199688423528702
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0949974060058594,
+      "bond_orbit_mae_angstrom": 0.016214951872825623,
+      "global_shape_quantile_mae_angstrom": 0.4078143239021301,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 80.60468430549751,
+      "package_index": 1182,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 23.307349753426525
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8289010524749756,
+      "bond_orbit_mae_angstrom": 0.013658472336828709,
+      "global_shape_quantile_mae_angstrom": 0.17713047564029694,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 96.21300150743268,
+      "package_index": 1199,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 32.757244515583615
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9494245648384094,
+      "bond_orbit_mae_angstrom": 0.019702434539794922,
+      "global_shape_quantile_mae_angstrom": 0.31456273794174194,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 100.09141417946819,
+      "package_index": 1215,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 21.538784855007435
+    },
+    {
+      "angle_orbit_mae_degrees": 1.6568565368652344,
+      "bond_orbit_mae_angstrom": 0.03155367076396942,
+      "global_shape_quantile_mae_angstrom": 0.3036167025566101,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 44.4805255639679,
+      "package_index": 1244,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 29.450207972958424
+    },
+    {
+      "angle_orbit_mae_degrees": 2.89894437789917,
+      "bond_orbit_mae_angstrom": 0.021762702614068985,
+      "global_shape_quantile_mae_angstrom": 0.12848712503910065,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 61.06021987433593,
+      "package_index": 1249,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 33.702578360877986
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8148297667503357,
+      "bond_orbit_mae_angstrom": 0.00787920318543911,
+      "global_shape_quantile_mae_angstrom": 1.0304203033447266,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 56.045714197870616,
+      "package_index": 1260,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 16.910938849771664
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4956324100494385,
+      "bond_orbit_mae_angstrom": 0.011005222797393799,
+      "global_shape_quantile_mae_angstrom": 0.40547460317611694,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 57.730766867919975,
+      "package_index": 1285,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 20.858375287337118
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6442914605140686,
+      "bond_orbit_mae_angstrom": 0.006054893136024475,
+      "global_shape_quantile_mae_angstrom": 0.3096540570259094,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 58.5862272904655,
+      "package_index": 1296,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 20.90119440816077
+    },
+    {
+      "angle_orbit_mae_degrees": 0.551926851272583,
+      "bond_orbit_mae_angstrom": 0.004343274515122175,
+      "global_shape_quantile_mae_angstrom": 0.1583728939294815,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 90.66148549371498,
+      "package_index": 1318,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 10.790925127432553
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5336390137672424,
+      "bond_orbit_mae_angstrom": 0.005117563530802727,
+      "global_shape_quantile_mae_angstrom": 0.19195254147052765,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 62.26936001781999,
+      "package_index": 1320,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 8.547839224941914
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5216783285140991,
+      "bond_orbit_mae_angstrom": 0.005894309375435114,
+      "global_shape_quantile_mae_angstrom": 0.390213280916214,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 37.540256380063106,
+      "package_index": 1343,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 13.06509159064877
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7519024014472961,
+      "bond_orbit_mae_angstrom": 0.00575801869854331,
+      "global_shape_quantile_mae_angstrom": 0.2821134328842163,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 35.65459750607732,
+      "package_index": 1347,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 22.18608756912475
+    },
+    {
+      "angle_orbit_mae_degrees": 1.7225520610809326,
+      "bond_orbit_mae_angstrom": 0.01546205673366785,
+      "global_shape_quantile_mae_angstrom": 0.8311820030212402,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 59.361338471287624,
+      "package_index": 1377,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 25.30730487873968
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5651260614395142,
+      "bond_orbit_mae_angstrom": 0.007230010349303484,
+      "global_shape_quantile_mae_angstrom": 0.18932288885116577,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 57.445480087225086,
+      "package_index": 1388,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 21.993408253533016
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5598106980323792,
+      "bond_orbit_mae_angstrom": 0.006705733016133308,
+      "global_shape_quantile_mae_angstrom": 0.1559547334909439,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 60.27728543237741,
+      "package_index": 1397,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 9.501449950501652
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2559418678283691,
+      "bond_orbit_mae_angstrom": 0.004288855008780956,
+      "global_shape_quantile_mae_angstrom": 1.3530809879302979,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 134.66992847291607,
+      "package_index": 1402,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 16.2410016096426
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7451886534690857,
+      "bond_orbit_mae_angstrom": 0.009322292171418667,
+      "global_shape_quantile_mae_angstrom": 0.13908621668815613,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 70.35996439791325,
+      "package_index": 1407,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 13.488296946499418
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9557514190673828,
+      "bond_orbit_mae_angstrom": 0.003568442305549979,
+      "global_shape_quantile_mae_angstrom": 0.25784096121788025,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 70.3641052647418,
+      "package_index": 1411,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 17.827045964392155
+    },
+    {
+      "angle_orbit_mae_degrees": 1.6100983619689941,
+      "bond_orbit_mae_angstrom": 0.005181598477065563,
+      "global_shape_quantile_mae_angstrom": 0.06841826438903809,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 121.93645685997838,
+      "package_index": 1440,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 24.857106466303815
+    },
+    {
+      "angle_orbit_mae_degrees": 1.500378131866455,
+      "bond_orbit_mae_angstrom": 0.004242365248501301,
+      "global_shape_quantile_mae_angstrom": 0.16110561788082123,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 112.12702900547767,
+      "package_index": 1441,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 22.688308421411996
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2799404859542847,
+      "bond_orbit_mae_angstrom": 0.004413061775267124,
+      "global_shape_quantile_mae_angstrom": 0.1909000128507614,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 42.32619886916395,
+      "package_index": 1468,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.484031139525165
+    },
+    {
+      "angle_orbit_mae_degrees": 1.87830650806427,
+      "bond_orbit_mae_angstrom": 0.0066052768379449844,
+      "global_shape_quantile_mae_angstrom": 0.2002328336238861,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 117.31437466787736,
+      "package_index": 1471,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.73727694102505
+    },
+    {
+      "angle_orbit_mae_degrees": 2.0192742347717285,
+      "bond_orbit_mae_angstrom": 0.015268848277628422,
+      "global_shape_quantile_mae_angstrom": 0.18906645476818085,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 87.07969335317773,
+      "package_index": 1488,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 24.490638670129236
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6222017407417297,
+      "bond_orbit_mae_angstrom": 0.007395887281745672,
+      "global_shape_quantile_mae_angstrom": 0.13294221460819244,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1490,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.199148523115973
+    },
+    {
+      "angle_orbit_mae_degrees": 0.866463840007782,
+      "bond_orbit_mae_angstrom": 0.006854112725704908,
+      "global_shape_quantile_mae_angstrom": 0.32190442085266113,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 43.83428779449553,
+      "package_index": 1492,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.623131005236417
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9972547888755798,
+      "bond_orbit_mae_angstrom": 0.004725090228021145,
+      "global_shape_quantile_mae_angstrom": 0.10376721620559692,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1497,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 2.376433307269069
+    },
+    {
+      "angle_orbit_mae_degrees": 1.045456886291504,
+      "bond_orbit_mae_angstrom": 0.008811317384243011,
+      "global_shape_quantile_mae_angstrom": 0.09676723182201385,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1499,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.82218957466892
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6801884770393372,
+      "bond_orbit_mae_angstrom": 0.008615772239863873,
+      "global_shape_quantile_mae_angstrom": 0.14693810045719147,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 37.323555810856966,
+      "package_index": 1506,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 3.8040910015725014
+    },
+    {
+      "angle_orbit_mae_degrees": 1.056201457977295,
+      "bond_orbit_mae_angstrom": 0.005859017372131348,
+      "global_shape_quantile_mae_angstrom": 0.16919781267642975,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1507,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.675369870919232
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7817038297653198,
+      "bond_orbit_mae_angstrom": 0.004449480213224888,
+      "global_shape_quantile_mae_angstrom": 0.13940294086933136,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 26.45067577723183,
+      "package_index": 1522,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.957419223366934
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6778992414474487,
+      "bond_orbit_mae_angstrom": 0.009180769324302673,
+      "global_shape_quantile_mae_angstrom": 0.3282204568386078,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 6.64337411956616,
+      "package_index": 1528,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 2.6985095342734358
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1854523420333862,
+      "bond_orbit_mae_angstrom": 0.00601979112252593,
+      "global_shape_quantile_mae_angstrom": 0.35677945613861084,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1529,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 6.930128705966224
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9852201342582703,
+      "bond_orbit_mae_angstrom": 0.00361897936090827,
+      "global_shape_quantile_mae_angstrom": 0.1058630496263504,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 31.79495819070605,
+      "package_index": 1532,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.674253622899704
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9327046871185303,
+      "bond_orbit_mae_angstrom": 0.009957529604434967,
+      "global_shape_quantile_mae_angstrom": 0.13001637160778046,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 60.67805358450366,
+      "package_index": 1534,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 23.796522914847852
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4291123151779175,
+      "bond_orbit_mae_angstrom": 0.024903200566768646,
+      "global_shape_quantile_mae_angstrom": 0.10373368859291077,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 63.359009536137556,
+      "package_index": 1540,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.141586531701975
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8709680438041687,
+      "bond_orbit_mae_angstrom": 0.009404648095369339,
+      "global_shape_quantile_mae_angstrom": 0.18042124807834625,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1551,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.692040748910541
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9303805828094482,
+      "bond_orbit_mae_angstrom": 0.008022530935704708,
+      "global_shape_quantile_mae_angstrom": 0.3464851379394531,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1552,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.567414522436561
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0612719058990479,
+      "bond_orbit_mae_angstrom": 0.006480444222688675,
+      "global_shape_quantile_mae_angstrom": 0.3078922927379608,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1562,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.73425939973091
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9789209961891174,
+      "bond_orbit_mae_angstrom": 0.009413503110408783,
+      "global_shape_quantile_mae_angstrom": 0.21844083070755005,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1568,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 8.439316219986045
+    },
+    {
+      "angle_orbit_mae_degrees": 1.7892059087753296,
+      "bond_orbit_mae_angstrom": 0.009822404943406582,
+      "global_shape_quantile_mae_angstrom": 0.24026097357273102,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1571,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.066288496325189
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9300834536552429,
+      "bond_orbit_mae_angstrom": 0.0069318958558142185,
+      "global_shape_quantile_mae_angstrom": 0.2545185089111328,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 69.04717880750782,
+      "package_index": 1574,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.773763575245269
+    },
+    {
+      "angle_orbit_mae_degrees": 1.349173903465271,
+      "bond_orbit_mae_angstrom": 0.012068403884768486,
+      "global_shape_quantile_mae_angstrom": 0.16515564918518066,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 49.992775506884506,
+      "package_index": 1594,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.642841306373661
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7430406212806702,
+      "bond_orbit_mae_angstrom": 0.012857980094850063,
+      "global_shape_quantile_mae_angstrom": 0.25884875655174255,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1610,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 2.5629502710549583
+    },
+    {
+      "angle_orbit_mae_degrees": 1.396530032157898,
+      "bond_orbit_mae_angstrom": 0.010341793298721313,
+      "global_shape_quantile_mae_angstrom": 0.09368851780891418,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1642,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.872722155905686
+    },
+    {
+      "angle_orbit_mae_degrees": 2.0170164108276367,
+      "bond_orbit_mae_angstrom": 0.03623628988862038,
+      "global_shape_quantile_mae_angstrom": 0.15307578444480896,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 79.25059167040303,
+      "package_index": 1649,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 22.72005683813167
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0230602025985718,
+      "bond_orbit_mae_angstrom": 0.007166743278503418,
+      "global_shape_quantile_mae_angstrom": 0.2061728686094284,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1663,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.03142748942953
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9649989008903503,
+      "bond_orbit_mae_angstrom": 0.0070500848814845085,
+      "global_shape_quantile_mae_angstrom": 0.32017600536346436,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 7.186890516660969,
+      "package_index": 1669,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.809793907603696
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3759409189224243,
+      "bond_orbit_mae_angstrom": 0.015105302445590496,
+      "global_shape_quantile_mae_angstrom": 0.14833001792430878,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 15.05409157728276,
+      "package_index": 1703,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 11.096671346336334
+    },
+    {
+      "angle_orbit_mae_degrees": 1.175094485282898,
+      "bond_orbit_mae_angstrom": 0.010558217763900757,
+      "global_shape_quantile_mae_angstrom": 0.1707472950220108,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 33.116705408932056,
+      "package_index": 1720,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 6.444527392839529
+    },
+    {
+      "angle_orbit_mae_degrees": 2.3257858753204346,
+      "bond_orbit_mae_angstrom": 0.008963437750935555,
+      "global_shape_quantile_mae_angstrom": 0.14128869771957397,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 88.59498309660121,
+      "package_index": 1722,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 31.09869573471057
+    },
+    {
+      "angle_orbit_mae_degrees": 2.050051689147949,
+      "bond_orbit_mae_angstrom": 0.033422891050577164,
+      "global_shape_quantile_mae_angstrom": 0.2372763752937317,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 78.46118880251251,
+      "package_index": 1731,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 25.13206590042107
+    },
+    {
+      "angle_orbit_mae_degrees": 1.224276065826416,
+      "bond_orbit_mae_angstrom": 0.00727362185716629,
+      "global_shape_quantile_mae_angstrom": 0.3510783910751343,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 31.526658354519085,
+      "package_index": 1743,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.382413272842886
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1144628524780273,
+      "bond_orbit_mae_angstrom": 0.007084748242050409,
+      "global_shape_quantile_mae_angstrom": 0.1313440203666687,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 33.49300998270392,
+      "package_index": 1745,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.547514268877947
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7903885841369629,
+      "bond_orbit_mae_angstrom": 0.00771065941080451,
+      "global_shape_quantile_mae_angstrom": 0.1382237821817398,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1751,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 2.222719786204316
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7368908524513245,
+      "bond_orbit_mae_angstrom": 0.00822291150689125,
+      "global_shape_quantile_mae_angstrom": 0.309795081615448,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1765,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 4.67929666887359
+    },
+    {
+      "angle_orbit_mae_degrees": 0.3040575683116913,
+      "bond_orbit_mae_angstrom": 0.01768895983695984,
+      "global_shape_quantile_mae_angstrom": 0.19619552791118622,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 15.524153066746116,
+      "package_index": 1771,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.913709979869306
+    },
+    {
+      "angle_orbit_mae_degrees": 1.7342796325683594,
+      "bond_orbit_mae_angstrom": 0.039679333567619324,
+      "global_shape_quantile_mae_angstrom": 0.13409407436847687,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 50.29457952575135,
+      "package_index": 1790,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 20.2107065641321
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0265446901321411,
+      "bond_orbit_mae_angstrom": 0.008583784103393555,
+      "global_shape_quantile_mae_angstrom": 0.37006455659866333,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 30.554015475395346,
+      "package_index": 1808,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.930018286625458
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9098488092422485,
+      "bond_orbit_mae_angstrom": 0.016635358333587646,
+      "global_shape_quantile_mae_angstrom": 0.10918354988098145,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 43.426036171755705,
+      "package_index": 1809,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.139266086872913
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9868650436401367,
+      "bond_orbit_mae_angstrom": 0.010697414167225361,
+      "global_shape_quantile_mae_angstrom": 0.22345376014709473,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 32.105515647628664,
+      "package_index": 1822,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.813192170431945
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0056865215301514,
+      "bond_orbit_mae_angstrom": 0.005939841270446777,
+      "global_shape_quantile_mae_angstrom": 0.46151798963546753,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 38.12563614928481,
+      "package_index": 1828,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.660574446660643
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9957626461982727,
+      "bond_orbit_mae_angstrom": 0.005497416015714407,
+      "global_shape_quantile_mae_angstrom": 0.2175922393798828,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1833,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.449795868317226
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3097214698791504,
+      "bond_orbit_mae_angstrom": 0.0086889723315835,
+      "global_shape_quantile_mae_angstrom": 0.12945006787776947,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1837,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.663133191605358
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4490667581558228,
+      "bond_orbit_mae_angstrom": 0.01080970000475645,
+      "global_shape_quantile_mae_angstrom": 0.36114948987960815,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 44.35748187304404,
+      "package_index": 1891,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 21.767944322308868
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7891349196434021,
+      "bond_orbit_mae_angstrom": 0.01307760737836361,
+      "global_shape_quantile_mae_angstrom": 0.22255584597587585,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 31.22164031877992,
+      "package_index": 1894,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.552827070968252
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8339914679527283,
+      "bond_orbit_mae_angstrom": 0.012743641622364521,
+      "global_shape_quantile_mae_angstrom": 0.12664607167243958,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 37.42957306198433,
+      "package_index": 1906,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.199746550562407
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7846665978431702,
+      "bond_orbit_mae_angstrom": 0.0073192669078707695,
+      "global_shape_quantile_mae_angstrom": 0.1618739366531372,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 41.24747051390227,
+      "package_index": 1912,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.170099648446238
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9112362265586853,
+      "bond_orbit_mae_angstrom": 0.010224364697933197,
+      "global_shape_quantile_mae_angstrom": 0.37382224202156067,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 35.90563341205223,
+      "package_index": 1922,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.055223937620216
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9149343371391296,
+      "bond_orbit_mae_angstrom": 0.013458842411637306,
+      "global_shape_quantile_mae_angstrom": 0.1397194266319275,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 47.620985201275815,
+      "package_index": 1932,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 10.725819667539367
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9207113981246948,
+      "bond_orbit_mae_angstrom": 0.011310577392578125,
+      "global_shape_quantile_mae_angstrom": 0.3838864862918854,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 10.990742212083054,
+      "package_index": 1947,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.584780813981128
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9003480076789856,
+      "bond_orbit_mae_angstrom": 0.00888420082628727,
+      "global_shape_quantile_mae_angstrom": 0.21426129341125488,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 51.63691065496073,
+      "package_index": 1950,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.380325738164586
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9825447201728821,
+      "bond_orbit_mae_angstrom": 0.010434938594698906,
+      "global_shape_quantile_mae_angstrom": 0.1796337515115738,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 75.74622106801516,
+      "package_index": 1960,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.169505970604938
+    },
+    {
+      "angle_orbit_mae_degrees": 1.7887977361679077,
+      "bond_orbit_mae_angstrom": 0.030978212133049965,
+      "global_shape_quantile_mae_angstrom": 0.19179044663906097,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 76.57825163653595,
+      "package_index": 1982,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.581157644923397
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0290826559066772,
+      "bond_orbit_mae_angstrom": 0.009160280227661133,
+      "global_shape_quantile_mae_angstrom": 0.06871464848518372,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 1985,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 2.1564968703188585
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1465256214141846,
+      "bond_orbit_mae_angstrom": 0.01561800204217434,
+      "global_shape_quantile_mae_angstrom": 0.11626039445400238,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 55.677571576080545,
+      "package_index": 2001,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.041536656419437
+    },
+    {
+      "angle_orbit_mae_degrees": 1.835315465927124,
+      "bond_orbit_mae_angstrom": 0.025643182918429375,
+      "global_shape_quantile_mae_angstrom": 0.19701053202152252,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 87.58445344595208,
+      "package_index": 2005,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.444076297837077
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1428964138031006,
+      "bond_orbit_mae_angstrom": 0.010712397284805775,
+      "global_shape_quantile_mae_angstrom": 0.22001034021377563,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 77.3394688545168,
+      "package_index": 2008,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.24900949858368
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9952487349510193,
+      "bond_orbit_mae_angstrom": 0.01687437668442726,
+      "global_shape_quantile_mae_angstrom": 0.08600886166095734,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 26.701008063142893,
+      "package_index": 2023,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 4.627156722721873
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7016751766204834,
+      "bond_orbit_mae_angstrom": 0.00411685137078166,
+      "global_shape_quantile_mae_angstrom": 0.16679483652114868,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 43.507890068410624,
+      "package_index": 2070,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.064737532317457
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9530922174453735,
+      "bond_orbit_mae_angstrom": 0.002735414309427142,
+      "global_shape_quantile_mae_angstrom": 0.1182703822851181,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 68.67762433345625,
+      "package_index": 2075,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.743479307726261
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5158069133758545,
+      "bond_orbit_mae_angstrom": 0.005285143852233887,
+      "global_shape_quantile_mae_angstrom": 0.2625572681427002,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2082,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 22.622928044746697
+    },
+    {
+      "angle_orbit_mae_degrees": 1.054485559463501,
+      "bond_orbit_mae_angstrom": 0.00404125452041626,
+      "global_shape_quantile_mae_angstrom": 0.1005643755197525,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2083,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 13.311094959135138
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1486420631408691,
+      "bond_orbit_mae_angstrom": 0.0035472630988806486,
+      "global_shape_quantile_mae_angstrom": 0.16005201637744904,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 61.02126362053374,
+      "package_index": 2090,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 12.943272489949958
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9879577159881592,
+      "bond_orbit_mae_angstrom": 0.002704830840229988,
+      "global_shape_quantile_mae_angstrom": 0.1383732259273529,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 29.045248118068987,
+      "package_index": 2097,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.75080101879032
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1044337749481201,
+      "bond_orbit_mae_angstrom": 0.012163064442574978,
+      "global_shape_quantile_mae_angstrom": 0.08807782828807831,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2138,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 26.499803328061237
+    },
+    {
+      "angle_orbit_mae_degrees": 1.8750587701797485,
+      "bond_orbit_mae_angstrom": 0.025056635960936546,
+      "global_shape_quantile_mae_angstrom": 0.12078942358493805,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 70.2458164069676,
+      "package_index": 2152,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 27.900777823523153
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2535324096679688,
+      "bond_orbit_mae_angstrom": 0.00787783320993185,
+      "global_shape_quantile_mae_angstrom": 0.19687530398368835,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2160,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.70745348093762
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3960280418395996,
+      "bond_orbit_mae_angstrom": 0.005331424996256828,
+      "global_shape_quantile_mae_angstrom": 0.0882779210805893,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2162,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.792107435079057
+    },
+    {
+      "angle_orbit_mae_degrees": 1.453152060508728,
+      "bond_orbit_mae_angstrom": 0.008385133929550648,
+      "global_shape_quantile_mae_angstrom": 0.41048911213874817,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2163,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.590804193991723
+    },
+    {
+      "angle_orbit_mae_degrees": 1.524531602859497,
+      "bond_orbit_mae_angstrom": 0.004973398521542549,
+      "global_shape_quantile_mae_angstrom": 0.07706505060195923,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 16.254065599700358,
+      "package_index": 2168,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.79307632427173
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1995792388916016,
+      "bond_orbit_mae_angstrom": 0.007540151476860046,
+      "global_shape_quantile_mae_angstrom": 0.4843955636024475,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2170,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 17.11391721435251
+    },
+    {
+      "angle_orbit_mae_degrees": 1.430611252784729,
+      "bond_orbit_mae_angstrom": 0.007612674031406641,
+      "global_shape_quantile_mae_angstrom": 0.07698123157024384,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 41.42449841243352,
+      "package_index": 2173,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.55385294014698
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1446384191513062,
+      "bond_orbit_mae_angstrom": 0.0054999589920043945,
+      "global_shape_quantile_mae_angstrom": 0.2814560532569885,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 48.14934045320685,
+      "package_index": 2252,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.987433983677597
+    },
+    {
+      "angle_orbit_mae_degrees": 0.912347137928009,
+      "bond_orbit_mae_angstrom": 0.015281564556062222,
+      "global_shape_quantile_mae_angstrom": 0.2531374394893646,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 31.53318611415535,
+      "package_index": 2257,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 25.16476162739292
+    },
+    {
+      "angle_orbit_mae_degrees": 1.100786805152893,
+      "bond_orbit_mae_angstrom": 0.013649851083755493,
+      "global_shape_quantile_mae_angstrom": 0.2923120856285095,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 59.35988808075352,
+      "package_index": 2265,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 25.800686149243216
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2542853355407715,
+      "bond_orbit_mae_angstrom": 0.010672071948647499,
+      "global_shape_quantile_mae_angstrom": 0.2369556576013565,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 39.76774832312771,
+      "package_index": 2269,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 26.30604675752742
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9762157797813416,
+      "bond_orbit_mae_angstrom": 0.013076240196824074,
+      "global_shape_quantile_mae_angstrom": 0.21171754598617554,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 58.66282233860159,
+      "package_index": 2299,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 27.65429166911942
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6554944515228271,
+      "bond_orbit_mae_angstrom": 0.0027319067157804966,
+      "global_shape_quantile_mae_angstrom": 0.26809725165367126,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 28.915814452809766,
+      "package_index": 2308,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 5.454571128392046
+    },
+    {
+      "angle_orbit_mae_degrees": 2.6265506744384766,
+      "bond_orbit_mae_angstrom": 0.013058915734291077,
+      "global_shape_quantile_mae_angstrom": 0.1694781631231308,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2343,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 8.921177241618592
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5693111419677734,
+      "bond_orbit_mae_angstrom": 0.011654681526124477,
+      "global_shape_quantile_mae_angstrom": 0.35485684871673584,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 81.05036722498438,
+      "package_index": 2350,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 15.629535334943053
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9626113176345825,
+      "bond_orbit_mae_angstrom": 0.008803891018033028,
+      "global_shape_quantile_mae_angstrom": 0.189934641122818,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2355,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.326243639747034
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4142106771469116,
+      "bond_orbit_mae_angstrom": 0.011773311533033848,
+      "global_shape_quantile_mae_angstrom": 0.14106492698192596,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 24.768491032851006,
+      "package_index": 2356,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 19.012885861006435
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2750649452209473,
+      "bond_orbit_mae_angstrom": 0.01024289894849062,
+      "global_shape_quantile_mae_angstrom": 0.27181875705718994,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 31.03194154252275,
+      "package_index": 2359,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 16.795473715734786
+    },
+    {
+      "angle_orbit_mae_degrees": 1.453866720199585,
+      "bond_orbit_mae_angstrom": 0.017393827438354492,
+      "global_shape_quantile_mae_angstrom": 0.22417385876178741,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 45.80397298339907,
+      "package_index": 2361,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 9.650186155298885
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1345961093902588,
+      "bond_orbit_mae_angstrom": 0.010850404389202595,
+      "global_shape_quantile_mae_angstrom": 0.2067367434501648,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 29.626052841339416,
+      "package_index": 2368,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 21.071180688130774
+    },
+    {
+      "angle_orbit_mae_degrees": 1.4658416509628296,
+      "bond_orbit_mae_angstrom": 0.008408698253333569,
+      "global_shape_quantile_mae_angstrom": 0.1826026290655136,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2373,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 18.970992968394377
+    },
+    {
+      "angle_orbit_mae_degrees": 1.5983860492706299,
+      "bond_orbit_mae_angstrom": 0.016720974817872047,
+      "global_shape_quantile_mae_angstrom": 0.15707561373710632,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 48.98370602983229,
+      "package_index": 2374,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 20.863135364801163
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3888731002807617,
+      "bond_orbit_mae_angstrom": 0.013416767120361328,
+      "global_shape_quantile_mae_angstrom": 0.3865140974521637,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2376,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 14.250274693800462
+    },
+    {
+      "angle_orbit_mae_degrees": 1.7035359144210815,
+      "bond_orbit_mae_angstrom": 0.020527005195617676,
+      "global_shape_quantile_mae_angstrom": 0.335335373878479,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 75.50231118416504,
+      "package_index": 2382,
+      "target_pg": "C2",
+      "torsion_orbit_circular_mae_degrees": 41.254852650666265
+    },
+    {
+      "angle_orbit_mae_degrees": 2.501337766647339,
+      "bond_orbit_mae_angstrom": 0.00696177501231432,
+      "global_shape_quantile_mae_angstrom": 0.46399635076522827,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 91.29814723633255,
+      "package_index": 2385,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 19.260163300472946
+    },
+    {
+      "angle_orbit_mae_degrees": 1.8932037353515625,
+      "bond_orbit_mae_angstrom": 0.00986480712890625,
+      "global_shape_quantile_mae_angstrom": 0.29213792085647583,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 53.42864207280443,
+      "package_index": 2388,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 15.840798647092441
+    },
+    {
+      "angle_orbit_mae_degrees": 2.2962803840637207,
+      "bond_orbit_mae_angstrom": 0.011015176773071289,
+      "global_shape_quantile_mae_angstrom": 0.28832948207855225,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 29.269500281709703,
+      "package_index": 2405,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 35.37289079248474
+    },
+    {
+      "angle_orbit_mae_degrees": 1.3488190174102783,
+      "bond_orbit_mae_angstrom": 0.01632736809551716,
+      "global_shape_quantile_mae_angstrom": 0.1797734498977661,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 38.277607553921584,
+      "package_index": 2409,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 10.190248220046412
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7395724058151245,
+      "bond_orbit_mae_angstrom": 0.008990212343633175,
+      "global_shape_quantile_mae_angstrom": 0.11585777997970581,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 43.33988527755205,
+      "package_index": 2417,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 20.138142316872152
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0818498134613037,
+      "bond_orbit_mae_angstrom": 0.005024421028792858,
+      "global_shape_quantile_mae_angstrom": 0.19740243256092072,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2422,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 18.436527475299417
+    },
+    {
+      "angle_orbit_mae_degrees": 1.458162546157837,
+      "bond_orbit_mae_angstrom": 0.0077023981139063835,
+      "global_shape_quantile_mae_angstrom": 0.16970765590667725,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2429,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 18.5587238003096
+    },
+    {
+      "angle_orbit_mae_degrees": 1.157319188117981,
+      "bond_orbit_mae_angstrom": 0.022109616547822952,
+      "global_shape_quantile_mae_angstrom": 0.18421997129917145,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2436,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 24.962546017227865
+    },
+    {
+      "angle_orbit_mae_degrees": 0.7205235958099365,
+      "bond_orbit_mae_angstrom": 0.004589897580444813,
+      "global_shape_quantile_mae_angstrom": 1.1745493412017822,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 29.835111006800002,
+      "package_index": 2458,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 6.993540405090051
+    },
+    {
+      "angle_orbit_mae_degrees": 0.5513818264007568,
+      "bond_orbit_mae_angstrom": 0.0071961721405386925,
+      "global_shape_quantile_mae_angstrom": 0.1318397969007492,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2461,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 2.691603779759663
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8620583415031433,
+      "bond_orbit_mae_angstrom": 0.007393446285277605,
+      "global_shape_quantile_mae_angstrom": 0.23914839327335358,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2465,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 8.219958658221637
+    },
+    {
+      "angle_orbit_mae_degrees": 0.8982762694358826,
+      "bond_orbit_mae_angstrom": 0.006241248920559883,
+      "global_shape_quantile_mae_angstrom": 0.10978113114833832,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 84.69201726970083,
+      "package_index": 2475,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 20.875880978672704
+    },
+    {
+      "angle_orbit_mae_degrees": 0.6508249640464783,
+      "bond_orbit_mae_angstrom": 0.009685248136520386,
+      "global_shape_quantile_mae_angstrom": 0.11024768650531769,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 89.99686372173204,
+      "package_index": 2495,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 14.07528449453744
+    },
+    {
+      "angle_orbit_mae_degrees": 0.9268122911453247,
+      "bond_orbit_mae_angstrom": 0.009773511439561844,
+      "global_shape_quantile_mae_angstrom": 0.0857153832912445,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2505,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 27.34407952556802
+    },
+    {
+      "angle_orbit_mae_degrees": 1.1752337217330933,
+      "bond_orbit_mae_angstrom": 0.010638054460287094,
+      "global_shape_quantile_mae_angstrom": 0.19591853022575378,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 85.41710537860195,
+      "package_index": 2514,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 23.223127921925144
+    },
+    {
+      "angle_orbit_mae_degrees": 1.0306438207626343,
+      "bond_orbit_mae_angstrom": 0.012537050060927868,
+      "global_shape_quantile_mae_angstrom": 0.19984018802642822,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 0.0,
+      "package_index": 2516,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 14.89055000057435
+    },
+    {
+      "angle_orbit_mae_degrees": 1.2432968616485596,
+      "bond_orbit_mae_angstrom": 0.022223040461540222,
+      "global_shape_quantile_mae_angstrom": 0.3117605149745941,
+      "nonplanar_torsion_orbit_circular_mae_degrees": 82.92964356356799,
+      "package_index": 2523,
+      "target_pg": "C3",
+      "torsion_orbit_circular_mae_degrees": 11.020029459829718
+    }
+  ],
+  "reproduction_max_abs_difference": 0.0,
+  "schema_version": "pg-orbitflow-dataset-validation-audit-v1",
+  "scope": {
+    "checkpoint_frozen": true,
+    "core_ood_used": false,
+    "f0p2_used": false,
+    "hard_projection_used": false,
+    "iid_test_used": false,
+    "iid_train_used": false,
+    "iid_validation_used_read_only": true,
+    "target_coordinates_used_as_model_input": false,
+    "target_coordinates_used_for_metrics_only": true,
+    "training_performed": false
+  },
+  "shape_gate": {
+    "checks": {
+      "c2_and_c3_each_pass": false,
+      "global_shape_quantile_mae_max_angstrom": false
+    },
+    "maximum_mae_angstrom": 1.3530809879302979,
+    "passed": false,
+    "strata": {
+      "C2": 0.7899607419967651,
+      "C3": 1.3530809879302979
+    },
+    "threshold_angstrom": 0.03
+  },
+  "status": "FAIL_DATASET_VALIDATION_STOP_BEFORE_DECODER",
+  "structural_checks": {
+    "checkpoint_history_complete": true,
+    "checkpoint_step_exact": true,
+    "core_ood_not_used": true,
+    "f0p2_not_used": true,
+    "hard_projection_not_used": true,
+    "iid_test_not_used": true,
+    "training_execution_passed": true,
+    "validation_count_exact": true,
+    "validation_records_reproduced": true
+  }
+}
